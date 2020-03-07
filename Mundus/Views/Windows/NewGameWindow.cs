@@ -17,7 +17,7 @@ namespace Mundus.Views.Windows {
 
         private void OnBtnBackClicked(object sender, EventArgs e) {
             this.Hide();
-            WindowInstances.WMain.Show();
+            WI.WMain.Show();
         }
 
         //You can choose your Map size only in creative, it is predetermined by screen & inventory size in survival.
@@ -86,23 +86,21 @@ namespace Mundus.Views.Windows {
         }
 
         private void MapGenerate() {
-            int mapSize;
-
             if (rbMSmall.Active) {
-                mapSize = MapSizes.SMALL;
+                MapSizes.CurrSize = MapSizes.SMALL;
             }
             else if (rbMMedium.Active) {
-                mapSize = MapSizes.MEDIUM;
+                MapSizes.CurrSize = MapSizes.MEDIUM;
             }
             else if (rbMLarge.Active) {
-                mapSize = MapSizes.LARGE;
+                MapSizes.CurrSize = MapSizes.LARGE;
             }
             else {
                 throw new ArgumentException("No map size was selected");
             }
 
             //Add the other layers
-            LandSuperLayerGenerator.GenerateAllLayers(mapSize);
+            LandSuperLayerGenerator.GenerateAllLayers( MapSizes.CurrSize );
         }
 
         //Does the inital steps that are required by all windows upon game generation
@@ -110,13 +108,13 @@ namespace Mundus.Views.Windows {
             IGameWindow gameWindow;
 
             if (rbSmall.Active) {
-                gameWindow = WindowInstances.WSGame;
+                gameWindow = WI.WSGame;
             }
             else if (rbMedium.Active) {
-                gameWindow = WindowInstances.WMGame;
+                gameWindow = WI.WMGame;
             } 
             else if (rbLarge.Active) {
-                gameWindow = WindowInstances.WLGame;
+                gameWindow = WI.WLGame;
             } 
             else {
                 throw new ArgumentException("No screen & inventory size was selected");

@@ -14,13 +14,13 @@ namespace Mundus.Views.Windows {
 
         private void OnBtnNewGameClicked(object sender, EventArgs e) {
             this.Hide();
-            WindowInstances.WNewGame.SetDefaults();
-            WindowInstances.WNewGame.Show();
+            WI.WNewGame.SetDefaults();
+            WI.WNewGame.Show();
         }
 
         private void OnBtnSettingsClicked(object sender, EventArgs e) {
             this.Hide();
-            WindowInstances.WSettings.Show(this);
+            WI.WSettings.Show(this);
         }
 
         protected void OnBtnTutorialClicked(object sender, EventArgs e) {

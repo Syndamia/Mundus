@@ -23,7 +23,7 @@ namespace Mundus.Views.Windows {
 
         protected void OnBtnSettingsClicked(object sender, EventArgs e) {
             this.Hide();
-            WindowInstances.WSettings.Show(this);
+            WI.WSettings.Show(this);
         }
 
         protected void OnBtnSaveClicked(object sender, EventArgs e) {

@@ -16,8 +16,10 @@ namespace Stetic
 				w1.Add("grass", w2);
 				global::Gtk.IconSet w3 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.blank.jpg"));
 				w1.Add("blank", w3);
-				global::Gtk.IconSet w4 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Ground.boulder.png"));
+				global::Gtk.IconSet w4 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Items.boulder.png"));
 				w1.Add("boulder", w4);
+				global::Gtk.IconSet w5 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.player.png"));
+				w1.Add("player", w5);
 				w1.AddDefault();
 			}
 		}

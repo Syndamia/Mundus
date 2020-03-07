@@ -52,10 +52,10 @@
     <EmbeddedResource Include="gtk-gui\gui.stetic">
       <LogicalName>gui.stetic</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Icons\Land\Items\stick.jpg" />
     <EmbeddedResource Include="Icons\blank.jpg" />
     <EmbeddedResource Include="Icons\Land\Ground\grass.png" />
-    <EmbeddedResource Include="Icons\Land\Ground\boulder.png" />
+    <EmbeddedResource Include="Icons\Land\Items\boulder.png" />
+    <EmbeddedResource Include="Icons\player.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -79,10 +79,10 @@
     <Compile Include="gtk-gui\Mundus.Views.Windows.MusicWindow.cs" />
     <Compile Include="Views\Windows\MainWindow.cs" />
     <Compile Include="gtk-gui\Mundus.Views.Windows.MainWindow.cs" />
-    <Compile Include="Models\WindowInstances.cs" />
+    <Compile Include="Models\WI.cs" />
     <Compile Include="Views\Dialogs\ExitDialog.cs" />
     <Compile Include="gtk-gui\Mundus.Views.Dialogs.ExitDialog.cs" />
-    <Compile Include="Models\DialogInstances.cs" />
+    <Compile Include="Models\DI.cs" />
     <Compile Include="Views\Windows\Interfaces\IGameWindow.cs" />
     <Compile Include="Models\SuperLayers\Land.cs" />
     <Compile Include="Models\SuperLayers\ISuperLayer.cs" />
@@ -91,7 +91,12 @@
     <Compile Include="Models\Tiles\ITile.cs" />
     <Compile Include="Controllers\Map\LandSuperLayerGenerator.cs" />
     <Compile Include="Models\MapSizes.cs" />
-    <Compile Include="Models\LayerInstances.cs" />
+    <Compile Include="Models\Mobs\IMob.cs" />
+    <Compile Include="Controllers\Mob\MobMoving.cs" />
+    <Compile Include="Models\Tiles\MobTile.cs" />
+    <Compile Include="Models\Tiles\LI.cs" />
+    <Compile Include="Models\Mobs\Land_Mobs\LMI.cs" />
+    <Compile Include="Models\Mobs\Land_Mobs\Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -106,6 +111,10 @@
     <Folder Include="Controllers\Map\" />
     <Folder Include="Views\Icons\Land\Ground\" />
     <Folder Include="Icons\Land\Ground\" />
+    <Folder Include="Icons\Land\Items\" />
+    <Folder Include="Models\Mobs\" />
+    <Folder Include="Controllers\Mob\" />
+    <Folder Include="Models\Mobs\Land_Mobs\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

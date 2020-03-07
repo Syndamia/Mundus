@@ -2,7 +2,7 @@
 using Mundus.Views.Dialogs;
 
 namespace Mundus.Models {
-    public static class DialogInstances {
+    public static class DI { //stands for Dialogue Instances
         public static ExitDialog DExit { get; private set; }
 
         public static void CreateInstances() {

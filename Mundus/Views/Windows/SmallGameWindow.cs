@@ -1,8 +1,12 @@
 ﻿using System;
 using Gtk;
 using Mundus.Models;
+using Mundus.Models.Tiles;
 using Mundus.Models.SuperLayers;
 using Mundus.Views.Windows.Interfaces;
+using Mundus.Models.Mobs.Land_Mobs;
+using Mundus.Controllers.Mob;
+using System.ComponentModel;
 
 namespace Mundus.Views.Windows {
     public partial class SmallGameWindow : Gtk.Window, IGameWindow {
@@ -16,11 +20,11 @@ namespace Mundus.Views.Windows {
 
         public void OnDeleteEvent(object o, Gtk.DeleteEventArgs args) {
             //Open exit dialogue if you haven't saved in a while
-            if (true) { //TODO: check if you have saved
+            if (false) { //TODO: check if you have saved
                 //TODO: pause game cycle
 
-                ResponseType rt = (ResponseType)DialogInstances.DExit.Run();
-                DialogInstances.DExit.Hide();
+                ResponseType rt = (ResponseType)DI.DExit.Run();
+                DI.DExit.Hide();
 
                 if(rt == ResponseType.Cancel || rt == ResponseType.DeleteEvent) {
                     //cancel the exit procedure and keep the window open
@@ -38,12 +42,13 @@ namespace Mundus.Views.Windows {
         public void SetDefaults() {
             this.SetMapMenuVisibility(false);
             this.SetInvMenuVisibility(false);
-            WindowInstances.WPause.GameWindow = this;
+            WI.WPause.GameWindow = this;
+
         }
 
         protected void OnBtnPauseClicked(object sender, EventArgs e) {
             //TODO: add code that stops (pauses) game cycle
-            WindowInstances.WPause.Show();
+            WI.WPause.Show();
         }
 
         protected void OnBtnMapClicked(object sender, EventArgs e) {
@@ -206,19 +211,20 @@ namespace Mundus.Views.Windows {
         }
 
         protected void OnBtnMusicClicked(object sender, EventArgs e) {
-            WindowInstances.WMusic.Show();
+            WI.WMusic.Show();
         }
 
         public void PrintScreen() {
-            //TODO: get the superlayer that the player is in
-            ISuperLayer superLayer = LayerInstances.Land;
+            ISuperLayer superLayer = LMI.Player.CurrSuperLayer;
 
-            for(int i = 0; i < 2; i++) {
-                for (int row = 0; row < SIZE; row++) {
-                    for (int col = 0; col < SIZE; col++) {
+            for(int i = 0; i < 3; i++) {
+                int btn = 1;
+                for (int row = this.CalculateStartY(), maxY = this.CalculateMaxY(); row <= maxY; row++) {
+                    for (int col = this.CalculateStartX(), maxX = this.CalculateMaxX(); col <= maxX; col++, btn++) {
                         //Set the image to be either the ground layer tile, "blank" icon, item layer tile, mob layer tile or don't set it to anything 
                         //Note: first the ground and the blank icons are printed, then over them are printed the item tiles and over them are mob tiles
                         Image img = new Image();
+
                         if (i == 0) {
                             if (superLayer.GetGroundLayerTile( row, col ) == null) {
                                 img = new Image( "blank", IconSize.Dnd );
@@ -226,12 +232,17 @@ namespace Mundus.Views.Windows {
                             else {
                                 img = new Image( superLayer.GetGroundLayerTile( row, col ).stock_id, IconSize.Dnd );
                             }
-                        } else {
+                        } 
+                        else if (i == 1) {
                             if (superLayer.GetItemLayerTile( row, col ) == null) continue;
                             img = new Image( superLayer.GetItemLayerTile( row, col ).stock_id, IconSize.Dnd );
                         }
+                        else {
+                            if (superLayer.GetMobLayerTile( row, col ) == null) continue;
+                            img = new Image( superLayer.GetMobLayerTile( row, col ).stock_id, IconSize.Dnd );
+                        }
 
-                        switch (row * 5 + col + 1) {
+                        switch (btn) {
                             case 1: btnP1.Image = img; break;
                             case 2: btnP2.Image = img; break;
                             case 3: btnP3.Image = img; break;
@@ -265,23 +276,27 @@ namespace Mundus.Views.Windows {
 
         public void PrintMap() {
             //TODO: get the superlayer that the player is in
-            ISuperLayer superLayer = LayerInstances.Land;
+            ISuperLayer superLayer = LI.Land;
 
             string sName;
 
             //Prints the "Ground layer" in map menu
-            for (int row = 0; row < SIZE; row++) {
-                for (int col = 0; col < SIZE; col++) {
+            int img = 1;
+            for (int row = this.CalculateStartY(), maxY = this.CalculateMaxY(); row <= maxY; row++) {
+                for (int col = this.CalculateStartX(), maxX = this.CalculateMaxX(); col <= maxX; col++, img++) {
                     //Print a tile if it exists, otherwise print the "blank" icon
-                    if (superLayer.GetGroundLayerTile( row, col ) == null) {
+                    if (row < 0 || col < 0 || col >= MapSizes.CurrSize || row >= MapSizes.CurrSize) {
+                        sName = "blank";
+                    }
+                    else if (superLayer.GetGroundLayerTile( row, col ) == null) {
                         sName = "blank";
                     }
                     else {
                         sName = superLayer.GetGroundLayerTile( row, col ).stock_id;
                     }
 
-                    switch (row * 5 + col + 1) {
-                        case 1: imgG1.SetFromStock(sName, IconSize.Dnd); break;
+                    switch (img) {
+                        case 1: imgG1.SetFromStock( sName, IconSize.Dnd ); break;
                         case 2: imgG2.SetFromStock( sName, IconSize.Dnd ); break;
                         case 3: imgG3.SetFromStock( sName, IconSize.Dnd ); break;
                         case 4: imgG4.SetFromStock( sName, IconSize.Dnd ); break;
@@ -311,17 +326,21 @@ namespace Mundus.Views.Windows {
             }
 
             //Prints the "Item layer" in map menu
-            for (int row = 0; row < SIZE; row++) {
-                for (int col = 0; col < SIZE; col++) {
+            img = 1;
+            for (int row = this.CalculateStartY(), maxY = this.CalculateMaxY(); row <= maxY; row++) {
+                for (int col = this.CalculateStartX(), maxX = this.CalculateMaxX(); col <= maxX; col++, img++) {
                     //Print a tile if it exists, otherwise print the "blank" icon
-                    if (superLayer.GetItemLayerTile( row, col ) == null) {
+                    if (row < 0 || col < 0 || col >= MapSizes.CurrSize || row >= MapSizes.CurrSize) {
+                        sName = "blank";
+                    }
+                    else if (superLayer.GetItemLayerTile( row, col ) == null) {
                         sName = "blank";
                     }
                     else {
                         sName = superLayer.GetItemLayerTile( row, col ).stock_id;
                     }
 
-                    switch (row * 5 + col + 1) {
+                    switch (img) {
                         case 1: imgI1.SetFromStock( sName, IconSize.Dnd ); break;
                         case 2: imgI2.SetFromStock( sName, IconSize.Dnd ); break;
                         case 3: imgI3.SetFromStock( sName, IconSize.Dnd ); break;
@@ -357,7 +376,152 @@ namespace Mundus.Views.Windows {
         }
 
         protected void OnBtnH1Clicked(object sender, EventArgs e) {
-            this.PrintMap();
+            this.PrintScreen();
+        }
+
+        protected void OnBtnP1Clicked(object sender, EventArgs e) {
+            ChangePosition(1);
+        }
+
+        protected void OnBtnP2Clicked(object sender, EventArgs e) {
+            ChangePosition(2);
+        }
+
+        protected void OnBtnP3Clicked(object sender, EventArgs e) {
+            ChangePosition(3);
+        }
+
+        protected void OnBtnP4Clicked(object sender, EventArgs e) {
+            ChangePosition(4);
+        }
+
+        protected void OnBtnP5Clicked(object sender, EventArgs e) {
+            ChangePosition(5);
+        }
+
+        protected void OnBtnP6Clicked(object sender, EventArgs e) {
+            ChangePosition(6);
+        }
+
+        protected void OnBtnP7Clicked(object sender, EventArgs e) {
+            ChangePosition(7);
+        }
+
+        protected void OnBtnP8Clicked(object sender, EventArgs e) {
+            ChangePosition(8);
+        }
+
+        protected void OnBtnP9Clicked(object sender, EventArgs e) {
+            ChangePosition(9);
+        }
+
+        protected void OnBtnP10Clicked(object sender, EventArgs e) {
+            ChangePosition(10);
+        }
+
+        protected void OnBtnP11Clicked(object sender, EventArgs e) {
+            ChangePosition(11);
+        }
+
+        protected void OnBtnP12Clicked(object sender, EventArgs e) {
+            ChangePosition(12);
+        }
+
+        protected void OnBtnP13Clicked(object sender, EventArgs e) {
+            ChangePosition(13);
+        }
+
+        protected void OnBtnP14Clicked(object sender, EventArgs e) {
+            ChangePosition(14);
+        }
+
+        protected void OnBtnP15Clicked(object sender, EventArgs e) {
+            ChangePosition(15);
+        }
+
+        protected void OnBtnP16Clicked(object sender, EventArgs e) {
+            ChangePosition(16);
+        }
+
+        protected void OnBtnP17Clicked(object sender, EventArgs e) {
+            ChangePosition(17);
+        }
+
+        protected void OnBtnP18Clicked(object sender, EventArgs e) {
+            ChangePosition(18);
+        }
+
+        protected void OnBtnP19Clicked(object sender, EventArgs e) {
+            ChangePosition(19);
+        }
+
+        protected void OnBtnP20Clicked(object sender, EventArgs e) {
+            ChangePosition(20);
+        }
+
+        protected void OnBtnP21Clicked(object sender, EventArgs e) {
+            ChangePosition(21);
+        }
+
+        protected void OnBtnP22Clicked(object sender, EventArgs e) {
+            ChangePosition(22);
+        }
+
+        protected void OnBtnP23Clicked(object sender, EventArgs e) {
+            ChangePosition(23);
+        }
+
+        protected void OnBtnP24Clicked(object sender, EventArgs e) {
+            ChangePosition(24);
+        }
+
+        protected void OnBtnP25Clicked(object sender, EventArgs e) {
+            ChangePosition(25);
+        }
+
+        private void ChangePosition(int button) {
+            int buttonYPos = (button - 1) / 5;
+            int buttonXPos = button - buttonYPos * 5 - 1;
+
+            int newYPos = (LMI.Player.YPos - 2 >= 0) ? LMI.Player.YPos - 2 + buttonYPos : buttonYPos;
+            if (LMI.Player.YPos > MapSizes.CurrSize - 3) newYPos = buttonYPos + MapSizes.CurrSize - SIZE;
+            int newXPos = (LMI.Player.XPos - 2 >= 0) ? LMI.Player.XPos - 2 + buttonXPos : buttonXPos;
+            if (LMI.Player.XPos > MapSizes.CurrSize - 3) newXPos = buttonXPos + MapSizes.CurrSize - SIZE;
+
+            if (newYPos >= 0 && newXPos >= 0 && newYPos < MapSizes.CurrSize && newXPos < MapSizes.CurrSize) {
+                MobMoving.MoveMob( LMI.Player, newYPos, newXPos );
+            }
+
+            this.PrintScreen();
+            if (this.MapMenuIsVisible()) {
+                this.PrintMap();
+            }
+        }
+
+        /*Depending on whether you are on the edge of the map or in the center, the screen renders a bit differently.
+         *On the edge it doesn't follow the player and only shows the corner "chunk". In the other parts it follows the
+         *the player, making sure he stays in the center of the screen.
+         *This means that when the player is followed, rendered part of the map depend on the player position, but when
+         *he isn't, it depends on the screen and map sizes.*/
+        private int CalculateMaxY() {
+            int maxY = (LMI.Player.YPos - 2 >= 0) ? LMI.Player.YPos + 2 : SIZE - 1;
+            if (maxY >= MapSizes.CurrSize) maxY = MapSizes.CurrSize - 1;
+            return maxY;
+        }
+        private int CalculateStartY() {
+            int startY = (LMI.Player.YPos - 2 <= MapSizes.CurrSize - SIZE) ? LMI.Player.YPos - 2 : MapSizes.CurrSize - SIZE;
+            if (startY < 0) startY = 0;
+            return startY;
+        }
+        private int CalculateMaxX() {
+            int maxX = (LMI.Player.XPos - 2 >= 0) ? LMI.Player.XPos + 2 : SIZE - 1;
+            if (maxX >= MapSizes.CurrSize) maxX = MapSizes.CurrSize - 1;
+            return maxX;
+        }
+        private int CalculateStartX() {
+            int startX = (LMI.Player.XPos - 2 <= MapSizes.CurrSize - SIZE) ? LMI.Player.XPos - 2 : MapSizes.CurrSize - SIZE;
+            if (startX < 0) startX = 0;
+            return startX;
         }
     }
 }

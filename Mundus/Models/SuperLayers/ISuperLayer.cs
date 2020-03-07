@@ -5,13 +5,20 @@ using Gtk;
 
 namespace Mundus.Models.SuperLayers {
     public interface ISuperLayer {
-        ItemTile GetItemTileType(string name);
-        GroundTile GetGroundTileType(string name);
-
+        MobTile GetMobLayerTile(int yPpos, int xPos);
         ItemTile GetItemLayerTile(int yPos, int xPos);
         GroundTile GetGroundLayerTile(int yPos, int xPos);
 
+        void SetMobLayer(MobTile[,] mobTiles);
+        void SetMobAtPosition(MobTile tile, int yPos, int xPos);
+        void RemoveMobFromPosition(int yPos, int xPos);
+
         void SetItemLayer(ItemTile[,] itemTiles);
+        void SetItemAtPosition(ItemTile tile, int yPos, int xPos);
+        void RemoveItemFromPosition(int yPos, int xPos);
+
         void SetGroundLayer(GroundTile[,] groundTiles);
+        void SetGroundAtPosition(GroundTile tile, int yPos, int xPos);
+        void RemoveGroundFromPosition(int yPos, int xPos);
     }
 }
