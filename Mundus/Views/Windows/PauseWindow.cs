@@ -1,7 +1,6 @@
 ﻿using System;
 using Gtk;
-using Mundus.Models;
-using Mundus.Views.Windows.Interfaces;
+using Mundus.Service;
 
 namespace Mundus.Views.Windows {
     public partial class PauseWindow : Gtk.Window {
@@ -17,13 +16,12 @@ namespace Mundus.Views.Windows {
         }
 
         protected void OnBtnBackClicked(object sender, EventArgs e) {
-            //TODO: resume game cycle
+            WindowController.PauseWindowVisible = false;
             this.Hide();
         }
 
         protected void OnBtnSettingsClicked(object sender, EventArgs e) {
-            this.Hide();
-            WI.WSettings.Show(this);
+            WindowController.ShowSettingsWindow(this);
         }
 
         protected void OnBtnSaveClicked(object sender, EventArgs e) {

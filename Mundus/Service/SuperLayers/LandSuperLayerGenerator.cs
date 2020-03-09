@@ -1,10 +1,9 @@
 ﻿using System;
-using Mundus.Models;
-using Mundus.Models.Tiles;
-using Mundus.Models.SuperLayers;
-using Mundus.Models.Mobs.Land_Mobs;
+using Mundus.Data.Superlayers.Mobs;
+using Mundus.Data.SuperLayers;
+using Mundus.Service.Tiles;
 
-namespace Mundus.Controllers.Map {
+namespace Mundus.Service.SuperLayers {
     public static class LandSuperLayerGenerator {
         private static Random rnd;
 
@@ -47,7 +46,7 @@ namespace Mundus.Controllers.Map {
 
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
-                    if (rnd.Next( 0, 5 ) == 1) {
+                    if (rnd.Next( 0, 50 ) == 1) {
                         tiles[col, row] = new ItemTile("boulder");
                     }
                 }

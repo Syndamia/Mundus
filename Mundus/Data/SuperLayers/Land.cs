@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Mundus.Models.Tiles;
+﻿using Mundus.Service.Tiles;
 
-namespace Mundus.Models.SuperLayers {
+namespace Mundus.Data.SuperLayers {
     public class Land : ISuperLayer {
         private static MobTile[,] mobLayer;
         private static ItemTile[,] itemLayer;

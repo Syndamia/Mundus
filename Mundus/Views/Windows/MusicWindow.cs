@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Media;
 using Gtk;
-using System.Linq;
 
 namespace Mundus.Views.Windows {
     public partial class MusicWindow : Gtk.Window {

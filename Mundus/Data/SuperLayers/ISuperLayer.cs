@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Mundus.Models.Tiles;
-using Gtk;
+﻿using Mundus.Service.Tiles;
 
-namespace Mundus.Models.SuperLayers {
+namespace Mundus.Data.SuperLayers {
     public interface ISuperLayer {
         MobTile GetMobLayerTile(int yPpos, int xPos);
         ItemTile GetItemLayerTile(int yPos, int xPos);

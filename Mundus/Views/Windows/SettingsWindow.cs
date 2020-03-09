@@ -1,6 +1,5 @@
 ﻿using System;
 using Gtk;
-using Mundus.Models;
 
 namespace Mundus.Views.Windows {
     public partial class SettingsWindow : Gtk.Window {

@@ -1,8 +1,6 @@
 ﻿using System;
 using Gtk;
-using Mundus.Models;
-using Mundus.Controllers.Map;
-using Mundus.Views.Windows.Interfaces;
+using Mundus.Service;
 
 namespace Mundus.Views.Windows {
     public partial class NewGameWindow : Gtk.Window {
@@ -16,8 +14,7 @@ namespace Mundus.Views.Windows {
         }
 
         private void OnBtnBackClicked(object sender, EventArgs e) {
-            this.Hide();
-            WI.WMain.Show();
+            WindowController.ShowMainWindow(this);
         }
 
         //You can choose your Map size only in creative, it is predetermined by screen & inventory size in survival.
@@ -78,7 +75,7 @@ namespace Mundus.Views.Windows {
         }
 
         private void OnBtnGenerateClicked(object sender, EventArgs e) {
-            //TODO: add settings to a model
+            //TODO: save settings somewhere
 
             this.Hide();
             this.MapGenerate();
@@ -86,43 +83,40 @@ namespace Mundus.Views.Windows {
         }
 
         private void MapGenerate() {
+            string size;
             if (rbMSmall.Active) {
-                MapSizes.CurrSize = MapSizes.SMALL;
+                size = "small";
             }
             else if (rbMMedium.Active) {
-                MapSizes.CurrSize = MapSizes.MEDIUM;
+                size = "medium";
             }
             else if (rbMLarge.Active) {
-                MapSizes.CurrSize = MapSizes.LARGE;
+                size = "large";
             }
             else {
                 throw new ArgumentException("No map size was selected");
             }
-
-            //Add the other layers
-            LandSuperLayerGenerator.GenerateAllLayers( MapSizes.CurrSize );
+            GameGenerator.GenerateMap(size);
         }
 
         //Does the inital steps that are required by all windows upon game generation
         private void ScreenInventorySetup() {
-            IGameWindow gameWindow;
+            string gameWindow;
 
             if (rbSmall.Active) {
-                gameWindow = WI.WSGame;
+                gameWindow = "small";
             }
             else if (rbMedium.Active) {
-                gameWindow = WI.WMGame;
+                gameWindow = "medium";
             } 
             else if (rbLarge.Active) {
-                gameWindow = WI.WLGame;
+                gameWindow = "large";
             } 
             else {
                 throw new ArgumentException("No screen & inventory size was selected");
             }
 
-            gameWindow.SetDefaults();
-            gameWindow.PrintScreen();
-            gameWindow.Show();
+            GameGenerator.GameWindowInventorySetup(gameWindow);
         }
     }
 }

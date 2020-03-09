@@ -1,7 +1,6 @@
-﻿using System;
-using Mundus.Views.Windows;
+﻿using Mundus.Views.Windows;
 
-namespace Mundus.Models {
+namespace Mundus.Data.Windows {
     public static class WI { //stands for Window Instances
         public static MainWindow WMain { get; private set; }
         public static NewGameWindow WNewGame { get; private set; }

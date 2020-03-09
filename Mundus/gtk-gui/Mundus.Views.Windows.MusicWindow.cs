@@ -40,6 +40,7 @@ namespace Mundus.Views.Windows
 			global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup("Default");
 			this.UIManager.InsertActionGroup(w1, 0);
 			this.AddAccelGroup(this.UIManager.AccelGroup);
+			this.HeightRequest = 600;
 			this.Name = "Mundus.Views.Windows.MusicWindow";
 			this.Title = global::Mono.Unix.Catalog.GetString("MusicWindow");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
@@ -173,7 +174,6 @@ namespace Mundus.Views.Windows
 			this.lblBlank1.WidthRequest = 5;
 			this.lblBlank1.HeightRequest = 50;
 			this.lblBlank1.Name = "lblBlank1";
-			this.lblBlank1.LabelProp = "";
 			this.tbUI.Add(this.lblBlank1);
 			global::Gtk.Table.TableChild w10 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank1]));
 			w10.XOptions = ((global::Gtk.AttachOptions)(4));
@@ -183,7 +183,6 @@ namespace Mundus.Views.Windows
 			this.lblBlank2.WidthRequest = 5;
 			this.lblBlank2.HeightRequest = 50;
 			this.lblBlank2.Name = "lblBlank2";
-			this.lblBlank2.LabelProp = "";
 			this.tbUI.Add(this.lblBlank2);
 			global::Gtk.Table.TableChild w11 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank2]));
 			w11.LeftAttach = ((uint)(6));
@@ -222,7 +221,7 @@ namespace Mundus.Views.Windows
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 406;
-			this.DefaultHeight = 549;
+			this.DefaultHeight = 600;
 			this.Show();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 			this.fcMusic.SelectionChanged += new global::System.EventHandler(this.OnFcMusicSelectionChanged);

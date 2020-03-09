@@ -1,5 +1,4 @@
-﻿using System;
-namespace Mundus.Views.Dialogs {
+﻿namespace Mundus.Views.Dialogs {
     public partial class ExitDialog : Gtk.Dialog {
         public ExitDialog() {
             this.Build();

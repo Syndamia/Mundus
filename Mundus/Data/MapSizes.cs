@@ -1,4 +1,4 @@
-﻿namespace Mundus.Models {
+﻿namespace Mundus.Data {
     public static class MapSizes {
         //These are the map sizes that are generated
         public const int SMALL = 5;

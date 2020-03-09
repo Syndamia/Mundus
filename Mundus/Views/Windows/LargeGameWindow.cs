@@ -1,9 +1,10 @@
 ﻿using System;
-using Mundus.Views.Windows.Interfaces;
 using Gtk;
 
 namespace Mundus.Views.Windows {
     public partial class LargeGameWindow : Gtk.Window, IGameWindow {
+        public int Size { get; private set; }
+
         public LargeGameWindow() : base( Gtk.WindowType.Toplevel ) {
             this.Build();
         }

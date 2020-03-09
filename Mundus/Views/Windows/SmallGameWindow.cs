@@ -1,18 +1,14 @@
 ﻿using System;
 using Gtk;
-using Mundus.Models;
-using Mundus.Models.Tiles;
-using Mundus.Models.SuperLayers;
-using Mundus.Views.Windows.Interfaces;
-using Mundus.Models.Mobs.Land_Mobs;
-using Mundus.Controllers.Mob;
-using System.ComponentModel;
+using Mundus.Service;
+using Mundus.Service.Mobs;
+using Mundus.Service.SuperLayers;
 
 namespace Mundus.Views.Windows {
     public partial class SmallGameWindow : Gtk.Window, IGameWindow {
-        /*Constant for the height and width of the game screen, map screens and inventory screen
+        /*Value for the height and width of the game screen, map screens and inventory screen
          *and the width of stats, hotbar, accessories, gear & items on the ground menus*/
-        public const int SIZE = 5;
+        public int Size { get; private set; }
 
         public SmallGameWindow() : base( Gtk.WindowType.Toplevel ) {
             this.Build();
@@ -20,35 +16,34 @@ namespace Mundus.Views.Windows {
 
         public void OnDeleteEvent(object o, Gtk.DeleteEventArgs args) {
             //Open exit dialogue if you haven't saved in a while
-            if (false) { //TODO: check if you have saved
-                //TODO: pause game cycle
+            //if () { //TODO: check if you have saved
+            //    //TODO: pause game cycle
 
-                ResponseType rt = (ResponseType)DI.DExit.Run();
-                DI.DExit.Hide();
+            //    ResponseType rt = (ResponseType)DI.DExit.Run();
+            //    DI.DExit.Hide();
 
-                if(rt == ResponseType.Cancel || rt == ResponseType.DeleteEvent) {
-                    //cancel the exit procedure and keep the window open
-                    args.RetVal = true;
-                    return;
-                }
-                else if (rt == ResponseType.Accept) {
-                    //TODO: call code for saving the game
-                }
-            }
+            //    if(rt == ResponseType.Cancel || rt == ResponseType.DeleteEvent) {
+            //        //cancel the exit procedure and keep the window open
+            //        args.RetVal = true;
+            //        return;
+            //    }
+            //    else if (rt == ResponseType.Accept) {
+            //        //TODO: call code for saving the game
+            //    }
+            //}
 
             Application.Quit();
         }
 
         public void SetDefaults() {
+            this.Size = 5;
             this.SetMapMenuVisibility(false);
             this.SetInvMenuVisibility(false);
-            WI.WPause.GameWindow = this;
-
         }
 
         protected void OnBtnPauseClicked(object sender, EventArgs e) {
             //TODO: add code that stops (pauses) game cycle
-            WI.WPause.Show();
+            WindowController.ShowPauseWindow();
         }
 
         protected void OnBtnMapClicked(object sender, EventArgs e) {
@@ -211,36 +206,16 @@ namespace Mundus.Views.Windows {
         }
 
         protected void OnBtnMusicClicked(object sender, EventArgs e) {
-            WI.WMusic.Show();
+            WindowController.ShowMusicWindow();
         }
 
         public void PrintScreen() {
-            ISuperLayer superLayer = LMI.Player.CurrSuperLayer;
+            for(int layer = 0; layer < 3; layer++) {
+                for (int row = Calculate.CalculateStartY(Size), maxY = Calculate.CalculateMaxY(Size), btn = 1; row <= maxY; row++) {
+                    for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, btn++) {
+                        Image img = ImageController.GetScreenImage(row, col, layer);
 
-            for(int i = 0; i < 3; i++) {
-                int btn = 1;
-                for (int row = this.CalculateStartY(), maxY = this.CalculateMaxY(); row <= maxY; row++) {
-                    for (int col = this.CalculateStartX(), maxX = this.CalculateMaxX(); col <= maxX; col++, btn++) {
-                        //Set the image to be either the ground layer tile, "blank" icon, item layer tile, mob layer tile or don't set it to anything 
-                        //Note: first the ground and the blank icons are printed, then over them are printed the item tiles and over them are mob tiles
-                        Image img = new Image();
-
-                        if (i == 0) {
-                            if (superLayer.GetGroundLayerTile( row, col ) == null) {
-                                img = new Image( "blank", IconSize.Dnd );
-                            }
-                            else {
-                                img = new Image( superLayer.GetGroundLayerTile( row, col ).stock_id, IconSize.Dnd );
-                            }
-                        } 
-                        else if (i == 1) {
-                            if (superLayer.GetItemLayerTile( row, col ) == null) continue;
-                            img = new Image( superLayer.GetItemLayerTile( row, col ).stock_id, IconSize.Dnd );
-                        }
-                        else {
-                            if (superLayer.GetMobLayerTile( row, col ) == null) continue;
-                            img = new Image( superLayer.GetMobLayerTile( row, col ).stock_id, IconSize.Dnd );
-                        }
+                        if (img == null) continue;
 
                         switch (btn) {
                             case 1: btnP1.Image = img; break;
@@ -275,25 +250,10 @@ namespace Mundus.Views.Windows {
         }
 
         public void PrintMap() {
-            //TODO: get the superlayer that the player is in
-            ISuperLayer superLayer = LI.Land;
-
-            string sName;
-
             //Prints the "Ground layer" in map menu
-            int img = 1;
-            for (int row = this.CalculateStartY(), maxY = this.CalculateMaxY(); row <= maxY; row++) {
-                for (int col = this.CalculateStartX(), maxX = this.CalculateMaxX(); col <= maxX; col++, img++) {
-                    //Print a tile if it exists, otherwise print the "blank" icon
-                    if (row < 0 || col < 0 || col >= MapSizes.CurrSize || row >= MapSizes.CurrSize) {
-                        sName = "blank";
-                    }
-                    else if (superLayer.GetGroundLayerTile( row, col ) == null) {
-                        sName = "blank";
-                    }
-                    else {
-                        sName = superLayer.GetGroundLayerTile( row, col ).stock_id;
-                    }
+            for (int row = Calculate.CalculateStartY(Size), maxY = Calculate.CalculateMaxY(Size), img = 1; row <= maxY; row++) {
+                for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, img++) {
+                    string sName = ImageController.GetGroundImage(row, col).Stock;
 
                     switch (img) {
                         case 1: imgG1.SetFromStock( sName, IconSize.Dnd ); break;
@@ -326,19 +286,9 @@ namespace Mundus.Views.Windows {
             }
 
             //Prints the "Item layer" in map menu
-            img = 1;
-            for (int row = this.CalculateStartY(), maxY = this.CalculateMaxY(); row <= maxY; row++) {
-                for (int col = this.CalculateStartX(), maxX = this.CalculateMaxX(); col <= maxX; col++, img++) {
-                    //Print a tile if it exists, otherwise print the "blank" icon
-                    if (row < 0 || col < 0 || col >= MapSizes.CurrSize || row >= MapSizes.CurrSize) {
-                        sName = "blank";
-                    }
-                    else if (superLayer.GetItemLayerTile( row, col ) == null) {
-                        sName = "blank";
-                    }
-                    else {
-                        sName = superLayer.GetItemLayerTile( row, col ).stock_id;
-                    }
+            for (int row = Calculate.CalculateStartY(Size), maxY = Calculate.CalculateMaxY(Size), img = 1; row <= maxY; row++) {
+                for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, img++) {
+                    string sName = ImageController.GetItemImage(row, col).Stock;
 
                     switch (img) {
                         case 1: imgI1.SetFromStock( sName, IconSize.Dnd ); break;
@@ -372,125 +322,220 @@ namespace Mundus.Views.Windows {
         }
 
         public void PrintInventory() {
+            //Prints hotbar
+            for (int i = 0; i < Size; i++) {
+                Image img = ImageController.GetHotbarImage(i);
 
+                switch (i + 1) {
+                    case 1: btnH1.Image = img; break;
+                    case 2: btnH2.Image = img; break;
+                    case 3: btnH3.Image = img; break;
+                    case 4: btnH4.Image = img; break;
+                    case 5: btnH5.Image = img; break;
+                }
+            }
+
+            //Prints the actual inventory (items)
+            for (int row = 0; row < Size; row++) {
+                for (int col = 0; col < Size; col++) {
+                    Image img = ImageController.GetInventoryItemImage(row * 5 + col);
+
+                    switch (row * 5 + col + 1) {
+                        case 1: btnI1.Image = img; break;
+                        case 2: btnI2.Image = img; break;
+                        case 3: btnI3.Image = img; break;
+                        case 4: btnI4.Image = img; break;
+                        case 5: btnI5.Image = img; break;
+                        case 6: btnI6.Image = img; break;
+                        case 7: btnI7.Image = img; break;
+                        case 8: btnI8.Image = img; break;
+                        case 9: btnI9.Image = img; break;
+                        case 10: btnI10.Image = img; break;
+                        case 11: btnI11.Image = img; break;
+                        case 12: btnI12.Image = img; break;
+                        case 13: btnI13.Image = img; break;
+                        case 14: btnI14.Image = img; break;
+                        case 15: btnI15.Image = img; break;
+                        case 16: btnI16.Image = img; break;
+                        case 17: btnI17.Image = img; break;
+                        case 18: btnI18.Image = img; break;
+                        case 19: btnI19.Image = img; break;
+                        case 20: btnI20.Image = img; break;
+                        case 21: btnI21.Image = img; break;
+                        case 22: btnI22.Image = img; break;
+                        case 23: btnI23.Image = img; break;
+                        case 24: btnI24.Image = img; break;
+                        case 25: btnI25.Image = img; break;
+                    }
+                }
+            }
+
+            //Prints accessories
+            for (int row = 0; row < 2; row++) {
+                for (int col = 0; col < Size; col++) {
+                    Image img = ImageController.GetAccessoryImage(row * 5 + col);
+
+                    switch (row * 5 + col + 1) {
+                        case 1: btnA1.Image = img; break;
+                        case 2: btnA2.Image = img; break;
+                        case 3: btnA3.Image = img; break;
+                        case 4: btnA4.Image = img; break;
+                        case 5: btnA5.Image = img; break;
+                        case 6: btnA6.Image = img; break;
+                        case 7: btnA7.Image = img; break;
+                        case 8: btnA8.Image = img; break;
+                        case 9: btnA9.Image = img; break;
+                        case 10: btnA10.Image = img; break;
+                    }
+                }
+            }
+
+            //Prints gear
+            for (int i = 0; i < Size; i++) {
+                Image img = ImageController.GetGearImage(i);
+
+                switch (i + 1) {
+                    case 1: btnG1.Image = img; break;
+                    case 2: btnG2.Image = img; break;
+                    case 3: btnG3.Image = img; break;
+                    case 4: btnG4.Image = img; break;
+                    case 5: btnG5.Image = img; break;
+                }
+            }
         }
 
-        protected void OnBtnH1Clicked(object sender, EventArgs e) {
-            this.PrintScreen();
-        }
-
+        //Screen buttons
         protected void OnBtnP1Clicked(object sender, EventArgs e) {
-            ChangePosition(1);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(1);
+            }
         }
-
         protected void OnBtnP2Clicked(object sender, EventArgs e) {
-            ChangePosition(2);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(2);
+            }
         }
-
         protected void OnBtnP3Clicked(object sender, EventArgs e) {
-            ChangePosition(3);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(3);
+            }
         }
-
         protected void OnBtnP4Clicked(object sender, EventArgs e) {
-            ChangePosition(4);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(4);
+            }
         }
-
         protected void OnBtnP5Clicked(object sender, EventArgs e) {
-            ChangePosition(5);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(5);
+            }
         }
-
         protected void OnBtnP6Clicked(object sender, EventArgs e) {
-            ChangePosition(6);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(6);
+            }
         }
-
         protected void OnBtnP7Clicked(object sender, EventArgs e) {
-            ChangePosition(7);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(7);
+            }
         }
-
         protected void OnBtnP8Clicked(object sender, EventArgs e) {
-            ChangePosition(8);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(8);
+            }
         }
-
         protected void OnBtnP9Clicked(object sender, EventArgs e) {
-            ChangePosition(9);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(9);
+            }
         }
-
         protected void OnBtnP10Clicked(object sender, EventArgs e) {
-            ChangePosition(10);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(10);
+            }
         }
-
         protected void OnBtnP11Clicked(object sender, EventArgs e) {
-            ChangePosition(11);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(11);
+            }
         }
-
         protected void OnBtnP12Clicked(object sender, EventArgs e) {
-            ChangePosition(12);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(12);
+            }
         }
-
         protected void OnBtnP13Clicked(object sender, EventArgs e) {
-            ChangePosition(13);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(13);
+            }
         }
-
         protected void OnBtnP14Clicked(object sender, EventArgs e) {
-            ChangePosition(14);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(14);
+            }
         }
-
         protected void OnBtnP15Clicked(object sender, EventArgs e) {
-            ChangePosition(15);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(15);
+            }
         }
-
         protected void OnBtnP16Clicked(object sender, EventArgs e) {
-            ChangePosition(16);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(16);
+            }
         }
-
         protected void OnBtnP17Clicked(object sender, EventArgs e) {
-            ChangePosition(17);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(17);
+            }
         }
-
         protected void OnBtnP18Clicked(object sender, EventArgs e) {
-            ChangePosition(18);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(18);
+            }
         }
-
         protected void OnBtnP19Clicked(object sender, EventArgs e) {
-            ChangePosition(19);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(19);
+            }
         }
-
         protected void OnBtnP20Clicked(object sender, EventArgs e) {
-            ChangePosition(20);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(20);
+            }
         }
-
         protected void OnBtnP21Clicked(object sender, EventArgs e) {
-            ChangePosition(21);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(21);
+            }
         }
-
         protected void OnBtnP22Clicked(object sender, EventArgs e) {
-            ChangePosition(22);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(22);
+            }
         }
-
         protected void OnBtnP23Clicked(object sender, EventArgs e) {
-            ChangePosition(23);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(23);
+            }
         }
-
         protected void OnBtnP24Clicked(object sender, EventArgs e) {
-            ChangePosition(24);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(24);
+            }
         }
-
         protected void OnBtnP25Clicked(object sender, EventArgs e) {
-            ChangePosition(25);
+            if (!WindowController.PauseWindowVisible) {
+                ChangePosition(25);
+            }
         }
 
         private void ChangePosition(int button) {
             int buttonYPos = (button - 1) / 5;
             int buttonXPos = button - buttonYPos * 5 - 1;
 
-            int newYPos = (LMI.Player.YPos - 2 >= 0) ? LMI.Player.YPos - 2 + buttonYPos : buttonYPos;
-            if (LMI.Player.YPos > MapSizes.CurrSize - 3) newYPos = buttonYPos + MapSizes.CurrSize - SIZE;
-            int newXPos = (LMI.Player.XPos - 2 >= 0) ? LMI.Player.XPos - 2 + buttonXPos : buttonXPos;
-            if (LMI.Player.XPos > MapSizes.CurrSize - 3) newXPos = buttonXPos + MapSizes.CurrSize - SIZE;
-
-            if (newYPos >= 0 && newXPos >= 0 && newYPos < MapSizes.CurrSize && newXPos < MapSizes.CurrSize) {
-                MobMoving.MoveMob( LMI.Player, newYPos, newXPos );
-            }
+            MobMoving.MovePlayer(buttonYPos, buttonXPos, Size);
 
             this.PrintScreen();
             if (this.MapMenuIsVisible()) {
@@ -498,30 +543,297 @@ namespace Mundus.Views.Windows {
             }
         }
 
-        /*Depending on whether you are on the edge of the map or in the center, the screen renders a bit differently.
-         *On the edge it doesn't follow the player and only shows the corner "chunk". In the other parts it follows the
-         *the player, making sure he stays in the center of the screen.
-         *This means that when the player is followed, rendered part of the map depend on the player position, but when
-         *he isn't, it depends on the screen and map sizes.*/
-        private int CalculateMaxY() {
-            int maxY = (LMI.Player.YPos - 2 >= 0) ? LMI.Player.YPos + 2 : SIZE - 1;
-            if (maxY >= MapSizes.CurrSize) maxY = MapSizes.CurrSize - 1;
-            return maxY;
+        //Hotbar buttons
+        protected void OnBtnH1Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("hotbar", 0);
+                this.PrintInventory();
+            }
         }
-        private int CalculateStartY() {
-            int startY = (LMI.Player.YPos - 2 <= MapSizes.CurrSize - SIZE) ? LMI.Player.YPos - 2 : MapSizes.CurrSize - SIZE;
-            if (startY < 0) startY = 0;
-            return startY;
+        protected void OnBtnH2Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("hotbar", 1);
+                this.PrintInventory();
+            }
         }
-        private int CalculateMaxX() {
-            int maxX = (LMI.Player.XPos - 2 >= 0) ? LMI.Player.XPos + 2 : SIZE - 1;
-            if (maxX >= MapSizes.CurrSize) maxX = MapSizes.CurrSize - 1;
-            return maxX;
+        protected void OnBtnH3Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("hotbar", 2);
+                this.PrintInventory();
+            }
         }
-        private int CalculateStartX() {
-            int startX = (LMI.Player.XPos - 2 <= MapSizes.CurrSize - SIZE) ? LMI.Player.XPos - 2 : MapSizes.CurrSize - SIZE;
-            if (startX < 0) startX = 0;
-            return startX;
+        protected void OnBtnH4Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("hotbar", 3);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnH5Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("hotbar", 4);
+                this.PrintInventory();
+            }
+        }
+
+        //Inventory (items) buttons
+        protected void OnBtnI1Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 0);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI2Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 1);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI3Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 2);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI4Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 3);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI5Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 4);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI6Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 5);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI7Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 6);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI8Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 7);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI9Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 8);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI10Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 9);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI11Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 10);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI12Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 11);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI13Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 12);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI14Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 13);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI15Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 14);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI16Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 15);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI17Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 16);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI18Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 17);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI19Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 18);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI20Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 19);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI21Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 20);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI22Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 21);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI23Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 22);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI24Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 23);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnI25Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("items", 24);
+                this.PrintInventory();
+            }
+        }
+
+        //Accessories buttons
+        protected void OnBtnA1Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("accessories", 0);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnA2Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("accessories", 1);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnA3Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("accessories", 2);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnA4Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("accessories", 3);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnA5Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("accessories", 4);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnA6Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("accessories", 5);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnA7Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("accessories", 6);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnA8Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("accessories", 7);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnA9Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("accessories", 8);
+                this.PrintInventory();
+            }
+        }
+        protected void OnBtnA10Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("accessories", 9);
+                this.PrintInventory();
+            }
+        }
+
+        //Gear buttons
+        protected void OnBtnG1Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("gear", 0);
+                this.PrintInventory();
+            }
+        }
+
+        protected void OnBtnG2Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("gear", 1);
+                this.PrintInventory();
+            }
+        }
+
+        protected void OnBtnG3Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("gear", 2);
+                this.PrintInventory();
+            }
+        }
+
+        protected void OnBtnG4Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("gear", 3);
+                this.PrintInventory();
+            }
+        }
+
+        protected void OnBtnG5Clicked(object sender, EventArgs e) {
+            if (!WindowController.PauseWindowVisible) {
+                this.SelectItem("gear", 4);
+                this.PrintInventory();
+            }
+        }
+
+
+        private void SelectItem(string place, int position) {
+            if (SwitchItems.HasOrigin()) {
+                SwitchItems.ReplaceItems(place, position);
+            } else {
+                SwitchItems.SetOrigin(place, position);
+            }
+
+            this.PrintInventory();
         }
     }
 }

@@ -67,7 +67,6 @@ namespace Mundus.Views.Windows
 			this.lblBlank1 = new global::Gtk.Label();
 			this.lblBlank1.WidthRequest = 40;
 			this.lblBlank1.Name = "lblBlank1";
-			this.lblBlank1.LabelProp = "";
 			this.tbUI.Add(this.lblBlank1);
 			global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank1]));
 			w3.LeftAttach = ((uint)(2));
@@ -78,7 +77,6 @@ namespace Mundus.Views.Windows
 			this.lblBlank2 = new global::Gtk.Label();
 			this.lblBlank2.WidthRequest = 40;
 			this.lblBlank2.Name = "lblBlank2";
-			this.lblBlank2.LabelProp = "";
 			this.tbUI.Add(this.lblBlank2);
 			global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank2]));
 			w4.LeftAttach = ((uint)(4));
@@ -89,7 +87,6 @@ namespace Mundus.Views.Windows
 			this.lblBlank3 = new global::Gtk.Label();
 			this.lblBlank3.WidthRequest = 40;
 			this.lblBlank3.Name = "lblBlank3";
-			this.lblBlank3.LabelProp = "";
 			this.tbUI.Add(this.lblBlank3);
 			global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank3]));
 			w5.LeftAttach = ((uint)(5));
@@ -101,7 +98,6 @@ namespace Mundus.Views.Windows
 			this.lblBlank4.WidthRequest = 5;
 			this.lblBlank4.HeightRequest = 50;
 			this.lblBlank4.Name = "lblBlank4";
-			this.lblBlank4.LabelProp = "";
 			this.tbUI.Add(this.lblBlank4);
 			global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank4]));
 			w6.XOptions = ((global::Gtk.AttachOptions)(4));
@@ -111,7 +107,6 @@ namespace Mundus.Views.Windows
 			this.lblBlank5.WidthRequest = 5;
 			this.lblBlank5.HeightRequest = 50;
 			this.lblBlank5.Name = "lblBlank5";
-			this.lblBlank5.LabelProp = "";
 			this.tbUI.Add(this.lblBlank5);
 			global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank5]));
 			w7.LeftAttach = ((uint)(6));

@@ -1,8 +1,7 @@
-﻿using System;
-using Gtk;
-
-namespace Mundus.Views.Windows.Interfaces {
+﻿namespace Mundus.Views.Windows {
     public interface IGameWindow {
+        int Size { get; }
+
         //Events that are generated from designer window
         void OnDeleteEvent(object o, Gtk.DeleteEventArgs args);
         

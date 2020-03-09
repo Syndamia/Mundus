@@ -1,7 +1,6 @@
-﻿using System;
-using Gtk;
+﻿using Gtk;
 
-namespace Mundus.Models.Tiles {
+namespace Mundus.Service.Tiles {
     public class ItemTile {
         public string stock_id { get; private set; }
         public Image Texture { get; private set; }

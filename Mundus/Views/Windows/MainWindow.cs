@@ -1,6 +1,6 @@
 ﻿using System;
 using Gtk;
-using Mundus.Models;
+using Mundus.Service;
 
 namespace Mundus.Views.Windows {
     public partial class MainWindow : Gtk.Window {
@@ -13,14 +13,11 @@ namespace Mundus.Views.Windows {
         }
 
         private void OnBtnNewGameClicked(object sender, EventArgs e) {
-            this.Hide();
-            WI.WNewGame.SetDefaults();
-            WI.WNewGame.Show();
+            WindowController.ShowNewGameWindow(this);
         }
 
         private void OnBtnSettingsClicked(object sender, EventArgs e) {
-            this.Hide();
-            WI.WSettings.Show(this);
+            WindowController.ShowSettingsWindow(this);
         }
 
         protected void OnBtnTutorialClicked(object sender, EventArgs e) {

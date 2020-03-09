@@ -1,7 +1,7 @@
-﻿using System;
-using Mundus.Views.Dialogs;
+﻿using Mundus.Views.Dialogs;
+using Gtk;
 
-namespace Mundus.Models {
+namespace Mundus.Data.Dialogues {
     public static class DI { //stands for Dialogue Instances
         public static ExitDialog DExit { get; private set; }
 

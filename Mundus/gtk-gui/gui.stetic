@@ -389,7 +389,6 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label" translatable="yes">Creative</property>
-            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -418,7 +417,6 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label" translatable="yes">Easy</property>
-            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -500,7 +498,6 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label" translatable="yes">Large</property>
-            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -556,7 +553,6 @@
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Label" translatable="yes">Large</property>
-            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -1200,6 +1196,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnA1Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">8</property>
@@ -1226,6 +1223,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnA10Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">9</property>
@@ -1252,6 +1250,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnA2Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">8</property>
@@ -1278,6 +1277,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnA3Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">8</property>
@@ -1304,6 +1304,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnA4Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">8</property>
@@ -1330,6 +1331,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnA5Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">8</property>
@@ -1356,6 +1358,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnA6Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">9</property>
@@ -1382,6 +1385,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnA7Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">9</property>
@@ -1408,6 +1412,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnA8Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">9</property>
@@ -1434,6 +1439,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnA9Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">9</property>
@@ -1460,6 +1466,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnG1Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">11</property>
@@ -1486,6 +1493,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnG2Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">11</property>
@@ -1512,6 +1520,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnG3Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">11</property>
@@ -1538,6 +1547,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnG4Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">11</property>
@@ -1564,6 +1574,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnG5Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">11</property>
@@ -1697,6 +1708,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnH2Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">10</property>
@@ -1724,6 +1736,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnH3Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">10</property>
@@ -1751,6 +1764,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnH4Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">10</property>
@@ -1778,6 +1792,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnH5Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">10</property>
@@ -1805,6 +1820,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI1Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">1</property>
@@ -1832,6 +1848,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI10Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">2</property>
@@ -1859,6 +1876,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI11Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -1886,6 +1904,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI12Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -1913,6 +1932,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI13Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -1940,6 +1960,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI14Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -1967,6 +1988,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI15Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -1994,6 +2016,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI16Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">4</property>
@@ -2021,6 +2044,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI17Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">4</property>
@@ -2048,6 +2072,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI18Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">4</property>
@@ -2075,6 +2100,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI19Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">4</property>
@@ -2102,6 +2128,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI2Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">1</property>
@@ -2129,6 +2156,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI20Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">4</property>
@@ -2156,6 +2184,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI21Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">5</property>
@@ -2183,6 +2212,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI22Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">5</property>
@@ -2210,6 +2240,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI23Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">5</property>
@@ -2237,6 +2268,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI24Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">5</property>
@@ -2264,6 +2296,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI25Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">5</property>
@@ -2291,6 +2324,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI3Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">1</property>
@@ -2318,6 +2352,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI4Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">1</property>
@@ -2345,6 +2380,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI5Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">1</property>
@@ -2372,6 +2408,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI6Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">2</property>
@@ -2399,6 +2436,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI7Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">2</property>
@@ -2426,6 +2464,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI8Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">2</property>
@@ -2453,6 +2492,7 @@
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
+            <signal name="Clicked" handler="OnBtnI9Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">2</property>
@@ -5682,9 +5722,10 @@
       <placeholder />
     </child>
   </widget>
-  <widget class="Gtk.Window" id="Mundus.Views.Windows.MusicWindow" design-size="406 549">
+  <widget class="Gtk.Window" id="Mundus.Views.Windows.MusicWindow" design-size="406 600">
     <action-group name="Default" />
     <property name="MemberName" />
+    <property name="HeightRequest">600</property>
     <property name="Title" translatable="yes">MusicWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Resizable">False</property>

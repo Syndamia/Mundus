@@ -1,8 +1,7 @@
-﻿using System;
-using Mundus.Models.SuperLayers;
-using Mundus.Models.Tiles;
+﻿using Mundus.Data.SuperLayers;
+using Mundus.Service.Tiles;
 
-namespace Mundus.Models.Mobs {
+namespace Mundus.Service.Mobs {
     public interface IMob {
         MobTile Tile { get; }
         ISuperLayer CurrSuperLayer { get; set; }
