@@ -322,6 +322,8 @@ namespace Mundus.Views.Windows {
         }
 
         public void PrintInventory() {
+            btnH.Image = ImageController.GetHandImage();
+
             //Prints hotbar
             for (int i = 0; i < Size; i++) {
                 Image img = ImageController.GetHotbarImage(i);
@@ -331,7 +333,6 @@ namespace Mundus.Views.Windows {
                     case 2: btnH2.Image = img; break;
                     case 3: btnH3.Image = img; break;
                     case 4: btnH4.Image = img; break;
-                    case 5: btnH5.Image = img; break;
                 }
             }
 
@@ -834,6 +835,10 @@ namespace Mundus.Views.Windows {
             }
 
             this.PrintInventory();
+        }
+
+        protected void OnBtnIG1Clicked(object sender, EventArgs e) {
+            Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.AddItem("items");
         }
     }
 }

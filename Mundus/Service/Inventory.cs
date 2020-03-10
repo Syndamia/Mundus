@@ -1,26 +1,28 @@
-﻿using Mundus.Service.Tiles;
+﻿using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Service {
     public class Inventory {
-        public ItemTile[] Hotbar { get; set; }
-        public ItemTile[] Items { get; set; }
-        public ItemTile[] Accessories { get; set; }
-        public ItemTile[] Gear { get; set; }
+        public Tool Hand { get; set; }
+        public Material[] Hotbar { get; set; }
+        public Material[] Items { get; set; }
+        public Gear[] Accessories { get; set; }
+        public Gear[] Gear { get; set; }
 
         public Inventory(int screenInvSize) {
             this.SetNewSizes(screenInvSize);
         }
 
         public void SetNewSizes(int screenInvSize) {
-            this.Hotbar = new ItemTile[screenInvSize];
-            this.Items = new ItemTile[screenInvSize * screenInvSize];
-            this.Accessories = new ItemTile[screenInvSize * 2];
-            this.Gear = new ItemTile[screenInvSize];
+            this.Hotbar = new Material[screenInvSize - 1];
+            this.Items = new Material[screenInvSize * screenInvSize];
+            this.Accessories = new Gear[screenInvSize * 2];
+            this.Gear = new Gear[screenInvSize];
         }
 
         public void AddItem(string place, ItemTile newItem) {
             ItemTile[] tmp = null;
             switch (place.ToLower()) {
+                case "hand": tmp[0] = this.Hand; break;
                 case "hotbar": tmp = this.Hotbar; break;
                 case "items": tmp = this.Items; break;
                 case "accessories": tmp = this.Accessories; break;

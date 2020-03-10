@@ -42,6 +42,8 @@ namespace Mundus.Views.Windows
 
 		private global::Gtk.Button btnGM3;
 
+		private global::Gtk.Button btnH;
+
 		private global::Gtk.Button btnH1;
 
 		private global::Gtk.Button btnH2;
@@ -49,8 +51,6 @@ namespace Mundus.Views.Windows
 		private global::Gtk.Button btnH3;
 
 		private global::Gtk.Button btnH4;
-
-		private global::Gtk.Button btnH5;
 
 		private global::Gtk.Button btnI1;
 
@@ -658,6 +658,24 @@ namespace Mundus.Views.Windows
 			w33.XOptions = ((global::Gtk.AttachOptions)(4));
 			w33.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
+			this.btnH = new global::Gtk.Button();
+			this.btnH.WidthRequest = 50;
+			this.btnH.HeightRequest = 50;
+			this.btnH.CanFocus = true;
+			this.btnH.Name = "btnH";
+			this.btnH.UseUnderline = true;
+			this.btnH.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w34 = new global::Gtk.Image();
+			this.btnH.Image = w34;
+			this.tbUI.Add(this.btnH);
+			global::Gtk.Table.TableChild w35 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH]));
+			w35.TopAttach = ((uint)(10));
+			w35.BottomAttach = ((uint)(11));
+			w35.LeftAttach = ((uint)(8));
+			w35.RightAttach = ((uint)(9));
+			w35.XOptions = ((global::Gtk.AttachOptions)(4));
+			w35.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
 			this.btnH1 = new global::Gtk.Button();
 			this.btnH1.WidthRequest = 50;
 			this.btnH1.HeightRequest = 50;
@@ -665,16 +683,16 @@ namespace Mundus.Views.Windows
 			this.btnH1.Name = "btnH1";
 			this.btnH1.UseUnderline = true;
 			this.btnH1.Relief = ((global::Gtk.ReliefStyle)(1));
-			global::Gtk.Image w34 = new global::Gtk.Image();
-			this.btnH1.Image = w34;
+			global::Gtk.Image w36 = new global::Gtk.Image();
+			this.btnH1.Image = w36;
 			this.tbUI.Add(this.btnH1);
-			global::Gtk.Table.TableChild w35 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH1]));
-			w35.TopAttach = ((uint)(10));
-			w35.BottomAttach = ((uint)(11));
-			w35.LeftAttach = ((uint)(8));
-			w35.RightAttach = ((uint)(9));
-			w35.XOptions = ((global::Gtk.AttachOptions)(4));
-			w35.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w37 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH1]));
+			w37.TopAttach = ((uint)(10));
+			w37.BottomAttach = ((uint)(11));
+			w37.LeftAttach = ((uint)(9));
+			w37.RightAttach = ((uint)(10));
+			w37.XOptions = ((global::Gtk.AttachOptions)(4));
+			w37.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.btnH2 = new global::Gtk.Button();
 			this.btnH2.WidthRequest = 50;
@@ -683,16 +701,16 @@ namespace Mundus.Views.Windows
 			this.btnH2.Name = "btnH2";
 			this.btnH2.UseUnderline = true;
 			this.btnH2.Relief = ((global::Gtk.ReliefStyle)(1));
-			global::Gtk.Image w36 = new global::Gtk.Image();
-			this.btnH2.Image = w36;
+			global::Gtk.Image w38 = new global::Gtk.Image();
+			this.btnH2.Image = w38;
 			this.tbUI.Add(this.btnH2);
-			global::Gtk.Table.TableChild w37 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH2]));
-			w37.TopAttach = ((uint)(10));
-			w37.BottomAttach = ((uint)(11));
-			w37.LeftAttach = ((uint)(9));
-			w37.RightAttach = ((uint)(10));
-			w37.XOptions = ((global::Gtk.AttachOptions)(4));
-			w37.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w39 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH2]));
+			w39.TopAttach = ((uint)(10));
+			w39.BottomAttach = ((uint)(11));
+			w39.LeftAttach = ((uint)(10));
+			w39.RightAttach = ((uint)(11));
+			w39.XOptions = ((global::Gtk.AttachOptions)(4));
+			w39.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.btnH3 = new global::Gtk.Button();
 			this.btnH3.WidthRequest = 50;
@@ -701,16 +719,16 @@ namespace Mundus.Views.Windows
 			this.btnH3.Name = "btnH3";
 			this.btnH3.UseUnderline = true;
 			this.btnH3.Relief = ((global::Gtk.ReliefStyle)(1));
-			global::Gtk.Image w38 = new global::Gtk.Image();
-			this.btnH3.Image = w38;
+			global::Gtk.Image w40 = new global::Gtk.Image();
+			this.btnH3.Image = w40;
 			this.tbUI.Add(this.btnH3);
-			global::Gtk.Table.TableChild w39 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH3]));
-			w39.TopAttach = ((uint)(10));
-			w39.BottomAttach = ((uint)(11));
-			w39.LeftAttach = ((uint)(10));
-			w39.RightAttach = ((uint)(11));
-			w39.XOptions = ((global::Gtk.AttachOptions)(4));
-			w39.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w41 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH3]));
+			w41.TopAttach = ((uint)(10));
+			w41.BottomAttach = ((uint)(11));
+			w41.LeftAttach = ((uint)(11));
+			w41.RightAttach = ((uint)(12));
+			w41.XOptions = ((global::Gtk.AttachOptions)(4));
+			w41.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.btnH4 = new global::Gtk.Button();
 			this.btnH4.WidthRequest = 50;
@@ -719,28 +737,10 @@ namespace Mundus.Views.Windows
 			this.btnH4.Name = "btnH4";
 			this.btnH4.UseUnderline = true;
 			this.btnH4.Relief = ((global::Gtk.ReliefStyle)(1));
-			global::Gtk.Image w40 = new global::Gtk.Image();
-			this.btnH4.Image = w40;
-			this.tbUI.Add(this.btnH4);
-			global::Gtk.Table.TableChild w41 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH4]));
-			w41.TopAttach = ((uint)(10));
-			w41.BottomAttach = ((uint)(11));
-			w41.LeftAttach = ((uint)(11));
-			w41.RightAttach = ((uint)(12));
-			w41.XOptions = ((global::Gtk.AttachOptions)(4));
-			w41.YOptions = ((global::Gtk.AttachOptions)(4));
-			// Container child tbUI.Gtk.Table+TableChild
-			this.btnH5 = new global::Gtk.Button();
-			this.btnH5.WidthRequest = 50;
-			this.btnH5.HeightRequest = 50;
-			this.btnH5.CanFocus = true;
-			this.btnH5.Name = "btnH5";
-			this.btnH5.UseUnderline = true;
-			this.btnH5.Relief = ((global::Gtk.ReliefStyle)(1));
 			global::Gtk.Image w42 = new global::Gtk.Image();
-			this.btnH5.Image = w42;
-			this.tbUI.Add(this.btnH5);
-			global::Gtk.Table.TableChild w43 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH5]));
+			this.btnH4.Image = w42;
+			this.tbUI.Add(this.btnH4);
+			global::Gtk.Table.TableChild w43 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH4]));
 			w43.TopAttach = ((uint)(10));
 			w43.BottomAttach = ((uint)(11));
 			w43.LeftAttach = ((uint)(12));
@@ -2962,11 +2962,11 @@ namespace Mundus.Views.Windows
 			this.btnI11.Clicked += new global::System.EventHandler(this.OnBtnI11Clicked);
 			this.btnI10.Clicked += new global::System.EventHandler(this.OnBtnI10Clicked);
 			this.btnI1.Clicked += new global::System.EventHandler(this.OnBtnI1Clicked);
-			this.btnH5.Clicked += new global::System.EventHandler(this.OnBtnH5Clicked);
-			this.btnH4.Clicked += new global::System.EventHandler(this.OnBtnH4Clicked);
-			this.btnH3.Clicked += new global::System.EventHandler(this.OnBtnH3Clicked);
-			this.btnH2.Clicked += new global::System.EventHandler(this.OnBtnH2Clicked);
-			this.btnH1.Clicked += new global::System.EventHandler(this.OnBtnH1Clicked);
+			this.btnH4.Clicked += new global::System.EventHandler(this.OnBtnH5Clicked);
+			this.btnH3.Clicked += new global::System.EventHandler(this.OnBtnH4Clicked);
+			this.btnH2.Clicked += new global::System.EventHandler(this.OnBtnH3Clicked);
+			this.btnH1.Clicked += new global::System.EventHandler(this.OnBtnH2Clicked);
+			this.btnH.Clicked += new global::System.EventHandler(this.OnBtnH1Clicked);
 			this.btnG5.Clicked += new global::System.EventHandler(this.OnBtnG5Clicked);
 			this.btnG4.Clicked += new global::System.EventHandler(this.OnBtnG4Clicked);
 			this.btnG3.Clicked += new global::System.EventHandler(this.OnBtnG3Clicked);

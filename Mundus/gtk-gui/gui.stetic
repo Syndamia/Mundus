@@ -12,11 +12,6 @@
         <property name="Image">resource:Mundus.Icons.Land.Ground.grass.png</property>
       </source>
     </icon-set>
-    <icon-set id="blank">
-      <source>
-        <property name="Image">resource:Mundus.Icons.blank.jpg</property>
-      </source>
-    </icon-set>
     <icon-set id="boulder">
       <source>
         <property name="Image">resource:Mundus.Icons.Land.Items.boulder.png</property>
@@ -25,6 +20,21 @@
     <icon-set id="player">
       <source>
         <property name="Image">resource:Mundus.Icons.player.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="blank">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Blanks.blank.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="blank_hand">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Blanks.blank_hand.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="blank_gear">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Blanks.blank_gear.png</property>
       </source>
     </icon-set>
   </icon-factory>
@@ -1671,7 +1681,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="btnH1">
+          <widget class="Gtk.Button" id="btnH">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
@@ -1699,7 +1709,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="btnH2">
+          <widget class="Gtk.Button" id="btnH1">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
@@ -1727,7 +1737,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="btnH3">
+          <widget class="Gtk.Button" id="btnH2">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
@@ -1755,7 +1765,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="btnH4">
+          <widget class="Gtk.Button" id="btnH3">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
@@ -1783,7 +1793,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="btnH5">
+          <widget class="Gtk.Button" id="btnH4">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
@@ -2519,6 +2529,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnIG1Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">14</property>

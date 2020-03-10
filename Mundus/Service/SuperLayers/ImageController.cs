@@ -21,8 +21,8 @@ namespace Mundus.Service.SuperLayers {
                 }
             }
             else if (layer == 1 &&
-                     superLayer.GetItemLayerTile( row, col ) != null) {
-                img = new Image( superLayer.GetItemLayerTile( row, col ).stock_id, IconSize.Dnd );
+                     superLayer.GetStructureLayerTile( row, col ) != null) {
+                img = new Image( superLayer.GetStructureLayerTile( row, col ).stock_id, IconSize.Dnd );
             }
             else if (layer == 2 &&
                      superLayer.GetMobLayerTile( row, col ) != null) {
@@ -49,8 +49,16 @@ namespace Mundus.Service.SuperLayers {
             Image img = new Image( "blank", IconSize.Dnd );
 
             if (row >= 0 && col >= 0 && col < MapSizes.CurrSize && row < MapSizes.CurrSize &&
-                superLayer.GetItemLayerTile( row, col ) != null) {
-                img = superLayer.GetItemLayerTile( row, col ).Texture;
+                superLayer.GetStructureLayerTile( row, col ) != null) {
+                img = superLayer.GetStructureLayerTile( row, col ).Texture;
+            }
+            return img;
+        }
+
+        public static Image GetHandImage() {
+            Image img = new Image("blank_hand", IconSize.Dnd);
+            if (LMI.Player.Inventory.Hand != null) {
+                img = LMI.Player.Inventory.Hand.Texture;
             }
             return img;
         }
@@ -77,7 +85,7 @@ namespace Mundus.Service.SuperLayers {
         }
 
         public static Image GetAccessoryImage(int index) {
-            Image img = new Image("blank", IconSize.Dnd);
+            Image img = new Image("blank_gear", IconSize.Dnd);
             if (index < LMI.Player.Inventory.Accessories.Length) {
                 if (LMI.Player.Inventory.Accessories[index] != null) {
                     img = LMI.Player.Inventory.Accessories[index].Texture;
@@ -87,7 +95,7 @@ namespace Mundus.Service.SuperLayers {
         }
 
         public static Image GetGearImage(int index) {
-            Image img = new Image( "blank", IconSize.Dnd );
+            Image img = new Image("blank_gear", IconSize.Dnd);
             if (index < LMI.Player.Inventory.Gear.Length) {
                 if (LMI.Player.Inventory.Gear[index] != null) {
                     img = LMI.Player.Inventory.Gear[index].Texture;

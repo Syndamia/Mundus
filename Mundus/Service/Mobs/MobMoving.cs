@@ -19,8 +19,8 @@ namespace Mundus.Service.Mobs {
         }
 
         public static void ChangePosition(IMob mob, int yPos, int xPos) {
-            if (mob.CurrSuperLayer.GetItemLayerTile( yPos, xPos ) == null ||
-                mob.CurrSuperLayer.GetItemLayerTile( yPos, xPos ).IsWalkable) {
+            if (mob.CurrSuperLayer.GetStructureLayerTile( yPos, xPos ) == null ||
+                mob.CurrSuperLayer.GetStructureLayerTile( yPos, xPos ).IsWalkable) {
                 mob.CurrSuperLayer.RemoveMobFromPosition( mob.YPos, mob.XPos );
                 mob.YPos = yPos;
                 mob.XPos = xPos;

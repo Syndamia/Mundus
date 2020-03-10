@@ -1,9 +1,10 @@
 ﻿using Mundus.Service.Tiles;
+using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Data.SuperLayers {
     public class Land : ISuperLayer {
         private static MobTile[,] mobLayer;
-        private static ItemTile[,] itemLayer;
+        private static Structure[,] structureLayer;
         private static GroundTile[,] groundLayer;
 
         public Land() { }
@@ -11,8 +12,8 @@ namespace Mundus.Data.SuperLayers {
         public MobTile GetMobLayerTile(int yPos, int xPos) {
             return mobLayer[yPos, xPos];
         }
-        public ItemTile GetItemLayerTile(int yPos, int xPos) {
-            return itemLayer[yPos, xPos];
+        public Structure GetStructureLayerTile(int yPos, int xPos) {
+            return structureLayer[yPos, xPos];
         }
         public GroundTile GetGroundLayerTile(int yPos, int xPos) {
             return groundLayer[yPos, xPos];
@@ -28,14 +29,14 @@ namespace Mundus.Data.SuperLayers {
             mobLayer[yPos, xPos] = null;
         }
 
-        public void SetItemLayer(ItemTile[,] itemTiles) {
-            itemLayer = itemTiles;
+        public void SetStructureLayer(Structure[,] itemTiles) {
+            structureLayer = itemTiles;
         }
-        public void SetItemAtPosition(ItemTile tile, int yPos, int xPos) {
-            itemLayer[yPos, xPos] = tile;
+        public void SetStructureAtPosition(Structure tile, int yPos, int xPos) {
+            structureLayer[yPos, xPos] = tile;
         }
-        public void RemoveItemFromPosition(int yPos, int xPos) {
-            itemLayer[yPos, xPos] = null;
+        public void RemoveStructureFromPosition(int yPos, int xPos) {
+            structureLayer[yPos, xPos] = null;
         }
 
         public void SetGroundLayer(GroundTile[,] groundTiles) {

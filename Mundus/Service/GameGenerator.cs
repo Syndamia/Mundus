@@ -29,9 +29,9 @@ namespace Mundus.Service {
         }
 
         public static void GameWindowInventorySetup(IGameWindow gameWindow) {
-            LMI.CreateInventories(gameWindow.Size);
-            WI.WPause.GameWindow = gameWindow;
             gameWindow.SetDefaults();
+            WI.WPause.GameWindow = gameWindow;
+            LMI.CreateInventories(gameWindow.Size);
             gameWindow.PrintScreen();
             gameWindow.PrintInventory();
             gameWindow.Show();

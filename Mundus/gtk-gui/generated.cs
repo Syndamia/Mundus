@@ -14,12 +14,16 @@ namespace Stetic
 				global::Gtk.IconFactory w1 = new global::Gtk.IconFactory();
 				global::Gtk.IconSet w2 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Ground.grass.png"));
 				w1.Add("grass", w2);
-				global::Gtk.IconSet w3 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.blank.jpg"));
-				w1.Add("blank", w3);
-				global::Gtk.IconSet w4 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Items.boulder.png"));
-				w1.Add("boulder", w4);
-				global::Gtk.IconSet w5 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.player.png"));
-				w1.Add("player", w5);
+				global::Gtk.IconSet w3 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Items.boulder.png"));
+				w1.Add("boulder", w3);
+				global::Gtk.IconSet w4 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.player.png"));
+				w1.Add("player", w4);
+				global::Gtk.IconSet w5 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Blanks.blank.png"));
+				w1.Add("blank", w5);
+				global::Gtk.IconSet w6 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Blanks.blank_hand.png"));
+				w1.Add("blank_hand", w6);
+				global::Gtk.IconSet w7 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Blanks.blank_gear.png"));
+				w1.Add("blank_gear", w7);
 				w1.AddDefault();
 			}
 		}
