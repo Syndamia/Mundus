@@ -55,14 +55,6 @@ namespace Mundus.Service.SuperLayers {
             return img;
         }
 
-        public static Image GetHandImage() {
-            Image img = new Image("blank_hand", IconSize.Dnd);
-            if (LMI.Player.Inventory.Hand != null) {
-                img = LMI.Player.Inventory.Hand.Texture;
-            }
-            return img;
-        }
-
         public static Image GetHotbarImage(int index) {
             Image img = new Image("blank", IconSize.Dnd);
 

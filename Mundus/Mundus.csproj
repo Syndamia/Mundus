@@ -110,6 +110,8 @@
     <Compile Include="Data\Tiles\ToolTypes.cs" />
     <Compile Include="Service\Tiles\Items\Material.cs" />
     <Compile Include="Service\Tiles\Items\Gear.cs" />
+    <Compile Include="Service\Mobs\MobFighting.cs" />
+    <Compile Include="Service\Mobs\MobTerraforming.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />

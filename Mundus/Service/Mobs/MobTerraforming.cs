@@ -1,0 +1,50 @@
+﻿using Mundus.Data.Superlayers.Mobs;
+using Mundus.Data.SuperLayers;
+using Mundus.Service.Tiles.Items;
+
+namespace Mundus.Service.Mobs {
+    public static class MobTerraforming {
+        public static void PlayerDestroyAt(int mapYPos, int mapXPos, string place, int index) {
+            if (LMI.Player.Inventory.GetTile(place, index).GetType() == typeof(Tool)) {
+                var selTool = (Tool)LMI.Player.Inventory.GetTile(place, index);
+                if (LMI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos).ReqToolType == selTool.Type &&
+                    LMI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos).ReqToolClass == selTool.Class) {
+                    LMI.Player.CurrSuperLayer.SetStructureAtPosition(null, mapYPos, mapXPos);
+                }
+            }
+        }
+
+        public static void PlayerBuildAt(int mapYPos, int mapXPos, string inventoryPlace, int inventoryPlaceIndex) {
+            if (PlayerCanBuildAt(mapYPos, mapXPos)) {
+                Structure toPlace = null;
+
+                switch (inventoryPlace) {
+                    case "hotbar": toPlace = (Structure)LMI.Player.Inventory.Hotbar[inventoryPlaceIndex]; break;
+                    case "items": toPlace = (Structure)LMI.Player.Inventory.Items[inventoryPlaceIndex]; break;
+                }
+
+                if (toPlace != null) {
+                    PlayerBuildAt(mapYPos, mapXPos, toPlace);
+                }
+            }
+        }
+
+        public static void PlayerBuildAt(int mapYPos, int mapXPos, Structure toPlace) {
+            LMI.Player.CurrSuperLayer.SetStructureAtPosition(toPlace, mapYPos, mapXPos);
+        }
+
+        public static void TryPlaceStructure(ISuperLayer superLayer, int yPos, int xPos, Structure toPlace) {
+            if (superLayer.GetStructureLayerTile(yPos, xPos) != null) {
+                superLayer.SetStructureAtPosition(toPlace, yPos, xPos);
+            }
+        }
+
+        public static bool PlayerCanBuildAt(int yPos, int xPos) {
+            return LMI.Player.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) == null;
+        }
+
+        public static bool PlayerCanDestroyAt(int yPos, int xPos) {
+            return LMI.Player.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) != null;
+        }
+    }
+}

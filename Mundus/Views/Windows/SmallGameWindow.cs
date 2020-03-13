@@ -3,6 +3,7 @@ using Gtk;
 using Mundus.Service;
 using Mundus.Service.Mobs;
 using Mundus.Service.SuperLayers;
+using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Views.Windows {
     public partial class SmallGameWindow : Gtk.Window, IGameWindow {
@@ -322,8 +323,6 @@ namespace Mundus.Views.Windows {
         }
 
         public void PrintInventory() {
-            btnH.Image = ImageController.GetHandImage();
-
             //Prints hotbar
             for (int i = 0; i < Size; i++) {
                 Image img = ImageController.GetHotbarImage(i);
@@ -333,6 +332,7 @@ namespace Mundus.Views.Windows {
                     case 2: btnH2.Image = img; break;
                     case 3: btnH3.Image = img; break;
                     case 4: btnH4.Image = img; break;
+                    case 5: btnH5.Image = img; break;
                 }
             }
 
@@ -408,135 +408,152 @@ namespace Mundus.Views.Windows {
         //Screen buttons
         protected void OnBtnP1Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(1);
+                React(1);
             }
         }
         protected void OnBtnP2Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(2);
+                React(2);
             }
         }
         protected void OnBtnP3Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(3);
+                React(3);
             }
         }
         protected void OnBtnP4Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(4);
+                React(4);
             }
         }
         protected void OnBtnP5Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(5);
+                React(5);
             }
         }
         protected void OnBtnP6Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(6);
+                React(6);
             }
         }
         protected void OnBtnP7Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(7);
+                React(7);
             }
         }
         protected void OnBtnP8Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(8);
+                React(8);
             }
         }
         protected void OnBtnP9Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(9);
+                React(9);
             }
         }
         protected void OnBtnP10Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(10);
+                React(10);
             }
         }
         protected void OnBtnP11Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(11);
+                React(11);
             }
         }
         protected void OnBtnP12Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(12);
+                React(12);
             }
         }
         protected void OnBtnP13Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(13);
+                React(13);
             }
         }
         protected void OnBtnP14Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(14);
+                React(14);
             }
         }
         protected void OnBtnP15Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(15);
+                React(15);
             }
         }
         protected void OnBtnP16Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(16);
+                React(16);
             }
         }
         protected void OnBtnP17Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(17);
+                React(17);
             }
         }
         protected void OnBtnP18Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(18);
+                React(18);
             }
         }
         protected void OnBtnP19Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(19);
+                React(19);
             }
         }
         protected void OnBtnP20Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(20);
+                React(20);
             }
         }
         protected void OnBtnP21Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(21);
+                React(21);
             }
         }
         protected void OnBtnP22Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(22);
+                React(22);
             }
         }
         protected void OnBtnP23Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(23);
+                React(23);
             }
         }
         protected void OnBtnP24Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(24);
+                React(24);
             }
         }
         protected void OnBtnP25Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
-                ChangePosition(25);
+                React(25);
             }
         }
 
-        private void ChangePosition(int button) {
+        private void React(int button) {
             int buttonYPos = (button - 1) / 5;
             int buttonXPos = button - buttonYPos * 5 - 1;
 
-            MobMoving.MovePlayer(buttonYPos, buttonXPos, Size);
+            int mapXPos = Calculate.CalculateXFromButton(buttonXPos, Size);
+            int mapYPos = Calculate.CalculateYFromButton(buttonYPos, Size);
+
+            if (!HasSelection()) {
+                MobMoving.MovePlayer(mapYPos, mapXPos, Size);
+            }
+            else {
+                var selType = Inventory.GetPlayerItem(selPlace, selIndex).GetType();
+                //try to do MobFighting
+                if (selType == typeof(Structure) && MobTerraforming.PlayerCanBuildAt(mapYPos, mapXPos)) {
+                    MobTerraforming.PlayerBuildAt(mapYPos, mapXPos, selPlace, selIndex);
+
+                }
+                else if (selType == typeof(Tool) && MobTerraforming.PlayerCanDestroyAt(mapYPos, mapXPos)) {
+                    MobTerraforming.PlayerDestroyAt(mapYPos, mapXPos, selPlace, selIndex);
+                }
+                ResetSelection();
+            }
 
             this.PrintScreen();
             if (this.MapMenuIsVisible()) {
@@ -826,19 +843,35 @@ namespace Mundus.Views.Windows {
             }
         }
 
+        private static string selPlace = null;
+        private static int selIndex = -1;
+        private static void ResetSelection() {
+            selPlace = null;
+            selIndex = -1;
+        }
+        private static bool HasSelection() {
+            return selPlace != null; 
+        }
 
-        private void SelectItem(string place, int position) {
-            if (SwitchItems.HasOrigin()) {
-                SwitchItems.ReplaceItems(place, position);
+        private void SelectItem(string place, int index) {
+            if (HasSelection()) {
+                ResetSelection();
+                SwitchItems.ReplaceItems(place, index);
             } else {
-                SwitchItems.SetOrigin(place, position);
+                selPlace = place;
+                selIndex = index;
+                SwitchItems.SetOrigin(place, index);
             }
 
             this.PrintInventory();
         }
 
         protected void OnBtnIG1Clicked(object sender, EventArgs e) {
-            Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.AddItem("items");
+            Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = new Service.Tiles.Items.Structure("boulder", Mundus.Data.Tiles.ToolTypes.Pickaxe, 1);
+        }
+
+        protected void OnBtnIG2Clicked(object sender, EventArgs e) {
+            Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[1] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Pickaxe, 1);
         }
     }
 }

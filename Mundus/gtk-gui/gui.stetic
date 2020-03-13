@@ -399,6 +399,7 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label" translatable="yes">Creative</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -427,6 +428,7 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label" translatable="yes">Easy</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -508,6 +510,7 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label" translatable="yes">Large</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -563,6 +566,7 @@
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Label" translatable="yes">Large</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -1681,7 +1685,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="btnH">
+          <widget class="Gtk.Button" id="btnH1">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
@@ -1709,7 +1713,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="btnH1">
+          <widget class="Gtk.Button" id="btnH2">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
@@ -1737,7 +1741,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="btnH2">
+          <widget class="Gtk.Button" id="btnH3">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
@@ -1765,7 +1769,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="btnH3">
+          <widget class="Gtk.Button" id="btnH4">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
@@ -1793,7 +1797,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="btnH4">
+          <widget class="Gtk.Button" id="btnH5">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
@@ -2582,6 +2586,7 @@
             <property name="Type">TextAndIcon</property>
             <property name="Label" translatable="yes" />
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnIG2Clicked" />
           </widget>
           <packing>
             <property name="TopAttach">14</property>

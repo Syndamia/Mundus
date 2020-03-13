@@ -28,5 +28,17 @@ namespace Mundus.Service {
             if (startX < 0) startX = 0;
             return startX;
         }
+
+        //Screen buttons show only a certain part of the whole map
+        public static int CalculateYFromButton(int buttonYPos, int size) {
+            int newYPos = (LMI.Player.YPos - 2 >= 0) ? LMI.Player.YPos - 2 + buttonYPos : buttonYPos;
+            if (LMI.Player.YPos > MapSizes.CurrSize - 3) newYPos = buttonYPos + MapSizes.CurrSize - size;
+            return newYPos;
+        }
+        public static int CalculateXFromButton(int buttonXPos, int size) {
+            int newXPos = (LMI.Player.XPos - 2 >= 0) ? LMI.Player.XPos - 2 + buttonXPos : buttonXPos;
+            if (LMI.Player.XPos > MapSizes.CurrSize - 3) newXPos = buttonXPos + MapSizes.CurrSize - size;
+            return newXPos;
+        }
     }
 }

@@ -7,25 +7,29 @@ namespace Mundus.Service.Mobs {
             ChangePosition(LMI.Player, yPos, xPos, size);
         }
 
-        public static void ChangePosition(IMob mob, int buttonYPos, int buttonXPos, int size) {
-            int newYPos = (LMI.Player.YPos - 2 >= 0) ? LMI.Player.YPos - 2 + buttonYPos : buttonYPos;
-            if (LMI.Player.YPos > MapSizes.CurrSize - 3) newYPos = buttonYPos + MapSizes.CurrSize - size;
-            int newXPos = (LMI.Player.XPos - 2 >= 0) ? LMI.Player.XPos - 2 + buttonXPos : buttonXPos;
-            if (LMI.Player.XPos > MapSizes.CurrSize - 3) newXPos = buttonXPos + MapSizes.CurrSize - size;
-
-            if (newYPos >= 0 && newXPos >= 0 && newYPos < MapSizes.CurrSize && newXPos < MapSizes.CurrSize) {
-                ChangePosition(mob, newYPos, newXPos);
+        public static void ChangePosition(IMob mob, int yPos, int xPos, int size) {
+            if (yPos >= 0 && xPos >= 0 && yPos < MapSizes.CurrSize && xPos < MapSizes.CurrSize) {
+                ChangePosition(mob, yPos, xPos);
             }
         }
 
         public static void ChangePosition(IMob mob, int yPos, int xPos) {
-            if (mob.CurrSuperLayer.GetStructureLayerTile( yPos, xPos ) == null ||
-                mob.CurrSuperLayer.GetStructureLayerTile( yPos, xPos ).IsWalkable) {
+            if (Walkable(mob, yPos, xPos)) {
                 mob.CurrSuperLayer.RemoveMobFromPosition( mob.YPos, mob.XPos );
                 mob.YPos = yPos;
                 mob.XPos = xPos;
                 mob.CurrSuperLayer.SetMobAtPosition( mob.Tile, yPos, xPos );
             }
+        }
+
+        private static bool Walkable(IMob mob, int yPos, int xPos) {
+            return (mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) == null ||
+                    mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos).IsWalkable) ||
+                    mob.CurrSuperLayer.GetMobLayerTile(yPos, xPos) != null;
+        }
+
+        public static bool PlayerCanWalkTo(int yPos, int xPos) {
+            return Walkable(LMI.Player, yPos, xPos);
         }
     }
 }
