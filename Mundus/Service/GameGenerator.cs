@@ -33,7 +33,7 @@ namespace Mundus.Service {
             WI.WPause.GameWindow = gameWindow;
             LMI.CreateInventories(gameWindow.Size);
             gameWindow.PrintScreen();
-            gameWindow.PrintInventory();
+            gameWindow.PrintMainMenu();
             gameWindow.Show();
         }
     }

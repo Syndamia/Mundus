@@ -250,6 +250,25 @@ namespace Mundus.Views.Windows {
             }
         }
 
+        public void PrintMainMenu() {
+            //Print stats
+
+            //Prints hotbar
+            for (int i = 0; i < Size; i++) {
+                Image img = ImageController.GetHotbarImage(i);
+
+                switch (i + 1) {
+                    case 1: btnH1.Image = img; break;
+                    case 2: btnH2.Image = img; break;
+                    case 3: btnH3.Image = img; break;
+                    case 4: btnH4.Image = img; break;
+                    case 5: btnH5.Image = img; break;
+                }
+            }
+
+            //Print log
+        }
+
         public void PrintMap() {
             //Prints the "Ground layer" in map menu
             for (int row = Calculate.CalculateStartY(Size), maxY = Calculate.CalculateMaxY(Size), img = 1; row <= maxY; row++) {
@@ -323,19 +342,6 @@ namespace Mundus.Views.Windows {
         }
 
         public void PrintInventory() {
-            //Prints hotbar
-            for (int i = 0; i < Size; i++) {
-                Image img = ImageController.GetHotbarImage(i);
-
-                switch (i + 1) {
-                    case 1: btnH1.Image = img; break;
-                    case 2: btnH2.Image = img; break;
-                    case 3: btnH3.Image = img; break;
-                    case 4: btnH4.Image = img; break;
-                    case 5: btnH5.Image = img; break;
-                }
-            }
-
             //Prints the actual inventory (items)
             for (int row = 0; row < Size; row++) {
                 for (int col = 0; col < Size; col++) {
@@ -543,21 +549,27 @@ namespace Mundus.Views.Windows {
                 MobMoving.MovePlayer(mapYPos, mapXPos, Size);
             }
             else {
-                var selType = Inventory.GetPlayerItem(selPlace, selIndex).GetType();
-                //try to do MobFighting
-                if (selType == typeof(Structure) && MobTerraforming.PlayerCanBuildAt(mapYPos, mapXPos)) {
-                    MobTerraforming.PlayerBuildAt(mapYPos, mapXPos, selPlace, selIndex);
+                if (Inventory.GetPlayerItem(selPlace, selIndex) != null) {
+                    var selType = Inventory.GetPlayerItem(selPlace, selIndex).GetType();
+                    //try to do MobFighting
+                    if (selType == typeof(Structure) && MobTerraforming.PlayerCanBuildAt(mapYPos, mapXPos)) {
+                        MobTerraforming.PlayerBuildAt(mapYPos, mapXPos, selPlace, selIndex);
 
-                }
-                else if (selType == typeof(Tool) && MobTerraforming.PlayerCanDestroyAt(mapYPos, mapXPos)) {
-                    MobTerraforming.PlayerDestroyAt(mapYPos, mapXPos, selPlace, selIndex);
+                    }
+                    else if (selType == typeof(Tool) && MobTerraforming.PlayerCanDestroyAt(mapYPos, mapXPos)) {
+                        MobTerraforming.PlayerDestroyAt(mapYPos, mapXPos, selPlace, selIndex);
+                    }
                 }
                 ResetSelection();
             }
 
             this.PrintScreen();
+            this.PrintMainMenu();
             if (this.MapMenuIsVisible()) {
                 this.PrintMap();
+            }
+            else if (this.InvMenuIsVisible()) {
+                this.PrintInventory();
             }
         }
 

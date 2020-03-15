@@ -8,7 +8,7 @@
         void SetDefaults();
         void PrintScreen();
         void PrintMap();
-        void PrintInventory();
+        void PrintMainMenu();
 
         //Stuff that are in Gtk.Window class
         void Show();

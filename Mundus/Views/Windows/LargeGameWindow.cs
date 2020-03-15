@@ -17,7 +17,7 @@ namespace Mundus.Views.Windows {
             throw new NotImplementedException();
         }
 
-        public void PrintInventory() {
+        public void PrintMainMenu() {
             throw new NotImplementedException();
         }
 

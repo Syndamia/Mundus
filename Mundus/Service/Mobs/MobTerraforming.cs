@@ -16,20 +16,21 @@ namespace Mundus.Service.Mobs {
 
         public static void PlayerBuildAt(int mapYPos, int mapXPos, string inventoryPlace, int inventoryPlaceIndex) {
             if (PlayerCanBuildAt(mapYPos, mapXPos)) {
-                Structure toPlace = null;
+                ItemTile[] toPlace = null;
 
                 switch (inventoryPlace) {
-                    case "hotbar": toPlace = (Structure)LMI.Player.Inventory.Hotbar[inventoryPlaceIndex]; break;
-                    case "items": toPlace = (Structure)LMI.Player.Inventory.Items[inventoryPlaceIndex]; break;
+                    case "hotbar": toPlace = LMI.Player.Inventory.Hotbar; break;
+                    case "items": toPlace = LMI.Player.Inventory.Items; break;
                 }
 
                 if (toPlace != null) {
-                    PlayerBuildAt(mapYPos, mapXPos, toPlace);
+                    PlayerBuildAt(mapYPos, mapXPos, (Structure)toPlace[inventoryPlaceIndex]);
+                    toPlace[inventoryPlaceIndex] = null;
                 }
             }
         }
 
-        public static void PlayerBuildAt(int mapYPos, int mapXPos, Structure toPlace) {
+        private static void PlayerBuildAt(int mapYPos, int mapXPos, Structure toPlace) {
             LMI.Player.CurrSuperLayer.SetStructureAtPosition(toPlace, mapYPos, mapXPos);
         }
 
