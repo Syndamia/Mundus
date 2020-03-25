@@ -37,7 +37,12 @@ namespace Mundus.Service.SuperLayers {
 
             for(int col = 0; col < size; col++) {
                 for(int row = 0; row < size; row++) {
-                    tiles[col, row] = new GroundTile("grass");
+                    if (rnd.Next(0, 50) == -1) {
+                        tiles[col, row] = new GroundTile("water");
+                    }
+                    else { 
+                        tiles[col, row] = new GroundTile("grass"); 
+                    }
                 }
             }
             return tiles;
@@ -49,7 +54,10 @@ namespace Mundus.Service.SuperLayers {
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
                     if (rnd.Next( 0, 50 ) == 1) {
-                        tiles[col, row] = new Structure("boulder", ToolTypes.Pickaxe, 1);
+                        tiles[col, row] = LandPresets.Boulder();
+                    }
+                    if (rnd.Next(0, 10) == 1) {
+                        tiles[col, row] = LandPresets.Tree();
                     }
                 }
             }

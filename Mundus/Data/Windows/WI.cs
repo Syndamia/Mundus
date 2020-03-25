@@ -2,6 +2,8 @@
 
 namespace Mundus.Data.Windows {
     public static class WI { //stands for Window Instances
+        public static IGameWindow SelWin { get; set; }
+
         public static MainWindow WMain { get; private set; }
         public static NewGameWindow WNewGame { get; private set; }
         public static SmallGameWindow WSGame { get; private set; }

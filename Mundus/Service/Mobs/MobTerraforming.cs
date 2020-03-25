@@ -1,4 +1,5 @@
-﻿using Mundus.Data.Superlayers.Mobs;
+﻿using System.Linq;
+using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
 using Mundus.Service.Tiles.Items;
 
@@ -7,9 +8,19 @@ namespace Mundus.Service.Mobs {
         public static void PlayerDestroyAt(int mapYPos, int mapXPos, string place, int index) {
             if (LMI.Player.Inventory.GetTile(place, index).GetType() == typeof(Tool)) {
                 var selTool = (Tool)LMI.Player.Inventory.GetTile(place, index);
-                if (LMI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos).ReqToolType == selTool.Type &&
-                    LMI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos).ReqToolClass == selTool.Class) {
-                    LMI.Player.CurrSuperLayer.SetStructureAtPosition(null, mapYPos, mapXPos);
+                var selStructure = LMI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos);
+
+                if (selStructure.ReqToolType == selTool.Type && selStructure.ReqToolClass == selTool.Class) {
+                    if (LMI.Player.Inventory.Items.Any(x => x == null)) {
+                        LMI.Player.Inventory.AppendToItems(selStructure.DroppedMaterial);
+                        LMI.Player.CurrSuperLayer.SetStructureAtPosition(null, mapYPos, mapXPos);
+                    }
+                    else {
+                        //TODO: put the item on the ground
+                    }
+                }
+                else {
+                    //TODO: add error to log
                 }
             }
         }

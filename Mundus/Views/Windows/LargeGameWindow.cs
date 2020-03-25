@@ -1,5 +1,6 @@
 ﻿using System;
 using Gtk;
+using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Views.Windows {
     public partial class LargeGameWindow : Gtk.Window, IGameWindow {
@@ -30,6 +31,10 @@ namespace Mundus.Views.Windows {
         }
 
         public void SetDefaults() {
+            throw new NotImplementedException();
+        }
+
+        public void PrintSelectedItemInfo(ItemTile itemTile) {
             throw new NotImplementedException();
         }
     }

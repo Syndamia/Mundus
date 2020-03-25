@@ -21,20 +21,21 @@ namespace Mundus.Service {
 
         public static void GameWindowInventorySetup(string size) {
             switch (size.ToLower()) {
-                case "small": GameWindowInventorySetup(WI.WSGame); break;
-                case "medium": GameWindowInventorySetup(WI.WMGame); break;
-                case "large": GameWindowInventorySetup(WI.WLGame); break;
+                case "small": WI.SelWin = WI.WSGame; break;
+                case "medium": WI.SelWin = WI.WMGame; break;
+                case "large": WI.SelWin = WI.WLGame; break;
                 default: throw new ArgumentException("Screen & inventory size must be \"small\", \"medium\" or \"large\"");
             }
+            GameWindowInventorySetup();
         }
 
-        public static void GameWindowInventorySetup(IGameWindow gameWindow) {
-            gameWindow.SetDefaults();
-            WI.WPause.GameWindow = gameWindow;
-            LMI.CreateInventories(gameWindow.Size);
-            gameWindow.PrintScreen();
-            gameWindow.PrintMainMenu();
-            gameWindow.Show();
+        public static void GameWindowInventorySetup() {
+            WI.SelWin.SetDefaults();
+            WI.WPause.GameWindow = WI.SelWin;
+            LMI.CreateInventories(WI.SelWin.Size);
+            WI.SelWin.PrintScreen();
+            WI.SelWin.PrintMainMenu();
+            WI.SelWin.Show();
         }
     }
 }

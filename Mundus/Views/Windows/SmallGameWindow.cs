@@ -187,17 +187,11 @@ namespace Mundus.Views.Windows {
             btnG4.Visible = isVisible;
             btnG5.Visible = isVisible;
 
-            lblItemsOnGround.Visible = isVisible;
             btnIG1.Visible = isVisible;
             btnIG2.Visible = isVisible;
-            btnIG3.Visible = isVisible;
-            btnIG4.Visible = isVisible;
-            btnIG5.Visible = isVisible; 
-            btnIG6.Visible = isVisible;
-            btnIG7.Visible = isVisible;
-            btnIG8.Visible = isVisible;
-            btnIG9.Visible = isVisible;
-            btnIG10.Visible = isVisible;
+
+            imgInfo.Visible = isVisible;
+            lblInfo.Visible = isVisible;
 
             lblBlank4.Visible = isVisible;
         }
@@ -411,6 +405,17 @@ namespace Mundus.Views.Windows {
             }
         }
 
+        public void PrintSelectedItemInfo(ItemTile itemTile) {
+            if (itemTile != null) {
+                imgInfo.SetFromStock(itemTile.stock_id, IconSize.Dnd);
+                lblInfo.Text = itemTile.ToString();
+            }
+            else {
+                imgInfo.SetFromImage(null, null);
+                lblInfo.Text = null;
+            }
+        }
+
         //Screen buttons
         protected void OnBtnP1Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
@@ -577,31 +582,31 @@ namespace Mundus.Views.Windows {
         protected void OnBtnH1Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
                 this.SelectItem("hotbar", 0);
-                this.PrintInventory();
+                this.PrintMainMenu();
             }
         }
         protected void OnBtnH2Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
                 this.SelectItem("hotbar", 1);
-                this.PrintInventory();
+                this.PrintMainMenu();
             }
         }
         protected void OnBtnH3Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
                 this.SelectItem("hotbar", 2);
-                this.PrintInventory();
+                this.PrintMainMenu();
             }
         }
         protected void OnBtnH4Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
                 this.SelectItem("hotbar", 3);
-                this.PrintInventory();
+                this.PrintMainMenu();
             }
         }
         protected void OnBtnH5Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
                 this.SelectItem("hotbar", 4);
-                this.PrintInventory();
+                this.PrintMainMenu();
             }
         }
 
@@ -875,11 +880,12 @@ namespace Mundus.Views.Windows {
                 SwitchItems.SetOrigin(place, index);
             }
 
+            this.PrintMainMenu();
             this.PrintInventory();
         }
 
         protected void OnBtnIG1Clicked(object sender, EventArgs e) {
-            Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = new Service.Tiles.Items.Structure("boulder", Mundus.Data.Tiles.ToolTypes.Pickaxe, 1);
+            Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = LandPresets.Boulder();
         }
 
         protected void OnBtnIG2Clicked(object sender, EventArgs e) {

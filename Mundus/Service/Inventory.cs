@@ -1,4 +1,6 @@
 ﻿using Mundus.Service.Tiles.Items;
+using System;
+using System.Linq;
 
 namespace Mundus.Service {
     public class Inventory {
@@ -18,12 +20,20 @@ namespace Mundus.Service {
             this.Gear = new Gear[screenInvSize];
         }
 
+        public void AppendToHotbar(ItemTile itemTile) {
+            this.AddToHotbar(itemTile, Array.IndexOf(this.Hotbar, this.Hotbar.First(x => x == null)));
+        }
+
         public void AddToHotbar(ItemTile itemTile, int index) {
             this.Hotbar[index] = itemTile;
         }
 
         public void DeleteFromHotbar(int index) {
             this.Hotbar[index] = null;
+        }
+
+        public void AppendToItems(ItemTile itemTile) {
+            this.AddToItems(itemTile, Array.IndexOf(this.Items, this.Items.First(x => x == null)));
         }
 
         public void AddToItems(ItemTile itemTile, int index) {
@@ -38,12 +48,20 @@ namespace Mundus.Service {
             this.Accessories[index] = accessory;
         }
 
+        public void AppendAccessories(Gear accessory) {
+            this.EquipAccessory(accessory, Array.IndexOf(this.Accessories, this.Accessories.First(x => x == null)));
+        }
+
         public void DeleteAccessory(int index) {
             this.Accessories[index] = null;
         }
 
         public void EquipGear(Gear gear, int index) {
             this.Gear[index] = gear;
+        }
+
+        public void AppendGear(Gear gear) {
+            this.EquipGear(gear, Array.IndexOf(this.Gear, this.Gear.First(x => x == null)));
         }
 
         public void DeleteGear(int index) {

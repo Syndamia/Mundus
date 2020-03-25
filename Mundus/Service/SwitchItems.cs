@@ -1,4 +1,5 @@
 ﻿using Mundus.Data.Superlayers.Mobs;
+using Mundus.Data.Windows;
 using Mundus.Service.Tiles;
 using Mundus.Service.Tiles.Items;
 
@@ -22,6 +23,7 @@ namespace Mundus.Service {
         private static void SetOrigin(ItemTile[] newOrigin, int originIndex) {
             origin = newOrigin;
             oIndex = originIndex;
+            WI.SelWin.PrintSelectedItemInfo(newOrigin[originIndex]);
         }
 
         public static void ReplaceItems(string destination, int destinationIndex) {

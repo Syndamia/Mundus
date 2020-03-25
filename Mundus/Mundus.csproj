@@ -58,6 +58,9 @@
     <EmbeddedResource Include="Icons\Blanks\blank.png" />
     <EmbeddedResource Include="Icons\Blanks\blank_hand.png" />
     <EmbeddedResource Include="Icons\Blanks\blank_gear.png" />
+    <EmbeddedResource Include="Icons\Materials\land_rock.png" />
+    <EmbeddedResource Include="Icons\Land\Items\tree.png" />
+    <EmbeddedResource Include="Icons\Land\Ground\water.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -112,6 +115,7 @@
     <Compile Include="Service\Tiles\Items\Gear.cs" />
     <Compile Include="Service\Mobs\MobFighting.cs" />
     <Compile Include="Service\Mobs\MobTerraforming.cs" />
+    <Compile Include="Service\SuperLayers\LandPresets.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />

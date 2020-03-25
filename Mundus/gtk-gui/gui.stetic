@@ -37,6 +37,21 @@
         <property name="Image">resource:Mundus.Icons.Blanks.blank_gear.png</property>
       </source>
     </icon-set>
+    <icon-set id="land_rock">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Materials.land_rock.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="tree">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Items.tree.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="water">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Ground.water.png</property>
+      </source>
+    </icon-set>
   </icon-factory>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.NewGameWindow" design-size="581 275">
     <property name="MemberName" />
@@ -754,7 +769,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="Mundus.Views.Windows.SmallGameWindow" design-size="905 770">
+  <widget class="Gtk.Window" id="Mundus.Views.Windows.SmallGameWindow" design-size="890 770">
     <property name="MemberName" />
     <property name="Title" translatable="yes">Mundus (Small Window)</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -766,6 +781,27 @@
         <property name="MemberName" />
         <property name="NRows">17</property>
         <property name="NColumns">21</property>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
         <child>
           <placeholder />
         </child>
@@ -2536,36 +2572,10 @@
             <signal name="Clicked" handler="OnBtnIG1Clicked" />
           </widget>
           <packing>
-            <property name="TopAttach">14</property>
-            <property name="BottomAttach">15</property>
+            <property name="TopAttach">12</property>
+            <property name="BottomAttach">13</property>
             <property name="LeftAttach">15</property>
             <property name="RightAttach">16</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="btnIG10">
-            <property name="MemberName" />
-            <property name="WidthRequest">50</property>
-            <property name="HeightRequest">50</property>
-            <property name="CanFocus">True</property>
-            <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
-            <property name="UseUnderline">True</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">15</property>
-            <property name="BottomAttach">16</property>
-            <property name="LeftAttach">19</property>
-            <property name="RightAttach">20</property>
             <property name="AutoSize">True</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>
@@ -2589,192 +2599,10 @@
             <signal name="Clicked" handler="OnBtnIG2Clicked" />
           </widget>
           <packing>
-            <property name="TopAttach">14</property>
-            <property name="BottomAttach">15</property>
+            <property name="TopAttach">12</property>
+            <property name="BottomAttach">13</property>
             <property name="LeftAttach">16</property>
             <property name="RightAttach">17</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="btnIG3">
-            <property name="MemberName" />
-            <property name="WidthRequest">50</property>
-            <property name="HeightRequest">50</property>
-            <property name="CanFocus">True</property>
-            <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
-            <property name="UseUnderline">True</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">14</property>
-            <property name="BottomAttach">15</property>
-            <property name="LeftAttach">17</property>
-            <property name="RightAttach">18</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="btnIG4">
-            <property name="MemberName" />
-            <property name="WidthRequest">50</property>
-            <property name="HeightRequest">50</property>
-            <property name="CanFocus">True</property>
-            <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
-            <property name="UseUnderline">True</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">14</property>
-            <property name="BottomAttach">15</property>
-            <property name="LeftAttach">18</property>
-            <property name="RightAttach">19</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="btnIG5">
-            <property name="MemberName" />
-            <property name="WidthRequest">50</property>
-            <property name="HeightRequest">50</property>
-            <property name="CanFocus">True</property>
-            <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
-            <property name="UseUnderline">True</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">14</property>
-            <property name="BottomAttach">15</property>
-            <property name="LeftAttach">19</property>
-            <property name="RightAttach">20</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="btnIG6">
-            <property name="MemberName" />
-            <property name="WidthRequest">50</property>
-            <property name="HeightRequest">50</property>
-            <property name="CanFocus">True</property>
-            <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
-            <property name="UseUnderline">True</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">15</property>
-            <property name="BottomAttach">16</property>
-            <property name="LeftAttach">15</property>
-            <property name="RightAttach">16</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="btnIG7">
-            <property name="MemberName" />
-            <property name="WidthRequest">50</property>
-            <property name="HeightRequest">50</property>
-            <property name="CanFocus">True</property>
-            <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
-            <property name="UseUnderline">True</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">15</property>
-            <property name="BottomAttach">16</property>
-            <property name="LeftAttach">16</property>
-            <property name="RightAttach">17</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="btnIG8">
-            <property name="MemberName" />
-            <property name="WidthRequest">50</property>
-            <property name="HeightRequest">50</property>
-            <property name="CanFocus">True</property>
-            <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
-            <property name="UseUnderline">True</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">15</property>
-            <property name="BottomAttach">16</property>
-            <property name="LeftAttach">17</property>
-            <property name="RightAttach">18</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="btnIG9">
-            <property name="MemberName" />
-            <property name="WidthRequest">50</property>
-            <property name="HeightRequest">50</property>
-            <property name="CanFocus">True</property>
-            <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
-            <property name="UseUnderline">True</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">15</property>
-            <property name="BottomAttach">16</property>
-            <property name="LeftAttach">18</property>
-            <property name="RightAttach">19</property>
             <property name="AutoSize">True</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>
@@ -3841,6 +3669,7 @@
         <child>
           <widget class="Gtk.Image" id="imgG17">
             <property name="MemberName" />
+            <property name="HeightRequest">50</property>
           </widget>
           <packing>
             <property name="TopAttach">5</property>
@@ -3861,6 +3690,7 @@
         <child>
           <widget class="Gtk.Image" id="imgG18">
             <property name="MemberName" />
+            <property name="HeightRequest">50</property>
           </widget>
           <packing>
             <property name="TopAttach">5</property>
@@ -4733,6 +4563,28 @@
           </packing>
         </child>
         <child>
+          <widget class="Gtk.Image" id="imgInfo">
+            <property name="MemberName" />
+            <property name="WidthRequest">50</property>
+            <property name="HeightRequest">50</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">14</property>
+            <property name="BottomAttach">15</property>
+            <property name="LeftAttach">17</property>
+            <property name="RightAttach">18</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
           <widget class="Gtk.Image" id="imgS1">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
@@ -5214,15 +5066,18 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Label" id="lblItemLayer">
+          <widget class="Gtk.Label" id="lblInfo">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Item Layer</property>
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="Wrap">True</property>
+            <property name="Justify">Center</property>
           </widget>
           <packing>
-            <property name="TopAttach">9</property>
-            <property name="BottomAttach">10</property>
-            <property name="LeftAttach">1</property>
-            <property name="RightAttach">6</property>
+            <property name="TopAttach">15</property>
+            <property name="BottomAttach">16</property>
+            <property name="LeftAttach">15</property>
+            <property name="RightAttach">20</property>
             <property name="AutoSize">True</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>
@@ -5235,16 +5090,15 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Label" id="lblItemsOnGround">
+          <widget class="Gtk.Label" id="lblItemLayer">
             <property name="MemberName" />
-            <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">Items on the ground</property>
+            <property name="LabelProp" translatable="yes">Item Layer</property>
           </widget>
           <packing>
-            <property name="TopAttach">13</property>
-            <property name="BottomAttach">14</property>
-            <property name="LeftAttach">15</property>
-            <property name="RightAttach">20</property>
+            <property name="TopAttach">9</property>
+            <property name="BottomAttach">10</property>
+            <property name="LeftAttach">1</property>
+            <property name="RightAttach">6</property>
             <property name="AutoSize">True</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>

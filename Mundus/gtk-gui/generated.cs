@@ -24,6 +24,12 @@ namespace Stetic
 				w1.Add("blank_hand", w6);
 				global::Gtk.IconSet w7 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Blanks.blank_gear.png"));
 				w1.Add("blank_gear", w7);
+				global::Gtk.IconSet w8 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Materials.land_rock.png"));
+				w1.Add("land_rock", w8);
+				global::Gtk.IconSet w9 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Items.tree.png"));
+				w1.Add("tree", w9);
+				global::Gtk.IconSet w10 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Ground.water.png"));
+				w1.Add("water", w10);
 				w1.AddDefault();
 			}
 		}
