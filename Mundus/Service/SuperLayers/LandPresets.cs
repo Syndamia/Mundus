@@ -8,7 +8,7 @@ namespace Mundus.Service.SuperLayers {
         }
 
         public static Structure Tree() {
-            return new Structure("tree", ToolTypes.Axe, 1);
+            return new Structure("tree", ToolTypes.Pickaxe, 1, false, new Material("stick"));
         }
     }
 }

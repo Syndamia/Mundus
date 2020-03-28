@@ -7,5 +7,6 @@ namespace Mundus.Service.Mobs {
         ISuperLayer CurrSuperLayer { get; set; }
         int XPos { get; set; }
         int YPos { get; set; }
+        int Health { get; set; }
     }
 }

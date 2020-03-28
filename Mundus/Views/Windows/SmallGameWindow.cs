@@ -245,7 +245,20 @@ namespace Mundus.Views.Windows {
         }
 
         public void PrintMainMenu() {
-            //Print stats
+            //Print lungs
+
+            //Print health
+            for (int i = 0; i < Size; i++) {
+                string iName = MobStatsController.GetPlayerHearth(i).Stock;
+
+                switch (i) {
+                    case 0: imgS6.SetFromStock(iName, IconSize.Dnd); break;
+                    case 1: imgS7.SetFromStock(iName, IconSize.Dnd); break;
+                    case 2: imgS8.SetFromStock(iName, IconSize.Dnd); break;
+                    case 3: imgS9.SetFromStock(iName, IconSize.Dnd); break;
+                    case 4: imgS10.SetFromStock(iName, IconSize.Dnd); break;
+                }
+            }
 
             //Prints hotbar
             for (int i = 0; i < Size; i++) {
@@ -886,10 +899,14 @@ namespace Mundus.Views.Windows {
 
         protected void OnBtnIG1Clicked(object sender, EventArgs e) {
             Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = LandPresets.Boulder();
+            //MobStatsController.DamagePlayer(1);
+            //PrintMainMenu();
         }
 
         protected void OnBtnIG2Clicked(object sender, EventArgs e) {
             Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[1] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Pickaxe, 1);
+            //MobStatsController.TryHealPlayer(1);
+            //PrintMainMenu();
         }
     }
 }

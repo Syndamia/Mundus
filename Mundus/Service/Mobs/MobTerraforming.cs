@@ -5,6 +5,7 @@ using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Service.Mobs {
     public static class MobTerraforming {
+
         public static void PlayerDestroyAt(int mapYPos, int mapXPos, string place, int index) {
             if (LMI.Player.Inventory.GetTile(place, index).GetType() == typeof(Tool)) {
                 var selTool = (Tool)LMI.Player.Inventory.GetTile(place, index);

@@ -18,11 +18,11 @@ namespace Stetic
 				w1.Add("boulder", w3);
 				global::Gtk.IconSet w4 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.player.png"));
 				w1.Add("player", w4);
-				global::Gtk.IconSet w5 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Blanks.blank.png"));
+				global::Gtk.IconSet w5 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Blanks.blank.png"));
 				w1.Add("blank", w5);
-				global::Gtk.IconSet w6 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Blanks.blank_hand.png"));
+				global::Gtk.IconSet w6 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Blanks.blank_hand.png"));
 				w1.Add("blank_hand", w6);
-				global::Gtk.IconSet w7 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Blanks.blank_gear.png"));
+				global::Gtk.IconSet w7 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Blanks.blank_gear.png"));
 				w1.Add("blank_gear", w7);
 				global::Gtk.IconSet w8 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Materials.land_rock.png"));
 				w1.Add("land_rock", w8);
@@ -30,6 +30,18 @@ namespace Stetic
 				w1.Add("tree", w9);
 				global::Gtk.IconSet w10 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Ground.water.png"));
 				w1.Add("water", w10);
+				global::Gtk.IconSet w11 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Blanks.empty.png"));
+				w1.Add("empty", w11);
+				global::Gtk.IconSet w12 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.4-4.png"));
+				w1.Add("hearth_4-4", w12);
+				global::Gtk.IconSet w13 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.3-4.png"));
+				w1.Add("hearth_3-4", w13);
+				global::Gtk.IconSet w14 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.2-4.png"));
+				w1.Add("hearth_2-4", w14);
+				global::Gtk.IconSet w15 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.1-4.png"));
+				w1.Add("hearth_1-4", w15);
+				global::Gtk.IconSet w16 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Materials.stick.png"));
+				w1.Add("stick", w16);
 				w1.AddDefault();
 			}
 		}

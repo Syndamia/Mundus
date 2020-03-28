@@ -55,12 +55,18 @@
     <EmbeddedResource Include="Icons\Land\Ground\grass.png" />
     <EmbeddedResource Include="Icons\Land\Items\boulder.png" />
     <EmbeddedResource Include="Icons\player.png" />
-    <EmbeddedResource Include="Icons\Blanks\blank.png" />
-    <EmbeddedResource Include="Icons\Blanks\blank_hand.png" />
-    <EmbeddedResource Include="Icons\Blanks\blank_gear.png" />
     <EmbeddedResource Include="Icons\Materials\land_rock.png" />
     <EmbeddedResource Include="Icons\Land\Items\tree.png" />
     <EmbeddedResource Include="Icons\Land\Ground\water.png" />
+    <EmbeddedResource Include="Icons\UI\Blanks\blank.png" />
+    <EmbeddedResource Include="Icons\UI\Blanks\blank_hand.png" />
+    <EmbeddedResource Include="Icons\UI\Blanks\blank_gear.png" />
+    <EmbeddedResource Include="Icons\UI\Blanks\empty.png" />
+    <EmbeddedResource Include="Icons\UI\Hearth\4-4.png" />
+    <EmbeddedResource Include="Icons\UI\Hearth\3-4.png" />
+    <EmbeddedResource Include="Icons\UI\Hearth\2-4.png" />
+    <EmbeddedResource Include="Icons\UI\Hearth\1-4.png" />
+    <EmbeddedResource Include="Icons\Materials\stick.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -116,6 +122,7 @@
     <Compile Include="Service\Mobs\MobFighting.cs" />
     <Compile Include="Service\Mobs\MobTerraforming.cs" />
     <Compile Include="Service\SuperLayers\LandPresets.cs" />
+    <Compile Include="Service\Mobs\MobStatsController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />

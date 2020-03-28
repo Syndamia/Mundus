@@ -24,17 +24,17 @@
     </icon-set>
     <icon-set id="blank">
       <source>
-        <property name="Image">resource:Mundus.Icons.Blanks.blank.png</property>
+        <property name="Image">resource:Mundus.Icons.UI.Blanks.blank.png</property>
       </source>
     </icon-set>
     <icon-set id="blank_hand">
       <source>
-        <property name="Image">resource:Mundus.Icons.Blanks.blank_hand.png</property>
+        <property name="Image">resource:Mundus.Icons.UI.Blanks.blank_hand.png</property>
       </source>
     </icon-set>
     <icon-set id="blank_gear">
       <source>
-        <property name="Image">resource:Mundus.Icons.Blanks.blank_gear.png</property>
+        <property name="Image">resource:Mundus.Icons.UI.Blanks.blank_gear.png</property>
       </source>
     </icon-set>
     <icon-set id="land_rock">
@@ -50,6 +50,36 @@
     <icon-set id="water">
       <source>
         <property name="Image">resource:Mundus.Icons.Land.Ground.water.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="empty">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Blanks.empty.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="hearth_4-4">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Hearth.4-4.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="hearth_3-4">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Hearth.3-4.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="hearth_2-4">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Hearth.2-4.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="hearth_1-4">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Hearth.1-4.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="stick">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Materials.stick.png</property>
       </source>
     </icon-set>
   </icon-factory>
