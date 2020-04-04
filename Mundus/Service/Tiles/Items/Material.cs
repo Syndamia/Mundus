@@ -4,7 +4,7 @@
         { }
 
         public override string ToString() {
-            return $"Material | Stock ID: {this.stock_id}";
+            return $"Material | ID: {this.stock_id}";
         }
     }
 }

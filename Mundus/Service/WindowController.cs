@@ -4,7 +4,7 @@ using Mundus.Data.Windows;
 namespace Mundus.Service {
     public static class WindowController {
         public static void ShowSettingsWindow(Window sender) {
-            sender.Hide();
+           sender.Hide();
            WI.WSettings.Show(sender);
         }
 
@@ -30,6 +30,11 @@ namespace Mundus.Service {
         public static void ShowMusicWindow() {
             WI.WMusic.Show();
             WI.WMusic.Present();
+        }
+
+        public static void ShowCraftingWindow() {
+            WI.WCrafting.Show();
+            WI.WCrafting.Present();
         }
     }
 }

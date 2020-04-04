@@ -8,16 +8,16 @@ namespace Mundus.Service.Mobs {
             return LMI.Player.Health;
         }
 
-        public static Image GetPlayerHearth(int index) {
-            Image img = new Image("empty", IconSize.Dnd);
+        public static string GetPlayerHearth(int index) {
+            string stock_id = "empty";
 
             int diff = GetPlayerHealth() - index * 4;
-            if (diff >= 4) img = new Image("hearth_4-4", IconSize.Dnd);
-            else if (diff == 1) img = new Image("hearth_1-4", IconSize.Dnd);
-            else if (diff == 2) img = new Image("hearth_2-4", IconSize.Dnd);
-            else if (diff == 3) img = new Image("hearth_3-4", IconSize.Dnd);
+            if (diff >= 4) stock_id = "hearth_4-4";
+            else if (diff == 1) stock_id = "hearth_1-4";
+            else if (diff == 2) stock_id = "hearth_2-4";
+            else if (diff == 3) stock_id = "hearth_3-4";
 
-            return img;
+            return stock_id;
         }
 
         public static void DamagePlayer(int healthPoints) {

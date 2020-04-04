@@ -167,6 +167,7 @@ namespace Mundus.Views.Windows {
             btnI23.Visible = isVisible;
             btnI24.Visible = isVisible;
             btnI25.Visible = isVisible;
+            btnCrafting.Visible = isVisible;
 
             lblAccessories.Visible = isVisible;
             btnA1.Visible = isVisible;
@@ -249,7 +250,7 @@ namespace Mundus.Views.Windows {
 
             //Print health
             for (int i = 0; i < Size; i++) {
-                string iName = MobStatsController.GetPlayerHearth(i).Stock;
+                string iName = MobStatsController.GetPlayerHearth(i);
 
                 switch (i) {
                     case 0: imgS6.SetFromStock(iName, IconSize.Dnd); break;
@@ -416,6 +417,10 @@ namespace Mundus.Views.Windows {
                     case 5: btnG5.Image = img; break;
                 }
             }
+        }
+
+        protected void OnBtnCraftingClicked(object sender, EventArgs e) {
+            WindowController.ShowCraftingWindow();
         }
 
         public void PrintSelectedItemInfo(ItemTile itemTile) {
@@ -898,15 +903,18 @@ namespace Mundus.Views.Windows {
         }
 
         protected void OnBtnIG1Clicked(object sender, EventArgs e) {
-            Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = LandPresets.Boulder();
+            //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = LandPresets.Boulder();
             //MobStatsController.DamagePlayer(1);
-            //PrintMainMenu();
+            Service.Crafting.CraftingController.FindAvalableItems();
+            PrintMainMenu();
         }
 
         protected void OnBtnIG2Clicked(object sender, EventArgs e) {
             Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[1] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Pickaxe, 1);
             //MobStatsController.TryHealPlayer(1);
-            //PrintMainMenu();
+            PrintMainMenu();
         }
+
+
     }
 }

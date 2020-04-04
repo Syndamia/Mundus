@@ -3,19 +3,31 @@
         public int ReqToolType { get; private set; }
         public int ReqToolClass { get; private set; }
         public Material DroppedMaterial { get; private set; }
+        public byte Health { get; private set; }
 
         public bool IsWalkable { get; private set; }
 
-        public Structure(string stock_id, int reqToolType, int reqToolClass, bool isWalkable = false, Material droppedMaterial = null) : base(stock_id) {
+        public Structure(Structure structure) :this(structure.stock_id, structure.Health, structure.ReqToolType, structure.ReqToolClass, structure.IsWalkable, 
+                         new Material(structure.DroppedMaterial.stock_id)) { 
+            //dunno if I would need it
+        }
+
+        public Structure(string stock_id, byte health, int reqToolType, int reqToolClass, bool isWalkable = false, Material droppedMaterial = null) : base(stock_id) {
+            this.Health = health;
             this.ReqToolType = reqToolType;
             this.ReqToolClass = reqToolClass;
             this.IsWalkable = isWalkable;
             this.DroppedMaterial = droppedMaterial;
         }
 
+        public bool Damage() {
+            this.Health--;
+            return this.Health > 0;
+        }
+
         public override string ToString() {
-            return $"Structure | Stock ID: {this.stock_id} Tool Type: {this.ReqToolType} Tool Class: {this.ReqToolClass} " +
-            	   $"Walkable: {this.IsWalkable} Dropped Material: {this.DroppedMaterial.stock_id}";
+            return $"Structure | ID: {this.stock_id} H: {this.Health} TT: {this.ReqToolType} TC: {this.ReqToolClass} " +
+            	   $"W: {this.IsWalkable} DM ID: {this.DroppedMaterial.stock_id}";
         }
     }
 }

@@ -13,8 +13,11 @@ namespace Mundus.Service.Mobs {
 
                 if (selStructure.ReqToolType == selTool.Type && selStructure.ReqToolClass == selTool.Class) {
                     if (LMI.Player.Inventory.Items.Any(x => x == null)) {
-                        LMI.Player.Inventory.AppendToItems(selStructure.DroppedMaterial);
-                        LMI.Player.CurrSuperLayer.SetStructureAtPosition(null, mapYPos, mapXPos);
+                        LMI.Player.Inventory.AppendToItems(new Material(selStructure.DroppedMaterial.stock_id));
+
+                        if (!selStructure.Damage()) {
+                            LMI.Player.CurrSuperLayer.SetStructureAtPosition(null, mapYPos, mapXPos);
+                        }
                     }
                     else {
                         //TODO: put the item on the ground

@@ -123,6 +123,10 @@
     <Compile Include="Service\Mobs\MobTerraforming.cs" />
     <Compile Include="Service\SuperLayers\LandPresets.cs" />
     <Compile Include="Service\Mobs\MobStatsController.cs" />
+    <Compile Include="Service\Crafting\CraftingRecipie.cs" />
+    <Compile Include="Service\Crafting\CraftingController.cs" />
+    <Compile Include="Data\Crafting\RI.cs" />
+    <Compile Include="Service\Tiles\ItemPresets\ToolPresets.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -142,6 +146,9 @@
     <Folder Include="Data\SuperLayers\Mobs\" />
     <Folder Include="Service\Tiles\Items\" />
     <Folder Include="Data\Tiles\" />
+    <Folder Include="Service\Crafting\" />
+    <Folder Include="Data\Crafting\" />
+    <Folder Include="Service\Tiles\ItemPresets\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

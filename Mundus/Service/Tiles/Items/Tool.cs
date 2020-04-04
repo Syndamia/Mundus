@@ -11,7 +11,7 @@ namespace Mundus.Service.Tiles.Items {
         }
 
         public override string ToString() {
-            return $"Tool | Stock ID: {this.stock_id} Type: {this.Type} Class: {this.Class}";
+            return $"Tool | ID: {this.stock_id} Type: {this.Type} Class: {this.Class}";
         }
     }
 }

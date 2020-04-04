@@ -12,6 +12,7 @@ namespace Mundus.Data.Windows {
         public static SettingsWindow WSettings { get; private set; }
         public static PauseWindow WPause { get; private set; }
         public static MusicWindow WMusic { get; private set; }
+        public static CraftingWindow WCrafting { get; private set; }
 
         public static void CreateInstances() {
             WMain = new MainWindow();
@@ -22,6 +23,7 @@ namespace Mundus.Data.Windows {
             WSettings = new SettingsWindow();
             WPause = new PauseWindow();
             WMusic = new MusicWindow();
+            WCrafting = new CraftingWindow();
 
             HideAll();
         }
@@ -36,6 +38,7 @@ namespace Mundus.Data.Windows {
             WSettings.Hide();
             WPause.Hide();
             WMusic.Hide();
+            WCrafting.Hide();
         }
     }
 }
