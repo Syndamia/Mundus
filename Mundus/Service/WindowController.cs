@@ -33,6 +33,7 @@ namespace Mundus.Service {
         }
 
         public static void ShowCraftingWindow() {
+            WI.WCrafting.Initialize();
             WI.WCrafting.Show();
             WI.WCrafting.Present();
         }

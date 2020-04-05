@@ -1,4 +1,5 @@
 ﻿using Gtk;
+using Mundus.Data.Crafting;
 using Mundus.Data.Dialogues;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
@@ -15,6 +16,7 @@ namespace Mundus {
             DI.CreateInstances();
             LI.CreateInstances();
             LMI.CreateInstances( 1 );
+            RI.CreateInstances();
 
             WI.WMain.Show();
             Application.Run();

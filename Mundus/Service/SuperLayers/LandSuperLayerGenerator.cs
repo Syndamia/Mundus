@@ -54,10 +54,10 @@ namespace Mundus.Service.SuperLayers {
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
                     if (rnd.Next( 0, 50 ) == 1) {
-                        tiles[col, row] = LandPresets.Boulder();
+                        tiles[col, row] = LandPresets.GetABoulder();
                     }
                     if (rnd.Next(0, 10) == 1) {
-                        tiles[col, row] = LandPresets.Tree();
+                        tiles[col, row] = LandPresets.GetATree();
                     }
                 }
             }

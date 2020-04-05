@@ -55,7 +55,6 @@
     <EmbeddedResource Include="Icons\Land\Ground\grass.png" />
     <EmbeddedResource Include="Icons\Land\Items\boulder.png" />
     <EmbeddedResource Include="Icons\player.png" />
-    <EmbeddedResource Include="Icons\Materials\land_rock.png" />
     <EmbeddedResource Include="Icons\Land\Items\tree.png" />
     <EmbeddedResource Include="Icons\Land\Ground\water.png" />
     <EmbeddedResource Include="Icons\UI\Blanks\blank.png" />
@@ -66,7 +65,9 @@
     <EmbeddedResource Include="Icons\UI\Hearth\3-4.png" />
     <EmbeddedResource Include="Icons\UI\Hearth\2-4.png" />
     <EmbeddedResource Include="Icons\UI\Hearth\1-4.png" />
-    <EmbeddedResource Include="Icons\Materials\stick.png" />
+    <EmbeddedResource Include="Icons\Land\Materials\land_rock.png" />
+    <EmbeddedResource Include="Icons\Land\Materials\stick.png" />
+    <EmbeddedResource Include="Icons\Land\Tools\stone_pickaxe.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -123,10 +124,11 @@
     <Compile Include="Service\Mobs\MobTerraforming.cs" />
     <Compile Include="Service\SuperLayers\LandPresets.cs" />
     <Compile Include="Service\Mobs\MobStatsController.cs" />
-    <Compile Include="Service\Crafting\CraftingRecipie.cs" />
+    <Compile Include="Service\Crafting\CraftingRecipe.cs" />
     <Compile Include="Service\Crafting\CraftingController.cs" />
     <Compile Include="Data\Crafting\RI.cs" />
     <Compile Include="Service\Tiles\ItemPresets\ToolPresets.cs" />
+    <Compile Include="Service\Tiles\ItemPresets\MaterialPresets.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />

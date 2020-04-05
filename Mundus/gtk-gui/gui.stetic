@@ -39,7 +39,7 @@
     </icon-set>
     <icon-set id="land_rock">
       <source>
-        <property name="Image">resource:Mundus.Icons.Materials.land_rock.png</property>
+        <property name="Image">resource:Mundus.Icons.Land.Materials.land_rock.png</property>
       </source>
     </icon-set>
     <icon-set id="tree">
@@ -79,7 +79,12 @@
     </icon-set>
     <icon-set id="stick">
       <source>
-        <property name="Image">resource:Mundus.Icons.Materials.stick.png</property>
+        <property name="Image">resource:Mundus.Icons.Land.Materials.stick.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="stone_pickaxe">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Tools.stone_pickaxe.png</property>
       </source>
     </icon-set>
   </icon-factory>
@@ -5631,6 +5636,7 @@
     <property name="MemberName" />
     <property name="Title" translatable="yes">CraftingWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
       <widget class="Gtk.Table" id="tbUI">
         <property name="MemberName" />
@@ -5763,6 +5769,33 @@
           <placeholder />
         </child>
         <child>
+          <widget class="Gtk.Button" id="btnCraft">
+            <property name="MemberName" />
+            <property name="HeightRequest">50</property>
+            <property name="Sensitive">False</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Craft</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnCraftClicked" />
+          </widget>
+          <packing>
+            <property name="TopAttach">9</property>
+            <property name="BottomAttach">10</property>
+            <property name="LeftAttach">1</property>
+            <property name="RightAttach">6</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
           <widget class="Gtk.Button" id="btnNext">
             <property name="MemberName" />
             <property name="Sensitive">False</property>
@@ -5770,6 +5803,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">Next</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnNextClicked" />
           </widget>
           <packing>
             <property name="TopAttach">7</property>
@@ -5797,38 +5831,13 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">Prev</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnPrevClicked" />
           </widget>
           <packing>
             <property name="TopAttach">7</property>
             <property name="BottomAttach">8</property>
             <property name="LeftAttach">2</property>
             <property name="RightAttach">3</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="button28">
-            <property name="MemberName" />
-            <property name="HeightRequest">50</property>
-            <property name="Sensitive">False</property>
-            <property name="CanFocus">True</property>
-            <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Craft</property>
-            <property name="UseUnderline">True</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">9</property>
-            <property name="BottomAttach">10</property>
-            <property name="LeftAttach">1</property>
-            <property name="RightAttach">6</property>
             <property name="AutoSize">True</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>

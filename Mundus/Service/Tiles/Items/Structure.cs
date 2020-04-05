@@ -7,9 +7,9 @@
 
         public bool IsWalkable { get; private set; }
 
+
         public Structure(Structure structure) :this(structure.stock_id, structure.Health, structure.ReqToolType, structure.ReqToolClass, structure.IsWalkable, 
                          new Material(structure.DroppedMaterial.stock_id)) { 
-            //dunno if I would need it
         }
 
         public Structure(string stock_id, byte health, int reqToolType, int reqToolClass, bool isWalkable = false, Material droppedMaterial = null) : base(stock_id) {

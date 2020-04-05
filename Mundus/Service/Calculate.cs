@@ -8,6 +8,7 @@ namespace Mundus.Service {
          *the player, making sure he stays in the center of the screen.
          *This means that when the player is followed, rendered part of the map depend on the player position, but when
          *he isn't, it depends on the screen and map sizes.*/
+        //kind of hardcoded
         public static int CalculateMaxY(int size) {
             int maxY = (LMI.Player.YPos - 2 >= 0) ? LMI.Player.YPos + 2 : size - 1;
             if (maxY >= MapSizes.CurrSize) maxY = MapSizes.CurrSize - 1;

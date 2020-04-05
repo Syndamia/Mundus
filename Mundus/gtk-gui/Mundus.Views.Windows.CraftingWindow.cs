@@ -6,11 +6,11 @@ namespace Mundus.Views.Windows
 	{
 		private global::Gtk.Table tbUI;
 
+		private global::Gtk.Button btnCraft;
+
 		private global::Gtk.Button btnNext;
 
 		private global::Gtk.Button btnPrev;
-
-		private global::Gtk.Button button28;
 
 		private global::Gtk.Image imgI1;
 
@@ -71,6 +71,22 @@ namespace Mundus.Views.Windows
 			this.tbUI = new global::Gtk.Table(((uint)(11)), ((uint)(7)), false);
 			this.tbUI.Name = "tbUI";
 			// Container child tbUI.Gtk.Table+TableChild
+			this.btnCraft = new global::Gtk.Button();
+			this.btnCraft.HeightRequest = 50;
+			this.btnCraft.Sensitive = false;
+			this.btnCraft.CanFocus = true;
+			this.btnCraft.Name = "btnCraft";
+			this.btnCraft.UseUnderline = true;
+			this.btnCraft.Label = global::Mono.Unix.Catalog.GetString("Craft");
+			this.tbUI.Add(this.btnCraft);
+			global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnCraft]));
+			w1.TopAttach = ((uint)(9));
+			w1.BottomAttach = ((uint)(10));
+			w1.LeftAttach = ((uint)(1));
+			w1.RightAttach = ((uint)(6));
+			w1.XOptions = ((global::Gtk.AttachOptions)(4));
+			w1.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
 			this.btnNext = new global::Gtk.Button();
 			this.btnNext.Sensitive = false;
 			this.btnNext.CanFocus = true;
@@ -78,13 +94,13 @@ namespace Mundus.Views.Windows
 			this.btnNext.UseUnderline = true;
 			this.btnNext.Label = global::Mono.Unix.Catalog.GetString("Next");
 			this.tbUI.Add(this.btnNext);
-			global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnNext]));
-			w1.TopAttach = ((uint)(7));
-			w1.BottomAttach = ((uint)(8));
-			w1.LeftAttach = ((uint)(4));
-			w1.RightAttach = ((uint)(5));
-			w1.XOptions = ((global::Gtk.AttachOptions)(4));
-			w1.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnNext]));
+			w2.TopAttach = ((uint)(7));
+			w2.BottomAttach = ((uint)(8));
+			w2.LeftAttach = ((uint)(4));
+			w2.RightAttach = ((uint)(5));
+			w2.XOptions = ((global::Gtk.AttachOptions)(4));
+			w2.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.btnPrev = new global::Gtk.Button();
 			this.btnPrev.WidthRequest = 50;
@@ -95,27 +111,11 @@ namespace Mundus.Views.Windows
 			this.btnPrev.UseUnderline = true;
 			this.btnPrev.Label = global::Mono.Unix.Catalog.GetString("Prev");
 			this.tbUI.Add(this.btnPrev);
-			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnPrev]));
-			w2.TopAttach = ((uint)(7));
-			w2.BottomAttach = ((uint)(8));
-			w2.LeftAttach = ((uint)(2));
-			w2.RightAttach = ((uint)(3));
-			w2.XOptions = ((global::Gtk.AttachOptions)(4));
-			w2.YOptions = ((global::Gtk.AttachOptions)(4));
-			// Container child tbUI.Gtk.Table+TableChild
-			this.button28 = new global::Gtk.Button();
-			this.button28.HeightRequest = 50;
-			this.button28.Sensitive = false;
-			this.button28.CanFocus = true;
-			this.button28.Name = "button28";
-			this.button28.UseUnderline = true;
-			this.button28.Label = global::Mono.Unix.Catalog.GetString("Craft");
-			this.tbUI.Add(this.button28);
-			global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.tbUI[this.button28]));
-			w3.TopAttach = ((uint)(9));
-			w3.BottomAttach = ((uint)(10));
-			w3.LeftAttach = ((uint)(1));
-			w3.RightAttach = ((uint)(6));
+			global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnPrev]));
+			w3.TopAttach = ((uint)(7));
+			w3.BottomAttach = ((uint)(8));
+			w3.LeftAttach = ((uint)(2));
+			w3.RightAttach = ((uint)(3));
 			w3.XOptions = ((global::Gtk.AttachOptions)(4));
 			w3.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
@@ -434,6 +434,10 @@ namespace Mundus.Views.Windows
 			this.DefaultWidth = 270;
 			this.DefaultHeight = 470;
 			this.Show();
+			this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+			this.btnPrev.Clicked += new global::System.EventHandler(this.OnBtnPrevClicked);
+			this.btnNext.Clicked += new global::System.EventHandler(this.OnBtnNextClicked);
+			this.btnCraft.Clicked += new global::System.EventHandler(this.OnBtnCraftClicked);
 		}
 	}
 }
