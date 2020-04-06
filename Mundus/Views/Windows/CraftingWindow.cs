@@ -31,6 +31,7 @@ namespace Mundus.Views.Windows {
 
         private void PrintRecipe() {
             if (Recipes.Length > 0) {
+                ClearScreen();
                 CraftingRecipe recipe = Recipes[recipeIndex];
                 btnCraft.Sensitive = true;
 
@@ -80,7 +81,7 @@ namespace Mundus.Views.Windows {
             btnPrev.Sensitive = recipeIndex > 0;
         }
 
-        private void Reset() {
+        private void ClearScreen() {
             lblC1.Text = "0";
             lblC2.Text = "0";
             lblC3.Text = "0";
@@ -92,6 +93,10 @@ namespace Mundus.Views.Windows {
             imgI3.SetFromStock("empty", IconSize.Dnd);
             imgI4.SetFromStock("empty", IconSize.Dnd);
             imgI5.SetFromStock("empty", IconSize.Dnd);
+        }
+
+        private void Reset() {
+            ClearScreen();
 
             imgItem.SetFromStock("empty", IconSize.Dnd);
             lblInfo.Text = null;
@@ -99,6 +104,7 @@ namespace Mundus.Views.Windows {
             btnNext.Sensitive = false;
             btnCraft.Sensitive = false;
         }
+
 
         protected void OnBtnCraftClicked(object sender, EventArgs e) {
             CraftingController.CraftItem(Recipes[recipeIndex]);

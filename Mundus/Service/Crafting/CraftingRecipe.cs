@@ -58,7 +58,7 @@ namespace Mundus.Service.Crafting {
 
             if (ReqItem1 != null && hasEnough) {
                 if (itemsAndCounts.Keys.Any(k => k.stock_id == ReqItem1.stock_id)) {
-                    hasEnough = itemsAndCounts.First(x => x.Key.stock_id == ReqItem1.stock_id).Value >= Count2;
+                    hasEnough = itemsAndCounts.First(x => x.Key.stock_id == ReqItem1.stock_id).Value >= Count1;
                 }
                 else hasEnough = false;
             }

@@ -10,12 +10,15 @@ namespace Mundus.Data.Crafting {
         public static List<CraftingRecipe> AllRecipies { get; private set; }
 
         public static CraftingRecipe StonePickAxe { get; private set; }
+        public static CraftingRecipe Hand { get; private set; }
 
         public static void CreateInstances() {
-            AllRecipies = new List<CraftingRecipe>();
-
             StonePickAxe = new CraftingRecipe(ToolPresets.GetAStonePickaxe(), 2, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
-            AllRecipies.Add(StonePickAxe);
+            Hand = new CraftingRecipe(new Tool("blank_hand", ToolTypes.Axe, 10), 5, MaterialPresets.GetALandRock());
+
+            AllRecipies = new List<CraftingRecipe> { 
+                StonePickAxe, Hand
+            };
         }
     }
 }

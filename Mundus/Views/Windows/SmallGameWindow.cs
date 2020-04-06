@@ -904,14 +904,16 @@ namespace Mundus.Views.Windows {
 
         protected void OnBtnIG1Clicked(object sender, EventArgs e) {
             //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = LandPresets.Boulder();
-            //MobStatsController.DamagePlayer(1);
-            Service.Crafting.CraftingController.FindAvalableItems();
+            MobStatsController.DamagePlayer(1);
+            //Service.Crafting.CraftingController.FindAvalableItems();
             PrintMainMenu();
         }
 
         protected void OnBtnIG2Clicked(object sender, EventArgs e) {
             Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[1] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Pickaxe, 1);
-            //MobStatsController.TryHealPlayer(1);
+            Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Axe, 1);
+
+            MobStatsController.TryHealPlayer(1);
             PrintMainMenu();
         }
 

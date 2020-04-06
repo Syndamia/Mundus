@@ -9,7 +9,7 @@ namespace Mundus.Service.SuperLayers {
         }
 
         public static Structure GetATree() {
-            return new Structure("tree", 5, ToolTypes.Pickaxe, 1, false, MaterialPresets.GetAStick());
+            return new Structure("tree", 5, ToolTypes.Axe, 1, false, MaterialPresets.GetAStick());
         }
     }
 }
