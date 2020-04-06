@@ -68,6 +68,8 @@
     <EmbeddedResource Include="Icons\Land\Materials\land_rock.png" />
     <EmbeddedResource Include="Icons\Land\Materials\stick.png" />
     <EmbeddedResource Include="Icons\Land\Tools\stone_pickaxe.png" />
+    <EmbeddedResource Include="Icons\Land\Tools\stone_axe.png" />
+    <EmbeddedResource Include="Icons\UI\Blanks\blank_multiplication.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />

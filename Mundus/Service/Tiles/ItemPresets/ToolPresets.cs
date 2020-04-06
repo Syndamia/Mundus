@@ -7,5 +7,9 @@ namespace Mundus.Service.Tiles.ItemPresets {
         public static Tool GetAStonePickaxe() {
             return new Tool("stone_pickaxe", ToolTypes.Pickaxe, 2);
         }
+
+        public static Tool GetAStoneAxe() {
+            return new Tool("stone_axe", ToolTypes.Axe, 2);
+        }
     }
 }

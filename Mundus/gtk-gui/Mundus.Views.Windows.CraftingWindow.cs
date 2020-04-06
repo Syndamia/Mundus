@@ -201,6 +201,7 @@ namespace Mundus.Views.Windows
 			this.imgM1.WidthRequest = 50;
 			this.imgM1.HeightRequest = 50;
 			this.imgM1.Name = "imgM1";
+			this.imgM1.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "blank_multiplication", global::Gtk.IconSize.Dnd);
 			this.tbUI.Add(this.imgM1);
 			global::Gtk.Table.TableChild w10 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgM1]));
 			w10.TopAttach = ((uint)(1));
@@ -214,6 +215,7 @@ namespace Mundus.Views.Windows
 			this.imgM2.WidthRequest = 50;
 			this.imgM2.HeightRequest = 50;
 			this.imgM2.Name = "imgM2";
+			this.imgM2.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "blank_multiplication", global::Gtk.IconSize.Dnd);
 			this.tbUI.Add(this.imgM2);
 			global::Gtk.Table.TableChild w11 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgM2]));
 			w11.TopAttach = ((uint)(2));
@@ -227,6 +229,7 @@ namespace Mundus.Views.Windows
 			this.imgM3.WidthRequest = 50;
 			this.imgM3.HeightRequest = 50;
 			this.imgM3.Name = "imgM3";
+			this.imgM3.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "blank_multiplication", global::Gtk.IconSize.Dnd);
 			this.tbUI.Add(this.imgM3);
 			global::Gtk.Table.TableChild w12 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgM3]));
 			w12.TopAttach = ((uint)(3));
@@ -240,6 +243,7 @@ namespace Mundus.Views.Windows
 			this.imgM4.WidthRequest = 50;
 			this.imgM4.HeightRequest = 50;
 			this.imgM4.Name = "imgM4";
+			this.imgM4.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "blank_multiplication", global::Gtk.IconSize.Dnd);
 			this.tbUI.Add(this.imgM4);
 			global::Gtk.Table.TableChild w13 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgM4]));
 			w13.TopAttach = ((uint)(4));
@@ -253,6 +257,7 @@ namespace Mundus.Views.Windows
 			this.imgM5.WidthRequest = 50;
 			this.imgM5.HeightRequest = 50;
 			this.imgM5.Name = "imgM5";
+			this.imgM5.Pixbuf = global::Stetic.IconLoader.LoadIcon(this, "blank_multiplication", global::Gtk.IconSize.Dnd);
 			this.tbUI.Add(this.imgM5);
 			global::Gtk.Table.TableChild w14 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgM5]));
 			w14.TopAttach = ((uint)(5));

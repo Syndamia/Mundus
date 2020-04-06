@@ -87,6 +87,16 @@
         <property name="Image">resource:Mundus.Icons.Land.Tools.stone_pickaxe.png</property>
       </source>
     </icon-set>
+    <icon-set id="stone_axe">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Tools.stone_axe.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="blank_multiplication">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Blanks.blank_multiplication.png</property>
+      </source>
+    </icon-set>
   </icon-factory>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.NewGameWindow" design-size="581 275">
     <property name="MemberName" />
@@ -5986,6 +5996,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
+            <property name="Pixbuf">stock:blank_multiplication Dnd</property>
           </widget>
           <packing>
             <property name="TopAttach">1</property>
@@ -6008,6 +6019,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
+            <property name="Pixbuf">stock:blank_multiplication Dnd</property>
           </widget>
           <packing>
             <property name="TopAttach">2</property>
@@ -6030,6 +6042,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
+            <property name="Pixbuf">stock:blank_multiplication Dnd</property>
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -6052,6 +6065,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
+            <property name="Pixbuf">stock:blank_multiplication Dnd</property>
           </widget>
           <packing>
             <property name="TopAttach">4</property>
@@ -6074,6 +6088,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
+            <property name="Pixbuf">stock:blank_multiplication Dnd</property>
           </widget>
           <packing>
             <property name="TopAttach">5</property>
