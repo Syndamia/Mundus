@@ -1,4 +1,5 @@
 ﻿using Mundus.Service.Mobs.LandMobs;
+using Mundus.Service.Tiles.ItemPresets;
 
 namespace Mundus.Data.Superlayers.Mobs {
     public static class LMI { //stands for Land Mob Instances
@@ -10,6 +11,8 @@ namespace Mundus.Data.Superlayers.Mobs {
 
         public static void CreateInventories(int screenInvSize) {
             Player.Inventory.SetNewSizes(screenInvSize);
+            Player.Inventory.AppendToHotbar(ToolPresets.GetAWoodenAxe());
+            Player.Inventory.AppendToHotbar(ToolPresets.GetAWoodenPickaxe());
         }
     }
 }
