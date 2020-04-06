@@ -17,6 +17,9 @@ namespace Mundus.Views.Windows {
             this.Hide();
         }
 
+        /// <summary>
+        /// Resets visuals and prepares avalable recipes for current items in inventory
+        /// </summary>
         public void Initialize() {
             Reset();
             CraftingController.FindAvalableItems();

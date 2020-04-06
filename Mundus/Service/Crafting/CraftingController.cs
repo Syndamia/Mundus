@@ -9,8 +9,10 @@ namespace Mundus.Service.Crafting {
     public static class CraftingController {
         private static Dictionary<ItemTile, int> avalableItems;
 
+        /// <summary>
+        /// Gets all different items and their quantaties in the inventory. Stores that in memory.
+        /// </summary>
         public static void FindAvalableItems() {
-            var tmp = LMI.Player.Inventory.Items.Where(x => x != null);
             avalableItems = LMI.Player.Inventory.Items.Where(x => x != null)
                        //Can't use distinct on non primative types, beause they also hold their memory location info.
                        //This is my way of getting only the "unique" item tiles.
@@ -32,12 +34,18 @@ namespace Mundus.Service.Crafting {
             return recipes.ToArray();
         }
 
+        /// <summary>
+        /// Removes items, used for crafting and adds the result item to the inventory
+        /// </summary>
+        /// <param name="itemRecipe">CraftingRecipie of the item that will be crafted</param>
         public static void CraftItem(CraftingRecipe itemRecipe) {
             foreach (var itemAndCount in itemRecipe.GetRequiredItemsAndCounts()) {
                 for(int i = 0, removedItems = 0; i < LMI.Player.Inventory.Items.Length && removedItems < itemAndCount.Value; i++) {
-                    if (LMI.Player.Inventory.Items[i].stock_id == itemAndCount.Key.stock_id) {
-                        LMI.Player.Inventory.Items[i] = null;
-                        removedItems++;
+                    if (LMI.Player.Inventory.Items[i] != null) {
+                        if (LMI.Player.Inventory.Items[i].stock_id == itemAndCount.Key.stock_id) {
+                            LMI.Player.Inventory.Items[i] = null;
+                            removedItems++;
+                        }
                     }
                 }
             }
@@ -56,6 +64,8 @@ namespace Mundus.Service.Crafting {
                 tmp = new Structure((Structure)itemRecipe.ResultItem);
             }
             LMI.Player.Inventory.AppendToItems(tmp);
+
+            Data.Windows.WI.SelWin.PrintInventory();
         }
     }
 }

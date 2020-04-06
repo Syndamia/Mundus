@@ -10,6 +10,7 @@ namespace Mundus.Views.Windows {
         void PrintScreen();
         void PrintMap();
         void PrintMainMenu();
+        void PrintInventory();
         void PrintSelectedItemInfo(ItemTile itemTile);
 
         //Stuff that are in Gtk.Window class

@@ -37,5 +37,9 @@ namespace Mundus.Views.Windows {
         public void PrintSelectedItemInfo(ItemTile itemTile) {
             throw new NotImplementedException();
         }
+
+        public void PrintInventory() {
+            throw new NotImplementedException();
+        }
     }
 }

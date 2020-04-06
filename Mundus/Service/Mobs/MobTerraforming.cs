@@ -11,7 +11,7 @@ namespace Mundus.Service.Mobs {
                 var selTool = (Tool)LMI.Player.Inventory.GetTile(place, index);
                 var selStructure = LMI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos);
 
-                if (selStructure.ReqToolType == selTool.Type && selStructure.ReqToolClass == selTool.Class) {
+                if (selStructure.ReqToolType == selTool.Type && selStructure.ReqToolClass <= selTool.Class) {
                     if (LMI.Player.Inventory.Items.Any(x => x == null)) {
                         LMI.Player.Inventory.AppendToItems(new Material(selStructure.DroppedMaterial.stock_id));
 
