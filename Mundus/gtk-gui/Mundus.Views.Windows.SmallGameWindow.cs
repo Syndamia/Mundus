@@ -2616,7 +2616,7 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblItemLayer = new global::Gtk.Label();
 			this.lblItemLayer.Name = "lblItemLayer";
-			this.lblItemLayer.LabelProp = global::Mono.Unix.Catalog.GetString("Item Layer");
+			this.lblItemLayer.LabelProp = global::Mono.Unix.Catalog.GetString("Structure Layer");
 			this.tbUI.Add(this.lblItemLayer);
 			global::Gtk.Table.TableChild w224 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblItemLayer]));
 			w224.TopAttach = ((uint)(9));

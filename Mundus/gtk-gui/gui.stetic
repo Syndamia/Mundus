@@ -5032,7 +5032,7 @@
         <child>
           <widget class="Gtk.Label" id="lblItemLayer">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Item Layer</property>
+            <property name="LabelProp" translatable="yes">Structure Layer</property>
           </widget>
           <packing>
             <property name="TopAttach">9</property>

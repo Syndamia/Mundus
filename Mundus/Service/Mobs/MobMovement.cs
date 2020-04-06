@@ -2,7 +2,7 @@
 using Mundus.Data.Superlayers.Mobs;
 
 namespace Mundus.Service.Mobs {
-    public static class MobMoving {
+    public static class MobMovement {
         public static void MovePlayer(int yPos, int xPos, int size) {
             ChangePosition(LMI.Player, yPos, xPos, size);
         }
@@ -23,6 +23,10 @@ namespace Mundus.Service.Mobs {
         }
 
         private static bool Walkable(IMob mob, int yPos, int xPos) {
+            //Mobs can only walk on free ground (no structure on top) or walkable structures
+            if (mob.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) == null) {
+                return false;
+            }
             return (mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) == null ||
                     mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos).IsWalkable) ||
                     mob.CurrSuperLayer.GetMobLayerTile(yPos, xPos) != null;

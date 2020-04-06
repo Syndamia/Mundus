@@ -37,12 +37,7 @@ namespace Mundus.Service.SuperLayers {
 
             for(int col = 0; col < size; col++) {
                 for(int row = 0; row < size; row++) {
-                    if (rnd.Next(0, 50) == -1) {
-                        tiles[col, row] = new GroundTile("water");
-                    }
-                    else { 
-                        tiles[col, row] = new GroundTile("grass"); 
-                    }
+                    tiles[col, row] = GroundPresets.GetAGrass();
                 }
             }
             return tiles;

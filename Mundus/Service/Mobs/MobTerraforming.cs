@@ -1,30 +1,44 @@
 ﻿using System.Linq;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
+using Mundus.Data.Tiles;
 using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Service.Mobs {
     public static class MobTerraforming {
 
         public static void PlayerDestroyAt(int mapYPos, int mapXPos, string place, int index) {
+            //sel means selected
             if (LMI.Player.Inventory.GetTile(place, index).GetType() == typeof(Tool)) {
                 var selTool = (Tool)LMI.Player.Inventory.GetTile(place, index);
-                var selStructure = LMI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos);
 
-                if (selStructure.ReqToolType == selTool.Type && selStructure.ReqToolClass <= selTool.Class) {
-                    if (LMI.Player.Inventory.Items.Any(x => x == null)) {
-                        LMI.Player.Inventory.AppendToItems(new Material(selStructure.DroppedMaterial.stock_id));
+                //Only shovels can destroy ground layer tiles, but not when there is something over the ground tile
+                if (selTool.Type == ToolTypes.Shovel && LMI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos) == null) {
+                    var selGround = LMI.Player.CurrSuperLayer.GetGroundLayerTile(mapYPos, mapXPos);
+
+                    if (selGround.ReqShovelClass <= selTool.Class) {
+                        LMI.Player.CurrSuperLayer.SetGroundAtPosition(null, mapYPos, mapXPos);
+
+                        if (LMI.Player.Inventory.Items.Contains(null)) {
+                            LMI.Player.Inventory.AppendToItems(new Material(selGround.DroppedMaterial));
+                        }
+                    }
+                }
+                else if (LMI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos) != null) {
+                    var selStructure = LMI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos);
+
+                    if (selStructure.ReqToolType == selTool.Type && selStructure.ReqToolClass <= selTool.Class) {
+                        if (LMI.Player.Inventory.Items.Contains(null)) {
+                            LMI.Player.Inventory.AppendToItems(new Material(selStructure.DroppedMaterial));
+                        }
 
                         if (!selStructure.Damage()) {
                             LMI.Player.CurrSuperLayer.SetStructureAtPosition(null, mapYPos, mapXPos);
                         }
                     }
                     else {
-                        //TODO: put the item on the ground
+                        //TODO: add error to log
                     }
-                }
-                else {
-                    //TODO: add error to log
                 }
             }
         }
@@ -60,7 +74,8 @@ namespace Mundus.Service.Mobs {
         }
 
         public static bool PlayerCanDestroyAt(int yPos, int xPos) {
-            return LMI.Player.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) != null;
+            return LMI.Player.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) != null ||
+                   LMI.Player.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) != null;
         }
     }
 }

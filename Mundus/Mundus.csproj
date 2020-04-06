@@ -106,7 +106,7 @@
     <Compile Include="Service\Mobs\LandMobs\Player.cs" />
     <Compile Include="Service\Inventory.cs" />
     <Compile Include="Views\Windows\IGameWindow.cs" />
-    <Compile Include="Service\Mobs\MobMoving.cs" />
+    <Compile Include="Service\Mobs\MobMovement.cs" />
     <Compile Include="Data\MapSizes.cs" />
     <Compile Include="Service\SuperLayers\LandSuperLayerGenerator.cs" />
     <Compile Include="Service\SwitchItems.cs" />
@@ -135,6 +135,7 @@
     <Compile Include="Data\Crafting\RI.cs" />
     <Compile Include="Service\Tiles\ItemPresets\ToolPresets.cs" />
     <Compile Include="Service\Tiles\ItemPresets\MaterialPresets.cs" />
+    <Compile Include="Service\SuperLayers\GroundPresets.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />

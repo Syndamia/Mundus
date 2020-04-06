@@ -561,7 +561,7 @@ namespace Mundus.Views.Windows {
             int mapYPos = Calculate.CalculateYFromButton(buttonYPos, Size);
 
             if (!HasSelection()) {
-                MobMoving.MovePlayer(mapYPos, mapXPos, Size);
+                MobMovement.MovePlayer(mapYPos, mapXPos, Size);
             }
             else {
                 if (Inventory.GetPlayerItem(selPlace, selIndex) != null) {

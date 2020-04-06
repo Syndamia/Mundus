@@ -20,6 +20,10 @@
             this.DroppedMaterial = droppedMaterial;
         }
 
+        /// <summary>
+        /// Removes 1 health from structure
+        /// </summary>
+        /// <returns>If the structure can still be damaged</returns>
         public bool Damage() {
             this.Health--;
             return this.Health > 0;
