@@ -87,10 +87,6 @@ namespace Mundus.Views.Windows {
             imgG24.Visible = isVisible;
             imgG25.Visible = isVisible;
 
-            btnGM1.Visible = isVisible;
-            btnGM2.Visible = isVisible;
-            btnGM3.Visible = isVisible;
-
             lblItemLayer.Visible = isVisible;
             imgI1.Visible = isVisible;
             imgI2.Visible = isVisible;
@@ -117,10 +113,6 @@ namespace Mundus.Views.Windows {
             imgI23.Visible = isVisible;
             imgI24.Visible = isVisible;
             imgI25.Visible = isVisible;
-
-            btnIM1.Visible = isVisible;
-            btnIM2.Visible = isVisible;
-            btnIM3.Visible = isVisible;
 
             lblBlank5.Visible = isVisible;
         }

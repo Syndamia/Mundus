@@ -72,6 +72,8 @@
     <EmbeddedResource Include="Icons\UI\Blanks\blank_multiplication.png" />
     <EmbeddedResource Include="Icons\Land\Tools\wooden_axe.png" />
     <EmbeddedResource Include="Icons\Land\Tools\wooden_pickaxe.png" />
+    <EmbeddedResource Include="Icons\Land\Tools\wooden_shovel.png" />
+    <EmbeddedResource Include="Icons\Land\Tools\stone_shovel.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />

@@ -52,6 +52,10 @@ namespace Stetic
 				w1.Add("wooden_axe", w20);
 				global::Gtk.IconSet w21 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.wooden_pickaxe.png"));
 				w1.Add("wooden_pickaxe", w21);
+				global::Gtk.IconSet w22 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.wooden_shovel.png"));
+				w1.Add("wooden_shovel", w22);
+				global::Gtk.IconSet w23 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.stone_shovel.png"));
+				w1.Add("stone_shovel", w23);
 				w1.AddDefault();
 			}
 		}
