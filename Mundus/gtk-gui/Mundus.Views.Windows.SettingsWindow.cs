@@ -27,7 +27,7 @@ namespace Mundus.Views.Windows
 			global::Stetic.Gui.Initialize(this);
 			// Widget Mundus.Views.Windows.SettingsWindow
 			this.Name = "Mundus.Views.Windows.SettingsWindow";
-			this.Title = global::Mono.Unix.Catalog.GetString("Settings");
+			this.Title = "Settings";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Resizable = false;
 			this.AllowGrow = false;
@@ -44,7 +44,7 @@ namespace Mundus.Views.Windows
 			this.btnBack.Name = "btnBack";
 			this.btnBack.UseUnderline = true;
 			this.btnBack.BorderWidth = ((uint)(3));
-			this.btnBack.Label = global::Mono.Unix.Catalog.GetString("Back");
+			this.btnBack.Label = "Back";
 			this.tbUI.Add(this.btnBack);
 			global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnBack]));
 			w1.LeftAttach = ((uint)(1));
@@ -116,7 +116,7 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblTitle = new global::Gtk.Label();
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.LabelProp = global::Mono.Unix.Catalog.GetString("Settings (replace with picture)");
+			this.lblTitle.LabelProp = "Settings (replace with picture)";
 			this.tbUI.Add(this.lblTitle);
 			global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblTitle]));
 			w8.LeftAttach = ((uint)(3));

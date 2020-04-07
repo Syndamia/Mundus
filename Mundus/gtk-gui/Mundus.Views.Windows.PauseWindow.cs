@@ -27,7 +27,7 @@ namespace Mundus.Views.Windows
 			global::Stetic.Gui.Initialize(this);
 			// Widget Mundus.Views.Windows.PauseWindow
 			this.Name = "Mundus.Views.Windows.PauseWindow";
-			this.Title = global::Mono.Unix.Catalog.GetString("PauseWindow");
+			this.Title = "PauseWindow";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Resizable = false;
 			this.AllowGrow = false;
@@ -46,7 +46,7 @@ namespace Mundus.Views.Windows
 			this.btnBack.CanFocus = true;
 			this.btnBack.Name = "btnBack";
 			this.btnBack.UseUnderline = true;
-			this.btnBack.Label = global::Mono.Unix.Catalog.GetString("Back");
+			this.btnBack.Label = "Back";
 			this.hbox1.Add(this.btnBack);
 			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.btnBack]));
 			w1.Position = 0;
@@ -55,7 +55,7 @@ namespace Mundus.Views.Windows
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.lblTitle = new global::Gtk.Label();
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.LabelProp = global::Mono.Unix.Catalog.GetString("Pause menu (replace with picture)");
+			this.lblTitle.LabelProp = "Pause menu (replace with picture)";
 			this.hbox1.Add(this.lblTitle);
 			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.lblTitle]));
 			w2.Position = 1;
@@ -83,7 +83,7 @@ namespace Mundus.Views.Windows
 			this.btnSettings.Name = "btnSettings";
 			this.btnSettings.UseUnderline = true;
 			this.btnSettings.BorderWidth = ((uint)(3));
-			this.btnSettings.Label = global::Mono.Unix.Catalog.GetString("Settings");
+			this.btnSettings.Label = "Settings";
 			this.vbox1.Add(this.btnSettings);
 			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.btnSettings]));
 			w5.Position = 2;
@@ -96,7 +96,7 @@ namespace Mundus.Views.Windows
 			this.btnSave.Name = "btnSave";
 			this.btnSave.UseUnderline = true;
 			this.btnSave.BorderWidth = ((uint)(3));
-			this.btnSave.Label = global::Mono.Unix.Catalog.GetString("Save");
+			this.btnSave.Label = "Save";
 			this.vbox1.Add(this.btnSave);
 			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.btnSave]));
 			w6.Position = 3;
@@ -109,7 +109,7 @@ namespace Mundus.Views.Windows
 			this.btnSaveExit.Name = "btnSaveExit";
 			this.btnSaveExit.UseUnderline = true;
 			this.btnSaveExit.BorderWidth = ((uint)(3));
-			this.btnSaveExit.Label = global::Mono.Unix.Catalog.GetString("Save & Exit");
+			this.btnSaveExit.Label = "Save & Exit";
 			this.vbox1.Add(this.btnSaveExit);
 			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.btnSaveExit]));
 			w7.Position = 4;
@@ -122,7 +122,7 @@ namespace Mundus.Views.Windows
 			this.btnExit.Name = "btnExit";
 			this.btnExit.UseUnderline = true;
 			this.btnExit.BorderWidth = ((uint)(3));
-			this.btnExit.Label = global::Mono.Unix.Catalog.GetString("Exit");
+			this.btnExit.Label = "Exit";
 			this.vbox1.Add(this.btnExit);
 			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.btnExit]));
 			w8.Position = 5;

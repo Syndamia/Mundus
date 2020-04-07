@@ -63,7 +63,7 @@ namespace Mundus.Views.Windows
 			global::Stetic.Gui.Initialize(this);
 			// Widget Mundus.Views.Windows.NewGameWindow
 			this.Name = "Mundus.Views.Windows.NewGameWindow";
-			this.Title = global::Mono.Unix.Catalog.GetString("Create a New Game");
+			this.Title = "Create a New Game";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Resizable = false;
 			this.AllowGrow = false;
@@ -80,7 +80,7 @@ namespace Mundus.Views.Windows
 			this.btnBack.Name = "btnBack";
 			this.btnBack.UseUnderline = true;
 			this.btnBack.BorderWidth = ((uint)(3));
-			this.btnBack.Label = global::Mono.Unix.Catalog.GetString("Back");
+			this.btnBack.Label = "Back";
 			this.tbUI.Add(this.btnBack);
 			global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnBack]));
 			w1.LeftAttach = ((uint)(1));
@@ -95,7 +95,7 @@ namespace Mundus.Views.Windows
 			this.btnGenerate.Name = "btnGenerate";
 			this.btnGenerate.UseUnderline = true;
 			this.btnGenerate.BorderWidth = ((uint)(3));
-			this.btnGenerate.Label = global::Mono.Unix.Catalog.GetString("Generate");
+			this.btnGenerate.Label = "Generate";
 			this.tbUI.Add(this.btnGenerate);
 			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnGenerate]));
 			w2.LeftAttach = ((uint)(6));
@@ -174,7 +174,7 @@ namespace Mundus.Views.Windows
 			this.lblDifficulty.WidthRequest = 90;
 			this.lblDifficulty.HeightRequest = 50;
 			this.lblDifficulty.Name = "lblDifficulty";
-			this.lblDifficulty.LabelProp = global::Mono.Unix.Catalog.GetString("Difficulty");
+			this.lblDifficulty.LabelProp = "Difficulty";
 			this.tbUI.Add(this.lblDifficulty);
 			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblDifficulty]));
 			w9.TopAttach = ((uint)(3));
@@ -188,7 +188,7 @@ namespace Mundus.Views.Windows
 			this.lblGameMode.WidthRequest = 90;
 			this.lblGameMode.HeightRequest = 50;
 			this.lblGameMode.Name = "lblGameMode";
-			this.lblGameMode.LabelProp = global::Mono.Unix.Catalog.GetString("Game Mode:");
+			this.lblGameMode.LabelProp = "Game Mode:";
 			this.tbUI.Add(this.lblGameMode);
 			global::Gtk.Table.TableChild w10 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblGameMode]));
 			w10.TopAttach = ((uint)(2));
@@ -202,7 +202,7 @@ namespace Mundus.Views.Windows
 			this.lblMapSize.WidthRequest = 90;
 			this.lblMapSize.HeightRequest = 50;
 			this.lblMapSize.Name = "lblMapSize";
-			this.lblMapSize.LabelProp = global::Mono.Unix.Catalog.GetString("Map size");
+			this.lblMapSize.LabelProp = "Map size";
 			this.tbUI.Add(this.lblMapSize);
 			global::Gtk.Table.TableChild w11 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblMapSize]));
 			w11.TopAttach = ((uint)(5));
@@ -216,7 +216,7 @@ namespace Mundus.Views.Windows
 			this.lblScreenInvSize.WidthRequest = 90;
 			this.lblScreenInvSize.HeightRequest = 50;
 			this.lblScreenInvSize.Name = "lblScreenInvSize";
-			this.lblScreenInvSize.LabelProp = global::Mono.Unix.Catalog.GetString("Screen & Inventory size");
+			this.lblScreenInvSize.LabelProp = "Screen & Inventory size";
 			this.lblScreenInvSize.Wrap = true;
 			this.lblScreenInvSize.Justify = ((global::Gtk.Justification)(2));
 			this.tbUI.Add(this.lblScreenInvSize);
@@ -232,7 +232,7 @@ namespace Mundus.Views.Windows
 			this.lblTitle.WidthRequest = 180;
 			this.lblTitle.HeightRequest = 50;
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.LabelProp = global::Mono.Unix.Catalog.GetString("New Game (replace with picture)");
+			this.lblTitle.LabelProp = "New Game (replace with picture)";
 			this.lblTitle.Wrap = true;
 			this.lblTitle.Justify = ((global::Gtk.Justification)(2));
 			this.tbUI.Add(this.lblTitle);
@@ -242,7 +242,7 @@ namespace Mundus.Views.Windows
 			w13.XOptions = ((global::Gtk.AttachOptions)(0));
 			w13.YOptions = ((global::Gtk.AttachOptions)(0));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbCreative = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Creative"));
+			this.rbCreative = new global::Gtk.RadioButton("Creative");
 			this.rbCreative.WidthRequest = 90;
 			this.rbCreative.CanFocus = true;
 			this.rbCreative.Name = "rbCreative";
@@ -259,7 +259,7 @@ namespace Mundus.Views.Windows
 			w14.XOptions = ((global::Gtk.AttachOptions)(4));
 			w14.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbEasy = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Easy"));
+			this.rbEasy = new global::Gtk.RadioButton("Easy");
 			this.rbEasy.WidthRequest = 90;
 			this.rbEasy.CanFocus = true;
 			this.rbEasy.Name = "rbEasy";
@@ -276,7 +276,7 @@ namespace Mundus.Views.Windows
 			w15.XOptions = ((global::Gtk.AttachOptions)(4));
 			w15.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbHard = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Hard"));
+			this.rbHard = new global::Gtk.RadioButton("Hard");
 			this.rbHard.WidthRequest = 90;
 			this.rbHard.CanFocus = true;
 			this.rbHard.Name = "rbHard";
@@ -292,7 +292,7 @@ namespace Mundus.Views.Windows
 			w16.XOptions = ((global::Gtk.AttachOptions)(4));
 			w16.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbInsane = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Insane"));
+			this.rbInsane = new global::Gtk.RadioButton("Insane");
 			this.rbInsane.WidthRequest = 90;
 			this.rbInsane.CanFocus = true;
 			this.rbInsane.Name = "rbInsane";
@@ -308,7 +308,7 @@ namespace Mundus.Views.Windows
 			w17.XOptions = ((global::Gtk.AttachOptions)(4));
 			w17.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbLarge = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Large"));
+			this.rbLarge = new global::Gtk.RadioButton("Large");
 			this.rbLarge.WidthRequest = 90;
 			this.rbLarge.CanFocus = true;
 			this.rbLarge.Name = "rbLarge";
@@ -325,7 +325,7 @@ namespace Mundus.Views.Windows
 			w18.XOptions = ((global::Gtk.AttachOptions)(4));
 			w18.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbMedium = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Medium"));
+			this.rbMedium = new global::Gtk.RadioButton("Medium");
 			this.rbMedium.WidthRequest = 90;
 			this.rbMedium.CanFocus = true;
 			this.rbMedium.Name = "rbMedium";
@@ -341,7 +341,7 @@ namespace Mundus.Views.Windows
 			w19.XOptions = ((global::Gtk.AttachOptions)(4));
 			w19.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbMLarge = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Large"));
+			this.rbMLarge = new global::Gtk.RadioButton("Large");
 			this.rbMLarge.CanFocus = true;
 			this.rbMLarge.Name = "rbMLarge";
 			this.rbMLarge.Active = true;
@@ -357,7 +357,7 @@ namespace Mundus.Views.Windows
 			w20.XOptions = ((global::Gtk.AttachOptions)(4));
 			w20.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbMMedium = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Medium"));
+			this.rbMMedium = new global::Gtk.RadioButton("Medium");
 			this.rbMMedium.WidthRequest = 90;
 			this.rbMMedium.CanFocus = true;
 			this.rbMMedium.Name = "rbMMedium";
@@ -373,7 +373,7 @@ namespace Mundus.Views.Windows
 			w21.XOptions = ((global::Gtk.AttachOptions)(4));
 			w21.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbMSmall = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Small"));
+			this.rbMSmall = new global::Gtk.RadioButton("Small");
 			this.rbMSmall.WidthRequest = 90;
 			this.rbMSmall.CanFocus = true;
 			this.rbMSmall.Name = "rbMSmall";
@@ -389,7 +389,7 @@ namespace Mundus.Views.Windows
 			w22.XOptions = ((global::Gtk.AttachOptions)(4));
 			w22.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbNormal = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Normal"));
+			this.rbNormal = new global::Gtk.RadioButton("Normal");
 			this.rbNormal.WidthRequest = 90;
 			this.rbNormal.CanFocus = true;
 			this.rbNormal.Name = "rbNormal";
@@ -405,7 +405,7 @@ namespace Mundus.Views.Windows
 			w23.XOptions = ((global::Gtk.AttachOptions)(4));
 			w23.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbPeaceful = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Peaceful"));
+			this.rbPeaceful = new global::Gtk.RadioButton("Peaceful");
 			this.rbPeaceful.WidthRequest = 90;
 			this.rbPeaceful.CanFocus = true;
 			this.rbPeaceful.Name = "rbPeaceful";
@@ -421,7 +421,7 @@ namespace Mundus.Views.Windows
 			w24.XOptions = ((global::Gtk.AttachOptions)(4));
 			w24.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbSmall = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Small"));
+			this.rbSmall = new global::Gtk.RadioButton("Small");
 			this.rbSmall.WidthRequest = 90;
 			this.rbSmall.CanFocus = true;
 			this.rbSmall.Name = "rbSmall";
@@ -437,7 +437,7 @@ namespace Mundus.Views.Windows
 			w25.XOptions = ((global::Gtk.AttachOptions)(4));
 			w25.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
-			this.rbSurvival = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Survival"));
+			this.rbSurvival = new global::Gtk.RadioButton("Survival");
 			this.rbSurvival.WidthRequest = 90;
 			this.rbSurvival.CanFocus = true;
 			this.rbSurvival.Name = "rbSurvival";

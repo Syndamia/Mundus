@@ -65,7 +65,7 @@ namespace Mundus.Views.Windows
 			global::Stetic.Gui.Initialize(this);
 			// Widget Mundus.Views.Windows.CraftingWindow
 			this.Name = "Mundus.Views.Windows.CraftingWindow";
-			this.Title = global::Mono.Unix.Catalog.GetString("CraftingWindow");
+			this.Title = "CraftingWindow";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child Mundus.Views.Windows.CraftingWindow.Gtk.Container+ContainerChild
 			this.tbUI = new global::Gtk.Table(((uint)(11)), ((uint)(7)), false);
@@ -77,7 +77,7 @@ namespace Mundus.Views.Windows
 			this.btnCraft.CanFocus = true;
 			this.btnCraft.Name = "btnCraft";
 			this.btnCraft.UseUnderline = true;
-			this.btnCraft.Label = global::Mono.Unix.Catalog.GetString("Craft");
+			this.btnCraft.Label = "Craft";
 			this.tbUI.Add(this.btnCraft);
 			global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnCraft]));
 			w1.TopAttach = ((uint)(9));
@@ -92,7 +92,7 @@ namespace Mundus.Views.Windows
 			this.btnNext.CanFocus = true;
 			this.btnNext.Name = "btnNext";
 			this.btnNext.UseUnderline = true;
-			this.btnNext.Label = global::Mono.Unix.Catalog.GetString("Next");
+			this.btnNext.Label = "Next";
 			this.tbUI.Add(this.btnNext);
 			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnNext]));
 			w2.TopAttach = ((uint)(7));
@@ -109,7 +109,7 @@ namespace Mundus.Views.Windows
 			this.btnPrev.CanFocus = true;
 			this.btnPrev.Name = "btnPrev";
 			this.btnPrev.UseUnderline = true;
-			this.btnPrev.Label = global::Mono.Unix.Catalog.GetString("Prev");
+			this.btnPrev.Label = "Prev";
 			this.tbUI.Add(this.btnPrev);
 			global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnPrev]));
 			w3.TopAttach = ((uint)(7));
@@ -356,7 +356,7 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblC1 = new global::Gtk.Label();
 			this.lblC1.Name = "lblC1";
-			this.lblC1.LabelProp = global::Mono.Unix.Catalog.GetString("0");
+			this.lblC1.LabelProp = "0";
 			this.lblC1.Justify = ((global::Gtk.Justification)(2));
 			this.tbUI.Add(this.lblC1);
 			global::Gtk.Table.TableChild w22 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblC1]));
@@ -369,7 +369,7 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblC2 = new global::Gtk.Label();
 			this.lblC2.Name = "lblC2";
-			this.lblC2.LabelProp = global::Mono.Unix.Catalog.GetString("0");
+			this.lblC2.LabelProp = "0";
 			this.lblC2.Justify = ((global::Gtk.Justification)(2));
 			this.tbUI.Add(this.lblC2);
 			global::Gtk.Table.TableChild w23 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblC2]));
@@ -382,7 +382,7 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblC3 = new global::Gtk.Label();
 			this.lblC3.Name = "lblC3";
-			this.lblC3.LabelProp = global::Mono.Unix.Catalog.GetString("0");
+			this.lblC3.LabelProp = "0";
 			this.tbUI.Add(this.lblC3);
 			global::Gtk.Table.TableChild w24 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblC3]));
 			w24.TopAttach = ((uint)(3));
@@ -394,7 +394,7 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblC4 = new global::Gtk.Label();
 			this.lblC4.Name = "lblC4";
-			this.lblC4.LabelProp = global::Mono.Unix.Catalog.GetString("0");
+			this.lblC4.LabelProp = "0";
 			this.lblC4.Justify = ((global::Gtk.Justification)(2));
 			this.tbUI.Add(this.lblC4);
 			global::Gtk.Table.TableChild w25 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblC4]));
@@ -407,7 +407,7 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblC5 = new global::Gtk.Label();
 			this.lblC5.Name = "lblC5";
-			this.lblC5.LabelProp = global::Mono.Unix.Catalog.GetString("0");
+			this.lblC5.LabelProp = "0";
 			this.lblC5.Justify = ((global::Gtk.Justification)(2));
 			this.tbUI.Add(this.lblC5);
 			global::Gtk.Table.TableChild w26 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblC5]));

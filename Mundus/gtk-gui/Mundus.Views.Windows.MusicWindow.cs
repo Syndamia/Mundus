@@ -42,7 +42,7 @@ namespace Mundus.Views.Windows
 			this.AddAccelGroup(this.UIManager.AccelGroup);
 			this.HeightRequest = 600;
 			this.Name = "Mundus.Views.Windows.MusicWindow";
-			this.Title = global::Mono.Unix.Catalog.GetString("MusicWindow");
+			this.Title = "MusicWindow";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Resizable = false;
 			this.AllowGrow = false;
@@ -59,7 +59,7 @@ namespace Mundus.Views.Windows
 			this.btnBack.Name = "btnBack";
 			this.btnBack.UseUnderline = true;
 			this.btnBack.BorderWidth = ((uint)(3));
-			this.btnBack.Label = global::Mono.Unix.Catalog.GetString("Back");
+			this.btnBack.Label = "Back";
 			this.tbUI.Add(this.btnBack);
 			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnBack]));
 			w2.LeftAttach = ((uint)(1));
@@ -73,7 +73,7 @@ namespace Mundus.Views.Windows
 			this.btnNext.CanFocus = true;
 			this.btnNext.Name = "btnNext";
 			this.btnNext.UseUnderline = true;
-			this.btnNext.Label = global::Mono.Unix.Catalog.GetString("Next");
+			this.btnNext.Label = "Next";
 			this.tbUI.Add(this.btnNext);
 			global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnNext]));
 			w3.TopAttach = ((uint)(2));
@@ -89,7 +89,7 @@ namespace Mundus.Views.Windows
 			this.btnPlay.CanFocus = true;
 			this.btnPlay.Name = "btnPlay";
 			this.btnPlay.UseUnderline = true;
-			this.btnPlay.Label = global::Mono.Unix.Catalog.GetString("Play");
+			this.btnPlay.Label = "Play";
 			this.tbUI.Add(this.btnPlay);
 			global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnPlay]));
 			w4.TopAttach = ((uint)(2));
@@ -105,7 +105,7 @@ namespace Mundus.Views.Windows
 			this.btnPrevious.CanFocus = true;
 			this.btnPrevious.Name = "btnPrevious";
 			this.btnPrevious.UseUnderline = true;
-			this.btnPrevious.Label = global::Mono.Unix.Catalog.GetString("Prev");
+			this.btnPrevious.Label = "Prev";
 			this.tbUI.Add(this.btnPrevious);
 			global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnPrevious]));
 			w5.TopAttach = ((uint)(2));
@@ -121,7 +121,7 @@ namespace Mundus.Views.Windows
 			this.btnRandom.CanFocus = true;
 			this.btnRandom.Name = "btnRandom";
 			this.btnRandom.UseUnderline = true;
-			this.btnRandom.Label = global::Mono.Unix.Catalog.GetString("Rnd");
+			this.btnRandom.Label = "Rnd";
 			this.tbUI.Add(this.btnRandom);
 			global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnRandom]));
 			w6.TopAttach = ((uint)(2));
@@ -137,7 +137,7 @@ namespace Mundus.Views.Windows
 			this.btnStop.CanFocus = true;
 			this.btnStop.Name = "btnStop";
 			this.btnStop.UseUnderline = true;
-			this.btnStop.Label = global::Mono.Unix.Catalog.GetString("Stop");
+			this.btnStop.Label = "Stop";
 			this.tbUI.Add(this.btnStop);
 			global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnStop]));
 			w7.TopAttach = ((uint)(2));
@@ -193,7 +193,7 @@ namespace Mundus.Views.Windows
 			this.lblPath = new global::Gtk.Label();
 			this.lblPath.HeightRequest = 50;
 			this.lblPath.Name = "lblPath";
-			this.lblPath.LabelProp = global::Mono.Unix.Catalog.GetString("No file chosen");
+			this.lblPath.LabelProp = "No file chosen";
 			this.lblPath.Wrap = true;
 			this.lblPath.Justify = ((global::Gtk.Justification)(2));
 			this.lblPath.Selectable = true;
@@ -208,7 +208,7 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblTitle = new global::Gtk.Label();
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.LabelProp = global::Mono.Unix.Catalog.GetString("Music (replace with picture)");
+			this.lblTitle.LabelProp = "Music (replace with picture)";
 			this.tbUI.Add(this.lblTitle);
 			global::Gtk.Table.TableChild w13 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblTitle]));
 			w13.LeftAttach = ((uint)(2));

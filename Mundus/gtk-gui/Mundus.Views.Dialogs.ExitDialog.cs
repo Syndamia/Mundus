@@ -26,8 +26,8 @@ namespace Mundus.Views.Dialogs
 			this.lblMessage = new global::Gtk.Label();
 			this.lblMessage.HeightRequest = 50;
 			this.lblMessage.Name = "lblMessage";
-			this.lblMessage.LabelProp = global::Mono.Unix.Catalog.GetString("You haven\'t saved for {number} of seconds. Are you sure you want to exit without " +
-					"saving?");
+			this.lblMessage.LabelProp = "You haven\'t saved for {number} of seconds. Are you sure you want to exit without " +
+					"saving?";
 			w1.Add(this.lblMessage);
 			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(w1[this.lblMessage]));
 			w2.Position = 0;
@@ -45,7 +45,7 @@ namespace Mundus.Views.Dialogs
 			this.btnCancel.CanFocus = true;
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.UseUnderline = true;
-			this.btnCancel.Label = global::Mono.Unix.Catalog.GetString("Cancel");
+			this.btnCancel.Label = "Cancel";
 			this.AddActionWidget(this.btnCancel, -6);
 			global::Gtk.ButtonBox.ButtonBoxChild w4 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w3[this.btnCancel]));
 			w4.Expand = false;
@@ -56,7 +56,7 @@ namespace Mundus.Views.Dialogs
 			this.btnSave.CanFocus = true;
 			this.btnSave.Name = "btnSave";
 			this.btnSave.UseUnderline = true;
-			this.btnSave.Label = global::Mono.Unix.Catalog.GetString("Save & Exit");
+			this.btnSave.Label = "Save & Exit";
 			this.AddActionWidget(this.btnSave, -3);
 			global::Gtk.ButtonBox.ButtonBoxChild w5 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w3[this.btnSave]));
 			w5.Position = 1;
@@ -67,7 +67,7 @@ namespace Mundus.Views.Dialogs
 			this.btnExit.CanFocus = true;
 			this.btnExit.Name = "btnExit";
 			this.btnExit.UseUnderline = true;
-			this.btnExit.Label = global::Mono.Unix.Catalog.GetString("Exit without saving");
+			this.btnExit.Label = "Exit without saving";
 			this.AddActionWidget(this.btnExit, -2);
 			global::Gtk.ButtonBox.ButtonBoxChild w6 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w3[this.btnExit]));
 			w6.Position = 2;

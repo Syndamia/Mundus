@@ -323,7 +323,7 @@ namespace Mundus.Views.Windows
 			global::Stetic.Gui.Initialize(this);
 			// Widget Mundus.Views.Windows.SmallGameWindow
 			this.Name = "Mundus.Views.Windows.SmallGameWindow";
-			this.Title = global::Mono.Unix.Catalog.GetString("Mundus (Small Window)");
+			this.Title = "Mundus (Small Window)";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Resizable = false;
 			this.AllowGrow = false;
@@ -506,7 +506,7 @@ namespace Mundus.Views.Windows
 			this.btnCrafting.CanFocus = true;
 			this.btnCrafting.Name = "btnCrafting";
 			this.btnCrafting.UseUnderline = true;
-			this.btnCrafting.Label = global::Mono.Unix.Catalog.GetString("Crafting Menu");
+			this.btnCrafting.Label = "Crafting Menu";
 			this.tbUI.Add(this.btnCrafting);
 			global::Gtk.Table.TableChild w21 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnCrafting]));
 			w21.TopAttach = ((uint)(6));
@@ -1181,7 +1181,7 @@ namespace Mundus.Views.Windows
 			this.btnInv.CanFocus = true;
 			this.btnInv.Name = "btnInv";
 			this.btnInv.UseUnderline = true;
-			this.btnInv.Label = global::Mono.Unix.Catalog.GetString("Inv");
+			this.btnInv.Label = "Inv";
 			this.tbUI.Add(this.btnInv);
 			global::Gtk.Table.TableChild w96 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnInv]));
 			w96.TopAttach = ((uint)(9));
@@ -1197,7 +1197,7 @@ namespace Mundus.Views.Windows
 			this.btnMap.CanFocus = true;
 			this.btnMap.Name = "btnMap";
 			this.btnMap.UseUnderline = true;
-			this.btnMap.Label = global::Mono.Unix.Catalog.GetString("Map");
+			this.btnMap.Label = "Map";
 			this.tbUI.Add(this.btnMap);
 			global::Gtk.Table.TableChild w97 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnMap]));
 			w97.TopAttach = ((uint)(9));
@@ -1213,7 +1213,7 @@ namespace Mundus.Views.Windows
 			this.btnMusic.CanFocus = true;
 			this.btnMusic.Name = "btnMusic";
 			this.btnMusic.UseUnderline = true;
-			this.btnMusic.Label = global::Mono.Unix.Catalog.GetString("Music");
+			this.btnMusic.Label = "Music";
 			this.tbUI.Add(this.btnMusic);
 			global::Gtk.Table.TableChild w98 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnMusic]));
 			w98.TopAttach = ((uint)(11));
@@ -1679,7 +1679,7 @@ namespace Mundus.Views.Windows
 			this.btnPause.CanFocus = true;
 			this.btnPause.Name = "btnPause";
 			this.btnPause.UseUnderline = true;
-			this.btnPause.Label = global::Mono.Unix.Catalog.GetString("Pause");
+			this.btnPause.Label = "Pause";
 			this.tbUI.Add(this.btnPause);
 			global::Gtk.Table.TableChild w149 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnPause]));
 			w149.TopAttach = ((uint)(11));
@@ -2447,7 +2447,7 @@ namespace Mundus.Views.Windows
 			this.lblAccessories = new global::Gtk.Label();
 			this.lblAccessories.HeightRequest = 50;
 			this.lblAccessories.Name = "lblAccessories";
-			this.lblAccessories.LabelProp = global::Mono.Unix.Catalog.GetString("Accessories");
+			this.lblAccessories.LabelProp = "Accessories";
 			this.lblAccessories.Justify = ((global::Gtk.Justification)(2));
 			this.tbUI.Add(this.lblAccessories);
 			global::Gtk.Table.TableChild w211 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblAccessories]));
@@ -2549,7 +2549,7 @@ namespace Mundus.Views.Windows
 			this.lblEventLog.WidthRequest = 50;
 			this.lblEventLog.HeightRequest = 50;
 			this.lblEventLog.Name = "lblEventLog";
-			this.lblEventLog.LabelProp = global::Mono.Unix.Catalog.GetString("Event Log");
+			this.lblEventLog.LabelProp = "Event Log";
 			this.tbUI.Add(this.lblEventLog);
 			global::Gtk.Table.TableChild w219 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblEventLog]));
 			w219.TopAttach = ((uint)(11));
@@ -2562,7 +2562,7 @@ namespace Mundus.Views.Windows
 			this.lblGear = new global::Gtk.Label();
 			this.lblGear.HeightRequest = 50;
 			this.lblGear.Name = "lblGear";
-			this.lblGear.LabelProp = global::Mono.Unix.Catalog.GetString("Gear");
+			this.lblGear.LabelProp = "Gear";
 			this.lblGear.Justify = ((global::Gtk.Justification)(2));
 			this.tbUI.Add(this.lblGear);
 			global::Gtk.Table.TableChild w220 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblGear]));
@@ -2575,7 +2575,7 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblGroundLayer = new global::Gtk.Label();
 			this.lblGroundLayer.Name = "lblGroundLayer";
-			this.lblGroundLayer.LabelProp = global::Mono.Unix.Catalog.GetString("Ground Layer");
+			this.lblGroundLayer.LabelProp = "Ground Layer";
 			this.tbUI.Add(this.lblGroundLayer);
 			global::Gtk.Table.TableChild w221 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblGroundLayer]));
 			w221.TopAttach = ((uint)(1));
@@ -2589,7 +2589,7 @@ namespace Mundus.Views.Windows
 			this.lblHotbar.WidthRequest = 50;
 			this.lblHotbar.HeightRequest = 25;
 			this.lblHotbar.Name = "lblHotbar";
-			this.lblHotbar.LabelProp = global::Mono.Unix.Catalog.GetString("Hotbar");
+			this.lblHotbar.LabelProp = "Hotbar";
 			this.tbUI.Add(this.lblHotbar);
 			global::Gtk.Table.TableChild w222 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblHotbar]));
 			w222.TopAttach = ((uint)(9));
@@ -2616,7 +2616,7 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblItemLayer = new global::Gtk.Label();
 			this.lblItemLayer.Name = "lblItemLayer";
-			this.lblItemLayer.LabelProp = global::Mono.Unix.Catalog.GetString("Structure Layer");
+			this.lblItemLayer.LabelProp = "Structure Layer";
 			this.tbUI.Add(this.lblItemLayer);
 			global::Gtk.Table.TableChild w224 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblItemLayer]));
 			w224.TopAttach = ((uint)(9));
@@ -2629,7 +2629,7 @@ namespace Mundus.Views.Windows
 			this.lblLog1 = new global::Gtk.Label();
 			this.lblLog1.HeightRequest = 50;
 			this.lblLog1.Name = "lblLog1";
-			this.lblLog1.LabelProp = global::Mono.Unix.Catalog.GetString("label6");
+			this.lblLog1.LabelProp = "label6";
 			this.tbUI.Add(this.lblLog1);
 			global::Gtk.Table.TableChild w225 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog1]));
 			w225.TopAttach = ((uint)(12));
@@ -2642,7 +2642,7 @@ namespace Mundus.Views.Windows
 			this.lblLog2 = new global::Gtk.Label();
 			this.lblLog2.HeightRequest = 50;
 			this.lblLog2.Name = "lblLog2";
-			this.lblLog2.LabelProp = global::Mono.Unix.Catalog.GetString("label7");
+			this.lblLog2.LabelProp = "label7";
 			this.tbUI.Add(this.lblLog2);
 			global::Gtk.Table.TableChild w226 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog2]));
 			w226.TopAttach = ((uint)(13));
@@ -2655,7 +2655,7 @@ namespace Mundus.Views.Windows
 			this.lblLog3 = new global::Gtk.Label();
 			this.lblLog3.HeightRequest = 50;
 			this.lblLog3.Name = "lblLog3";
-			this.lblLog3.LabelProp = global::Mono.Unix.Catalog.GetString("label7");
+			this.lblLog3.LabelProp = "label7";
 			this.tbUI.Add(this.lblLog3);
 			global::Gtk.Table.TableChild w227 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog3]));
 			w227.TopAttach = ((uint)(14));
@@ -2668,7 +2668,7 @@ namespace Mundus.Views.Windows
 			this.lblLog4 = new global::Gtk.Label();
 			this.lblLog4.HeightRequest = 50;
 			this.lblLog4.Name = "lblLog4";
-			this.lblLog4.LabelProp = global::Mono.Unix.Catalog.GetString("label7");
+			this.lblLog4.LabelProp = "label7";
 			this.tbUI.Add(this.lblLog4);
 			global::Gtk.Table.TableChild w228 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog4]));
 			w228.TopAttach = ((uint)(15));

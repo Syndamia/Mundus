@@ -9,7 +9,7 @@ namespace Mundus.Views.Windows
 			global::Stetic.Gui.Initialize(this);
 			// Widget Mundus.Views.Windows.LargeGameWindow
 			this.Name = "Mundus.Views.Windows.LargeGameWindow";
-			this.Title = global::Mono.Unix.Catalog.GetString("LargeGameWindow");
+			this.Title = "LargeGameWindow";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			if ((this.Child != null))
 			{

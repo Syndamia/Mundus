@@ -23,7 +23,7 @@ namespace Mundus.Views.Windows
 			global::Stetic.Gui.Initialize(this);
 			// Widget Mundus.Views.Windows.MainWindow
 			this.Name = "Mundus.Views.Windows.MainWindow";
-			this.Title = global::Mono.Unix.Catalog.GetString("Mundus");
+            this.Title = "Mundus";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Resizable = false;
 			this.AllowGrow = false;
@@ -58,7 +58,7 @@ namespace Mundus.Views.Windows
 			this.btnLoadGame.UseUnderline = true;
 			this.btnLoadGame.Xalign = 0.49F;
 			this.btnLoadGame.BorderWidth = ((uint)(7));
-			this.btnLoadGame.Label = global::Mono.Unix.Catalog.GetString("Load Game");
+			this.btnLoadGame.Label = "Load Game";
 			this.vboxUI.Add(this.btnLoadGame);
 			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vboxUI[this.btnLoadGame]));
 			w3.Position = 2;
@@ -70,7 +70,7 @@ namespace Mundus.Views.Windows
 			this.btnNewGame.Name = "btnNewGame";
 			this.btnNewGame.UseUnderline = true;
 			this.btnNewGame.BorderWidth = ((uint)(7));
-			this.btnNewGame.Label = global::Mono.Unix.Catalog.GetString("New Game");
+			this.btnNewGame.Label = "New Game";
 			this.vboxUI.Add(this.btnNewGame);
 			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vboxUI[this.btnNewGame]));
 			w4.Position = 3;
@@ -82,7 +82,7 @@ namespace Mundus.Views.Windows
 			this.btnTutorial.Name = "btnTutorial";
 			this.btnTutorial.UseUnderline = true;
 			this.btnTutorial.BorderWidth = ((uint)(7));
-			this.btnTutorial.Label = global::Mono.Unix.Catalog.GetString("Tutorial");
+			this.btnTutorial.Label = "Tutorial";
 			this.vboxUI.Add(this.btnTutorial);
 			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vboxUI[this.btnTutorial]));
 			w5.Position = 4;
@@ -96,7 +96,7 @@ namespace Mundus.Views.Windows
 			this.btnSettings.Name = "btnSettings";
 			this.btnSettings.UseUnderline = true;
 			this.btnSettings.BorderWidth = ((uint)(7));
-			this.btnSettings.Label = global::Mono.Unix.Catalog.GetString("Settings");
+			this.btnSettings.Label = "Settings";
 			this.vboxUI.Add(this.btnSettings);
 			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vboxUI[this.btnSettings]));
 			w6.Position = 5;
