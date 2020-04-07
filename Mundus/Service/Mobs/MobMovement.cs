@@ -15,18 +15,20 @@ namespace Mundus.Service.Mobs {
 
         public static void ChangePosition(IMob mob, int yPos, int xPos) {
             if (Walkable(mob, yPos, xPos)) {
-                mob.CurrSuperLayer.RemoveMobFromPosition( mob.YPos, mob.XPos );
+                mob.CurrSuperLayer.RemoveMobFromPosition(mob.YPos, mob.XPos);
+
+                if (mob.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) == null) {
+                    mob.CurrSuperLayer = mob.GetLayerUndearneathCurr();
+                }
+
                 mob.YPos = yPos;
                 mob.XPos = xPos;
-                mob.CurrSuperLayer.SetMobAtPosition( mob.Tile, yPos, xPos );
+                mob.CurrSuperLayer.SetMobAtPosition(mob.Tile, yPos, xPos);
             }
         }
 
         private static bool Walkable(IMob mob, int yPos, int xPos) {
             //Mobs can only walk on free ground (no structure on top) or walkable structures
-            if (mob.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) == null) {
-                return false;
-            }
             return (mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) == null ||
                     mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos).IsWalkable) ||
                     mob.CurrSuperLayer.GetMobLayerTile(yPos, xPos) != null;

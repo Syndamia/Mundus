@@ -3,7 +3,7 @@
         public int ReqToolType { get; private set; }
         public int ReqToolClass { get; private set; }
         public Material DroppedMaterial { get; private set; }
-        public byte Health { get; private set; }
+        public int Health { get; private set; }
 
         public bool IsWalkable { get; private set; }
 
@@ -12,7 +12,7 @@
                          new Material(structure.DroppedMaterial.stock_id)) { 
         }
 
-        public Structure(string stock_id, byte health, int reqToolType, int reqToolClass, bool isWalkable = false, Material droppedMaterial = null) : base(stock_id) {
+        public Structure(string stock_id, int health, int reqToolType, int reqToolClass, bool isWalkable = false, Material droppedMaterial = null) : base(stock_id) {
             this.Health = health;
             this.ReqToolType = reqToolType;
             this.ReqToolClass = reqToolClass;
@@ -24,8 +24,8 @@
         /// Removes 1 health from structure
         /// </summary>
         /// <returns>If the structure can still be damaged</returns>
-        public bool Damage() {
-            this.Health--;
+        public bool Damage(int damagePoints) {
+            this.Health -= damagePoints;
             return this.Health > 0;
         }
 

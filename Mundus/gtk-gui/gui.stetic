@@ -7,14 +7,14 @@
     <widget-library name="../bin/Debug/Mundus.exe" internal="true" />
   </import>
   <icon-factory>
-    <icon-set id="grass">
+    <icon-set id="L_grass">
       <source>
-        <property name="Image">resource:Mundus.Icons.Land.Ground.grass.png</property>
+        <property name="Image">resource:Mundus.Icons.Land.Ground.L_grass.png</property>
       </source>
     </icon-set>
-    <icon-set id="boulder">
+    <icon-set id="L_boulder">
       <source>
-        <property name="Image">resource:Mundus.Icons.Land.Items.boulder.png</property>
+        <property name="Image">resource:Mundus.Icons.Land.Structures.L_boulder.png</property>
       </source>
     </icon-set>
     <icon-set id="player">
@@ -37,19 +37,14 @@
         <property name="Image">resource:Mundus.Icons.UI.Blanks.blank_gear.png</property>
       </source>
     </icon-set>
-    <icon-set id="land_rock">
+    <icon-set id="L_rock">
       <source>
-        <property name="Image">resource:Mundus.Icons.Land.Materials.land_rock.png</property>
+        <property name="Image">resource:Mundus.Icons.Land.Materials.L_rock.png</property>
       </source>
     </icon-set>
-    <icon-set id="tree">
+    <icon-set id="L_tree">
       <source>
-        <property name="Image">resource:Mundus.Icons.Land.Items.tree.png</property>
-      </source>
-    </icon-set>
-    <icon-set id="water">
-      <source>
-        <property name="Image">resource:Mundus.Icons.Land.Ground.water.png</property>
+        <property name="Image">resource:Mundus.Icons.Land.Structures.L_tree.png</property>
       </source>
     </icon-set>
     <icon-set id="empty">
@@ -77,9 +72,9 @@
         <property name="Image">resource:Mundus.Icons.UI.Hearth.1-4.png</property>
       </source>
     </icon-set>
-    <icon-set id="stick">
+    <icon-set id="L_stick">
       <source>
-        <property name="Image">resource:Mundus.Icons.Land.Materials.stick.png</property>
+        <property name="Image">resource:Mundus.Icons.Land.Materials.L_stick.png</property>
       </source>
     </icon-set>
     <icon-set id="stone_pickaxe">
@@ -115,6 +110,21 @@
     <icon-set id="stone_shovel">
       <source>
         <property name="Image">resource:Mundus.Icons.Land.Tools.stone_shovel.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="U_rock">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Underground.Structures.U_rock.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="U_roche">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Underground.Ground.U_roche.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="L_hole">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Ground.L_hole.png</property>
       </source>
     </icon-set>
   </icon-factory>

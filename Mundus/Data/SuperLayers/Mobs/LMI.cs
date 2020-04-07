@@ -13,6 +13,7 @@ namespace Mundus.Data.Superlayers.Mobs {
             Player.Inventory.SetNewSizes(screenInvSize);
             Player.Inventory.AppendToHotbar(ToolPresets.GetAWoodenAxe());
             Player.Inventory.AppendToHotbar(ToolPresets.GetAWoodenPickaxe());
+            Player.Inventory.AppendToHotbar(ToolPresets.GetAWoodenShovel());
         }
     }
 }

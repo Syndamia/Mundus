@@ -8,8 +8,12 @@ namespace Mundus.Service.SuperLayers {
         /// Returns a new instance of the grass ground tile
         /// </summary>
         /// <returns>New instance of the grass ground tile</returns>
-        public static GroundTile GetAGrass() {
-            return new GroundTile("grass", 1, MaterialPresets.GetALandRock());
+        public static GroundTile GetALGrass() {
+            return new GroundTile("L_grass", 1);
+        }
+
+        public static GroundTile GetAURoche() {
+            return new GroundTile("U_roche", 10);
         }
     }
 }

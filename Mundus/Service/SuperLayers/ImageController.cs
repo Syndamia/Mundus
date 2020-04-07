@@ -13,28 +13,23 @@ namespace Mundus.Service.SuperLayers {
 
             //Layer 0 is GroundLayer, 1 is ItemLayer and 2 is Moblayer
             if (layer == 0) {
-                if (superLayer.GetGroundLayerTile( row, col ) == null) {
-                    img = new Image( "blank", IconSize.Dnd );
-                }
-                else {
-                    img = new Image( superLayer.GetGroundLayerTile( row, col ).stock_id, IconSize.Dnd );
-                }
+                img = new Image(GetGroundImage(row, col).Stock, IconSize.Dnd);
             }
             else if (layer == 1 &&
                      superLayer.GetStructureLayerTile( row, col ) != null) {
-                img = new Image( superLayer.GetStructureLayerTile( row, col ).stock_id, IconSize.Dnd );
+                img = new Image(GetStructureImage(row, col).Stock, IconSize.Dnd );
             }
             else if (layer == 2 &&
                      superLayer.GetMobLayerTile( row, col ) != null) {
-                img = new Image( superLayer.GetMobLayerTile( row, col ).stock_id, IconSize.Dnd );
+                img = new Image(superLayer.GetMobLayerTile( row, col ).stock_id, IconSize.Dnd);
             }
             return img;
         }
 
-        //Return a tile if it exists, otherwise return the "blank" icon
+
         public static Image GetGroundImage(int row, int col) {
             ISuperLayer superLayer = LMI.Player.CurrSuperLayer;
-            Image img = new Image("blank", IconSize.Dnd);
+            Image img = new Image("L_hole", IconSize.Dnd);
 
             if (row >= 0 && col >= 0 && col < MapSizes.CurrSize && row < MapSizes.CurrSize &&
                 superLayer.GetGroundLayerTile( row, col ) != null) {
@@ -44,7 +39,7 @@ namespace Mundus.Service.SuperLayers {
         }
 
         //Return a tile if it exists, otherwise return the "blank" icon
-        public static Image GetItemImage(int row, int col) {
+        public static Image GetStructureImage(int row, int col) {
             ISuperLayer superLayer = LMI.Player.CurrSuperLayer;
             Image img = new Image( "blank", IconSize.Dnd );
 

@@ -2,8 +2,7 @@
 using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.Windows;
-using Mundus.Service.SuperLayers;
-using Mundus.Views.Windows;
+using Mundus.Service.SuperLayers.Generators;
 
 namespace Mundus.Service {
     public static class GameGenerator {
@@ -17,6 +16,7 @@ namespace Mundus.Service {
 
             //Add the other layers
             LandSuperLayerGenerator.GenerateAllLayers( MapSizes.CurrSize );
+            UndergroundSuperLayerGenerator.GenerateAllLayers(MapSizes.CurrSize);
         }
 
         public static void GameWindowInventorySetup(string size) {

@@ -52,11 +52,7 @@
     <EmbeddedResource Include="gtk-gui\gui.stetic">
       <LogicalName>gui.stetic</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Icons\Land\Ground\grass.png" />
-    <EmbeddedResource Include="Icons\Land\Items\boulder.png" />
     <EmbeddedResource Include="Icons\player.png" />
-    <EmbeddedResource Include="Icons\Land\Items\tree.png" />
-    <EmbeddedResource Include="Icons\Land\Ground\water.png" />
     <EmbeddedResource Include="Icons\UI\Blanks\blank.png" />
     <EmbeddedResource Include="Icons\UI\Blanks\blank_hand.png" />
     <EmbeddedResource Include="Icons\UI\Blanks\blank_gear.png" />
@@ -65,8 +61,6 @@
     <EmbeddedResource Include="Icons\UI\Hearth\3-4.png" />
     <EmbeddedResource Include="Icons\UI\Hearth\2-4.png" />
     <EmbeddedResource Include="Icons\UI\Hearth\1-4.png" />
-    <EmbeddedResource Include="Icons\Land\Materials\land_rock.png" />
-    <EmbeddedResource Include="Icons\Land\Materials\stick.png" />
     <EmbeddedResource Include="Icons\Land\Tools\stone_pickaxe.png" />
     <EmbeddedResource Include="Icons\Land\Tools\stone_axe.png" />
     <EmbeddedResource Include="Icons\UI\Blanks\blank_multiplication.png" />
@@ -74,6 +68,14 @@
     <EmbeddedResource Include="Icons\Land\Tools\wooden_pickaxe.png" />
     <EmbeddedResource Include="Icons\Land\Tools\wooden_shovel.png" />
     <EmbeddedResource Include="Icons\Land\Tools\stone_shovel.png" />
+    <EmbeddedResource Include="Icons\Land\Ground\L_grass.png" />
+    <EmbeddedResource Include="Icons\Land\Structures\L_boulder.png" />
+    <EmbeddedResource Include="Icons\Land\Materials\L_rock.png" />
+    <EmbeddedResource Include="Icons\Land\Structures\L_tree.png" />
+    <EmbeddedResource Include="Icons\Land\Materials\L_stick.png" />
+    <EmbeddedResource Include="Icons\Underground\Structures\U_rock.png" />
+    <EmbeddedResource Include="Icons\Underground\Ground\U_roche.png" />
+    <EmbeddedResource Include="Icons\Land\Ground\L_hole.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -108,7 +110,6 @@
     <Compile Include="Views\Windows\IGameWindow.cs" />
     <Compile Include="Service\Mobs\MobMovement.cs" />
     <Compile Include="Data\MapSizes.cs" />
-    <Compile Include="Service\SuperLayers\LandSuperLayerGenerator.cs" />
     <Compile Include="Service\SwitchItems.cs" />
     <Compile Include="Service\SuperLayers\ImageController.cs" />
     <Compile Include="Service\Calculate.cs" />
@@ -128,7 +129,7 @@
     <Compile Include="Service\Tiles\Items\Gear.cs" />
     <Compile Include="Service\Mobs\MobFighting.cs" />
     <Compile Include="Service\Mobs\MobTerraforming.cs" />
-    <Compile Include="Service\SuperLayers\LandPresets.cs" />
+    <Compile Include="Service\SuperLayers\StructurePresets.cs" />
     <Compile Include="Service\Mobs\MobStatsController.cs" />
     <Compile Include="Service\Crafting\CraftingRecipe.cs" />
     <Compile Include="Service\Crafting\CraftingController.cs" />
@@ -136,6 +137,9 @@
     <Compile Include="Service\Tiles\ItemPresets\ToolPresets.cs" />
     <Compile Include="Service\Tiles\ItemPresets\MaterialPresets.cs" />
     <Compile Include="Service\SuperLayers\GroundPresets.cs" />
+    <Compile Include="Data\SuperLayers\Underground.cs" />
+    <Compile Include="Service\SuperLayers\Generators\LandSuperLayerGenerator.cs" />
+    <Compile Include="Service\SuperLayers\Generators\UndergroundSuperLayerGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -146,7 +150,6 @@
     <Folder Include="Service\SuperLayers\" />
     <Folder Include="Service\Tiles\" />
     <Folder Include="Icons\Land\Ground\" />
-    <Folder Include="Icons\Land\Items\" />
     <Folder Include="Service\Mobs\" />
     <Folder Include="Service\Mobs\LandMobs\" />
     <Folder Include="Data\Windows\" />
@@ -158,6 +161,8 @@
     <Folder Include="Service\Crafting\" />
     <Folder Include="Data\Crafting\" />
     <Folder Include="Service\Tiles\ItemPresets\" />
+    <Folder Include="Icons\Land\Materials\" />
+    <Folder Include="Service\SuperLayers\Generators\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

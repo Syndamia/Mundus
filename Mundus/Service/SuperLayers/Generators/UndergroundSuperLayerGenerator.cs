@@ -1,18 +1,17 @@
 ﻿using System;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
-using Mundus.Data.Tiles;
 using Mundus.Service.Tiles;
 using Mundus.Service.Tiles.Items;
 
-namespace Mundus.Service.SuperLayers {
-    public static class LandSuperLayerGenerator {
+namespace Mundus.Service.SuperLayers.Generators {
+    public static class UndergroundSuperLayerGenerator {
         private static Random rnd;
 
         public static void GenerateAllLayers(int size) {
-            LI.Land.SetMobLayer(GenerateMobLayer(size));
-            LI.Land.SetGroundLayer(GenerateGroundLayer(size));
-            LI.Land.SetStructureLayer(GenerateStructureLayer(size));
+            LI.Underground.SetMobLayer(GenerateMobLayer(size));
+            LI.Underground.SetGroundLayer(GenerateGroundLayer(size));
+            LI.Underground.SetStructureLayer(GenerateStructureLayer(size));
         }
 
         private static MobTile[,] GenerateMobLayer(int size) {
@@ -20,12 +19,7 @@ namespace Mundus.Service.SuperLayers {
 
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
-                    if (col == size / 2 && row == size / 2) {
-                        LMI.Player.YPos = row;
-                        LMI.Player.XPos = col;
-                        LMI.Player.CurrSuperLayer = LI.Land;
-                        tiles[col, row] = LMI.Player.Tile;
-                    }
+
                 }
             }
             return tiles;
@@ -35,9 +29,9 @@ namespace Mundus.Service.SuperLayers {
             rnd = new Random();
             GroundTile[,] tiles = new GroundTile[size, size];
 
-            for(int col = 0; col < size; col++) {
-                for(int row = 0; row < size; row++) {
-                    tiles[col, row] = GroundPresets.GetAGrass();
+            for (int col = 0; col < size; col++) {
+                for (int row = 0; row < size; row++) {
+                    tiles[col, row] = GroundPresets.GetAURoche();
                 }
             }
             return tiles;
@@ -48,11 +42,9 @@ namespace Mundus.Service.SuperLayers {
 
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
-                    if (rnd.Next( 0, 50 ) == 1) {
-                        tiles[col, row] = LandPresets.GetABoulder();
-                    }
+                    tiles[col, row] = StructurePresets.GetAURock();
                     if (rnd.Next(0, 10) == 1) {
-                        tiles[col, row] = LandPresets.GetATree();
+                        tiles[col, row] = null;
                     }
                 }
             }

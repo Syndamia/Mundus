@@ -8,7 +8,7 @@ namespace Mundus.Service.Tiles {
         public int ReqShovelClass { get; private set; }
         public Material DroppedMaterial { get; private set; }
 
-        public GroundTile(string stock_id, int reqShovelClass, Material droppedMaterial) {
+        public GroundTile(string stock_id, int reqShovelClass, Material droppedMaterial = null) {
             this.stock_id = stock_id;
             this.ReqShovelClass = reqShovelClass;
             this.DroppedMaterial = droppedMaterial;

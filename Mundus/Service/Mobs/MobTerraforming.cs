@@ -19,7 +19,12 @@ namespace Mundus.Service.Mobs {
                     if (selGround.ReqShovelClass <= selTool.Class) {
                         LMI.Player.CurrSuperLayer.SetGroundAtPosition(null, mapYPos, mapXPos);
 
-                        if (LMI.Player.Inventory.Items.Contains(null)) {
+                        ISuperLayer under = LMI.Player.GetLayerUndearneathCurr();
+                        if (under != null) {
+                            under.RemoveStructureFromPosition(mapYPos, mapXPos);
+                        }
+
+                        if (LMI.Player.Inventory.Items.Contains(null) && selGround.DroppedMaterial != null) {
                             LMI.Player.Inventory.AppendToItems(new Material(selGround.DroppedMaterial));
                         }
                     }
@@ -28,11 +33,15 @@ namespace Mundus.Service.Mobs {
                     var selStructure = LMI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos);
 
                     if (selStructure.ReqToolType == selTool.Type && selStructure.ReqToolClass <= selTool.Class) {
-                        if (LMI.Player.Inventory.Items.Contains(null)) {
-                            LMI.Player.Inventory.AppendToItems(new Material(selStructure.DroppedMaterial));
+                        int damagePoints = 1 + (selTool.Class - selStructure.ReqToolClass);
+
+                        if (selStructure.DroppedMaterial != null) {
+                            for (int i = 0; (i < damagePoints && i < selStructure.Health) && LMI.Player.Inventory.Items.Contains(null); i++) {
+                                LMI.Player.Inventory.AppendToItems(new Material(selStructure.DroppedMaterial));
+                            }
                         }
 
-                        if (!selStructure.Damage()) {
+                        if (!selStructure.Damage(damagePoints)) {
                             LMI.Player.CurrSuperLayer.SetStructureAtPosition(null, mapYPos, mapXPos);
                         }
                     }

@@ -237,6 +237,9 @@ namespace Mundus.Views.Windows {
             }
         }
 
+        /// <summary>
+        /// Prints the lung capacity, health, hotbar items and event log
+        /// </summary>
         public void PrintMainMenu() {
             //Print lungs
 
@@ -308,7 +311,7 @@ namespace Mundus.Views.Windows {
             //Prints the "Item layer" in map menu
             for (int row = Calculate.CalculateStartY(Size), maxY = Calculate.CalculateMaxY(Size), img = 1; row <= maxY; row++) {
                 for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, img++) {
-                    string sName = ImageController.GetItemImage(row, col).Stock;
+                    string sName = ImageController.GetStructureImage(row, col).Stock;
 
                     switch (img) {
                         case 1: imgI1.SetFromStock( sName, IconSize.Dnd ); break;
