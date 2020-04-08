@@ -43,7 +43,7 @@ namespace Mundus.Service.Mobs {
                                 LMI.Player.Inventory.AppendToItems(new Material((Material)selStructure.GetDrop()));
                             }
                         }
-                        else {
+                        else if (LMI.Player.Inventory.Items.Contains(null)) {
                             LMI.Player.Inventory.AppendToItems((Structure)selStructure.GetDrop());
                         }
 
