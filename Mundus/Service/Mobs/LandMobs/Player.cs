@@ -25,5 +25,12 @@ namespace Mundus.Service.Mobs.LandMobs {
             }
             return null;
         }
+
+        public ISuperLayer GetLayerOnTopOfCurr() {
+            if (CurrSuperLayer == LI.Underground) {
+                return LI.Land;
+            }
+            return null;
+        }
     }
 }

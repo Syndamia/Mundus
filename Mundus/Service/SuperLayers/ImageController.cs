@@ -2,6 +2,7 @@
 using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
+using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Service.SuperLayers {
     public static class ImageController {
@@ -41,7 +42,7 @@ namespace Mundus.Service.SuperLayers {
         //Return a tile if it exists, otherwise return the "blank" icon
         public static Image GetStructureImage(int row, int col) {
             ISuperLayer superLayer = LMI.Player.CurrSuperLayer;
-            Image img = new Image( "blank", IconSize.Dnd );
+            Image img = new Image("blank", IconSize.Dnd );
 
             if (row >= 0 && col >= 0 && col < MapSizes.CurrSize && row < MapSizes.CurrSize &&
                 superLayer.GetStructureLayerTile( row, col ) != null) {
@@ -55,7 +56,14 @@ namespace Mundus.Service.SuperLayers {
 
             if (index < LMI.Player.Inventory.Hotbar.Length) {
                 if (LMI.Player.Inventory.Hotbar[index] != null) {
-                    img = LMI.Player.Inventory.Hotbar[index].Texture;
+                    //Structures have two icons, one when they are placed and one as an inventory item
+                    if (LMI.Player.Inventory.Hotbar[index].GetType() == typeof(Structure)) {
+                        Structure tmp = (Structure)LMI.Player.Inventory.Hotbar[index];
+                        img = new Image(tmp.inventory_stock_id, IconSize.Dnd);
+                    }
+                    else {
+                        img = LMI.Player.Inventory.Hotbar[index].Texture;
+                    }
                 }
             }
             return img;
@@ -65,7 +73,14 @@ namespace Mundus.Service.SuperLayers {
             Image img = new Image("blank", IconSize.Dnd);
             if (index < LMI.Player.Inventory.Items.Length) {
                 if (LMI.Player.Inventory.Items[index] != null) {
-                    img = LMI.Player.Inventory.Items[index].Texture;
+                    //Structures have two icons, one when they are placed and one as an inventory item
+                    if (LMI.Player.Inventory.Items[index].GetType() == typeof(Structure)) {
+                        Structure tmp = (Structure)LMI.Player.Inventory.Items[index];
+                        img = new Image(tmp.inventory_stock_id, IconSize.Dnd);
+                    }
+                    else {
+                        img = LMI.Player.Inventory.Items[index].Texture;
+                    }
                 }
             }
             return img;

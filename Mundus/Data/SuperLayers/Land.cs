@@ -48,5 +48,9 @@ namespace Mundus.Data.SuperLayers {
         public void RemoveGroundFromPosition(int yPos, int xPos) {
             groundLayer[yPos, xPos] = null;
         }
+
+        public override string ToString() {
+            return "Land";
+        }
     }
 }

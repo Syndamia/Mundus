@@ -23,7 +23,7 @@ namespace Mundus.Views.Windows
 			global::Stetic.Gui.Initialize(this);
 			// Widget Mundus.Views.Windows.MainWindow
 			this.Name = "Mundus.Views.Windows.MainWindow";
-            this.Title = "Mundus";
+			this.Title = "Mundus";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Resizable = false;
 			this.AllowGrow = false;

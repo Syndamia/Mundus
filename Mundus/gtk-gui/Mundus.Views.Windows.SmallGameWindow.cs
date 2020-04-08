@@ -298,11 +298,19 @@ namespace Mundus.Views.Windows
 
 		private global::Gtk.Label lblBlank9;
 
+		private global::Gtk.Label lblCoord1;
+
+		private global::Gtk.Label lblCoord2;
+
 		private global::Gtk.Label lblEventLog;
 
 		private global::Gtk.Label lblGear;
 
 		private global::Gtk.Label lblGroundLayer;
+
+		private global::Gtk.Label lblHoleMsg;
+
+		private global::Gtk.Label lblHoleOnTop;
 
 		private global::Gtk.Label lblHotbar;
 
@@ -317,6 +325,8 @@ namespace Mundus.Views.Windows
 		private global::Gtk.Label lblLog3;
 
 		private global::Gtk.Label lblLog4;
+
+		private global::Gtk.Label lblSuperLayer;
 
 		protected virtual void Build()
 		{
@@ -502,11 +512,10 @@ namespace Mundus.Views.Windows
 			w20.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.btnCrafting = new global::Gtk.Button();
-			this.btnCrafting.HeightRequest = 50;
 			this.btnCrafting.CanFocus = true;
 			this.btnCrafting.Name = "btnCrafting";
 			this.btnCrafting.UseUnderline = true;
-			this.btnCrafting.Label = "Crafting Menu";
+			this.btnCrafting.Label = "Crafting";
 			this.tbUI.Add(this.btnCrafting);
 			global::Gtk.Table.TableChild w21 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnCrafting]));
 			w21.TopAttach = ((uint)(6));
@@ -2545,19 +2554,47 @@ namespace Mundus.Views.Windows
 			w218.XOptions = ((global::Gtk.AttachOptions)(4));
 			w218.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
+			this.lblCoord1 = new global::Gtk.Label();
+			this.lblCoord1.WidthRequest = 50;
+			this.lblCoord1.HeightRequest = 50;
+			this.lblCoord1.Name = "lblCoord1";
+			this.lblCoord1.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblCoord1);
+			global::Gtk.Table.TableChild w219 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblCoord1]));
+			w219.TopAttach = ((uint)(7));
+			w219.BottomAttach = ((uint)(8));
+			w219.LeftAttach = ((uint)(4));
+			w219.RightAttach = ((uint)(5));
+			w219.XOptions = ((global::Gtk.AttachOptions)(4));
+			w219.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblCoord2 = new global::Gtk.Label();
+			this.lblCoord2.WidthRequest = 50;
+			this.lblCoord2.HeightRequest = 50;
+			this.lblCoord2.Name = "lblCoord2";
+			this.lblCoord2.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblCoord2);
+			global::Gtk.Table.TableChild w220 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblCoord2]));
+			w220.TopAttach = ((uint)(7));
+			w220.BottomAttach = ((uint)(8));
+			w220.LeftAttach = ((uint)(5));
+			w220.RightAttach = ((uint)(6));
+			w220.XOptions = ((global::Gtk.AttachOptions)(4));
+			w220.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
 			this.lblEventLog = new global::Gtk.Label();
 			this.lblEventLog.WidthRequest = 50;
 			this.lblEventLog.HeightRequest = 50;
 			this.lblEventLog.Name = "lblEventLog";
 			this.lblEventLog.LabelProp = "Event Log";
 			this.tbUI.Add(this.lblEventLog);
-			global::Gtk.Table.TableChild w219 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblEventLog]));
-			w219.TopAttach = ((uint)(11));
-			w219.BottomAttach = ((uint)(12));
-			w219.LeftAttach = ((uint)(8));
-			w219.RightAttach = ((uint)(13));
-			w219.XOptions = ((global::Gtk.AttachOptions)(4));
-			w219.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w221 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblEventLog]));
+			w221.TopAttach = ((uint)(11));
+			w221.BottomAttach = ((uint)(12));
+			w221.LeftAttach = ((uint)(8));
+			w221.RightAttach = ((uint)(13));
+			w221.XOptions = ((global::Gtk.AttachOptions)(4));
+			w221.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblGear = new global::Gtk.Label();
 			this.lblGear.HeightRequest = 50;
@@ -2565,25 +2602,54 @@ namespace Mundus.Views.Windows
 			this.lblGear.LabelProp = "Gear";
 			this.lblGear.Justify = ((global::Gtk.Justification)(2));
 			this.tbUI.Add(this.lblGear);
-			global::Gtk.Table.TableChild w220 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblGear]));
-			w220.TopAttach = ((uint)(11));
-			w220.BottomAttach = ((uint)(12));
-			w220.LeftAttach = ((uint)(15));
-			w220.RightAttach = ((uint)(20));
-			w220.XOptions = ((global::Gtk.AttachOptions)(4));
-			w220.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w222 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblGear]));
+			w222.TopAttach = ((uint)(11));
+			w222.BottomAttach = ((uint)(12));
+			w222.LeftAttach = ((uint)(15));
+			w222.RightAttach = ((uint)(20));
+			w222.XOptions = ((global::Gtk.AttachOptions)(4));
+			w222.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblGroundLayer = new global::Gtk.Label();
 			this.lblGroundLayer.Name = "lblGroundLayer";
 			this.lblGroundLayer.LabelProp = "Ground Layer";
 			this.tbUI.Add(this.lblGroundLayer);
-			global::Gtk.Table.TableChild w221 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblGroundLayer]));
-			w221.TopAttach = ((uint)(1));
-			w221.BottomAttach = ((uint)(2));
-			w221.LeftAttach = ((uint)(1));
-			w221.RightAttach = ((uint)(6));
-			w221.XOptions = ((global::Gtk.AttachOptions)(4));
-			w221.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w223 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblGroundLayer]));
+			w223.TopAttach = ((uint)(1));
+			w223.BottomAttach = ((uint)(2));
+			w223.LeftAttach = ((uint)(1));
+			w223.RightAttach = ((uint)(6));
+			w223.XOptions = ((global::Gtk.AttachOptions)(4));
+			w223.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblHoleMsg = new global::Gtk.Label();
+			this.lblHoleMsg.WidthRequest = 200;
+			this.lblHoleMsg.HeightRequest = 50;
+			this.lblHoleMsg.Name = "lblHoleMsg";
+			this.lblHoleMsg.LabelProp = "There is a hole above player:";
+			this.lblHoleMsg.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblHoleMsg);
+			global::Gtk.Table.TableChild w224 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblHoleMsg]));
+			w224.TopAttach = ((uint)(15));
+			w224.BottomAttach = ((uint)(16));
+			w224.LeftAttach = ((uint)(1));
+			w224.RightAttach = ((uint)(5));
+			w224.XOptions = ((global::Gtk.AttachOptions)(4));
+			w224.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblHoleOnTop = new global::Gtk.Label();
+			this.lblHoleOnTop.WidthRequest = 50;
+			this.lblHoleOnTop.HeightRequest = 50;
+			this.lblHoleOnTop.Name = "lblHoleOnTop";
+			this.lblHoleOnTop.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblHoleOnTop);
+			global::Gtk.Table.TableChild w225 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblHoleOnTop]));
+			w225.TopAttach = ((uint)(15));
+			w225.BottomAttach = ((uint)(16));
+			w225.LeftAttach = ((uint)(5));
+			w225.RightAttach = ((uint)(6));
+			w225.XOptions = ((global::Gtk.AttachOptions)(4));
+			w225.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblHotbar = new global::Gtk.Label();
 			this.lblHotbar.WidthRequest = 50;
@@ -2591,13 +2657,13 @@ namespace Mundus.Views.Windows
 			this.lblHotbar.Name = "lblHotbar";
 			this.lblHotbar.LabelProp = "Hotbar";
 			this.tbUI.Add(this.lblHotbar);
-			global::Gtk.Table.TableChild w222 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblHotbar]));
-			w222.TopAttach = ((uint)(9));
-			w222.BottomAttach = ((uint)(10));
-			w222.LeftAttach = ((uint)(8));
-			w222.RightAttach = ((uint)(13));
-			w222.XOptions = ((global::Gtk.AttachOptions)(4));
-			w222.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w226 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblHotbar]));
+			w226.TopAttach = ((uint)(9));
+			w226.BottomAttach = ((uint)(10));
+			w226.LeftAttach = ((uint)(8));
+			w226.RightAttach = ((uint)(13));
+			w226.XOptions = ((global::Gtk.AttachOptions)(4));
+			w226.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblInfo = new global::Gtk.Label();
 			this.lblInfo.WidthRequest = 250;
@@ -2606,77 +2672,91 @@ namespace Mundus.Views.Windows
 			this.lblInfo.Wrap = true;
 			this.lblInfo.Justify = ((global::Gtk.Justification)(2));
 			this.tbUI.Add(this.lblInfo);
-			global::Gtk.Table.TableChild w223 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblInfo]));
-			w223.TopAttach = ((uint)(15));
-			w223.BottomAttach = ((uint)(16));
-			w223.LeftAttach = ((uint)(15));
-			w223.RightAttach = ((uint)(20));
-			w223.XOptions = ((global::Gtk.AttachOptions)(4));
-			w223.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w227 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblInfo]));
+			w227.TopAttach = ((uint)(15));
+			w227.BottomAttach = ((uint)(16));
+			w227.LeftAttach = ((uint)(15));
+			w227.RightAttach = ((uint)(20));
+			w227.XOptions = ((global::Gtk.AttachOptions)(4));
+			w227.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblItemLayer = new global::Gtk.Label();
 			this.lblItemLayer.Name = "lblItemLayer";
 			this.lblItemLayer.LabelProp = "Structure Layer";
 			this.tbUI.Add(this.lblItemLayer);
-			global::Gtk.Table.TableChild w224 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblItemLayer]));
-			w224.TopAttach = ((uint)(9));
-			w224.BottomAttach = ((uint)(10));
-			w224.LeftAttach = ((uint)(1));
-			w224.RightAttach = ((uint)(6));
-			w224.XOptions = ((global::Gtk.AttachOptions)(4));
-			w224.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w228 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblItemLayer]));
+			w228.TopAttach = ((uint)(9));
+			w228.BottomAttach = ((uint)(10));
+			w228.LeftAttach = ((uint)(1));
+			w228.RightAttach = ((uint)(6));
+			w228.XOptions = ((global::Gtk.AttachOptions)(4));
+			w228.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblLog1 = new global::Gtk.Label();
 			this.lblLog1.HeightRequest = 50;
 			this.lblLog1.Name = "lblLog1";
 			this.lblLog1.LabelProp = "label6";
 			this.tbUI.Add(this.lblLog1);
-			global::Gtk.Table.TableChild w225 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog1]));
-			w225.TopAttach = ((uint)(12));
-			w225.BottomAttach = ((uint)(13));
-			w225.LeftAttach = ((uint)(8));
-			w225.RightAttach = ((uint)(13));
-			w225.XOptions = ((global::Gtk.AttachOptions)(4));
-			w225.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w229 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog1]));
+			w229.TopAttach = ((uint)(12));
+			w229.BottomAttach = ((uint)(13));
+			w229.LeftAttach = ((uint)(8));
+			w229.RightAttach = ((uint)(13));
+			w229.XOptions = ((global::Gtk.AttachOptions)(4));
+			w229.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblLog2 = new global::Gtk.Label();
 			this.lblLog2.HeightRequest = 50;
 			this.lblLog2.Name = "lblLog2";
 			this.lblLog2.LabelProp = "label7";
 			this.tbUI.Add(this.lblLog2);
-			global::Gtk.Table.TableChild w226 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog2]));
-			w226.TopAttach = ((uint)(13));
-			w226.BottomAttach = ((uint)(14));
-			w226.LeftAttach = ((uint)(8));
-			w226.RightAttach = ((uint)(13));
-			w226.XOptions = ((global::Gtk.AttachOptions)(4));
-			w226.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w230 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog2]));
+			w230.TopAttach = ((uint)(13));
+			w230.BottomAttach = ((uint)(14));
+			w230.LeftAttach = ((uint)(8));
+			w230.RightAttach = ((uint)(13));
+			w230.XOptions = ((global::Gtk.AttachOptions)(4));
+			w230.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblLog3 = new global::Gtk.Label();
 			this.lblLog3.HeightRequest = 50;
 			this.lblLog3.Name = "lblLog3";
 			this.lblLog3.LabelProp = "label7";
 			this.tbUI.Add(this.lblLog3);
-			global::Gtk.Table.TableChild w227 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog3]));
-			w227.TopAttach = ((uint)(14));
-			w227.BottomAttach = ((uint)(15));
-			w227.LeftAttach = ((uint)(8));
-			w227.RightAttach = ((uint)(13));
-			w227.XOptions = ((global::Gtk.AttachOptions)(4));
-			w227.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w231 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog3]));
+			w231.TopAttach = ((uint)(14));
+			w231.BottomAttach = ((uint)(15));
+			w231.LeftAttach = ((uint)(8));
+			w231.RightAttach = ((uint)(13));
+			w231.XOptions = ((global::Gtk.AttachOptions)(4));
+			w231.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblLog4 = new global::Gtk.Label();
 			this.lblLog4.HeightRequest = 50;
 			this.lblLog4.Name = "lblLog4";
 			this.lblLog4.LabelProp = "label7";
 			this.tbUI.Add(this.lblLog4);
-			global::Gtk.Table.TableChild w228 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog4]));
-			w228.TopAttach = ((uint)(15));
-			w228.BottomAttach = ((uint)(16));
-			w228.LeftAttach = ((uint)(8));
-			w228.RightAttach = ((uint)(13));
-			w228.XOptions = ((global::Gtk.AttachOptions)(4));
-			w228.YOptions = ((global::Gtk.AttachOptions)(4));
+			global::Gtk.Table.TableChild w232 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog4]));
+			w232.TopAttach = ((uint)(15));
+			w232.BottomAttach = ((uint)(16));
+			w232.LeftAttach = ((uint)(8));
+			w232.RightAttach = ((uint)(13));
+			w232.XOptions = ((global::Gtk.AttachOptions)(4));
+			w232.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblSuperLayer = new global::Gtk.Label();
+			this.lblSuperLayer.WidthRequest = 100;
+			this.lblSuperLayer.HeightRequest = 50;
+			this.lblSuperLayer.Name = "lblSuperLayer";
+			this.lblSuperLayer.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblSuperLayer);
+			global::Gtk.Table.TableChild w233 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblSuperLayer]));
+			w233.TopAttach = ((uint)(7));
+			w233.BottomAttach = ((uint)(8));
+			w233.LeftAttach = ((uint)(1));
+			w233.RightAttach = ((uint)(3));
+			w233.XOptions = ((global::Gtk.AttachOptions)(4));
+			w233.YOptions = ((global::Gtk.AttachOptions)(4));
 			this.Add(this.tbUI);
 			if ((this.Child != null))
 			{

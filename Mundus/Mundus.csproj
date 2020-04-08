@@ -46,6 +46,7 @@
     <Reference Include="atk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="Mono.Posix" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -75,6 +76,10 @@
     <EmbeddedResource Include="Icons\Underground\Structures\U_rock.png" />
     <EmbeddedResource Include="Icons\Underground\Ground\U_roche.png" />
     <EmbeddedResource Include="Icons\Land\Ground\L_hole.png" />
+    <EmbeddedResource Include="Icons\Land\Structures\L_wooden_ladder.png" />
+    <EmbeddedResource Include="Icons\Land\Structures\L_boulder_inventory.png" />
+    <EmbeddedResource Include="Icons\Land\Structures\L_tree_inventory.png" />
+    <EmbeddedResource Include="Icons\Land\Structures\L_wooden_ladder_inventory.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -128,7 +133,6 @@
     <Compile Include="Service\Tiles\Items\Gear.cs" />
     <Compile Include="Service\Mobs\MobFighting.cs" />
     <Compile Include="Service\Mobs\MobTerraforming.cs" />
-    <Compile Include="Service\SuperLayers\StructurePresets.cs" />
     <Compile Include="Service\Mobs\MobStatsController.cs" />
     <Compile Include="Service\Crafting\CraftingRecipe.cs" />
     <Compile Include="Service\Crafting\CraftingController.cs" />
@@ -139,6 +143,7 @@
     <Compile Include="Data\SuperLayers\Underground.cs" />
     <Compile Include="Service\SuperLayers\Generators\LandSuperLayerGenerator.cs" />
     <Compile Include="Service\SuperLayers\Generators\UndergroundSuperLayerGenerator.cs" />
+    <Compile Include="Service\Tiles\ItemPresets\StructurePresets.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />

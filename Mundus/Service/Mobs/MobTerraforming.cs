@@ -35,10 +35,13 @@ namespace Mundus.Service.Mobs {
                     if (selStructure.ReqToolType == selTool.Type && selStructure.ReqToolClass <= selTool.Class) {
                         int damagePoints = 1 + (selTool.Class - selStructure.ReqToolClass);
 
-                        if (selStructure.DroppedMaterial != null) {
+                        if (selStructure.GetDrop() != selStructure) {
                             for (int i = 0; (i < damagePoints && i < selStructure.Health) && LMI.Player.Inventory.Items.Contains(null); i++) {
-                                LMI.Player.Inventory.AppendToItems(new Material(selStructure.DroppedMaterial));
+                                LMI.Player.Inventory.AppendToItems(new Material((Material)selStructure.GetDrop()));
                             }
+                        }
+                        else {
+                            LMI.Player.Inventory.AppendToItems((Structure)selStructure.GetDrop());
                         }
 
                         if (!selStructure.Damage(damagePoints)) {
@@ -62,14 +65,29 @@ namespace Mundus.Service.Mobs {
                 }
 
                 if (toPlace != null) {
-                    PlayerBuildAt(mapYPos, mapXPos, (Structure)toPlace[inventoryPlaceIndex]);
-                    toPlace[inventoryPlaceIndex] = null;
+                    //Remove item from inventory, only if it is placed
+                    if (PlayerBuildAt(mapYPos, mapXPos, (Structure)toPlace[inventoryPlaceIndex])) {
+                        toPlace[inventoryPlaceIndex] = null;
+                    }
                 }
             }
         }
 
-        private static void PlayerBuildAt(int mapYPos, int mapXPos, Structure toPlace) {
-            LMI.Player.CurrSuperLayer.SetStructureAtPosition(toPlace, mapYPos, mapXPos);
+        private static bool PlayerBuildAt(int mapYPos, int mapXPos, Structure toPlace) {
+            //You can't place things on top of "holes" (null in ground), but climable structures will be placed
+            //under the hole (if they can be)
+            if (toPlace.IsClimable && LMI.Player.CurrSuperLayer.GetGroundLayerTile(mapYPos, mapXPos) == null
+                && LMI.Player.GetLayerUndearneathCurr().GetStructureLayerTile(mapYPos, mapXPos) == null) {
+                LMI.Player.GetLayerUndearneathCurr().SetStructureAtPosition(toPlace, mapYPos, mapXPos);
+
+                return true;
+            }
+            else if (LMI.Player.CurrSuperLayer.GetGroundLayerTile(mapYPos, mapXPos) != null) {
+                LMI.Player.CurrSuperLayer.SetStructureAtPosition(toPlace, mapYPos, mapXPos);
+
+                return true;
+            }
+            return false;
         }
 
         public static void TryPlaceStructure(ISuperLayer superLayer, int yPos, int xPos, Structure toPlace) {

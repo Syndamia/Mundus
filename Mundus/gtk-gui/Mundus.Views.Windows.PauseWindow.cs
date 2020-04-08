@@ -55,7 +55,8 @@ namespace Mundus.Views.Windows
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.lblTitle = new global::Gtk.Label();
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.LabelProp = "Pause menu (replace with picture)";
+			this.lblTitle.LabelProp = "Pause menu";
+			this.lblTitle.Justify = ((global::Gtk.Justification)(2));
 			this.hbox1.Add(this.lblTitle);
 			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.lblTitle]));
 			w2.Position = 1;
@@ -133,7 +134,7 @@ namespace Mundus.Views.Windows
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 260;
+			this.DefaultWidth = 191;
 			this.DefaultHeight = 285;
 			this.Show();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);

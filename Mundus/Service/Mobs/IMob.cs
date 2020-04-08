@@ -6,6 +6,7 @@ namespace Mundus.Service.Mobs {
         MobTile Tile { get; }
         ISuperLayer CurrSuperLayer { get; set; }
         ISuperLayer GetLayerUndearneathCurr();
+        ISuperLayer GetLayerOnTopOfCurr();
         int XPos { get; set; }
         int YPos { get; set; }
         int Health { get; set; }

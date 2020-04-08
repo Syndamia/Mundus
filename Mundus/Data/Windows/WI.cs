@@ -14,30 +14,25 @@ namespace Mundus.Data.Windows {
         public static MusicWindow WMusic { get; private set; }
         public static CraftingWindow WCrafting { get; private set; }
 
+        //Gtk opens all window instances in the project automatically, unless they are hidden
         public static void CreateInstances() {
             WMain = new MainWindow();
-            WNewGame = new NewGameWindow();
-            WSGame = new SmallGameWindow();
-            WMGame = new MediumGameWindow();
-            WLGame = new LargeGameWindow();
-            WSettings = new SettingsWindow();
-            WPause = new PauseWindow();
-            WMusic = new MusicWindow();
-            WCrafting = new CraftingWindow();
-
-            HideAll();
-        }
-
-        //Gtk opens all window instances in the project automatically, unless they are hidden
-        private static void HideAll() {
             WMain.Hide();
+            WNewGame = new NewGameWindow();
             WNewGame.Hide();
+            WSGame = new SmallGameWindow();
             WSGame.Hide();
+            WMGame = new MediumGameWindow();
             WMGame.Hide();
+            WLGame = new LargeGameWindow();
             WLGame.Hide();
+            WSettings = new SettingsWindow();
             WSettings.Hide();
+            WPause = new PauseWindow();
             WPause.Hide();
+            WMusic = new MusicWindow();
             WMusic.Hide();
+            WCrafting = new CraftingWindow();
             WCrafting.Hide();
         }
     }

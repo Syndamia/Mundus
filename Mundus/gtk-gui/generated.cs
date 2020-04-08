@@ -60,6 +60,14 @@ namespace Stetic
 				w1.Add("U_roche", w24);
 				global::Gtk.IconSet w25 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Ground.L_hole.png"));
 				w1.Add("L_hole", w25);
+				global::Gtk.IconSet w26 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Structures.L_wooden_ladder.png"));
+				w1.Add("L_wooden_ladder", w26);
+				global::Gtk.IconSet w27 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Structures.L_boulder_inventory.png"));
+				w1.Add("L_boulder_inventory", w27);
+				global::Gtk.IconSet w28 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Structures.L_tree_inventory.png"));
+				w1.Add("L_tree_inventory", w28);
+				global::Gtk.IconSet w29 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Structures.L_wooden_ladder_inventory.png"));
+				w1.Add("L_wooden_ladder_inventory", w29);
 				w1.AddDefault();
 			}
 		}

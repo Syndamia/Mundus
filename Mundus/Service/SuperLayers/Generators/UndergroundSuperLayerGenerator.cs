@@ -2,6 +2,7 @@
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
 using Mundus.Service.Tiles;
+using Mundus.Service.Tiles.ItemPresets;
 using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Service.SuperLayers.Generators {
@@ -42,9 +43,11 @@ namespace Mundus.Service.SuperLayers.Generators {
 
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
-                    tiles[col, row] = StructurePresets.GetAURock();
-                    if (rnd.Next(0, 10) == 1) {
-                        tiles[col, row] = null;
+                    if (LI.Land.GetGroundLayerTile(col, row) != null) {
+                        tiles[col, row] = StructurePresets.GetAURock();
+                        if (rnd.Next(0, 10) == 1) {
+                            tiles[col, row] = null;
+                        }
                     }
                 }
             }

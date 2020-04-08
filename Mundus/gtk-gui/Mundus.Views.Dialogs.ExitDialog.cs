@@ -17,6 +17,7 @@ namespace Mundus.Views.Dialogs
 			global::Stetic.Gui.Initialize(this);
 			// Widget Mundus.Views.Dialogs.ExitDialog
 			this.Name = "Mundus.Views.Dialogs.ExitDialog";
+			this.Title = "";
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Internal child Mundus.Views.Dialogs.ExitDialog.VBox
 			global::Gtk.VBox w1 = this.VBox;
@@ -27,7 +28,7 @@ namespace Mundus.Views.Dialogs
 			this.lblMessage.HeightRequest = 50;
 			this.lblMessage.Name = "lblMessage";
 			this.lblMessage.LabelProp = "You haven\'t saved for {number} of seconds. Are you sure you want to exit without " +
-					"saving?";
+				"saving?";
 			w1.Add(this.lblMessage);
 			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(w1[this.lblMessage]));
 			w2.Position = 0;

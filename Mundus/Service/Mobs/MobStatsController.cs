@@ -35,5 +35,32 @@ namespace Mundus.Service.Mobs {
                 LMI.Player.Health = MapSizes.CurrSize / 5 * 4;
             }
         }
+
+        public static string GetPlayerSuperLayerName() {
+            return LMI.Player.CurrSuperLayer.ToString();
+        }
+
+        /// <summary>
+        /// Returns the player's horizontal (X) coordinates
+        /// </summary>
+        /// <returns>Player.XPos</returns>
+        public static int GetPlayerXCoord() {
+            return LMI.Player.XPos;
+        }
+
+        /// <summary>
+        /// Returns the player's vertical (Y) coordinates
+        /// </summary>
+        /// <returns>Player.YPos</returns>
+        public static int GetPlayerYCoord() {
+            return LMI.Player.YPos;
+        }
+
+        public static bool ExistsHoleOnTopOfPlayer() {
+            if (LMI.Player.GetLayerOnTopOfCurr() == null) {
+                return false;
+            }
+            return LMI.Player.GetLayerOnTopOfCurr().GetGroundLayerTile(LMI.Player.YPos, LMI.Player.XPos) == null;
+        }
     }
 }

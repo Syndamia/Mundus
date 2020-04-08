@@ -35,7 +35,13 @@ namespace Mundus.Views.Windows {
                 CraftingRecipe recipe = Recipes[recipeIndex];
                 btnCraft.Sensitive = true;
 
-                imgItem.SetFromStock(recipe.ResultItem.stock_id, IconSize.Dnd);
+                if (recipe.ResultItem.GetType() == typeof(Structure)) {
+                    Structure tmp = (Structure)recipe.ResultItem;
+                    imgItem.SetFromStock(tmp.inventory_stock_id, IconSize.Dnd);
+                }
+                else {
+                    imgItem.SetFromStock(recipe.ResultItem.stock_id, IconSize.Dnd);
+                }
                 lblInfo.Text = recipe.ResultItem.ToString();
 
                 lblC1.Text = recipe.Count1 + "";

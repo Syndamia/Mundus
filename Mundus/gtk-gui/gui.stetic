@@ -127,10 +127,30 @@
         <property name="Image">resource:Mundus.Icons.Land.Ground.L_hole.png</property>
       </source>
     </icon-set>
+    <icon-set id="L_wooden_ladder">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Structures.L_wooden_ladder.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="L_boulder_inventory">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Structures.L_boulder_inventory.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="L_tree_inventory">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Structures.L_tree_inventory.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="L_wooden_ladder_inventory">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Structures.L_wooden_ladder_inventory.png</property>
+      </source>
+    </icon-set>
   </icon-factory>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.NewGameWindow" design-size="581 275">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">Create a New Game</property>
+    <property name="Title">Create a New Game</property>
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Resizable">False</property>
     <property name="AllowGrow">False</property>
@@ -200,7 +220,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Back</property>
+            <property name="Label">Back</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">3</property>
             <signal name="Clicked" handler="OnBtnBackClicked" />
@@ -226,7 +246,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Generate</property>
+            <property name="Label">Generate</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">3</property>
             <signal name="Clicked" handler="OnBtnGenerateClicked" />
@@ -371,7 +391,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">Difficulty</property>
+            <property name="LabelProp">Difficulty</property>
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -394,7 +414,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">Game Mode:</property>
+            <property name="LabelProp">Game Mode:</property>
           </widget>
           <packing>
             <property name="TopAttach">2</property>
@@ -417,7 +437,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">Map size</property>
+            <property name="LabelProp">Map size</property>
           </widget>
           <packing>
             <property name="TopAttach">5</property>
@@ -440,7 +460,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">Screen &amp; Inventory size</property>
+            <property name="LabelProp">Screen &amp; Inventory size</property>
             <property name="Wrap">True</property>
             <property name="Justify">Center</property>
           </widget>
@@ -465,7 +485,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">180</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">New Game (replace with picture)</property>
+            <property name="LabelProp">New Game (replace with picture)</property>
             <property name="Wrap">True</property>
             <property name="Justify">Center</property>
           </widget>
@@ -488,8 +508,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Creative</property>
-            <property name="Active">True</property>
+            <property name="Label">Creative</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -517,8 +536,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Easy</property>
-            <property name="Active">True</property>
+            <property name="Label">Easy</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -545,7 +563,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Hard</property>
+            <property name="Label">Hard</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -572,7 +590,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Insane</property>
+            <property name="Label">Insane</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -599,8 +617,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Large</property>
-            <property name="Active">True</property>
+            <property name="Label">Large</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -628,7 +645,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Medium</property>
+            <property name="Label">Medium</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -655,8 +672,7 @@
           <widget class="Gtk.RadioButton" id="rbMLarge">
             <property name="MemberName" />
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Large</property>
-            <property name="Active">True</property>
+            <property name="Label">Large</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -683,7 +699,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Medium</property>
+            <property name="Label">Medium</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -710,7 +726,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Small</property>
+            <property name="Label">Small</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -737,7 +753,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Normal</property>
+            <property name="Label">Normal</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -764,7 +780,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Peaceful</property>
+            <property name="Label">Peaceful</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -791,7 +807,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Small</property>
+            <property name="Label">Small</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -819,7 +835,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
-            <property name="Label" translatable="yes">Survival</property>
+            <property name="Label">Survival</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -846,7 +862,7 @@
   </widget>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.SmallGameWindow" design-size="890 770">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">Mundus (Small Window)</property>
+    <property name="Title">Mundus (Small Window)</property>
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Resizable">False</property>
     <property name="AllowGrow">False</property>
@@ -1289,40 +1305,13 @@
           <placeholder />
         </child>
         <child>
-          <placeholder />
-        </child>
-        <child>
-          <placeholder />
-        </child>
-        <child>
-          <placeholder />
-        </child>
-        <child>
-          <placeholder />
-        </child>
-        <child>
-          <placeholder />
-        </child>
-        <child>
-          <placeholder />
-        </child>
-        <child>
-          <placeholder />
-        </child>
-        <child>
-          <placeholder />
-        </child>
-        <child>
-          <placeholder />
-        </child>
-        <child>
           <widget class="Gtk.Button" id="btnA1">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnA1Clicked" />
           </widget>
@@ -1349,7 +1338,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnA10Clicked" />
           </widget>
@@ -1376,7 +1365,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnA2Clicked" />
           </widget>
@@ -1403,7 +1392,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnA3Clicked" />
           </widget>
@@ -1430,7 +1419,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnA4Clicked" />
           </widget>
@@ -1457,7 +1446,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnA5Clicked" />
           </widget>
@@ -1484,7 +1473,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnA6Clicked" />
           </widget>
@@ -1511,7 +1500,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnA7Clicked" />
           </widget>
@@ -1538,7 +1527,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnA8Clicked" />
           </widget>
@@ -1565,7 +1554,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnA9Clicked" />
           </widget>
@@ -1588,10 +1577,9 @@
         <child>
           <widget class="Gtk.Button" id="btnCrafting">
             <property name="MemberName" />
-            <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Crafting Menu</property>
+            <property name="Label">Crafting</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnCraftingClicked" />
           </widget>
@@ -1618,7 +1606,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnG1Clicked" />
           </widget>
@@ -1645,7 +1633,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnG2Clicked" />
           </widget>
@@ -1672,7 +1660,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnG3Clicked" />
           </widget>
@@ -1699,7 +1687,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnG4Clicked" />
           </widget>
@@ -1726,7 +1714,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnG5Clicked" />
           </widget>
@@ -1753,7 +1741,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnH1Clicked" />
@@ -1781,7 +1769,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnH2Clicked" />
@@ -1809,7 +1797,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnH3Clicked" />
@@ -1837,7 +1825,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnH4Clicked" />
@@ -1865,7 +1853,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnH5Clicked" />
@@ -1893,7 +1881,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI1Clicked" />
@@ -1921,7 +1909,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI10Clicked" />
@@ -1949,7 +1937,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI11Clicked" />
@@ -1977,7 +1965,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI12Clicked" />
@@ -2005,7 +1993,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI13Clicked" />
@@ -2033,7 +2021,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI14Clicked" />
@@ -2061,7 +2049,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI15Clicked" />
@@ -2089,7 +2077,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI16Clicked" />
@@ -2117,7 +2105,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI17Clicked" />
@@ -2145,7 +2133,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI18Clicked" />
@@ -2173,7 +2161,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI19Clicked" />
@@ -2201,7 +2189,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI2Clicked" />
@@ -2229,7 +2217,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI20Clicked" />
@@ -2257,7 +2245,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI21Clicked" />
@@ -2285,7 +2273,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI22Clicked" />
@@ -2313,7 +2301,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI23Clicked" />
@@ -2341,7 +2329,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI24Clicked" />
@@ -2369,7 +2357,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI25Clicked" />
@@ -2397,7 +2385,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI3Clicked" />
@@ -2425,7 +2413,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI4Clicked" />
@@ -2453,7 +2441,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI5Clicked" />
@@ -2481,7 +2469,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI6Clicked" />
@@ -2509,7 +2497,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI7Clicked" />
@@ -2537,7 +2525,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI8Clicked" />
@@ -2565,7 +2553,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">Half</property>
             <signal name="Clicked" handler="OnBtnI9Clicked" />
@@ -2593,7 +2581,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnIG1Clicked" />
           </widget>
@@ -2620,7 +2608,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnIG2Clicked" />
           </widget>
@@ -2647,7 +2635,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Inv</property>
+            <property name="Label">Inv</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnInvClicked" />
           </widget>
@@ -2674,7 +2662,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Map</property>
+            <property name="Label">Map</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnMapClicked" />
           </widget>
@@ -2701,7 +2689,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Music</property>
+            <property name="Label">Music</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnMusicClicked" />
           </widget>
@@ -2728,7 +2716,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP1Clicked" />
@@ -2756,7 +2744,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP10Clicked" />
@@ -2784,7 +2772,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP11Clicked" />
@@ -2812,7 +2800,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP12Clicked" />
@@ -2840,7 +2828,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP13Clicked" />
@@ -2868,7 +2856,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP14Clicked" />
@@ -2896,7 +2884,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP15Clicked" />
@@ -2924,7 +2912,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP16Clicked" />
@@ -2952,7 +2940,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP17Clicked" />
@@ -2980,7 +2968,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP18Clicked" />
@@ -3008,7 +2996,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP19Clicked" />
@@ -3036,7 +3024,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP2Clicked" />
@@ -3064,7 +3052,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP20Clicked" />
@@ -3092,7 +3080,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP21Clicked" />
@@ -3120,7 +3108,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP22Clicked" />
@@ -3148,7 +3136,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP23Clicked" />
@@ -3176,7 +3164,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP24Clicked" />
@@ -3204,7 +3192,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP25Clicked" />
@@ -3232,7 +3220,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP3Clicked" />
@@ -3260,7 +3248,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP4Clicked" />
@@ -3288,7 +3276,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP5Clicked" />
@@ -3316,7 +3304,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP6Clicked" />
@@ -3344,7 +3332,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP7Clicked" />
@@ -3372,7 +3360,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP8Clicked" />
@@ -3400,7 +3388,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextAndIcon</property>
-            <property name="Label" translatable="yes" />
+            <property name="Label" />
             <property name="UseUnderline">True</property>
             <property name="Relief">None</property>
             <signal name="Clicked" handler="OnBtnP9Clicked" />
@@ -3428,7 +3416,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Pause</property>
+            <property name="Label">Pause</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnPauseClicked" />
           </widget>
@@ -4756,7 +4744,7 @@
           <widget class="Gtk.Label" id="lblAccessories">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">Accessories</property>
+            <property name="LabelProp">Accessories</property>
             <property name="Justify">Center</property>
           </widget>
           <packing>
@@ -4926,11 +4914,57 @@
           </packing>
         </child>
         <child>
+          <widget class="Gtk.Label" id="lblCoord1">
+            <property name="MemberName" />
+            <property name="WidthRequest">50</property>
+            <property name="HeightRequest">50</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">7</property>
+            <property name="BottomAttach">8</property>
+            <property name="LeftAttach">4</property>
+            <property name="RightAttach">5</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblCoord2">
+            <property name="MemberName" />
+            <property name="WidthRequest">50</property>
+            <property name="HeightRequest">50</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">7</property>
+            <property name="BottomAttach">8</property>
+            <property name="LeftAttach">5</property>
+            <property name="RightAttach">6</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
           <widget class="Gtk.Label" id="lblEventLog">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">Event Log</property>
+            <property name="LabelProp">Event Log</property>
           </widget>
           <packing>
             <property name="TopAttach">11</property>
@@ -4952,7 +4986,7 @@
           <widget class="Gtk.Label" id="lblGear">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">Gear</property>
+            <property name="LabelProp">Gear</property>
             <property name="Justify">Center</property>
           </widget>
           <packing>
@@ -4974,7 +5008,7 @@
         <child>
           <widget class="Gtk.Label" id="lblGroundLayer">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Ground Layer</property>
+            <property name="LabelProp">Ground Layer</property>
           </widget>
           <packing>
             <property name="TopAttach">1</property>
@@ -4993,11 +5027,58 @@
           </packing>
         </child>
         <child>
+          <widget class="Gtk.Label" id="lblHoleMsg">
+            <property name="MemberName" />
+            <property name="WidthRequest">200</property>
+            <property name="HeightRequest">50</property>
+            <property name="LabelProp">There is a hole above player:</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">15</property>
+            <property name="BottomAttach">16</property>
+            <property name="LeftAttach">1</property>
+            <property name="RightAttach">5</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblHoleOnTop">
+            <property name="MemberName" />
+            <property name="WidthRequest">50</property>
+            <property name="HeightRequest">50</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">15</property>
+            <property name="BottomAttach">16</property>
+            <property name="LeftAttach">5</property>
+            <property name="RightAttach">6</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
           <widget class="Gtk.Label" id="lblHotbar">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">25</property>
-            <property name="LabelProp" translatable="yes">Hotbar</property>
+            <property name="LabelProp">Hotbar</property>
           </widget>
           <packing>
             <property name="TopAttach">9</property>
@@ -5042,7 +5123,7 @@
         <child>
           <widget class="Gtk.Label" id="lblItemLayer">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Structure Layer</property>
+            <property name="LabelProp">Structure Layer</property>
           </widget>
           <packing>
             <property name="TopAttach">9</property>
@@ -5064,7 +5145,7 @@
           <widget class="Gtk.Label" id="lblLog1">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">label6</property>
+            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">12</property>
@@ -5086,7 +5167,7 @@
           <widget class="Gtk.Label" id="lblLog2">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">label7</property>
+            <property name="LabelProp">label7</property>
           </widget>
           <packing>
             <property name="TopAttach">13</property>
@@ -5108,7 +5189,7 @@
           <widget class="Gtk.Label" id="lblLog3">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">label7</property>
+            <property name="LabelProp">label7</property>
           </widget>
           <packing>
             <property name="TopAttach">14</property>
@@ -5130,7 +5211,7 @@
           <widget class="Gtk.Label" id="lblLog4">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">label7</property>
+            <property name="LabelProp">label7</property>
           </widget>
           <packing>
             <property name="TopAttach">15</property>
@@ -5148,12 +5229,35 @@
             <property name="YShrink">False</property>
           </packing>
         </child>
+        <child>
+          <widget class="Gtk.Label" id="lblSuperLayer">
+            <property name="MemberName" />
+            <property name="WidthRequest">100</property>
+            <property name="HeightRequest">50</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">7</property>
+            <property name="BottomAttach">8</property>
+            <property name="LeftAttach">1</property>
+            <property name="RightAttach">3</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
       </widget>
     </child>
   </widget>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.MediumGameWindow" design-size="400 300">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">MediumGameWindow</property>
+    <property name="Title">MediumGameWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
     <child>
       <placeholder />
@@ -5161,7 +5265,7 @@
   </widget>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.LargeGameWindow" design-size="400 300">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">LargeGameWindow</property>
+    <property name="Title">LargeGameWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
     <child>
       <placeholder />
@@ -5169,7 +5273,7 @@
   </widget>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.SettingsWindow" design-size="386 300">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">Settings</property>
+    <property name="Title">Settings</property>
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Resizable">False</property>
     <property name="AllowGrow">False</property>
@@ -5236,7 +5340,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Back</property>
+            <property name="Label">Back</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">3</property>
             <signal name="Clicked" handler="OnBtnBackClicked" />
@@ -5374,7 +5478,7 @@
         <child>
           <widget class="Gtk.Label" id="lblTitle">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Settings (replace with picture)</property>
+            <property name="LabelProp">Settings (replace with picture)</property>
           </widget>
           <packing>
             <property name="LeftAttach">3</property>
@@ -5393,9 +5497,9 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="Mundus.Views.Windows.PauseWindow" design-size="260 285">
+  <widget class="Gtk.Window" id="Mundus.Views.Windows.PauseWindow" design-size="191 285">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">PauseWindow</property>
+    <property name="Title">PauseWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Resizable">False</property>
     <property name="AllowGrow">False</property>
@@ -5415,7 +5519,7 @@
                 <property name="HeightRequest">50</property>
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">Back</property>
+                <property name="Label">Back</property>
                 <property name="UseUnderline">True</property>
                 <signal name="Clicked" handler="OnBtnBackClicked" />
               </widget>
@@ -5429,7 +5533,8 @@
             <child>
               <widget class="Gtk.Label" id="lblTitle">
                 <property name="MemberName" />
-                <property name="LabelProp" translatable="yes">Pause menu (replace with picture)</property>
+                <property name="LabelProp">Pause menu</property>
+                <property name="Justify">Center</property>
               </widget>
               <packing>
                 <property name="Position">1</property>
@@ -5465,7 +5570,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Settings</property>
+            <property name="Label">Settings</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">3</property>
             <signal name="Clicked" handler="OnBtnSettingsClicked" />
@@ -5483,7 +5588,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Save</property>
+            <property name="Label">Save</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">3</property>
             <signal name="Clicked" handler="OnBtnSaveClicked" />
@@ -5501,7 +5606,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Save &amp; Exit</property>
+            <property name="Label">Save &amp; Exit</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">3</property>
             <signal name="Clicked" handler="OnBtnSaveExitClicked" />
@@ -5519,7 +5624,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Exit</property>
+            <property name="Label">Exit</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">3</property>
             <signal name="Clicked" handler="OnBtnExitClicked" />
@@ -5536,7 +5641,7 @@
   </widget>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.CraftingWindow" design-size="270 470">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">CraftingWindow</property>
+    <property name="Title">CraftingWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
@@ -5677,7 +5782,7 @@
             <property name="Sensitive">False</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Craft</property>
+            <property name="Label">Craft</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnCraftClicked" />
           </widget>
@@ -5686,7 +5791,7 @@
             <property name="BottomAttach">10</property>
             <property name="LeftAttach">1</property>
             <property name="RightAttach">6</property>
-            <property name="AutoSize">True</property>
+            <property name="AutoSize">False</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>
             <property name="XExpand">False</property>
@@ -5703,7 +5808,7 @@
             <property name="Sensitive">False</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Next</property>
+            <property name="Label">Next</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnNextClicked" />
           </widget>
@@ -5731,7 +5836,7 @@
             <property name="Sensitive">False</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Prev</property>
+            <property name="Label">Prev</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnPrevClicked" />
           </widget>
@@ -6151,7 +6256,7 @@
         <child>
           <widget class="Gtk.Label" id="lblC1">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">0</property>
+            <property name="LabelProp">0</property>
             <property name="Justify">Center</property>
           </widget>
           <packing>
@@ -6173,7 +6278,7 @@
         <child>
           <widget class="Gtk.Label" id="lblC2">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">0</property>
+            <property name="LabelProp">0</property>
             <property name="Justify">Center</property>
           </widget>
           <packing>
@@ -6195,7 +6300,7 @@
         <child>
           <widget class="Gtk.Label" id="lblC3">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">0</property>
+            <property name="LabelProp">0</property>
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -6216,7 +6321,7 @@
         <child>
           <widget class="Gtk.Label" id="lblC4">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">0</property>
+            <property name="LabelProp">0</property>
             <property name="Justify">Center</property>
           </widget>
           <packing>
@@ -6238,7 +6343,7 @@
         <child>
           <widget class="Gtk.Label" id="lblC5">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">0</property>
+            <property name="LabelProp">0</property>
             <property name="Justify">Center</property>
           </widget>
           <packing>
@@ -6287,7 +6392,7 @@
     <action-group name="Default" />
     <property name="MemberName" />
     <property name="HeightRequest">600</property>
-    <property name="Title" translatable="yes">MusicWindow</property>
+    <property name="Title">MusicWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Resizable">False</property>
     <property name="AllowGrow">False</property>
@@ -6330,7 +6435,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Back</property>
+            <property name="Label">Back</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">3</property>
             <signal name="Clicked" handler="OnBtnBackClicked" />
@@ -6356,7 +6461,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Next</property>
+            <property name="Label">Next</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnNextClicked" />
           </widget>
@@ -6383,7 +6488,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Play</property>
+            <property name="Label">Play</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnPlayClicked" />
           </widget>
@@ -6410,7 +6515,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Prev</property>
+            <property name="Label">Prev</property>
             <property name="UseUnderline">True</property>
           </widget>
           <packing>
@@ -6436,7 +6541,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Rnd</property>
+            <property name="Label">Rnd</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnPlayClicked" />
           </widget>
@@ -6463,7 +6568,7 @@
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Stop</property>
+            <property name="Label">Stop</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnStopClicked" />
           </widget>
@@ -6567,7 +6672,7 @@
           <widget class="Gtk.Label" id="lblPath">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">No file chosen</property>
+            <property name="LabelProp">No file chosen</property>
             <property name="Wrap">True</property>
             <property name="Justify">Center</property>
             <property name="Selectable">True</property>
@@ -6591,7 +6696,7 @@
         <child>
           <widget class="Gtk.Label" id="lblTitle">
             <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Music (replace with picture)</property>
+            <property name="LabelProp">Music (replace with picture)</property>
           </widget>
           <packing>
             <property name="LeftAttach">2</property>
@@ -6612,7 +6717,7 @@
   </widget>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.MainWindow" design-size="300 465">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">Mundus</property>
+    <property name="Title">Mundus</property>
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Resizable">False</property>
     <property name="AllowGrow">False</property>
@@ -6652,7 +6757,7 @@
             <property name="HeightRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Load Game</property>
+            <property name="Label">Load Game</property>
             <property name="UseUnderline">True</property>
             <property name="Xalign">0.49</property>
             <property name="BorderWidth">7</property>
@@ -6669,7 +6774,7 @@
             <property name="HeightRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">New Game</property>
+            <property name="Label">New Game</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">7</property>
             <signal name="Clicked" handler="OnBtnNewGameClicked" />
@@ -6686,7 +6791,7 @@
             <property name="HeightRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Tutorial</property>
+            <property name="Label">Tutorial</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">7</property>
             <signal name="Clicked" handler="OnBtnTutorialClicked" />
@@ -6705,7 +6810,7 @@
             <property name="HeightRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Settings</property>
+            <property name="Label">Settings</property>
             <property name="UseUnderline">True</property>
             <property name="BorderWidth">7</property>
             <signal name="Clicked" handler="OnBtnSettingsClicked" />
@@ -6722,6 +6827,7 @@
   </widget>
   <widget class="Gtk.Dialog" id="Mundus.Views.Dialogs.ExitDialog" design-size="563 95">
     <property name="MemberName" />
+    <property name="Title" />
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Buttons">3</property>
     <property name="HelpButton">False</property>
@@ -6734,7 +6840,7 @@
           <widget class="Gtk.Label" id="lblMessage">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
-            <property name="LabelProp" translatable="yes">You haven't saved for {number} of seconds. Are you sure you want to exit without saving?</property>
+            <property name="LabelProp">You haven't saved for {number} of seconds. Are you sure you want to exit without saving?</property>
           </widget>
           <packing>
             <property name="Position">0</property>
@@ -6758,7 +6864,7 @@
             <property name="CanDefault">True</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Cancel</property>
+            <property name="Label">Cancel</property>
             <property name="UseUnderline">True</property>
             <property name="ResponseId">-6</property>
           </widget>
@@ -6773,7 +6879,7 @@
             <property name="CanDefault">True</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Save &amp; Exit</property>
+            <property name="Label">Save &amp; Exit</property>
             <property name="UseUnderline">True</property>
             <property name="ResponseId">-3</property>
           </widget>
@@ -6788,7 +6894,7 @@
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Exit without saving</property>
+            <property name="Label">Exit without saving</property>
             <property name="UseUnderline">True</property>
             <property name="ResponseId">-2</property>
           </widget>
