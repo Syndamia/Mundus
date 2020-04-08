@@ -1,4 +1,6 @@
 # Mundus
-My IT-kariera module 7 (Software development) project
+My IT-kariera module 7 (Software development) project. It is built in C# and Gtk# 2.0.
 
-**Note**: Install [Gtk-Sharp](https://www.mono-project.com/docs/gui/gtksharp/installer-for-net-framework/) to run the executable on _Windows_ and [Mono](https://www.mono-project.com/download/stable/#download-lin) to run the executable on _Linux_.
+Mundus is a sandbox openworld RPG. You can explore, destroy, create or fight, the world is your oyster.
+
+**Note**: Install [Gtk-Sharp](https://www.mono-project.com/docs/gui/gtksharp/installer-for-net-framework/) to run the executable on _Windows_ and _Linux_ (you also need to install [Mono](https://www.mono-project.com/download/stable/#download-lin) to run it on Linux).
