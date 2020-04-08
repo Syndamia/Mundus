@@ -19,9 +19,12 @@ namespace Mundus.Service.Mobs {
                     if (selGround.ReqShovelClass <= selTool.Class) {
                         LMI.Player.CurrSuperLayer.SetGroundAtPosition(null, mapYPos, mapXPos);
 
+                        //When a shovel destroys ground tile, it destroys the structure below, if it is not walkable
                         ISuperLayer under = LMI.Player.GetLayerUndearneathCurr();
-                        if (under != null) {
-                            under.RemoveStructureFromPosition(mapYPos, mapXPos);
+                        if (under != null && under.GetStructureLayerTile(mapYPos, mapXPos) != null) {
+                            if (!under.GetStructureLayerTile(mapYPos, mapXPos).IsWalkable) {
+                                under.RemoveStructureFromPosition(mapYPos, mapXPos);
+                            }
                         }
 
                         if (LMI.Player.Inventory.Items.Contains(null) && selGround.DroppedMaterial != null) {
