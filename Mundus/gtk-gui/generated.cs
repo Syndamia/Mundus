@@ -68,6 +68,8 @@ namespace Stetic
 				w1.Add("L_tree_inventory", w28);
 				global::Gtk.IconSet w29 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Structures.L_wooden_ladder_inventory.png"));
 				w1.Add("L_wooden_ladder_inventory", w29);
+				global::Gtk.IconSet w30 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Underground.Materials.U_stone.png"));
+				w1.Add("U_stone", w30);
 				w1.AddDefault();
 			}
 		}

@@ -46,6 +46,7 @@
     <Reference Include="atk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="Mono.Posix" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -79,6 +80,7 @@
     <EmbeddedResource Include="Icons\Land\Structures\L_boulder_inventory.png" />
     <EmbeddedResource Include="Icons\Land\Structures\L_tree_inventory.png" />
     <EmbeddedResource Include="Icons\Land\Structures\L_wooden_ladder_inventory.png" />
+    <EmbeddedResource Include="Icons\Underground\Materials\U_stone.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />

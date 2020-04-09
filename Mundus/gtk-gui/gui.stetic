@@ -147,6 +147,11 @@
         <property name="Image">resource:Mundus.Icons.Land.Structures.L_wooden_ladder_inventory.png</property>
       </source>
     </icon-set>
+    <icon-set id="U_stone">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Underground.Materials.U_stone.png</property>
+      </source>
+    </icon-set>
   </icon-factory>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.NewGameWindow" design-size="581 275">
     <property name="MemberName" />

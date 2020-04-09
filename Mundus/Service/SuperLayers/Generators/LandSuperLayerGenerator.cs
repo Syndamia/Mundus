@@ -38,7 +38,7 @@ namespace Mundus.Service.SuperLayers.Generators {
 
             for(int col = 0; col < size; col++) {
                 for(int row = 0; row < size; row++) {
-                    if (rnd.Next(0, 100) == 1) {
+                    if (rnd.Next(0, 200) == 1) {
                         tiles[col, row] = null;
                     }
                     else {

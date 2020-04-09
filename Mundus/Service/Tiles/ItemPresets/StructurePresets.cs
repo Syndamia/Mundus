@@ -13,7 +13,7 @@ namespace Mundus.Service.Tiles.ItemPresets {
         }
 
         public static Structure GetAURock() {
-            return new Structure("U_rock", "U_rock", 10, ToolTypes.Pickaxe, 2);
+            return new Structure("U_rock", "U_rock", 10, ToolTypes.Pickaxe, 2, false, false, MaterialPresets.GetAStone());
         }
 
         public static Structure GetAWoodenLadder() {

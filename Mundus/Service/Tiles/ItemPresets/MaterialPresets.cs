@@ -14,5 +14,9 @@ namespace Mundus.Service.Tiles.ItemPresets {
         public static Material GetAGrass() {
             return new Material("L_grass");
         }
+
+        public static Material GetAStone() {
+            return new Material("U_stone");
+        }
     }
 }
