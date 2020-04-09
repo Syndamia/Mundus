@@ -581,21 +581,15 @@ namespace Mundus.Views.Windows {
             }
             else {
                 if (Inventory.GetPlayerItem(selPlace, selIndex) != null) {
-                    var selType = Inventory.GetPlayerItem(selPlace, selIndex).GetType();
                     //try to do MobFighting
-                    if (selType == typeof(Structure) && MobTerraforming.PlayerCanBuildAt(mapYPos, mapXPos)) {
-                        MobTerraforming.PlayerBuildAt(mapYPos, mapXPos, selPlace, selIndex);
-
-                    }
-                    else if (selType == typeof(Tool) && MobTerraforming.PlayerCanDestroyAt(mapYPos, mapXPos)) {
-                        MobTerraforming.PlayerDestroyAt(mapYPos, mapXPos, selPlace, selIndex);
-                    }
+                    MobTerraforming.PlayerTerraformAt(mapYPos, mapXPos, selPlace, selIndex);
                 }
                 ResetSelection();
             }
 
             this.PrintScreen();
             this.PrintMainMenu();
+
             if (this.MapMenuIsVisible()) {
                 this.PrintMap();
             }

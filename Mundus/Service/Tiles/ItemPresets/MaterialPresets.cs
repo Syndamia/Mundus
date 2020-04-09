@@ -10,5 +10,9 @@ namespace Mundus.Service.Tiles.ItemPresets {
         public static Material GetAStick() {
             return new Material("L_stick");
         }
+
+        public static Material GetAGrass() {
+            return new Material("L_grass");
+        }
     }
 }

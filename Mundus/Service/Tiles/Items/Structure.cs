@@ -46,7 +46,7 @@
         }
 
         /// <summary>
-        /// Removes 1 health from structure
+        /// Removes health from structure
         /// </summary>
         /// <returns>If the structure can still be damaged</returns>
         public bool Damage(int damagePoints) {

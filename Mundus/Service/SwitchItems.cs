@@ -39,7 +39,7 @@ namespace Mundus.Service {
             var toTransfer = origin[oIndex];
 
             if (toTransfer != null) {
-                if ((toTransfer.GetType() == typeof(Tool) && (destination == "hotbar" || destination == "items")) ||
+                if (((toTransfer.GetType() == typeof(Tool) || toTransfer.GetType() == typeof(GroundTile)) && (destination == "hotbar" || destination == "items")) ||
                     ((toTransfer.GetType() == typeof(Material) || toTransfer.GetType() == typeof(Structure)) && (destination == "hotbar" || destination == "items")) ||
                     (toTransfer.GetType() == typeof(Gear) && (destination == "hotbar" || destination == "items" || destination == "accessories" || destination == "gear"))) {
 

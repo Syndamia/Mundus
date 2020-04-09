@@ -68,7 +68,7 @@ namespace Mundus.Service {
             this.Gear[index] = null;
         }
 
-        public ItemTile GetTile(string place, int index) {
+        public ItemTile GetItemTile(string place, int index) {
             ItemTile toReturn = null;
 
             switch (place.ToLower()) {
@@ -80,8 +80,17 @@ namespace Mundus.Service {
             return toReturn;
         }
 
+        public void DeleteItemTile(string place, int index) {
+            switch (place.ToLower()) {
+                case "hotbar": this.Hotbar[index] = null; break;
+                case "items": this.Items[index] = null; break;
+                case "accessories": this.Accessories[index] = null; break;
+                case "gear": this.Gear[index] = null; break;
+            }
+        }
+
         public static ItemTile GetPlayerItem(string place, int index) {
-            return Data.Superlayers.Mobs.LMI.Player.Inventory.GetTile(place, index);
+            return Data.Superlayers.Mobs.LMI.Player.Inventory.GetItemTile(place, index);
         }
     }
 }
