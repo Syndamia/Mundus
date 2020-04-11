@@ -16,16 +16,16 @@ namespace Mundus.Service.Tiles.ItemPresets {
             return new Tool("wooden_shovel", ToolTypes.Shovel, 1);
         }
 
-        public static Tool GetAStonePickaxe() {
-            return new Tool("stone_pickaxe", ToolTypes.Pickaxe, 2);
+        public static Tool GetARockPickaxe() {
+            return new Tool("rock_pickaxe", ToolTypes.Pickaxe, 2);
         }
 
-        public static Tool GetAStoneAxe() {
-            return new Tool("stone_axe", ToolTypes.Axe, 2);
+        public static Tool GetARockAxe() {
+            return new Tool("rock_axe", ToolTypes.Axe, 2);
         }
 
-        public static Tool GetAStoneShovel() {
-            return new Tool("stone_shovel", ToolTypes.Shovel, 2);
+        public static Tool GetARockShovel() {
+            return new Tool("rock_shovel", ToolTypes.Shovel, 2);
         }
     }
 }

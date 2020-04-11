@@ -21,9 +21,9 @@ namespace Mundus.Data.Crafting {
             WoodenPickaxe = new CraftingRecipe(ToolPresets.GetAWoodenPickaxe(), 4, MaterialPresets.GetAStick());
             WoodenAxe = new CraftingRecipe(ToolPresets.GetAWoodenAxe(), 3, MaterialPresets.GetAStick());
 
-            StoneShovel = new CraftingRecipe(ToolPresets.GetAStoneShovel(), 4, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
-            StonePickAxe = new CraftingRecipe(ToolPresets.GetAStonePickaxe(), 4, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
-            StoneAxe = new CraftingRecipe(ToolPresets.GetAStoneAxe(), 3, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
+            StoneShovel = new CraftingRecipe(ToolPresets.GetARockShovel(), 4, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
+            StonePickAxe = new CraftingRecipe(ToolPresets.GetARockPickaxe(), 4, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
+            StoneAxe = new CraftingRecipe(ToolPresets.GetARockAxe(), 3, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
 
             WoodenLadder = new CraftingRecipe(StructurePresets.GetAWoodenLadder(), 6, MaterialPresets.GetAStick());
 

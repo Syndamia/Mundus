@@ -77,14 +77,14 @@
         <property name="Image">resource:Mundus.Icons.Land.Materials.L_stick.png</property>
       </source>
     </icon-set>
-    <icon-set id="stone_pickaxe">
+    <icon-set id="rock_pickaxe">
       <source>
-        <property name="Image">resource:Mundus.Icons.Land.Tools.stone_pickaxe.png</property>
+        <property name="Image">resource:Mundus.Icons.Land.Tools.rock_pickaxe.png</property>
       </source>
     </icon-set>
-    <icon-set id="stone_axe">
+    <icon-set id="rock_axe">
       <source>
-        <property name="Image">resource:Mundus.Icons.Land.Tools.stone_axe.png</property>
+        <property name="Image">resource:Mundus.Icons.Land.Tools.rock_axe.png</property>
       </source>
     </icon-set>
     <icon-set id="blank_multiplication">
@@ -107,9 +107,9 @@
         <property name="Image">resource:Mundus.Icons.Land.Tools.wooden_shovel.png</property>
       </source>
     </icon-set>
-    <icon-set id="stone_shovel">
+    <icon-set id="rock_shovel">
       <source>
-        <property name="Image">resource:Mundus.Icons.Land.Tools.stone_shovel.png</property>
+        <property name="Image">resource:Mundus.Icons.Land.Tools.rock_shovel.png</property>
       </source>
     </icon-set>
     <icon-set id="U_rock">

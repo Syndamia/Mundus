@@ -40,10 +40,10 @@ namespace Stetic
 				w1.Add("hearth_1-4", w14);
 				global::Gtk.IconSet w15 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Materials.L_stick.png"));
 				w1.Add("L_stick", w15);
-				global::Gtk.IconSet w16 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.stone_pickaxe.png"));
-				w1.Add("stone_pickaxe", w16);
-				global::Gtk.IconSet w17 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.stone_axe.png"));
-				w1.Add("stone_axe", w17);
+				global::Gtk.IconSet w16 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.rock_pickaxe.png"));
+				w1.Add("rock_pickaxe", w16);
+				global::Gtk.IconSet w17 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.rock_axe.png"));
+				w1.Add("rock_axe", w17);
 				global::Gtk.IconSet w18 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Blanks.blank_multiplication.png"));
 				w1.Add("blank_multiplication", w18);
 				global::Gtk.IconSet w19 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.wooden_axe.png"));
@@ -52,8 +52,8 @@ namespace Stetic
 				w1.Add("wooden_pickaxe", w20);
 				global::Gtk.IconSet w21 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.wooden_shovel.png"));
 				w1.Add("wooden_shovel", w21);
-				global::Gtk.IconSet w22 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.stone_shovel.png"));
-				w1.Add("stone_shovel", w22);
+				global::Gtk.IconSet w22 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.rock_shovel.png"));
+				w1.Add("rock_shovel", w22);
 				global::Gtk.IconSet w23 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Underground.Structures.U_rock.png"));
 				w1.Add("U_rock", w23);
 				global::Gtk.IconSet w24 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Underground.Ground.U_roche.png"));
