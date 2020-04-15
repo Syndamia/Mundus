@@ -2,8 +2,12 @@
 using Mundus.Service.Tiles.Items;
 using Mundus.Service.Tiles.ItemPresets;
 
-namespace Mundus.Service.SuperLayers {
+namespace Mundus.Service.Tiles.ItemPresets {
     public static class GroundPresets {
+        public static GroundTile GetASSky() {
+            return new GroundTile("S_sky", -1, false);
+        }
+
         /// <summary>
         /// Returns a new instance of the grass ground tile
         /// </summary>

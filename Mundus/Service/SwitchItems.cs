@@ -39,6 +39,7 @@ namespace Mundus.Service {
             var toTransfer = origin[oIndex];
 
             if (toTransfer != null) {
+                // Certain item types can only be placed inside certain inventory places.
                 if (((toTransfer.GetType() == typeof(Tool) || toTransfer.GetType() == typeof(GroundTile)) && (destination == "hotbar" || destination == "items")) ||
                     ((toTransfer.GetType() == typeof(Material) || toTransfer.GetType() == typeof(Structure)) && (destination == "hotbar" || destination == "items")) ||
                     (toTransfer.GetType() == typeof(Gear) && (destination == "hotbar" || destination == "items" || destination == "accessories" || destination == "gear"))) {

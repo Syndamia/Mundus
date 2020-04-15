@@ -1,6 +1,7 @@
 ﻿using Gtk;
 using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
+using Mundus.Service.SuperLayers;
 
 namespace Mundus.Service.Mobs {
     public static class MobStatsController {
@@ -57,10 +58,12 @@ namespace Mundus.Service.Mobs {
         }
 
         public static bool ExistsHoleOnTopOfPlayer() {
-            if (LMI.Player.GetLayerOnTopOfCurr() == null) {
+            //There can't be a hole if there is nothing above layer
+            if (HeightController.GetLayerAboveMob(LMI.Player) == null) {
                 return false;
             }
-            return LMI.Player.GetLayerOnTopOfCurr().GetGroundLayerTile(LMI.Player.YPos, LMI.Player.XPos) == null;
+            return HeightController.GetLayerAboveMob(LMI.Player).GetGroundLayerTile(LMI.Player.YPos, LMI.Player.XPos) == null ||
+                   !HeightController.GetLayerAboveMob(LMI.Player).GetGroundLayerTile(LMI.Player.YPos, LMI.Player.XPos).Solid;
         }
     }
 }

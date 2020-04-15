@@ -13,15 +13,18 @@ namespace Mundus.Service.SuperLayers {
             Image img = null;
 
             //Layer 0 is GroundLayer, 1 is ItemLayer and 2 is Moblayer
-            if (layer == 0) {
+            if (layer == 0) 
+            {
                 img = new Image(GetGroundImage(row, col).Stock, IconSize.Dnd);
             }
             else if (layer == 1 &&
-                     superLayer.GetStructureLayerTile( row, col ) != null) {
+                     superLayer.GetStructureLayerTile( row, col ) != null) 
+            {
                 img = new Image(GetStructureImage(row, col).Stock, IconSize.Dnd );
             }
             else if (layer == 2 &&
-                     superLayer.GetMobLayerTile( row, col ) != null) {
+                     superLayer.GetMobLayerTile( row, col ) != null) 
+            {
                 img = new Image(superLayer.GetMobLayerTile( row, col ).stock_id, IconSize.Dnd);
             }
             return img;
@@ -39,16 +42,20 @@ namespace Mundus.Service.SuperLayers {
             return img;
         }
 
-        //Return a tile if it exists, otherwise return the "blank" icon
         public static Image GetStructureImage(int row, int col) {
             ISuperLayer superLayer = LMI.Player.CurrSuperLayer;
             Image img = new Image("blank", IconSize.Dnd );
 
-            if (row >= 0 && col >= 0 && col < MapSizes.CurrSize && row < MapSizes.CurrSize &&
-                superLayer.GetStructureLayerTile( row, col ) != null) {
-                img = superLayer.GetStructureLayerTile( row, col ).Texture;
+            if (IsInsideBoundaries(row, col) &&
+                superLayer.GetStructureLayerTile(row, col) != null) 
+            {
+                img = superLayer.GetStructureLayerTile(row, col).Texture;
             }
             return img;
+        }
+
+        private static bool IsInsideBoundaries(int row, int col) {
+            return row >= 0 && col >= 0 && col < MapSizes.CurrSize && row < MapSizes.CurrSize;
         }
 
         public static Image GetHotbarImage(int index) {
@@ -56,7 +63,8 @@ namespace Mundus.Service.SuperLayers {
 
             if (index < LMI.Player.Inventory.Hotbar.Length) {
                 if (LMI.Player.Inventory.Hotbar[index] != null) {
-                    //Structures have two icons, one when they are placed and one as an inventory item
+                    // Structures have two icons, one when they are placed and one as an inventory item.
+                    // All other item types have only one icon (texture).
                     if (LMI.Player.Inventory.Hotbar[index].GetType() == typeof(Structure)) {
                         Structure tmp = (Structure)LMI.Player.Inventory.Hotbar[index];
                         img = new Image(tmp.inventory_stock_id, IconSize.Dnd);
@@ -71,9 +79,11 @@ namespace Mundus.Service.SuperLayers {
 
         public static Image GetInventoryItemImage(int index) {
             Image img = new Image("blank", IconSize.Dnd);
+
             if (index < LMI.Player.Inventory.Items.Length) {
                 if (LMI.Player.Inventory.Items[index] != null) {
-                    //Structures have two icons, one when they are placed and one as an inventory item
+                    // Structures have two icons, one when they are placed and one as an inventory item.
+                    // All other item types have only one icon (texture).
                     if (LMI.Player.Inventory.Items[index].GetType() == typeof(Structure)) {
                         Structure tmp = (Structure)LMI.Player.Inventory.Items[index];
                         img = new Image(tmp.inventory_stock_id, IconSize.Dnd);
@@ -88,6 +98,7 @@ namespace Mundus.Service.SuperLayers {
 
         public static Image GetAccessoryImage(int index) {
             Image img = new Image("blank_gear", IconSize.Dnd);
+
             if (index < LMI.Player.Inventory.Accessories.Length) {
                 if (LMI.Player.Inventory.Accessories[index] != null) {
                     img = LMI.Player.Inventory.Accessories[index].Texture;
@@ -98,6 +109,7 @@ namespace Mundus.Service.SuperLayers {
 
         public static Image GetGearImage(int index) {
             Image img = new Image("blank_gear", IconSize.Dnd);
+
             if (index < LMI.Player.Inventory.Gear.Length) {
                 if (LMI.Player.Inventory.Gear[index] != null) {
                     img = LMI.Player.Inventory.Gear[index].Texture;

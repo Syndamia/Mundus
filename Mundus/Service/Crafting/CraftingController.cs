@@ -14,7 +14,7 @@ namespace Mundus.Service.Crafting {
         /// </summary>
         public static void FindAvalableItems() {
             avalableItems = LMI.Player.Inventory.Items.Where(x => x != null)
-                       //Can't use distinct on non primative types, beause they also hold their memory location info.
+                       //Can't use distinct on non primative types, beause they also hold their memory location info (I think).
                        //This is my way of getting only the "unique" item tiles.
                        .Select(x => x.stock_id).Distinct().Select(x => LMI.Player.Inventory.Items.Where(y => y != null).First(y => y.stock_id == x))
                        //For each "unique" item tile (key), get how many there are of it in the player inventory (value)
@@ -39,6 +39,7 @@ namespace Mundus.Service.Crafting {
         /// </summary>
         /// <param name="itemRecipe">CraftingRecipie of the item that will be crafted</param>
         public static void CraftItem(CraftingRecipe itemRecipe) {
+            // Removes all items that are used to craft the result item
             foreach (var itemAndCount in itemRecipe.GetRequiredItemsAndCounts()) {
                 for(int i = 0, removedItems = 0; i < LMI.Player.Inventory.Items.Length && removedItems < itemAndCount.Value; i++) {
                     if (LMI.Player.Inventory.Items[i] != null) {
@@ -51,6 +52,7 @@ namespace Mundus.Service.Crafting {
             }
             ItemTile tmp = null;
 
+            // Adds the result item to the inventory (in the correct type)
             if (itemRecipe.ResultItem.GetType() == typeof(Material)) {
                 tmp = new Material((Material)itemRecipe.ResultItem);
             }

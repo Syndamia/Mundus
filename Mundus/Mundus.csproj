@@ -80,6 +80,7 @@
     <EmbeddedResource Include="Icons\Land\Tools\rock_pickaxe.png" />
     <EmbeddedResource Include="Icons\Land\Tools\rock_axe.png" />
     <EmbeddedResource Include="Icons\Land\Tools\rock_shovel.png" />
+    <EmbeddedResource Include="Icons\Sky\Ground\s_sky.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -113,7 +114,9 @@
     <Compile Include="Views\Windows\IGameWindow.cs" />
     <Compile Include="Service\Mobs\MobMovement.cs" />
     <Compile Include="Data\MapSizes.cs" />
-    <Compile Include="Service\SwitchItems.cs" />
+    <Compile Include="Service\SwitchItems.cs">
+      <IncludeInPackage>true</IncludeInPackage>
+    </Compile>
     <Compile Include="Service\SuperLayers\ImageController.cs" />
     <Compile Include="Service\Calculate.cs" />
     <Compile Include="Data\Windows\WI.cs" />
@@ -138,12 +141,15 @@
     <Compile Include="Data\Crafting\RI.cs" />
     <Compile Include="Service\Tiles\ItemPresets\ToolPresets.cs" />
     <Compile Include="Service\Tiles\ItemPresets\MaterialPresets.cs" />
-    <Compile Include="Service\SuperLayers\GroundPresets.cs" />
     <Compile Include="Data\SuperLayers\Underground.cs" />
     <Compile Include="Service\SuperLayers\Generators\LandSuperLayerGenerator.cs" />
     <Compile Include="Service\SuperLayers\Generators\UndergroundSuperLayerGenerator.cs" />
     <Compile Include="Service\Tiles\ItemPresets\StructurePresets.cs" />
     <Compile Include="Service\Tiles\Items\GroundTile.cs" />
+    <Compile Include="Service\Tiles\ItemPresets\GroundPresets.cs" />
+    <Compile Include="Service\SuperLayers\HeightController.cs" />
+    <Compile Include="Data\SuperLayers\Sky.cs" />
+    <Compile Include="Service\SuperLayers\Generators\SkySuperLayerGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -167,6 +173,10 @@
     <Folder Include="Service\Tiles\ItemPresets\" />
     <Folder Include="Icons\Land\Materials\" />
     <Folder Include="Service\SuperLayers\Generators\" />
+    <Folder Include="Icons\Sky\Ground\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

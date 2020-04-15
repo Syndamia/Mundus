@@ -18,19 +18,5 @@ namespace Mundus.Service.Mobs.LandMobs {
             this.Inventory = new Inventory(inventorySize);
             this.Health = health;
         }
-
-        public ISuperLayer GetLayerUndearneathCurr() {
-            if (CurrSuperLayer == LI.Land) {
-                return LI.Underground;
-            }
-            return null;
-        }
-
-        public ISuperLayer GetLayerOnTopOfCurr() {
-            if (CurrSuperLayer == LI.Underground) {
-                return LI.Land;
-            }
-            return null;
-        }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
-using Mundus.Data.Tiles;
 using Mundus.Service.Tiles;
 using Mundus.Service.Tiles.ItemPresets;
 using Mundus.Service.Tiles.Items;

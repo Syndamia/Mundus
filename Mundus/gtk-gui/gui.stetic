@@ -152,6 +152,11 @@
         <property name="Image">resource:Mundus.Icons.Underground.Materials.U_stone.png</property>
       </source>
     </icon-set>
+    <icon-set id="S_sky">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Sky.Ground.s_sky.png</property>
+      </source>
+    </icon-set>
   </icon-factory>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.NewGameWindow" design-size="581 275">
     <property name="MemberName" />

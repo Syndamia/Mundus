@@ -14,8 +14,8 @@ namespace Mundus.Service {
                 default: throw new ArgumentException( "Map size must be \"small\", \"medium\" or \"large\"" );
             }
 
-            //Add the other layers
-            LandSuperLayerGenerator.GenerateAllLayers( MapSizes.CurrSize );
+            SkySuperLayerGenerator.GenerateAllLayers(MapSizes.CurrSize);
+            LandSuperLayerGenerator.GenerateAllLayers(MapSizes.CurrSize);
             UndergroundSuperLayerGenerator.GenerateAllLayers(MapSizes.CurrSize);
         }
 
