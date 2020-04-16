@@ -580,7 +580,7 @@ namespace Mundus.Views.Windows {
 
             if (!HasSelection()) {
                 MobMovement.MovePlayer(mapYPos, mapXPos, Size);
-                MobMovement.MoveRandomlyMobsAtPlayerLayer();
+                MobMovement.MoveRandomlyAllMobs();
             }
             else {
                 if (Inventory.GetPlayerItem(selPlace, selIndex) != null) {

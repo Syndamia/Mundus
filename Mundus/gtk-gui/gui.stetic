@@ -5505,7 +5505,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">300</property>
             <property name="HeightRequest">20</property>
-            <property name="LabelProp">Build 16-04-2020 No1</property>
+            <property name="LabelProp">Build 16-04-2020 No2</property>
             <property name="Justify">Center</property>
           </widget>
           <packing>
@@ -6706,7 +6706,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">300</property>
             <property name="HeightRequest">20</property>
-            <property name="LabelProp">Build 16-04-2020 No1</property>
+            <property name="LabelProp">Build 16-04-2020 No2</property>
             <property name="Justify">Center</property>
           </widget>
           <packing>

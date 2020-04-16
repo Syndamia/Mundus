@@ -10,5 +10,9 @@
             Land = new Land();
             Underground = new Underground();
         }
+
+        public static ISuperLayer[] AllSuperLayers() {
+            return new ISuperLayer[] { Sky, Land, Underground};
+        }
     }
 }

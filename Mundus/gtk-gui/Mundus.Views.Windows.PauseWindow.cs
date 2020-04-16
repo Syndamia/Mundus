@@ -59,7 +59,7 @@ namespace Mundus.Views.Windows
 			this.lblBuild.WidthRequest = 300;
 			this.lblBuild.HeightRequest = 20;
 			this.lblBuild.Name = "lblBuild";
-			this.lblBuild.LabelProp = "Build 16-04-2020 No1";
+			this.lblBuild.LabelProp = "Build 16-04-2020 No2";
 			this.lblBuild.Justify = ((global::Gtk.Justification)(2));
 			this.vbox1.Add(this.lblBuild);
 			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.lblBuild]));
