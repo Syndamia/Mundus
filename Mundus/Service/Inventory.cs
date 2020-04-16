@@ -90,7 +90,7 @@ namespace Mundus.Service {
         }
 
         public static ItemTile GetPlayerItem(string place, int index) {
-            return Data.Superlayers.Mobs.LMI.Player.Inventory.GetItemTile(place, index);
+            return Data.Superlayers.Mobs.MI.Player.Inventory.GetItemTile(place, index);
         }
     }
 }

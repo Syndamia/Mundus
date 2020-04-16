@@ -1,6 +1,7 @@
 ﻿using System;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
+using Mundus.Service.Mobs.LandMobs;
 using Mundus.Service.Tiles;
 using Mundus.Service.Tiles.ItemPresets;
 using Mundus.Service.Tiles.Items;
@@ -10,21 +11,29 @@ namespace Mundus.Service.SuperLayers.Generators {
         private static Random rnd;
 
         public static void GenerateAllLayers(int size) {
-            LI.Land.SetMobLayer(GenerateMobLayer(size));
             LI.Land.SetGroundLayer(GenerateGroundLayer(size));
             LI.Land.SetStructureLayer(GenerateStructureLayer(size));
+            LI.Land.SetMobLayer(GenerateMobLayer(size));
         }
 
         private static MobTile[,] GenerateMobLayer(int size) {
             MobTile[,] tiles = new MobTile[size, size];
 
-            for (int col = 0; col < size; col++) {
-                for (int row = 0; row < size; row++) {
-                    if (col == size / 2 && row == size / 2) {
-                        LMI.Player.YPos = row;
-                        LMI.Player.XPos = col;
-                        LMI.Player.CurrSuperLayer = LI.Land;
-                        tiles[col, row] = LMI.Player.Tile;
+            for (int y = 0; y < size; y++) {
+                for (int x = 0; x < size; x++) {
+                    if (LI.Land.GetGroundLayerTile(y, x) != null &&
+                        LI.Land.GetStructureLayerTile(y, x) == null) 
+                    {
+                        if (y == size / 2 && x == size / 2) {
+                            MI.Player.YPos = x;
+                            MI.Player.XPos = y;
+                            tiles[y, x] = MI.Player;
+                        }
+                        else if (rnd.Next(0, 20) == 1) {
+                            tiles[y, x] = LandMobsPresets.GetACow();
+                            tiles[y, x].YPos = y;
+                            tiles[y, x].XPos = x;
+                        }
                     }
                 }
             }

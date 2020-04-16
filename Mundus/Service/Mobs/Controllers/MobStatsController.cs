@@ -3,10 +3,10 @@ using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Service.SuperLayers;
 
-namespace Mundus.Service.Mobs {
+namespace Mundus.Service.Mob.Controllers {
     public static class MobStatsController {
         public static int GetPlayerHealth() {
-            return LMI.Player.Health;
+            return MI.Player.Health;
         }
 
         public static string GetPlayerHearth(int index) {
@@ -22,23 +22,23 @@ namespace Mundus.Service.Mobs {
         }
 
         public static void DamagePlayer(int healthPoints) {
-            LMI.Player.Health -= healthPoints;
+            MI.Player.Health -= healthPoints;
 
-            if (LMI.Player.Health <= 0) {
+            if (MI.Player.Health <= 0) {
                 //do smth
             }
         }
 
         public static void TryHealPlayer(int healthPoints) {
-            LMI.Player.Health += healthPoints;
+            MI.Player.Health += healthPoints;
 
-            if (LMI.Player.Health > MapSizes.CurrSize / 5 * 4) {
-                LMI.Player.Health = MapSizes.CurrSize / 5 * 4;
+            if (MI.Player.Health > MapSizes.CurrSize / 5 * 4) {
+                MI.Player.Health = MapSizes.CurrSize / 5 * 4;
             }
         }
 
         public static string GetPlayerSuperLayerName() {
-            return LMI.Player.CurrSuperLayer.ToString();
+            return MI.Player.CurrSuperLayer.ToString();
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace Mundus.Service.Mobs {
         /// </summary>
         /// <returns>Player.XPos</returns>
         public static int GetPlayerXCoord() {
-            return LMI.Player.XPos;
+            return MI.Player.XPos;
         }
 
         /// <summary>
@@ -54,16 +54,16 @@ namespace Mundus.Service.Mobs {
         /// </summary>
         /// <returns>Player.YPos</returns>
         public static int GetPlayerYCoord() {
-            return LMI.Player.YPos;
+            return MI.Player.YPos;
         }
 
         public static bool ExistsHoleOnTopOfPlayer() {
             //There can't be a hole if there is nothing above layer
-            if (HeightController.GetLayerAboveMob(LMI.Player) == null) {
+            if (HeightController.GetLayerAboveMob(MI.Player) == null) {
                 return false;
             }
-            return HeightController.GetLayerAboveMob(LMI.Player).GetGroundLayerTile(LMI.Player.YPos, LMI.Player.XPos) == null ||
-                   !HeightController.GetLayerAboveMob(LMI.Player).GetGroundLayerTile(LMI.Player.YPos, LMI.Player.XPos).Solid;
+            return HeightController.GetLayerAboveMob(MI.Player).GetGroundLayerTile(MI.Player.YPos, MI.Player.XPos) == null ||
+                   !HeightController.GetLayerAboveMob(MI.Player).GetGroundLayerTile(MI.Player.YPos, MI.Player.XPos).Solid;
         }
     }
 }

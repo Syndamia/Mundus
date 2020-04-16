@@ -9,7 +9,7 @@ namespace Mundus.Service.SuperLayers {
         //Set the image to be either the ground layer tile, "blank" icon, item layer tile, mob layer tile or don't set it to anything 
         //Note: first the ground and the blank icons are printed, then over them are printed the item tiles and over them are mob tiles
         public static Image GetScreenImage(int row, int col, int layer) {
-            ISuperLayer superLayer = LMI.Player.CurrSuperLayer;
+            ISuperLayer superLayer = MI.Player.CurrSuperLayer;
             Image img = null;
 
             //Layer 0 is GroundLayer, 1 is ItemLayer and 2 is Moblayer
@@ -32,18 +32,18 @@ namespace Mundus.Service.SuperLayers {
 
 
         public static Image GetGroundImage(int row, int col) {
-            ISuperLayer superLayer = LMI.Player.CurrSuperLayer;
+            ISuperLayer superLayer = MI.Player.CurrSuperLayer;
             Image img = new Image("L_hole", IconSize.Dnd);
 
             if (row >= 0 && col >= 0 && col < MapSizes.CurrSize && row < MapSizes.CurrSize &&
-                superLayer.GetGroundLayerTile( row, col ) != null) {
+                superLayer.GetGroundLayerTile(row, col) != null) {
                 img = superLayer.GetGroundLayerTile( row, col ).Texture;
             }
             return img;
         }
 
         public static Image GetStructureImage(int row, int col) {
-            ISuperLayer superLayer = LMI.Player.CurrSuperLayer;
+            ISuperLayer superLayer = MI.Player.CurrSuperLayer;
             Image img = new Image("blank", IconSize.Dnd );
 
             if (IsInsideBoundaries(row, col) &&
@@ -61,16 +61,16 @@ namespace Mundus.Service.SuperLayers {
         public static Image GetHotbarImage(int index) {
             Image img = new Image("blank", IconSize.Dnd);
 
-            if (index < LMI.Player.Inventory.Hotbar.Length) {
-                if (LMI.Player.Inventory.Hotbar[index] != null) {
+            if (index < MI.Player.Inventory.Hotbar.Length) {
+                if (MI.Player.Inventory.Hotbar[index] != null) {
                     // Structures have two icons, one when they are placed and one as an inventory item.
                     // All other item types have only one icon (texture).
-                    if (LMI.Player.Inventory.Hotbar[index].GetType() == typeof(Structure)) {
-                        Structure tmp = (Structure)LMI.Player.Inventory.Hotbar[index];
+                    if (MI.Player.Inventory.Hotbar[index].GetType() == typeof(Structure)) {
+                        Structure tmp = (Structure)MI.Player.Inventory.Hotbar[index];
                         img = new Image(tmp.inventory_stock_id, IconSize.Dnd);
                     }
                     else {
-                        img = LMI.Player.Inventory.Hotbar[index].Texture;
+                        img = MI.Player.Inventory.Hotbar[index].Texture;
                     }
                 }
             }
@@ -80,16 +80,16 @@ namespace Mundus.Service.SuperLayers {
         public static Image GetInventoryItemImage(int index) {
             Image img = new Image("blank", IconSize.Dnd);
 
-            if (index < LMI.Player.Inventory.Items.Length) {
-                if (LMI.Player.Inventory.Items[index] != null) {
+            if (index < MI.Player.Inventory.Items.Length) {
+                if (MI.Player.Inventory.Items[index] != null) {
                     // Structures have two icons, one when they are placed and one as an inventory item.
                     // All other item types have only one icon (texture).
-                    if (LMI.Player.Inventory.Items[index].GetType() == typeof(Structure)) {
-                        Structure tmp = (Structure)LMI.Player.Inventory.Items[index];
+                    if (MI.Player.Inventory.Items[index].GetType() == typeof(Structure)) {
+                        Structure tmp = (Structure)MI.Player.Inventory.Items[index];
                         img = new Image(tmp.inventory_stock_id, IconSize.Dnd);
                     }
                     else {
-                        img = LMI.Player.Inventory.Items[index].Texture;
+                        img = MI.Player.Inventory.Items[index].Texture;
                     }
                 }
             }
@@ -99,9 +99,9 @@ namespace Mundus.Service.SuperLayers {
         public static Image GetAccessoryImage(int index) {
             Image img = new Image("blank_gear", IconSize.Dnd);
 
-            if (index < LMI.Player.Inventory.Accessories.Length) {
-                if (LMI.Player.Inventory.Accessories[index] != null) {
-                    img = LMI.Player.Inventory.Accessories[index].Texture;
+            if (index < MI.Player.Inventory.Accessories.Length) {
+                if (MI.Player.Inventory.Accessories[index] != null) {
+                    img = MI.Player.Inventory.Accessories[index].Texture;
                 }
             }
             return img;
@@ -110,9 +110,9 @@ namespace Mundus.Service.SuperLayers {
         public static Image GetGearImage(int index) {
             Image img = new Image("blank_gear", IconSize.Dnd);
 
-            if (index < LMI.Player.Inventory.Gear.Length) {
-                if (LMI.Player.Inventory.Gear[index] != null) {
-                    img = LMI.Player.Inventory.Gear[index].Texture;
+            if (index < MI.Player.Inventory.Gear.Length) {
+                if (MI.Player.Inventory.Gear[index] != null) {
+                    img = MI.Player.Inventory.Gear[index].Texture;
                 }
             }
             return img;

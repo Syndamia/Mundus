@@ -8,9 +8,9 @@ namespace Mundus.Views.Windows
 
 		private global::Gtk.HBox hbox1;
 
-		private global::Gtk.Button btnBack;
-
 		private global::Gtk.Label lblTitle;
+
+		private global::Gtk.Label lblBuild;
 
 		private global::Gtk.HSeparator hSeparator;
 
@@ -40,32 +40,30 @@ namespace Mundus.Views.Windows
 			this.hbox1.Name = "hbox1";
 			this.hbox1.Spacing = 2;
 			// Container child hbox1.Gtk.Box+BoxChild
-			this.btnBack = new global::Gtk.Button();
-			this.btnBack.WidthRequest = 50;
-			this.btnBack.HeightRequest = 50;
-			this.btnBack.CanFocus = true;
-			this.btnBack.Name = "btnBack";
-			this.btnBack.UseUnderline = true;
-			this.btnBack.Label = "Back";
-			this.hbox1.Add(this.btnBack);
-			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.btnBack]));
-			w1.Position = 0;
-			w1.Expand = false;
-			w1.Fill = false;
-			// Container child hbox1.Gtk.Box+BoxChild
 			this.lblTitle = new global::Gtk.Label();
+			this.lblTitle.HeightRequest = 50;
 			this.lblTitle.Name = "lblTitle";
 			this.lblTitle.LabelProp = "Pause menu";
 			this.lblTitle.Justify = ((global::Gtk.Justification)(2));
 			this.hbox1.Add(this.lblTitle);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.lblTitle]));
-			w2.Position = 1;
+			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.lblTitle]));
+			w1.Position = 0;
+			w1.Padding = ((uint)(3));
+			this.vbox1.Add(this.hbox1);
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
+			w2.Position = 0;
 			w2.Expand = false;
 			w2.Fill = false;
-			w2.Padding = ((uint)(3));
-			this.vbox1.Add(this.hbox1);
-			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
-			w3.Position = 0;
+			// Container child vbox1.Gtk.Box+BoxChild
+			this.lblBuild = new global::Gtk.Label();
+			this.lblBuild.WidthRequest = 300;
+			this.lblBuild.HeightRequest = 20;
+			this.lblBuild.Name = "lblBuild";
+			this.lblBuild.LabelProp = "Build 16-04-2020 No1";
+			this.lblBuild.Justify = ((global::Gtk.Justification)(2));
+			this.vbox1.Add(this.lblBuild);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.lblBuild]));
+			w3.Position = 1;
 			w3.Expand = false;
 			w3.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
@@ -74,7 +72,7 @@ namespace Mundus.Views.Windows
 			this.hSeparator.Name = "hSeparator";
 			this.vbox1.Add(this.hSeparator);
 			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hSeparator]));
-			w4.Position = 1;
+			w4.Position = 2;
 			w4.Expand = false;
 			w4.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
@@ -87,7 +85,7 @@ namespace Mundus.Views.Windows
 			this.btnSettings.Label = "Settings";
 			this.vbox1.Add(this.btnSettings);
 			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.btnSettings]));
-			w5.Position = 2;
+			w5.Position = 3;
 			w5.Expand = false;
 			w5.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
@@ -100,7 +98,7 @@ namespace Mundus.Views.Windows
 			this.btnSave.Label = "Save";
 			this.vbox1.Add(this.btnSave);
 			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.btnSave]));
-			w6.Position = 3;
+			w6.Position = 4;
 			w6.Expand = false;
 			w6.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
@@ -113,7 +111,7 @@ namespace Mundus.Views.Windows
 			this.btnSaveExit.Label = "Save & Exit";
 			this.vbox1.Add(this.btnSaveExit);
 			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.btnSaveExit]));
-			w7.Position = 4;
+			w7.Position = 5;
 			w7.Expand = false;
 			w7.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
@@ -126,7 +124,7 @@ namespace Mundus.Views.Windows
 			this.btnExit.Label = "Exit";
 			this.vbox1.Add(this.btnExit);
 			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.btnExit]));
-			w8.Position = 5;
+			w8.Position = 6;
 			w8.Expand = false;
 			w8.Fill = false;
 			this.Add(this.vbox1);
@@ -134,11 +132,10 @@ namespace Mundus.Views.Windows
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 191;
-			this.DefaultHeight = 285;
+			this.DefaultWidth = 300;
+			this.DefaultHeight = 311;
 			this.Show();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
-			this.btnBack.Clicked += new global::System.EventHandler(this.OnBtnBackClicked);
 			this.btnSettings.Clicked += new global::System.EventHandler(this.OnBtnSettingsClicked);
 			this.btnSave.Clicked += new global::System.EventHandler(this.OnBtnSaveClicked);
 			this.btnSaveExit.Clicked += new global::System.EventHandler(this.OnBtnSaveExitClicked);

@@ -13,12 +13,12 @@ namespace Mundus.Service.Crafting {
         /// Gets all different items and their quantaties in the inventory. Stores that in memory.
         /// </summary>
         public static void FindAvalableItems() {
-            avalableItems = LMI.Player.Inventory.Items.Where(x => x != null)
+            avalableItems = MI.Player.Inventory.Items.Where(x => x != null)
                        //Can't use distinct on non primative types, beause they also hold their memory location info (I think).
                        //This is my way of getting only the "unique" item tiles.
-                       .Select(x => x.stock_id).Distinct().Select(x => LMI.Player.Inventory.Items.Where(y => y != null).First(y => y.stock_id == x))
+                       .Select(x => x.stock_id).Distinct().Select(x => MI.Player.Inventory.Items.Where(y => y != null).First(y => y.stock_id == x))
                        //For each "unique" item tile (key), get how many there are of it in the player inventory (value)
-                       .Select(x => new KeyValuePair<ItemTile, int>(x, LMI.Player.Inventory.Items.Where(y => y != null).Count(i => i.stock_id == x.stock_id)))
+                       .Select(x => new KeyValuePair<ItemTile, int>(x, MI.Player.Inventory.Items.Where(y => y != null).Count(i => i.stock_id == x.stock_id)))
                        .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         }
 
@@ -41,10 +41,10 @@ namespace Mundus.Service.Crafting {
         public static void CraftItem(CraftingRecipe itemRecipe) {
             // Removes all items that are used to craft the result item
             foreach (var itemAndCount in itemRecipe.GetRequiredItemsAndCounts()) {
-                for(int i = 0, removedItems = 0; i < LMI.Player.Inventory.Items.Length && removedItems < itemAndCount.Value; i++) {
-                    if (LMI.Player.Inventory.Items[i] != null) {
-                        if (LMI.Player.Inventory.Items[i].stock_id == itemAndCount.Key.stock_id) {
-                            LMI.Player.Inventory.Items[i] = null;
+                for(int i = 0, removedItems = 0; i < MI.Player.Inventory.Items.Length && removedItems < itemAndCount.Value; i++) {
+                    if (MI.Player.Inventory.Items[i] != null) {
+                        if (MI.Player.Inventory.Items[i].stock_id == itemAndCount.Key.stock_id) {
+                            MI.Player.Inventory.Items[i] = null;
                             removedItems++;
                         }
                     }
@@ -65,7 +65,7 @@ namespace Mundus.Service.Crafting {
             if (itemRecipe.ResultItem.GetType() == typeof(Structure)) {
                 tmp = new Structure((Structure)itemRecipe.ResultItem);
             }
-            LMI.Player.Inventory.AppendToItems(tmp);
+            MI.Player.Inventory.AppendToItems(tmp);
 
             Data.Windows.WI.SelWin.PrintInventory();
         }

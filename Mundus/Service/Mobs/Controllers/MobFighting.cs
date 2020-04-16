@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Mundus.Service.Mobs {
+namespace Mundus.Service.Mobs.Controllers {
     public class MobFighting {
         public MobFighting() {
         }

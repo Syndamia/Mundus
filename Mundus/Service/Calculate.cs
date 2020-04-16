@@ -10,35 +10,35 @@ namespace Mundus.Service {
          *he isn't, it depends on the screen and map sizes.*/
         //kind of hardcoded
         public static int CalculateMaxY(int size) {
-            int maxY = (LMI.Player.YPos - 2 >= 0) ? LMI.Player.YPos + 2 : size - 1;
+            int maxY = (MI.Player.YPos - 2 >= 0) ? MI.Player.YPos + 2 : size - 1;
             if (maxY >= MapSizes.CurrSize) maxY = MapSizes.CurrSize - 1;
             return maxY;
         }
         public static int CalculateStartY(int size) {
-            int startY = (LMI.Player.YPos - 2 <= MapSizes.CurrSize - size) ? LMI.Player.YPos - 2 : MapSizes.CurrSize - size;
+            int startY = (MI.Player.YPos - 2 <= MapSizes.CurrSize - size) ? MI.Player.YPos - 2 : MapSizes.CurrSize - size;
             if (startY < 0) startY = 0;
             return startY;
         }
         public static int CalculateMaxX(int size) {
-            int maxX = (LMI.Player.XPos - 2 >= 0) ? LMI.Player.XPos + 2 : size - 1;
+            int maxX = (MI.Player.XPos - 2 >= 0) ? MI.Player.XPos + 2 : size - 1;
             if (maxX >= MapSizes.CurrSize) maxX = MapSizes.CurrSize - 1;
             return maxX;
         }
         public static int CalculateStartX(int size) {
-            int startX = (LMI.Player.XPos - 2 <= MapSizes.CurrSize - size) ? LMI.Player.XPos - 2 : MapSizes.CurrSize - size;
+            int startX = (MI.Player.XPos - 2 <= MapSizes.CurrSize - size) ? MI.Player.XPos - 2 : MapSizes.CurrSize - size;
             if (startX < 0) startX = 0;
             return startX;
         }
 
         //Screen buttons show only a certain part of the whole map
         public static int CalculateYFromButton(int buttonYPos, int size) {
-            int newYPos = (LMI.Player.YPos - 2 >= 0) ? LMI.Player.YPos - 2 + buttonYPos : buttonYPos;
-            if (LMI.Player.YPos > MapSizes.CurrSize - 3) newYPos = buttonYPos + MapSizes.CurrSize - size;
+            int newYPos = (MI.Player.YPos - 2 >= 0) ? MI.Player.YPos - 2 + buttonYPos : buttonYPos;
+            if (MI.Player.YPos > MapSizes.CurrSize - 3) newYPos = buttonYPos + MapSizes.CurrSize - size;
             return newYPos;
         }
         public static int CalculateXFromButton(int buttonXPos, int size) {
-            int newXPos = (LMI.Player.XPos - 2 >= 0) ? LMI.Player.XPos - 2 + buttonXPos : buttonXPos;
-            if (LMI.Player.XPos > MapSizes.CurrSize - 3) newXPos = buttonXPos + MapSizes.CurrSize - size;
+            int newXPos = (MI.Player.XPos - 2 >= 0) ? MI.Player.XPos - 2 + buttonXPos : buttonXPos;
+            if (MI.Player.XPos > MapSizes.CurrSize - 3) newXPos = buttonXPos + MapSizes.CurrSize - size;
             return newXPos;
         }
     }

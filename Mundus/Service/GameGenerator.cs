@@ -32,7 +32,7 @@ namespace Mundus.Service {
         public static void GameWindowInventorySetup() {
             WI.SelWin.SetDefaults();
             WI.WPause.GameWindow = WI.SelWin;
-            LMI.CreateInventories(WI.SelWin.Size);
+            MI.CreateInventories(WI.SelWin.Size);
             WI.SelWin.PrintScreen();
             WI.SelWin.PrintMainMenu();
             WI.SelWin.Show();

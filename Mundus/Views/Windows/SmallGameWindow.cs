@@ -1,7 +1,9 @@
 ﻿using System;
 using Gtk;
 using Mundus.Service;
+using Mundus.Service.Mob.Controllers;
 using Mundus.Service.Mobs;
+using Mundus.Service.Mobs.Controllers;
 using Mundus.Service.SuperLayers;
 using Mundus.Service.Tiles.Items;
 
@@ -578,6 +580,7 @@ namespace Mundus.Views.Windows {
 
             if (!HasSelection()) {
                 MobMovement.MovePlayer(mapYPos, mapXPos, Size);
+                MobMovement.MoveRandomlyMobsAtPlayerLayer();
             }
             else {
                 if (Inventory.GetPlayerItem(selPlace, selIndex) != null) {

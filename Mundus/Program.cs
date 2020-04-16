@@ -15,7 +15,7 @@ namespace Mundus {
             WI.CreateInstances();
             DI.CreateInstances();
             LI.CreateInstances();
-            LMI.CreateInstances( 1 );
+            MI.CreateInstances( 1 );
             RI.CreateInstances();
 
             WI.WMain.Show();

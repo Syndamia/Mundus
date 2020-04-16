@@ -157,6 +157,11 @@
         <property name="Image">resource:Mundus.Icons.Sky.Ground.s_sky.png</property>
       </source>
     </icon-set>
+    <icon-set id="L_test_icon_mob">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Mobs.test1.jpg</property>
+      </source>
+    </icon-set>
   </icon-factory>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.NewGameWindow" design-size="581 275">
     <property name="MemberName" />
@@ -519,6 +524,7 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label">Creative</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -547,6 +553,7 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label">Easy</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -628,6 +635,7 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label">Large</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -683,6 +691,7 @@
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Label">Large</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -5281,7 +5290,7 @@
       <placeholder />
     </child>
   </widget>
-  <widget class="Gtk.Window" id="Mundus.Views.Windows.SettingsWindow" design-size="386 300">
+  <widget class="Gtk.Window" id="Mundus.Views.Windows.SettingsWindow" design-size="333 300">
     <property name="MemberName" />
     <property name="Title">Settings</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -5292,7 +5301,7 @@
       <widget class="Gtk.Table" id="tbUI">
         <property name="MemberName" />
         <property name="NRows">4</property>
-        <property name="NColumns">7</property>
+        <property name="NColumns">6</property>
         <property name="RowSpacing">3</property>
         <property name="ColumnSpacing">3</property>
         <child>
@@ -5338,38 +5347,6 @@
           <placeholder />
         </child>
         <child>
-          <placeholder />
-        </child>
-        <child>
-          <placeholder />
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="btnBack">
-            <property name="MemberName" />
-            <property name="WidthRequest">50</property>
-            <property name="HeightRequest">50</property>
-            <property name="CanFocus">True</property>
-            <property name="Type">TextOnly</property>
-            <property name="Label">Back</property>
-            <property name="UseUnderline">True</property>
-            <property name="BorderWidth">3</property>
-            <signal name="Clicked" handler="OnBtnBackClicked" />
-          </widget>
-          <packing>
-            <property name="LeftAttach">1</property>
-            <property name="RightAttach">2</property>
-            <property name="AutoSize">False</property>
-            <property name="XOptions">0</property>
-            <property name="YOptions">0</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">False</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">False</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
           <widget class="Gtk.HSeparator" id="hSeparator">
             <property name="MemberName" />
             <property name="HeightRequest">5</property>
@@ -5378,7 +5355,7 @@
             <property name="TopAttach">1</property>
             <property name="BottomAttach">2</property>
             <property name="LeftAttach">1</property>
-            <property name="RightAttach">6</property>
+            <property name="RightAttach">5</property>
             <property name="AutoSize">True</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>
@@ -5396,27 +5373,8 @@
             <property name="WidthRequest">40</property>
           </widget>
           <packing>
-            <property name="LeftAttach">2</property>
-            <property name="RightAttach">3</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Label" id="lblBlank2">
-            <property name="MemberName" />
-            <property name="WidthRequest">40</property>
-          </widget>
-          <packing>
-            <property name="LeftAttach">4</property>
-            <property name="RightAttach">5</property>
+            <property name="LeftAttach">1</property>
+            <property name="RightAttach">2</property>
             <property name="AutoSize">True</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>
@@ -5434,8 +5392,8 @@
             <property name="WidthRequest">40</property>
           </widget>
           <packing>
-            <property name="LeftAttach">5</property>
-            <property name="RightAttach">6</property>
+            <property name="LeftAttach">4</property>
+            <property name="RightAttach">5</property>
             <property name="AutoSize">True</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>
@@ -5472,8 +5430,8 @@
             <property name="HeightRequest">50</property>
           </widget>
           <packing>
-            <property name="LeftAttach">6</property>
-            <property name="RightAttach">7</property>
+            <property name="LeftAttach">5</property>
+            <property name="RightAttach">6</property>
             <property name="AutoSize">True</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>
@@ -5491,12 +5449,11 @@
             <property name="LabelProp">Settings (replace with picture)</property>
           </widget>
           <packing>
-            <property name="LeftAttach">3</property>
+            <property name="LeftAttach">2</property>
             <property name="RightAttach">4</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
+            <property name="AutoSize">False</property>
             <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
+            <property name="XExpand">True</property>
             <property name="XFill">True</property>
             <property name="XShrink">False</property>
             <property name="YExpand">False</property>
@@ -5507,7 +5464,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="Mundus.Views.Windows.PauseWindow" design-size="191 285">
+  <widget class="Gtk.Window" id="Mundus.Views.Windows.PauseWindow" design-size="300 311">
     <property name="MemberName" />
     <property name="Title">PauseWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -5523,34 +5480,15 @@
             <property name="MemberName" />
             <property name="Spacing">2</property>
             <child>
-              <widget class="Gtk.Button" id="btnBack">
-                <property name="MemberName" />
-                <property name="WidthRequest">50</property>
-                <property name="HeightRequest">50</property>
-                <property name="CanFocus">True</property>
-                <property name="Type">TextOnly</property>
-                <property name="Label">Back</property>
-                <property name="UseUnderline">True</property>
-                <signal name="Clicked" handler="OnBtnBackClicked" />
-              </widget>
-              <packing>
-                <property name="Position">0</property>
-                <property name="AutoSize">True</property>
-                <property name="Expand">False</property>
-                <property name="Fill">False</property>
-              </packing>
-            </child>
-            <child>
               <widget class="Gtk.Label" id="lblTitle">
                 <property name="MemberName" />
+                <property name="HeightRequest">50</property>
                 <property name="LabelProp">Pause menu</property>
                 <property name="Justify">Center</property>
               </widget>
               <packing>
-                <property name="Position">1</property>
-                <property name="AutoSize">True</property>
-                <property name="Expand">False</property>
-                <property name="Fill">False</property>
+                <property name="Position">0</property>
+                <property name="AutoSize">False</property>
                 <property name="Padding">3</property>
               </packing>
             </child>
@@ -5563,12 +5501,27 @@
           </packing>
         </child>
         <child>
+          <widget class="Gtk.Label" id="lblBuild">
+            <property name="MemberName" />
+            <property name="WidthRequest">300</property>
+            <property name="HeightRequest">20</property>
+            <property name="LabelProp">Build 16-04-2020 No1</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
           <widget class="Gtk.HSeparator" id="hSeparator">
             <property name="MemberName" />
             <property name="HeightRequest">5</property>
           </widget>
           <packing>
-            <property name="Position">1</property>
+            <property name="Position">2</property>
             <property name="AutoSize">True</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
@@ -5586,7 +5539,7 @@
             <signal name="Clicked" handler="OnBtnSettingsClicked" />
           </widget>
           <packing>
-            <property name="Position">2</property>
+            <property name="Position">3</property>
             <property name="AutoSize">True</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
@@ -5604,7 +5557,7 @@
             <signal name="Clicked" handler="OnBtnSaveClicked" />
           </widget>
           <packing>
-            <property name="Position">3</property>
+            <property name="Position">4</property>
             <property name="AutoSize">True</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
@@ -5622,7 +5575,7 @@
             <signal name="Clicked" handler="OnBtnSaveExitClicked" />
           </widget>
           <packing>
-            <property name="Position">4</property>
+            <property name="Position">5</property>
             <property name="AutoSize">True</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
@@ -5640,7 +5593,7 @@
             <signal name="Clicked" handler="OnBtnExitClicked" />
           </widget>
           <packing>
-            <property name="Position">5</property>
+            <property name="Position">6</property>
             <property name="AutoSize">True</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
@@ -6725,7 +6678,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="Mundus.Views.Windows.MainWindow" design-size="300 465">
+  <widget class="Gtk.Window" id="Mundus.Views.Windows.MainWindow" design-size="300 485">
     <property name="MemberName" />
     <property name="Title">Mundus</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -6749,12 +6702,27 @@
           </packing>
         </child>
         <child>
+          <widget class="Gtk.Label" id="lblBuild">
+            <property name="MemberName" />
+            <property name="WidthRequest">300</property>
+            <property name="HeightRequest">20</property>
+            <property name="LabelProp">Build 16-04-2020 No1</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
           <widget class="Gtk.HSeparator" id="hSeparator">
             <property name="MemberName" />
             <property name="HeightRequest">5</property>
           </widget>
           <packing>
-            <property name="Position">1</property>
+            <property name="Position">2</property>
             <property name="AutoSize">True</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
@@ -6773,7 +6741,7 @@
             <property name="BorderWidth">7</property>
           </widget>
           <packing>
-            <property name="Position">2</property>
+            <property name="Position">3</property>
             <property name="AutoSize">False</property>
           </packing>
         </child>
@@ -6790,7 +6758,7 @@
             <signal name="Clicked" handler="OnBtnNewGameClicked" />
           </widget>
           <packing>
-            <property name="Position">3</property>
+            <property name="Position">4</property>
             <property name="AutoSize">False</property>
           </packing>
         </child>
@@ -6807,7 +6775,7 @@
             <signal name="Clicked" handler="OnBtnTutorialClicked" />
           </widget>
           <packing>
-            <property name="Position">4</property>
+            <property name="Position">5</property>
             <property name="AutoSize">True</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
@@ -6826,7 +6794,7 @@
             <signal name="Clicked" handler="OnBtnSettingsClicked" />
           </widget>
           <packing>
-            <property name="Position">5</property>
+            <property name="Position">6</property>
             <property name="AutoSize">True</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>

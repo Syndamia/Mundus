@@ -1,22 +1,14 @@
 ﻿using Mundus.Data.SuperLayers;
 using Mundus.Service.Tiles;
+using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Service.Mobs.LandMobs {
-    public class Player : IMob {
-        public MobTile Tile { get; private set; }
-        public ISuperLayer CurrSuperLayer { get; set; }
-        public int YPos { get; set; }
-        public int XPos { get; set; }
+    public class Player : MobTile {
         public Inventory Inventory { get; set; }
-        public int Health { get; set; }
 
-        public Player(string stock_id, int health, int inventorySize) : this(new MobTile(stock_id), health, inventorySize) 
-        { }
-
-        public Player(MobTile tile, int health, int inventorySize) {
-            this.Tile = tile;
+        public Player(string stock_id, int health, int inventorySize, ISuperLayer currentSuperLayer) : base(stock_id, health, currentSuperLayer) 
+        {
             this.Inventory = new Inventory(inventorySize);
-            this.Health = health;
         }
     }
 }

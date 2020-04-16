@@ -12,10 +12,10 @@ namespace Mundus.Service {
             ItemTile[] newOrigin = null;
 
             switch (originName.ToLower()) {
-                case "hotbar": newOrigin = LMI.Player.Inventory.Hotbar; break;
-                case "items": newOrigin = LMI.Player.Inventory.Items; break;
-                case "accessories": newOrigin = LMI.Player.Inventory.Accessories; break;
-                case "gear": newOrigin = LMI.Player.Inventory.Gear; break;
+                case "hotbar": newOrigin = MI.Player.Inventory.Hotbar; break;
+                case "items": newOrigin = MI.Player.Inventory.Items; break;
+                case "accessories": newOrigin = MI.Player.Inventory.Accessories; break;
+                case "gear": newOrigin = MI.Player.Inventory.Gear; break;
             }
             SetOrigin(newOrigin, originIndex);
         }
@@ -30,10 +30,10 @@ namespace Mundus.Service {
             ItemTile[] destinationLocation = null;
 
             switch (destination.ToLower()) {
-                case "hotbar": destinationLocation = LMI.Player.Inventory.Hotbar; break;
-                case "items": destinationLocation = LMI.Player.Inventory.Items; break;
-                case "accessories": destinationLocation = LMI.Player.Inventory.Accessories; break;
-                case "gear": destinationLocation = LMI.Player.Inventory.Gear; break;
+                case "hotbar": destinationLocation = MI.Player.Inventory.Hotbar; break;
+                case "items": destinationLocation = MI.Player.Inventory.Items; break;
+                case "accessories": destinationLocation = MI.Player.Inventory.Accessories; break;
+                case "gear": destinationLocation = MI.Player.Inventory.Gear; break;
             }
 
             var toTransfer = origin[oIndex];

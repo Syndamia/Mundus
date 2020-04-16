@@ -11,13 +11,9 @@ namespace Mundus.Views.Windows {
         }
 
         protected void OnDeleteEvent(object o, Gtk.DeleteEventArgs args) {
-            this.OnBtnBackClicked(this, null);
-            args.RetVal = true;
-        }
-
-        protected void OnBtnBackClicked(object sender, EventArgs e) {
             WindowController.PauseWindowVisible = false;
             this.Hide();
+            args.RetVal = true;
         }
 
         protected void OnBtnSettingsClicked(object sender, EventArgs e) {

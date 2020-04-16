@@ -1,14 +1,36 @@
-﻿using Mundus.Data;
+﻿using System;
+using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Service.SuperLayers;
+using Mundus.Service.Tiles;
 
-namespace Mundus.Service.Mobs {
+namespace Mundus.Service.Mobs.Controllers {
     public static class MobMovement {
+        private static Random rnd = new Random();
+
         public static void MovePlayer(int yPos, int xPos, int size) {
-            ChangePosition(LMI.Player, yPos, xPos, size);
+            ChangePosition(MI.Player, yPos, xPos, size);
         }
 
-        public static void ChangePosition(IMob mob, int yPos, int xPos, int size) {
+        public static void MoveRandomlyMobsAtPlayerLayer() {
+            for(int y = 0; y < MapSizes.CurrSize; y++) {
+                for(int x = 0; x < MapSizes.CurrSize; x++) {
+                    MobTile mob = MI.Player.CurrSuperLayer.GetMobLayerTile(y, x);
+
+                    if (mob != null) {
+                        if (mob != MI.Player &&
+                            rnd.Next(0, mob.RndMovementRate) == 1) {
+                            int newYPos = rnd.Next(mob.YPos - 1, mob.YPos + 2);
+                            int newXPos = rnd.Next(mob.XPos - 1, mob.XPos + 2);
+
+                            ChangePosition(mob, newYPos, newXPos, MapSizes.CurrSize);
+                        }
+                    }
+                }
+            }
+        }
+
+        public static void ChangePosition(MobTile mob, int yPos, int xPos, int size) {
             if (InBoundaries(yPos, xPos)) {
                 if (CanWalkAt(mob, yPos, xPos)) {
                     ChangePosition(mob, yPos, xPos);
@@ -16,7 +38,7 @@ namespace Mundus.Service.Mobs {
             }
         }
 
-        public static void ChangePosition(IMob mob, int yPos, int xPos) {
+        public static void ChangePosition(MobTile mob, int yPos, int xPos) {
             mob.CurrSuperLayer.RemoveMobFromPosition(mob.YPos, mob.XPos);
 
             if (mob.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) == null) {
@@ -41,14 +63,14 @@ namespace Mundus.Service.Mobs {
 
             mob.YPos = yPos;
             mob.XPos = xPos;
-            mob.CurrSuperLayer.SetMobAtPosition(mob.Tile, yPos, xPos);
+            mob.CurrSuperLayer.SetMobAtPosition(mob, yPos, xPos);
         }
 
-        private static bool CanWalkAt(IMob mob, int yPos, int xPos) {
+        private static bool CanWalkAt(MobTile mob, int yPos, int xPos) {
             //Mobs can only walk on free ground (no structure on top) or walkable structures
             return (mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) == null ||
-                    mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos).IsWalkable) ||
-                    mob.CurrSuperLayer.GetMobLayerTile(yPos, xPos) != null;
+                    mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos).IsWalkable) &&
+                    mob.CurrSuperLayer.GetMobLayerTile(yPos, xPos) == null;
         }
 
         private static bool InBoundaries(int yPos, int xPos) {

@@ -1,12 +1,13 @@
-﻿using Mundus.Service.Mobs.LandMobs;
+﻿using Mundus.Data.SuperLayers;
+using Mundus.Service.Mobs.LandMobs;
 using Mundus.Service.Tiles.ItemPresets;
 
 namespace Mundus.Data.Superlayers.Mobs {
-    public static class LMI { //stands for Land Mob Instances
+    public static class MI { //stands for Land Mob Instances
         public static Player Player { get; private set; }
 
         public static void CreateInstances(int inventorySize) {
-            Player = new Player("player", 20, inventorySize);
+            Player = new Player("player", 20, inventorySize, LI.Land);
         }
 
         public static void CreateInventories(int screenInvSize) {

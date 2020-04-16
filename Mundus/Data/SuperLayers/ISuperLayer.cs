@@ -3,7 +3,7 @@ using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Data.SuperLayers {
     public interface ISuperLayer {
-        MobTile GetMobLayerTile(int yPpos, int xPos);
+        MobTile GetMobLayerTile(int yPos, int xPos);
         Structure GetStructureLayerTile(int yPos, int xPos);
         GroundTile GetGroundLayerTile(int yPos, int xPos);
 

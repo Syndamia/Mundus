@@ -1,6 +1,7 @@
 ﻿using System;
 using Mundus.Data.SuperLayers;
 using Mundus.Service.Mobs;
+using Mundus.Service.Tiles;
 
 namespace Mundus.Service.SuperLayers {
     public static class HeightController {
@@ -18,7 +19,7 @@ namespace Mundus.Service.SuperLayers {
             return null;
         }
 
-        public static ISuperLayer GetLayerUnderneathMob(IMob currentMob) {
+        public static ISuperLayer GetLayerUnderneathMob(MobTile currentMob) {
             return GetLayerUnderneath(currentMob.CurrSuperLayer);
         }
 
@@ -32,7 +33,7 @@ namespace Mundus.Service.SuperLayers {
             return null;
         }
 
-        public static ISuperLayer GetLayerAboveMob(IMob currentMob) {
+        public static ISuperLayer GetLayerAboveMob(MobTile currentMob) {
             return GetLayerAbove(currentMob.CurrSuperLayer);
         }
     }
