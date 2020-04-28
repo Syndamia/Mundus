@@ -189,7 +189,7 @@ namespace Mundus.Views.Windows {
 
             //Prints hotbar
             for (int i = 0; i < Size; i++) {
-                Image img = ImageController.GetHotbarImage(i);
+                Image img = ImageController.GetPlayerHotbarImage(i);
 
                 switch (i) {
                     case 0: btnH1.Image = img; break;
@@ -209,7 +209,7 @@ namespace Mundus.Views.Windows {
             //Prints the "Ground layer" in map menu
             for (int row = Calculate.CalculateStartY(Size), maxY = Calculate.CalculateMaxY(Size), img = 1; row <= maxY; row++) {
                 for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, img++) {
-                    string sName = ImageController.GetGroundImage(row, col).Stock;
+                    string sName = ImageController.GetPlayerGroundImage(row, col).Stock;
 
                     switch (img) {
                         case 1: imgG1.SetFromStock(sName, IconSize.Dnd); break;
@@ -272,7 +272,7 @@ namespace Mundus.Views.Windows {
             //Prints the "Item layer" in map menu
             for (int row = Calculate.CalculateStartY(Size), maxY = Calculate.CalculateMaxY(Size), img = 1; row <= maxY; row++) {
                 for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, img++) {
-                    string sName = ImageController.GetStructureImage(row, col).Stock;
+                    string sName = ImageController.GetPlayerStructureImage(row, col).Stock;
 
                     switch (img) {
                         case 1: imgI1.SetFromStock(sName, IconSize.Dnd); break;
@@ -335,7 +335,7 @@ namespace Mundus.Views.Windows {
             //Prints the actual inventory (items)
             for (int row = 0; row < Size; row++) {
                 for (int col = 0; col < Size; col++) {
-                    Image img = ImageController.GetInventoryItemImage(row * Size + col);
+                    Image img = ImageController.GetPlayerInventoryItemImage(row * Size + col);
 
                     switch (row * Size + col + 1) {
                         case 1: btnI1.Image = img; break;
@@ -394,7 +394,7 @@ namespace Mundus.Views.Windows {
             //Prints accessories
             for (int row = 0; row < 2; row++) {
                 for (int col = 0; col < Size; col++) {
-                    Image img = ImageController.GetAccessoryImage(row * Size + col);
+                    Image img = ImageController.GetPlayerAccessoryImage(row * Size + col);
 
                     switch (row * Size + col + 1) {
                         case 1: btnA1.Image = img; break;
@@ -417,7 +417,7 @@ namespace Mundus.Views.Windows {
 
             //Prints gear
             for (int i = 0; i < Size; i++) {
-                Image img = ImageController.GetGearImage(i);
+                Image img = ImageController.GetPlayerGearImage(i);
 
                 switch (i + 1) {
                     case 1: btnG1.Image = img; break;

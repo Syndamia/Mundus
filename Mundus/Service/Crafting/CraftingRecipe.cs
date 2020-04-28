@@ -4,21 +4,55 @@ using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Service.Crafting {
     public class CraftingRecipe {
+        /// <summary>
+        /// Item that will be added to the inventory after crafting
+        /// </summary>
+        /// <value>The result item.</value>
         public ItemTile ResultItem { get; private set; }
 
+        /// <summary>
+        /// Required amount of the first item
+        /// </summary>
         public int Count1 { get; private set; }
+        /// <summary>
+        /// Required first item
+        /// </summary>
         public ItemTile ReqItem1 { get; private set; }
 
+        /// <summary>
+        /// Required amount of the second item
+        /// </summary>
         public int Count2 { get; private set; }
+        /// <summary>
+        /// Required second item
+        /// </summary>
         public ItemTile ReqItem2 { get; private set; }
 
+        /// <summary>
+        /// Required amount of the third item
+        /// </summary>
         public int Count3 { get; private set; }
+        /// <summary>
+        /// Required third item
+        /// </summary>
         public ItemTile ReqItem3 { get; private set; }
 
+        /// <summary>
+        /// Required amount of the fourth item
+        /// </summary>
         public int Count4 { get; private set; }
+        /// <summary>
+        /// Required fourth item
+        /// </summary>
         public ItemTile ReqItem4 { get; private set; }
 
+        /// <summary>
+        /// Required amount of the fifth item
+        /// </summary>
         public int Count5 { get; private set; }
+        /// <summary>
+        /// Required fifth item
+        /// </summary>
         public ItemTile ReqItem5 { get; private set; }
 
         public CraftingRecipe(ItemTile resultItem, int count1, ItemTile reqItem1) :this(resultItem, count1, reqItem1, 0, null, 0, null, 0, null, 0, null) 
@@ -53,6 +87,11 @@ namespace Mundus.Service.Crafting {
         }
 
         //ugly af, but will rewrite when I imntegrade data bases
+        /// <summary>
+        /// Checks if the parameter has enough of every requried item
+        /// </summary>
+        /// <returns><c>true</c>If has enough<c>false</c>otherwise</returns>
+        /// <param name="itemsAndCounts">Dictionary that has the items and their respective amounts (that will be checked)</param>
         public bool HasEnoughItems(Dictionary<ItemTile, int> itemsAndCounts) {
             bool hasEnough = true;
 
@@ -94,6 +133,9 @@ namespace Mundus.Service.Crafting {
             return hasEnough;
         }
 
+        /// <summary>
+        /// Checks if the given item (and amount) is enough for the recipe
+        /// </summary>
         public bool HasEnoughOfItem(ItemTile item, int count) {
             if (ReqItem1.stock_id == item.stock_id) return count >= Count1;
             if (ReqItem2.stock_id == item.stock_id) return count >= Count2;
@@ -103,6 +145,9 @@ namespace Mundus.Service.Crafting {
             return false;
         }
 
+        /// <summary>
+        /// Returns a dictionary of every required item and their respective amount
+        /// </summary>
         public Dictionary<ItemTile, int> GetRequiredItemsAndCounts() {
             Dictionary<ItemTile, int> req = new Dictionary<ItemTile, int>();
 

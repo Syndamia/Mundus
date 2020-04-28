@@ -7,23 +7,31 @@ using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Service.Mobs.Controllers {
     public static class MobTerraforming {
+        /// <summary>
+        /// Tries to place a selected structure/ground tile or to mine/dig (destroy) at the selected location
+        /// </summary>
+        /// <param name="inventoryPlace">Place where the selected item is located ("hotbar", "items", ...)</param>
+        /// <param name="inventoryIndex">Index of the place where the item is located</param>
         public static void PlayerTerraformAt(int mapYPos, int mapXPos, string inventoryPlace, int inventoryIndex) {
             var selectedItemType = Inventory.GetPlayerItem(inventoryPlace, inventoryIndex).GetType();
 
+            // If player can place strucure
             if (selectedItemType == typeof(Structure) && PlayerCanBuildStructureAt(mapYPos, mapXPos)) {
                 PlayerBuildStructureAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
                 MI.Player.Inventory.DeleteItemTile(inventoryPlace, inventoryIndex);
             }
+            // If Player can place ground
             else if (selectedItemType == typeof(GroundTile) && PlayerCanPlaceGroundAt(mapYPos, mapXPos)) {
                 PlayerPlaceGroundAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
                 MI.Player.Inventory.DeleteItemTile(inventoryPlace, inventoryIndex);
             }
+            // If player can mine/dig
             else if (selectedItemType == typeof(Tool) && PlayerCanDestroyAt(mapYPos, mapXPos)) {
                 PlayerDestroyAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
             }
         }
 
-
+        // Player can't destory structures/ground tiles if there are none
         private static bool PlayerCanDestroyAt(int yPos, int xPos) {
             return MI.Player.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) != null ||
                    MI.Player.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) != null;
@@ -32,10 +40,11 @@ namespace Mundus.Service.Mobs.Controllers {
         private static void PlayerDestroyAt(int mapYPos, int mapXPos, string place, int index) {
             var selectedTool = (Tool)MI.Player.Inventory.GetItemTile(place, index);
 
-            //Only shovels can destroy ground layer tiles, but not when there is something over the ground tile
+            // Only shovels can destroy ground layer tiles, but not when there is something over the ground tile
             if (selectedTool.Type == ToolTypes.Shovel && MI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos) == null) {
                 PlayerTryDestroyGroundAt(mapYPos, mapXPos, selectedTool);
             }
+            // Don't try to destroy structure if there is no structure
             else if (MI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos) != null) {
                 PlayerTryDestroyStructureAt(mapYPos, mapXPos, selectedTool);
             }
@@ -44,12 +53,12 @@ namespace Mundus.Service.Mobs.Controllers {
         private static void PlayerTryDestroyGroundAt(int mapYPos, int mapXPos, Tool shovel) {
             var selectedGround = MI.Player.CurrSuperLayer.GetGroundLayerTile(mapYPos, mapXPos);
 
-            // Grdound tiles that shoud be unbreakable have negative required shovel class
+            // Grdound tiles that should be unbreakable have a negative required shovel class
             if (selectedGround.ReqShovelClass <= shovel.Class && selectedGround.ReqShovelClass >= 0) {
                 MI.Player.CurrSuperLayer.SetGroundAtPosition(null, mapYPos, mapXPos);
 
-                //When a shovel destroys ground tile, it destroys the structure below (if it is not walkable)
                 ISuperLayer under = HeightController.GetLayerUnderneathMob(MI.Player);
+                // When a shovel destroys ground tile, it destroys the structure below it (but only if it is not walkable)
                 if (under != null && under.GetStructureLayerTile(mapYPos, mapXPos) != null) {
                     if (!under.GetStructureLayerTile(mapYPos, mapXPos).IsWalkable) {
                         under.RemoveStructureFromPosition(mapYPos, mapXPos);
@@ -88,7 +97,7 @@ namespace Mundus.Service.Mobs.Controllers {
             }
         }
 
-
+        // Ground can be placed if there isnt a structure on an empty ground layer spot
         private static bool PlayerCanPlaceGroundAt(int yPos, int xPos) {
             return MI.Player.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) == null &&
                    MI.Player.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) == null;

@@ -22,8 +22,7 @@ namespace Mundus.Views.Windows {
         /// </summary>
         public void Initialize() {
             Reset();
-            CraftingController.FindAvalableItems();
-            this.Recipes = CraftingController.GetAvalableRecipies();
+            this.Recipes = CraftingController.GetAvalableRecipes();
             recipeIndex = 0;
             PrintRecipe();
             UpdateNextPrevBtns();
@@ -113,7 +112,7 @@ namespace Mundus.Views.Windows {
 
 
         protected void OnBtnCraftClicked(object sender, EventArgs e) {
-            CraftingController.CraftItem(Recipes[recipeIndex]);
+            CraftingController.CraftItemPlayer(Recipes[recipeIndex]);
             this.Hide();
         }
     }

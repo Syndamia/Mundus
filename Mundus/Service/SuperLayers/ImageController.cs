@@ -6,8 +6,12 @@ using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Service.SuperLayers {
     public static class ImageController {
-        //Set the image to be either the ground layer tile, "blank" icon, item layer tile, mob layer tile or don't set it to anything 
-        //Note: first the ground and the blank icons are printed, then over them are printed the item tiles and over them are mob tiles
+
+        /// <summary>
+        /// Returns the image of the selected layer in the superlayer
+        /// Note: Layer 0 is GroundLayer, 1 is ItemLayer and 2 is Moblayer
+        /// Note: null structure tiles and null mob tiles are skipped (returns null)
+        /// </summary>
         public static Image GetScreenImage(int row, int col, int layer) {
             ISuperLayer superLayer = MI.Player.CurrSuperLayer;
             Image img = null;
@@ -15,23 +19,24 @@ namespace Mundus.Service.SuperLayers {
             //Layer 0 is GroundLayer, 1 is ItemLayer and 2 is Moblayer
             if (layer == 0) 
             {
-                img = new Image(GetGroundImage(row, col).Stock, IconSize.Dnd);
+                img = new Image(GetPlayerGroundImage(row, col).Stock, IconSize.Dnd);
             }
-            else if (layer == 1 &&
-                     superLayer.GetStructureLayerTile( row, col ) != null) 
+            else if (layer == 1 && superLayer.GetStructureLayerTile( row, col ) != null) 
             {
-                img = new Image(GetStructureImage(row, col).Stock, IconSize.Dnd );
+                img = new Image(GetPlayerStructureImage(row, col).Stock, IconSize.Dnd );
             }
-            else if (layer == 2 &&
-                     superLayer.GetMobLayerTile(row, col) != null) 
+            else if (layer == 2 && superLayer.GetMobLayerTile(row, col) != null) 
             {
                 img = new Image(superLayer.GetMobLayerTile(row, col).stock_id, IconSize.Dnd);
             }
             return img;
         }
 
-
-        public static Image GetGroundImage(int row, int col) {
+        /// <summary>
+        /// Returns the Image on the given position of the ground layer the player is currently in
+        /// Note: null values (holes) get the "L_hole" image
+        /// </summary>
+        public static Image GetPlayerGroundImage(int row, int col) {
             ISuperLayer superLayer = MI.Player.CurrSuperLayer;
             Image img = new Image("L_hole", IconSize.Dnd);
 
@@ -42,7 +47,11 @@ namespace Mundus.Service.SuperLayers {
             return img;
         }
 
-        public static Image GetStructureImage(int row, int col) {
+        /// <summary>
+        /// Returns the Image on the given position of the structure layer the player is currently in
+        /// Note: null values get the "blank" image ; GetScreenImage skips if the value is null
+        /// </summary>
+        public static Image GetPlayerStructureImage(int row, int col) {
             ISuperLayer superLayer = MI.Player.CurrSuperLayer;
             Image img = new Image("blank", IconSize.Dnd );
 
@@ -54,11 +63,16 @@ namespace Mundus.Service.SuperLayers {
             return img;
         }
 
+        // Checks if the position is inside the map
         private static bool IsInsideBoundaries(int row, int col) {
             return row >= 0 && col >= 0 && col < MapSizes.CurrSize && row < MapSizes.CurrSize;
         }
 
-        public static Image GetHotbarImage(int index) {
+        /// <summary>
+        /// Returns the Image on the given position of the player's hotbar (Incentory.Hotbar)
+        /// Note: null values get the "blank" image
+        /// </summary>
+        public static Image GetPlayerHotbarImage(int index) {
             Image img = new Image("blank", IconSize.Dnd);
 
             if (index < MI.Player.Inventory.Hotbar.Length) {
@@ -77,7 +91,11 @@ namespace Mundus.Service.SuperLayers {
             return img;
         }
 
-        public static Image GetInventoryItemImage(int index) {
+        /// <summary>
+        /// Returns the Image on the given position of the player's items inventory (Inventory.Items)
+        /// Note: null values get the "blank" image
+        /// </summary>
+        public static Image GetPlayerInventoryItemImage(int index) {
             Image img = new Image("blank", IconSize.Dnd);
 
             if (index < MI.Player.Inventory.Items.Length) {
@@ -96,7 +114,11 @@ namespace Mundus.Service.SuperLayers {
             return img;
         }
 
-        public static Image GetAccessoryImage(int index) {
+        /// <summary>
+        /// Returns the Image on the given position of the player's accessories (Inventory.Accessories)
+        /// Note: null values get the "blank" image
+        /// </summary>
+        public static Image GetPlayerAccessoryImage(int index) {
             Image img = new Image("blank_gear", IconSize.Dnd);
 
             if (index < MI.Player.Inventory.Accessories.Length) {
@@ -107,7 +129,11 @@ namespace Mundus.Service.SuperLayers {
             return img;
         }
 
-        public static Image GetGearImage(int index) {
+        /// <summary>
+        /// Returns the Image on the given position of the player's gear (Inventory.Gear)
+        /// Note: null values get the "blank" image
+        /// </summary>
+        public static Image GetPlayerGearImage(int index) {
             Image img = new Image("blank_gear", IconSize.Dnd);
 
             if (index < MI.Player.Inventory.Gear.Length) {

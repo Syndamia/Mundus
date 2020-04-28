@@ -9,6 +9,11 @@ namespace Mundus.Service.Mob.Controllers {
             return MI.Player.Health;
         }
 
+        /// <summary>
+        /// Returns the stock_id of the hearth icon that must be used on the given position of the health bar
+        /// </summary>
+        /// <returns>stock_id of hearth icon</returns>
+        /// <param name="index">Health bar index</param>
         public static string GetPlayerHearth(int index) {
             string stock_id = "empty";
 
@@ -29,6 +34,10 @@ namespace Mundus.Service.Mob.Controllers {
             }
         }
 
+        /// <summary>
+        /// Heals the player (unless/until he has full health)
+        /// </summary>
+        /// <param name="healthPoints">Health points to heal with</param>
         public static void TryHealPlayer(int healthPoints) {
             MI.Player.Health += healthPoints;
 
@@ -37,6 +46,9 @@ namespace Mundus.Service.Mob.Controllers {
             }
         }
 
+        /// <summary>
+        /// Returns the name of the superlayer the player is curently on
+        /// </summary>
         public static string GetPlayerSuperLayerName() {
             return MI.Player.CurrSuperLayer.ToString();
         }
@@ -57,8 +69,11 @@ namespace Mundus.Service.Mob.Controllers {
             return MI.Player.YPos;
         }
 
+        /// <summary>
+        /// Checks if the player has an an empty/non-solid tile directly on the superlayer above him
+        /// </summary>
         public static bool ExistsHoleOnTopOfPlayer() {
-            //There can't be a hole if there is nothing above layer
+            //There can't be a hole if there isn't a layer above the player
             if (HeightController.GetLayerAboveMob(MI.Player) == null) {
                 return false;
             }

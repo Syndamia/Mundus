@@ -14,21 +14,23 @@ namespace Mundus.Service.Tiles {
         public int YPos { get; set; }
         public int XPos { get; set; }
         public int Health { get; set; }
-        public Material DroppedUponDeath { get; private set; }
+        public Material DroppedUponDeath { get; protected set; }
+        public Inventory Inventory { get; set; }
 
         /// <summary>
-        /// Specifies how big the chance of a mob moving (randomly) is. lower value means higher chance for movement.
+        /// Specifies how big the chance of a mob moving (randomly) is. Lower the value, higher the chance for movement.
+        /// Note: negative values (or 0) means the mob won't move randomly
         /// </summary>
-        /// <value>The random movement limiter.</value>
-        public int RndMovementRate { get; private set; }
+        public int RndMovementRate { get; protected set; }
 
-        public MobTile(string stock_id, int health, ISuperLayer currentSuperLayer, int rndMovementQualifier = 3, Material droppedUponDeath = null) {
+        public MobTile(string stock_id, int health, ISuperLayer currentSuperLayer, int inventorySize = 5, int rndMovementQualifier = 3, Material droppedUponDeath = null) {
             this.stock_id = stock_id;
             this.Texture = new Image(stock_id, IconSize.Dnd);
             this.Health = health;
             this.CurrSuperLayer = currentSuperLayer;
             this.RndMovementRate = rndMovementQualifier;
             this.DroppedUponDeath = droppedUponDeath;
+            this.Inventory = new Inventory(inventorySize);
         }
     }
 }

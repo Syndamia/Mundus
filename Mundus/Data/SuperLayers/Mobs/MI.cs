@@ -7,7 +7,7 @@ namespace Mundus.Data.Superlayers.Mobs {
         public static Player Player { get; private set; }
 
         public static void CreateInstances(int inventorySize) {
-            Player = new Player("player", 20, inventorySize, LI.Land);
+            Player = new Player("player", 20, LI.Land, inventorySize);
         }
 
         public static void CreateInventories(int screenInvSize) {

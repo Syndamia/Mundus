@@ -1,10 +1,10 @@
-﻿using System;
-using Mundus.Data.SuperLayers;
-using Mundus.Service.Mobs;
+﻿using Mundus.Data.SuperLayers;
 using Mundus.Service.Tiles;
 
 namespace Mundus.Service.SuperLayers {
     public static class HeightController {
+        // Order of layers (top to bottom): sky, land, underground
+
         private static ISuperLayer sky = LI.Sky;
         private static ISuperLayer land = LI.Land;
         private static ISuperLayer underground = LI.Underground;
