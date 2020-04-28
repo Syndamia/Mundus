@@ -44,170 +44,87 @@ namespace Mundus.Views.Windows {
             this.SetInvMenuVisibility(false);
         }
 
-        protected void OnBtnPauseClicked(object sender, EventArgs e) {
-            //TODO: add code that stops (pauses) game cycle
-            WindowController.ShowPauseWindow();
+        private void SelectItem(string place, int index) {
+            if (HasSelection()) {
+                ResetSelection();
+                SwitchItems.ReplaceItems(place, index);
+            }
+            else {
+                selPlace = place;
+                selIndex = index;
+                SwitchItems.SetOrigin(place, index);
+            }
+
+            this.PrintMainMenu();
+            this.PrintInventory();
         }
 
-        protected void OnBtnMapClicked(object sender, EventArgs e) {
-            //Hide inv menu, if it is visible (so only one of the two is visible)
-            if (this.InvMenuIsVisible()) this.OnBtnInvClicked(this, null);
+        private void React(int button) {
+            int buttonYPos = (button - 1) / Size;
+            int buttonXPos = (button - (buttonYPos * Size)) - 1;
+
+            int mapXPos = Calculate.CalculateXFromButton(buttonXPos, Size);
+            int mapYPos = Calculate.CalculateYFromButton(buttonYPos, Size);
+
+            if (!HasSelection()) {
+                MobMovement.MovePlayer(mapYPos, mapXPos, Size);
+                MobMovement.MoveRandomlyAllMobs();
+            }
+            else {
+                if (Inventory.GetPlayerItem(selPlace, selIndex) != null) {
+                    //try to do MobFighting
+                    MobTerraforming.PlayerTerraformAt(mapYPos, mapXPos, selPlace, selIndex);
+                }
+                ResetSelection();
+            }
+
+            this.PrintScreen();
+            this.PrintMainMenu();
 
             if (this.MapMenuIsVisible()) {
-                this.SetMapMenuVisibility(false);
-            } else {
                 this.PrintMap();
-                this.SetMapMenuVisibility(true);
+            }
+            else if (this.InvMenuIsVisible()) {
+                this.PrintInventory();
             }
         }
 
-        private void SetMapMenuVisibility(bool isVisible) {
-            lblGroundLayer.Visible = isVisible;
-            imgG1.Visible = isVisible;
-            imgG2.Visible = isVisible;
-            imgG3.Visible = isVisible;
-            imgG4.Visible = isVisible;
-            imgG5.Visible = isVisible;
-            imgG6.Visible = isVisible;
-            imgG7.Visible = isVisible;
-            imgG8.Visible = isVisible;
-            imgG9.Visible = isVisible;
-            imgG10.Visible = isVisible;
-            imgG11.Visible = isVisible;
-            imgG12.Visible = isVisible;
-            imgG13.Visible = isVisible;
-            imgG14.Visible = isVisible;
-            imgG15.Visible = isVisible;
-            imgG16.Visible = isVisible;
-            imgG17.Visible = isVisible;
-            imgG18.Visible = isVisible;
-            imgG19.Visible = isVisible;
-            imgG20.Visible = isVisible;
-            imgG21.Visible = isVisible;
-            imgG22.Visible = isVisible;
-            imgG23.Visible = isVisible;
-            imgG24.Visible = isVisible;
-            imgG25.Visible = isVisible;
-
-            lblSuperLayer.Visible = isVisible;
-            lblCoord1.Visible = isVisible;
-            lblCoord2.Visible = isVisible;
-
-            lblItemLayer.Visible = isVisible;
-            imgI1.Visible = isVisible;
-            imgI2.Visible = isVisible;
-            imgI3.Visible = isVisible;
-            imgI4.Visible = isVisible;
-            imgI5.Visible = isVisible;
-            imgI6.Visible = isVisible;
-            imgI7.Visible = isVisible;
-            imgI8.Visible = isVisible;
-            imgI9.Visible = isVisible;
-            imgI10.Visible = isVisible;
-            imgI11.Visible = isVisible;
-            imgI12.Visible = isVisible;
-            imgI13.Visible = isVisible;
-            imgI14.Visible = isVisible;
-            imgI15.Visible = isVisible;
-            imgI16.Visible = isVisible;
-            imgI17.Visible = isVisible;
-            imgI18.Visible = isVisible;
-            imgI19.Visible = isVisible;
-            imgI20.Visible = isVisible;
-            imgI21.Visible = isVisible;
-            imgI22.Visible = isVisible;
-            imgI23.Visible = isVisible;
-            imgI24.Visible = isVisible;
-            imgI25.Visible = isVisible;
-
-            lblHoleMsg.Visible = isVisible;
-            lblHoleOnTop.Visible = isVisible;
-
-            lblBlank5.Visible = isVisible;
+        private static string selPlace = null;
+        private static int selIndex = -1;
+        private static void ResetSelection() {
+            selPlace = null;
+            selIndex = -1;
+        }
+        private static bool HasSelection() {
+            return selPlace != null; 
         }
 
         private bool MapMenuIsVisible() {
             return imgG1.Visible;
         }
 
-        protected void OnBtnInvClicked(object sender, EventArgs e) {
-            //Hide map menu, if it is visible (so only one of the two is visible)
-            if (this.MapMenuIsVisible()) this.OnBtnMapClicked(this, null);
-
-            if (btnI1.Visible) {
-                this.SetInvMenuVisibility(false);
-            } else {
-                this.PrintInventory();
-                this.SetInvMenuVisibility(true);
-            }
-        }
-
-        private void SetInvMenuVisibility(bool isVisible) {
-            btnI1.Visible = isVisible;
-            btnI2.Visible = isVisible;
-            btnI3.Visible = isVisible;
-            btnI4.Visible = isVisible;
-            btnI5.Visible = isVisible;
-            btnI6.Visible = isVisible;
-            btnI7.Visible = isVisible;
-            btnI8.Visible = isVisible;
-            btnI9.Visible = isVisible;
-            btnI10.Visible = isVisible;
-            btnI11.Visible = isVisible;
-            btnI12.Visible = isVisible;
-            btnI13.Visible = isVisible;
-            btnI14.Visible = isVisible;
-            btnI15.Visible = isVisible;
-            btnI16.Visible = isVisible;
-            btnI17.Visible = isVisible;
-            btnI18.Visible = isVisible;
-            btnI19.Visible = isVisible;
-            btnI20.Visible = isVisible;
-            btnI21.Visible = isVisible;
-            btnI22.Visible = isVisible;
-            btnI23.Visible = isVisible;
-            btnI24.Visible = isVisible;
-            btnI25.Visible = isVisible;
-            btnCrafting.Visible = isVisible;
-
-            lblAccessories.Visible = isVisible;
-            btnA1.Visible = isVisible;
-            btnA2.Visible = isVisible;
-            btnA3.Visible = isVisible;
-            btnA4.Visible = isVisible;
-            btnA5.Visible = isVisible;
-            btnA6.Visible = isVisible;
-            btnA7.Visible = isVisible;
-            btnA8.Visible = isVisible;
-            btnA9.Visible = isVisible;
-            btnA10.Visible = isVisible;
-
-            lblGear.Visible = isVisible;
-            btnG1.Visible = isVisible;
-            btnG2.Visible = isVisible;
-            btnG3.Visible = isVisible;
-            btnG4.Visible = isVisible;
-            btnG5.Visible = isVisible;
-
-            btnIG1.Visible = isVisible;
-            btnIG2.Visible = isVisible;
-
-            imgInfo.Visible = isVisible;
-            lblInfo.Visible = isVisible;
-
-            lblBlank4.Visible = isVisible;
-        }
 
         private bool InvMenuIsVisible() {
             return btnI1.Visible;
         }
 
-        protected void OnBtnMusicClicked(object sender, EventArgs e) {
-            WindowController.ShowMusicWindow();
+        // 
+        // PRINTING
+        //
+
+        public void PrintSelectedItemInfo(ItemTile itemTile) {
+            if (itemTile != null) {
+                imgInfo.SetFromStock(itemTile.stock_id, IconSize.Dnd);
+                lblInfo.Text = itemTile.ToString();
+            }
+            else {
+                imgInfo.SetFromImage(null, null);
+                lblInfo.Text = null;
+            }
         }
 
         public void PrintScreen() {
-            for(int layer = 0; layer < 3; layer++) {
+            for (int layer = 0; layer < 3; layer++) {
                 for (int row = Calculate.CalculateStartY(Size), maxY = Calculate.CalculateMaxY(Size), btn = 1; row <= maxY; row++) {
                     for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, btn++) {
                         Image img = ImageController.GetScreenImage(row, col, layer);
@@ -288,31 +205,31 @@ namespace Mundus.Views.Windows {
                     string sName = ImageController.GetGroundImage(row, col).Stock;
 
                     switch (img) {
-                        case 1: imgG1.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 2: imgG2.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 3: imgG3.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 4: imgG4.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 5: imgG5.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 6: imgG6.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 7: imgG7.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 8: imgG8.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 9: imgG9.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 10: imgG10.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 11: imgG11.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 12: imgG12.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 13: imgG13.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 14: imgG14.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 15: imgG15.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 16: imgG16.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 17: imgG17.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 18: imgG18.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 19: imgG19.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 20: imgG20.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 21: imgG21.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 22: imgG22.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 23: imgG23.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 24: imgG24.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 25: imgG25.SetFromStock( sName, IconSize.Dnd ); break;
+                        case 1: imgG1.SetFromStock(sName, IconSize.Dnd); break;
+                        case 2: imgG2.SetFromStock(sName, IconSize.Dnd); break;
+                        case 3: imgG3.SetFromStock(sName, IconSize.Dnd); break;
+                        case 4: imgG4.SetFromStock(sName, IconSize.Dnd); break;
+                        case 5: imgG5.SetFromStock(sName, IconSize.Dnd); break;
+                        case 6: imgG6.SetFromStock(sName, IconSize.Dnd); break;
+                        case 7: imgG7.SetFromStock(sName, IconSize.Dnd); break;
+                        case 8: imgG8.SetFromStock(sName, IconSize.Dnd); break;
+                        case 9: imgG9.SetFromStock(sName, IconSize.Dnd); break;
+                        case 10: imgG10.SetFromStock(sName, IconSize.Dnd); break;
+                        case 11: imgG11.SetFromStock(sName, IconSize.Dnd); break;
+                        case 12: imgG12.SetFromStock(sName, IconSize.Dnd); break;
+                        case 13: imgG13.SetFromStock(sName, IconSize.Dnd); break;
+                        case 14: imgG14.SetFromStock(sName, IconSize.Dnd); break;
+                        case 15: imgG15.SetFromStock(sName, IconSize.Dnd); break;
+                        case 16: imgG16.SetFromStock(sName, IconSize.Dnd); break;
+                        case 17: imgG17.SetFromStock(sName, IconSize.Dnd); break;
+                        case 18: imgG18.SetFromStock(sName, IconSize.Dnd); break;
+                        case 19: imgG19.SetFromStock(sName, IconSize.Dnd); break;
+                        case 20: imgG20.SetFromStock(sName, IconSize.Dnd); break;
+                        case 21: imgG21.SetFromStock(sName, IconSize.Dnd); break;
+                        case 22: imgG22.SetFromStock(sName, IconSize.Dnd); break;
+                        case 23: imgG23.SetFromStock(sName, IconSize.Dnd); break;
+                        case 24: imgG24.SetFromStock(sName, IconSize.Dnd); break;
+                        case 25: imgG25.SetFromStock(sName, IconSize.Dnd); break;
                     }
                 }
             }
@@ -327,31 +244,31 @@ namespace Mundus.Views.Windows {
                     string sName = ImageController.GetStructureImage(row, col).Stock;
 
                     switch (img) {
-                        case 1: imgI1.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 2: imgI2.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 3: imgI3.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 4: imgI4.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 5: imgI5.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 6: imgI6.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 7: imgI7.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 8: imgI8.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 9: imgI9.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 10: imgI10.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 11: imgI11.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 12: imgI12.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 13: imgI13.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 14: imgI14.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 15: imgI15.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 16: imgI16.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 17: imgI17.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 18: imgI18.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 19: imgI19.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 20: imgI20.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 21: imgI21.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 22: imgI22.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 23: imgI23.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 24: imgI24.SetFromStock( sName, IconSize.Dnd ); break;
-                        case 25: imgI25.SetFromStock( sName, IconSize.Dnd ); break;
+                        case 1: imgI1.SetFromStock(sName, IconSize.Dnd); break;
+                        case 2: imgI2.SetFromStock(sName, IconSize.Dnd); break;
+                        case 3: imgI3.SetFromStock(sName, IconSize.Dnd); break;
+                        case 4: imgI4.SetFromStock(sName, IconSize.Dnd); break;
+                        case 5: imgI5.SetFromStock(sName, IconSize.Dnd); break;
+                        case 6: imgI6.SetFromStock(sName, IconSize.Dnd); break;
+                        case 7: imgI7.SetFromStock(sName, IconSize.Dnd); break;
+                        case 8: imgI8.SetFromStock(sName, IconSize.Dnd); break;
+                        case 9: imgI9.SetFromStock(sName, IconSize.Dnd); break;
+                        case 10: imgI10.SetFromStock(sName, IconSize.Dnd); break;
+                        case 11: imgI11.SetFromStock(sName, IconSize.Dnd); break;
+                        case 12: imgI12.SetFromStock(sName, IconSize.Dnd); break;
+                        case 13: imgI13.SetFromStock(sName, IconSize.Dnd); break;
+                        case 14: imgI14.SetFromStock(sName, IconSize.Dnd); break;
+                        case 15: imgI15.SetFromStock(sName, IconSize.Dnd); break;
+                        case 16: imgI16.SetFromStock(sName, IconSize.Dnd); break;
+                        case 17: imgI17.SetFromStock(sName, IconSize.Dnd); break;
+                        case 18: imgI18.SetFromStock(sName, IconSize.Dnd); break;
+                        case 19: imgI19.SetFromStock(sName, IconSize.Dnd); break;
+                        case 20: imgI20.SetFromStock(sName, IconSize.Dnd); break;
+                        case 21: imgI21.SetFromStock(sName, IconSize.Dnd); break;
+                        case 22: imgI22.SetFromStock(sName, IconSize.Dnd); break;
+                        case 23: imgI23.SetFromStock(sName, IconSize.Dnd); break;
+                        case 24: imgI24.SetFromStock(sName, IconSize.Dnd); break;
+                        case 25: imgI25.SetFromStock(sName, IconSize.Dnd); break;
                     }
                 }
             }
@@ -363,9 +280,9 @@ namespace Mundus.Views.Windows {
             //Prints the actual inventory (items)
             for (int row = 0; row < Size; row++) {
                 for (int col = 0; col < Size; col++) {
-                    Image img = ImageController.GetInventoryItemImage(row * 5 + col);
+                    Image img = ImageController.GetInventoryItemImage(row * Size + col);
 
-                    switch (row * 5 + col + 1) {
+                    switch (row * Size + col + 1) {
                         case 1: btnI1.Image = img; break;
                         case 2: btnI2.Image = img; break;
                         case 3: btnI3.Image = img; break;
@@ -398,9 +315,9 @@ namespace Mundus.Views.Windows {
             //Prints accessories
             for (int row = 0; row < 2; row++) {
                 for (int col = 0; col < Size; col++) {
-                    Image img = ImageController.GetAccessoryImage(row * 5 + col);
+                    Image img = ImageController.GetAccessoryImage(row * Size + col);
 
-                    switch (row * 5 + col + 1) {
+                    switch (row * Size + col + 1) {
                         case 1: btnA1.Image = img; break;
                         case 2: btnA2.Image = img; break;
                         case 3: btnA3.Image = img; break;
@@ -429,22 +346,66 @@ namespace Mundus.Views.Windows {
             }
         }
 
+        // 
+        // BUTTON CLICKED EVENTS
+        //
+
+        protected void OnBtnIG1Clicked(object sender, EventArgs e) {
+            //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = LandPresets.Boulder();
+            MobStatsController.DamagePlayer(1);
+            //Service.Crafting.CraftingController.FindAvalableItems();
+            PrintMainMenu();
+        }
+
+        protected void OnBtnIG2Clicked(object sender, EventArgs e) {
+            //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[1] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Pickaxe, 1);
+            //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Axe, 1);
+
+            MobStatsController.TryHealPlayer(1);
+            PrintMainMenu();
+        }
+
+        protected void OnBtnPauseClicked(object sender, EventArgs e) {
+            // Note: pause window blocks player input
+            WindowController.ShowPauseWindow();
+        }
+
+        protected void OnBtnMusicClicked(object sender, EventArgs e) {
+            WindowController.ShowMusicWindow();
+        }
+
+
         protected void OnBtnCraftingClicked(object sender, EventArgs e) {
             WindowController.ShowCraftingWindow();
         }
 
-        public void PrintSelectedItemInfo(ItemTile itemTile) {
-            if (itemTile != null) {
-                imgInfo.SetFromStock(itemTile.stock_id, IconSize.Dnd);
-                lblInfo.Text = itemTile.ToString();
+        protected void OnBtnMapClicked(object sender, EventArgs e) {
+            //Hide inv menu, if it is visible (so only one of the two is visible)
+            if (this.InvMenuIsVisible()) this.OnBtnInvClicked(this, null);
+
+            if (this.MapMenuIsVisible()) {
+                this.SetMapMenuVisibility(false);
             }
             else {
-                imgInfo.SetFromImage(null, null);
-                lblInfo.Text = null;
+                this.PrintMap();
+                this.SetMapMenuVisibility(true);
             }
         }
 
-        //Screen buttons
+        protected void OnBtnInvClicked(object sender, EventArgs e) {
+            //Hide map menu, if it is visible (so only one of the two is visible)
+            if (this.MapMenuIsVisible()) this.OnBtnMapClicked(this, null);
+
+            if (btnI1.Visible) {
+                this.SetInvMenuVisibility(false);
+            }
+            else {
+                this.PrintInventory();
+                this.SetInvMenuVisibility(true);
+            }
+        }
+
+        // Screen buttons
         protected void OnBtnP1Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
                 React(1);
@@ -571,36 +532,6 @@ namespace Mundus.Views.Windows {
             }
         }
 
-        private void React(int button) {
-            int buttonYPos = (button - 1) / 5;
-            int buttonXPos = button - buttonYPos * 5 - 1;
-
-            int mapXPos = Calculate.CalculateXFromButton(buttonXPos, Size);
-            int mapYPos = Calculate.CalculateYFromButton(buttonYPos, Size);
-
-            if (!HasSelection()) {
-                MobMovement.MovePlayer(mapYPos, mapXPos, Size);
-                MobMovement.MoveRandomlyAllMobs();
-            }
-            else {
-                if (Inventory.GetPlayerItem(selPlace, selIndex) != null) {
-                    //try to do MobFighting
-                    MobTerraforming.PlayerTerraformAt(mapYPos, mapXPos, selPlace, selIndex);
-                }
-                ResetSelection();
-            }
-
-            this.PrintScreen();
-            this.PrintMainMenu();
-
-            if (this.MapMenuIsVisible()) {
-                this.PrintMap();
-            }
-            else if (this.InvMenuIsVisible()) {
-                this.PrintInventory();
-            }
-        }
-
         //Hotbar buttons
         protected void OnBtnH1Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
@@ -633,7 +564,7 @@ namespace Mundus.Views.Windows {
             }
         }
 
-        //Inventory (items) buttons
+        // Inventory (items) buttons
         protected void OnBtnI1Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
                 this.SelectItem("items", 0);
@@ -785,7 +716,7 @@ namespace Mundus.Views.Windows {
             }
         }
 
-        //Accessories buttons
+        // Accessories buttons
         protected void OnBtnA1Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
                 this.SelectItem("accessories", 0);
@@ -847,7 +778,7 @@ namespace Mundus.Views.Windows {
             }
         }
 
-        //Gear buttons
+        // Gear buttons
         protected void OnBtnG1Clicked(object sender, EventArgs e) {
             if (!WindowController.PauseWindowVisible) {
                 this.SelectItem("gear", 0);
@@ -883,43 +814,129 @@ namespace Mundus.Views.Windows {
             }
         }
 
-        private static string selPlace = null;
-        private static int selIndex = -1;
-        private static void ResetSelection() {
-            selPlace = null;
-            selIndex = -1;
+        // 
+        // VISIBILITY
+        //
+
+        private void SetMapMenuVisibility(bool isVisible) {
+            lblGroundLayer.Visible = isVisible;
+            imgG1.Visible = isVisible;
+            imgG2.Visible = isVisible;
+            imgG3.Visible = isVisible;
+            imgG4.Visible = isVisible;
+            imgG5.Visible = isVisible;
+            imgG6.Visible = isVisible;
+            imgG7.Visible = isVisible;
+            imgG8.Visible = isVisible;
+            imgG9.Visible = isVisible;
+            imgG10.Visible = isVisible;
+            imgG11.Visible = isVisible;
+            imgG12.Visible = isVisible;
+            imgG13.Visible = isVisible;
+            imgG14.Visible = isVisible;
+            imgG15.Visible = isVisible;
+            imgG16.Visible = isVisible;
+            imgG17.Visible = isVisible;
+            imgG18.Visible = isVisible;
+            imgG19.Visible = isVisible;
+            imgG20.Visible = isVisible;
+            imgG21.Visible = isVisible;
+            imgG22.Visible = isVisible;
+            imgG23.Visible = isVisible;
+            imgG24.Visible = isVisible;
+            imgG25.Visible = isVisible;
+
+            lblSuperLayer.Visible = isVisible;
+            lblCoord1.Visible = isVisible;
+            lblCoord2.Visible = isVisible;
+
+            lblItemLayer.Visible = isVisible;
+            imgI1.Visible = isVisible;
+            imgI2.Visible = isVisible;
+            imgI3.Visible = isVisible;
+            imgI4.Visible = isVisible;
+            imgI5.Visible = isVisible;
+            imgI6.Visible = isVisible;
+            imgI7.Visible = isVisible;
+            imgI8.Visible = isVisible;
+            imgI9.Visible = isVisible;
+            imgI10.Visible = isVisible;
+            imgI11.Visible = isVisible;
+            imgI12.Visible = isVisible;
+            imgI13.Visible = isVisible;
+            imgI14.Visible = isVisible;
+            imgI15.Visible = isVisible;
+            imgI16.Visible = isVisible;
+            imgI17.Visible = isVisible;
+            imgI18.Visible = isVisible;
+            imgI19.Visible = isVisible;
+            imgI20.Visible = isVisible;
+            imgI21.Visible = isVisible;
+            imgI22.Visible = isVisible;
+            imgI23.Visible = isVisible;
+            imgI24.Visible = isVisible;
+            imgI25.Visible = isVisible;
+
+            lblHoleMsg.Visible = isVisible;
+            lblHoleOnTop.Visible = isVisible;
+
+            lblBlank5.Visible = isVisible;
         }
-        private static bool HasSelection() {
-            return selPlace != null; 
-        }
 
-        private void SelectItem(string place, int index) {
-            if (HasSelection()) {
-                ResetSelection();
-                SwitchItems.ReplaceItems(place, index);
-            } else {
-                selPlace = place;
-                selIndex = index;
-                SwitchItems.SetOrigin(place, index);
-            }
+        private void SetInvMenuVisibility(bool isVisible) {
+            btnI1.Visible = isVisible;
+            btnI2.Visible = isVisible;
+            btnI3.Visible = isVisible;
+            btnI4.Visible = isVisible;
+            btnI5.Visible = isVisible;
+            btnI6.Visible = isVisible;
+            btnI7.Visible = isVisible;
+            btnI8.Visible = isVisible;
+            btnI9.Visible = isVisible;
+            btnI10.Visible = isVisible;
+            btnI11.Visible = isVisible;
+            btnI12.Visible = isVisible;
+            btnI13.Visible = isVisible;
+            btnI14.Visible = isVisible;
+            btnI15.Visible = isVisible;
+            btnI16.Visible = isVisible;
+            btnI17.Visible = isVisible;
+            btnI18.Visible = isVisible;
+            btnI19.Visible = isVisible;
+            btnI20.Visible = isVisible;
+            btnI21.Visible = isVisible;
+            btnI22.Visible = isVisible;
+            btnI23.Visible = isVisible;
+            btnI24.Visible = isVisible;
+            btnI25.Visible = isVisible;
+            btnCrafting.Visible = isVisible;
 
-            this.PrintMainMenu();
-            this.PrintInventory();
-        }
+            lblAccessories.Visible = isVisible;
+            btnA1.Visible = isVisible;
+            btnA2.Visible = isVisible;
+            btnA3.Visible = isVisible;
+            btnA4.Visible = isVisible;
+            btnA5.Visible = isVisible;
+            btnA6.Visible = isVisible;
+            btnA7.Visible = isVisible;
+            btnA8.Visible = isVisible;
+            btnA9.Visible = isVisible;
+            btnA10.Visible = isVisible;
 
-        protected void OnBtnIG1Clicked(object sender, EventArgs e) {
-            //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = LandPresets.Boulder();
-            MobStatsController.DamagePlayer(1);
-            //Service.Crafting.CraftingController.FindAvalableItems();
-            PrintMainMenu();
-        }
+            lblGear.Visible = isVisible;
+            btnG1.Visible = isVisible;
+            btnG2.Visible = isVisible;
+            btnG3.Visible = isVisible;
+            btnG4.Visible = isVisible;
+            btnG5.Visible = isVisible;
 
-        protected void OnBtnIG2Clicked(object sender, EventArgs e) {
-            //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[1] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Pickaxe, 1);
-            //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Axe, 1);
+            btnIG1.Visible = isVisible;
+            btnIG2.Visible = isVisible;
 
-            MobStatsController.TryHealPlayer(1);
-            PrintMainMenu();
+            imgInfo.Visible = isVisible;
+            lblInfo.Visible = isVisible;
+
+            lblBlank4.Visible = isVisible;
         }
 
 

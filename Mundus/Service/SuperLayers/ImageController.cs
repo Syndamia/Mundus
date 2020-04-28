@@ -23,9 +23,9 @@ namespace Mundus.Service.SuperLayers {
                 img = new Image(GetStructureImage(row, col).Stock, IconSize.Dnd );
             }
             else if (layer == 2 &&
-                     superLayer.GetMobLayerTile( row, col ) != null) 
+                     superLayer.GetMobLayerTile(row, col) != null) 
             {
-                img = new Image(superLayer.GetMobLayerTile( row, col ).stock_id, IconSize.Dnd);
+                img = new Image(superLayer.GetMobLayerTile(row, col).stock_id, IconSize.Dnd);
             }
             return img;
         }
