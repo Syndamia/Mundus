@@ -121,5 +121,25 @@ namespace Mundus.Views.Windows {
 
             GameGenerator.GameWindowSizeSetup(gameWindow);
         }
+
+        protected void OnRbPeacefulToggled(object sender, EventArgs e) {
+            GameGenerator.SetDifficulty("peaceful");
+        }
+
+        protected void OnRbEasyToggled(object sender, EventArgs e) {
+            GameGenerator.SetDifficulty("easy");
+        }
+
+        protected void OnRbNormalToggled(object sender, EventArgs e) {
+            GameGenerator.SetDifficulty("normal");
+        }
+
+        protected void OnRbHardToggled(object sender, EventArgs e) {
+            GameGenerator.SetDifficulty("hard");
+        }
+
+        protected void OnRbInsaneToggled(object sender, EventArgs e) {
+            GameGenerator.SetDifficulty("insane");
+        }
     }
 }

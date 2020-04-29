@@ -558,6 +558,7 @@
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
             <property name="Group">Difficulty</property>
+            <signal name="Toggled" handler="OnRbEasyToggled" />
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -585,6 +586,7 @@
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
             <property name="Group">Difficulty</property>
+            <signal name="Toggled" handler="OnRbHardToggled" />
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -612,6 +614,7 @@
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
             <property name="Group">Difficulty</property>
+            <signal name="Toggled" handler="OnRbInsaneToggled" />
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -777,6 +780,7 @@
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
             <property name="Group">Difficulty</property>
+            <signal name="Toggled" handler="OnRbNormalToggled" />
           </widget>
           <packing>
             <property name="TopAttach">3</property>
@@ -804,6 +808,7 @@
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
             <property name="Group">Difficulty</property>
+            <signal name="Toggled" handler="OnRbPeacefulToggled" />
           </widget>
           <packing>
             <property name="TopAttach">3</property>

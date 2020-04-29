@@ -46,5 +46,20 @@ namespace Mundus.Service {
             WI.SelWin.PrintMainMenu();
             WI.SelWin.Show();
         }
+
+        /// <summary>
+        /// Sets the game difficulty (that affects map generation).
+        /// </summary>
+        /// <param name="value">Must be "peaceful", "easy", "normal", "hard" or "insane"</param>
+        public static void SetDifficulty(string value) {
+            switch(value.ToLower()) {
+                case "peaceful": Difficulty.SelDifficulty = Difficulty.Peaceful; break;
+                case "easy": Difficulty.SelDifficulty = Difficulty.Easy; break;
+                case "normal": Difficulty.SelDifficulty = Difficulty.Normal; break;
+                case "hard": Difficulty.SelDifficulty = Difficulty.Hard; break;
+                case "insane": Difficulty.SelDifficulty = Difficulty.Insane; break;
+                default: throw new ArgumentException($"Invalid difficulty value {value}. Must be \"peaceful\", \"easy\", \"normal\", \"hard\" or \"insane\"");
+            }
+        }
     }
 }

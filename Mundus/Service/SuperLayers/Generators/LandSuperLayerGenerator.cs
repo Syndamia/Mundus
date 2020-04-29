@@ -1,4 +1,5 @@
 ﻿using System;
+using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
 using Mundus.Service.Mobs.LandMobs;
@@ -29,7 +30,7 @@ namespace Mundus.Service.SuperLayers.Generators {
                             MI.Player.XPos = y;
                             tiles[y, x] = MI.Player;
                         }
-                        else if (rnd.Next(0, 20) == 1) {
+                        else if (rnd.Next(0, 20 + Difficulty.SelDifficulty) == 1) {
                             tiles[y, x] = LandMobsPresets.GetACow();
                             tiles[y, x].YPos = y;
                             tiles[y, x].XPos = x;
@@ -46,7 +47,8 @@ namespace Mundus.Service.SuperLayers.Generators {
 
             for(int col = 0; col < size; col++) {
                 for(int row = 0; row < size; row++) {
-                    if (rnd.Next(0, 200) == 1) {
+                    // Holes in the ground should be more common with higher difficulties
+                    if (rnd.Next(0, 210 - Difficulty.SelDifficulty) == 1) {
                         tiles[col, row] = null;
                     }
                     else {
@@ -63,10 +65,10 @@ namespace Mundus.Service.SuperLayers.Generators {
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
                     if (LI.Land.GetGroundLayerTile(col, row) != null) {
-                        if (rnd.Next(0, 50) == 1) {
+                        if (rnd.Next(0, 40 + Difficulty.SelDifficulty) == 1) {
                             tiles[col, row] = StructurePresets.GetALBoulder();
                         }
-                        if (rnd.Next(0, 10) == 1) {
+                        if (rnd.Next(0, 10 + Difficulty.SelDifficulty) == 1) {
                             tiles[col, row] = StructurePresets.GetALTree();
                         }
                     }

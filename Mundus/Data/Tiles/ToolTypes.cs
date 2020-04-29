@@ -1,7 +1,7 @@
 ﻿namespace Mundus.Data.Tiles {
     public static class ToolTypes {
-        public static int Shovel = 0;
-        public static int Axe = 1;
-        public static int Pickaxe = 2;
+        public const int Shovel = 0;
+        public const int Axe = 1;
+        public const int Pickaxe = 2;
     }
 }

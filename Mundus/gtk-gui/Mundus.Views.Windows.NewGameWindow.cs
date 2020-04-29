@@ -458,8 +458,13 @@ namespace Mundus.Views.Windows
 			this.Show();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 			this.rbSmall.Toggled += new global::System.EventHandler(this.OnRbSmallToggled);
+			this.rbPeaceful.Toggled += new global::System.EventHandler(this.OnRbPeacefulToggled);
+			this.rbNormal.Toggled += new global::System.EventHandler(this.OnRbNormalToggled);
 			this.rbMedium.Toggled += new global::System.EventHandler(this.OnRbMediumToggled);
 			this.rbLarge.Toggled += new global::System.EventHandler(this.OnRbLargeToggled);
+			this.rbInsane.Toggled += new global::System.EventHandler(this.OnRbInsaneToggled);
+			this.rbHard.Toggled += new global::System.EventHandler(this.OnRbHardToggled);
+			this.rbEasy.Toggled += new global::System.EventHandler(this.OnRbEasyToggled);
 			this.rbCreative.Toggled += new global::System.EventHandler(this.OnRbCreativeToggled);
 			this.btnGenerate.Clicked += new global::System.EventHandler(this.OnBtnGenerateClicked);
 			this.btnBack.Clicked += new global::System.EventHandler(this.OnBtnBackClicked);

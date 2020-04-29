@@ -151,6 +151,7 @@
     <Compile Include="Service\Mobs\Controllers\MobStatsController.cs" />
     <Compile Include="Service\Mobs\Controllers\MobTerraforming.cs" />
     <Compile Include="Service\Mobs\LandMobs\Player.cs" />
+    <Compile Include="Data\Difficulty.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
