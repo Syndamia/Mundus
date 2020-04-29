@@ -8,7 +8,7 @@ namespace Mundus.Service.Mobs.LandMobs {
         /// Returns a new instance of the cow mob tile
         /// </summary>
         public static MobTile GetACow() {
-            return new MobTile("L_test_icon_mob", 10, LI.Land);
+            return new MobTile("L_cow", 10, LI.Land);
         }
     }
 }

@@ -157,9 +157,9 @@
         <property name="Image">resource:Mundus.Icons.Sky.Ground.s_sky.png</property>
       </source>
     </icon-set>
-    <icon-set id="L_test_icon_mob">
+    <icon-set id="L_cow">
       <source>
-        <property name="Image">resource:Mundus.Icons.Land.Mobs.test1.jpg</property>
+        <property name="Image">resource:Mundus.Icons.Land.Mobs.L_cow.png</property>
       </source>
     </icon-set>
   </icon-factory>
