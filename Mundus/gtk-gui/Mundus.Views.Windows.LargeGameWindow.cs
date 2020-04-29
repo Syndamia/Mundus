@@ -4,20 +4,7382 @@ namespace Mundus.Views.Windows
 {
 	public partial class LargeGameWindow
 	{
+		private global::Gtk.Table tbUI;
+
+		private global::Gtk.Button btnA1;
+
+		private global::Gtk.Button btnA10;
+
+		private global::Gtk.Button btnA11;
+
+		private global::Gtk.Button btnA12;
+
+		private global::Gtk.Button btnA13;
+
+		private global::Gtk.Button btnA14;
+
+		private global::Gtk.Button btnA15;
+
+		private global::Gtk.Button btnA16;
+
+		private global::Gtk.Button btnA17;
+
+		private global::Gtk.Button btnA18;
+
+		private global::Gtk.Button btnA2;
+
+		private global::Gtk.Button btnA3;
+
+		private global::Gtk.Button btnA4;
+
+		private global::Gtk.Button btnA5;
+
+		private global::Gtk.Button btnA6;
+
+		private global::Gtk.Button btnA7;
+
+		private global::Gtk.Button btnA8;
+
+		private global::Gtk.Button btnA9;
+
+		private global::Gtk.Button btnCrafting;
+
+		private global::Gtk.Button btnG1;
+
+		private global::Gtk.Button btnG2;
+
+		private global::Gtk.Button btnG3;
+
+		private global::Gtk.Button btnG4;
+
+		private global::Gtk.Button btnG5;
+
+		private global::Gtk.Button btnG6;
+
+		private global::Gtk.Button btnG7;
+
+		private global::Gtk.Button btnG8;
+
+		private global::Gtk.Button btnG9;
+
+		private global::Gtk.Button btnH1;
+
+		private global::Gtk.Button btnH2;
+
+		private global::Gtk.Button btnH3;
+
+		private global::Gtk.Button btnH4;
+
+		private global::Gtk.Button btnH5;
+
+		private global::Gtk.Button btnH6;
+
+		private global::Gtk.Button btnH7;
+
+		private global::Gtk.Button btnH8;
+
+		private global::Gtk.Button btnH9;
+
+		private global::Gtk.Button btnI1;
+
+		private global::Gtk.Button btnI10;
+
+		private global::Gtk.Button btnI11;
+
+		private global::Gtk.Button btnI12;
+
+		private global::Gtk.Button btnI13;
+
+		private global::Gtk.Button btnI14;
+
+		private global::Gtk.Button btnI15;
+
+		private global::Gtk.Button btnI16;
+
+		private global::Gtk.Button btnI17;
+
+		private global::Gtk.Button btnI18;
+
+		private global::Gtk.Button btnI19;
+
+		private global::Gtk.Button btnI2;
+
+		private global::Gtk.Button btnI20;
+
+		private global::Gtk.Button btnI21;
+
+		private global::Gtk.Button btnI22;
+
+		private global::Gtk.Button btnI23;
+
+		private global::Gtk.Button btnI24;
+
+		private global::Gtk.Button btnI25;
+
+		private global::Gtk.Button btnI26;
+
+		private global::Gtk.Button btnI27;
+
+		private global::Gtk.Button btnI28;
+
+		private global::Gtk.Button btnI29;
+
+		private global::Gtk.Button btnI3;
+
+		private global::Gtk.Button btnI30;
+
+		private global::Gtk.Button btnI31;
+
+		private global::Gtk.Button btnI32;
+
+		private global::Gtk.Button btnI33;
+
+		private global::Gtk.Button btnI34;
+
+		private global::Gtk.Button btnI35;
+
+		private global::Gtk.Button btnI36;
+
+		private global::Gtk.Button btnI37;
+
+		private global::Gtk.Button btnI38;
+
+		private global::Gtk.Button btnI39;
+
+		private global::Gtk.Button btnI4;
+
+		private global::Gtk.Button btnI40;
+
+		private global::Gtk.Button btnI41;
+
+		private global::Gtk.Button btnI42;
+
+		private global::Gtk.Button btnI43;
+
+		private global::Gtk.Button btnI44;
+
+		private global::Gtk.Button btnI45;
+
+		private global::Gtk.Button btnI46;
+
+		private global::Gtk.Button btnI47;
+
+		private global::Gtk.Button btnI48;
+
+		private global::Gtk.Button btnI49;
+
+		private global::Gtk.Button btnI5;
+
+		private global::Gtk.Button btnI50;
+
+		private global::Gtk.Button btnI51;
+
+		private global::Gtk.Button btnI52;
+
+		private global::Gtk.Button btnI53;
+
+		private global::Gtk.Button btnI54;
+
+		private global::Gtk.Button btnI55;
+
+		private global::Gtk.Button btnI56;
+
+		private global::Gtk.Button btnI57;
+
+		private global::Gtk.Button btnI58;
+
+		private global::Gtk.Button btnI59;
+
+		private global::Gtk.Button btnI6;
+
+		private global::Gtk.Button btnI60;
+
+		private global::Gtk.Button btnI61;
+
+		private global::Gtk.Button btnI62;
+
+		private global::Gtk.Button btnI63;
+
+		private global::Gtk.Button btnI64;
+
+		private global::Gtk.Button btnI65;
+
+		private global::Gtk.Button btnI66;
+
+		private global::Gtk.Button btnI67;
+
+		private global::Gtk.Button btnI68;
+
+		private global::Gtk.Button btnI69;
+
+		private global::Gtk.Button btnI7;
+
+		private global::Gtk.Button btnI70;
+
+		private global::Gtk.Button btnI71;
+
+		private global::Gtk.Button btnI72;
+
+		private global::Gtk.Button btnI73;
+
+		private global::Gtk.Button btnI74;
+
+		private global::Gtk.Button btnI75;
+
+		private global::Gtk.Button btnI76;
+
+		private global::Gtk.Button btnI77;
+
+		private global::Gtk.Button btnI78;
+
+		private global::Gtk.Button btnI79;
+
+		private global::Gtk.Button btnI8;
+
+		private global::Gtk.Button btnI80;
+
+		private global::Gtk.Button btnI81;
+
+		private global::Gtk.Button btnI9;
+
+		private global::Gtk.Button btnInv;
+
+		private global::Gtk.Button btnMap;
+
+		private global::Gtk.Button btnMusic;
+
+		private global::Gtk.Button btnP1;
+
+		private global::Gtk.Button btnP10;
+
+		private global::Gtk.Button btnP11;
+
+		private global::Gtk.Button btnP12;
+
+		private global::Gtk.Button btnP13;
+
+		private global::Gtk.Button btnP14;
+
+		private global::Gtk.Button btnP15;
+
+		private global::Gtk.Button btnP16;
+
+		private global::Gtk.Button btnP17;
+
+		private global::Gtk.Button btnP18;
+
+		private global::Gtk.Button btnP19;
+
+		private global::Gtk.Button btnP2;
+
+		private global::Gtk.Button btnP20;
+
+		private global::Gtk.Button btnP21;
+
+		private global::Gtk.Button btnP22;
+
+		private global::Gtk.Button btnP23;
+
+		private global::Gtk.Button btnP24;
+
+		private global::Gtk.Button btnP25;
+
+		private global::Gtk.Button btnP26;
+
+		private global::Gtk.Button btnP27;
+
+		private global::Gtk.Button btnP28;
+
+		private global::Gtk.Button btnP29;
+
+		private global::Gtk.Button btnP3;
+
+		private global::Gtk.Button btnP30;
+
+		private global::Gtk.Button btnP31;
+
+		private global::Gtk.Button btnP32;
+
+		private global::Gtk.Button btnP33;
+
+		private global::Gtk.Button btnP34;
+
+		private global::Gtk.Button btnP35;
+
+		private global::Gtk.Button btnP36;
+
+		private global::Gtk.Button btnP37;
+
+		private global::Gtk.Button btnP38;
+
+		private global::Gtk.Button btnP39;
+
+		private global::Gtk.Button btnP4;
+
+		private global::Gtk.Button btnP40;
+
+		private global::Gtk.Button btnP41;
+
+		private global::Gtk.Button btnP42;
+
+		private global::Gtk.Button btnP43;
+
+		private global::Gtk.Button btnP44;
+
+		private global::Gtk.Button btnP45;
+
+		private global::Gtk.Button btnP46;
+
+		private global::Gtk.Button btnP47;
+
+		private global::Gtk.Button btnP48;
+
+		private global::Gtk.Button btnP49;
+
+		private global::Gtk.Button btnP5;
+
+		private global::Gtk.Button btnP50;
+
+		private global::Gtk.Button btnP51;
+
+		private global::Gtk.Button btnP52;
+
+		private global::Gtk.Button btnP53;
+
+		private global::Gtk.Button btnP54;
+
+		private global::Gtk.Button btnP55;
+
+		private global::Gtk.Button btnP56;
+
+		private global::Gtk.Button btnP57;
+
+		private global::Gtk.Button btnP58;
+
+		private global::Gtk.Button btnP59;
+
+		private global::Gtk.Button btnP6;
+
+		private global::Gtk.Button btnP60;
+
+		private global::Gtk.Button btnP61;
+
+		private global::Gtk.Button btnP62;
+
+		private global::Gtk.Button btnP63;
+
+		private global::Gtk.Button btnP64;
+
+		private global::Gtk.Button btnP65;
+
+		private global::Gtk.Button btnP66;
+
+		private global::Gtk.Button btnP67;
+
+		private global::Gtk.Button btnP68;
+
+		private global::Gtk.Button btnP69;
+
+		private global::Gtk.Button btnP7;
+
+		private global::Gtk.Button btnP70;
+
+		private global::Gtk.Button btnP71;
+
+		private global::Gtk.Button btnP72;
+
+		private global::Gtk.Button btnP73;
+
+		private global::Gtk.Button btnP74;
+
+		private global::Gtk.Button btnP75;
+
+		private global::Gtk.Button btnP76;
+
+		private global::Gtk.Button btnP77;
+
+		private global::Gtk.Button btnP78;
+
+		private global::Gtk.Button btnP79;
+
+		private global::Gtk.Button btnP8;
+
+		private global::Gtk.Button btnP80;
+
+		private global::Gtk.Button btnP81;
+
+		private global::Gtk.Button btnP9;
+
+		private global::Gtk.Button btnPause;
+
+		private global::Gtk.Image imgG1;
+
+		private global::Gtk.Image imgG10;
+
+		private global::Gtk.Image imgG11;
+
+		private global::Gtk.Image imgG12;
+
+		private global::Gtk.Image imgG13;
+
+		private global::Gtk.Image imgG14;
+
+		private global::Gtk.Image imgG15;
+
+		private global::Gtk.Image imgG16;
+
+		private global::Gtk.Image imgG17;
+
+		private global::Gtk.Image imgG18;
+
+		private global::Gtk.Image imgG19;
+
+		private global::Gtk.Image imgG2;
+
+		private global::Gtk.Image imgG20;
+
+		private global::Gtk.Image imgG21;
+
+		private global::Gtk.Image imgG22;
+
+		private global::Gtk.Image imgG23;
+
+		private global::Gtk.Image imgG24;
+
+		private global::Gtk.Image imgG25;
+
+		private global::Gtk.Image imgG26;
+
+		private global::Gtk.Image imgG27;
+
+		private global::Gtk.Image imgG28;
+
+		private global::Gtk.Image imgG29;
+
+		private global::Gtk.Image imgG3;
+
+		private global::Gtk.Image imgG30;
+
+		private global::Gtk.Image imgG31;
+
+		private global::Gtk.Image imgG32;
+
+		private global::Gtk.Image imgG33;
+
+		private global::Gtk.Image imgG34;
+
+		private global::Gtk.Image imgG35;
+
+		private global::Gtk.Image imgG36;
+
+		private global::Gtk.Image imgG37;
+
+		private global::Gtk.Image imgG38;
+
+		private global::Gtk.Image imgG39;
+
+		private global::Gtk.Image imgG4;
+
+		private global::Gtk.Image imgG40;
+
+		private global::Gtk.Image imgG41;
+
+		private global::Gtk.Image imgG42;
+
+		private global::Gtk.Image imgG43;
+
+		private global::Gtk.Image imgG44;
+
+		private global::Gtk.Image imgG45;
+
+		private global::Gtk.Image imgG46;
+
+		private global::Gtk.Image imgG47;
+
+		private global::Gtk.Image imgG48;
+
+		private global::Gtk.Image imgG49;
+
+		private global::Gtk.Image imgG5;
+
+		private global::Gtk.Image imgG50;
+
+		private global::Gtk.Image imgG51;
+
+		private global::Gtk.Image imgG52;
+
+		private global::Gtk.Image imgG53;
+
+		private global::Gtk.Image imgG54;
+
+		private global::Gtk.Image imgG55;
+
+		private global::Gtk.Image imgG56;
+
+		private global::Gtk.Image imgG57;
+
+		private global::Gtk.Image imgG58;
+
+		private global::Gtk.Image imgG59;
+
+		private global::Gtk.Image imgG6;
+
+		private global::Gtk.Image imgG60;
+
+		private global::Gtk.Image imgG61;
+
+		private global::Gtk.Image imgG62;
+
+		private global::Gtk.Image imgG63;
+
+		private global::Gtk.Image imgG64;
+
+		private global::Gtk.Image imgG65;
+
+		private global::Gtk.Image imgG66;
+
+		private global::Gtk.Image imgG67;
+
+		private global::Gtk.Image imgG68;
+
+		private global::Gtk.Image imgG69;
+
+		private global::Gtk.Image imgG7;
+
+		private global::Gtk.Image imgG70;
+
+		private global::Gtk.Image imgG71;
+
+		private global::Gtk.Image imgG72;
+
+		private global::Gtk.Image imgG73;
+
+		private global::Gtk.Image imgG74;
+
+		private global::Gtk.Image imgG75;
+
+		private global::Gtk.Image imgG76;
+
+		private global::Gtk.Image imgG77;
+
+		private global::Gtk.Image imgG78;
+
+		private global::Gtk.Image imgG79;
+
+		private global::Gtk.Image imgG8;
+
+		private global::Gtk.Image imgG80;
+
+		private global::Gtk.Image imgG81;
+
+		private global::Gtk.Image imgG9;
+
+		private global::Gtk.Image imgI1;
+
+		private global::Gtk.Image imgI10;
+
+		private global::Gtk.Image imgI11;
+
+		private global::Gtk.Image imgI12;
+
+		private global::Gtk.Image imgI13;
+
+		private global::Gtk.Image imgI14;
+
+		private global::Gtk.Image imgI15;
+
+		private global::Gtk.Image imgI16;
+
+		private global::Gtk.Image imgI17;
+
+		private global::Gtk.Image imgI18;
+
+		private global::Gtk.Image imgI19;
+
+		private global::Gtk.Image imgI2;
+
+		private global::Gtk.Image imgI20;
+
+		private global::Gtk.Image imgI21;
+
+		private global::Gtk.Image imgI22;
+
+		private global::Gtk.Image imgI23;
+
+		private global::Gtk.Image imgI24;
+
+		private global::Gtk.Image imgI25;
+
+		private global::Gtk.Image imgI26;
+
+		private global::Gtk.Image imgI27;
+
+		private global::Gtk.Image imgI28;
+
+		private global::Gtk.Image imgI29;
+
+		private global::Gtk.Image imgI3;
+
+		private global::Gtk.Image imgI30;
+
+		private global::Gtk.Image imgI31;
+
+		private global::Gtk.Image imgI32;
+
+		private global::Gtk.Image imgI33;
+
+		private global::Gtk.Image imgI34;
+
+		private global::Gtk.Image imgI35;
+
+		private global::Gtk.Image imgI36;
+
+		private global::Gtk.Image imgI37;
+
+		private global::Gtk.Image imgI38;
+
+		private global::Gtk.Image imgI39;
+
+		private global::Gtk.Image imgI4;
+
+		private global::Gtk.Image imgI40;
+
+		private global::Gtk.Image imgI41;
+
+		private global::Gtk.Image imgI42;
+
+		private global::Gtk.Image imgI43;
+
+		private global::Gtk.Image imgI44;
+
+		private global::Gtk.Image imgI45;
+
+		private global::Gtk.Image imgI46;
+
+		private global::Gtk.Image imgI47;
+
+		private global::Gtk.Image imgI48;
+
+		private global::Gtk.Image imgI49;
+
+		private global::Gtk.Image imgI5;
+
+		private global::Gtk.Image imgI50;
+
+		private global::Gtk.Image imgI51;
+
+		private global::Gtk.Image imgI52;
+
+		private global::Gtk.Image imgI53;
+
+		private global::Gtk.Image imgI54;
+
+		private global::Gtk.Image imgI55;
+
+		private global::Gtk.Image imgI56;
+
+		private global::Gtk.Image imgI57;
+
+		private global::Gtk.Image imgI58;
+
+		private global::Gtk.Image imgI59;
+
+		private global::Gtk.Image imgI6;
+
+		private global::Gtk.Image imgI60;
+
+		private global::Gtk.Image imgI61;
+
+		private global::Gtk.Image imgI62;
+
+		private global::Gtk.Image imgI63;
+
+		private global::Gtk.Image imgI64;
+
+		private global::Gtk.Image imgI65;
+
+		private global::Gtk.Image imgI66;
+
+		private global::Gtk.Image imgI67;
+
+		private global::Gtk.Image imgI68;
+
+		private global::Gtk.Image imgI69;
+
+		private global::Gtk.Image imgI7;
+
+		private global::Gtk.Image imgI70;
+
+		private global::Gtk.Image imgI71;
+
+		private global::Gtk.Image imgI72;
+
+		private global::Gtk.Image imgI73;
+
+		private global::Gtk.Image imgI74;
+
+		private global::Gtk.Image imgI75;
+
+		private global::Gtk.Image imgI76;
+
+		private global::Gtk.Image imgI77;
+
+		private global::Gtk.Image imgI78;
+
+		private global::Gtk.Image imgI79;
+
+		private global::Gtk.Image imgI8;
+
+		private global::Gtk.Image imgI80;
+
+		private global::Gtk.Image imgI81;
+
+		private global::Gtk.Image imgI9;
+
+		private global::Gtk.Image imgInfo;
+
+		private global::Gtk.Image imgS1;
+
+		private global::Gtk.Image imgS10;
+
+		private global::Gtk.Image imgS11;
+
+		private global::Gtk.Image imgS12;
+
+		private global::Gtk.Image imgS13;
+
+		private global::Gtk.Image imgS14;
+
+		private global::Gtk.Image imgS15;
+
+		private global::Gtk.Image imgS16;
+
+		private global::Gtk.Image imgS17;
+
+		private global::Gtk.Image imgS18;
+
+		private global::Gtk.Image imgS2;
+
+		private global::Gtk.Image imgS3;
+
+		private global::Gtk.Image imgS4;
+
+		private global::Gtk.Image imgS5;
+
+		private global::Gtk.Image imgS6;
+
+		private global::Gtk.Image imgS7;
+
+		private global::Gtk.Image imgS8;
+
+		private global::Gtk.Image imgS9;
+
+		private global::Gtk.Label lblAccessories;
+
+		private global::Gtk.Label lblBlank1;
+
+		private global::Gtk.Label lblBlank2;
+
+		private global::Gtk.Label lblBlank3;
+
+		private global::Gtk.Label lblBlank4;
+
+		private global::Gtk.Label lblBlank5;
+
+		private global::Gtk.Label lblBlank6;
+
+		private global::Gtk.Label lblBlank8;
+
+		private global::Gtk.Label lblCoord1;
+
+		private global::Gtk.Label lblCoord2;
+
+		private global::Gtk.Label lblEventLog;
+
+		private global::Gtk.Label lblGear;
+
+		private global::Gtk.Label lblGroundLayer;
+
+		private global::Gtk.Label lblHoleMsg;
+
+		private global::Gtk.Label lblHoleOnTop;
+
+		private global::Gtk.Label lblHotbar;
+
+		private global::Gtk.Label lblInfo;
+
+		private global::Gtk.Label lblItemLayer;
+
+		private global::Gtk.Label lblLog1;
+
+		private global::Gtk.Label lblLog2;
+
+		private global::Gtk.Label lblLog3;
+
+		private global::Gtk.Label lblLog4;
+
+		private global::Gtk.Label lblLog5;
+
+		private global::Gtk.Label lblLog6;
+
+		private global::Gtk.Label lblLog7;
+
+		private global::Gtk.Label lblLog8;
+
+		private global::Gtk.Label lblSuperLayer;
+
 		protected virtual void Build()
 		{
 			global::Stetic.Gui.Initialize(this);
 			// Widget Mundus.Views.Windows.LargeGameWindow
 			this.Name = "Mundus.Views.Windows.LargeGameWindow";
 			this.Title = "LargeGameWindow";
-			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+			this.WindowPosition = ((global::Gtk.WindowPosition)(2));
+			this.Resizable = false;
+			this.AllowGrow = false;
+			// Container child Mundus.Views.Windows.LargeGameWindow.Gtk.Container+ContainerChild
+			this.tbUI = new global::Gtk.Table(((uint)(25)), ((uint)(33)), false);
+			this.tbUI.Name = "tbUI";
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA1 = new global::Gtk.Button();
+			this.btnA1.WidthRequest = 50;
+			this.btnA1.HeightRequest = 50;
+			this.btnA1.CanFocus = true;
+			this.btnA1.Name = "btnA1";
+			this.btnA1.UseUnderline = true;
+			global::Gtk.Image w1 = new global::Gtk.Image();
+			this.btnA1.Image = w1;
+			this.tbUI.Add(this.btnA1);
+			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA1]));
+			w2.TopAttach = ((uint)(13));
+			w2.BottomAttach = ((uint)(14));
+			w2.LeftAttach = ((uint)(23));
+			w2.RightAttach = ((uint)(24));
+			w2.XOptions = ((global::Gtk.AttachOptions)(4));
+			w2.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA10 = new global::Gtk.Button();
+			this.btnA10.WidthRequest = 50;
+			this.btnA10.HeightRequest = 50;
+			this.btnA10.CanFocus = true;
+			this.btnA10.Name = "btnA10";
+			this.btnA10.UseUnderline = true;
+			global::Gtk.Image w3 = new global::Gtk.Image();
+			this.btnA10.Image = w3;
+			this.tbUI.Add(this.btnA10);
+			global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA10]));
+			w4.TopAttach = ((uint)(14));
+			w4.BottomAttach = ((uint)(15));
+			w4.LeftAttach = ((uint)(23));
+			w4.RightAttach = ((uint)(24));
+			w4.XOptions = ((global::Gtk.AttachOptions)(4));
+			w4.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA11 = new global::Gtk.Button();
+			this.btnA11.WidthRequest = 50;
+			this.btnA11.HeightRequest = 50;
+			this.btnA11.CanFocus = true;
+			this.btnA11.Name = "btnA11";
+			this.btnA11.UseUnderline = true;
+			global::Gtk.Image w5 = new global::Gtk.Image();
+			this.btnA11.Image = w5;
+			this.tbUI.Add(this.btnA11);
+			global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA11]));
+			w6.TopAttach = ((uint)(14));
+			w6.BottomAttach = ((uint)(15));
+			w6.LeftAttach = ((uint)(24));
+			w6.RightAttach = ((uint)(25));
+			w6.XOptions = ((global::Gtk.AttachOptions)(4));
+			w6.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA12 = new global::Gtk.Button();
+			this.btnA12.WidthRequest = 50;
+			this.btnA12.HeightRequest = 50;
+			this.btnA12.CanFocus = true;
+			this.btnA12.Name = "btnA12";
+			this.btnA12.UseUnderline = true;
+			global::Gtk.Image w7 = new global::Gtk.Image();
+			this.btnA12.Image = w7;
+			this.tbUI.Add(this.btnA12);
+			global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA12]));
+			w8.TopAttach = ((uint)(14));
+			w8.BottomAttach = ((uint)(15));
+			w8.LeftAttach = ((uint)(25));
+			w8.RightAttach = ((uint)(26));
+			w8.XOptions = ((global::Gtk.AttachOptions)(4));
+			w8.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA13 = new global::Gtk.Button();
+			this.btnA13.WidthRequest = 50;
+			this.btnA13.HeightRequest = 50;
+			this.btnA13.CanFocus = true;
+			this.btnA13.Name = "btnA13";
+			this.btnA13.UseUnderline = true;
+			global::Gtk.Image w9 = new global::Gtk.Image();
+			this.btnA13.Image = w9;
+			this.tbUI.Add(this.btnA13);
+			global::Gtk.Table.TableChild w10 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA13]));
+			w10.TopAttach = ((uint)(14));
+			w10.BottomAttach = ((uint)(15));
+			w10.LeftAttach = ((uint)(26));
+			w10.RightAttach = ((uint)(27));
+			w10.XOptions = ((global::Gtk.AttachOptions)(4));
+			w10.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA14 = new global::Gtk.Button();
+			this.btnA14.WidthRequest = 50;
+			this.btnA14.HeightRequest = 50;
+			this.btnA14.CanFocus = true;
+			this.btnA14.Name = "btnA14";
+			this.btnA14.UseUnderline = true;
+			global::Gtk.Image w11 = new global::Gtk.Image();
+			this.btnA14.Image = w11;
+			this.tbUI.Add(this.btnA14);
+			global::Gtk.Table.TableChild w12 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA14]));
+			w12.TopAttach = ((uint)(14));
+			w12.BottomAttach = ((uint)(15));
+			w12.LeftAttach = ((uint)(27));
+			w12.RightAttach = ((uint)(28));
+			w12.XOptions = ((global::Gtk.AttachOptions)(4));
+			w12.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA15 = new global::Gtk.Button();
+			this.btnA15.WidthRequest = 50;
+			this.btnA15.HeightRequest = 50;
+			this.btnA15.CanFocus = true;
+			this.btnA15.Name = "btnA15";
+			this.btnA15.UseUnderline = true;
+			global::Gtk.Image w13 = new global::Gtk.Image();
+			this.btnA15.Image = w13;
+			this.tbUI.Add(this.btnA15);
+			global::Gtk.Table.TableChild w14 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA15]));
+			w14.TopAttach = ((uint)(14));
+			w14.BottomAttach = ((uint)(15));
+			w14.LeftAttach = ((uint)(28));
+			w14.RightAttach = ((uint)(29));
+			w14.XOptions = ((global::Gtk.AttachOptions)(4));
+			w14.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA16 = new global::Gtk.Button();
+			this.btnA16.WidthRequest = 50;
+			this.btnA16.HeightRequest = 50;
+			this.btnA16.CanFocus = true;
+			this.btnA16.Name = "btnA16";
+			this.btnA16.UseUnderline = true;
+			global::Gtk.Image w15 = new global::Gtk.Image();
+			this.btnA16.Image = w15;
+			this.tbUI.Add(this.btnA16);
+			global::Gtk.Table.TableChild w16 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA16]));
+			w16.TopAttach = ((uint)(14));
+			w16.BottomAttach = ((uint)(15));
+			w16.LeftAttach = ((uint)(29));
+			w16.RightAttach = ((uint)(30));
+			w16.XOptions = ((global::Gtk.AttachOptions)(4));
+			w16.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA17 = new global::Gtk.Button();
+			this.btnA17.WidthRequest = 50;
+			this.btnA17.HeightRequest = 50;
+			this.btnA17.CanFocus = true;
+			this.btnA17.Name = "btnA17";
+			this.btnA17.UseUnderline = true;
+			global::Gtk.Image w17 = new global::Gtk.Image();
+			this.btnA17.Image = w17;
+			this.tbUI.Add(this.btnA17);
+			global::Gtk.Table.TableChild w18 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA17]));
+			w18.TopAttach = ((uint)(14));
+			w18.BottomAttach = ((uint)(15));
+			w18.LeftAttach = ((uint)(30));
+			w18.RightAttach = ((uint)(31));
+			w18.XOptions = ((global::Gtk.AttachOptions)(4));
+			w18.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA18 = new global::Gtk.Button();
+			this.btnA18.WidthRequest = 50;
+			this.btnA18.HeightRequest = 50;
+			this.btnA18.CanFocus = true;
+			this.btnA18.Name = "btnA18";
+			this.btnA18.UseUnderline = true;
+			global::Gtk.Image w19 = new global::Gtk.Image();
+			this.btnA18.Image = w19;
+			this.tbUI.Add(this.btnA18);
+			global::Gtk.Table.TableChild w20 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA18]));
+			w20.TopAttach = ((uint)(14));
+			w20.BottomAttach = ((uint)(15));
+			w20.LeftAttach = ((uint)(31));
+			w20.RightAttach = ((uint)(32));
+			w20.XOptions = ((global::Gtk.AttachOptions)(4));
+			w20.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA2 = new global::Gtk.Button();
+			this.btnA2.WidthRequest = 50;
+			this.btnA2.HeightRequest = 50;
+			this.btnA2.CanFocus = true;
+			this.btnA2.Name = "btnA2";
+			this.btnA2.UseUnderline = true;
+			global::Gtk.Image w21 = new global::Gtk.Image();
+			this.btnA2.Image = w21;
+			this.tbUI.Add(this.btnA2);
+			global::Gtk.Table.TableChild w22 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA2]));
+			w22.TopAttach = ((uint)(13));
+			w22.BottomAttach = ((uint)(14));
+			w22.LeftAttach = ((uint)(24));
+			w22.RightAttach = ((uint)(25));
+			w22.XOptions = ((global::Gtk.AttachOptions)(4));
+			w22.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA3 = new global::Gtk.Button();
+			this.btnA3.WidthRequest = 50;
+			this.btnA3.HeightRequest = 50;
+			this.btnA3.CanFocus = true;
+			this.btnA3.Name = "btnA3";
+			this.btnA3.UseUnderline = true;
+			global::Gtk.Image w23 = new global::Gtk.Image();
+			this.btnA3.Image = w23;
+			this.tbUI.Add(this.btnA3);
+			global::Gtk.Table.TableChild w24 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA3]));
+			w24.TopAttach = ((uint)(13));
+			w24.BottomAttach = ((uint)(14));
+			w24.LeftAttach = ((uint)(25));
+			w24.RightAttach = ((uint)(26));
+			w24.XOptions = ((global::Gtk.AttachOptions)(4));
+			w24.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA4 = new global::Gtk.Button();
+			this.btnA4.WidthRequest = 50;
+			this.btnA4.HeightRequest = 50;
+			this.btnA4.CanFocus = true;
+			this.btnA4.Name = "btnA4";
+			this.btnA4.UseUnderline = true;
+			global::Gtk.Image w25 = new global::Gtk.Image();
+			this.btnA4.Image = w25;
+			this.tbUI.Add(this.btnA4);
+			global::Gtk.Table.TableChild w26 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA4]));
+			w26.TopAttach = ((uint)(13));
+			w26.BottomAttach = ((uint)(14));
+			w26.LeftAttach = ((uint)(26));
+			w26.RightAttach = ((uint)(27));
+			w26.XOptions = ((global::Gtk.AttachOptions)(4));
+			w26.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA5 = new global::Gtk.Button();
+			this.btnA5.WidthRequest = 50;
+			this.btnA5.HeightRequest = 50;
+			this.btnA5.CanFocus = true;
+			this.btnA5.Name = "btnA5";
+			this.btnA5.UseUnderline = true;
+			global::Gtk.Image w27 = new global::Gtk.Image();
+			this.btnA5.Image = w27;
+			this.tbUI.Add(this.btnA5);
+			global::Gtk.Table.TableChild w28 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA5]));
+			w28.TopAttach = ((uint)(13));
+			w28.BottomAttach = ((uint)(14));
+			w28.LeftAttach = ((uint)(27));
+			w28.RightAttach = ((uint)(28));
+			w28.XOptions = ((global::Gtk.AttachOptions)(4));
+			w28.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA6 = new global::Gtk.Button();
+			this.btnA6.WidthRequest = 50;
+			this.btnA6.HeightRequest = 50;
+			this.btnA6.CanFocus = true;
+			this.btnA6.Name = "btnA6";
+			this.btnA6.UseUnderline = true;
+			global::Gtk.Image w29 = new global::Gtk.Image();
+			this.btnA6.Image = w29;
+			this.tbUI.Add(this.btnA6);
+			global::Gtk.Table.TableChild w30 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA6]));
+			w30.TopAttach = ((uint)(13));
+			w30.BottomAttach = ((uint)(14));
+			w30.LeftAttach = ((uint)(28));
+			w30.RightAttach = ((uint)(29));
+			w30.XOptions = ((global::Gtk.AttachOptions)(4));
+			w30.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA7 = new global::Gtk.Button();
+			this.btnA7.WidthRequest = 50;
+			this.btnA7.HeightRequest = 50;
+			this.btnA7.CanFocus = true;
+			this.btnA7.Name = "btnA7";
+			this.btnA7.UseUnderline = true;
+			global::Gtk.Image w31 = new global::Gtk.Image();
+			this.btnA7.Image = w31;
+			this.tbUI.Add(this.btnA7);
+			global::Gtk.Table.TableChild w32 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA7]));
+			w32.TopAttach = ((uint)(13));
+			w32.BottomAttach = ((uint)(14));
+			w32.LeftAttach = ((uint)(29));
+			w32.RightAttach = ((uint)(30));
+			w32.XOptions = ((global::Gtk.AttachOptions)(4));
+			w32.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA8 = new global::Gtk.Button();
+			this.btnA8.WidthRequest = 50;
+			this.btnA8.HeightRequest = 50;
+			this.btnA8.CanFocus = true;
+			this.btnA8.Name = "btnA8";
+			this.btnA8.UseUnderline = true;
+			global::Gtk.Image w33 = new global::Gtk.Image();
+			this.btnA8.Image = w33;
+			this.tbUI.Add(this.btnA8);
+			global::Gtk.Table.TableChild w34 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA8]));
+			w34.TopAttach = ((uint)(13));
+			w34.BottomAttach = ((uint)(14));
+			w34.LeftAttach = ((uint)(30));
+			w34.RightAttach = ((uint)(31));
+			w34.XOptions = ((global::Gtk.AttachOptions)(4));
+			w34.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnA9 = new global::Gtk.Button();
+			this.btnA9.WidthRequest = 50;
+			this.btnA9.HeightRequest = 50;
+			this.btnA9.CanFocus = true;
+			this.btnA9.Name = "btnA9";
+			this.btnA9.UseUnderline = true;
+			global::Gtk.Image w35 = new global::Gtk.Image();
+			this.btnA9.Image = w35;
+			this.tbUI.Add(this.btnA9);
+			global::Gtk.Table.TableChild w36 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnA9]));
+			w36.TopAttach = ((uint)(13));
+			w36.BottomAttach = ((uint)(14));
+			w36.LeftAttach = ((uint)(31));
+			w36.RightAttach = ((uint)(32));
+			w36.XOptions = ((global::Gtk.AttachOptions)(4));
+			w36.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnCrafting = new global::Gtk.Button();
+			this.btnCrafting.CanFocus = true;
+			this.btnCrafting.Name = "btnCrafting";
+			this.btnCrafting.UseUnderline = true;
+			this.btnCrafting.Label = "Crafting";
+			this.tbUI.Add(this.btnCrafting);
+			global::Gtk.Table.TableChild w37 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnCrafting]));
+			w37.TopAttach = ((uint)(10));
+			w37.BottomAttach = ((uint)(11));
+			w37.LeftAttach = ((uint)(23));
+			w37.RightAttach = ((uint)(32));
+			w37.XOptions = ((global::Gtk.AttachOptions)(4));
+			w37.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnG1 = new global::Gtk.Button();
+			this.btnG1.WidthRequest = 50;
+			this.btnG1.HeightRequest = 50;
+			this.btnG1.CanFocus = true;
+			this.btnG1.Name = "btnG1";
+			this.btnG1.UseUnderline = true;
+			global::Gtk.Image w38 = new global::Gtk.Image();
+			this.btnG1.Image = w38;
+			this.tbUI.Add(this.btnG1);
+			global::Gtk.Table.TableChild w39 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnG1]));
+			w39.TopAttach = ((uint)(16));
+			w39.BottomAttach = ((uint)(17));
+			w39.LeftAttach = ((uint)(23));
+			w39.RightAttach = ((uint)(24));
+			w39.XOptions = ((global::Gtk.AttachOptions)(4));
+			w39.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnG2 = new global::Gtk.Button();
+			this.btnG2.WidthRequest = 50;
+			this.btnG2.HeightRequest = 50;
+			this.btnG2.CanFocus = true;
+			this.btnG2.Name = "btnG2";
+			this.btnG2.UseUnderline = true;
+			global::Gtk.Image w40 = new global::Gtk.Image();
+			this.btnG2.Image = w40;
+			this.tbUI.Add(this.btnG2);
+			global::Gtk.Table.TableChild w41 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnG2]));
+			w41.TopAttach = ((uint)(16));
+			w41.BottomAttach = ((uint)(17));
+			w41.LeftAttach = ((uint)(24));
+			w41.RightAttach = ((uint)(25));
+			w41.XOptions = ((global::Gtk.AttachOptions)(4));
+			w41.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnG3 = new global::Gtk.Button();
+			this.btnG3.WidthRequest = 50;
+			this.btnG3.HeightRequest = 50;
+			this.btnG3.CanFocus = true;
+			this.btnG3.Name = "btnG3";
+			this.btnG3.UseUnderline = true;
+			global::Gtk.Image w42 = new global::Gtk.Image();
+			this.btnG3.Image = w42;
+			this.tbUI.Add(this.btnG3);
+			global::Gtk.Table.TableChild w43 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnG3]));
+			w43.TopAttach = ((uint)(16));
+			w43.BottomAttach = ((uint)(17));
+			w43.LeftAttach = ((uint)(25));
+			w43.RightAttach = ((uint)(26));
+			w43.XOptions = ((global::Gtk.AttachOptions)(4));
+			w43.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnG4 = new global::Gtk.Button();
+			this.btnG4.WidthRequest = 50;
+			this.btnG4.HeightRequest = 50;
+			this.btnG4.CanFocus = true;
+			this.btnG4.Name = "btnG4";
+			this.btnG4.UseUnderline = true;
+			global::Gtk.Image w44 = new global::Gtk.Image();
+			this.btnG4.Image = w44;
+			this.tbUI.Add(this.btnG4);
+			global::Gtk.Table.TableChild w45 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnG4]));
+			w45.TopAttach = ((uint)(16));
+			w45.BottomAttach = ((uint)(17));
+			w45.LeftAttach = ((uint)(26));
+			w45.RightAttach = ((uint)(27));
+			w45.XOptions = ((global::Gtk.AttachOptions)(4));
+			w45.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnG5 = new global::Gtk.Button();
+			this.btnG5.WidthRequest = 50;
+			this.btnG5.HeightRequest = 50;
+			this.btnG5.CanFocus = true;
+			this.btnG5.Name = "btnG5";
+			this.btnG5.UseUnderline = true;
+			global::Gtk.Image w46 = new global::Gtk.Image();
+			this.btnG5.Image = w46;
+			this.tbUI.Add(this.btnG5);
+			global::Gtk.Table.TableChild w47 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnG5]));
+			w47.TopAttach = ((uint)(16));
+			w47.BottomAttach = ((uint)(17));
+			w47.LeftAttach = ((uint)(27));
+			w47.RightAttach = ((uint)(28));
+			w47.XOptions = ((global::Gtk.AttachOptions)(4));
+			w47.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnG6 = new global::Gtk.Button();
+			this.btnG6.WidthRequest = 50;
+			this.btnG6.HeightRequest = 50;
+			this.btnG6.CanFocus = true;
+			this.btnG6.Name = "btnG6";
+			this.btnG6.UseUnderline = true;
+			global::Gtk.Image w48 = new global::Gtk.Image();
+			this.btnG6.Image = w48;
+			this.tbUI.Add(this.btnG6);
+			global::Gtk.Table.TableChild w49 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnG6]));
+			w49.TopAttach = ((uint)(16));
+			w49.BottomAttach = ((uint)(17));
+			w49.LeftAttach = ((uint)(28));
+			w49.RightAttach = ((uint)(29));
+			w49.XOptions = ((global::Gtk.AttachOptions)(4));
+			w49.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnG7 = new global::Gtk.Button();
+			this.btnG7.WidthRequest = 50;
+			this.btnG7.HeightRequest = 50;
+			this.btnG7.CanFocus = true;
+			this.btnG7.Name = "btnG7";
+			this.btnG7.UseUnderline = true;
+			global::Gtk.Image w50 = new global::Gtk.Image();
+			this.btnG7.Image = w50;
+			this.tbUI.Add(this.btnG7);
+			global::Gtk.Table.TableChild w51 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnG7]));
+			w51.TopAttach = ((uint)(16));
+			w51.BottomAttach = ((uint)(17));
+			w51.LeftAttach = ((uint)(29));
+			w51.RightAttach = ((uint)(30));
+			w51.XOptions = ((global::Gtk.AttachOptions)(4));
+			w51.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnG8 = new global::Gtk.Button();
+			this.btnG8.WidthRequest = 50;
+			this.btnG8.HeightRequest = 50;
+			this.btnG8.CanFocus = true;
+			this.btnG8.Name = "btnG8";
+			this.btnG8.UseUnderline = true;
+			global::Gtk.Image w52 = new global::Gtk.Image();
+			this.btnG8.Image = w52;
+			this.tbUI.Add(this.btnG8);
+			global::Gtk.Table.TableChild w53 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnG8]));
+			w53.TopAttach = ((uint)(16));
+			w53.BottomAttach = ((uint)(17));
+			w53.LeftAttach = ((uint)(30));
+			w53.RightAttach = ((uint)(31));
+			w53.XOptions = ((global::Gtk.AttachOptions)(4));
+			w53.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnG9 = new global::Gtk.Button();
+			this.btnG9.WidthRequest = 50;
+			this.btnG9.HeightRequest = 50;
+			this.btnG9.CanFocus = true;
+			this.btnG9.Name = "btnG9";
+			this.btnG9.UseUnderline = true;
+			global::Gtk.Image w54 = new global::Gtk.Image();
+			this.btnG9.Image = w54;
+			this.tbUI.Add(this.btnG9);
+			global::Gtk.Table.TableChild w55 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnG9]));
+			w55.TopAttach = ((uint)(16));
+			w55.BottomAttach = ((uint)(17));
+			w55.LeftAttach = ((uint)(31));
+			w55.RightAttach = ((uint)(32));
+			w55.XOptions = ((global::Gtk.AttachOptions)(4));
+			w55.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnH1 = new global::Gtk.Button();
+			this.btnH1.WidthRequest = 50;
+			this.btnH1.HeightRequest = 50;
+			this.btnH1.CanFocus = true;
+			this.btnH1.Name = "btnH1";
+			this.btnH1.UseUnderline = true;
+			this.btnH1.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w56 = new global::Gtk.Image();
+			this.btnH1.Image = w56;
+			this.tbUI.Add(this.btnH1);
+			global::Gtk.Table.TableChild w57 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH1]));
+			w57.TopAttach = ((uint)(14));
+			w57.BottomAttach = ((uint)(15));
+			w57.LeftAttach = ((uint)(12));
+			w57.RightAttach = ((uint)(13));
+			w57.XOptions = ((global::Gtk.AttachOptions)(4));
+			w57.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnH2 = new global::Gtk.Button();
+			this.btnH2.WidthRequest = 50;
+			this.btnH2.HeightRequest = 50;
+			this.btnH2.CanFocus = true;
+			this.btnH2.Name = "btnH2";
+			this.btnH2.UseUnderline = true;
+			this.btnH2.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w58 = new global::Gtk.Image();
+			this.btnH2.Image = w58;
+			this.tbUI.Add(this.btnH2);
+			global::Gtk.Table.TableChild w59 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH2]));
+			w59.TopAttach = ((uint)(14));
+			w59.BottomAttach = ((uint)(15));
+			w59.LeftAttach = ((uint)(13));
+			w59.RightAttach = ((uint)(14));
+			w59.XOptions = ((global::Gtk.AttachOptions)(4));
+			w59.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnH3 = new global::Gtk.Button();
+			this.btnH3.WidthRequest = 50;
+			this.btnH3.HeightRequest = 50;
+			this.btnH3.CanFocus = true;
+			this.btnH3.Name = "btnH3";
+			this.btnH3.UseUnderline = true;
+			this.btnH3.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w60 = new global::Gtk.Image();
+			this.btnH3.Image = w60;
+			this.tbUI.Add(this.btnH3);
+			global::Gtk.Table.TableChild w61 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH3]));
+			w61.TopAttach = ((uint)(14));
+			w61.BottomAttach = ((uint)(15));
+			w61.LeftAttach = ((uint)(14));
+			w61.RightAttach = ((uint)(15));
+			w61.XOptions = ((global::Gtk.AttachOptions)(4));
+			w61.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnH4 = new global::Gtk.Button();
+			this.btnH4.WidthRequest = 50;
+			this.btnH4.HeightRequest = 50;
+			this.btnH4.CanFocus = true;
+			this.btnH4.Name = "btnH4";
+			this.btnH4.UseUnderline = true;
+			this.btnH4.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w62 = new global::Gtk.Image();
+			this.btnH4.Image = w62;
+			this.tbUI.Add(this.btnH4);
+			global::Gtk.Table.TableChild w63 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH4]));
+			w63.TopAttach = ((uint)(14));
+			w63.BottomAttach = ((uint)(15));
+			w63.LeftAttach = ((uint)(15));
+			w63.RightAttach = ((uint)(16));
+			w63.XOptions = ((global::Gtk.AttachOptions)(4));
+			w63.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnH5 = new global::Gtk.Button();
+			this.btnH5.WidthRequest = 50;
+			this.btnH5.HeightRequest = 50;
+			this.btnH5.CanFocus = true;
+			this.btnH5.Name = "btnH5";
+			this.btnH5.UseUnderline = true;
+			this.btnH5.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w64 = new global::Gtk.Image();
+			this.btnH5.Image = w64;
+			this.tbUI.Add(this.btnH5);
+			global::Gtk.Table.TableChild w65 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH5]));
+			w65.TopAttach = ((uint)(14));
+			w65.BottomAttach = ((uint)(15));
+			w65.LeftAttach = ((uint)(16));
+			w65.RightAttach = ((uint)(17));
+			w65.XOptions = ((global::Gtk.AttachOptions)(4));
+			w65.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnH6 = new global::Gtk.Button();
+			this.btnH6.WidthRequest = 50;
+			this.btnH6.HeightRequest = 50;
+			this.btnH6.CanFocus = true;
+			this.btnH6.Name = "btnH6";
+			this.btnH6.UseUnderline = true;
+			this.btnH6.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w66 = new global::Gtk.Image();
+			this.btnH6.Image = w66;
+			this.tbUI.Add(this.btnH6);
+			global::Gtk.Table.TableChild w67 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH6]));
+			w67.TopAttach = ((uint)(14));
+			w67.BottomAttach = ((uint)(15));
+			w67.LeftAttach = ((uint)(17));
+			w67.RightAttach = ((uint)(18));
+			w67.XOptions = ((global::Gtk.AttachOptions)(4));
+			w67.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnH7 = new global::Gtk.Button();
+			this.btnH7.WidthRequest = 50;
+			this.btnH7.HeightRequest = 50;
+			this.btnH7.CanFocus = true;
+			this.btnH7.Name = "btnH7";
+			this.btnH7.UseUnderline = true;
+			this.btnH7.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w68 = new global::Gtk.Image();
+			this.btnH7.Image = w68;
+			this.tbUI.Add(this.btnH7);
+			global::Gtk.Table.TableChild w69 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH7]));
+			w69.TopAttach = ((uint)(14));
+			w69.BottomAttach = ((uint)(15));
+			w69.LeftAttach = ((uint)(18));
+			w69.RightAttach = ((uint)(19));
+			w69.XOptions = ((global::Gtk.AttachOptions)(4));
+			w69.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnH8 = new global::Gtk.Button();
+			this.btnH8.WidthRequest = 50;
+			this.btnH8.HeightRequest = 50;
+			this.btnH8.CanFocus = true;
+			this.btnH8.Name = "btnH8";
+			this.btnH8.UseUnderline = true;
+			this.btnH8.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w70 = new global::Gtk.Image();
+			this.btnH8.Image = w70;
+			this.tbUI.Add(this.btnH8);
+			global::Gtk.Table.TableChild w71 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH8]));
+			w71.TopAttach = ((uint)(14));
+			w71.BottomAttach = ((uint)(15));
+			w71.LeftAttach = ((uint)(19));
+			w71.RightAttach = ((uint)(20));
+			w71.XOptions = ((global::Gtk.AttachOptions)(4));
+			w71.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnH9 = new global::Gtk.Button();
+			this.btnH9.WidthRequest = 50;
+			this.btnH9.HeightRequest = 50;
+			this.btnH9.CanFocus = true;
+			this.btnH9.Name = "btnH9";
+			this.btnH9.UseUnderline = true;
+			this.btnH9.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w72 = new global::Gtk.Image();
+			this.btnH9.Image = w72;
+			this.tbUI.Add(this.btnH9);
+			global::Gtk.Table.TableChild w73 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnH9]));
+			w73.TopAttach = ((uint)(14));
+			w73.BottomAttach = ((uint)(15));
+			w73.LeftAttach = ((uint)(20));
+			w73.RightAttach = ((uint)(21));
+			w73.XOptions = ((global::Gtk.AttachOptions)(4));
+			w73.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI1 = new global::Gtk.Button();
+			this.btnI1.WidthRequest = 50;
+			this.btnI1.HeightRequest = 50;
+			this.btnI1.CanFocus = true;
+			this.btnI1.Name = "btnI1";
+			this.btnI1.UseUnderline = true;
+			this.btnI1.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w74 = new global::Gtk.Image();
+			this.btnI1.Image = w74;
+			this.tbUI.Add(this.btnI1);
+			global::Gtk.Table.TableChild w75 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI1]));
+			w75.TopAttach = ((uint)(1));
+			w75.BottomAttach = ((uint)(2));
+			w75.LeftAttach = ((uint)(23));
+			w75.RightAttach = ((uint)(24));
+			w75.XOptions = ((global::Gtk.AttachOptions)(4));
+			w75.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI10 = new global::Gtk.Button();
+			this.btnI10.WidthRequest = 50;
+			this.btnI10.HeightRequest = 50;
+			this.btnI10.CanFocus = true;
+			this.btnI10.Name = "btnI10";
+			this.btnI10.UseUnderline = true;
+			this.btnI10.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w76 = new global::Gtk.Image();
+			this.btnI10.Image = w76;
+			this.tbUI.Add(this.btnI10);
+			global::Gtk.Table.TableChild w77 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI10]));
+			w77.TopAttach = ((uint)(2));
+			w77.BottomAttach = ((uint)(3));
+			w77.LeftAttach = ((uint)(23));
+			w77.RightAttach = ((uint)(24));
+			w77.XOptions = ((global::Gtk.AttachOptions)(4));
+			w77.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI11 = new global::Gtk.Button();
+			this.btnI11.WidthRequest = 50;
+			this.btnI11.HeightRequest = 50;
+			this.btnI11.CanFocus = true;
+			this.btnI11.Name = "btnI11";
+			this.btnI11.UseUnderline = true;
+			this.btnI11.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w78 = new global::Gtk.Image();
+			this.btnI11.Image = w78;
+			this.tbUI.Add(this.btnI11);
+			global::Gtk.Table.TableChild w79 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI11]));
+			w79.TopAttach = ((uint)(2));
+			w79.BottomAttach = ((uint)(3));
+			w79.LeftAttach = ((uint)(24));
+			w79.RightAttach = ((uint)(25));
+			w79.XOptions = ((global::Gtk.AttachOptions)(4));
+			w79.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI12 = new global::Gtk.Button();
+			this.btnI12.WidthRequest = 50;
+			this.btnI12.HeightRequest = 50;
+			this.btnI12.CanFocus = true;
+			this.btnI12.Name = "btnI12";
+			this.btnI12.UseUnderline = true;
+			this.btnI12.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w80 = new global::Gtk.Image();
+			this.btnI12.Image = w80;
+			this.tbUI.Add(this.btnI12);
+			global::Gtk.Table.TableChild w81 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI12]));
+			w81.TopAttach = ((uint)(2));
+			w81.BottomAttach = ((uint)(3));
+			w81.LeftAttach = ((uint)(25));
+			w81.RightAttach = ((uint)(26));
+			w81.XOptions = ((global::Gtk.AttachOptions)(4));
+			w81.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI13 = new global::Gtk.Button();
+			this.btnI13.WidthRequest = 50;
+			this.btnI13.HeightRequest = 50;
+			this.btnI13.CanFocus = true;
+			this.btnI13.Name = "btnI13";
+			this.btnI13.UseUnderline = true;
+			this.btnI13.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w82 = new global::Gtk.Image();
+			this.btnI13.Image = w82;
+			this.tbUI.Add(this.btnI13);
+			global::Gtk.Table.TableChild w83 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI13]));
+			w83.TopAttach = ((uint)(2));
+			w83.BottomAttach = ((uint)(3));
+			w83.LeftAttach = ((uint)(26));
+			w83.RightAttach = ((uint)(27));
+			w83.XOptions = ((global::Gtk.AttachOptions)(4));
+			w83.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI14 = new global::Gtk.Button();
+			this.btnI14.WidthRequest = 50;
+			this.btnI14.HeightRequest = 50;
+			this.btnI14.CanFocus = true;
+			this.btnI14.Name = "btnI14";
+			this.btnI14.UseUnderline = true;
+			this.btnI14.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w84 = new global::Gtk.Image();
+			this.btnI14.Image = w84;
+			this.tbUI.Add(this.btnI14);
+			global::Gtk.Table.TableChild w85 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI14]));
+			w85.TopAttach = ((uint)(2));
+			w85.BottomAttach = ((uint)(3));
+			w85.LeftAttach = ((uint)(27));
+			w85.RightAttach = ((uint)(28));
+			w85.XOptions = ((global::Gtk.AttachOptions)(4));
+			w85.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI15 = new global::Gtk.Button();
+			this.btnI15.WidthRequest = 50;
+			this.btnI15.HeightRequest = 50;
+			this.btnI15.CanFocus = true;
+			this.btnI15.Name = "btnI15";
+			this.btnI15.UseUnderline = true;
+			this.btnI15.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w86 = new global::Gtk.Image();
+			this.btnI15.Image = w86;
+			this.tbUI.Add(this.btnI15);
+			global::Gtk.Table.TableChild w87 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI15]));
+			w87.TopAttach = ((uint)(2));
+			w87.BottomAttach = ((uint)(3));
+			w87.LeftAttach = ((uint)(28));
+			w87.RightAttach = ((uint)(29));
+			w87.XOptions = ((global::Gtk.AttachOptions)(4));
+			w87.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI16 = new global::Gtk.Button();
+			this.btnI16.WidthRequest = 50;
+			this.btnI16.HeightRequest = 50;
+			this.btnI16.CanFocus = true;
+			this.btnI16.Name = "btnI16";
+			this.btnI16.UseUnderline = true;
+			this.btnI16.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w88 = new global::Gtk.Image();
+			this.btnI16.Image = w88;
+			this.tbUI.Add(this.btnI16);
+			global::Gtk.Table.TableChild w89 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI16]));
+			w89.TopAttach = ((uint)(2));
+			w89.BottomAttach = ((uint)(3));
+			w89.LeftAttach = ((uint)(29));
+			w89.RightAttach = ((uint)(30));
+			w89.XOptions = ((global::Gtk.AttachOptions)(4));
+			w89.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI17 = new global::Gtk.Button();
+			this.btnI17.WidthRequest = 50;
+			this.btnI17.HeightRequest = 50;
+			this.btnI17.CanFocus = true;
+			this.btnI17.Name = "btnI17";
+			this.btnI17.UseUnderline = true;
+			this.btnI17.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w90 = new global::Gtk.Image();
+			this.btnI17.Image = w90;
+			this.tbUI.Add(this.btnI17);
+			global::Gtk.Table.TableChild w91 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI17]));
+			w91.TopAttach = ((uint)(2));
+			w91.BottomAttach = ((uint)(3));
+			w91.LeftAttach = ((uint)(30));
+			w91.RightAttach = ((uint)(31));
+			w91.XOptions = ((global::Gtk.AttachOptions)(4));
+			w91.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI18 = new global::Gtk.Button();
+			this.btnI18.WidthRequest = 50;
+			this.btnI18.HeightRequest = 50;
+			this.btnI18.CanFocus = true;
+			this.btnI18.Name = "btnI18";
+			this.btnI18.UseUnderline = true;
+			this.btnI18.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w92 = new global::Gtk.Image();
+			this.btnI18.Image = w92;
+			this.tbUI.Add(this.btnI18);
+			global::Gtk.Table.TableChild w93 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI18]));
+			w93.TopAttach = ((uint)(2));
+			w93.BottomAttach = ((uint)(3));
+			w93.LeftAttach = ((uint)(31));
+			w93.RightAttach = ((uint)(32));
+			w93.XOptions = ((global::Gtk.AttachOptions)(4));
+			w93.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI19 = new global::Gtk.Button();
+			this.btnI19.WidthRequest = 50;
+			this.btnI19.HeightRequest = 50;
+			this.btnI19.CanFocus = true;
+			this.btnI19.Name = "btnI19";
+			this.btnI19.UseUnderline = true;
+			this.btnI19.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w94 = new global::Gtk.Image();
+			this.btnI19.Image = w94;
+			this.tbUI.Add(this.btnI19);
+			global::Gtk.Table.TableChild w95 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI19]));
+			w95.TopAttach = ((uint)(3));
+			w95.BottomAttach = ((uint)(4));
+			w95.LeftAttach = ((uint)(23));
+			w95.RightAttach = ((uint)(24));
+			w95.XOptions = ((global::Gtk.AttachOptions)(4));
+			w95.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI2 = new global::Gtk.Button();
+			this.btnI2.WidthRequest = 50;
+			this.btnI2.HeightRequest = 50;
+			this.btnI2.CanFocus = true;
+			this.btnI2.Name = "btnI2";
+			this.btnI2.UseUnderline = true;
+			this.btnI2.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w96 = new global::Gtk.Image();
+			this.btnI2.Image = w96;
+			this.tbUI.Add(this.btnI2);
+			global::Gtk.Table.TableChild w97 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI2]));
+			w97.TopAttach = ((uint)(1));
+			w97.BottomAttach = ((uint)(2));
+			w97.LeftAttach = ((uint)(24));
+			w97.RightAttach = ((uint)(25));
+			w97.XOptions = ((global::Gtk.AttachOptions)(4));
+			w97.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI20 = new global::Gtk.Button();
+			this.btnI20.WidthRequest = 50;
+			this.btnI20.HeightRequest = 50;
+			this.btnI20.CanFocus = true;
+			this.btnI20.Name = "btnI20";
+			this.btnI20.UseUnderline = true;
+			this.btnI20.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w98 = new global::Gtk.Image();
+			this.btnI20.Image = w98;
+			this.tbUI.Add(this.btnI20);
+			global::Gtk.Table.TableChild w99 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI20]));
+			w99.TopAttach = ((uint)(3));
+			w99.BottomAttach = ((uint)(4));
+			w99.LeftAttach = ((uint)(24));
+			w99.RightAttach = ((uint)(25));
+			w99.XOptions = ((global::Gtk.AttachOptions)(4));
+			w99.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI21 = new global::Gtk.Button();
+			this.btnI21.WidthRequest = 50;
+			this.btnI21.HeightRequest = 50;
+			this.btnI21.CanFocus = true;
+			this.btnI21.Name = "btnI21";
+			this.btnI21.UseUnderline = true;
+			this.btnI21.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w100 = new global::Gtk.Image();
+			this.btnI21.Image = w100;
+			this.tbUI.Add(this.btnI21);
+			global::Gtk.Table.TableChild w101 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI21]));
+			w101.TopAttach = ((uint)(3));
+			w101.BottomAttach = ((uint)(4));
+			w101.LeftAttach = ((uint)(25));
+			w101.RightAttach = ((uint)(26));
+			w101.XOptions = ((global::Gtk.AttachOptions)(4));
+			w101.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI22 = new global::Gtk.Button();
+			this.btnI22.WidthRequest = 50;
+			this.btnI22.HeightRequest = 50;
+			this.btnI22.CanFocus = true;
+			this.btnI22.Name = "btnI22";
+			this.btnI22.UseUnderline = true;
+			this.btnI22.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w102 = new global::Gtk.Image();
+			this.btnI22.Image = w102;
+			this.tbUI.Add(this.btnI22);
+			global::Gtk.Table.TableChild w103 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI22]));
+			w103.TopAttach = ((uint)(3));
+			w103.BottomAttach = ((uint)(4));
+			w103.LeftAttach = ((uint)(26));
+			w103.RightAttach = ((uint)(27));
+			w103.XOptions = ((global::Gtk.AttachOptions)(4));
+			w103.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI23 = new global::Gtk.Button();
+			this.btnI23.WidthRequest = 50;
+			this.btnI23.HeightRequest = 50;
+			this.btnI23.CanFocus = true;
+			this.btnI23.Name = "btnI23";
+			this.btnI23.UseUnderline = true;
+			this.btnI23.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w104 = new global::Gtk.Image();
+			this.btnI23.Image = w104;
+			this.tbUI.Add(this.btnI23);
+			global::Gtk.Table.TableChild w105 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI23]));
+			w105.TopAttach = ((uint)(3));
+			w105.BottomAttach = ((uint)(4));
+			w105.LeftAttach = ((uint)(27));
+			w105.RightAttach = ((uint)(28));
+			w105.XOptions = ((global::Gtk.AttachOptions)(4));
+			w105.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI24 = new global::Gtk.Button();
+			this.btnI24.WidthRequest = 50;
+			this.btnI24.HeightRequest = 50;
+			this.btnI24.CanFocus = true;
+			this.btnI24.Name = "btnI24";
+			this.btnI24.UseUnderline = true;
+			this.btnI24.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w106 = new global::Gtk.Image();
+			this.btnI24.Image = w106;
+			this.tbUI.Add(this.btnI24);
+			global::Gtk.Table.TableChild w107 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI24]));
+			w107.TopAttach = ((uint)(3));
+			w107.BottomAttach = ((uint)(4));
+			w107.LeftAttach = ((uint)(28));
+			w107.RightAttach = ((uint)(29));
+			w107.XOptions = ((global::Gtk.AttachOptions)(4));
+			w107.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI25 = new global::Gtk.Button();
+			this.btnI25.WidthRequest = 50;
+			this.btnI25.HeightRequest = 50;
+			this.btnI25.CanFocus = true;
+			this.btnI25.Name = "btnI25";
+			this.btnI25.UseUnderline = true;
+			this.btnI25.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w108 = new global::Gtk.Image();
+			this.btnI25.Image = w108;
+			this.tbUI.Add(this.btnI25);
+			global::Gtk.Table.TableChild w109 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI25]));
+			w109.TopAttach = ((uint)(3));
+			w109.BottomAttach = ((uint)(4));
+			w109.LeftAttach = ((uint)(29));
+			w109.RightAttach = ((uint)(30));
+			w109.XOptions = ((global::Gtk.AttachOptions)(4));
+			w109.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI26 = new global::Gtk.Button();
+			this.btnI26.WidthRequest = 50;
+			this.btnI26.HeightRequest = 50;
+			this.btnI26.CanFocus = true;
+			this.btnI26.Name = "btnI26";
+			this.btnI26.UseUnderline = true;
+			this.btnI26.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w110 = new global::Gtk.Image();
+			this.btnI26.Image = w110;
+			this.tbUI.Add(this.btnI26);
+			global::Gtk.Table.TableChild w111 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI26]));
+			w111.TopAttach = ((uint)(3));
+			w111.BottomAttach = ((uint)(4));
+			w111.LeftAttach = ((uint)(30));
+			w111.RightAttach = ((uint)(31));
+			w111.XOptions = ((global::Gtk.AttachOptions)(4));
+			w111.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI27 = new global::Gtk.Button();
+			this.btnI27.WidthRequest = 50;
+			this.btnI27.HeightRequest = 50;
+			this.btnI27.CanFocus = true;
+			this.btnI27.Name = "btnI27";
+			this.btnI27.UseUnderline = true;
+			this.btnI27.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w112 = new global::Gtk.Image();
+			this.btnI27.Image = w112;
+			this.tbUI.Add(this.btnI27);
+			global::Gtk.Table.TableChild w113 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI27]));
+			w113.TopAttach = ((uint)(3));
+			w113.BottomAttach = ((uint)(4));
+			w113.LeftAttach = ((uint)(31));
+			w113.RightAttach = ((uint)(32));
+			w113.XOptions = ((global::Gtk.AttachOptions)(4));
+			w113.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI28 = new global::Gtk.Button();
+			this.btnI28.WidthRequest = 50;
+			this.btnI28.HeightRequest = 50;
+			this.btnI28.CanFocus = true;
+			this.btnI28.Name = "btnI28";
+			this.btnI28.UseUnderline = true;
+			this.btnI28.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w114 = new global::Gtk.Image();
+			this.btnI28.Image = w114;
+			this.tbUI.Add(this.btnI28);
+			global::Gtk.Table.TableChild w115 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI28]));
+			w115.TopAttach = ((uint)(4));
+			w115.BottomAttach = ((uint)(5));
+			w115.LeftAttach = ((uint)(23));
+			w115.RightAttach = ((uint)(24));
+			w115.XOptions = ((global::Gtk.AttachOptions)(4));
+			w115.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI29 = new global::Gtk.Button();
+			this.btnI29.WidthRequest = 50;
+			this.btnI29.HeightRequest = 50;
+			this.btnI29.CanFocus = true;
+			this.btnI29.Name = "btnI29";
+			this.btnI29.UseUnderline = true;
+			this.btnI29.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w116 = new global::Gtk.Image();
+			this.btnI29.Image = w116;
+			this.tbUI.Add(this.btnI29);
+			global::Gtk.Table.TableChild w117 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI29]));
+			w117.TopAttach = ((uint)(4));
+			w117.BottomAttach = ((uint)(5));
+			w117.LeftAttach = ((uint)(24));
+			w117.RightAttach = ((uint)(25));
+			w117.XOptions = ((global::Gtk.AttachOptions)(4));
+			w117.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI3 = new global::Gtk.Button();
+			this.btnI3.WidthRequest = 50;
+			this.btnI3.HeightRequest = 50;
+			this.btnI3.CanFocus = true;
+			this.btnI3.Name = "btnI3";
+			this.btnI3.UseUnderline = true;
+			this.btnI3.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w118 = new global::Gtk.Image();
+			this.btnI3.Image = w118;
+			this.tbUI.Add(this.btnI3);
+			global::Gtk.Table.TableChild w119 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI3]));
+			w119.TopAttach = ((uint)(1));
+			w119.BottomAttach = ((uint)(2));
+			w119.LeftAttach = ((uint)(25));
+			w119.RightAttach = ((uint)(26));
+			w119.XOptions = ((global::Gtk.AttachOptions)(4));
+			w119.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI30 = new global::Gtk.Button();
+			this.btnI30.WidthRequest = 50;
+			this.btnI30.HeightRequest = 50;
+			this.btnI30.CanFocus = true;
+			this.btnI30.Name = "btnI30";
+			this.btnI30.UseUnderline = true;
+			this.btnI30.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w120 = new global::Gtk.Image();
+			this.btnI30.Image = w120;
+			this.tbUI.Add(this.btnI30);
+			global::Gtk.Table.TableChild w121 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI30]));
+			w121.TopAttach = ((uint)(4));
+			w121.BottomAttach = ((uint)(5));
+			w121.LeftAttach = ((uint)(25));
+			w121.RightAttach = ((uint)(26));
+			w121.XOptions = ((global::Gtk.AttachOptions)(4));
+			w121.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI31 = new global::Gtk.Button();
+			this.btnI31.WidthRequest = 50;
+			this.btnI31.HeightRequest = 50;
+			this.btnI31.CanFocus = true;
+			this.btnI31.Name = "btnI31";
+			this.btnI31.UseUnderline = true;
+			this.btnI31.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w122 = new global::Gtk.Image();
+			this.btnI31.Image = w122;
+			this.tbUI.Add(this.btnI31);
+			global::Gtk.Table.TableChild w123 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI31]));
+			w123.TopAttach = ((uint)(4));
+			w123.BottomAttach = ((uint)(5));
+			w123.LeftAttach = ((uint)(26));
+			w123.RightAttach = ((uint)(27));
+			w123.XOptions = ((global::Gtk.AttachOptions)(4));
+			w123.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI32 = new global::Gtk.Button();
+			this.btnI32.WidthRequest = 50;
+			this.btnI32.HeightRequest = 50;
+			this.btnI32.CanFocus = true;
+			this.btnI32.Name = "btnI32";
+			this.btnI32.UseUnderline = true;
+			this.btnI32.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w124 = new global::Gtk.Image();
+			this.btnI32.Image = w124;
+			this.tbUI.Add(this.btnI32);
+			global::Gtk.Table.TableChild w125 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI32]));
+			w125.TopAttach = ((uint)(4));
+			w125.BottomAttach = ((uint)(5));
+			w125.LeftAttach = ((uint)(27));
+			w125.RightAttach = ((uint)(28));
+			w125.XOptions = ((global::Gtk.AttachOptions)(4));
+			w125.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI33 = new global::Gtk.Button();
+			this.btnI33.WidthRequest = 50;
+			this.btnI33.HeightRequest = 50;
+			this.btnI33.CanFocus = true;
+			this.btnI33.Name = "btnI33";
+			this.btnI33.UseUnderline = true;
+			this.btnI33.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w126 = new global::Gtk.Image();
+			this.btnI33.Image = w126;
+			this.tbUI.Add(this.btnI33);
+			global::Gtk.Table.TableChild w127 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI33]));
+			w127.TopAttach = ((uint)(4));
+			w127.BottomAttach = ((uint)(5));
+			w127.LeftAttach = ((uint)(28));
+			w127.RightAttach = ((uint)(29));
+			w127.XOptions = ((global::Gtk.AttachOptions)(4));
+			w127.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI34 = new global::Gtk.Button();
+			this.btnI34.WidthRequest = 50;
+			this.btnI34.HeightRequest = 50;
+			this.btnI34.CanFocus = true;
+			this.btnI34.Name = "btnI34";
+			this.btnI34.UseUnderline = true;
+			this.btnI34.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w128 = new global::Gtk.Image();
+			this.btnI34.Image = w128;
+			this.tbUI.Add(this.btnI34);
+			global::Gtk.Table.TableChild w129 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI34]));
+			w129.TopAttach = ((uint)(4));
+			w129.BottomAttach = ((uint)(5));
+			w129.LeftAttach = ((uint)(29));
+			w129.RightAttach = ((uint)(30));
+			w129.XOptions = ((global::Gtk.AttachOptions)(4));
+			w129.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI35 = new global::Gtk.Button();
+			this.btnI35.WidthRequest = 50;
+			this.btnI35.HeightRequest = 50;
+			this.btnI35.CanFocus = true;
+			this.btnI35.Name = "btnI35";
+			this.btnI35.UseUnderline = true;
+			this.btnI35.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w130 = new global::Gtk.Image();
+			this.btnI35.Image = w130;
+			this.tbUI.Add(this.btnI35);
+			global::Gtk.Table.TableChild w131 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI35]));
+			w131.TopAttach = ((uint)(4));
+			w131.BottomAttach = ((uint)(5));
+			w131.LeftAttach = ((uint)(30));
+			w131.RightAttach = ((uint)(31));
+			w131.XOptions = ((global::Gtk.AttachOptions)(4));
+			w131.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI36 = new global::Gtk.Button();
+			this.btnI36.WidthRequest = 50;
+			this.btnI36.HeightRequest = 50;
+			this.btnI36.CanFocus = true;
+			this.btnI36.Name = "btnI36";
+			this.btnI36.UseUnderline = true;
+			this.btnI36.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w132 = new global::Gtk.Image();
+			this.btnI36.Image = w132;
+			this.tbUI.Add(this.btnI36);
+			global::Gtk.Table.TableChild w133 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI36]));
+			w133.TopAttach = ((uint)(4));
+			w133.BottomAttach = ((uint)(5));
+			w133.LeftAttach = ((uint)(31));
+			w133.RightAttach = ((uint)(32));
+			w133.XOptions = ((global::Gtk.AttachOptions)(4));
+			w133.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI37 = new global::Gtk.Button();
+			this.btnI37.WidthRequest = 50;
+			this.btnI37.HeightRequest = 50;
+			this.btnI37.CanFocus = true;
+			this.btnI37.Name = "btnI37";
+			this.btnI37.UseUnderline = true;
+			this.btnI37.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w134 = new global::Gtk.Image();
+			this.btnI37.Image = w134;
+			this.tbUI.Add(this.btnI37);
+			global::Gtk.Table.TableChild w135 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI37]));
+			w135.TopAttach = ((uint)(5));
+			w135.BottomAttach = ((uint)(6));
+			w135.LeftAttach = ((uint)(23));
+			w135.RightAttach = ((uint)(24));
+			w135.XOptions = ((global::Gtk.AttachOptions)(4));
+			w135.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI38 = new global::Gtk.Button();
+			this.btnI38.WidthRequest = 50;
+			this.btnI38.HeightRequest = 50;
+			this.btnI38.CanFocus = true;
+			this.btnI38.Name = "btnI38";
+			this.btnI38.UseUnderline = true;
+			this.btnI38.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w136 = new global::Gtk.Image();
+			this.btnI38.Image = w136;
+			this.tbUI.Add(this.btnI38);
+			global::Gtk.Table.TableChild w137 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI38]));
+			w137.TopAttach = ((uint)(5));
+			w137.BottomAttach = ((uint)(6));
+			w137.LeftAttach = ((uint)(24));
+			w137.RightAttach = ((uint)(25));
+			w137.XOptions = ((global::Gtk.AttachOptions)(4));
+			w137.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI39 = new global::Gtk.Button();
+			this.btnI39.WidthRequest = 50;
+			this.btnI39.HeightRequest = 50;
+			this.btnI39.CanFocus = true;
+			this.btnI39.Name = "btnI39";
+			this.btnI39.UseUnderline = true;
+			this.btnI39.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w138 = new global::Gtk.Image();
+			this.btnI39.Image = w138;
+			this.tbUI.Add(this.btnI39);
+			global::Gtk.Table.TableChild w139 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI39]));
+			w139.TopAttach = ((uint)(5));
+			w139.BottomAttach = ((uint)(6));
+			w139.LeftAttach = ((uint)(25));
+			w139.RightAttach = ((uint)(26));
+			w139.XOptions = ((global::Gtk.AttachOptions)(4));
+			w139.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI4 = new global::Gtk.Button();
+			this.btnI4.WidthRequest = 50;
+			this.btnI4.HeightRequest = 50;
+			this.btnI4.CanFocus = true;
+			this.btnI4.Name = "btnI4";
+			this.btnI4.UseUnderline = true;
+			this.btnI4.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w140 = new global::Gtk.Image();
+			this.btnI4.Image = w140;
+			this.tbUI.Add(this.btnI4);
+			global::Gtk.Table.TableChild w141 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI4]));
+			w141.TopAttach = ((uint)(1));
+			w141.BottomAttach = ((uint)(2));
+			w141.LeftAttach = ((uint)(26));
+			w141.RightAttach = ((uint)(27));
+			w141.XOptions = ((global::Gtk.AttachOptions)(4));
+			w141.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI40 = new global::Gtk.Button();
+			this.btnI40.WidthRequest = 50;
+			this.btnI40.HeightRequest = 50;
+			this.btnI40.CanFocus = true;
+			this.btnI40.Name = "btnI40";
+			this.btnI40.UseUnderline = true;
+			this.btnI40.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w142 = new global::Gtk.Image();
+			this.btnI40.Image = w142;
+			this.tbUI.Add(this.btnI40);
+			global::Gtk.Table.TableChild w143 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI40]));
+			w143.TopAttach = ((uint)(5));
+			w143.BottomAttach = ((uint)(6));
+			w143.LeftAttach = ((uint)(26));
+			w143.RightAttach = ((uint)(27));
+			w143.XOptions = ((global::Gtk.AttachOptions)(4));
+			w143.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI41 = new global::Gtk.Button();
+			this.btnI41.WidthRequest = 50;
+			this.btnI41.HeightRequest = 50;
+			this.btnI41.CanFocus = true;
+			this.btnI41.Name = "btnI41";
+			this.btnI41.UseUnderline = true;
+			this.btnI41.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w144 = new global::Gtk.Image();
+			this.btnI41.Image = w144;
+			this.tbUI.Add(this.btnI41);
+			global::Gtk.Table.TableChild w145 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI41]));
+			w145.TopAttach = ((uint)(5));
+			w145.BottomAttach = ((uint)(6));
+			w145.LeftAttach = ((uint)(27));
+			w145.RightAttach = ((uint)(28));
+			w145.XOptions = ((global::Gtk.AttachOptions)(4));
+			w145.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI42 = new global::Gtk.Button();
+			this.btnI42.WidthRequest = 50;
+			this.btnI42.HeightRequest = 50;
+			this.btnI42.CanFocus = true;
+			this.btnI42.Name = "btnI42";
+			this.btnI42.UseUnderline = true;
+			this.btnI42.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w146 = new global::Gtk.Image();
+			this.btnI42.Image = w146;
+			this.tbUI.Add(this.btnI42);
+			global::Gtk.Table.TableChild w147 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI42]));
+			w147.TopAttach = ((uint)(5));
+			w147.BottomAttach = ((uint)(6));
+			w147.LeftAttach = ((uint)(28));
+			w147.RightAttach = ((uint)(29));
+			w147.XOptions = ((global::Gtk.AttachOptions)(4));
+			w147.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI43 = new global::Gtk.Button();
+			this.btnI43.WidthRequest = 50;
+			this.btnI43.HeightRequest = 50;
+			this.btnI43.CanFocus = true;
+			this.btnI43.Name = "btnI43";
+			this.btnI43.UseUnderline = true;
+			this.btnI43.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w148 = new global::Gtk.Image();
+			this.btnI43.Image = w148;
+			this.tbUI.Add(this.btnI43);
+			global::Gtk.Table.TableChild w149 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI43]));
+			w149.TopAttach = ((uint)(5));
+			w149.BottomAttach = ((uint)(6));
+			w149.LeftAttach = ((uint)(29));
+			w149.RightAttach = ((uint)(30));
+			w149.XOptions = ((global::Gtk.AttachOptions)(4));
+			w149.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI44 = new global::Gtk.Button();
+			this.btnI44.WidthRequest = 50;
+			this.btnI44.HeightRequest = 50;
+			this.btnI44.CanFocus = true;
+			this.btnI44.Name = "btnI44";
+			this.btnI44.UseUnderline = true;
+			this.btnI44.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w150 = new global::Gtk.Image();
+			this.btnI44.Image = w150;
+			this.tbUI.Add(this.btnI44);
+			global::Gtk.Table.TableChild w151 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI44]));
+			w151.TopAttach = ((uint)(5));
+			w151.BottomAttach = ((uint)(6));
+			w151.LeftAttach = ((uint)(30));
+			w151.RightAttach = ((uint)(31));
+			w151.XOptions = ((global::Gtk.AttachOptions)(4));
+			w151.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI45 = new global::Gtk.Button();
+			this.btnI45.WidthRequest = 50;
+			this.btnI45.HeightRequest = 50;
+			this.btnI45.CanFocus = true;
+			this.btnI45.Name = "btnI45";
+			this.btnI45.UseUnderline = true;
+			this.btnI45.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w152 = new global::Gtk.Image();
+			this.btnI45.Image = w152;
+			this.tbUI.Add(this.btnI45);
+			global::Gtk.Table.TableChild w153 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI45]));
+			w153.TopAttach = ((uint)(5));
+			w153.BottomAttach = ((uint)(6));
+			w153.LeftAttach = ((uint)(31));
+			w153.RightAttach = ((uint)(32));
+			w153.XOptions = ((global::Gtk.AttachOptions)(4));
+			w153.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI46 = new global::Gtk.Button();
+			this.btnI46.WidthRequest = 50;
+			this.btnI46.HeightRequest = 50;
+			this.btnI46.CanFocus = true;
+			this.btnI46.Name = "btnI46";
+			this.btnI46.UseUnderline = true;
+			this.btnI46.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w154 = new global::Gtk.Image();
+			this.btnI46.Image = w154;
+			this.tbUI.Add(this.btnI46);
+			global::Gtk.Table.TableChild w155 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI46]));
+			w155.TopAttach = ((uint)(6));
+			w155.BottomAttach = ((uint)(7));
+			w155.LeftAttach = ((uint)(23));
+			w155.RightAttach = ((uint)(24));
+			w155.XOptions = ((global::Gtk.AttachOptions)(4));
+			w155.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI47 = new global::Gtk.Button();
+			this.btnI47.WidthRequest = 50;
+			this.btnI47.HeightRequest = 50;
+			this.btnI47.CanFocus = true;
+			this.btnI47.Name = "btnI47";
+			this.btnI47.UseUnderline = true;
+			this.btnI47.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w156 = new global::Gtk.Image();
+			this.btnI47.Image = w156;
+			this.tbUI.Add(this.btnI47);
+			global::Gtk.Table.TableChild w157 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI47]));
+			w157.TopAttach = ((uint)(6));
+			w157.BottomAttach = ((uint)(7));
+			w157.LeftAttach = ((uint)(24));
+			w157.RightAttach = ((uint)(25));
+			w157.XOptions = ((global::Gtk.AttachOptions)(4));
+			w157.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI48 = new global::Gtk.Button();
+			this.btnI48.WidthRequest = 50;
+			this.btnI48.HeightRequest = 50;
+			this.btnI48.CanFocus = true;
+			this.btnI48.Name = "btnI48";
+			this.btnI48.UseUnderline = true;
+			this.btnI48.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w158 = new global::Gtk.Image();
+			this.btnI48.Image = w158;
+			this.tbUI.Add(this.btnI48);
+			global::Gtk.Table.TableChild w159 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI48]));
+			w159.TopAttach = ((uint)(6));
+			w159.BottomAttach = ((uint)(7));
+			w159.LeftAttach = ((uint)(25));
+			w159.RightAttach = ((uint)(26));
+			w159.XOptions = ((global::Gtk.AttachOptions)(4));
+			w159.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI49 = new global::Gtk.Button();
+			this.btnI49.WidthRequest = 50;
+			this.btnI49.HeightRequest = 50;
+			this.btnI49.CanFocus = true;
+			this.btnI49.Name = "btnI49";
+			this.btnI49.UseUnderline = true;
+			this.btnI49.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w160 = new global::Gtk.Image();
+			this.btnI49.Image = w160;
+			this.tbUI.Add(this.btnI49);
+			global::Gtk.Table.TableChild w161 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI49]));
+			w161.TopAttach = ((uint)(6));
+			w161.BottomAttach = ((uint)(7));
+			w161.LeftAttach = ((uint)(26));
+			w161.RightAttach = ((uint)(27));
+			w161.XOptions = ((global::Gtk.AttachOptions)(4));
+			w161.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI5 = new global::Gtk.Button();
+			this.btnI5.WidthRequest = 50;
+			this.btnI5.HeightRequest = 50;
+			this.btnI5.CanFocus = true;
+			this.btnI5.Name = "btnI5";
+			this.btnI5.UseUnderline = true;
+			this.btnI5.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w162 = new global::Gtk.Image();
+			this.btnI5.Image = w162;
+			this.tbUI.Add(this.btnI5);
+			global::Gtk.Table.TableChild w163 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI5]));
+			w163.TopAttach = ((uint)(1));
+			w163.BottomAttach = ((uint)(2));
+			w163.LeftAttach = ((uint)(27));
+			w163.RightAttach = ((uint)(28));
+			w163.XOptions = ((global::Gtk.AttachOptions)(4));
+			w163.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI50 = new global::Gtk.Button();
+			this.btnI50.WidthRequest = 50;
+			this.btnI50.HeightRequest = 50;
+			this.btnI50.CanFocus = true;
+			this.btnI50.Name = "btnI50";
+			this.btnI50.UseUnderline = true;
+			this.btnI50.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w164 = new global::Gtk.Image();
+			this.btnI50.Image = w164;
+			this.tbUI.Add(this.btnI50);
+			global::Gtk.Table.TableChild w165 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI50]));
+			w165.TopAttach = ((uint)(6));
+			w165.BottomAttach = ((uint)(7));
+			w165.LeftAttach = ((uint)(27));
+			w165.RightAttach = ((uint)(28));
+			w165.XOptions = ((global::Gtk.AttachOptions)(4));
+			w165.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI51 = new global::Gtk.Button();
+			this.btnI51.WidthRequest = 50;
+			this.btnI51.HeightRequest = 50;
+			this.btnI51.CanFocus = true;
+			this.btnI51.Name = "btnI51";
+			this.btnI51.UseUnderline = true;
+			this.btnI51.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w166 = new global::Gtk.Image();
+			this.btnI51.Image = w166;
+			this.tbUI.Add(this.btnI51);
+			global::Gtk.Table.TableChild w167 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI51]));
+			w167.TopAttach = ((uint)(6));
+			w167.BottomAttach = ((uint)(7));
+			w167.LeftAttach = ((uint)(28));
+			w167.RightAttach = ((uint)(29));
+			w167.XOptions = ((global::Gtk.AttachOptions)(4));
+			w167.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI52 = new global::Gtk.Button();
+			this.btnI52.WidthRequest = 50;
+			this.btnI52.HeightRequest = 50;
+			this.btnI52.CanFocus = true;
+			this.btnI52.Name = "btnI52";
+			this.btnI52.UseUnderline = true;
+			this.btnI52.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w168 = new global::Gtk.Image();
+			this.btnI52.Image = w168;
+			this.tbUI.Add(this.btnI52);
+			global::Gtk.Table.TableChild w169 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI52]));
+			w169.TopAttach = ((uint)(6));
+			w169.BottomAttach = ((uint)(7));
+			w169.LeftAttach = ((uint)(29));
+			w169.RightAttach = ((uint)(30));
+			w169.XOptions = ((global::Gtk.AttachOptions)(4));
+			w169.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI53 = new global::Gtk.Button();
+			this.btnI53.WidthRequest = 50;
+			this.btnI53.HeightRequest = 50;
+			this.btnI53.CanFocus = true;
+			this.btnI53.Name = "btnI53";
+			this.btnI53.UseUnderline = true;
+			this.btnI53.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w170 = new global::Gtk.Image();
+			this.btnI53.Image = w170;
+			this.tbUI.Add(this.btnI53);
+			global::Gtk.Table.TableChild w171 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI53]));
+			w171.TopAttach = ((uint)(6));
+			w171.BottomAttach = ((uint)(7));
+			w171.LeftAttach = ((uint)(30));
+			w171.RightAttach = ((uint)(31));
+			w171.XOptions = ((global::Gtk.AttachOptions)(4));
+			w171.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI54 = new global::Gtk.Button();
+			this.btnI54.WidthRequest = 50;
+			this.btnI54.HeightRequest = 50;
+			this.btnI54.CanFocus = true;
+			this.btnI54.Name = "btnI54";
+			this.btnI54.UseUnderline = true;
+			this.btnI54.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w172 = new global::Gtk.Image();
+			this.btnI54.Image = w172;
+			this.tbUI.Add(this.btnI54);
+			global::Gtk.Table.TableChild w173 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI54]));
+			w173.TopAttach = ((uint)(6));
+			w173.BottomAttach = ((uint)(7));
+			w173.LeftAttach = ((uint)(31));
+			w173.RightAttach = ((uint)(32));
+			w173.XOptions = ((global::Gtk.AttachOptions)(4));
+			w173.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI55 = new global::Gtk.Button();
+			this.btnI55.WidthRequest = 50;
+			this.btnI55.HeightRequest = 50;
+			this.btnI55.CanFocus = true;
+			this.btnI55.Name = "btnI55";
+			this.btnI55.UseUnderline = true;
+			this.btnI55.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w174 = new global::Gtk.Image();
+			this.btnI55.Image = w174;
+			this.tbUI.Add(this.btnI55);
+			global::Gtk.Table.TableChild w175 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI55]));
+			w175.TopAttach = ((uint)(7));
+			w175.BottomAttach = ((uint)(8));
+			w175.LeftAttach = ((uint)(23));
+			w175.RightAttach = ((uint)(24));
+			w175.XOptions = ((global::Gtk.AttachOptions)(4));
+			w175.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI56 = new global::Gtk.Button();
+			this.btnI56.WidthRequest = 50;
+			this.btnI56.HeightRequest = 50;
+			this.btnI56.CanFocus = true;
+			this.btnI56.Name = "btnI56";
+			this.btnI56.UseUnderline = true;
+			this.btnI56.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w176 = new global::Gtk.Image();
+			this.btnI56.Image = w176;
+			this.tbUI.Add(this.btnI56);
+			global::Gtk.Table.TableChild w177 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI56]));
+			w177.TopAttach = ((uint)(7));
+			w177.BottomAttach = ((uint)(8));
+			w177.LeftAttach = ((uint)(24));
+			w177.RightAttach = ((uint)(25));
+			w177.XOptions = ((global::Gtk.AttachOptions)(4));
+			w177.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI57 = new global::Gtk.Button();
+			this.btnI57.WidthRequest = 50;
+			this.btnI57.HeightRequest = 50;
+			this.btnI57.CanFocus = true;
+			this.btnI57.Name = "btnI57";
+			this.btnI57.UseUnderline = true;
+			this.btnI57.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w178 = new global::Gtk.Image();
+			this.btnI57.Image = w178;
+			this.tbUI.Add(this.btnI57);
+			global::Gtk.Table.TableChild w179 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI57]));
+			w179.TopAttach = ((uint)(7));
+			w179.BottomAttach = ((uint)(8));
+			w179.LeftAttach = ((uint)(25));
+			w179.RightAttach = ((uint)(26));
+			w179.XOptions = ((global::Gtk.AttachOptions)(4));
+			w179.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI58 = new global::Gtk.Button();
+			this.btnI58.WidthRequest = 50;
+			this.btnI58.HeightRequest = 50;
+			this.btnI58.CanFocus = true;
+			this.btnI58.Name = "btnI58";
+			this.btnI58.UseUnderline = true;
+			this.btnI58.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w180 = new global::Gtk.Image();
+			this.btnI58.Image = w180;
+			this.tbUI.Add(this.btnI58);
+			global::Gtk.Table.TableChild w181 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI58]));
+			w181.TopAttach = ((uint)(7));
+			w181.BottomAttach = ((uint)(8));
+			w181.LeftAttach = ((uint)(26));
+			w181.RightAttach = ((uint)(27));
+			w181.XOptions = ((global::Gtk.AttachOptions)(4));
+			w181.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI59 = new global::Gtk.Button();
+			this.btnI59.WidthRequest = 50;
+			this.btnI59.HeightRequest = 50;
+			this.btnI59.CanFocus = true;
+			this.btnI59.Name = "btnI59";
+			this.btnI59.UseUnderline = true;
+			this.btnI59.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w182 = new global::Gtk.Image();
+			this.btnI59.Image = w182;
+			this.tbUI.Add(this.btnI59);
+			global::Gtk.Table.TableChild w183 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI59]));
+			w183.TopAttach = ((uint)(7));
+			w183.BottomAttach = ((uint)(8));
+			w183.LeftAttach = ((uint)(27));
+			w183.RightAttach = ((uint)(28));
+			w183.XOptions = ((global::Gtk.AttachOptions)(4));
+			w183.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI6 = new global::Gtk.Button();
+			this.btnI6.WidthRequest = 50;
+			this.btnI6.HeightRequest = 50;
+			this.btnI6.CanFocus = true;
+			this.btnI6.Name = "btnI6";
+			this.btnI6.UseUnderline = true;
+			this.btnI6.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w184 = new global::Gtk.Image();
+			this.btnI6.Image = w184;
+			this.tbUI.Add(this.btnI6);
+			global::Gtk.Table.TableChild w185 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI6]));
+			w185.TopAttach = ((uint)(1));
+			w185.BottomAttach = ((uint)(2));
+			w185.LeftAttach = ((uint)(28));
+			w185.RightAttach = ((uint)(29));
+			w185.XOptions = ((global::Gtk.AttachOptions)(4));
+			w185.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI60 = new global::Gtk.Button();
+			this.btnI60.WidthRequest = 50;
+			this.btnI60.HeightRequest = 50;
+			this.btnI60.CanFocus = true;
+			this.btnI60.Name = "btnI60";
+			this.btnI60.UseUnderline = true;
+			this.btnI60.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w186 = new global::Gtk.Image();
+			this.btnI60.Image = w186;
+			this.tbUI.Add(this.btnI60);
+			global::Gtk.Table.TableChild w187 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI60]));
+			w187.TopAttach = ((uint)(7));
+			w187.BottomAttach = ((uint)(8));
+			w187.LeftAttach = ((uint)(28));
+			w187.RightAttach = ((uint)(29));
+			w187.XOptions = ((global::Gtk.AttachOptions)(4));
+			w187.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI61 = new global::Gtk.Button();
+			this.btnI61.WidthRequest = 50;
+			this.btnI61.HeightRequest = 50;
+			this.btnI61.CanFocus = true;
+			this.btnI61.Name = "btnI61";
+			this.btnI61.UseUnderline = true;
+			this.btnI61.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w188 = new global::Gtk.Image();
+			this.btnI61.Image = w188;
+			this.tbUI.Add(this.btnI61);
+			global::Gtk.Table.TableChild w189 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI61]));
+			w189.TopAttach = ((uint)(7));
+			w189.BottomAttach = ((uint)(8));
+			w189.LeftAttach = ((uint)(29));
+			w189.RightAttach = ((uint)(30));
+			w189.XOptions = ((global::Gtk.AttachOptions)(4));
+			w189.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI62 = new global::Gtk.Button();
+			this.btnI62.WidthRequest = 50;
+			this.btnI62.HeightRequest = 50;
+			this.btnI62.CanFocus = true;
+			this.btnI62.Name = "btnI62";
+			this.btnI62.UseUnderline = true;
+			this.btnI62.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w190 = new global::Gtk.Image();
+			this.btnI62.Image = w190;
+			this.tbUI.Add(this.btnI62);
+			global::Gtk.Table.TableChild w191 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI62]));
+			w191.TopAttach = ((uint)(7));
+			w191.BottomAttach = ((uint)(8));
+			w191.LeftAttach = ((uint)(30));
+			w191.RightAttach = ((uint)(31));
+			w191.XOptions = ((global::Gtk.AttachOptions)(4));
+			w191.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI63 = new global::Gtk.Button();
+			this.btnI63.WidthRequest = 50;
+			this.btnI63.HeightRequest = 50;
+			this.btnI63.CanFocus = true;
+			this.btnI63.Name = "btnI63";
+			this.btnI63.UseUnderline = true;
+			this.btnI63.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w192 = new global::Gtk.Image();
+			this.btnI63.Image = w192;
+			this.tbUI.Add(this.btnI63);
+			global::Gtk.Table.TableChild w193 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI63]));
+			w193.TopAttach = ((uint)(7));
+			w193.BottomAttach = ((uint)(8));
+			w193.LeftAttach = ((uint)(31));
+			w193.RightAttach = ((uint)(32));
+			w193.XOptions = ((global::Gtk.AttachOptions)(4));
+			w193.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI64 = new global::Gtk.Button();
+			this.btnI64.WidthRequest = 50;
+			this.btnI64.HeightRequest = 50;
+			this.btnI64.CanFocus = true;
+			this.btnI64.Name = "btnI64";
+			this.btnI64.UseUnderline = true;
+			this.btnI64.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w194 = new global::Gtk.Image();
+			this.btnI64.Image = w194;
+			this.tbUI.Add(this.btnI64);
+			global::Gtk.Table.TableChild w195 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI64]));
+			w195.TopAttach = ((uint)(8));
+			w195.BottomAttach = ((uint)(9));
+			w195.LeftAttach = ((uint)(23));
+			w195.RightAttach = ((uint)(24));
+			w195.XOptions = ((global::Gtk.AttachOptions)(4));
+			w195.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI65 = new global::Gtk.Button();
+			this.btnI65.WidthRequest = 50;
+			this.btnI65.HeightRequest = 50;
+			this.btnI65.CanFocus = true;
+			this.btnI65.Name = "btnI65";
+			this.btnI65.UseUnderline = true;
+			this.btnI65.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w196 = new global::Gtk.Image();
+			this.btnI65.Image = w196;
+			this.tbUI.Add(this.btnI65);
+			global::Gtk.Table.TableChild w197 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI65]));
+			w197.TopAttach = ((uint)(8));
+			w197.BottomAttach = ((uint)(9));
+			w197.LeftAttach = ((uint)(24));
+			w197.RightAttach = ((uint)(25));
+			w197.XOptions = ((global::Gtk.AttachOptions)(4));
+			w197.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI66 = new global::Gtk.Button();
+			this.btnI66.WidthRequest = 50;
+			this.btnI66.HeightRequest = 50;
+			this.btnI66.CanFocus = true;
+			this.btnI66.Name = "btnI66";
+			this.btnI66.UseUnderline = true;
+			this.btnI66.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w198 = new global::Gtk.Image();
+			this.btnI66.Image = w198;
+			this.tbUI.Add(this.btnI66);
+			global::Gtk.Table.TableChild w199 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI66]));
+			w199.TopAttach = ((uint)(8));
+			w199.BottomAttach = ((uint)(9));
+			w199.LeftAttach = ((uint)(25));
+			w199.RightAttach = ((uint)(26));
+			w199.XOptions = ((global::Gtk.AttachOptions)(4));
+			w199.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI67 = new global::Gtk.Button();
+			this.btnI67.WidthRequest = 50;
+			this.btnI67.HeightRequest = 50;
+			this.btnI67.CanFocus = true;
+			this.btnI67.Name = "btnI67";
+			this.btnI67.UseUnderline = true;
+			this.btnI67.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w200 = new global::Gtk.Image();
+			this.btnI67.Image = w200;
+			this.tbUI.Add(this.btnI67);
+			global::Gtk.Table.TableChild w201 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI67]));
+			w201.TopAttach = ((uint)(8));
+			w201.BottomAttach = ((uint)(9));
+			w201.LeftAttach = ((uint)(26));
+			w201.RightAttach = ((uint)(27));
+			w201.XOptions = ((global::Gtk.AttachOptions)(4));
+			w201.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI68 = new global::Gtk.Button();
+			this.btnI68.WidthRequest = 50;
+			this.btnI68.HeightRequest = 50;
+			this.btnI68.CanFocus = true;
+			this.btnI68.Name = "btnI68";
+			this.btnI68.UseUnderline = true;
+			this.btnI68.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w202 = new global::Gtk.Image();
+			this.btnI68.Image = w202;
+			this.tbUI.Add(this.btnI68);
+			global::Gtk.Table.TableChild w203 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI68]));
+			w203.TopAttach = ((uint)(8));
+			w203.BottomAttach = ((uint)(9));
+			w203.LeftAttach = ((uint)(27));
+			w203.RightAttach = ((uint)(28));
+			w203.XOptions = ((global::Gtk.AttachOptions)(4));
+			w203.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI69 = new global::Gtk.Button();
+			this.btnI69.WidthRequest = 50;
+			this.btnI69.HeightRequest = 50;
+			this.btnI69.CanFocus = true;
+			this.btnI69.Name = "btnI69";
+			this.btnI69.UseUnderline = true;
+			this.btnI69.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w204 = new global::Gtk.Image();
+			this.btnI69.Image = w204;
+			this.tbUI.Add(this.btnI69);
+			global::Gtk.Table.TableChild w205 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI69]));
+			w205.TopAttach = ((uint)(8));
+			w205.BottomAttach = ((uint)(9));
+			w205.LeftAttach = ((uint)(28));
+			w205.RightAttach = ((uint)(29));
+			w205.XOptions = ((global::Gtk.AttachOptions)(4));
+			w205.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI7 = new global::Gtk.Button();
+			this.btnI7.WidthRequest = 50;
+			this.btnI7.HeightRequest = 50;
+			this.btnI7.CanFocus = true;
+			this.btnI7.Name = "btnI7";
+			this.btnI7.UseUnderline = true;
+			this.btnI7.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w206 = new global::Gtk.Image();
+			this.btnI7.Image = w206;
+			this.tbUI.Add(this.btnI7);
+			global::Gtk.Table.TableChild w207 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI7]));
+			w207.TopAttach = ((uint)(1));
+			w207.BottomAttach = ((uint)(2));
+			w207.LeftAttach = ((uint)(29));
+			w207.RightAttach = ((uint)(30));
+			w207.XOptions = ((global::Gtk.AttachOptions)(4));
+			w207.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI70 = new global::Gtk.Button();
+			this.btnI70.WidthRequest = 50;
+			this.btnI70.HeightRequest = 50;
+			this.btnI70.CanFocus = true;
+			this.btnI70.Name = "btnI70";
+			this.btnI70.UseUnderline = true;
+			this.btnI70.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w208 = new global::Gtk.Image();
+			this.btnI70.Image = w208;
+			this.tbUI.Add(this.btnI70);
+			global::Gtk.Table.TableChild w209 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI70]));
+			w209.TopAttach = ((uint)(8));
+			w209.BottomAttach = ((uint)(9));
+			w209.LeftAttach = ((uint)(29));
+			w209.RightAttach = ((uint)(30));
+			w209.XOptions = ((global::Gtk.AttachOptions)(4));
+			w209.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI71 = new global::Gtk.Button();
+			this.btnI71.WidthRequest = 50;
+			this.btnI71.HeightRequest = 50;
+			this.btnI71.CanFocus = true;
+			this.btnI71.Name = "btnI71";
+			this.btnI71.UseUnderline = true;
+			this.btnI71.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w210 = new global::Gtk.Image();
+			this.btnI71.Image = w210;
+			this.tbUI.Add(this.btnI71);
+			global::Gtk.Table.TableChild w211 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI71]));
+			w211.TopAttach = ((uint)(8));
+			w211.BottomAttach = ((uint)(9));
+			w211.LeftAttach = ((uint)(30));
+			w211.RightAttach = ((uint)(31));
+			w211.XOptions = ((global::Gtk.AttachOptions)(4));
+			w211.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI72 = new global::Gtk.Button();
+			this.btnI72.WidthRequest = 50;
+			this.btnI72.HeightRequest = 50;
+			this.btnI72.CanFocus = true;
+			this.btnI72.Name = "btnI72";
+			this.btnI72.UseUnderline = true;
+			this.btnI72.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w212 = new global::Gtk.Image();
+			this.btnI72.Image = w212;
+			this.tbUI.Add(this.btnI72);
+			global::Gtk.Table.TableChild w213 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI72]));
+			w213.TopAttach = ((uint)(8));
+			w213.BottomAttach = ((uint)(9));
+			w213.LeftAttach = ((uint)(31));
+			w213.RightAttach = ((uint)(32));
+			w213.XOptions = ((global::Gtk.AttachOptions)(4));
+			w213.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI73 = new global::Gtk.Button();
+			this.btnI73.WidthRequest = 50;
+			this.btnI73.HeightRequest = 50;
+			this.btnI73.CanFocus = true;
+			this.btnI73.Name = "btnI73";
+			this.btnI73.UseUnderline = true;
+			this.btnI73.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w214 = new global::Gtk.Image();
+			this.btnI73.Image = w214;
+			this.tbUI.Add(this.btnI73);
+			global::Gtk.Table.TableChild w215 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI73]));
+			w215.TopAttach = ((uint)(9));
+			w215.BottomAttach = ((uint)(10));
+			w215.LeftAttach = ((uint)(23));
+			w215.RightAttach = ((uint)(24));
+			w215.XOptions = ((global::Gtk.AttachOptions)(4));
+			w215.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI74 = new global::Gtk.Button();
+			this.btnI74.WidthRequest = 50;
+			this.btnI74.HeightRequest = 50;
+			this.btnI74.CanFocus = true;
+			this.btnI74.Name = "btnI74";
+			this.btnI74.UseUnderline = true;
+			this.btnI74.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w216 = new global::Gtk.Image();
+			this.btnI74.Image = w216;
+			this.tbUI.Add(this.btnI74);
+			global::Gtk.Table.TableChild w217 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI74]));
+			w217.TopAttach = ((uint)(9));
+			w217.BottomAttach = ((uint)(10));
+			w217.LeftAttach = ((uint)(24));
+			w217.RightAttach = ((uint)(25));
+			w217.XOptions = ((global::Gtk.AttachOptions)(4));
+			w217.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI75 = new global::Gtk.Button();
+			this.btnI75.WidthRequest = 50;
+			this.btnI75.HeightRequest = 50;
+			this.btnI75.CanFocus = true;
+			this.btnI75.Name = "btnI75";
+			this.btnI75.UseUnderline = true;
+			this.btnI75.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w218 = new global::Gtk.Image();
+			this.btnI75.Image = w218;
+			this.tbUI.Add(this.btnI75);
+			global::Gtk.Table.TableChild w219 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI75]));
+			w219.TopAttach = ((uint)(9));
+			w219.BottomAttach = ((uint)(10));
+			w219.LeftAttach = ((uint)(25));
+			w219.RightAttach = ((uint)(26));
+			w219.XOptions = ((global::Gtk.AttachOptions)(4));
+			w219.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI76 = new global::Gtk.Button();
+			this.btnI76.WidthRequest = 50;
+			this.btnI76.HeightRequest = 50;
+			this.btnI76.CanFocus = true;
+			this.btnI76.Name = "btnI76";
+			this.btnI76.UseUnderline = true;
+			this.btnI76.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w220 = new global::Gtk.Image();
+			this.btnI76.Image = w220;
+			this.tbUI.Add(this.btnI76);
+			global::Gtk.Table.TableChild w221 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI76]));
+			w221.TopAttach = ((uint)(9));
+			w221.BottomAttach = ((uint)(10));
+			w221.LeftAttach = ((uint)(26));
+			w221.RightAttach = ((uint)(27));
+			w221.XOptions = ((global::Gtk.AttachOptions)(4));
+			w221.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI77 = new global::Gtk.Button();
+			this.btnI77.WidthRequest = 50;
+			this.btnI77.HeightRequest = 50;
+			this.btnI77.CanFocus = true;
+			this.btnI77.Name = "btnI77";
+			this.btnI77.UseUnderline = true;
+			this.btnI77.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w222 = new global::Gtk.Image();
+			this.btnI77.Image = w222;
+			this.tbUI.Add(this.btnI77);
+			global::Gtk.Table.TableChild w223 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI77]));
+			w223.TopAttach = ((uint)(9));
+			w223.BottomAttach = ((uint)(10));
+			w223.LeftAttach = ((uint)(27));
+			w223.RightAttach = ((uint)(28));
+			w223.XOptions = ((global::Gtk.AttachOptions)(4));
+			w223.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI78 = new global::Gtk.Button();
+			this.btnI78.WidthRequest = 50;
+			this.btnI78.HeightRequest = 50;
+			this.btnI78.CanFocus = true;
+			this.btnI78.Name = "btnI78";
+			this.btnI78.UseUnderline = true;
+			this.btnI78.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w224 = new global::Gtk.Image();
+			this.btnI78.Image = w224;
+			this.tbUI.Add(this.btnI78);
+			global::Gtk.Table.TableChild w225 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI78]));
+			w225.TopAttach = ((uint)(9));
+			w225.BottomAttach = ((uint)(10));
+			w225.LeftAttach = ((uint)(28));
+			w225.RightAttach = ((uint)(29));
+			w225.XOptions = ((global::Gtk.AttachOptions)(4));
+			w225.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI79 = new global::Gtk.Button();
+			this.btnI79.WidthRequest = 50;
+			this.btnI79.HeightRequest = 50;
+			this.btnI79.CanFocus = true;
+			this.btnI79.Name = "btnI79";
+			this.btnI79.UseUnderline = true;
+			this.btnI79.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w226 = new global::Gtk.Image();
+			this.btnI79.Image = w226;
+			this.tbUI.Add(this.btnI79);
+			global::Gtk.Table.TableChild w227 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI79]));
+			w227.TopAttach = ((uint)(9));
+			w227.BottomAttach = ((uint)(10));
+			w227.LeftAttach = ((uint)(29));
+			w227.RightAttach = ((uint)(30));
+			w227.XOptions = ((global::Gtk.AttachOptions)(4));
+			w227.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI8 = new global::Gtk.Button();
+			this.btnI8.WidthRequest = 50;
+			this.btnI8.HeightRequest = 50;
+			this.btnI8.CanFocus = true;
+			this.btnI8.Name = "btnI8";
+			this.btnI8.UseUnderline = true;
+			this.btnI8.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w228 = new global::Gtk.Image();
+			this.btnI8.Image = w228;
+			this.tbUI.Add(this.btnI8);
+			global::Gtk.Table.TableChild w229 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI8]));
+			w229.TopAttach = ((uint)(1));
+			w229.BottomAttach = ((uint)(2));
+			w229.LeftAttach = ((uint)(30));
+			w229.RightAttach = ((uint)(31));
+			w229.XOptions = ((global::Gtk.AttachOptions)(4));
+			w229.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI80 = new global::Gtk.Button();
+			this.btnI80.WidthRequest = 50;
+			this.btnI80.HeightRequest = 50;
+			this.btnI80.CanFocus = true;
+			this.btnI80.Name = "btnI80";
+			this.btnI80.UseUnderline = true;
+			this.btnI80.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w230 = new global::Gtk.Image();
+			this.btnI80.Image = w230;
+			this.tbUI.Add(this.btnI80);
+			global::Gtk.Table.TableChild w231 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI80]));
+			w231.TopAttach = ((uint)(9));
+			w231.BottomAttach = ((uint)(10));
+			w231.LeftAttach = ((uint)(30));
+			w231.RightAttach = ((uint)(31));
+			w231.XOptions = ((global::Gtk.AttachOptions)(4));
+			w231.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI81 = new global::Gtk.Button();
+			this.btnI81.WidthRequest = 50;
+			this.btnI81.HeightRequest = 50;
+			this.btnI81.CanFocus = true;
+			this.btnI81.Name = "btnI81";
+			this.btnI81.UseUnderline = true;
+			this.btnI81.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w232 = new global::Gtk.Image();
+			this.btnI81.Image = w232;
+			this.tbUI.Add(this.btnI81);
+			global::Gtk.Table.TableChild w233 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI81]));
+			w233.TopAttach = ((uint)(9));
+			w233.BottomAttach = ((uint)(10));
+			w233.LeftAttach = ((uint)(31));
+			w233.RightAttach = ((uint)(32));
+			w233.XOptions = ((global::Gtk.AttachOptions)(4));
+			w233.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnI9 = new global::Gtk.Button();
+			this.btnI9.WidthRequest = 50;
+			this.btnI9.HeightRequest = 50;
+			this.btnI9.CanFocus = true;
+			this.btnI9.Name = "btnI9";
+			this.btnI9.UseUnderline = true;
+			this.btnI9.Relief = ((global::Gtk.ReliefStyle)(1));
+			global::Gtk.Image w234 = new global::Gtk.Image();
+			this.btnI9.Image = w234;
+			this.tbUI.Add(this.btnI9);
+			global::Gtk.Table.TableChild w235 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnI9]));
+			w235.TopAttach = ((uint)(1));
+			w235.BottomAttach = ((uint)(2));
+			w235.LeftAttach = ((uint)(31));
+			w235.RightAttach = ((uint)(32));
+			w235.XOptions = ((global::Gtk.AttachOptions)(4));
+			w235.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnInv = new global::Gtk.Button();
+			this.btnInv.WidthRequest = 50;
+			this.btnInv.HeightRequest = 50;
+			this.btnInv.CanFocus = true;
+			this.btnInv.Name = "btnInv";
+			this.btnInv.UseUnderline = true;
+			this.btnInv.Label = "Inv";
+			this.tbUI.Add(this.btnInv);
+			global::Gtk.Table.TableChild w236 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnInv]));
+			w236.TopAttach = ((uint)(13));
+			w236.BottomAttach = ((uint)(14));
+			w236.LeftAttach = ((uint)(21));
+			w236.RightAttach = ((uint)(22));
+			w236.XOptions = ((global::Gtk.AttachOptions)(4));
+			w236.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnMap = new global::Gtk.Button();
+			this.btnMap.WidthRequest = 50;
+			this.btnMap.HeightRequest = 50;
+			this.btnMap.CanFocus = true;
+			this.btnMap.Name = "btnMap";
+			this.btnMap.UseUnderline = true;
+			this.btnMap.Label = "Map";
+			this.tbUI.Add(this.btnMap);
+			global::Gtk.Table.TableChild w237 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnMap]));
+			w237.TopAttach = ((uint)(13));
+			w237.BottomAttach = ((uint)(14));
+			w237.LeftAttach = ((uint)(11));
+			w237.RightAttach = ((uint)(12));
+			w237.XOptions = ((global::Gtk.AttachOptions)(4));
+			w237.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnMusic = new global::Gtk.Button();
+			this.btnMusic.WidthRequest = 50;
+			this.btnMusic.HeightRequest = 50;
+			this.btnMusic.CanFocus = true;
+			this.btnMusic.Name = "btnMusic";
+			this.btnMusic.UseUnderline = true;
+			this.btnMusic.Label = "Music";
+			this.tbUI.Add(this.btnMusic);
+			global::Gtk.Table.TableChild w238 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnMusic]));
+			w238.TopAttach = ((uint)(15));
+			w238.BottomAttach = ((uint)(16));
+			w238.LeftAttach = ((uint)(11));
+			w238.RightAttach = ((uint)(12));
+			w238.XOptions = ((global::Gtk.AttachOptions)(4));
+			w238.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP1 = new global::Gtk.Button();
+			this.btnP1.WidthRequest = 50;
+			this.btnP1.HeightRequest = 50;
+			this.btnP1.CanFocus = true;
+			this.btnP1.Name = "btnP1";
+			this.btnP1.UseUnderline = true;
+			this.btnP1.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w239 = new global::Gtk.Image();
+			this.btnP1.Image = w239;
+			this.tbUI.Add(this.btnP1);
+			global::Gtk.Table.TableChild w240 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP1]));
+			w240.TopAttach = ((uint)(1));
+			w240.BottomAttach = ((uint)(2));
+			w240.LeftAttach = ((uint)(12));
+			w240.RightAttach = ((uint)(13));
+			w240.XOptions = ((global::Gtk.AttachOptions)(4));
+			w240.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP10 = new global::Gtk.Button();
+			this.btnP10.WidthRequest = 50;
+			this.btnP10.HeightRequest = 50;
+			this.btnP10.CanFocus = true;
+			this.btnP10.Name = "btnP10";
+			this.btnP10.UseUnderline = true;
+			this.btnP10.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w241 = new global::Gtk.Image();
+			this.btnP10.Image = w241;
+			this.tbUI.Add(this.btnP10);
+			global::Gtk.Table.TableChild w242 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP10]));
+			w242.TopAttach = ((uint)(2));
+			w242.BottomAttach = ((uint)(3));
+			w242.LeftAttach = ((uint)(12));
+			w242.RightAttach = ((uint)(13));
+			w242.XOptions = ((global::Gtk.AttachOptions)(4));
+			w242.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP11 = new global::Gtk.Button();
+			this.btnP11.WidthRequest = 50;
+			this.btnP11.HeightRequest = 50;
+			this.btnP11.CanFocus = true;
+			this.btnP11.Name = "btnP11";
+			this.btnP11.UseUnderline = true;
+			this.btnP11.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w243 = new global::Gtk.Image();
+			this.btnP11.Image = w243;
+			this.tbUI.Add(this.btnP11);
+			global::Gtk.Table.TableChild w244 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP11]));
+			w244.TopAttach = ((uint)(2));
+			w244.BottomAttach = ((uint)(3));
+			w244.LeftAttach = ((uint)(13));
+			w244.RightAttach = ((uint)(14));
+			w244.XOptions = ((global::Gtk.AttachOptions)(4));
+			w244.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP12 = new global::Gtk.Button();
+			this.btnP12.WidthRequest = 50;
+			this.btnP12.HeightRequest = 50;
+			this.btnP12.CanFocus = true;
+			this.btnP12.Name = "btnP12";
+			this.btnP12.UseUnderline = true;
+			this.btnP12.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w245 = new global::Gtk.Image();
+			this.btnP12.Image = w245;
+			this.tbUI.Add(this.btnP12);
+			global::Gtk.Table.TableChild w246 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP12]));
+			w246.TopAttach = ((uint)(2));
+			w246.BottomAttach = ((uint)(3));
+			w246.LeftAttach = ((uint)(14));
+			w246.RightAttach = ((uint)(15));
+			w246.XOptions = ((global::Gtk.AttachOptions)(4));
+			w246.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP13 = new global::Gtk.Button();
+			this.btnP13.WidthRequest = 50;
+			this.btnP13.HeightRequest = 50;
+			this.btnP13.CanFocus = true;
+			this.btnP13.Name = "btnP13";
+			this.btnP13.UseUnderline = true;
+			this.btnP13.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w247 = new global::Gtk.Image();
+			this.btnP13.Image = w247;
+			this.tbUI.Add(this.btnP13);
+			global::Gtk.Table.TableChild w248 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP13]));
+			w248.TopAttach = ((uint)(2));
+			w248.BottomAttach = ((uint)(3));
+			w248.LeftAttach = ((uint)(15));
+			w248.RightAttach = ((uint)(16));
+			w248.XOptions = ((global::Gtk.AttachOptions)(4));
+			w248.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP14 = new global::Gtk.Button();
+			this.btnP14.WidthRequest = 50;
+			this.btnP14.HeightRequest = 50;
+			this.btnP14.CanFocus = true;
+			this.btnP14.Name = "btnP14";
+			this.btnP14.UseUnderline = true;
+			this.btnP14.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w249 = new global::Gtk.Image();
+			this.btnP14.Image = w249;
+			this.tbUI.Add(this.btnP14);
+			global::Gtk.Table.TableChild w250 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP14]));
+			w250.TopAttach = ((uint)(2));
+			w250.BottomAttach = ((uint)(3));
+			w250.LeftAttach = ((uint)(16));
+			w250.RightAttach = ((uint)(17));
+			w250.XOptions = ((global::Gtk.AttachOptions)(4));
+			w250.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP15 = new global::Gtk.Button();
+			this.btnP15.WidthRequest = 50;
+			this.btnP15.HeightRequest = 50;
+			this.btnP15.CanFocus = true;
+			this.btnP15.Name = "btnP15";
+			this.btnP15.UseUnderline = true;
+			this.btnP15.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w251 = new global::Gtk.Image();
+			this.btnP15.Image = w251;
+			this.tbUI.Add(this.btnP15);
+			global::Gtk.Table.TableChild w252 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP15]));
+			w252.TopAttach = ((uint)(2));
+			w252.BottomAttach = ((uint)(3));
+			w252.LeftAttach = ((uint)(17));
+			w252.RightAttach = ((uint)(18));
+			w252.XOptions = ((global::Gtk.AttachOptions)(4));
+			w252.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP16 = new global::Gtk.Button();
+			this.btnP16.WidthRequest = 50;
+			this.btnP16.HeightRequest = 50;
+			this.btnP16.CanFocus = true;
+			this.btnP16.Name = "btnP16";
+			this.btnP16.UseUnderline = true;
+			this.btnP16.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w253 = new global::Gtk.Image();
+			this.btnP16.Image = w253;
+			this.tbUI.Add(this.btnP16);
+			global::Gtk.Table.TableChild w254 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP16]));
+			w254.TopAttach = ((uint)(2));
+			w254.BottomAttach = ((uint)(3));
+			w254.LeftAttach = ((uint)(18));
+			w254.RightAttach = ((uint)(19));
+			w254.XOptions = ((global::Gtk.AttachOptions)(4));
+			w254.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP17 = new global::Gtk.Button();
+			this.btnP17.WidthRequest = 50;
+			this.btnP17.HeightRequest = 50;
+			this.btnP17.CanFocus = true;
+			this.btnP17.Name = "btnP17";
+			this.btnP17.UseUnderline = true;
+			this.btnP17.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w255 = new global::Gtk.Image();
+			this.btnP17.Image = w255;
+			this.tbUI.Add(this.btnP17);
+			global::Gtk.Table.TableChild w256 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP17]));
+			w256.TopAttach = ((uint)(2));
+			w256.BottomAttach = ((uint)(3));
+			w256.LeftAttach = ((uint)(19));
+			w256.RightAttach = ((uint)(20));
+			w256.XOptions = ((global::Gtk.AttachOptions)(4));
+			w256.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP18 = new global::Gtk.Button();
+			this.btnP18.WidthRequest = 50;
+			this.btnP18.HeightRequest = 50;
+			this.btnP18.CanFocus = true;
+			this.btnP18.Name = "btnP18";
+			this.btnP18.UseUnderline = true;
+			this.btnP18.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w257 = new global::Gtk.Image();
+			this.btnP18.Image = w257;
+			this.tbUI.Add(this.btnP18);
+			global::Gtk.Table.TableChild w258 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP18]));
+			w258.TopAttach = ((uint)(2));
+			w258.BottomAttach = ((uint)(3));
+			w258.LeftAttach = ((uint)(20));
+			w258.RightAttach = ((uint)(21));
+			w258.XOptions = ((global::Gtk.AttachOptions)(4));
+			w258.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP19 = new global::Gtk.Button();
+			this.btnP19.WidthRequest = 50;
+			this.btnP19.HeightRequest = 50;
+			this.btnP19.CanFocus = true;
+			this.btnP19.Name = "btnP19";
+			this.btnP19.UseUnderline = true;
+			this.btnP19.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w259 = new global::Gtk.Image();
+			this.btnP19.Image = w259;
+			this.tbUI.Add(this.btnP19);
+			global::Gtk.Table.TableChild w260 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP19]));
+			w260.TopAttach = ((uint)(3));
+			w260.BottomAttach = ((uint)(4));
+			w260.LeftAttach = ((uint)(12));
+			w260.RightAttach = ((uint)(13));
+			w260.XOptions = ((global::Gtk.AttachOptions)(4));
+			w260.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP2 = new global::Gtk.Button();
+			this.btnP2.WidthRequest = 50;
+			this.btnP2.HeightRequest = 50;
+			this.btnP2.CanFocus = true;
+			this.btnP2.Name = "btnP2";
+			this.btnP2.UseUnderline = true;
+			this.btnP2.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w261 = new global::Gtk.Image();
+			this.btnP2.Image = w261;
+			this.tbUI.Add(this.btnP2);
+			global::Gtk.Table.TableChild w262 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP2]));
+			w262.TopAttach = ((uint)(1));
+			w262.BottomAttach = ((uint)(2));
+			w262.LeftAttach = ((uint)(13));
+			w262.RightAttach = ((uint)(14));
+			w262.XOptions = ((global::Gtk.AttachOptions)(4));
+			w262.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP20 = new global::Gtk.Button();
+			this.btnP20.WidthRequest = 50;
+			this.btnP20.HeightRequest = 50;
+			this.btnP20.CanFocus = true;
+			this.btnP20.Name = "btnP20";
+			this.btnP20.UseUnderline = true;
+			this.btnP20.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w263 = new global::Gtk.Image();
+			this.btnP20.Image = w263;
+			this.tbUI.Add(this.btnP20);
+			global::Gtk.Table.TableChild w264 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP20]));
+			w264.TopAttach = ((uint)(3));
+			w264.BottomAttach = ((uint)(4));
+			w264.LeftAttach = ((uint)(13));
+			w264.RightAttach = ((uint)(14));
+			w264.XOptions = ((global::Gtk.AttachOptions)(4));
+			w264.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP21 = new global::Gtk.Button();
+			this.btnP21.WidthRequest = 50;
+			this.btnP21.HeightRequest = 50;
+			this.btnP21.CanFocus = true;
+			this.btnP21.Name = "btnP21";
+			this.btnP21.UseUnderline = true;
+			this.btnP21.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w265 = new global::Gtk.Image();
+			this.btnP21.Image = w265;
+			this.tbUI.Add(this.btnP21);
+			global::Gtk.Table.TableChild w266 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP21]));
+			w266.TopAttach = ((uint)(3));
+			w266.BottomAttach = ((uint)(4));
+			w266.LeftAttach = ((uint)(14));
+			w266.RightAttach = ((uint)(15));
+			w266.XOptions = ((global::Gtk.AttachOptions)(4));
+			w266.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP22 = new global::Gtk.Button();
+			this.btnP22.WidthRequest = 50;
+			this.btnP22.HeightRequest = 50;
+			this.btnP22.CanFocus = true;
+			this.btnP22.Name = "btnP22";
+			this.btnP22.UseUnderline = true;
+			this.btnP22.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w267 = new global::Gtk.Image();
+			this.btnP22.Image = w267;
+			this.tbUI.Add(this.btnP22);
+			global::Gtk.Table.TableChild w268 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP22]));
+			w268.TopAttach = ((uint)(3));
+			w268.BottomAttach = ((uint)(4));
+			w268.LeftAttach = ((uint)(15));
+			w268.RightAttach = ((uint)(16));
+			w268.XOptions = ((global::Gtk.AttachOptions)(4));
+			w268.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP23 = new global::Gtk.Button();
+			this.btnP23.WidthRequest = 50;
+			this.btnP23.HeightRequest = 50;
+			this.btnP23.CanFocus = true;
+			this.btnP23.Name = "btnP23";
+			this.btnP23.UseUnderline = true;
+			this.btnP23.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w269 = new global::Gtk.Image();
+			this.btnP23.Image = w269;
+			this.tbUI.Add(this.btnP23);
+			global::Gtk.Table.TableChild w270 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP23]));
+			w270.TopAttach = ((uint)(3));
+			w270.BottomAttach = ((uint)(4));
+			w270.LeftAttach = ((uint)(16));
+			w270.RightAttach = ((uint)(17));
+			w270.XOptions = ((global::Gtk.AttachOptions)(4));
+			w270.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP24 = new global::Gtk.Button();
+			this.btnP24.WidthRequest = 50;
+			this.btnP24.HeightRequest = 50;
+			this.btnP24.CanFocus = true;
+			this.btnP24.Name = "btnP24";
+			this.btnP24.UseUnderline = true;
+			this.btnP24.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w271 = new global::Gtk.Image();
+			this.btnP24.Image = w271;
+			this.tbUI.Add(this.btnP24);
+			global::Gtk.Table.TableChild w272 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP24]));
+			w272.TopAttach = ((uint)(3));
+			w272.BottomAttach = ((uint)(4));
+			w272.LeftAttach = ((uint)(17));
+			w272.RightAttach = ((uint)(18));
+			w272.XOptions = ((global::Gtk.AttachOptions)(4));
+			w272.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP25 = new global::Gtk.Button();
+			this.btnP25.WidthRequest = 50;
+			this.btnP25.HeightRequest = 50;
+			this.btnP25.CanFocus = true;
+			this.btnP25.Name = "btnP25";
+			this.btnP25.UseUnderline = true;
+			this.btnP25.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w273 = new global::Gtk.Image();
+			this.btnP25.Image = w273;
+			this.tbUI.Add(this.btnP25);
+			global::Gtk.Table.TableChild w274 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP25]));
+			w274.TopAttach = ((uint)(3));
+			w274.BottomAttach = ((uint)(4));
+			w274.LeftAttach = ((uint)(18));
+			w274.RightAttach = ((uint)(19));
+			w274.XOptions = ((global::Gtk.AttachOptions)(4));
+			w274.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP26 = new global::Gtk.Button();
+			this.btnP26.WidthRequest = 50;
+			this.btnP26.HeightRequest = 50;
+			this.btnP26.CanFocus = true;
+			this.btnP26.Name = "btnP26";
+			this.btnP26.UseUnderline = true;
+			this.btnP26.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w275 = new global::Gtk.Image();
+			this.btnP26.Image = w275;
+			this.tbUI.Add(this.btnP26);
+			global::Gtk.Table.TableChild w276 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP26]));
+			w276.TopAttach = ((uint)(3));
+			w276.BottomAttach = ((uint)(4));
+			w276.LeftAttach = ((uint)(19));
+			w276.RightAttach = ((uint)(20));
+			w276.XOptions = ((global::Gtk.AttachOptions)(4));
+			w276.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP27 = new global::Gtk.Button();
+			this.btnP27.WidthRequest = 50;
+			this.btnP27.HeightRequest = 50;
+			this.btnP27.CanFocus = true;
+			this.btnP27.Name = "btnP27";
+			this.btnP27.UseUnderline = true;
+			this.btnP27.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w277 = new global::Gtk.Image();
+			this.btnP27.Image = w277;
+			this.tbUI.Add(this.btnP27);
+			global::Gtk.Table.TableChild w278 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP27]));
+			w278.TopAttach = ((uint)(3));
+			w278.BottomAttach = ((uint)(4));
+			w278.LeftAttach = ((uint)(20));
+			w278.RightAttach = ((uint)(21));
+			w278.XOptions = ((global::Gtk.AttachOptions)(4));
+			w278.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP28 = new global::Gtk.Button();
+			this.btnP28.WidthRequest = 50;
+			this.btnP28.HeightRequest = 50;
+			this.btnP28.CanFocus = true;
+			this.btnP28.Name = "btnP28";
+			this.btnP28.UseUnderline = true;
+			this.btnP28.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w279 = new global::Gtk.Image();
+			this.btnP28.Image = w279;
+			this.tbUI.Add(this.btnP28);
+			global::Gtk.Table.TableChild w280 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP28]));
+			w280.TopAttach = ((uint)(4));
+			w280.BottomAttach = ((uint)(5));
+			w280.LeftAttach = ((uint)(12));
+			w280.RightAttach = ((uint)(13));
+			w280.XOptions = ((global::Gtk.AttachOptions)(4));
+			w280.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP29 = new global::Gtk.Button();
+			this.btnP29.WidthRequest = 50;
+			this.btnP29.HeightRequest = 50;
+			this.btnP29.CanFocus = true;
+			this.btnP29.Name = "btnP29";
+			this.btnP29.UseUnderline = true;
+			this.btnP29.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w281 = new global::Gtk.Image();
+			this.btnP29.Image = w281;
+			this.tbUI.Add(this.btnP29);
+			global::Gtk.Table.TableChild w282 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP29]));
+			w282.TopAttach = ((uint)(4));
+			w282.BottomAttach = ((uint)(5));
+			w282.LeftAttach = ((uint)(13));
+			w282.RightAttach = ((uint)(14));
+			w282.XOptions = ((global::Gtk.AttachOptions)(4));
+			w282.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP3 = new global::Gtk.Button();
+			this.btnP3.WidthRequest = 50;
+			this.btnP3.HeightRequest = 50;
+			this.btnP3.CanFocus = true;
+			this.btnP3.Name = "btnP3";
+			this.btnP3.UseUnderline = true;
+			this.btnP3.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w283 = new global::Gtk.Image();
+			this.btnP3.Image = w283;
+			this.tbUI.Add(this.btnP3);
+			global::Gtk.Table.TableChild w284 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP3]));
+			w284.TopAttach = ((uint)(1));
+			w284.BottomAttach = ((uint)(2));
+			w284.LeftAttach = ((uint)(14));
+			w284.RightAttach = ((uint)(15));
+			w284.XOptions = ((global::Gtk.AttachOptions)(4));
+			w284.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP30 = new global::Gtk.Button();
+			this.btnP30.WidthRequest = 50;
+			this.btnP30.HeightRequest = 50;
+			this.btnP30.CanFocus = true;
+			this.btnP30.Name = "btnP30";
+			this.btnP30.UseUnderline = true;
+			this.btnP30.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w285 = new global::Gtk.Image();
+			this.btnP30.Image = w285;
+			this.tbUI.Add(this.btnP30);
+			global::Gtk.Table.TableChild w286 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP30]));
+			w286.TopAttach = ((uint)(4));
+			w286.BottomAttach = ((uint)(5));
+			w286.LeftAttach = ((uint)(14));
+			w286.RightAttach = ((uint)(15));
+			w286.XOptions = ((global::Gtk.AttachOptions)(4));
+			w286.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP31 = new global::Gtk.Button();
+			this.btnP31.WidthRequest = 50;
+			this.btnP31.HeightRequest = 50;
+			this.btnP31.CanFocus = true;
+			this.btnP31.Name = "btnP31";
+			this.btnP31.UseUnderline = true;
+			this.btnP31.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w287 = new global::Gtk.Image();
+			this.btnP31.Image = w287;
+			this.tbUI.Add(this.btnP31);
+			global::Gtk.Table.TableChild w288 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP31]));
+			w288.TopAttach = ((uint)(4));
+			w288.BottomAttach = ((uint)(5));
+			w288.LeftAttach = ((uint)(15));
+			w288.RightAttach = ((uint)(16));
+			w288.XOptions = ((global::Gtk.AttachOptions)(4));
+			w288.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP32 = new global::Gtk.Button();
+			this.btnP32.WidthRequest = 50;
+			this.btnP32.HeightRequest = 50;
+			this.btnP32.CanFocus = true;
+			this.btnP32.Name = "btnP32";
+			this.btnP32.UseUnderline = true;
+			this.btnP32.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w289 = new global::Gtk.Image();
+			this.btnP32.Image = w289;
+			this.tbUI.Add(this.btnP32);
+			global::Gtk.Table.TableChild w290 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP32]));
+			w290.TopAttach = ((uint)(4));
+			w290.BottomAttach = ((uint)(5));
+			w290.LeftAttach = ((uint)(16));
+			w290.RightAttach = ((uint)(17));
+			w290.XOptions = ((global::Gtk.AttachOptions)(4));
+			w290.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP33 = new global::Gtk.Button();
+			this.btnP33.WidthRequest = 50;
+			this.btnP33.HeightRequest = 50;
+			this.btnP33.CanFocus = true;
+			this.btnP33.Name = "btnP33";
+			this.btnP33.UseUnderline = true;
+			this.btnP33.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w291 = new global::Gtk.Image();
+			this.btnP33.Image = w291;
+			this.tbUI.Add(this.btnP33);
+			global::Gtk.Table.TableChild w292 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP33]));
+			w292.TopAttach = ((uint)(4));
+			w292.BottomAttach = ((uint)(5));
+			w292.LeftAttach = ((uint)(17));
+			w292.RightAttach = ((uint)(18));
+			w292.XOptions = ((global::Gtk.AttachOptions)(4));
+			w292.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP34 = new global::Gtk.Button();
+			this.btnP34.WidthRequest = 50;
+			this.btnP34.HeightRequest = 50;
+			this.btnP34.CanFocus = true;
+			this.btnP34.Name = "btnP34";
+			this.btnP34.UseUnderline = true;
+			this.btnP34.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w293 = new global::Gtk.Image();
+			this.btnP34.Image = w293;
+			this.tbUI.Add(this.btnP34);
+			global::Gtk.Table.TableChild w294 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP34]));
+			w294.TopAttach = ((uint)(4));
+			w294.BottomAttach = ((uint)(5));
+			w294.LeftAttach = ((uint)(18));
+			w294.RightAttach = ((uint)(19));
+			w294.XOptions = ((global::Gtk.AttachOptions)(4));
+			w294.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP35 = new global::Gtk.Button();
+			this.btnP35.WidthRequest = 50;
+			this.btnP35.HeightRequest = 50;
+			this.btnP35.CanFocus = true;
+			this.btnP35.Name = "btnP35";
+			this.btnP35.UseUnderline = true;
+			this.btnP35.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w295 = new global::Gtk.Image();
+			this.btnP35.Image = w295;
+			this.tbUI.Add(this.btnP35);
+			global::Gtk.Table.TableChild w296 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP35]));
+			w296.TopAttach = ((uint)(4));
+			w296.BottomAttach = ((uint)(5));
+			w296.LeftAttach = ((uint)(19));
+			w296.RightAttach = ((uint)(20));
+			w296.XOptions = ((global::Gtk.AttachOptions)(4));
+			w296.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP36 = new global::Gtk.Button();
+			this.btnP36.WidthRequest = 50;
+			this.btnP36.HeightRequest = 50;
+			this.btnP36.CanFocus = true;
+			this.btnP36.Name = "btnP36";
+			this.btnP36.UseUnderline = true;
+			this.btnP36.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w297 = new global::Gtk.Image();
+			this.btnP36.Image = w297;
+			this.tbUI.Add(this.btnP36);
+			global::Gtk.Table.TableChild w298 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP36]));
+			w298.TopAttach = ((uint)(4));
+			w298.BottomAttach = ((uint)(5));
+			w298.LeftAttach = ((uint)(20));
+			w298.RightAttach = ((uint)(21));
+			w298.XOptions = ((global::Gtk.AttachOptions)(4));
+			w298.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP37 = new global::Gtk.Button();
+			this.btnP37.WidthRequest = 50;
+			this.btnP37.HeightRequest = 50;
+			this.btnP37.CanFocus = true;
+			this.btnP37.Name = "btnP37";
+			this.btnP37.UseUnderline = true;
+			this.btnP37.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w299 = new global::Gtk.Image();
+			this.btnP37.Image = w299;
+			this.tbUI.Add(this.btnP37);
+			global::Gtk.Table.TableChild w300 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP37]));
+			w300.TopAttach = ((uint)(5));
+			w300.BottomAttach = ((uint)(6));
+			w300.LeftAttach = ((uint)(12));
+			w300.RightAttach = ((uint)(13));
+			w300.XOptions = ((global::Gtk.AttachOptions)(4));
+			w300.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP38 = new global::Gtk.Button();
+			this.btnP38.WidthRequest = 50;
+			this.btnP38.HeightRequest = 50;
+			this.btnP38.CanFocus = true;
+			this.btnP38.Name = "btnP38";
+			this.btnP38.UseUnderline = true;
+			this.btnP38.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w301 = new global::Gtk.Image();
+			this.btnP38.Image = w301;
+			this.tbUI.Add(this.btnP38);
+			global::Gtk.Table.TableChild w302 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP38]));
+			w302.TopAttach = ((uint)(5));
+			w302.BottomAttach = ((uint)(6));
+			w302.LeftAttach = ((uint)(13));
+			w302.RightAttach = ((uint)(14));
+			w302.XOptions = ((global::Gtk.AttachOptions)(4));
+			w302.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP39 = new global::Gtk.Button();
+			this.btnP39.WidthRequest = 50;
+			this.btnP39.HeightRequest = 50;
+			this.btnP39.CanFocus = true;
+			this.btnP39.Name = "btnP39";
+			this.btnP39.UseUnderline = true;
+			this.btnP39.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w303 = new global::Gtk.Image();
+			this.btnP39.Image = w303;
+			this.tbUI.Add(this.btnP39);
+			global::Gtk.Table.TableChild w304 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP39]));
+			w304.TopAttach = ((uint)(5));
+			w304.BottomAttach = ((uint)(6));
+			w304.LeftAttach = ((uint)(14));
+			w304.RightAttach = ((uint)(15));
+			w304.XOptions = ((global::Gtk.AttachOptions)(4));
+			w304.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP4 = new global::Gtk.Button();
+			this.btnP4.WidthRequest = 50;
+			this.btnP4.HeightRequest = 50;
+			this.btnP4.CanFocus = true;
+			this.btnP4.Name = "btnP4";
+			this.btnP4.UseUnderline = true;
+			this.btnP4.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w305 = new global::Gtk.Image();
+			this.btnP4.Image = w305;
+			this.tbUI.Add(this.btnP4);
+			global::Gtk.Table.TableChild w306 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP4]));
+			w306.TopAttach = ((uint)(1));
+			w306.BottomAttach = ((uint)(2));
+			w306.LeftAttach = ((uint)(15));
+			w306.RightAttach = ((uint)(16));
+			w306.XOptions = ((global::Gtk.AttachOptions)(4));
+			w306.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP40 = new global::Gtk.Button();
+			this.btnP40.WidthRequest = 50;
+			this.btnP40.HeightRequest = 50;
+			this.btnP40.CanFocus = true;
+			this.btnP40.Name = "btnP40";
+			this.btnP40.UseUnderline = true;
+			this.btnP40.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w307 = new global::Gtk.Image();
+			this.btnP40.Image = w307;
+			this.tbUI.Add(this.btnP40);
+			global::Gtk.Table.TableChild w308 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP40]));
+			w308.TopAttach = ((uint)(5));
+			w308.BottomAttach = ((uint)(6));
+			w308.LeftAttach = ((uint)(15));
+			w308.RightAttach = ((uint)(16));
+			w308.XOptions = ((global::Gtk.AttachOptions)(4));
+			w308.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP41 = new global::Gtk.Button();
+			this.btnP41.WidthRequest = 50;
+			this.btnP41.HeightRequest = 50;
+			this.btnP41.CanFocus = true;
+			this.btnP41.Name = "btnP41";
+			this.btnP41.UseUnderline = true;
+			this.btnP41.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w309 = new global::Gtk.Image();
+			this.btnP41.Image = w309;
+			this.tbUI.Add(this.btnP41);
+			global::Gtk.Table.TableChild w310 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP41]));
+			w310.TopAttach = ((uint)(5));
+			w310.BottomAttach = ((uint)(6));
+			w310.LeftAttach = ((uint)(16));
+			w310.RightAttach = ((uint)(17));
+			w310.XOptions = ((global::Gtk.AttachOptions)(4));
+			w310.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP42 = new global::Gtk.Button();
+			this.btnP42.WidthRequest = 50;
+			this.btnP42.HeightRequest = 50;
+			this.btnP42.CanFocus = true;
+			this.btnP42.Name = "btnP42";
+			this.btnP42.UseUnderline = true;
+			this.btnP42.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w311 = new global::Gtk.Image();
+			this.btnP42.Image = w311;
+			this.tbUI.Add(this.btnP42);
+			global::Gtk.Table.TableChild w312 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP42]));
+			w312.TopAttach = ((uint)(5));
+			w312.BottomAttach = ((uint)(6));
+			w312.LeftAttach = ((uint)(17));
+			w312.RightAttach = ((uint)(18));
+			w312.XOptions = ((global::Gtk.AttachOptions)(4));
+			w312.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP43 = new global::Gtk.Button();
+			this.btnP43.WidthRequest = 50;
+			this.btnP43.HeightRequest = 50;
+			this.btnP43.CanFocus = true;
+			this.btnP43.Name = "btnP43";
+			this.btnP43.UseUnderline = true;
+			this.btnP43.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w313 = new global::Gtk.Image();
+			this.btnP43.Image = w313;
+			this.tbUI.Add(this.btnP43);
+			global::Gtk.Table.TableChild w314 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP43]));
+			w314.TopAttach = ((uint)(5));
+			w314.BottomAttach = ((uint)(6));
+			w314.LeftAttach = ((uint)(18));
+			w314.RightAttach = ((uint)(19));
+			w314.XOptions = ((global::Gtk.AttachOptions)(4));
+			w314.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP44 = new global::Gtk.Button();
+			this.btnP44.WidthRequest = 50;
+			this.btnP44.HeightRequest = 50;
+			this.btnP44.CanFocus = true;
+			this.btnP44.Name = "btnP44";
+			this.btnP44.UseUnderline = true;
+			this.btnP44.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w315 = new global::Gtk.Image();
+			this.btnP44.Image = w315;
+			this.tbUI.Add(this.btnP44);
+			global::Gtk.Table.TableChild w316 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP44]));
+			w316.TopAttach = ((uint)(5));
+			w316.BottomAttach = ((uint)(6));
+			w316.LeftAttach = ((uint)(19));
+			w316.RightAttach = ((uint)(20));
+			w316.XOptions = ((global::Gtk.AttachOptions)(4));
+			w316.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP45 = new global::Gtk.Button();
+			this.btnP45.WidthRequest = 50;
+			this.btnP45.HeightRequest = 50;
+			this.btnP45.CanFocus = true;
+			this.btnP45.Name = "btnP45";
+			this.btnP45.UseUnderline = true;
+			this.btnP45.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w317 = new global::Gtk.Image();
+			this.btnP45.Image = w317;
+			this.tbUI.Add(this.btnP45);
+			global::Gtk.Table.TableChild w318 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP45]));
+			w318.TopAttach = ((uint)(5));
+			w318.BottomAttach = ((uint)(6));
+			w318.LeftAttach = ((uint)(20));
+			w318.RightAttach = ((uint)(21));
+			w318.XOptions = ((global::Gtk.AttachOptions)(4));
+			w318.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP46 = new global::Gtk.Button();
+			this.btnP46.WidthRequest = 50;
+			this.btnP46.HeightRequest = 50;
+			this.btnP46.CanFocus = true;
+			this.btnP46.Name = "btnP46";
+			this.btnP46.UseUnderline = true;
+			this.btnP46.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w319 = new global::Gtk.Image();
+			this.btnP46.Image = w319;
+			this.tbUI.Add(this.btnP46);
+			global::Gtk.Table.TableChild w320 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP46]));
+			w320.TopAttach = ((uint)(6));
+			w320.BottomAttach = ((uint)(7));
+			w320.LeftAttach = ((uint)(12));
+			w320.RightAttach = ((uint)(13));
+			w320.XOptions = ((global::Gtk.AttachOptions)(4));
+			w320.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP47 = new global::Gtk.Button();
+			this.btnP47.WidthRequest = 50;
+			this.btnP47.HeightRequest = 50;
+			this.btnP47.CanFocus = true;
+			this.btnP47.Name = "btnP47";
+			this.btnP47.UseUnderline = true;
+			this.btnP47.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w321 = new global::Gtk.Image();
+			this.btnP47.Image = w321;
+			this.tbUI.Add(this.btnP47);
+			global::Gtk.Table.TableChild w322 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP47]));
+			w322.TopAttach = ((uint)(6));
+			w322.BottomAttach = ((uint)(7));
+			w322.LeftAttach = ((uint)(13));
+			w322.RightAttach = ((uint)(14));
+			w322.XOptions = ((global::Gtk.AttachOptions)(4));
+			w322.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP48 = new global::Gtk.Button();
+			this.btnP48.WidthRequest = 50;
+			this.btnP48.HeightRequest = 50;
+			this.btnP48.CanFocus = true;
+			this.btnP48.Name = "btnP48";
+			this.btnP48.UseUnderline = true;
+			this.btnP48.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w323 = new global::Gtk.Image();
+			this.btnP48.Image = w323;
+			this.tbUI.Add(this.btnP48);
+			global::Gtk.Table.TableChild w324 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP48]));
+			w324.TopAttach = ((uint)(6));
+			w324.BottomAttach = ((uint)(7));
+			w324.LeftAttach = ((uint)(14));
+			w324.RightAttach = ((uint)(15));
+			w324.XOptions = ((global::Gtk.AttachOptions)(4));
+			w324.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP49 = new global::Gtk.Button();
+			this.btnP49.WidthRequest = 50;
+			this.btnP49.HeightRequest = 50;
+			this.btnP49.CanFocus = true;
+			this.btnP49.Name = "btnP49";
+			this.btnP49.UseUnderline = true;
+			this.btnP49.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w325 = new global::Gtk.Image();
+			this.btnP49.Image = w325;
+			this.tbUI.Add(this.btnP49);
+			global::Gtk.Table.TableChild w326 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP49]));
+			w326.TopAttach = ((uint)(6));
+			w326.BottomAttach = ((uint)(7));
+			w326.LeftAttach = ((uint)(15));
+			w326.RightAttach = ((uint)(16));
+			w326.XOptions = ((global::Gtk.AttachOptions)(4));
+			w326.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP5 = new global::Gtk.Button();
+			this.btnP5.WidthRequest = 50;
+			this.btnP5.HeightRequest = 50;
+			this.btnP5.CanFocus = true;
+			this.btnP5.Name = "btnP5";
+			this.btnP5.UseUnderline = true;
+			this.btnP5.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w327 = new global::Gtk.Image();
+			this.btnP5.Image = w327;
+			this.tbUI.Add(this.btnP5);
+			global::Gtk.Table.TableChild w328 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP5]));
+			w328.TopAttach = ((uint)(1));
+			w328.BottomAttach = ((uint)(2));
+			w328.LeftAttach = ((uint)(16));
+			w328.RightAttach = ((uint)(17));
+			w328.XOptions = ((global::Gtk.AttachOptions)(4));
+			w328.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP50 = new global::Gtk.Button();
+			this.btnP50.WidthRequest = 50;
+			this.btnP50.HeightRequest = 50;
+			this.btnP50.CanFocus = true;
+			this.btnP50.Name = "btnP50";
+			this.btnP50.UseUnderline = true;
+			this.btnP50.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w329 = new global::Gtk.Image();
+			this.btnP50.Image = w329;
+			this.tbUI.Add(this.btnP50);
+			global::Gtk.Table.TableChild w330 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP50]));
+			w330.TopAttach = ((uint)(6));
+			w330.BottomAttach = ((uint)(7));
+			w330.LeftAttach = ((uint)(16));
+			w330.RightAttach = ((uint)(17));
+			w330.XOptions = ((global::Gtk.AttachOptions)(4));
+			w330.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP51 = new global::Gtk.Button();
+			this.btnP51.WidthRequest = 50;
+			this.btnP51.HeightRequest = 50;
+			this.btnP51.CanFocus = true;
+			this.btnP51.Name = "btnP51";
+			this.btnP51.UseUnderline = true;
+			this.btnP51.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w331 = new global::Gtk.Image();
+			this.btnP51.Image = w331;
+			this.tbUI.Add(this.btnP51);
+			global::Gtk.Table.TableChild w332 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP51]));
+			w332.TopAttach = ((uint)(6));
+			w332.BottomAttach = ((uint)(7));
+			w332.LeftAttach = ((uint)(17));
+			w332.RightAttach = ((uint)(18));
+			w332.XOptions = ((global::Gtk.AttachOptions)(4));
+			w332.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP52 = new global::Gtk.Button();
+			this.btnP52.WidthRequest = 50;
+			this.btnP52.HeightRequest = 50;
+			this.btnP52.CanFocus = true;
+			this.btnP52.Name = "btnP52";
+			this.btnP52.UseUnderline = true;
+			this.btnP52.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w333 = new global::Gtk.Image();
+			this.btnP52.Image = w333;
+			this.tbUI.Add(this.btnP52);
+			global::Gtk.Table.TableChild w334 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP52]));
+			w334.TopAttach = ((uint)(6));
+			w334.BottomAttach = ((uint)(7));
+			w334.LeftAttach = ((uint)(18));
+			w334.RightAttach = ((uint)(19));
+			w334.XOptions = ((global::Gtk.AttachOptions)(4));
+			w334.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP53 = new global::Gtk.Button();
+			this.btnP53.WidthRequest = 50;
+			this.btnP53.HeightRequest = 50;
+			this.btnP53.CanFocus = true;
+			this.btnP53.Name = "btnP53";
+			this.btnP53.UseUnderline = true;
+			this.btnP53.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w335 = new global::Gtk.Image();
+			this.btnP53.Image = w335;
+			this.tbUI.Add(this.btnP53);
+			global::Gtk.Table.TableChild w336 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP53]));
+			w336.TopAttach = ((uint)(6));
+			w336.BottomAttach = ((uint)(7));
+			w336.LeftAttach = ((uint)(19));
+			w336.RightAttach = ((uint)(20));
+			w336.XOptions = ((global::Gtk.AttachOptions)(4));
+			w336.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP54 = new global::Gtk.Button();
+			this.btnP54.WidthRequest = 50;
+			this.btnP54.HeightRequest = 50;
+			this.btnP54.CanFocus = true;
+			this.btnP54.Name = "btnP54";
+			this.btnP54.UseUnderline = true;
+			this.btnP54.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w337 = new global::Gtk.Image();
+			this.btnP54.Image = w337;
+			this.tbUI.Add(this.btnP54);
+			global::Gtk.Table.TableChild w338 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP54]));
+			w338.TopAttach = ((uint)(6));
+			w338.BottomAttach = ((uint)(7));
+			w338.LeftAttach = ((uint)(20));
+			w338.RightAttach = ((uint)(21));
+			w338.XOptions = ((global::Gtk.AttachOptions)(4));
+			w338.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP55 = new global::Gtk.Button();
+			this.btnP55.WidthRequest = 50;
+			this.btnP55.HeightRequest = 50;
+			this.btnP55.CanFocus = true;
+			this.btnP55.Name = "btnP55";
+			this.btnP55.UseUnderline = true;
+			this.btnP55.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w339 = new global::Gtk.Image();
+			this.btnP55.Image = w339;
+			this.tbUI.Add(this.btnP55);
+			global::Gtk.Table.TableChild w340 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP55]));
+			w340.TopAttach = ((uint)(7));
+			w340.BottomAttach = ((uint)(8));
+			w340.LeftAttach = ((uint)(12));
+			w340.RightAttach = ((uint)(13));
+			w340.XOptions = ((global::Gtk.AttachOptions)(4));
+			w340.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP56 = new global::Gtk.Button();
+			this.btnP56.WidthRequest = 50;
+			this.btnP56.HeightRequest = 50;
+			this.btnP56.CanFocus = true;
+			this.btnP56.Name = "btnP56";
+			this.btnP56.UseUnderline = true;
+			this.btnP56.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w341 = new global::Gtk.Image();
+			this.btnP56.Image = w341;
+			this.tbUI.Add(this.btnP56);
+			global::Gtk.Table.TableChild w342 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP56]));
+			w342.TopAttach = ((uint)(7));
+			w342.BottomAttach = ((uint)(8));
+			w342.LeftAttach = ((uint)(13));
+			w342.RightAttach = ((uint)(14));
+			w342.XOptions = ((global::Gtk.AttachOptions)(4));
+			w342.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP57 = new global::Gtk.Button();
+			this.btnP57.WidthRequest = 50;
+			this.btnP57.HeightRequest = 50;
+			this.btnP57.CanFocus = true;
+			this.btnP57.Name = "btnP57";
+			this.btnP57.UseUnderline = true;
+			this.btnP57.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w343 = new global::Gtk.Image();
+			this.btnP57.Image = w343;
+			this.tbUI.Add(this.btnP57);
+			global::Gtk.Table.TableChild w344 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP57]));
+			w344.TopAttach = ((uint)(7));
+			w344.BottomAttach = ((uint)(8));
+			w344.LeftAttach = ((uint)(14));
+			w344.RightAttach = ((uint)(15));
+			w344.XOptions = ((global::Gtk.AttachOptions)(4));
+			w344.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP58 = new global::Gtk.Button();
+			this.btnP58.WidthRequest = 50;
+			this.btnP58.HeightRequest = 50;
+			this.btnP58.CanFocus = true;
+			this.btnP58.Name = "btnP58";
+			this.btnP58.UseUnderline = true;
+			this.btnP58.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w345 = new global::Gtk.Image();
+			this.btnP58.Image = w345;
+			this.tbUI.Add(this.btnP58);
+			global::Gtk.Table.TableChild w346 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP58]));
+			w346.TopAttach = ((uint)(7));
+			w346.BottomAttach = ((uint)(8));
+			w346.LeftAttach = ((uint)(15));
+			w346.RightAttach = ((uint)(16));
+			w346.XOptions = ((global::Gtk.AttachOptions)(4));
+			w346.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP59 = new global::Gtk.Button();
+			this.btnP59.WidthRequest = 50;
+			this.btnP59.HeightRequest = 50;
+			this.btnP59.CanFocus = true;
+			this.btnP59.Name = "btnP59";
+			this.btnP59.UseUnderline = true;
+			this.btnP59.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w347 = new global::Gtk.Image();
+			this.btnP59.Image = w347;
+			this.tbUI.Add(this.btnP59);
+			global::Gtk.Table.TableChild w348 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP59]));
+			w348.TopAttach = ((uint)(7));
+			w348.BottomAttach = ((uint)(8));
+			w348.LeftAttach = ((uint)(16));
+			w348.RightAttach = ((uint)(17));
+			w348.XOptions = ((global::Gtk.AttachOptions)(4));
+			w348.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP6 = new global::Gtk.Button();
+			this.btnP6.WidthRequest = 50;
+			this.btnP6.HeightRequest = 50;
+			this.btnP6.CanFocus = true;
+			this.btnP6.Name = "btnP6";
+			this.btnP6.UseUnderline = true;
+			this.btnP6.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w349 = new global::Gtk.Image();
+			this.btnP6.Image = w349;
+			this.tbUI.Add(this.btnP6);
+			global::Gtk.Table.TableChild w350 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP6]));
+			w350.TopAttach = ((uint)(1));
+			w350.BottomAttach = ((uint)(2));
+			w350.LeftAttach = ((uint)(17));
+			w350.RightAttach = ((uint)(18));
+			w350.XOptions = ((global::Gtk.AttachOptions)(4));
+			w350.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP60 = new global::Gtk.Button();
+			this.btnP60.WidthRequest = 50;
+			this.btnP60.HeightRequest = 50;
+			this.btnP60.CanFocus = true;
+			this.btnP60.Name = "btnP60";
+			this.btnP60.UseUnderline = true;
+			this.btnP60.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w351 = new global::Gtk.Image();
+			this.btnP60.Image = w351;
+			this.tbUI.Add(this.btnP60);
+			global::Gtk.Table.TableChild w352 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP60]));
+			w352.TopAttach = ((uint)(7));
+			w352.BottomAttach = ((uint)(8));
+			w352.LeftAttach = ((uint)(17));
+			w352.RightAttach = ((uint)(18));
+			w352.XOptions = ((global::Gtk.AttachOptions)(4));
+			w352.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP61 = new global::Gtk.Button();
+			this.btnP61.WidthRequest = 50;
+			this.btnP61.HeightRequest = 50;
+			this.btnP61.CanFocus = true;
+			this.btnP61.Name = "btnP61";
+			this.btnP61.UseUnderline = true;
+			this.btnP61.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w353 = new global::Gtk.Image();
+			this.btnP61.Image = w353;
+			this.tbUI.Add(this.btnP61);
+			global::Gtk.Table.TableChild w354 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP61]));
+			w354.TopAttach = ((uint)(7));
+			w354.BottomAttach = ((uint)(8));
+			w354.LeftAttach = ((uint)(18));
+			w354.RightAttach = ((uint)(19));
+			w354.XOptions = ((global::Gtk.AttachOptions)(4));
+			w354.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP62 = new global::Gtk.Button();
+			this.btnP62.WidthRequest = 50;
+			this.btnP62.HeightRequest = 50;
+			this.btnP62.CanFocus = true;
+			this.btnP62.Name = "btnP62";
+			this.btnP62.UseUnderline = true;
+			this.btnP62.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w355 = new global::Gtk.Image();
+			this.btnP62.Image = w355;
+			this.tbUI.Add(this.btnP62);
+			global::Gtk.Table.TableChild w356 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP62]));
+			w356.TopAttach = ((uint)(7));
+			w356.BottomAttach = ((uint)(8));
+			w356.LeftAttach = ((uint)(19));
+			w356.RightAttach = ((uint)(20));
+			w356.XOptions = ((global::Gtk.AttachOptions)(4));
+			w356.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP63 = new global::Gtk.Button();
+			this.btnP63.WidthRequest = 50;
+			this.btnP63.HeightRequest = 50;
+			this.btnP63.CanFocus = true;
+			this.btnP63.Name = "btnP63";
+			this.btnP63.UseUnderline = true;
+			this.btnP63.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w357 = new global::Gtk.Image();
+			this.btnP63.Image = w357;
+			this.tbUI.Add(this.btnP63);
+			global::Gtk.Table.TableChild w358 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP63]));
+			w358.TopAttach = ((uint)(7));
+			w358.BottomAttach = ((uint)(8));
+			w358.LeftAttach = ((uint)(20));
+			w358.RightAttach = ((uint)(21));
+			w358.XOptions = ((global::Gtk.AttachOptions)(4));
+			w358.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP64 = new global::Gtk.Button();
+			this.btnP64.WidthRequest = 50;
+			this.btnP64.HeightRequest = 50;
+			this.btnP64.CanFocus = true;
+			this.btnP64.Name = "btnP64";
+			this.btnP64.UseUnderline = true;
+			this.btnP64.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w359 = new global::Gtk.Image();
+			this.btnP64.Image = w359;
+			this.tbUI.Add(this.btnP64);
+			global::Gtk.Table.TableChild w360 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP64]));
+			w360.TopAttach = ((uint)(8));
+			w360.BottomAttach = ((uint)(9));
+			w360.LeftAttach = ((uint)(12));
+			w360.RightAttach = ((uint)(13));
+			w360.XOptions = ((global::Gtk.AttachOptions)(4));
+			w360.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP65 = new global::Gtk.Button();
+			this.btnP65.WidthRequest = 50;
+			this.btnP65.HeightRequest = 50;
+			this.btnP65.CanFocus = true;
+			this.btnP65.Name = "btnP65";
+			this.btnP65.UseUnderline = true;
+			this.btnP65.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w361 = new global::Gtk.Image();
+			this.btnP65.Image = w361;
+			this.tbUI.Add(this.btnP65);
+			global::Gtk.Table.TableChild w362 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP65]));
+			w362.TopAttach = ((uint)(8));
+			w362.BottomAttach = ((uint)(9));
+			w362.LeftAttach = ((uint)(13));
+			w362.RightAttach = ((uint)(14));
+			w362.XOptions = ((global::Gtk.AttachOptions)(4));
+			w362.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP66 = new global::Gtk.Button();
+			this.btnP66.WidthRequest = 50;
+			this.btnP66.HeightRequest = 50;
+			this.btnP66.CanFocus = true;
+			this.btnP66.Name = "btnP66";
+			this.btnP66.UseUnderline = true;
+			this.btnP66.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w363 = new global::Gtk.Image();
+			this.btnP66.Image = w363;
+			this.tbUI.Add(this.btnP66);
+			global::Gtk.Table.TableChild w364 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP66]));
+			w364.TopAttach = ((uint)(8));
+			w364.BottomAttach = ((uint)(9));
+			w364.LeftAttach = ((uint)(14));
+			w364.RightAttach = ((uint)(15));
+			w364.XOptions = ((global::Gtk.AttachOptions)(4));
+			w364.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP67 = new global::Gtk.Button();
+			this.btnP67.WidthRequest = 50;
+			this.btnP67.HeightRequest = 50;
+			this.btnP67.CanFocus = true;
+			this.btnP67.Name = "btnP67";
+			this.btnP67.UseUnderline = true;
+			this.btnP67.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w365 = new global::Gtk.Image();
+			this.btnP67.Image = w365;
+			this.tbUI.Add(this.btnP67);
+			global::Gtk.Table.TableChild w366 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP67]));
+			w366.TopAttach = ((uint)(8));
+			w366.BottomAttach = ((uint)(9));
+			w366.LeftAttach = ((uint)(15));
+			w366.RightAttach = ((uint)(16));
+			w366.XOptions = ((global::Gtk.AttachOptions)(4));
+			w366.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP68 = new global::Gtk.Button();
+			this.btnP68.WidthRequest = 50;
+			this.btnP68.HeightRequest = 50;
+			this.btnP68.CanFocus = true;
+			this.btnP68.Name = "btnP68";
+			this.btnP68.UseUnderline = true;
+			this.btnP68.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w367 = new global::Gtk.Image();
+			this.btnP68.Image = w367;
+			this.tbUI.Add(this.btnP68);
+			global::Gtk.Table.TableChild w368 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP68]));
+			w368.TopAttach = ((uint)(8));
+			w368.BottomAttach = ((uint)(9));
+			w368.LeftAttach = ((uint)(16));
+			w368.RightAttach = ((uint)(17));
+			w368.XOptions = ((global::Gtk.AttachOptions)(4));
+			w368.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP69 = new global::Gtk.Button();
+			this.btnP69.WidthRequest = 50;
+			this.btnP69.HeightRequest = 50;
+			this.btnP69.CanFocus = true;
+			this.btnP69.Name = "btnP69";
+			this.btnP69.UseUnderline = true;
+			this.btnP69.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w369 = new global::Gtk.Image();
+			this.btnP69.Image = w369;
+			this.tbUI.Add(this.btnP69);
+			global::Gtk.Table.TableChild w370 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP69]));
+			w370.TopAttach = ((uint)(8));
+			w370.BottomAttach = ((uint)(9));
+			w370.LeftAttach = ((uint)(17));
+			w370.RightAttach = ((uint)(18));
+			w370.XOptions = ((global::Gtk.AttachOptions)(4));
+			w370.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP7 = new global::Gtk.Button();
+			this.btnP7.WidthRequest = 50;
+			this.btnP7.HeightRequest = 50;
+			this.btnP7.CanFocus = true;
+			this.btnP7.Name = "btnP7";
+			this.btnP7.UseUnderline = true;
+			this.btnP7.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w371 = new global::Gtk.Image();
+			this.btnP7.Image = w371;
+			this.tbUI.Add(this.btnP7);
+			global::Gtk.Table.TableChild w372 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP7]));
+			w372.TopAttach = ((uint)(1));
+			w372.BottomAttach = ((uint)(2));
+			w372.LeftAttach = ((uint)(18));
+			w372.RightAttach = ((uint)(19));
+			w372.XOptions = ((global::Gtk.AttachOptions)(4));
+			w372.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP70 = new global::Gtk.Button();
+			this.btnP70.WidthRequest = 50;
+			this.btnP70.HeightRequest = 50;
+			this.btnP70.CanFocus = true;
+			this.btnP70.Name = "btnP70";
+			this.btnP70.UseUnderline = true;
+			this.btnP70.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w373 = new global::Gtk.Image();
+			this.btnP70.Image = w373;
+			this.tbUI.Add(this.btnP70);
+			global::Gtk.Table.TableChild w374 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP70]));
+			w374.TopAttach = ((uint)(8));
+			w374.BottomAttach = ((uint)(9));
+			w374.LeftAttach = ((uint)(18));
+			w374.RightAttach = ((uint)(19));
+			w374.XOptions = ((global::Gtk.AttachOptions)(4));
+			w374.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP71 = new global::Gtk.Button();
+			this.btnP71.WidthRequest = 50;
+			this.btnP71.HeightRequest = 50;
+			this.btnP71.CanFocus = true;
+			this.btnP71.Name = "btnP71";
+			this.btnP71.UseUnderline = true;
+			this.btnP71.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w375 = new global::Gtk.Image();
+			this.btnP71.Image = w375;
+			this.tbUI.Add(this.btnP71);
+			global::Gtk.Table.TableChild w376 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP71]));
+			w376.TopAttach = ((uint)(8));
+			w376.BottomAttach = ((uint)(9));
+			w376.LeftAttach = ((uint)(19));
+			w376.RightAttach = ((uint)(20));
+			w376.XOptions = ((global::Gtk.AttachOptions)(4));
+			w376.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP72 = new global::Gtk.Button();
+			this.btnP72.WidthRequest = 50;
+			this.btnP72.HeightRequest = 50;
+			this.btnP72.CanFocus = true;
+			this.btnP72.Name = "btnP72";
+			this.btnP72.UseUnderline = true;
+			this.btnP72.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w377 = new global::Gtk.Image();
+			this.btnP72.Image = w377;
+			this.tbUI.Add(this.btnP72);
+			global::Gtk.Table.TableChild w378 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP72]));
+			w378.TopAttach = ((uint)(8));
+			w378.BottomAttach = ((uint)(9));
+			w378.LeftAttach = ((uint)(20));
+			w378.RightAttach = ((uint)(21));
+			w378.XOptions = ((global::Gtk.AttachOptions)(4));
+			w378.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP73 = new global::Gtk.Button();
+			this.btnP73.WidthRequest = 50;
+			this.btnP73.HeightRequest = 50;
+			this.btnP73.CanFocus = true;
+			this.btnP73.Name = "btnP73";
+			this.btnP73.UseUnderline = true;
+			this.btnP73.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w379 = new global::Gtk.Image();
+			this.btnP73.Image = w379;
+			this.tbUI.Add(this.btnP73);
+			global::Gtk.Table.TableChild w380 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP73]));
+			w380.TopAttach = ((uint)(9));
+			w380.BottomAttach = ((uint)(10));
+			w380.LeftAttach = ((uint)(12));
+			w380.RightAttach = ((uint)(13));
+			w380.XOptions = ((global::Gtk.AttachOptions)(4));
+			w380.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP74 = new global::Gtk.Button();
+			this.btnP74.WidthRequest = 50;
+			this.btnP74.HeightRequest = 50;
+			this.btnP74.CanFocus = true;
+			this.btnP74.Name = "btnP74";
+			this.btnP74.UseUnderline = true;
+			this.btnP74.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w381 = new global::Gtk.Image();
+			this.btnP74.Image = w381;
+			this.tbUI.Add(this.btnP74);
+			global::Gtk.Table.TableChild w382 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP74]));
+			w382.TopAttach = ((uint)(9));
+			w382.BottomAttach = ((uint)(10));
+			w382.LeftAttach = ((uint)(13));
+			w382.RightAttach = ((uint)(14));
+			w382.XOptions = ((global::Gtk.AttachOptions)(4));
+			w382.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP75 = new global::Gtk.Button();
+			this.btnP75.WidthRequest = 50;
+			this.btnP75.HeightRequest = 50;
+			this.btnP75.CanFocus = true;
+			this.btnP75.Name = "btnP75";
+			this.btnP75.UseUnderline = true;
+			this.btnP75.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w383 = new global::Gtk.Image();
+			this.btnP75.Image = w383;
+			this.tbUI.Add(this.btnP75);
+			global::Gtk.Table.TableChild w384 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP75]));
+			w384.TopAttach = ((uint)(9));
+			w384.BottomAttach = ((uint)(10));
+			w384.LeftAttach = ((uint)(14));
+			w384.RightAttach = ((uint)(15));
+			w384.XOptions = ((global::Gtk.AttachOptions)(4));
+			w384.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP76 = new global::Gtk.Button();
+			this.btnP76.WidthRequest = 50;
+			this.btnP76.HeightRequest = 50;
+			this.btnP76.CanFocus = true;
+			this.btnP76.Name = "btnP76";
+			this.btnP76.UseUnderline = true;
+			this.btnP76.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w385 = new global::Gtk.Image();
+			this.btnP76.Image = w385;
+			this.tbUI.Add(this.btnP76);
+			global::Gtk.Table.TableChild w386 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP76]));
+			w386.TopAttach = ((uint)(9));
+			w386.BottomAttach = ((uint)(10));
+			w386.LeftAttach = ((uint)(15));
+			w386.RightAttach = ((uint)(16));
+			w386.XOptions = ((global::Gtk.AttachOptions)(4));
+			w386.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP77 = new global::Gtk.Button();
+			this.btnP77.WidthRequest = 50;
+			this.btnP77.HeightRequest = 50;
+			this.btnP77.CanFocus = true;
+			this.btnP77.Name = "btnP77";
+			this.btnP77.UseUnderline = true;
+			this.btnP77.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w387 = new global::Gtk.Image();
+			this.btnP77.Image = w387;
+			this.tbUI.Add(this.btnP77);
+			global::Gtk.Table.TableChild w388 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP77]));
+			w388.TopAttach = ((uint)(9));
+			w388.BottomAttach = ((uint)(10));
+			w388.LeftAttach = ((uint)(16));
+			w388.RightAttach = ((uint)(17));
+			w388.XOptions = ((global::Gtk.AttachOptions)(4));
+			w388.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP78 = new global::Gtk.Button();
+			this.btnP78.WidthRequest = 50;
+			this.btnP78.HeightRequest = 50;
+			this.btnP78.CanFocus = true;
+			this.btnP78.Name = "btnP78";
+			this.btnP78.UseUnderline = true;
+			this.btnP78.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w389 = new global::Gtk.Image();
+			this.btnP78.Image = w389;
+			this.tbUI.Add(this.btnP78);
+			global::Gtk.Table.TableChild w390 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP78]));
+			w390.TopAttach = ((uint)(9));
+			w390.BottomAttach = ((uint)(10));
+			w390.LeftAttach = ((uint)(17));
+			w390.RightAttach = ((uint)(18));
+			w390.XOptions = ((global::Gtk.AttachOptions)(4));
+			w390.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP79 = new global::Gtk.Button();
+			this.btnP79.WidthRequest = 50;
+			this.btnP79.HeightRequest = 50;
+			this.btnP79.CanFocus = true;
+			this.btnP79.Name = "btnP79";
+			this.btnP79.UseUnderline = true;
+			this.btnP79.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w391 = new global::Gtk.Image();
+			this.btnP79.Image = w391;
+			this.tbUI.Add(this.btnP79);
+			global::Gtk.Table.TableChild w392 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP79]));
+			w392.TopAttach = ((uint)(9));
+			w392.BottomAttach = ((uint)(10));
+			w392.LeftAttach = ((uint)(18));
+			w392.RightAttach = ((uint)(19));
+			w392.XOptions = ((global::Gtk.AttachOptions)(4));
+			w392.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP8 = new global::Gtk.Button();
+			this.btnP8.WidthRequest = 50;
+			this.btnP8.HeightRequest = 50;
+			this.btnP8.CanFocus = true;
+			this.btnP8.Name = "btnP8";
+			this.btnP8.UseUnderline = true;
+			this.btnP8.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w393 = new global::Gtk.Image();
+			this.btnP8.Image = w393;
+			this.tbUI.Add(this.btnP8);
+			global::Gtk.Table.TableChild w394 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP8]));
+			w394.TopAttach = ((uint)(1));
+			w394.BottomAttach = ((uint)(2));
+			w394.LeftAttach = ((uint)(19));
+			w394.RightAttach = ((uint)(20));
+			w394.XOptions = ((global::Gtk.AttachOptions)(4));
+			w394.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP80 = new global::Gtk.Button();
+			this.btnP80.WidthRequest = 50;
+			this.btnP80.HeightRequest = 50;
+			this.btnP80.CanFocus = true;
+			this.btnP80.Name = "btnP80";
+			this.btnP80.UseUnderline = true;
+			this.btnP80.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w395 = new global::Gtk.Image();
+			this.btnP80.Image = w395;
+			this.tbUI.Add(this.btnP80);
+			global::Gtk.Table.TableChild w396 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP80]));
+			w396.TopAttach = ((uint)(9));
+			w396.BottomAttach = ((uint)(10));
+			w396.LeftAttach = ((uint)(19));
+			w396.RightAttach = ((uint)(20));
+			w396.XOptions = ((global::Gtk.AttachOptions)(4));
+			w396.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP81 = new global::Gtk.Button();
+			this.btnP81.WidthRequest = 50;
+			this.btnP81.HeightRequest = 50;
+			this.btnP81.CanFocus = true;
+			this.btnP81.Name = "btnP81";
+			this.btnP81.UseUnderline = true;
+			this.btnP81.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w397 = new global::Gtk.Image();
+			this.btnP81.Image = w397;
+			this.tbUI.Add(this.btnP81);
+			global::Gtk.Table.TableChild w398 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP81]));
+			w398.TopAttach = ((uint)(9));
+			w398.BottomAttach = ((uint)(10));
+			w398.LeftAttach = ((uint)(20));
+			w398.RightAttach = ((uint)(21));
+			w398.XOptions = ((global::Gtk.AttachOptions)(4));
+			w398.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnP9 = new global::Gtk.Button();
+			this.btnP9.WidthRequest = 50;
+			this.btnP9.HeightRequest = 50;
+			this.btnP9.CanFocus = true;
+			this.btnP9.Name = "btnP9";
+			this.btnP9.UseUnderline = true;
+			this.btnP9.Relief = ((global::Gtk.ReliefStyle)(2));
+			global::Gtk.Image w399 = new global::Gtk.Image();
+			this.btnP9.Image = w399;
+			this.tbUI.Add(this.btnP9);
+			global::Gtk.Table.TableChild w400 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnP9]));
+			w400.TopAttach = ((uint)(1));
+			w400.BottomAttach = ((uint)(2));
+			w400.LeftAttach = ((uint)(20));
+			w400.RightAttach = ((uint)(21));
+			w400.XOptions = ((global::Gtk.AttachOptions)(4));
+			w400.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.btnPause = new global::Gtk.Button();
+			this.btnPause.WidthRequest = 50;
+			this.btnPause.HeightRequest = 50;
+			this.btnPause.CanFocus = true;
+			this.btnPause.Name = "btnPause";
+			this.btnPause.UseUnderline = true;
+			this.btnPause.Label = "Pause";
+			this.tbUI.Add(this.btnPause);
+			global::Gtk.Table.TableChild w401 = ((global::Gtk.Table.TableChild)(this.tbUI[this.btnPause]));
+			w401.TopAttach = ((uint)(15));
+			w401.BottomAttach = ((uint)(16));
+			w401.LeftAttach = ((uint)(21));
+			w401.RightAttach = ((uint)(22));
+			w401.XOptions = ((global::Gtk.AttachOptions)(4));
+			w401.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG1 = new global::Gtk.Image();
+			this.imgG1.WidthRequest = 50;
+			this.imgG1.HeightRequest = 50;
+			this.imgG1.Name = "imgG1";
+			this.tbUI.Add(this.imgG1);
+			global::Gtk.Table.TableChild w402 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG1]));
+			w402.TopAttach = ((uint)(2));
+			w402.BottomAttach = ((uint)(3));
+			w402.LeftAttach = ((uint)(1));
+			w402.RightAttach = ((uint)(2));
+			w402.XOptions = ((global::Gtk.AttachOptions)(4));
+			w402.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG10 = new global::Gtk.Image();
+			this.imgG10.WidthRequest = 50;
+			this.imgG10.HeightRequest = 50;
+			this.imgG10.Name = "imgG10";
+			this.tbUI.Add(this.imgG10);
+			global::Gtk.Table.TableChild w403 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG10]));
+			w403.TopAttach = ((uint)(3));
+			w403.BottomAttach = ((uint)(4));
+			w403.LeftAttach = ((uint)(1));
+			w403.RightAttach = ((uint)(2));
+			w403.XOptions = ((global::Gtk.AttachOptions)(4));
+			w403.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG11 = new global::Gtk.Image();
+			this.imgG11.WidthRequest = 50;
+			this.imgG11.HeightRequest = 50;
+			this.imgG11.Name = "imgG11";
+			this.tbUI.Add(this.imgG11);
+			global::Gtk.Table.TableChild w404 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG11]));
+			w404.TopAttach = ((uint)(3));
+			w404.BottomAttach = ((uint)(4));
+			w404.LeftAttach = ((uint)(2));
+			w404.RightAttach = ((uint)(3));
+			w404.XOptions = ((global::Gtk.AttachOptions)(4));
+			w404.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG12 = new global::Gtk.Image();
+			this.imgG12.WidthRequest = 50;
+			this.imgG12.HeightRequest = 50;
+			this.imgG12.Name = "imgG12";
+			this.tbUI.Add(this.imgG12);
+			global::Gtk.Table.TableChild w405 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG12]));
+			w405.TopAttach = ((uint)(3));
+			w405.BottomAttach = ((uint)(4));
+			w405.LeftAttach = ((uint)(3));
+			w405.RightAttach = ((uint)(4));
+			w405.XOptions = ((global::Gtk.AttachOptions)(4));
+			w405.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG13 = new global::Gtk.Image();
+			this.imgG13.WidthRequest = 50;
+			this.imgG13.HeightRequest = 50;
+			this.imgG13.Name = "imgG13";
+			this.tbUI.Add(this.imgG13);
+			global::Gtk.Table.TableChild w406 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG13]));
+			w406.TopAttach = ((uint)(3));
+			w406.BottomAttach = ((uint)(4));
+			w406.LeftAttach = ((uint)(4));
+			w406.RightAttach = ((uint)(5));
+			w406.XOptions = ((global::Gtk.AttachOptions)(4));
+			w406.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG14 = new global::Gtk.Image();
+			this.imgG14.WidthRequest = 50;
+			this.imgG14.HeightRequest = 50;
+			this.imgG14.Name = "imgG14";
+			this.tbUI.Add(this.imgG14);
+			global::Gtk.Table.TableChild w407 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG14]));
+			w407.TopAttach = ((uint)(3));
+			w407.BottomAttach = ((uint)(4));
+			w407.LeftAttach = ((uint)(5));
+			w407.RightAttach = ((uint)(6));
+			w407.XOptions = ((global::Gtk.AttachOptions)(4));
+			w407.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG15 = new global::Gtk.Image();
+			this.imgG15.WidthRequest = 50;
+			this.imgG15.HeightRequest = 50;
+			this.imgG15.Name = "imgG15";
+			this.tbUI.Add(this.imgG15);
+			global::Gtk.Table.TableChild w408 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG15]));
+			w408.TopAttach = ((uint)(3));
+			w408.BottomAttach = ((uint)(4));
+			w408.LeftAttach = ((uint)(6));
+			w408.RightAttach = ((uint)(7));
+			w408.XOptions = ((global::Gtk.AttachOptions)(4));
+			w408.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG16 = new global::Gtk.Image();
+			this.imgG16.WidthRequest = 50;
+			this.imgG16.HeightRequest = 50;
+			this.imgG16.Name = "imgG16";
+			this.tbUI.Add(this.imgG16);
+			global::Gtk.Table.TableChild w409 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG16]));
+			w409.TopAttach = ((uint)(3));
+			w409.BottomAttach = ((uint)(4));
+			w409.LeftAttach = ((uint)(7));
+			w409.RightAttach = ((uint)(8));
+			w409.XOptions = ((global::Gtk.AttachOptions)(4));
+			w409.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG17 = new global::Gtk.Image();
+			this.imgG17.WidthRequest = 50;
+			this.imgG17.HeightRequest = 50;
+			this.imgG17.Name = "imgG17";
+			this.tbUI.Add(this.imgG17);
+			global::Gtk.Table.TableChild w410 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG17]));
+			w410.TopAttach = ((uint)(3));
+			w410.BottomAttach = ((uint)(4));
+			w410.LeftAttach = ((uint)(8));
+			w410.RightAttach = ((uint)(9));
+			w410.XOptions = ((global::Gtk.AttachOptions)(4));
+			w410.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG18 = new global::Gtk.Image();
+			this.imgG18.WidthRequest = 50;
+			this.imgG18.HeightRequest = 50;
+			this.imgG18.Name = "imgG18";
+			this.tbUI.Add(this.imgG18);
+			global::Gtk.Table.TableChild w411 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG18]));
+			w411.TopAttach = ((uint)(3));
+			w411.BottomAttach = ((uint)(4));
+			w411.LeftAttach = ((uint)(9));
+			w411.RightAttach = ((uint)(10));
+			w411.XOptions = ((global::Gtk.AttachOptions)(4));
+			w411.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG19 = new global::Gtk.Image();
+			this.imgG19.WidthRequest = 50;
+			this.imgG19.HeightRequest = 50;
+			this.imgG19.Name = "imgG19";
+			this.tbUI.Add(this.imgG19);
+			global::Gtk.Table.TableChild w412 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG19]));
+			w412.TopAttach = ((uint)(4));
+			w412.BottomAttach = ((uint)(5));
+			w412.LeftAttach = ((uint)(1));
+			w412.RightAttach = ((uint)(2));
+			w412.XOptions = ((global::Gtk.AttachOptions)(4));
+			w412.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG2 = new global::Gtk.Image();
+			this.imgG2.WidthRequest = 50;
+			this.imgG2.HeightRequest = 50;
+			this.imgG2.Name = "imgG2";
+			this.tbUI.Add(this.imgG2);
+			global::Gtk.Table.TableChild w413 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG2]));
+			w413.TopAttach = ((uint)(2));
+			w413.BottomAttach = ((uint)(3));
+			w413.LeftAttach = ((uint)(2));
+			w413.RightAttach = ((uint)(3));
+			w413.XOptions = ((global::Gtk.AttachOptions)(4));
+			w413.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG20 = new global::Gtk.Image();
+			this.imgG20.WidthRequest = 50;
+			this.imgG20.HeightRequest = 50;
+			this.imgG20.Name = "imgG20";
+			this.tbUI.Add(this.imgG20);
+			global::Gtk.Table.TableChild w414 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG20]));
+			w414.TopAttach = ((uint)(4));
+			w414.BottomAttach = ((uint)(5));
+			w414.LeftAttach = ((uint)(2));
+			w414.RightAttach = ((uint)(3));
+			w414.XOptions = ((global::Gtk.AttachOptions)(4));
+			w414.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG21 = new global::Gtk.Image();
+			this.imgG21.WidthRequest = 50;
+			this.imgG21.HeightRequest = 50;
+			this.imgG21.Name = "imgG21";
+			this.tbUI.Add(this.imgG21);
+			global::Gtk.Table.TableChild w415 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG21]));
+			w415.TopAttach = ((uint)(4));
+			w415.BottomAttach = ((uint)(5));
+			w415.LeftAttach = ((uint)(3));
+			w415.RightAttach = ((uint)(4));
+			w415.XOptions = ((global::Gtk.AttachOptions)(4));
+			w415.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG22 = new global::Gtk.Image();
+			this.imgG22.WidthRequest = 50;
+			this.imgG22.HeightRequest = 50;
+			this.imgG22.Name = "imgG22";
+			this.tbUI.Add(this.imgG22);
+			global::Gtk.Table.TableChild w416 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG22]));
+			w416.TopAttach = ((uint)(4));
+			w416.BottomAttach = ((uint)(5));
+			w416.LeftAttach = ((uint)(4));
+			w416.RightAttach = ((uint)(5));
+			w416.XOptions = ((global::Gtk.AttachOptions)(4));
+			w416.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG23 = new global::Gtk.Image();
+			this.imgG23.WidthRequest = 50;
+			this.imgG23.HeightRequest = 50;
+			this.imgG23.Name = "imgG23";
+			this.tbUI.Add(this.imgG23);
+			global::Gtk.Table.TableChild w417 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG23]));
+			w417.TopAttach = ((uint)(4));
+			w417.BottomAttach = ((uint)(5));
+			w417.LeftAttach = ((uint)(5));
+			w417.RightAttach = ((uint)(6));
+			w417.XOptions = ((global::Gtk.AttachOptions)(4));
+			w417.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG24 = new global::Gtk.Image();
+			this.imgG24.WidthRequest = 50;
+			this.imgG24.HeightRequest = 50;
+			this.imgG24.Name = "imgG24";
+			this.tbUI.Add(this.imgG24);
+			global::Gtk.Table.TableChild w418 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG24]));
+			w418.TopAttach = ((uint)(4));
+			w418.BottomAttach = ((uint)(5));
+			w418.LeftAttach = ((uint)(6));
+			w418.RightAttach = ((uint)(7));
+			w418.XOptions = ((global::Gtk.AttachOptions)(4));
+			w418.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG25 = new global::Gtk.Image();
+			this.imgG25.WidthRequest = 50;
+			this.imgG25.HeightRequest = 50;
+			this.imgG25.Name = "imgG25";
+			this.tbUI.Add(this.imgG25);
+			global::Gtk.Table.TableChild w419 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG25]));
+			w419.TopAttach = ((uint)(4));
+			w419.BottomAttach = ((uint)(5));
+			w419.LeftAttach = ((uint)(7));
+			w419.RightAttach = ((uint)(8));
+			w419.XOptions = ((global::Gtk.AttachOptions)(4));
+			w419.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG26 = new global::Gtk.Image();
+			this.imgG26.WidthRequest = 50;
+			this.imgG26.HeightRequest = 50;
+			this.imgG26.Name = "imgG26";
+			this.tbUI.Add(this.imgG26);
+			global::Gtk.Table.TableChild w420 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG26]));
+			w420.TopAttach = ((uint)(4));
+			w420.BottomAttach = ((uint)(5));
+			w420.LeftAttach = ((uint)(8));
+			w420.RightAttach = ((uint)(9));
+			w420.XOptions = ((global::Gtk.AttachOptions)(4));
+			w420.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG27 = new global::Gtk.Image();
+			this.imgG27.WidthRequest = 50;
+			this.imgG27.HeightRequest = 50;
+			this.imgG27.Name = "imgG27";
+			this.tbUI.Add(this.imgG27);
+			global::Gtk.Table.TableChild w421 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG27]));
+			w421.TopAttach = ((uint)(4));
+			w421.BottomAttach = ((uint)(5));
+			w421.LeftAttach = ((uint)(9));
+			w421.RightAttach = ((uint)(10));
+			w421.XOptions = ((global::Gtk.AttachOptions)(4));
+			w421.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG28 = new global::Gtk.Image();
+			this.imgG28.WidthRequest = 50;
+			this.imgG28.HeightRequest = 50;
+			this.imgG28.Name = "imgG28";
+			this.tbUI.Add(this.imgG28);
+			global::Gtk.Table.TableChild w422 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG28]));
+			w422.TopAttach = ((uint)(5));
+			w422.BottomAttach = ((uint)(6));
+			w422.LeftAttach = ((uint)(1));
+			w422.RightAttach = ((uint)(2));
+			w422.XOptions = ((global::Gtk.AttachOptions)(4));
+			w422.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG29 = new global::Gtk.Image();
+			this.imgG29.WidthRequest = 50;
+			this.imgG29.HeightRequest = 50;
+			this.imgG29.Name = "imgG29";
+			this.tbUI.Add(this.imgG29);
+			global::Gtk.Table.TableChild w423 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG29]));
+			w423.TopAttach = ((uint)(5));
+			w423.BottomAttach = ((uint)(6));
+			w423.LeftAttach = ((uint)(2));
+			w423.RightAttach = ((uint)(3));
+			w423.XOptions = ((global::Gtk.AttachOptions)(4));
+			w423.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG3 = new global::Gtk.Image();
+			this.imgG3.WidthRequest = 50;
+			this.imgG3.HeightRequest = 50;
+			this.imgG3.Name = "imgG3";
+			this.tbUI.Add(this.imgG3);
+			global::Gtk.Table.TableChild w424 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG3]));
+			w424.TopAttach = ((uint)(2));
+			w424.BottomAttach = ((uint)(3));
+			w424.LeftAttach = ((uint)(3));
+			w424.RightAttach = ((uint)(4));
+			w424.XOptions = ((global::Gtk.AttachOptions)(4));
+			w424.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG30 = new global::Gtk.Image();
+			this.imgG30.WidthRequest = 50;
+			this.imgG30.HeightRequest = 50;
+			this.imgG30.Name = "imgG30";
+			this.tbUI.Add(this.imgG30);
+			global::Gtk.Table.TableChild w425 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG30]));
+			w425.TopAttach = ((uint)(5));
+			w425.BottomAttach = ((uint)(6));
+			w425.LeftAttach = ((uint)(3));
+			w425.RightAttach = ((uint)(4));
+			w425.XOptions = ((global::Gtk.AttachOptions)(4));
+			w425.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG31 = new global::Gtk.Image();
+			this.imgG31.WidthRequest = 50;
+			this.imgG31.HeightRequest = 50;
+			this.imgG31.Name = "imgG31";
+			this.tbUI.Add(this.imgG31);
+			global::Gtk.Table.TableChild w426 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG31]));
+			w426.TopAttach = ((uint)(5));
+			w426.BottomAttach = ((uint)(6));
+			w426.LeftAttach = ((uint)(4));
+			w426.RightAttach = ((uint)(5));
+			w426.XOptions = ((global::Gtk.AttachOptions)(4));
+			w426.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG32 = new global::Gtk.Image();
+			this.imgG32.WidthRequest = 50;
+			this.imgG32.HeightRequest = 50;
+			this.imgG32.Name = "imgG32";
+			this.tbUI.Add(this.imgG32);
+			global::Gtk.Table.TableChild w427 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG32]));
+			w427.TopAttach = ((uint)(5));
+			w427.BottomAttach = ((uint)(6));
+			w427.LeftAttach = ((uint)(5));
+			w427.RightAttach = ((uint)(6));
+			w427.XOptions = ((global::Gtk.AttachOptions)(4));
+			w427.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG33 = new global::Gtk.Image();
+			this.imgG33.WidthRequest = 50;
+			this.imgG33.HeightRequest = 50;
+			this.imgG33.Name = "imgG33";
+			this.tbUI.Add(this.imgG33);
+			global::Gtk.Table.TableChild w428 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG33]));
+			w428.TopAttach = ((uint)(5));
+			w428.BottomAttach = ((uint)(6));
+			w428.LeftAttach = ((uint)(6));
+			w428.RightAttach = ((uint)(7));
+			w428.XOptions = ((global::Gtk.AttachOptions)(4));
+			w428.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG34 = new global::Gtk.Image();
+			this.imgG34.WidthRequest = 50;
+			this.imgG34.HeightRequest = 50;
+			this.imgG34.Name = "imgG34";
+			this.tbUI.Add(this.imgG34);
+			global::Gtk.Table.TableChild w429 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG34]));
+			w429.TopAttach = ((uint)(5));
+			w429.BottomAttach = ((uint)(6));
+			w429.LeftAttach = ((uint)(7));
+			w429.RightAttach = ((uint)(8));
+			w429.XOptions = ((global::Gtk.AttachOptions)(4));
+			w429.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG35 = new global::Gtk.Image();
+			this.imgG35.WidthRequest = 50;
+			this.imgG35.HeightRequest = 50;
+			this.imgG35.Name = "imgG35";
+			this.tbUI.Add(this.imgG35);
+			global::Gtk.Table.TableChild w430 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG35]));
+			w430.TopAttach = ((uint)(5));
+			w430.BottomAttach = ((uint)(6));
+			w430.LeftAttach = ((uint)(8));
+			w430.RightAttach = ((uint)(9));
+			w430.XOptions = ((global::Gtk.AttachOptions)(4));
+			w430.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG36 = new global::Gtk.Image();
+			this.imgG36.WidthRequest = 50;
+			this.imgG36.HeightRequest = 50;
+			this.imgG36.Name = "imgG36";
+			this.tbUI.Add(this.imgG36);
+			global::Gtk.Table.TableChild w431 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG36]));
+			w431.TopAttach = ((uint)(5));
+			w431.BottomAttach = ((uint)(6));
+			w431.LeftAttach = ((uint)(9));
+			w431.RightAttach = ((uint)(10));
+			w431.XOptions = ((global::Gtk.AttachOptions)(4));
+			w431.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG37 = new global::Gtk.Image();
+			this.imgG37.WidthRequest = 50;
+			this.imgG37.HeightRequest = 50;
+			this.imgG37.Name = "imgG37";
+			this.tbUI.Add(this.imgG37);
+			global::Gtk.Table.TableChild w432 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG37]));
+			w432.TopAttach = ((uint)(6));
+			w432.BottomAttach = ((uint)(7));
+			w432.LeftAttach = ((uint)(1));
+			w432.RightAttach = ((uint)(2));
+			w432.XOptions = ((global::Gtk.AttachOptions)(4));
+			w432.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG38 = new global::Gtk.Image();
+			this.imgG38.WidthRequest = 50;
+			this.imgG38.HeightRequest = 50;
+			this.imgG38.Name = "imgG38";
+			this.tbUI.Add(this.imgG38);
+			global::Gtk.Table.TableChild w433 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG38]));
+			w433.TopAttach = ((uint)(6));
+			w433.BottomAttach = ((uint)(7));
+			w433.LeftAttach = ((uint)(2));
+			w433.RightAttach = ((uint)(3));
+			w433.XOptions = ((global::Gtk.AttachOptions)(4));
+			w433.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG39 = new global::Gtk.Image();
+			this.imgG39.WidthRequest = 50;
+			this.imgG39.HeightRequest = 50;
+			this.imgG39.Name = "imgG39";
+			this.tbUI.Add(this.imgG39);
+			global::Gtk.Table.TableChild w434 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG39]));
+			w434.TopAttach = ((uint)(6));
+			w434.BottomAttach = ((uint)(7));
+			w434.LeftAttach = ((uint)(3));
+			w434.RightAttach = ((uint)(4));
+			w434.XOptions = ((global::Gtk.AttachOptions)(4));
+			w434.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG4 = new global::Gtk.Image();
+			this.imgG4.WidthRequest = 50;
+			this.imgG4.HeightRequest = 50;
+			this.imgG4.Name = "imgG4";
+			this.tbUI.Add(this.imgG4);
+			global::Gtk.Table.TableChild w435 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG4]));
+			w435.TopAttach = ((uint)(2));
+			w435.BottomAttach = ((uint)(3));
+			w435.LeftAttach = ((uint)(4));
+			w435.RightAttach = ((uint)(5));
+			w435.XOptions = ((global::Gtk.AttachOptions)(4));
+			w435.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG40 = new global::Gtk.Image();
+			this.imgG40.WidthRequest = 50;
+			this.imgG40.HeightRequest = 50;
+			this.imgG40.Name = "imgG40";
+			this.tbUI.Add(this.imgG40);
+			global::Gtk.Table.TableChild w436 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG40]));
+			w436.TopAttach = ((uint)(6));
+			w436.BottomAttach = ((uint)(7));
+			w436.LeftAttach = ((uint)(4));
+			w436.RightAttach = ((uint)(5));
+			w436.XOptions = ((global::Gtk.AttachOptions)(4));
+			w436.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG41 = new global::Gtk.Image();
+			this.imgG41.WidthRequest = 50;
+			this.imgG41.HeightRequest = 50;
+			this.imgG41.Name = "imgG41";
+			this.tbUI.Add(this.imgG41);
+			global::Gtk.Table.TableChild w437 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG41]));
+			w437.TopAttach = ((uint)(6));
+			w437.BottomAttach = ((uint)(7));
+			w437.LeftAttach = ((uint)(5));
+			w437.RightAttach = ((uint)(6));
+			w437.XOptions = ((global::Gtk.AttachOptions)(4));
+			w437.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG42 = new global::Gtk.Image();
+			this.imgG42.WidthRequest = 50;
+			this.imgG42.HeightRequest = 50;
+			this.imgG42.Name = "imgG42";
+			this.tbUI.Add(this.imgG42);
+			global::Gtk.Table.TableChild w438 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG42]));
+			w438.TopAttach = ((uint)(6));
+			w438.BottomAttach = ((uint)(7));
+			w438.LeftAttach = ((uint)(6));
+			w438.RightAttach = ((uint)(7));
+			w438.XOptions = ((global::Gtk.AttachOptions)(4));
+			w438.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG43 = new global::Gtk.Image();
+			this.imgG43.WidthRequest = 50;
+			this.imgG43.HeightRequest = 50;
+			this.imgG43.Name = "imgG43";
+			this.tbUI.Add(this.imgG43);
+			global::Gtk.Table.TableChild w439 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG43]));
+			w439.TopAttach = ((uint)(6));
+			w439.BottomAttach = ((uint)(7));
+			w439.LeftAttach = ((uint)(7));
+			w439.RightAttach = ((uint)(8));
+			w439.XOptions = ((global::Gtk.AttachOptions)(4));
+			w439.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG44 = new global::Gtk.Image();
+			this.imgG44.WidthRequest = 50;
+			this.imgG44.HeightRequest = 50;
+			this.imgG44.Name = "imgG44";
+			this.tbUI.Add(this.imgG44);
+			global::Gtk.Table.TableChild w440 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG44]));
+			w440.TopAttach = ((uint)(6));
+			w440.BottomAttach = ((uint)(7));
+			w440.LeftAttach = ((uint)(8));
+			w440.RightAttach = ((uint)(9));
+			w440.XOptions = ((global::Gtk.AttachOptions)(4));
+			w440.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG45 = new global::Gtk.Image();
+			this.imgG45.WidthRequest = 50;
+			this.imgG45.HeightRequest = 50;
+			this.imgG45.Name = "imgG45";
+			this.tbUI.Add(this.imgG45);
+			global::Gtk.Table.TableChild w441 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG45]));
+			w441.TopAttach = ((uint)(6));
+			w441.BottomAttach = ((uint)(7));
+			w441.LeftAttach = ((uint)(9));
+			w441.RightAttach = ((uint)(10));
+			w441.XOptions = ((global::Gtk.AttachOptions)(4));
+			w441.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG46 = new global::Gtk.Image();
+			this.imgG46.WidthRequest = 50;
+			this.imgG46.HeightRequest = 50;
+			this.imgG46.Name = "imgG46";
+			this.tbUI.Add(this.imgG46);
+			global::Gtk.Table.TableChild w442 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG46]));
+			w442.TopAttach = ((uint)(7));
+			w442.BottomAttach = ((uint)(8));
+			w442.LeftAttach = ((uint)(1));
+			w442.RightAttach = ((uint)(2));
+			w442.XOptions = ((global::Gtk.AttachOptions)(4));
+			w442.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG47 = new global::Gtk.Image();
+			this.imgG47.WidthRequest = 50;
+			this.imgG47.HeightRequest = 50;
+			this.imgG47.Name = "imgG47";
+			this.tbUI.Add(this.imgG47);
+			global::Gtk.Table.TableChild w443 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG47]));
+			w443.TopAttach = ((uint)(7));
+			w443.BottomAttach = ((uint)(8));
+			w443.LeftAttach = ((uint)(2));
+			w443.RightAttach = ((uint)(3));
+			w443.XOptions = ((global::Gtk.AttachOptions)(4));
+			w443.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG48 = new global::Gtk.Image();
+			this.imgG48.WidthRequest = 50;
+			this.imgG48.HeightRequest = 50;
+			this.imgG48.Name = "imgG48";
+			this.tbUI.Add(this.imgG48);
+			global::Gtk.Table.TableChild w444 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG48]));
+			w444.TopAttach = ((uint)(7));
+			w444.BottomAttach = ((uint)(8));
+			w444.LeftAttach = ((uint)(3));
+			w444.RightAttach = ((uint)(4));
+			w444.XOptions = ((global::Gtk.AttachOptions)(4));
+			w444.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG49 = new global::Gtk.Image();
+			this.imgG49.WidthRequest = 50;
+			this.imgG49.HeightRequest = 50;
+			this.imgG49.Name = "imgG49";
+			this.tbUI.Add(this.imgG49);
+			global::Gtk.Table.TableChild w445 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG49]));
+			w445.TopAttach = ((uint)(7));
+			w445.BottomAttach = ((uint)(8));
+			w445.LeftAttach = ((uint)(4));
+			w445.RightAttach = ((uint)(5));
+			w445.XOptions = ((global::Gtk.AttachOptions)(4));
+			w445.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG5 = new global::Gtk.Image();
+			this.imgG5.WidthRequest = 50;
+			this.imgG5.HeightRequest = 50;
+			this.imgG5.Name = "imgG5";
+			this.tbUI.Add(this.imgG5);
+			global::Gtk.Table.TableChild w446 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG5]));
+			w446.TopAttach = ((uint)(2));
+			w446.BottomAttach = ((uint)(3));
+			w446.LeftAttach = ((uint)(5));
+			w446.RightAttach = ((uint)(6));
+			w446.XOptions = ((global::Gtk.AttachOptions)(4));
+			w446.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG50 = new global::Gtk.Image();
+			this.imgG50.WidthRequest = 50;
+			this.imgG50.HeightRequest = 50;
+			this.imgG50.Name = "imgG50";
+			this.tbUI.Add(this.imgG50);
+			global::Gtk.Table.TableChild w447 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG50]));
+			w447.TopAttach = ((uint)(7));
+			w447.BottomAttach = ((uint)(8));
+			w447.LeftAttach = ((uint)(5));
+			w447.RightAttach = ((uint)(6));
+			w447.XOptions = ((global::Gtk.AttachOptions)(4));
+			w447.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG51 = new global::Gtk.Image();
+			this.imgG51.WidthRequest = 50;
+			this.imgG51.HeightRequest = 50;
+			this.imgG51.Name = "imgG51";
+			this.tbUI.Add(this.imgG51);
+			global::Gtk.Table.TableChild w448 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG51]));
+			w448.TopAttach = ((uint)(7));
+			w448.BottomAttach = ((uint)(8));
+			w448.LeftAttach = ((uint)(6));
+			w448.RightAttach = ((uint)(7));
+			w448.XOptions = ((global::Gtk.AttachOptions)(4));
+			w448.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG52 = new global::Gtk.Image();
+			this.imgG52.WidthRequest = 50;
+			this.imgG52.HeightRequest = 50;
+			this.imgG52.Name = "imgG52";
+			this.tbUI.Add(this.imgG52);
+			global::Gtk.Table.TableChild w449 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG52]));
+			w449.TopAttach = ((uint)(7));
+			w449.BottomAttach = ((uint)(8));
+			w449.LeftAttach = ((uint)(7));
+			w449.RightAttach = ((uint)(8));
+			w449.XOptions = ((global::Gtk.AttachOptions)(4));
+			w449.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG53 = new global::Gtk.Image();
+			this.imgG53.WidthRequest = 50;
+			this.imgG53.HeightRequest = 50;
+			this.imgG53.Name = "imgG53";
+			this.tbUI.Add(this.imgG53);
+			global::Gtk.Table.TableChild w450 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG53]));
+			w450.TopAttach = ((uint)(7));
+			w450.BottomAttach = ((uint)(8));
+			w450.LeftAttach = ((uint)(8));
+			w450.RightAttach = ((uint)(9));
+			w450.XOptions = ((global::Gtk.AttachOptions)(4));
+			w450.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG54 = new global::Gtk.Image();
+			this.imgG54.WidthRequest = 50;
+			this.imgG54.HeightRequest = 50;
+			this.imgG54.Name = "imgG54";
+			this.tbUI.Add(this.imgG54);
+			global::Gtk.Table.TableChild w451 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG54]));
+			w451.TopAttach = ((uint)(7));
+			w451.BottomAttach = ((uint)(8));
+			w451.LeftAttach = ((uint)(9));
+			w451.RightAttach = ((uint)(10));
+			w451.XOptions = ((global::Gtk.AttachOptions)(4));
+			w451.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG55 = new global::Gtk.Image();
+			this.imgG55.WidthRequest = 50;
+			this.imgG55.HeightRequest = 50;
+			this.imgG55.Name = "imgG55";
+			this.tbUI.Add(this.imgG55);
+			global::Gtk.Table.TableChild w452 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG55]));
+			w452.TopAttach = ((uint)(8));
+			w452.BottomAttach = ((uint)(9));
+			w452.LeftAttach = ((uint)(1));
+			w452.RightAttach = ((uint)(2));
+			w452.XOptions = ((global::Gtk.AttachOptions)(4));
+			w452.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG56 = new global::Gtk.Image();
+			this.imgG56.WidthRequest = 50;
+			this.imgG56.HeightRequest = 50;
+			this.imgG56.Name = "imgG56";
+			this.tbUI.Add(this.imgG56);
+			global::Gtk.Table.TableChild w453 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG56]));
+			w453.TopAttach = ((uint)(8));
+			w453.BottomAttach = ((uint)(9));
+			w453.LeftAttach = ((uint)(2));
+			w453.RightAttach = ((uint)(3));
+			w453.XOptions = ((global::Gtk.AttachOptions)(4));
+			w453.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG57 = new global::Gtk.Image();
+			this.imgG57.WidthRequest = 50;
+			this.imgG57.HeightRequest = 50;
+			this.imgG57.Name = "imgG57";
+			this.tbUI.Add(this.imgG57);
+			global::Gtk.Table.TableChild w454 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG57]));
+			w454.TopAttach = ((uint)(8));
+			w454.BottomAttach = ((uint)(9));
+			w454.LeftAttach = ((uint)(3));
+			w454.RightAttach = ((uint)(4));
+			w454.XOptions = ((global::Gtk.AttachOptions)(4));
+			w454.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG58 = new global::Gtk.Image();
+			this.imgG58.WidthRequest = 50;
+			this.imgG58.HeightRequest = 50;
+			this.imgG58.Name = "imgG58";
+			this.tbUI.Add(this.imgG58);
+			global::Gtk.Table.TableChild w455 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG58]));
+			w455.TopAttach = ((uint)(8));
+			w455.BottomAttach = ((uint)(9));
+			w455.LeftAttach = ((uint)(4));
+			w455.RightAttach = ((uint)(5));
+			w455.XOptions = ((global::Gtk.AttachOptions)(4));
+			w455.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG59 = new global::Gtk.Image();
+			this.imgG59.WidthRequest = 50;
+			this.imgG59.HeightRequest = 50;
+			this.imgG59.Name = "imgG59";
+			this.tbUI.Add(this.imgG59);
+			global::Gtk.Table.TableChild w456 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG59]));
+			w456.TopAttach = ((uint)(8));
+			w456.BottomAttach = ((uint)(9));
+			w456.LeftAttach = ((uint)(5));
+			w456.RightAttach = ((uint)(6));
+			w456.XOptions = ((global::Gtk.AttachOptions)(4));
+			w456.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG6 = new global::Gtk.Image();
+			this.imgG6.WidthRequest = 50;
+			this.imgG6.HeightRequest = 50;
+			this.imgG6.Name = "imgG6";
+			this.tbUI.Add(this.imgG6);
+			global::Gtk.Table.TableChild w457 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG6]));
+			w457.TopAttach = ((uint)(2));
+			w457.BottomAttach = ((uint)(3));
+			w457.LeftAttach = ((uint)(6));
+			w457.RightAttach = ((uint)(7));
+			w457.XOptions = ((global::Gtk.AttachOptions)(4));
+			w457.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG60 = new global::Gtk.Image();
+			this.imgG60.WidthRequest = 50;
+			this.imgG60.HeightRequest = 50;
+			this.imgG60.Name = "imgG60";
+			this.tbUI.Add(this.imgG60);
+			global::Gtk.Table.TableChild w458 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG60]));
+			w458.TopAttach = ((uint)(8));
+			w458.BottomAttach = ((uint)(9));
+			w458.LeftAttach = ((uint)(6));
+			w458.RightAttach = ((uint)(7));
+			w458.XOptions = ((global::Gtk.AttachOptions)(4));
+			w458.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG61 = new global::Gtk.Image();
+			this.imgG61.WidthRequest = 50;
+			this.imgG61.HeightRequest = 50;
+			this.imgG61.Name = "imgG61";
+			this.tbUI.Add(this.imgG61);
+			global::Gtk.Table.TableChild w459 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG61]));
+			w459.TopAttach = ((uint)(8));
+			w459.BottomAttach = ((uint)(9));
+			w459.LeftAttach = ((uint)(7));
+			w459.RightAttach = ((uint)(8));
+			w459.XOptions = ((global::Gtk.AttachOptions)(4));
+			w459.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG62 = new global::Gtk.Image();
+			this.imgG62.WidthRequest = 50;
+			this.imgG62.HeightRequest = 50;
+			this.imgG62.Name = "imgG62";
+			this.tbUI.Add(this.imgG62);
+			global::Gtk.Table.TableChild w460 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG62]));
+			w460.TopAttach = ((uint)(8));
+			w460.BottomAttach = ((uint)(9));
+			w460.LeftAttach = ((uint)(8));
+			w460.RightAttach = ((uint)(9));
+			w460.XOptions = ((global::Gtk.AttachOptions)(4));
+			w460.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG63 = new global::Gtk.Image();
+			this.imgG63.WidthRequest = 50;
+			this.imgG63.HeightRequest = 50;
+			this.imgG63.Name = "imgG63";
+			this.tbUI.Add(this.imgG63);
+			global::Gtk.Table.TableChild w461 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG63]));
+			w461.TopAttach = ((uint)(8));
+			w461.BottomAttach = ((uint)(9));
+			w461.LeftAttach = ((uint)(9));
+			w461.RightAttach = ((uint)(10));
+			w461.XOptions = ((global::Gtk.AttachOptions)(4));
+			w461.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG64 = new global::Gtk.Image();
+			this.imgG64.WidthRequest = 50;
+			this.imgG64.HeightRequest = 50;
+			this.imgG64.Name = "imgG64";
+			this.tbUI.Add(this.imgG64);
+			global::Gtk.Table.TableChild w462 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG64]));
+			w462.TopAttach = ((uint)(9));
+			w462.BottomAttach = ((uint)(10));
+			w462.LeftAttach = ((uint)(1));
+			w462.RightAttach = ((uint)(2));
+			w462.XOptions = ((global::Gtk.AttachOptions)(4));
+			w462.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG65 = new global::Gtk.Image();
+			this.imgG65.WidthRequest = 50;
+			this.imgG65.HeightRequest = 50;
+			this.imgG65.Name = "imgG65";
+			this.tbUI.Add(this.imgG65);
+			global::Gtk.Table.TableChild w463 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG65]));
+			w463.TopAttach = ((uint)(9));
+			w463.BottomAttach = ((uint)(10));
+			w463.LeftAttach = ((uint)(2));
+			w463.RightAttach = ((uint)(3));
+			w463.XOptions = ((global::Gtk.AttachOptions)(4));
+			w463.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG66 = new global::Gtk.Image();
+			this.imgG66.WidthRequest = 50;
+			this.imgG66.HeightRequest = 50;
+			this.imgG66.Name = "imgG66";
+			this.tbUI.Add(this.imgG66);
+			global::Gtk.Table.TableChild w464 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG66]));
+			w464.TopAttach = ((uint)(9));
+			w464.BottomAttach = ((uint)(10));
+			w464.LeftAttach = ((uint)(3));
+			w464.RightAttach = ((uint)(4));
+			w464.XOptions = ((global::Gtk.AttachOptions)(4));
+			w464.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG67 = new global::Gtk.Image();
+			this.imgG67.WidthRequest = 50;
+			this.imgG67.HeightRequest = 50;
+			this.imgG67.Name = "imgG67";
+			this.tbUI.Add(this.imgG67);
+			global::Gtk.Table.TableChild w465 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG67]));
+			w465.TopAttach = ((uint)(9));
+			w465.BottomAttach = ((uint)(10));
+			w465.LeftAttach = ((uint)(4));
+			w465.RightAttach = ((uint)(5));
+			w465.XOptions = ((global::Gtk.AttachOptions)(4));
+			w465.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG68 = new global::Gtk.Image();
+			this.imgG68.WidthRequest = 50;
+			this.imgG68.HeightRequest = 50;
+			this.imgG68.Name = "imgG68";
+			this.tbUI.Add(this.imgG68);
+			global::Gtk.Table.TableChild w466 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG68]));
+			w466.TopAttach = ((uint)(9));
+			w466.BottomAttach = ((uint)(10));
+			w466.LeftAttach = ((uint)(5));
+			w466.RightAttach = ((uint)(6));
+			w466.XOptions = ((global::Gtk.AttachOptions)(4));
+			w466.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG69 = new global::Gtk.Image();
+			this.imgG69.WidthRequest = 50;
+			this.imgG69.HeightRequest = 50;
+			this.imgG69.Name = "imgG69";
+			this.tbUI.Add(this.imgG69);
+			global::Gtk.Table.TableChild w467 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG69]));
+			w467.TopAttach = ((uint)(9));
+			w467.BottomAttach = ((uint)(10));
+			w467.LeftAttach = ((uint)(6));
+			w467.RightAttach = ((uint)(7));
+			w467.XOptions = ((global::Gtk.AttachOptions)(4));
+			w467.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG7 = new global::Gtk.Image();
+			this.imgG7.WidthRequest = 50;
+			this.imgG7.HeightRequest = 50;
+			this.imgG7.Name = "imgG7";
+			this.tbUI.Add(this.imgG7);
+			global::Gtk.Table.TableChild w468 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG7]));
+			w468.TopAttach = ((uint)(2));
+			w468.BottomAttach = ((uint)(3));
+			w468.LeftAttach = ((uint)(7));
+			w468.RightAttach = ((uint)(8));
+			w468.XOptions = ((global::Gtk.AttachOptions)(4));
+			w468.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG70 = new global::Gtk.Image();
+			this.imgG70.WidthRequest = 50;
+			this.imgG70.HeightRequest = 50;
+			this.imgG70.Name = "imgG70";
+			this.tbUI.Add(this.imgG70);
+			global::Gtk.Table.TableChild w469 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG70]));
+			w469.TopAttach = ((uint)(9));
+			w469.BottomAttach = ((uint)(10));
+			w469.LeftAttach = ((uint)(7));
+			w469.RightAttach = ((uint)(8));
+			w469.XOptions = ((global::Gtk.AttachOptions)(4));
+			w469.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG71 = new global::Gtk.Image();
+			this.imgG71.WidthRequest = 50;
+			this.imgG71.HeightRequest = 50;
+			this.imgG71.Name = "imgG71";
+			this.tbUI.Add(this.imgG71);
+			global::Gtk.Table.TableChild w470 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG71]));
+			w470.TopAttach = ((uint)(9));
+			w470.BottomAttach = ((uint)(10));
+			w470.LeftAttach = ((uint)(8));
+			w470.RightAttach = ((uint)(9));
+			w470.XOptions = ((global::Gtk.AttachOptions)(4));
+			w470.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG72 = new global::Gtk.Image();
+			this.imgG72.WidthRequest = 50;
+			this.imgG72.HeightRequest = 50;
+			this.imgG72.Name = "imgG72";
+			this.tbUI.Add(this.imgG72);
+			global::Gtk.Table.TableChild w471 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG72]));
+			w471.TopAttach = ((uint)(9));
+			w471.BottomAttach = ((uint)(10));
+			w471.LeftAttach = ((uint)(9));
+			w471.RightAttach = ((uint)(10));
+			w471.XOptions = ((global::Gtk.AttachOptions)(4));
+			w471.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG73 = new global::Gtk.Image();
+			this.imgG73.WidthRequest = 50;
+			this.imgG73.HeightRequest = 50;
+			this.imgG73.Name = "imgG73";
+			this.tbUI.Add(this.imgG73);
+			global::Gtk.Table.TableChild w472 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG73]));
+			w472.TopAttach = ((uint)(10));
+			w472.BottomAttach = ((uint)(11));
+			w472.LeftAttach = ((uint)(1));
+			w472.RightAttach = ((uint)(2));
+			w472.XOptions = ((global::Gtk.AttachOptions)(4));
+			w472.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG74 = new global::Gtk.Image();
+			this.imgG74.WidthRequest = 50;
+			this.imgG74.HeightRequest = 50;
+			this.imgG74.Name = "imgG74";
+			this.tbUI.Add(this.imgG74);
+			global::Gtk.Table.TableChild w473 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG74]));
+			w473.TopAttach = ((uint)(10));
+			w473.BottomAttach = ((uint)(11));
+			w473.LeftAttach = ((uint)(2));
+			w473.RightAttach = ((uint)(3));
+			w473.XOptions = ((global::Gtk.AttachOptions)(4));
+			w473.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG75 = new global::Gtk.Image();
+			this.imgG75.WidthRequest = 50;
+			this.imgG75.HeightRequest = 50;
+			this.imgG75.Name = "imgG75";
+			this.tbUI.Add(this.imgG75);
+			global::Gtk.Table.TableChild w474 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG75]));
+			w474.TopAttach = ((uint)(10));
+			w474.BottomAttach = ((uint)(11));
+			w474.LeftAttach = ((uint)(3));
+			w474.RightAttach = ((uint)(4));
+			w474.XOptions = ((global::Gtk.AttachOptions)(4));
+			w474.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG76 = new global::Gtk.Image();
+			this.imgG76.WidthRequest = 50;
+			this.imgG76.HeightRequest = 50;
+			this.imgG76.Name = "imgG76";
+			this.tbUI.Add(this.imgG76);
+			global::Gtk.Table.TableChild w475 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG76]));
+			w475.TopAttach = ((uint)(10));
+			w475.BottomAttach = ((uint)(11));
+			w475.LeftAttach = ((uint)(4));
+			w475.RightAttach = ((uint)(5));
+			w475.XOptions = ((global::Gtk.AttachOptions)(4));
+			w475.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG77 = new global::Gtk.Image();
+			this.imgG77.WidthRequest = 50;
+			this.imgG77.HeightRequest = 50;
+			this.imgG77.Name = "imgG77";
+			this.tbUI.Add(this.imgG77);
+			global::Gtk.Table.TableChild w476 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG77]));
+			w476.TopAttach = ((uint)(10));
+			w476.BottomAttach = ((uint)(11));
+			w476.LeftAttach = ((uint)(5));
+			w476.RightAttach = ((uint)(6));
+			w476.XOptions = ((global::Gtk.AttachOptions)(4));
+			w476.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG78 = new global::Gtk.Image();
+			this.imgG78.WidthRequest = 50;
+			this.imgG78.HeightRequest = 50;
+			this.imgG78.Name = "imgG78";
+			this.tbUI.Add(this.imgG78);
+			global::Gtk.Table.TableChild w477 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG78]));
+			w477.TopAttach = ((uint)(10));
+			w477.BottomAttach = ((uint)(11));
+			w477.LeftAttach = ((uint)(6));
+			w477.RightAttach = ((uint)(7));
+			w477.XOptions = ((global::Gtk.AttachOptions)(4));
+			w477.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG79 = new global::Gtk.Image();
+			this.imgG79.WidthRequest = 50;
+			this.imgG79.HeightRequest = 50;
+			this.imgG79.Name = "imgG79";
+			this.tbUI.Add(this.imgG79);
+			global::Gtk.Table.TableChild w478 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG79]));
+			w478.TopAttach = ((uint)(10));
+			w478.BottomAttach = ((uint)(11));
+			w478.LeftAttach = ((uint)(7));
+			w478.RightAttach = ((uint)(8));
+			w478.XOptions = ((global::Gtk.AttachOptions)(4));
+			w478.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG8 = new global::Gtk.Image();
+			this.imgG8.WidthRequest = 50;
+			this.imgG8.HeightRequest = 50;
+			this.imgG8.Name = "imgG8";
+			this.tbUI.Add(this.imgG8);
+			global::Gtk.Table.TableChild w479 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG8]));
+			w479.TopAttach = ((uint)(2));
+			w479.BottomAttach = ((uint)(3));
+			w479.LeftAttach = ((uint)(8));
+			w479.RightAttach = ((uint)(9));
+			w479.XOptions = ((global::Gtk.AttachOptions)(4));
+			w479.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG80 = new global::Gtk.Image();
+			this.imgG80.WidthRequest = 50;
+			this.imgG80.HeightRequest = 50;
+			this.imgG80.Name = "imgG80";
+			this.tbUI.Add(this.imgG80);
+			global::Gtk.Table.TableChild w480 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG80]));
+			w480.TopAttach = ((uint)(10));
+			w480.BottomAttach = ((uint)(11));
+			w480.LeftAttach = ((uint)(8));
+			w480.RightAttach = ((uint)(9));
+			w480.XOptions = ((global::Gtk.AttachOptions)(4));
+			w480.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG81 = new global::Gtk.Image();
+			this.imgG81.WidthRequest = 50;
+			this.imgG81.HeightRequest = 50;
+			this.imgG81.Name = "imgG81";
+			this.tbUI.Add(this.imgG81);
+			global::Gtk.Table.TableChild w481 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG81]));
+			w481.TopAttach = ((uint)(10));
+			w481.BottomAttach = ((uint)(11));
+			w481.LeftAttach = ((uint)(9));
+			w481.RightAttach = ((uint)(10));
+			w481.XOptions = ((global::Gtk.AttachOptions)(4));
+			w481.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgG9 = new global::Gtk.Image();
+			this.imgG9.WidthRequest = 50;
+			this.imgG9.HeightRequest = 50;
+			this.imgG9.Name = "imgG9";
+			this.tbUI.Add(this.imgG9);
+			global::Gtk.Table.TableChild w482 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgG9]));
+			w482.TopAttach = ((uint)(2));
+			w482.BottomAttach = ((uint)(3));
+			w482.LeftAttach = ((uint)(9));
+			w482.RightAttach = ((uint)(10));
+			w482.XOptions = ((global::Gtk.AttachOptions)(4));
+			w482.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI1 = new global::Gtk.Image();
+			this.imgI1.WidthRequest = 50;
+			this.imgI1.HeightRequest = 50;
+			this.imgI1.Name = "imgI1";
+			this.tbUI.Add(this.imgI1);
+			global::Gtk.Table.TableChild w483 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI1]));
+			w483.TopAttach = ((uint)(14));
+			w483.BottomAttach = ((uint)(15));
+			w483.LeftAttach = ((uint)(1));
+			w483.RightAttach = ((uint)(2));
+			w483.XOptions = ((global::Gtk.AttachOptions)(4));
+			w483.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI10 = new global::Gtk.Image();
+			this.imgI10.WidthRequest = 50;
+			this.imgI10.HeightRequest = 50;
+			this.imgI10.Name = "imgI10";
+			this.tbUI.Add(this.imgI10);
+			global::Gtk.Table.TableChild w484 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI10]));
+			w484.TopAttach = ((uint)(15));
+			w484.BottomAttach = ((uint)(16));
+			w484.LeftAttach = ((uint)(1));
+			w484.RightAttach = ((uint)(2));
+			w484.XOptions = ((global::Gtk.AttachOptions)(4));
+			w484.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI11 = new global::Gtk.Image();
+			this.imgI11.WidthRequest = 50;
+			this.imgI11.HeightRequest = 50;
+			this.imgI11.Name = "imgI11";
+			this.tbUI.Add(this.imgI11);
+			global::Gtk.Table.TableChild w485 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI11]));
+			w485.TopAttach = ((uint)(15));
+			w485.BottomAttach = ((uint)(16));
+			w485.LeftAttach = ((uint)(2));
+			w485.RightAttach = ((uint)(3));
+			w485.XOptions = ((global::Gtk.AttachOptions)(4));
+			w485.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI12 = new global::Gtk.Image();
+			this.imgI12.WidthRequest = 50;
+			this.imgI12.HeightRequest = 50;
+			this.imgI12.Name = "imgI12";
+			this.tbUI.Add(this.imgI12);
+			global::Gtk.Table.TableChild w486 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI12]));
+			w486.TopAttach = ((uint)(15));
+			w486.BottomAttach = ((uint)(16));
+			w486.LeftAttach = ((uint)(3));
+			w486.RightAttach = ((uint)(4));
+			w486.XOptions = ((global::Gtk.AttachOptions)(4));
+			w486.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI13 = new global::Gtk.Image();
+			this.imgI13.WidthRequest = 50;
+			this.imgI13.HeightRequest = 50;
+			this.imgI13.Name = "imgI13";
+			this.tbUI.Add(this.imgI13);
+			global::Gtk.Table.TableChild w487 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI13]));
+			w487.TopAttach = ((uint)(15));
+			w487.BottomAttach = ((uint)(16));
+			w487.LeftAttach = ((uint)(4));
+			w487.RightAttach = ((uint)(5));
+			w487.XOptions = ((global::Gtk.AttachOptions)(4));
+			w487.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI14 = new global::Gtk.Image();
+			this.imgI14.WidthRequest = 50;
+			this.imgI14.HeightRequest = 50;
+			this.imgI14.Name = "imgI14";
+			this.tbUI.Add(this.imgI14);
+			global::Gtk.Table.TableChild w488 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI14]));
+			w488.TopAttach = ((uint)(15));
+			w488.BottomAttach = ((uint)(16));
+			w488.LeftAttach = ((uint)(5));
+			w488.RightAttach = ((uint)(6));
+			w488.XOptions = ((global::Gtk.AttachOptions)(4));
+			w488.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI15 = new global::Gtk.Image();
+			this.imgI15.WidthRequest = 50;
+			this.imgI15.HeightRequest = 50;
+			this.imgI15.Name = "imgI15";
+			this.tbUI.Add(this.imgI15);
+			global::Gtk.Table.TableChild w489 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI15]));
+			w489.TopAttach = ((uint)(15));
+			w489.BottomAttach = ((uint)(16));
+			w489.LeftAttach = ((uint)(6));
+			w489.RightAttach = ((uint)(7));
+			w489.XOptions = ((global::Gtk.AttachOptions)(4));
+			w489.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI16 = new global::Gtk.Image();
+			this.imgI16.WidthRequest = 50;
+			this.imgI16.HeightRequest = 50;
+			this.imgI16.Name = "imgI16";
+			this.tbUI.Add(this.imgI16);
+			global::Gtk.Table.TableChild w490 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI16]));
+			w490.TopAttach = ((uint)(15));
+			w490.BottomAttach = ((uint)(16));
+			w490.LeftAttach = ((uint)(7));
+			w490.RightAttach = ((uint)(8));
+			w490.XOptions = ((global::Gtk.AttachOptions)(4));
+			w490.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI17 = new global::Gtk.Image();
+			this.imgI17.WidthRequest = 50;
+			this.imgI17.HeightRequest = 50;
+			this.imgI17.Name = "imgI17";
+			this.tbUI.Add(this.imgI17);
+			global::Gtk.Table.TableChild w491 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI17]));
+			w491.TopAttach = ((uint)(15));
+			w491.BottomAttach = ((uint)(16));
+			w491.LeftAttach = ((uint)(8));
+			w491.RightAttach = ((uint)(9));
+			w491.XOptions = ((global::Gtk.AttachOptions)(4));
+			w491.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI18 = new global::Gtk.Image();
+			this.imgI18.WidthRequest = 50;
+			this.imgI18.HeightRequest = 50;
+			this.imgI18.Name = "imgI18";
+			this.tbUI.Add(this.imgI18);
+			global::Gtk.Table.TableChild w492 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI18]));
+			w492.TopAttach = ((uint)(15));
+			w492.BottomAttach = ((uint)(16));
+			w492.LeftAttach = ((uint)(9));
+			w492.RightAttach = ((uint)(10));
+			w492.XOptions = ((global::Gtk.AttachOptions)(4));
+			w492.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI19 = new global::Gtk.Image();
+			this.imgI19.WidthRequest = 50;
+			this.imgI19.HeightRequest = 50;
+			this.imgI19.Name = "imgI19";
+			this.tbUI.Add(this.imgI19);
+			global::Gtk.Table.TableChild w493 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI19]));
+			w493.TopAttach = ((uint)(16));
+			w493.BottomAttach = ((uint)(17));
+			w493.LeftAttach = ((uint)(1));
+			w493.RightAttach = ((uint)(2));
+			w493.XOptions = ((global::Gtk.AttachOptions)(4));
+			w493.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI2 = new global::Gtk.Image();
+			this.imgI2.WidthRequest = 50;
+			this.imgI2.HeightRequest = 50;
+			this.imgI2.Name = "imgI2";
+			this.tbUI.Add(this.imgI2);
+			global::Gtk.Table.TableChild w494 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI2]));
+			w494.TopAttach = ((uint)(14));
+			w494.BottomAttach = ((uint)(15));
+			w494.LeftAttach = ((uint)(2));
+			w494.RightAttach = ((uint)(3));
+			w494.XOptions = ((global::Gtk.AttachOptions)(4));
+			w494.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI20 = new global::Gtk.Image();
+			this.imgI20.WidthRequest = 50;
+			this.imgI20.HeightRequest = 50;
+			this.imgI20.Name = "imgI20";
+			this.tbUI.Add(this.imgI20);
+			global::Gtk.Table.TableChild w495 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI20]));
+			w495.TopAttach = ((uint)(16));
+			w495.BottomAttach = ((uint)(17));
+			w495.LeftAttach = ((uint)(2));
+			w495.RightAttach = ((uint)(3));
+			w495.XOptions = ((global::Gtk.AttachOptions)(4));
+			w495.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI21 = new global::Gtk.Image();
+			this.imgI21.WidthRequest = 50;
+			this.imgI21.HeightRequest = 50;
+			this.imgI21.Name = "imgI21";
+			this.tbUI.Add(this.imgI21);
+			global::Gtk.Table.TableChild w496 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI21]));
+			w496.TopAttach = ((uint)(16));
+			w496.BottomAttach = ((uint)(17));
+			w496.LeftAttach = ((uint)(3));
+			w496.RightAttach = ((uint)(4));
+			w496.XOptions = ((global::Gtk.AttachOptions)(4));
+			w496.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI22 = new global::Gtk.Image();
+			this.imgI22.WidthRequest = 50;
+			this.imgI22.HeightRequest = 50;
+			this.imgI22.Name = "imgI22";
+			this.tbUI.Add(this.imgI22);
+			global::Gtk.Table.TableChild w497 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI22]));
+			w497.TopAttach = ((uint)(16));
+			w497.BottomAttach = ((uint)(17));
+			w497.LeftAttach = ((uint)(4));
+			w497.RightAttach = ((uint)(5));
+			w497.XOptions = ((global::Gtk.AttachOptions)(4));
+			w497.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI23 = new global::Gtk.Image();
+			this.imgI23.WidthRequest = 50;
+			this.imgI23.HeightRequest = 50;
+			this.imgI23.Name = "imgI23";
+			this.tbUI.Add(this.imgI23);
+			global::Gtk.Table.TableChild w498 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI23]));
+			w498.TopAttach = ((uint)(16));
+			w498.BottomAttach = ((uint)(17));
+			w498.LeftAttach = ((uint)(5));
+			w498.RightAttach = ((uint)(6));
+			w498.XOptions = ((global::Gtk.AttachOptions)(4));
+			w498.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI24 = new global::Gtk.Image();
+			this.imgI24.WidthRequest = 50;
+			this.imgI24.HeightRequest = 50;
+			this.imgI24.Name = "imgI24";
+			this.tbUI.Add(this.imgI24);
+			global::Gtk.Table.TableChild w499 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI24]));
+			w499.TopAttach = ((uint)(16));
+			w499.BottomAttach = ((uint)(17));
+			w499.LeftAttach = ((uint)(6));
+			w499.RightAttach = ((uint)(7));
+			w499.XOptions = ((global::Gtk.AttachOptions)(4));
+			w499.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI25 = new global::Gtk.Image();
+			this.imgI25.WidthRequest = 50;
+			this.imgI25.HeightRequest = 50;
+			this.imgI25.Name = "imgI25";
+			this.tbUI.Add(this.imgI25);
+			global::Gtk.Table.TableChild w500 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI25]));
+			w500.TopAttach = ((uint)(16));
+			w500.BottomAttach = ((uint)(17));
+			w500.LeftAttach = ((uint)(7));
+			w500.RightAttach = ((uint)(8));
+			w500.XOptions = ((global::Gtk.AttachOptions)(4));
+			w500.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI26 = new global::Gtk.Image();
+			this.imgI26.WidthRequest = 50;
+			this.imgI26.HeightRequest = 50;
+			this.imgI26.Name = "imgI26";
+			this.tbUI.Add(this.imgI26);
+			global::Gtk.Table.TableChild w501 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI26]));
+			w501.TopAttach = ((uint)(16));
+			w501.BottomAttach = ((uint)(17));
+			w501.LeftAttach = ((uint)(8));
+			w501.RightAttach = ((uint)(9));
+			w501.XOptions = ((global::Gtk.AttachOptions)(4));
+			w501.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI27 = new global::Gtk.Image();
+			this.imgI27.WidthRequest = 50;
+			this.imgI27.HeightRequest = 50;
+			this.imgI27.Name = "imgI27";
+			this.tbUI.Add(this.imgI27);
+			global::Gtk.Table.TableChild w502 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI27]));
+			w502.TopAttach = ((uint)(16));
+			w502.BottomAttach = ((uint)(17));
+			w502.LeftAttach = ((uint)(9));
+			w502.RightAttach = ((uint)(10));
+			w502.XOptions = ((global::Gtk.AttachOptions)(4));
+			w502.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI28 = new global::Gtk.Image();
+			this.imgI28.WidthRequest = 50;
+			this.imgI28.HeightRequest = 50;
+			this.imgI28.Name = "imgI28";
+			this.tbUI.Add(this.imgI28);
+			global::Gtk.Table.TableChild w503 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI28]));
+			w503.TopAttach = ((uint)(17));
+			w503.BottomAttach = ((uint)(18));
+			w503.LeftAttach = ((uint)(1));
+			w503.RightAttach = ((uint)(2));
+			w503.XOptions = ((global::Gtk.AttachOptions)(4));
+			w503.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI29 = new global::Gtk.Image();
+			this.imgI29.WidthRequest = 50;
+			this.imgI29.HeightRequest = 50;
+			this.imgI29.Name = "imgI29";
+			this.tbUI.Add(this.imgI29);
+			global::Gtk.Table.TableChild w504 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI29]));
+			w504.TopAttach = ((uint)(17));
+			w504.BottomAttach = ((uint)(18));
+			w504.LeftAttach = ((uint)(2));
+			w504.RightAttach = ((uint)(3));
+			w504.XOptions = ((global::Gtk.AttachOptions)(4));
+			w504.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI3 = new global::Gtk.Image();
+			this.imgI3.WidthRequest = 50;
+			this.imgI3.HeightRequest = 50;
+			this.imgI3.Name = "imgI3";
+			this.tbUI.Add(this.imgI3);
+			global::Gtk.Table.TableChild w505 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI3]));
+			w505.TopAttach = ((uint)(14));
+			w505.BottomAttach = ((uint)(15));
+			w505.LeftAttach = ((uint)(3));
+			w505.RightAttach = ((uint)(4));
+			w505.XOptions = ((global::Gtk.AttachOptions)(4));
+			w505.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI30 = new global::Gtk.Image();
+			this.imgI30.WidthRequest = 50;
+			this.imgI30.HeightRequest = 50;
+			this.imgI30.Name = "imgI30";
+			this.tbUI.Add(this.imgI30);
+			global::Gtk.Table.TableChild w506 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI30]));
+			w506.TopAttach = ((uint)(17));
+			w506.BottomAttach = ((uint)(18));
+			w506.LeftAttach = ((uint)(3));
+			w506.RightAttach = ((uint)(4));
+			w506.XOptions = ((global::Gtk.AttachOptions)(4));
+			w506.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI31 = new global::Gtk.Image();
+			this.imgI31.WidthRequest = 50;
+			this.imgI31.HeightRequest = 50;
+			this.imgI31.Name = "imgI31";
+			this.tbUI.Add(this.imgI31);
+			global::Gtk.Table.TableChild w507 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI31]));
+			w507.TopAttach = ((uint)(17));
+			w507.BottomAttach = ((uint)(18));
+			w507.LeftAttach = ((uint)(4));
+			w507.RightAttach = ((uint)(5));
+			w507.XOptions = ((global::Gtk.AttachOptions)(4));
+			w507.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI32 = new global::Gtk.Image();
+			this.imgI32.WidthRequest = 50;
+			this.imgI32.HeightRequest = 50;
+			this.imgI32.Name = "imgI32";
+			this.tbUI.Add(this.imgI32);
+			global::Gtk.Table.TableChild w508 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI32]));
+			w508.TopAttach = ((uint)(17));
+			w508.BottomAttach = ((uint)(18));
+			w508.LeftAttach = ((uint)(5));
+			w508.RightAttach = ((uint)(6));
+			w508.XOptions = ((global::Gtk.AttachOptions)(4));
+			w508.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI33 = new global::Gtk.Image();
+			this.imgI33.WidthRequest = 50;
+			this.imgI33.HeightRequest = 50;
+			this.imgI33.Name = "imgI33";
+			this.tbUI.Add(this.imgI33);
+			global::Gtk.Table.TableChild w509 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI33]));
+			w509.TopAttach = ((uint)(17));
+			w509.BottomAttach = ((uint)(18));
+			w509.LeftAttach = ((uint)(6));
+			w509.RightAttach = ((uint)(7));
+			w509.XOptions = ((global::Gtk.AttachOptions)(4));
+			w509.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI34 = new global::Gtk.Image();
+			this.imgI34.WidthRequest = 50;
+			this.imgI34.HeightRequest = 50;
+			this.imgI34.Name = "imgI34";
+			this.tbUI.Add(this.imgI34);
+			global::Gtk.Table.TableChild w510 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI34]));
+			w510.TopAttach = ((uint)(17));
+			w510.BottomAttach = ((uint)(18));
+			w510.LeftAttach = ((uint)(7));
+			w510.RightAttach = ((uint)(8));
+			w510.XOptions = ((global::Gtk.AttachOptions)(4));
+			w510.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI35 = new global::Gtk.Image();
+			this.imgI35.WidthRequest = 50;
+			this.imgI35.HeightRequest = 50;
+			this.imgI35.Name = "imgI35";
+			this.tbUI.Add(this.imgI35);
+			global::Gtk.Table.TableChild w511 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI35]));
+			w511.TopAttach = ((uint)(17));
+			w511.BottomAttach = ((uint)(18));
+			w511.LeftAttach = ((uint)(8));
+			w511.RightAttach = ((uint)(9));
+			w511.XOptions = ((global::Gtk.AttachOptions)(4));
+			w511.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI36 = new global::Gtk.Image();
+			this.imgI36.WidthRequest = 50;
+			this.imgI36.HeightRequest = 50;
+			this.imgI36.Name = "imgI36";
+			this.tbUI.Add(this.imgI36);
+			global::Gtk.Table.TableChild w512 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI36]));
+			w512.TopAttach = ((uint)(17));
+			w512.BottomAttach = ((uint)(18));
+			w512.LeftAttach = ((uint)(9));
+			w512.RightAttach = ((uint)(10));
+			w512.XOptions = ((global::Gtk.AttachOptions)(4));
+			w512.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI37 = new global::Gtk.Image();
+			this.imgI37.WidthRequest = 50;
+			this.imgI37.HeightRequest = 50;
+			this.imgI37.Name = "imgI37";
+			this.tbUI.Add(this.imgI37);
+			global::Gtk.Table.TableChild w513 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI37]));
+			w513.TopAttach = ((uint)(18));
+			w513.BottomAttach = ((uint)(19));
+			w513.LeftAttach = ((uint)(1));
+			w513.RightAttach = ((uint)(2));
+			w513.XOptions = ((global::Gtk.AttachOptions)(4));
+			w513.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI38 = new global::Gtk.Image();
+			this.imgI38.WidthRequest = 50;
+			this.imgI38.HeightRequest = 50;
+			this.imgI38.Name = "imgI38";
+			this.tbUI.Add(this.imgI38);
+			global::Gtk.Table.TableChild w514 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI38]));
+			w514.TopAttach = ((uint)(18));
+			w514.BottomAttach = ((uint)(19));
+			w514.LeftAttach = ((uint)(2));
+			w514.RightAttach = ((uint)(3));
+			w514.XOptions = ((global::Gtk.AttachOptions)(4));
+			w514.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI39 = new global::Gtk.Image();
+			this.imgI39.WidthRequest = 50;
+			this.imgI39.HeightRequest = 50;
+			this.imgI39.Name = "imgI39";
+			this.tbUI.Add(this.imgI39);
+			global::Gtk.Table.TableChild w515 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI39]));
+			w515.TopAttach = ((uint)(18));
+			w515.BottomAttach = ((uint)(19));
+			w515.LeftAttach = ((uint)(3));
+			w515.RightAttach = ((uint)(4));
+			w515.XOptions = ((global::Gtk.AttachOptions)(4));
+			w515.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI4 = new global::Gtk.Image();
+			this.imgI4.WidthRequest = 50;
+			this.imgI4.HeightRequest = 50;
+			this.imgI4.Name = "imgI4";
+			this.tbUI.Add(this.imgI4);
+			global::Gtk.Table.TableChild w516 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI4]));
+			w516.TopAttach = ((uint)(14));
+			w516.BottomAttach = ((uint)(15));
+			w516.LeftAttach = ((uint)(4));
+			w516.RightAttach = ((uint)(5));
+			w516.XOptions = ((global::Gtk.AttachOptions)(4));
+			w516.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI40 = new global::Gtk.Image();
+			this.imgI40.WidthRequest = 50;
+			this.imgI40.HeightRequest = 50;
+			this.imgI40.Name = "imgI40";
+			this.tbUI.Add(this.imgI40);
+			global::Gtk.Table.TableChild w517 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI40]));
+			w517.TopAttach = ((uint)(18));
+			w517.BottomAttach = ((uint)(19));
+			w517.LeftAttach = ((uint)(4));
+			w517.RightAttach = ((uint)(5));
+			w517.XOptions = ((global::Gtk.AttachOptions)(4));
+			w517.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI41 = new global::Gtk.Image();
+			this.imgI41.WidthRequest = 50;
+			this.imgI41.HeightRequest = 50;
+			this.imgI41.Name = "imgI41";
+			this.tbUI.Add(this.imgI41);
+			global::Gtk.Table.TableChild w518 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI41]));
+			w518.TopAttach = ((uint)(18));
+			w518.BottomAttach = ((uint)(19));
+			w518.LeftAttach = ((uint)(5));
+			w518.RightAttach = ((uint)(6));
+			w518.XOptions = ((global::Gtk.AttachOptions)(4));
+			w518.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI42 = new global::Gtk.Image();
+			this.imgI42.WidthRequest = 50;
+			this.imgI42.HeightRequest = 50;
+			this.imgI42.Name = "imgI42";
+			this.tbUI.Add(this.imgI42);
+			global::Gtk.Table.TableChild w519 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI42]));
+			w519.TopAttach = ((uint)(18));
+			w519.BottomAttach = ((uint)(19));
+			w519.LeftAttach = ((uint)(6));
+			w519.RightAttach = ((uint)(7));
+			w519.XOptions = ((global::Gtk.AttachOptions)(4));
+			w519.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI43 = new global::Gtk.Image();
+			this.imgI43.WidthRequest = 50;
+			this.imgI43.HeightRequest = 50;
+			this.imgI43.Name = "imgI43";
+			this.tbUI.Add(this.imgI43);
+			global::Gtk.Table.TableChild w520 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI43]));
+			w520.TopAttach = ((uint)(18));
+			w520.BottomAttach = ((uint)(19));
+			w520.LeftAttach = ((uint)(7));
+			w520.RightAttach = ((uint)(8));
+			w520.XOptions = ((global::Gtk.AttachOptions)(4));
+			w520.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI44 = new global::Gtk.Image();
+			this.imgI44.WidthRequest = 50;
+			this.imgI44.HeightRequest = 50;
+			this.imgI44.Name = "imgI44";
+			this.tbUI.Add(this.imgI44);
+			global::Gtk.Table.TableChild w521 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI44]));
+			w521.TopAttach = ((uint)(18));
+			w521.BottomAttach = ((uint)(19));
+			w521.LeftAttach = ((uint)(8));
+			w521.RightAttach = ((uint)(9));
+			w521.XOptions = ((global::Gtk.AttachOptions)(4));
+			w521.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI45 = new global::Gtk.Image();
+			this.imgI45.WidthRequest = 50;
+			this.imgI45.HeightRequest = 50;
+			this.imgI45.Name = "imgI45";
+			this.tbUI.Add(this.imgI45);
+			global::Gtk.Table.TableChild w522 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI45]));
+			w522.TopAttach = ((uint)(18));
+			w522.BottomAttach = ((uint)(19));
+			w522.LeftAttach = ((uint)(9));
+			w522.RightAttach = ((uint)(10));
+			w522.XOptions = ((global::Gtk.AttachOptions)(4));
+			w522.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI46 = new global::Gtk.Image();
+			this.imgI46.WidthRequest = 50;
+			this.imgI46.HeightRequest = 50;
+			this.imgI46.Name = "imgI46";
+			this.tbUI.Add(this.imgI46);
+			global::Gtk.Table.TableChild w523 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI46]));
+			w523.TopAttach = ((uint)(19));
+			w523.BottomAttach = ((uint)(20));
+			w523.LeftAttach = ((uint)(1));
+			w523.RightAttach = ((uint)(2));
+			w523.XOptions = ((global::Gtk.AttachOptions)(4));
+			w523.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI47 = new global::Gtk.Image();
+			this.imgI47.WidthRequest = 50;
+			this.imgI47.HeightRequest = 50;
+			this.imgI47.Name = "imgI47";
+			this.tbUI.Add(this.imgI47);
+			global::Gtk.Table.TableChild w524 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI47]));
+			w524.TopAttach = ((uint)(19));
+			w524.BottomAttach = ((uint)(20));
+			w524.LeftAttach = ((uint)(2));
+			w524.RightAttach = ((uint)(3));
+			w524.XOptions = ((global::Gtk.AttachOptions)(4));
+			w524.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI48 = new global::Gtk.Image();
+			this.imgI48.WidthRequest = 50;
+			this.imgI48.HeightRequest = 50;
+			this.imgI48.Name = "imgI48";
+			this.tbUI.Add(this.imgI48);
+			global::Gtk.Table.TableChild w525 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI48]));
+			w525.TopAttach = ((uint)(19));
+			w525.BottomAttach = ((uint)(20));
+			w525.LeftAttach = ((uint)(3));
+			w525.RightAttach = ((uint)(4));
+			w525.XOptions = ((global::Gtk.AttachOptions)(4));
+			w525.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI49 = new global::Gtk.Image();
+			this.imgI49.WidthRequest = 50;
+			this.imgI49.HeightRequest = 50;
+			this.imgI49.Name = "imgI49";
+			this.tbUI.Add(this.imgI49);
+			global::Gtk.Table.TableChild w526 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI49]));
+			w526.TopAttach = ((uint)(19));
+			w526.BottomAttach = ((uint)(20));
+			w526.LeftAttach = ((uint)(4));
+			w526.RightAttach = ((uint)(5));
+			w526.XOptions = ((global::Gtk.AttachOptions)(4));
+			w526.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI5 = new global::Gtk.Image();
+			this.imgI5.WidthRequest = 50;
+			this.imgI5.HeightRequest = 50;
+			this.imgI5.Name = "imgI5";
+			this.tbUI.Add(this.imgI5);
+			global::Gtk.Table.TableChild w527 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI5]));
+			w527.TopAttach = ((uint)(14));
+			w527.BottomAttach = ((uint)(15));
+			w527.LeftAttach = ((uint)(5));
+			w527.RightAttach = ((uint)(6));
+			w527.XOptions = ((global::Gtk.AttachOptions)(4));
+			w527.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI50 = new global::Gtk.Image();
+			this.imgI50.WidthRequest = 50;
+			this.imgI50.HeightRequest = 50;
+			this.imgI50.Name = "imgI50";
+			this.tbUI.Add(this.imgI50);
+			global::Gtk.Table.TableChild w528 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI50]));
+			w528.TopAttach = ((uint)(19));
+			w528.BottomAttach = ((uint)(20));
+			w528.LeftAttach = ((uint)(5));
+			w528.RightAttach = ((uint)(6));
+			w528.XOptions = ((global::Gtk.AttachOptions)(4));
+			w528.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI51 = new global::Gtk.Image();
+			this.imgI51.WidthRequest = 50;
+			this.imgI51.HeightRequest = 50;
+			this.imgI51.Name = "imgI51";
+			this.tbUI.Add(this.imgI51);
+			global::Gtk.Table.TableChild w529 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI51]));
+			w529.TopAttach = ((uint)(19));
+			w529.BottomAttach = ((uint)(20));
+			w529.LeftAttach = ((uint)(6));
+			w529.RightAttach = ((uint)(7));
+			w529.XOptions = ((global::Gtk.AttachOptions)(4));
+			w529.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI52 = new global::Gtk.Image();
+			this.imgI52.WidthRequest = 50;
+			this.imgI52.HeightRequest = 50;
+			this.imgI52.Name = "imgI52";
+			this.tbUI.Add(this.imgI52);
+			global::Gtk.Table.TableChild w530 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI52]));
+			w530.TopAttach = ((uint)(19));
+			w530.BottomAttach = ((uint)(20));
+			w530.LeftAttach = ((uint)(7));
+			w530.RightAttach = ((uint)(8));
+			w530.XOptions = ((global::Gtk.AttachOptions)(4));
+			w530.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI53 = new global::Gtk.Image();
+			this.imgI53.WidthRequest = 50;
+			this.imgI53.HeightRequest = 50;
+			this.imgI53.Name = "imgI53";
+			this.tbUI.Add(this.imgI53);
+			global::Gtk.Table.TableChild w531 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI53]));
+			w531.TopAttach = ((uint)(19));
+			w531.BottomAttach = ((uint)(20));
+			w531.LeftAttach = ((uint)(8));
+			w531.RightAttach = ((uint)(9));
+			w531.XOptions = ((global::Gtk.AttachOptions)(4));
+			w531.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI54 = new global::Gtk.Image();
+			this.imgI54.WidthRequest = 50;
+			this.imgI54.HeightRequest = 50;
+			this.imgI54.Name = "imgI54";
+			this.tbUI.Add(this.imgI54);
+			global::Gtk.Table.TableChild w532 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI54]));
+			w532.TopAttach = ((uint)(19));
+			w532.BottomAttach = ((uint)(20));
+			w532.LeftAttach = ((uint)(9));
+			w532.RightAttach = ((uint)(10));
+			w532.XOptions = ((global::Gtk.AttachOptions)(4));
+			w532.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI55 = new global::Gtk.Image();
+			this.imgI55.WidthRequest = 50;
+			this.imgI55.HeightRequest = 50;
+			this.imgI55.Name = "imgI55";
+			this.tbUI.Add(this.imgI55);
+			global::Gtk.Table.TableChild w533 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI55]));
+			w533.TopAttach = ((uint)(20));
+			w533.BottomAttach = ((uint)(21));
+			w533.LeftAttach = ((uint)(1));
+			w533.RightAttach = ((uint)(2));
+			w533.XOptions = ((global::Gtk.AttachOptions)(4));
+			w533.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI56 = new global::Gtk.Image();
+			this.imgI56.WidthRequest = 50;
+			this.imgI56.HeightRequest = 50;
+			this.imgI56.Name = "imgI56";
+			this.tbUI.Add(this.imgI56);
+			global::Gtk.Table.TableChild w534 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI56]));
+			w534.TopAttach = ((uint)(20));
+			w534.BottomAttach = ((uint)(21));
+			w534.LeftAttach = ((uint)(2));
+			w534.RightAttach = ((uint)(3));
+			w534.XOptions = ((global::Gtk.AttachOptions)(4));
+			w534.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI57 = new global::Gtk.Image();
+			this.imgI57.WidthRequest = 50;
+			this.imgI57.HeightRequest = 50;
+			this.imgI57.Name = "imgI57";
+			this.tbUI.Add(this.imgI57);
+			global::Gtk.Table.TableChild w535 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI57]));
+			w535.TopAttach = ((uint)(20));
+			w535.BottomAttach = ((uint)(21));
+			w535.LeftAttach = ((uint)(3));
+			w535.RightAttach = ((uint)(4));
+			w535.XOptions = ((global::Gtk.AttachOptions)(4));
+			w535.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI58 = new global::Gtk.Image();
+			this.imgI58.WidthRequest = 50;
+			this.imgI58.HeightRequest = 50;
+			this.imgI58.Name = "imgI58";
+			this.tbUI.Add(this.imgI58);
+			global::Gtk.Table.TableChild w536 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI58]));
+			w536.TopAttach = ((uint)(20));
+			w536.BottomAttach = ((uint)(21));
+			w536.LeftAttach = ((uint)(4));
+			w536.RightAttach = ((uint)(5));
+			w536.XOptions = ((global::Gtk.AttachOptions)(4));
+			w536.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI59 = new global::Gtk.Image();
+			this.imgI59.WidthRequest = 50;
+			this.imgI59.HeightRequest = 50;
+			this.imgI59.Name = "imgI59";
+			this.tbUI.Add(this.imgI59);
+			global::Gtk.Table.TableChild w537 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI59]));
+			w537.TopAttach = ((uint)(20));
+			w537.BottomAttach = ((uint)(21));
+			w537.LeftAttach = ((uint)(5));
+			w537.RightAttach = ((uint)(6));
+			w537.XOptions = ((global::Gtk.AttachOptions)(4));
+			w537.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI6 = new global::Gtk.Image();
+			this.imgI6.WidthRequest = 50;
+			this.imgI6.HeightRequest = 50;
+			this.imgI6.Name = "imgI6";
+			this.tbUI.Add(this.imgI6);
+			global::Gtk.Table.TableChild w538 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI6]));
+			w538.TopAttach = ((uint)(14));
+			w538.BottomAttach = ((uint)(15));
+			w538.LeftAttach = ((uint)(6));
+			w538.RightAttach = ((uint)(7));
+			w538.XOptions = ((global::Gtk.AttachOptions)(4));
+			w538.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI60 = new global::Gtk.Image();
+			this.imgI60.WidthRequest = 50;
+			this.imgI60.HeightRequest = 50;
+			this.imgI60.Name = "imgI60";
+			this.tbUI.Add(this.imgI60);
+			global::Gtk.Table.TableChild w539 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI60]));
+			w539.TopAttach = ((uint)(20));
+			w539.BottomAttach = ((uint)(21));
+			w539.LeftAttach = ((uint)(6));
+			w539.RightAttach = ((uint)(7));
+			w539.XOptions = ((global::Gtk.AttachOptions)(4));
+			w539.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI61 = new global::Gtk.Image();
+			this.imgI61.WidthRequest = 50;
+			this.imgI61.HeightRequest = 50;
+			this.imgI61.Name = "imgI61";
+			this.tbUI.Add(this.imgI61);
+			global::Gtk.Table.TableChild w540 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI61]));
+			w540.TopAttach = ((uint)(20));
+			w540.BottomAttach = ((uint)(21));
+			w540.LeftAttach = ((uint)(7));
+			w540.RightAttach = ((uint)(8));
+			w540.XOptions = ((global::Gtk.AttachOptions)(4));
+			w540.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI62 = new global::Gtk.Image();
+			this.imgI62.WidthRequest = 50;
+			this.imgI62.HeightRequest = 50;
+			this.imgI62.Name = "imgI62";
+			this.tbUI.Add(this.imgI62);
+			global::Gtk.Table.TableChild w541 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI62]));
+			w541.TopAttach = ((uint)(20));
+			w541.BottomAttach = ((uint)(21));
+			w541.LeftAttach = ((uint)(8));
+			w541.RightAttach = ((uint)(9));
+			w541.XOptions = ((global::Gtk.AttachOptions)(4));
+			w541.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI63 = new global::Gtk.Image();
+			this.imgI63.WidthRequest = 50;
+			this.imgI63.HeightRequest = 50;
+			this.imgI63.Name = "imgI63";
+			this.tbUI.Add(this.imgI63);
+			global::Gtk.Table.TableChild w542 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI63]));
+			w542.TopAttach = ((uint)(20));
+			w542.BottomAttach = ((uint)(21));
+			w542.LeftAttach = ((uint)(9));
+			w542.RightAttach = ((uint)(10));
+			w542.XOptions = ((global::Gtk.AttachOptions)(4));
+			w542.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI64 = new global::Gtk.Image();
+			this.imgI64.WidthRequest = 50;
+			this.imgI64.HeightRequest = 50;
+			this.imgI64.Name = "imgI64";
+			this.tbUI.Add(this.imgI64);
+			global::Gtk.Table.TableChild w543 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI64]));
+			w543.TopAttach = ((uint)(21));
+			w543.BottomAttach = ((uint)(22));
+			w543.LeftAttach = ((uint)(1));
+			w543.RightAttach = ((uint)(2));
+			w543.XOptions = ((global::Gtk.AttachOptions)(4));
+			w543.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI65 = new global::Gtk.Image();
+			this.imgI65.WidthRequest = 50;
+			this.imgI65.HeightRequest = 50;
+			this.imgI65.Name = "imgI65";
+			this.tbUI.Add(this.imgI65);
+			global::Gtk.Table.TableChild w544 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI65]));
+			w544.TopAttach = ((uint)(21));
+			w544.BottomAttach = ((uint)(22));
+			w544.LeftAttach = ((uint)(2));
+			w544.RightAttach = ((uint)(3));
+			w544.XOptions = ((global::Gtk.AttachOptions)(4));
+			w544.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI66 = new global::Gtk.Image();
+			this.imgI66.WidthRequest = 50;
+			this.imgI66.HeightRequest = 50;
+			this.imgI66.Name = "imgI66";
+			this.tbUI.Add(this.imgI66);
+			global::Gtk.Table.TableChild w545 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI66]));
+			w545.TopAttach = ((uint)(21));
+			w545.BottomAttach = ((uint)(22));
+			w545.LeftAttach = ((uint)(3));
+			w545.RightAttach = ((uint)(4));
+			w545.XOptions = ((global::Gtk.AttachOptions)(4));
+			w545.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI67 = new global::Gtk.Image();
+			this.imgI67.WidthRequest = 50;
+			this.imgI67.HeightRequest = 50;
+			this.imgI67.Name = "imgI67";
+			this.tbUI.Add(this.imgI67);
+			global::Gtk.Table.TableChild w546 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI67]));
+			w546.TopAttach = ((uint)(21));
+			w546.BottomAttach = ((uint)(22));
+			w546.LeftAttach = ((uint)(4));
+			w546.RightAttach = ((uint)(5));
+			w546.XOptions = ((global::Gtk.AttachOptions)(4));
+			w546.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI68 = new global::Gtk.Image();
+			this.imgI68.WidthRequest = 50;
+			this.imgI68.HeightRequest = 50;
+			this.imgI68.Name = "imgI68";
+			this.tbUI.Add(this.imgI68);
+			global::Gtk.Table.TableChild w547 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI68]));
+			w547.TopAttach = ((uint)(21));
+			w547.BottomAttach = ((uint)(22));
+			w547.LeftAttach = ((uint)(5));
+			w547.RightAttach = ((uint)(6));
+			w547.XOptions = ((global::Gtk.AttachOptions)(4));
+			w547.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI69 = new global::Gtk.Image();
+			this.imgI69.WidthRequest = 50;
+			this.imgI69.HeightRequest = 50;
+			this.imgI69.Name = "imgI69";
+			this.tbUI.Add(this.imgI69);
+			global::Gtk.Table.TableChild w548 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI69]));
+			w548.TopAttach = ((uint)(21));
+			w548.BottomAttach = ((uint)(22));
+			w548.LeftAttach = ((uint)(6));
+			w548.RightAttach = ((uint)(7));
+			w548.XOptions = ((global::Gtk.AttachOptions)(4));
+			w548.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI7 = new global::Gtk.Image();
+			this.imgI7.WidthRequest = 50;
+			this.imgI7.HeightRequest = 50;
+			this.imgI7.Name = "imgI7";
+			this.tbUI.Add(this.imgI7);
+			global::Gtk.Table.TableChild w549 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI7]));
+			w549.TopAttach = ((uint)(14));
+			w549.BottomAttach = ((uint)(15));
+			w549.LeftAttach = ((uint)(7));
+			w549.RightAttach = ((uint)(8));
+			w549.XOptions = ((global::Gtk.AttachOptions)(4));
+			w549.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI70 = new global::Gtk.Image();
+			this.imgI70.WidthRequest = 50;
+			this.imgI70.HeightRequest = 50;
+			this.imgI70.Name = "imgI70";
+			this.tbUI.Add(this.imgI70);
+			global::Gtk.Table.TableChild w550 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI70]));
+			w550.TopAttach = ((uint)(21));
+			w550.BottomAttach = ((uint)(22));
+			w550.LeftAttach = ((uint)(7));
+			w550.RightAttach = ((uint)(8));
+			w550.XOptions = ((global::Gtk.AttachOptions)(4));
+			w550.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI71 = new global::Gtk.Image();
+			this.imgI71.WidthRequest = 50;
+			this.imgI71.HeightRequest = 50;
+			this.imgI71.Name = "imgI71";
+			this.tbUI.Add(this.imgI71);
+			global::Gtk.Table.TableChild w551 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI71]));
+			w551.TopAttach = ((uint)(21));
+			w551.BottomAttach = ((uint)(22));
+			w551.LeftAttach = ((uint)(8));
+			w551.RightAttach = ((uint)(9));
+			w551.XOptions = ((global::Gtk.AttachOptions)(4));
+			w551.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI72 = new global::Gtk.Image();
+			this.imgI72.WidthRequest = 50;
+			this.imgI72.HeightRequest = 50;
+			this.imgI72.Name = "imgI72";
+			this.tbUI.Add(this.imgI72);
+			global::Gtk.Table.TableChild w552 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI72]));
+			w552.TopAttach = ((uint)(21));
+			w552.BottomAttach = ((uint)(22));
+			w552.LeftAttach = ((uint)(9));
+			w552.RightAttach = ((uint)(10));
+			w552.XOptions = ((global::Gtk.AttachOptions)(4));
+			w552.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI73 = new global::Gtk.Image();
+			this.imgI73.WidthRequest = 50;
+			this.imgI73.HeightRequest = 50;
+			this.imgI73.Name = "imgI73";
+			this.tbUI.Add(this.imgI73);
+			global::Gtk.Table.TableChild w553 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI73]));
+			w553.TopAttach = ((uint)(22));
+			w553.BottomAttach = ((uint)(23));
+			w553.LeftAttach = ((uint)(1));
+			w553.RightAttach = ((uint)(2));
+			w553.XOptions = ((global::Gtk.AttachOptions)(4));
+			w553.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI74 = new global::Gtk.Image();
+			this.imgI74.WidthRequest = 50;
+			this.imgI74.HeightRequest = 50;
+			this.imgI74.Name = "imgI74";
+			this.tbUI.Add(this.imgI74);
+			global::Gtk.Table.TableChild w554 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI74]));
+			w554.TopAttach = ((uint)(22));
+			w554.BottomAttach = ((uint)(23));
+			w554.LeftAttach = ((uint)(2));
+			w554.RightAttach = ((uint)(3));
+			w554.XOptions = ((global::Gtk.AttachOptions)(4));
+			w554.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI75 = new global::Gtk.Image();
+			this.imgI75.WidthRequest = 50;
+			this.imgI75.HeightRequest = 50;
+			this.imgI75.Name = "imgI75";
+			this.tbUI.Add(this.imgI75);
+			global::Gtk.Table.TableChild w555 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI75]));
+			w555.TopAttach = ((uint)(22));
+			w555.BottomAttach = ((uint)(23));
+			w555.LeftAttach = ((uint)(3));
+			w555.RightAttach = ((uint)(4));
+			w555.XOptions = ((global::Gtk.AttachOptions)(4));
+			w555.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI76 = new global::Gtk.Image();
+			this.imgI76.WidthRequest = 50;
+			this.imgI76.HeightRequest = 50;
+			this.imgI76.Name = "imgI76";
+			this.tbUI.Add(this.imgI76);
+			global::Gtk.Table.TableChild w556 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI76]));
+			w556.TopAttach = ((uint)(22));
+			w556.BottomAttach = ((uint)(23));
+			w556.LeftAttach = ((uint)(4));
+			w556.RightAttach = ((uint)(5));
+			w556.XOptions = ((global::Gtk.AttachOptions)(4));
+			w556.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI77 = new global::Gtk.Image();
+			this.imgI77.WidthRequest = 50;
+			this.imgI77.HeightRequest = 50;
+			this.imgI77.Name = "imgI77";
+			this.tbUI.Add(this.imgI77);
+			global::Gtk.Table.TableChild w557 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI77]));
+			w557.TopAttach = ((uint)(22));
+			w557.BottomAttach = ((uint)(23));
+			w557.LeftAttach = ((uint)(5));
+			w557.RightAttach = ((uint)(6));
+			w557.XOptions = ((global::Gtk.AttachOptions)(4));
+			w557.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI78 = new global::Gtk.Image();
+			this.imgI78.WidthRequest = 50;
+			this.imgI78.HeightRequest = 50;
+			this.imgI78.Name = "imgI78";
+			this.tbUI.Add(this.imgI78);
+			global::Gtk.Table.TableChild w558 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI78]));
+			w558.TopAttach = ((uint)(22));
+			w558.BottomAttach = ((uint)(23));
+			w558.LeftAttach = ((uint)(6));
+			w558.RightAttach = ((uint)(7));
+			w558.XOptions = ((global::Gtk.AttachOptions)(4));
+			w558.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI79 = new global::Gtk.Image();
+			this.imgI79.WidthRequest = 50;
+			this.imgI79.HeightRequest = 50;
+			this.imgI79.Name = "imgI79";
+			this.tbUI.Add(this.imgI79);
+			global::Gtk.Table.TableChild w559 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI79]));
+			w559.TopAttach = ((uint)(22));
+			w559.BottomAttach = ((uint)(23));
+			w559.LeftAttach = ((uint)(7));
+			w559.RightAttach = ((uint)(8));
+			w559.XOptions = ((global::Gtk.AttachOptions)(4));
+			w559.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI8 = new global::Gtk.Image();
+			this.imgI8.WidthRequest = 50;
+			this.imgI8.HeightRequest = 50;
+			this.imgI8.Name = "imgI8";
+			this.tbUI.Add(this.imgI8);
+			global::Gtk.Table.TableChild w560 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI8]));
+			w560.TopAttach = ((uint)(14));
+			w560.BottomAttach = ((uint)(15));
+			w560.LeftAttach = ((uint)(8));
+			w560.RightAttach = ((uint)(9));
+			w560.XOptions = ((global::Gtk.AttachOptions)(4));
+			w560.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI80 = new global::Gtk.Image();
+			this.imgI80.WidthRequest = 50;
+			this.imgI80.HeightRequest = 50;
+			this.imgI80.Name = "imgI80";
+			this.tbUI.Add(this.imgI80);
+			global::Gtk.Table.TableChild w561 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI80]));
+			w561.TopAttach = ((uint)(22));
+			w561.BottomAttach = ((uint)(23));
+			w561.LeftAttach = ((uint)(8));
+			w561.RightAttach = ((uint)(9));
+			w561.XOptions = ((global::Gtk.AttachOptions)(4));
+			w561.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI81 = new global::Gtk.Image();
+			this.imgI81.WidthRequest = 50;
+			this.imgI81.HeightRequest = 50;
+			this.imgI81.Name = "imgI81";
+			this.tbUI.Add(this.imgI81);
+			global::Gtk.Table.TableChild w562 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI81]));
+			w562.TopAttach = ((uint)(22));
+			w562.BottomAttach = ((uint)(23));
+			w562.LeftAttach = ((uint)(9));
+			w562.RightAttach = ((uint)(10));
+			w562.XOptions = ((global::Gtk.AttachOptions)(4));
+			w562.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgI9 = new global::Gtk.Image();
+			this.imgI9.WidthRequest = 50;
+			this.imgI9.HeightRequest = 50;
+			this.imgI9.Name = "imgI9";
+			this.tbUI.Add(this.imgI9);
+			global::Gtk.Table.TableChild w563 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgI9]));
+			w563.TopAttach = ((uint)(14));
+			w563.BottomAttach = ((uint)(15));
+			w563.LeftAttach = ((uint)(9));
+			w563.RightAttach = ((uint)(10));
+			w563.XOptions = ((global::Gtk.AttachOptions)(4));
+			w563.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgInfo = new global::Gtk.Image();
+			this.imgInfo.WidthRequest = 50;
+			this.imgInfo.HeightRequest = 50;
+			this.imgInfo.Name = "imgInfo";
+			this.tbUI.Add(this.imgInfo);
+			global::Gtk.Table.TableChild w564 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgInfo]));
+			w564.TopAttach = ((uint)(22));
+			w564.BottomAttach = ((uint)(23));
+			w564.LeftAttach = ((uint)(27));
+			w564.RightAttach = ((uint)(28));
+			w564.XOptions = ((global::Gtk.AttachOptions)(4));
+			w564.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS1 = new global::Gtk.Image();
+			this.imgS1.WidthRequest = 50;
+			this.imgS1.HeightRequest = 50;
+			this.imgS1.Name = "imgS1";
+			this.tbUI.Add(this.imgS1);
+			global::Gtk.Table.TableChild w565 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS1]));
+			w565.TopAttach = ((uint)(11));
+			w565.BottomAttach = ((uint)(12));
+			w565.LeftAttach = ((uint)(12));
+			w565.RightAttach = ((uint)(13));
+			w565.XOptions = ((global::Gtk.AttachOptions)(4));
+			w565.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS10 = new global::Gtk.Image();
+			this.imgS10.WidthRequest = 50;
+			this.imgS10.HeightRequest = 50;
+			this.imgS10.Name = "imgS10";
+			this.tbUI.Add(this.imgS10);
+			global::Gtk.Table.TableChild w566 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS10]));
+			w566.TopAttach = ((uint)(12));
+			w566.BottomAttach = ((uint)(13));
+			w566.LeftAttach = ((uint)(12));
+			w566.RightAttach = ((uint)(13));
+			w566.XOptions = ((global::Gtk.AttachOptions)(4));
+			w566.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS11 = new global::Gtk.Image();
+			this.imgS11.WidthRequest = 50;
+			this.imgS11.HeightRequest = 50;
+			this.imgS11.Name = "imgS11";
+			this.tbUI.Add(this.imgS11);
+			global::Gtk.Table.TableChild w567 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS11]));
+			w567.TopAttach = ((uint)(12));
+			w567.BottomAttach = ((uint)(13));
+			w567.LeftAttach = ((uint)(13));
+			w567.RightAttach = ((uint)(14));
+			w567.XOptions = ((global::Gtk.AttachOptions)(4));
+			w567.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS12 = new global::Gtk.Image();
+			this.imgS12.WidthRequest = 50;
+			this.imgS12.HeightRequest = 50;
+			this.imgS12.Name = "imgS12";
+			this.tbUI.Add(this.imgS12);
+			global::Gtk.Table.TableChild w568 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS12]));
+			w568.TopAttach = ((uint)(12));
+			w568.BottomAttach = ((uint)(13));
+			w568.LeftAttach = ((uint)(14));
+			w568.RightAttach = ((uint)(15));
+			w568.XOptions = ((global::Gtk.AttachOptions)(4));
+			w568.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS13 = new global::Gtk.Image();
+			this.imgS13.WidthRequest = 50;
+			this.imgS13.HeightRequest = 50;
+			this.imgS13.Name = "imgS13";
+			this.tbUI.Add(this.imgS13);
+			global::Gtk.Table.TableChild w569 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS13]));
+			w569.TopAttach = ((uint)(12));
+			w569.BottomAttach = ((uint)(13));
+			w569.LeftAttach = ((uint)(15));
+			w569.RightAttach = ((uint)(16));
+			w569.XOptions = ((global::Gtk.AttachOptions)(4));
+			w569.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS14 = new global::Gtk.Image();
+			this.imgS14.WidthRequest = 50;
+			this.imgS14.HeightRequest = 50;
+			this.imgS14.Name = "imgS14";
+			this.tbUI.Add(this.imgS14);
+			global::Gtk.Table.TableChild w570 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS14]));
+			w570.TopAttach = ((uint)(12));
+			w570.BottomAttach = ((uint)(13));
+			w570.LeftAttach = ((uint)(16));
+			w570.RightAttach = ((uint)(17));
+			w570.XOptions = ((global::Gtk.AttachOptions)(4));
+			w570.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS15 = new global::Gtk.Image();
+			this.imgS15.WidthRequest = 50;
+			this.imgS15.HeightRequest = 50;
+			this.imgS15.Name = "imgS15";
+			this.tbUI.Add(this.imgS15);
+			global::Gtk.Table.TableChild w571 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS15]));
+			w571.TopAttach = ((uint)(12));
+			w571.BottomAttach = ((uint)(13));
+			w571.LeftAttach = ((uint)(17));
+			w571.RightAttach = ((uint)(18));
+			w571.XOptions = ((global::Gtk.AttachOptions)(4));
+			w571.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS16 = new global::Gtk.Image();
+			this.imgS16.WidthRequest = 50;
+			this.imgS16.HeightRequest = 50;
+			this.imgS16.Name = "imgS16";
+			this.tbUI.Add(this.imgS16);
+			global::Gtk.Table.TableChild w572 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS16]));
+			w572.TopAttach = ((uint)(12));
+			w572.BottomAttach = ((uint)(13));
+			w572.LeftAttach = ((uint)(18));
+			w572.RightAttach = ((uint)(19));
+			w572.XOptions = ((global::Gtk.AttachOptions)(4));
+			w572.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS17 = new global::Gtk.Image();
+			this.imgS17.WidthRequest = 50;
+			this.imgS17.HeightRequest = 50;
+			this.imgS17.Name = "imgS17";
+			this.tbUI.Add(this.imgS17);
+			global::Gtk.Table.TableChild w573 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS17]));
+			w573.TopAttach = ((uint)(12));
+			w573.BottomAttach = ((uint)(13));
+			w573.LeftAttach = ((uint)(19));
+			w573.RightAttach = ((uint)(20));
+			w573.XOptions = ((global::Gtk.AttachOptions)(4));
+			w573.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS18 = new global::Gtk.Image();
+			this.imgS18.WidthRequest = 50;
+			this.imgS18.HeightRequest = 50;
+			this.imgS18.Name = "imgS18";
+			this.tbUI.Add(this.imgS18);
+			global::Gtk.Table.TableChild w574 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS18]));
+			w574.TopAttach = ((uint)(12));
+			w574.BottomAttach = ((uint)(13));
+			w574.LeftAttach = ((uint)(20));
+			w574.RightAttach = ((uint)(21));
+			w574.XOptions = ((global::Gtk.AttachOptions)(4));
+			w574.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS2 = new global::Gtk.Image();
+			this.imgS2.WidthRequest = 50;
+			this.imgS2.HeightRequest = 50;
+			this.imgS2.Name = "imgS2";
+			this.tbUI.Add(this.imgS2);
+			global::Gtk.Table.TableChild w575 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS2]));
+			w575.TopAttach = ((uint)(11));
+			w575.BottomAttach = ((uint)(12));
+			w575.LeftAttach = ((uint)(13));
+			w575.RightAttach = ((uint)(14));
+			w575.XOptions = ((global::Gtk.AttachOptions)(4));
+			w575.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS3 = new global::Gtk.Image();
+			this.imgS3.WidthRequest = 50;
+			this.imgS3.HeightRequest = 50;
+			this.imgS3.Name = "imgS3";
+			this.tbUI.Add(this.imgS3);
+			global::Gtk.Table.TableChild w576 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS3]));
+			w576.TopAttach = ((uint)(11));
+			w576.BottomAttach = ((uint)(12));
+			w576.LeftAttach = ((uint)(14));
+			w576.RightAttach = ((uint)(15));
+			w576.XOptions = ((global::Gtk.AttachOptions)(4));
+			w576.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS4 = new global::Gtk.Image();
+			this.imgS4.WidthRequest = 50;
+			this.imgS4.HeightRequest = 50;
+			this.imgS4.Name = "imgS4";
+			this.tbUI.Add(this.imgS4);
+			global::Gtk.Table.TableChild w577 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS4]));
+			w577.TopAttach = ((uint)(11));
+			w577.BottomAttach = ((uint)(12));
+			w577.LeftAttach = ((uint)(15));
+			w577.RightAttach = ((uint)(16));
+			w577.XOptions = ((global::Gtk.AttachOptions)(4));
+			w577.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS5 = new global::Gtk.Image();
+			this.imgS5.WidthRequest = 50;
+			this.imgS5.HeightRequest = 50;
+			this.imgS5.Name = "imgS5";
+			this.tbUI.Add(this.imgS5);
+			global::Gtk.Table.TableChild w578 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS5]));
+			w578.TopAttach = ((uint)(11));
+			w578.BottomAttach = ((uint)(12));
+			w578.LeftAttach = ((uint)(16));
+			w578.RightAttach = ((uint)(17));
+			w578.XOptions = ((global::Gtk.AttachOptions)(4));
+			w578.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS6 = new global::Gtk.Image();
+			this.imgS6.WidthRequest = 50;
+			this.imgS6.HeightRequest = 50;
+			this.imgS6.Name = "imgS6";
+			this.tbUI.Add(this.imgS6);
+			global::Gtk.Table.TableChild w579 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS6]));
+			w579.TopAttach = ((uint)(11));
+			w579.BottomAttach = ((uint)(12));
+			w579.LeftAttach = ((uint)(17));
+			w579.RightAttach = ((uint)(18));
+			w579.XOptions = ((global::Gtk.AttachOptions)(4));
+			w579.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS7 = new global::Gtk.Image();
+			this.imgS7.WidthRequest = 50;
+			this.imgS7.HeightRequest = 50;
+			this.imgS7.Name = "imgS7";
+			this.tbUI.Add(this.imgS7);
+			global::Gtk.Table.TableChild w580 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS7]));
+			w580.TopAttach = ((uint)(11));
+			w580.BottomAttach = ((uint)(12));
+			w580.LeftAttach = ((uint)(18));
+			w580.RightAttach = ((uint)(19));
+			w580.XOptions = ((global::Gtk.AttachOptions)(4));
+			w580.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS8 = new global::Gtk.Image();
+			this.imgS8.WidthRequest = 50;
+			this.imgS8.HeightRequest = 50;
+			this.imgS8.Name = "imgS8";
+			this.tbUI.Add(this.imgS8);
+			global::Gtk.Table.TableChild w581 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS8]));
+			w581.TopAttach = ((uint)(11));
+			w581.BottomAttach = ((uint)(12));
+			w581.LeftAttach = ((uint)(19));
+			w581.RightAttach = ((uint)(20));
+			w581.XOptions = ((global::Gtk.AttachOptions)(4));
+			w581.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.imgS9 = new global::Gtk.Image();
+			this.imgS9.WidthRequest = 50;
+			this.imgS9.HeightRequest = 50;
+			this.imgS9.Name = "imgS9";
+			this.tbUI.Add(this.imgS9);
+			global::Gtk.Table.TableChild w582 = ((global::Gtk.Table.TableChild)(this.tbUI[this.imgS9]));
+			w582.TopAttach = ((uint)(11));
+			w582.BottomAttach = ((uint)(12));
+			w582.LeftAttach = ((uint)(20));
+			w582.RightAttach = ((uint)(21));
+			w582.XOptions = ((global::Gtk.AttachOptions)(4));
+			w582.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblAccessories = new global::Gtk.Label();
+			this.lblAccessories.HeightRequest = 50;
+			this.lblAccessories.Name = "lblAccessories";
+			this.lblAccessories.LabelProp = "Accessories";
+			this.lblAccessories.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblAccessories);
+			global::Gtk.Table.TableChild w583 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblAccessories]));
+			w583.TopAttach = ((uint)(12));
+			w583.BottomAttach = ((uint)(13));
+			w583.LeftAttach = ((uint)(23));
+			w583.RightAttach = ((uint)(32));
+			w583.XOptions = ((global::Gtk.AttachOptions)(4));
+			w583.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblBlank1 = new global::Gtk.Label();
+			this.lblBlank1.WidthRequest = 50;
+			this.lblBlank1.HeightRequest = 10;
+			this.lblBlank1.Name = "lblBlank1";
+			this.tbUI.Add(this.lblBlank1);
+			global::Gtk.Table.TableChild w584 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank1]));
+			w584.LeftAttach = ((uint)(16));
+			w584.RightAttach = ((uint)(17));
+			w584.XOptions = ((global::Gtk.AttachOptions)(4));
+			w584.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblBlank2 = new global::Gtk.Label();
+			this.lblBlank2.WidthRequest = 10;
+			this.lblBlank2.HeightRequest = 50;
+			this.lblBlank2.Name = "lblBlank2";
+			this.tbUI.Add(this.lblBlank2);
+			global::Gtk.Table.TableChild w585 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank2]));
+			w585.TopAttach = ((uint)(4));
+			w585.BottomAttach = ((uint)(5));
+			w585.XOptions = ((global::Gtk.AttachOptions)(4));
+			w585.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblBlank3 = new global::Gtk.Label();
+			this.lblBlank3.WidthRequest = 50;
+			this.lblBlank3.HeightRequest = 50;
+			this.lblBlank3.Name = "lblBlank3";
+			this.tbUI.Add(this.lblBlank3);
+			global::Gtk.Table.TableChild w586 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank3]));
+			w586.TopAttach = ((uint)(10));
+			w586.BottomAttach = ((uint)(11));
+			w586.LeftAttach = ((uint)(16));
+			w586.RightAttach = ((uint)(17));
+			w586.XOptions = ((global::Gtk.AttachOptions)(4));
+			w586.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblBlank4 = new global::Gtk.Label();
+			this.lblBlank4.WidthRequest = 10;
+			this.lblBlank4.HeightRequest = 50;
+			this.lblBlank4.Name = "lblBlank4";
+			this.tbUI.Add(this.lblBlank4);
+			global::Gtk.Table.TableChild w587 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank4]));
+			w587.TopAttach = ((uint)(4));
+			w587.BottomAttach = ((uint)(5));
+			w587.LeftAttach = ((uint)(10));
+			w587.RightAttach = ((uint)(11));
+			w587.XOptions = ((global::Gtk.AttachOptions)(4));
+			w587.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblBlank5 = new global::Gtk.Label();
+			this.lblBlank5.WidthRequest = 10;
+			this.lblBlank5.HeightRequest = 50;
+			this.lblBlank5.Name = "lblBlank5";
+			this.tbUI.Add(this.lblBlank5);
+			global::Gtk.Table.TableChild w588 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank5]));
+			w588.TopAttach = ((uint)(4));
+			w588.BottomAttach = ((uint)(5));
+			w588.LeftAttach = ((uint)(22));
+			w588.RightAttach = ((uint)(23));
+			w588.XOptions = ((global::Gtk.AttachOptions)(4));
+			w588.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblBlank6 = new global::Gtk.Label();
+			this.lblBlank6.WidthRequest = 10;
+			this.lblBlank6.HeightRequest = 50;
+			this.lblBlank6.Name = "lblBlank6";
+			this.tbUI.Add(this.lblBlank6);
+			global::Gtk.Table.TableChild w589 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank6]));
+			w589.TopAttach = ((uint)(4));
+			w589.BottomAttach = ((uint)(5));
+			w589.LeftAttach = ((uint)(32));
+			w589.RightAttach = ((uint)(33));
+			w589.XOptions = ((global::Gtk.AttachOptions)(4));
+			w589.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblBlank8 = new global::Gtk.Label();
+			this.lblBlank8.WidthRequest = 50;
+			this.lblBlank8.HeightRequest = 10;
+			this.lblBlank8.Name = "lblBlank8";
+			this.tbUI.Add(this.lblBlank8);
+			global::Gtk.Table.TableChild w590 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblBlank8]));
+			w590.TopAttach = ((uint)(24));
+			w590.BottomAttach = ((uint)(25));
+			w590.LeftAttach = ((uint)(16));
+			w590.RightAttach = ((uint)(17));
+			w590.XOptions = ((global::Gtk.AttachOptions)(4));
+			w590.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblCoord1 = new global::Gtk.Label();
+			this.lblCoord1.WidthRequest = 50;
+			this.lblCoord1.HeightRequest = 50;
+			this.lblCoord1.Name = "lblCoord1";
+			this.lblCoord1.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblCoord1);
+			global::Gtk.Table.TableChild w591 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblCoord1]));
+			w591.TopAttach = ((uint)(11));
+			w591.BottomAttach = ((uint)(12));
+			w591.LeftAttach = ((uint)(8));
+			w591.RightAttach = ((uint)(9));
+			w591.XOptions = ((global::Gtk.AttachOptions)(4));
+			w591.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblCoord2 = new global::Gtk.Label();
+			this.lblCoord2.WidthRequest = 50;
+			this.lblCoord2.HeightRequest = 50;
+			this.lblCoord2.Name = "lblCoord2";
+			this.lblCoord2.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblCoord2);
+			global::Gtk.Table.TableChild w592 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblCoord2]));
+			w592.TopAttach = ((uint)(11));
+			w592.BottomAttach = ((uint)(12));
+			w592.LeftAttach = ((uint)(9));
+			w592.RightAttach = ((uint)(10));
+			w592.XOptions = ((global::Gtk.AttachOptions)(4));
+			w592.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblEventLog = new global::Gtk.Label();
+			this.lblEventLog.WidthRequest = 50;
+			this.lblEventLog.HeightRequest = 50;
+			this.lblEventLog.Name = "lblEventLog";
+			this.lblEventLog.LabelProp = "Event Log";
+			this.tbUI.Add(this.lblEventLog);
+			global::Gtk.Table.TableChild w593 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblEventLog]));
+			w593.TopAttach = ((uint)(15));
+			w593.BottomAttach = ((uint)(16));
+			w593.LeftAttach = ((uint)(12));
+			w593.RightAttach = ((uint)(21));
+			w593.XOptions = ((global::Gtk.AttachOptions)(4));
+			w593.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblGear = new global::Gtk.Label();
+			this.lblGear.HeightRequest = 50;
+			this.lblGear.Name = "lblGear";
+			this.lblGear.LabelProp = "Gear";
+			this.lblGear.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblGear);
+			global::Gtk.Table.TableChild w594 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblGear]));
+			w594.TopAttach = ((uint)(15));
+			w594.BottomAttach = ((uint)(16));
+			w594.LeftAttach = ((uint)(23));
+			w594.RightAttach = ((uint)(32));
+			w594.XOptions = ((global::Gtk.AttachOptions)(4));
+			w594.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblGroundLayer = new global::Gtk.Label();
+			this.lblGroundLayer.WidthRequest = 450;
+			this.lblGroundLayer.HeightRequest = 50;
+			this.lblGroundLayer.Name = "lblGroundLayer";
+			this.lblGroundLayer.LabelProp = "Ground Layer";
+			this.tbUI.Add(this.lblGroundLayer);
+			global::Gtk.Table.TableChild w595 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblGroundLayer]));
+			w595.TopAttach = ((uint)(1));
+			w595.BottomAttach = ((uint)(2));
+			w595.LeftAttach = ((uint)(1));
+			w595.RightAttach = ((uint)(10));
+			w595.XOptions = ((global::Gtk.AttachOptions)(4));
+			w595.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblHoleMsg = new global::Gtk.Label();
+			this.lblHoleMsg.WidthRequest = 400;
+			this.lblHoleMsg.HeightRequest = 50;
+			this.lblHoleMsg.Name = "lblHoleMsg";
+			this.lblHoleMsg.LabelProp = "There is a hole above player:";
+			this.lblHoleMsg.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblHoleMsg);
+			global::Gtk.Table.TableChild w596 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblHoleMsg]));
+			w596.TopAttach = ((uint)(23));
+			w596.BottomAttach = ((uint)(24));
+			w596.LeftAttach = ((uint)(1));
+			w596.RightAttach = ((uint)(9));
+			w596.XOptions = ((global::Gtk.AttachOptions)(4));
+			w596.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblHoleOnTop = new global::Gtk.Label();
+			this.lblHoleOnTop.WidthRequest = 50;
+			this.lblHoleOnTop.HeightRequest = 50;
+			this.lblHoleOnTop.Name = "lblHoleOnTop";
+			this.lblHoleOnTop.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblHoleOnTop);
+			global::Gtk.Table.TableChild w597 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblHoleOnTop]));
+			w597.TopAttach = ((uint)(23));
+			w597.BottomAttach = ((uint)(24));
+			w597.LeftAttach = ((uint)(9));
+			w597.RightAttach = ((uint)(10));
+			w597.XOptions = ((global::Gtk.AttachOptions)(4));
+			w597.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblHotbar = new global::Gtk.Label();
+			this.lblHotbar.WidthRequest = 50;
+			this.lblHotbar.HeightRequest = 25;
+			this.lblHotbar.Name = "lblHotbar";
+			this.lblHotbar.LabelProp = "Hotbar";
+			this.tbUI.Add(this.lblHotbar);
+			global::Gtk.Table.TableChild w598 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblHotbar]));
+			w598.TopAttach = ((uint)(13));
+			w598.BottomAttach = ((uint)(14));
+			w598.LeftAttach = ((uint)(12));
+			w598.RightAttach = ((uint)(21));
+			w598.XOptions = ((global::Gtk.AttachOptions)(4));
+			w598.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblInfo = new global::Gtk.Label();
+			this.lblInfo.WidthRequest = 250;
+			this.lblInfo.HeightRequest = 50;
+			this.lblInfo.Name = "lblInfo";
+			this.lblInfo.Wrap = true;
+			this.lblInfo.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblInfo);
+			global::Gtk.Table.TableChild w599 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblInfo]));
+			w599.TopAttach = ((uint)(23));
+			w599.BottomAttach = ((uint)(24));
+			w599.LeftAttach = ((uint)(23));
+			w599.RightAttach = ((uint)(32));
+			w599.XOptions = ((global::Gtk.AttachOptions)(4));
+			w599.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblItemLayer = new global::Gtk.Label();
+			this.lblItemLayer.HeightRequest = 50;
+			this.lblItemLayer.Name = "lblItemLayer";
+			this.lblItemLayer.LabelProp = "Structure Layer";
+			this.tbUI.Add(this.lblItemLayer);
+			global::Gtk.Table.TableChild w600 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblItemLayer]));
+			w600.TopAttach = ((uint)(13));
+			w600.BottomAttach = ((uint)(14));
+			w600.LeftAttach = ((uint)(1));
+			w600.RightAttach = ((uint)(10));
+			w600.XOptions = ((global::Gtk.AttachOptions)(4));
+			w600.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblLog1 = new global::Gtk.Label();
+			this.lblLog1.HeightRequest = 50;
+			this.lblLog1.Name = "lblLog1";
+			this.lblLog1.LabelProp = "label6";
+			this.tbUI.Add(this.lblLog1);
+			global::Gtk.Table.TableChild w601 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog1]));
+			w601.TopAttach = ((uint)(16));
+			w601.BottomAttach = ((uint)(17));
+			w601.LeftAttach = ((uint)(12));
+			w601.RightAttach = ((uint)(21));
+			w601.XOptions = ((global::Gtk.AttachOptions)(4));
+			w601.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblLog2 = new global::Gtk.Label();
+			this.lblLog2.HeightRequest = 50;
+			this.lblLog2.Name = "lblLog2";
+			this.lblLog2.LabelProp = "label6";
+			this.tbUI.Add(this.lblLog2);
+			global::Gtk.Table.TableChild w602 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog2]));
+			w602.TopAttach = ((uint)(17));
+			w602.BottomAttach = ((uint)(18));
+			w602.LeftAttach = ((uint)(12));
+			w602.RightAttach = ((uint)(21));
+			w602.XOptions = ((global::Gtk.AttachOptions)(4));
+			w602.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblLog3 = new global::Gtk.Label();
+			this.lblLog3.HeightRequest = 50;
+			this.lblLog3.Name = "lblLog3";
+			this.lblLog3.LabelProp = "label6";
+			this.tbUI.Add(this.lblLog3);
+			global::Gtk.Table.TableChild w603 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog3]));
+			w603.TopAttach = ((uint)(18));
+			w603.BottomAttach = ((uint)(19));
+			w603.LeftAttach = ((uint)(12));
+			w603.RightAttach = ((uint)(21));
+			w603.XOptions = ((global::Gtk.AttachOptions)(4));
+			w603.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblLog4 = new global::Gtk.Label();
+			this.lblLog4.HeightRequest = 50;
+			this.lblLog4.Name = "lblLog4";
+			this.lblLog4.LabelProp = "label6";
+			this.tbUI.Add(this.lblLog4);
+			global::Gtk.Table.TableChild w604 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog4]));
+			w604.TopAttach = ((uint)(19));
+			w604.BottomAttach = ((uint)(20));
+			w604.LeftAttach = ((uint)(12));
+			w604.RightAttach = ((uint)(21));
+			w604.XOptions = ((global::Gtk.AttachOptions)(4));
+			w604.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblLog5 = new global::Gtk.Label();
+			this.lblLog5.HeightRequest = 50;
+			this.lblLog5.Name = "lblLog5";
+			this.lblLog5.LabelProp = "label6";
+			this.tbUI.Add(this.lblLog5);
+			global::Gtk.Table.TableChild w605 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog5]));
+			w605.TopAttach = ((uint)(20));
+			w605.BottomAttach = ((uint)(21));
+			w605.LeftAttach = ((uint)(12));
+			w605.RightAttach = ((uint)(21));
+			w605.XOptions = ((global::Gtk.AttachOptions)(4));
+			w605.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblLog6 = new global::Gtk.Label();
+			this.lblLog6.HeightRequest = 50;
+			this.lblLog6.Name = "lblLog6";
+			this.lblLog6.LabelProp = "label6";
+			this.tbUI.Add(this.lblLog6);
+			global::Gtk.Table.TableChild w606 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog6]));
+			w606.TopAttach = ((uint)(21));
+			w606.BottomAttach = ((uint)(22));
+			w606.LeftAttach = ((uint)(12));
+			w606.RightAttach = ((uint)(21));
+			w606.XOptions = ((global::Gtk.AttachOptions)(4));
+			w606.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblLog7 = new global::Gtk.Label();
+			this.lblLog7.HeightRequest = 50;
+			this.lblLog7.Name = "lblLog7";
+			this.lblLog7.LabelProp = "label6";
+			this.tbUI.Add(this.lblLog7);
+			global::Gtk.Table.TableChild w607 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog7]));
+			w607.TopAttach = ((uint)(22));
+			w607.BottomAttach = ((uint)(23));
+			w607.LeftAttach = ((uint)(12));
+			w607.RightAttach = ((uint)(21));
+			w607.XOptions = ((global::Gtk.AttachOptions)(4));
+			w607.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblLog8 = new global::Gtk.Label();
+			this.lblLog8.HeightRequest = 50;
+			this.lblLog8.Name = "lblLog8";
+			this.lblLog8.LabelProp = "label6";
+			this.tbUI.Add(this.lblLog8);
+			global::Gtk.Table.TableChild w608 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblLog8]));
+			w608.TopAttach = ((uint)(23));
+			w608.BottomAttach = ((uint)(24));
+			w608.LeftAttach = ((uint)(12));
+			w608.RightAttach = ((uint)(21));
+			w608.XOptions = ((global::Gtk.AttachOptions)(4));
+			w608.YOptions = ((global::Gtk.AttachOptions)(4));
+			// Container child tbUI.Gtk.Table+TableChild
+			this.lblSuperLayer = new global::Gtk.Label();
+			this.lblSuperLayer.WidthRequest = 100;
+			this.lblSuperLayer.HeightRequest = 50;
+			this.lblSuperLayer.Name = "lblSuperLayer";
+			this.lblSuperLayer.Justify = ((global::Gtk.Justification)(2));
+			this.tbUI.Add(this.lblSuperLayer);
+			global::Gtk.Table.TableChild w609 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblSuperLayer]));
+			w609.TopAttach = ((uint)(11));
+			w609.BottomAttach = ((uint)(12));
+			w609.LeftAttach = ((uint)(1));
+			w609.RightAttach = ((uint)(5));
+			w609.XOptions = ((global::Gtk.AttachOptions)(4));
+			w609.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.Add(this.tbUI);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 400;
-			this.DefaultHeight = 300;
+			this.DefaultWidth = 1690;
+			this.DefaultHeight = 1170;
 			this.Show();
+			this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+			this.btnPause.Clicked += new global::System.EventHandler(this.OnBtnPauseClicked);
+			this.btnP9.Clicked += new global::System.EventHandler(this.OnBtnP9Clicked);
+			this.btnP81.Clicked += new global::System.EventHandler(this.OnBtnP81Clicked);
+			this.btnP80.Clicked += new global::System.EventHandler(this.OnBtnP80Clicked);
+			this.btnP8.Clicked += new global::System.EventHandler(this.OnBtnP8Clicked);
+			this.btnP79.Clicked += new global::System.EventHandler(this.OnBtnP79Clicked);
+			this.btnP78.Clicked += new global::System.EventHandler(this.OnBtnP78Clicked);
+			this.btnP77.Clicked += new global::System.EventHandler(this.OnBtnP77Clicked);
+			this.btnP76.Clicked += new global::System.EventHandler(this.OnBtnP76Clicked);
+			this.btnP75.Clicked += new global::System.EventHandler(this.OnBtnP75Clicked);
+			this.btnP74.Clicked += new global::System.EventHandler(this.OnBtnP74Clicked);
+			this.btnP73.Clicked += new global::System.EventHandler(this.OnBtnP73Clicked);
+			this.btnP72.Clicked += new global::System.EventHandler(this.OnBtnP72Clicked);
+			this.btnP71.Clicked += new global::System.EventHandler(this.OnBtnP71Clicked);
+			this.btnP70.Clicked += new global::System.EventHandler(this.OnBtnP70Clicked);
+			this.btnP7.Clicked += new global::System.EventHandler(this.OnBtnP7Clicked);
+			this.btnP69.Clicked += new global::System.EventHandler(this.OnBtnP69Clicked);
+			this.btnP68.Clicked += new global::System.EventHandler(this.OnBtnP68Clicked);
+			this.btnP67.Clicked += new global::System.EventHandler(this.OnBtnP67Clicked);
+			this.btnP66.Clicked += new global::System.EventHandler(this.OnBtnP66Clicked);
+			this.btnP65.Clicked += new global::System.EventHandler(this.OnBtnP65Clicked);
+			this.btnP64.Clicked += new global::System.EventHandler(this.OnBtnP64Clicked);
+			this.btnP63.Clicked += new global::System.EventHandler(this.OnBtnP63Clicked);
+			this.btnP62.Clicked += new global::System.EventHandler(this.OnBtnP62Clicked);
+			this.btnP61.Clicked += new global::System.EventHandler(this.OnBtnP61Clicked);
+			this.btnP60.Clicked += new global::System.EventHandler(this.OnBtnP60Clicked);
+			this.btnP6.Clicked += new global::System.EventHandler(this.OnBtnP6Clicked);
+			this.btnP59.Clicked += new global::System.EventHandler(this.OnBtnP59Clicked);
+			this.btnP58.Clicked += new global::System.EventHandler(this.OnBtnP58Clicked);
+			this.btnP57.Clicked += new global::System.EventHandler(this.OnBtnP57Clicked);
+			this.btnP56.Clicked += new global::System.EventHandler(this.OnBtnP56Clicked);
+			this.btnP55.Clicked += new global::System.EventHandler(this.OnBtnP55Clicked);
+			this.btnP54.Clicked += new global::System.EventHandler(this.OnBtnP54Clicked);
+			this.btnP53.Clicked += new global::System.EventHandler(this.OnBtnP53Clicked);
+			this.btnP52.Clicked += new global::System.EventHandler(this.OnBtnP52Clicked);
+			this.btnP51.Clicked += new global::System.EventHandler(this.OnBtnP51Clicked);
+			this.btnP50.Clicked += new global::System.EventHandler(this.OnBtnP50Clicked);
+			this.btnP5.Clicked += new global::System.EventHandler(this.OnBtnP5Clicked);
+			this.btnP49.Clicked += new global::System.EventHandler(this.OnBtnP49Clicked);
+			this.btnP48.Clicked += new global::System.EventHandler(this.OnBtnP48Clicked);
+			this.btnP47.Clicked += new global::System.EventHandler(this.OnBtnP47Clicked);
+			this.btnP46.Clicked += new global::System.EventHandler(this.OnBtnP46Clicked);
+			this.btnP45.Clicked += new global::System.EventHandler(this.OnBtnP45Clicked);
+			this.btnP44.Clicked += new global::System.EventHandler(this.OnBtnP44Clicked);
+			this.btnP43.Clicked += new global::System.EventHandler(this.OnBtnP43Clicked);
+			this.btnP42.Clicked += new global::System.EventHandler(this.OnBtnP42Clicked);
+			this.btnP41.Clicked += new global::System.EventHandler(this.OnBtnP41Clicked);
+			this.btnP40.Clicked += new global::System.EventHandler(this.OnBtnP40Clicked);
+			this.btnP4.Clicked += new global::System.EventHandler(this.OnBtnP4Clicked);
+			this.btnP39.Clicked += new global::System.EventHandler(this.OnBtnP39Clicked);
+			this.btnP38.Clicked += new global::System.EventHandler(this.OnBtnP38Clicked);
+			this.btnP37.Clicked += new global::System.EventHandler(this.OnBtnP37Clicked);
+			this.btnP36.Clicked += new global::System.EventHandler(this.OnBtnP36Clicked);
+			this.btnP35.Clicked += new global::System.EventHandler(this.OnBtnP35Clicked);
+			this.btnP34.Clicked += new global::System.EventHandler(this.OnBtnP34Clicked);
+			this.btnP33.Clicked += new global::System.EventHandler(this.OnBtnP33Clicked);
+			this.btnP32.Clicked += new global::System.EventHandler(this.OnBtnP32Clicked);
+			this.btnP31.Clicked += new global::System.EventHandler(this.OnBtnP31Clicked);
+			this.btnP30.Clicked += new global::System.EventHandler(this.OnBtnP30Clicked);
+			this.btnP3.Clicked += new global::System.EventHandler(this.OnBtnP3Clicked);
+			this.btnP29.Clicked += new global::System.EventHandler(this.OnBtnP29Clicked);
+			this.btnP28.Clicked += new global::System.EventHandler(this.OnBtnP28Clicked);
+			this.btnP27.Clicked += new global::System.EventHandler(this.OnBtnP27Clicked);
+			this.btnP26.Clicked += new global::System.EventHandler(this.OnBtnP26Clicked);
+			this.btnP25.Clicked += new global::System.EventHandler(this.OnBtnP25Clicked);
+			this.btnP24.Clicked += new global::System.EventHandler(this.OnBtnP24Clicked);
+			this.btnP23.Clicked += new global::System.EventHandler(this.OnBtnP23Clicked);
+			this.btnP22.Clicked += new global::System.EventHandler(this.OnBtnP22Clicked);
+			this.btnP21.Clicked += new global::System.EventHandler(this.OnBtnP21Clicked);
+			this.btnP20.Clicked += new global::System.EventHandler(this.OnBtnP20Clicked);
+			this.btnP2.Clicked += new global::System.EventHandler(this.OnBtnP2Clicked);
+			this.btnP19.Clicked += new global::System.EventHandler(this.OnBtnP19Clicked);
+			this.btnP18.Clicked += new global::System.EventHandler(this.OnBtnP18Clicked);
+			this.btnP17.Clicked += new global::System.EventHandler(this.OnBtnP17Clicked);
+			this.btnP16.Clicked += new global::System.EventHandler(this.OnBtnP16Clicked);
+			this.btnP15.Clicked += new global::System.EventHandler(this.OnBtnP15Clicked);
+			this.btnP14.Clicked += new global::System.EventHandler(this.OnBtnP14Clicked);
+			this.btnP13.Clicked += new global::System.EventHandler(this.OnBtnP13Clicked);
+			this.btnP12.Clicked += new global::System.EventHandler(this.OnBtnP12Clicked);
+			this.btnP11.Clicked += new global::System.EventHandler(this.OnBtnP11Clicked);
+			this.btnP10.Clicked += new global::System.EventHandler(this.OnBtnP10Clicked);
+			this.btnP1.Clicked += new global::System.EventHandler(this.OnBtnP1Clicked);
+			this.btnMusic.Clicked += new global::System.EventHandler(this.OnBtnMusicClicked);
+			this.btnMap.Clicked += new global::System.EventHandler(this.OnBtnMapClicked);
+			this.btnInv.Clicked += new global::System.EventHandler(this.OnBtnInvClicked);
+			this.btnI9.Clicked += new global::System.EventHandler(this.OnBtnI9Clicked);
+			this.btnI81.Clicked += new global::System.EventHandler(this.OnBtnI81Clicked);
+			this.btnI80.Clicked += new global::System.EventHandler(this.OnBtnI80Clicked);
+			this.btnI8.Clicked += new global::System.EventHandler(this.OnBtnI8Clicked);
+			this.btnI79.Clicked += new global::System.EventHandler(this.OnBtnI79Clicked);
+			this.btnI78.Clicked += new global::System.EventHandler(this.OnBtnI78Clicked);
+			this.btnI77.Clicked += new global::System.EventHandler(this.OnBtnI77Clicked);
+			this.btnI76.Clicked += new global::System.EventHandler(this.OnBtnI76Clicked);
+			this.btnI75.Clicked += new global::System.EventHandler(this.OnBtnI75Clicked);
+			this.btnI74.Clicked += new global::System.EventHandler(this.OnBtnI74Clicked);
+			this.btnI73.Clicked += new global::System.EventHandler(this.OnBtnI73Clicked);
+			this.btnI72.Clicked += new global::System.EventHandler(this.OnBtnI72Clicked);
+			this.btnI71.Clicked += new global::System.EventHandler(this.OnBtnI71Clicked);
+			this.btnI70.Clicked += new global::System.EventHandler(this.OnBtnI70Clicked);
+			this.btnI7.Clicked += new global::System.EventHandler(this.OnBtnI7Clicked);
+			this.btnI69.Clicked += new global::System.EventHandler(this.OnBtnI69Clicked);
+			this.btnI68.Clicked += new global::System.EventHandler(this.OnBtnI68Clicked);
+			this.btnI67.Clicked += new global::System.EventHandler(this.OnBtnI67Clicked);
+			this.btnI66.Clicked += new global::System.EventHandler(this.OnBtnI66Clicked);
+			this.btnI65.Clicked += new global::System.EventHandler(this.OnBtnI65Clicked);
+			this.btnI64.Clicked += new global::System.EventHandler(this.OnBtnI64Clicked);
+			this.btnI63.Clicked += new global::System.EventHandler(this.OnBtnI63Clicked);
+			this.btnI62.Clicked += new global::System.EventHandler(this.OnBtnI62Clicked);
+			this.btnI61.Clicked += new global::System.EventHandler(this.OnBtnI61Clicked);
+			this.btnI60.Clicked += new global::System.EventHandler(this.OnBtnI60Clicked);
+			this.btnI6.Clicked += new global::System.EventHandler(this.OnBtnI6Clicked);
+			this.btnI59.Clicked += new global::System.EventHandler(this.OnBtnI59Clicked);
+			this.btnI58.Clicked += new global::System.EventHandler(this.OnBtnI58Clicked);
+			this.btnI57.Clicked += new global::System.EventHandler(this.OnBtnI57Clicked);
+			this.btnI56.Clicked += new global::System.EventHandler(this.OnBtnI56Clicked);
+			this.btnI55.Clicked += new global::System.EventHandler(this.OnBtnI55Clicked);
+			this.btnI54.Clicked += new global::System.EventHandler(this.OnBtnI54Clicked);
+			this.btnI53.Clicked += new global::System.EventHandler(this.OnBtnI53Clicked);
+			this.btnI52.Clicked += new global::System.EventHandler(this.OnBtnI52Clicked);
+			this.btnI51.Clicked += new global::System.EventHandler(this.OnBtnI51Clicked);
+			this.btnI50.Clicked += new global::System.EventHandler(this.OnBtnI50Clicked);
+			this.btnI5.Clicked += new global::System.EventHandler(this.OnBtnI5Clicked);
+			this.btnI49.Clicked += new global::System.EventHandler(this.OnBtnI49Clicked);
+			this.btnI48.Clicked += new global::System.EventHandler(this.OnBtnI48Clicked);
+			this.btnI47.Clicked += new global::System.EventHandler(this.OnBtnI47Clicked);
+			this.btnI46.Clicked += new global::System.EventHandler(this.OnBtnI46Clicked);
+			this.btnI45.Clicked += new global::System.EventHandler(this.OnBtnI45Clicked);
+			this.btnI44.Clicked += new global::System.EventHandler(this.OnBtnI44Clicked);
+			this.btnI43.Clicked += new global::System.EventHandler(this.OnBtnI43Clicked);
+			this.btnI42.Clicked += new global::System.EventHandler(this.OnBtnI42Clicked);
+			this.btnI41.Clicked += new global::System.EventHandler(this.OnBtnI41Clicked);
+			this.btnI40.Clicked += new global::System.EventHandler(this.OnBtnI40Clicked);
+			this.btnI4.Clicked += new global::System.EventHandler(this.OnBtnI4Clicked);
+			this.btnI39.Clicked += new global::System.EventHandler(this.OnBtnI39Clicked);
+			this.btnI38.Clicked += new global::System.EventHandler(this.OnBtnI38Clicked);
+			this.btnI37.Clicked += new global::System.EventHandler(this.OnBtnI37Clicked);
+			this.btnI36.Clicked += new global::System.EventHandler(this.OnBtnI36Clicked);
+			this.btnI35.Clicked += new global::System.EventHandler(this.OnBtnI35Clicked);
+			this.btnI34.Clicked += new global::System.EventHandler(this.OnBtnI34Clicked);
+			this.btnI33.Clicked += new global::System.EventHandler(this.OnBtnI33Clicked);
+			this.btnI32.Clicked += new global::System.EventHandler(this.OnBtnI32Clicked);
+			this.btnI31.Clicked += new global::System.EventHandler(this.OnBtnI31Clicked);
+			this.btnI30.Clicked += new global::System.EventHandler(this.OnBtnI30Clicked);
+			this.btnI3.Clicked += new global::System.EventHandler(this.OnBtnI3Clicked);
+			this.btnI29.Clicked += new global::System.EventHandler(this.OnBtnI29Clicked);
+			this.btnI28.Clicked += new global::System.EventHandler(this.OnBtnI28Clicked);
+			this.btnI27.Clicked += new global::System.EventHandler(this.OnBtnI27Clicked);
+			this.btnI26.Clicked += new global::System.EventHandler(this.OnBtnI26Clicked);
+			this.btnI25.Clicked += new global::System.EventHandler(this.OnBtnI25Clicked);
+			this.btnI24.Clicked += new global::System.EventHandler(this.OnBtnI24Clicked);
+			this.btnI23.Clicked += new global::System.EventHandler(this.OnBtnI23Clicked);
+			this.btnI22.Clicked += new global::System.EventHandler(this.OnBtnI22Clicked);
+			this.btnI21.Clicked += new global::System.EventHandler(this.OnBtnI21Clicked);
+			this.btnI20.Clicked += new global::System.EventHandler(this.OnBtnI20Clicked);
+			this.btnI2.Clicked += new global::System.EventHandler(this.OnBtnI2Clicked);
+			this.btnI19.Clicked += new global::System.EventHandler(this.OnBtnI19Clicked);
+			this.btnI18.Clicked += new global::System.EventHandler(this.OnBtnI18Clicked);
+			this.btnI17.Clicked += new global::System.EventHandler(this.OnBtnI17Clicked);
+			this.btnI16.Clicked += new global::System.EventHandler(this.OnBtnI16Clicked);
+			this.btnI15.Clicked += new global::System.EventHandler(this.OnBtnI15Clicked);
+			this.btnI14.Clicked += new global::System.EventHandler(this.OnBtnI14Clicked);
+			this.btnI13.Clicked += new global::System.EventHandler(this.OnBtnI13Clicked);
+			this.btnI12.Clicked += new global::System.EventHandler(this.OnBtnI12Clicked);
+			this.btnI11.Clicked += new global::System.EventHandler(this.OnBtnI11Clicked);
+			this.btnI10.Clicked += new global::System.EventHandler(this.OnBtnI10Clicked);
+			this.btnI1.Clicked += new global::System.EventHandler(this.OnBtnI1Clicked);
+			this.btnH9.Clicked += new global::System.EventHandler(this.OnBtnH9Clicked);
+			this.btnH8.Clicked += new global::System.EventHandler(this.OnBtnH8Clicked);
+			this.btnH7.Clicked += new global::System.EventHandler(this.OnBtnH7Clicked);
+			this.btnH6.Clicked += new global::System.EventHandler(this.OnBtnH6Clicked);
+			this.btnH5.Clicked += new global::System.EventHandler(this.OnBtnH5Clicked);
+			this.btnH4.Clicked += new global::System.EventHandler(this.OnBtnH4Clicked);
+			this.btnH3.Clicked += new global::System.EventHandler(this.OnBtnH3Clicked);
+			this.btnH2.Clicked += new global::System.EventHandler(this.OnBtnH2Clicked);
+			this.btnH1.Clicked += new global::System.EventHandler(this.OnBtnH1Clicked);
+			this.btnG9.Clicked += new global::System.EventHandler(this.OnBtnG9Clicked);
+			this.btnG8.Clicked += new global::System.EventHandler(this.OnBtnG8Clicked);
+			this.btnG7.Clicked += new global::System.EventHandler(this.OnBtnG7Clicked);
+			this.btnG6.Clicked += new global::System.EventHandler(this.OnBtnG6Clicked);
+			this.btnG5.Clicked += new global::System.EventHandler(this.OnBtnG5Clicked);
+			this.btnG4.Clicked += new global::System.EventHandler(this.OnBtnG4Clicked);
+			this.btnG3.Clicked += new global::System.EventHandler(this.OnBtnG3Clicked);
+			this.btnG2.Clicked += new global::System.EventHandler(this.OnBtnG2Clicked);
+			this.btnG1.Clicked += new global::System.EventHandler(this.OnBtnG1Clicked);
+			this.btnCrafting.Clicked += new global::System.EventHandler(this.OnBtnCraftingClicked);
+			this.btnA9.Clicked += new global::System.EventHandler(this.OnBtnA9Clicked);
+			this.btnA8.Clicked += new global::System.EventHandler(this.OnBtnA8Clicked);
+			this.btnA7.Clicked += new global::System.EventHandler(this.OnBtnA7Clicked);
+			this.btnA6.Clicked += new global::System.EventHandler(this.OnBtnA6Clicked);
+			this.btnA5.Clicked += new global::System.EventHandler(this.OnBtnA5Clicked);
+			this.btnA4.Clicked += new global::System.EventHandler(this.OnBtnA4Clicked);
+			this.btnA3.Clicked += new global::System.EventHandler(this.OnBtnA3Clicked);
+			this.btnA2.Clicked += new global::System.EventHandler(this.OnBtnA2Clicked);
+			this.btnA18.Clicked += new global::System.EventHandler(this.OnBtnA18Clicked);
+			this.btnA17.Clicked += new global::System.EventHandler(this.OnBtnA17Clicked);
+			this.btnA16.Clicked += new global::System.EventHandler(this.OnBtnA16Clicked);
+			this.btnA15.Clicked += new global::System.EventHandler(this.OnBtnA15Clicked);
+			this.btnA14.Clicked += new global::System.EventHandler(this.OnBtnA14Clicked);
+			this.btnA13.Clicked += new global::System.EventHandler(this.OnBtnA13Clicked);
+			this.btnA12.Clicked += new global::System.EventHandler(this.OnBtnA12Clicked);
+			this.btnA11.Clicked += new global::System.EventHandler(this.OnBtnA11Clicked);
+			this.btnA10.Clicked += new global::System.EventHandler(this.OnBtnA10Clicked);
+			this.btnA1.Clicked += new global::System.EventHandler(this.OnBtnA1Clicked);
 		}
 	}
 }

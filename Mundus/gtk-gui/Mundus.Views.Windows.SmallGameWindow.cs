@@ -334,7 +334,7 @@ namespace Mundus.Views.Windows
 			// Widget Mundus.Views.Windows.SmallGameWindow
 			this.Name = "Mundus.Views.Windows.SmallGameWindow";
 			this.Title = "Mundus (Small Window)";
-			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+			this.WindowPosition = ((global::Gtk.WindowPosition)(2));
 			this.Resizable = false;
 			this.AllowGrow = false;
 			// Container child Mundus.Views.Windows.SmallGameWindow.Gtk.Container+ContainerChild

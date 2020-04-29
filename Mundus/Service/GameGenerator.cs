@@ -36,8 +36,8 @@ namespace Mundus.Service {
                 default: throw new ArgumentException("Screen & inventory size must be \"small\", \"medium\" or \"large\"");
             }
 
-            WI.SelWin.SetDefaults();
-            MI.CreateInstances(WI.SelWin.Size);
+           WI.SelWin.SetDefaults();
+           MI.CreateInstances(WI.SelWin.Size);
         }
 
         public static void GameWindowInitialize() {
