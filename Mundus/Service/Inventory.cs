@@ -4,16 +4,28 @@ using System.Linq;
 
 namespace Mundus.Service {
     public class Inventory {
+        /// <summary>
+        /// Has a size of "Screen and Inventory" and can hold Tools, Materials, Structures and Gear
+        /// </summary>
         public ItemTile[] Hotbar { get; set; }
+        /// <summary>
+        /// Has a size of the "Screen and Inventory" squared and can hold Tools, Materials, Structures and Gear
+        /// </summary>
         public ItemTile[] Items { get; set; }
+        /// <summary>
+        /// Has a size of double the "Screen and Inventory" and can only hold Gear
+        /// </summary>
         public Gear[] Accessories { get; set; }
+        /// <summary>
+        /// Has a size of "Screen and Inventory" and can only hold Gear
+        /// </summary>
         public Gear[] Gear { get; set; }
 
         public Inventory(int screenInvSize) {
-            this.SetNewSizes(screenInvSize);
+            this.SetSizes(screenInvSize);
         }
 
-        public void SetNewSizes(int screenInvSize) {
+        public void SetSizes(int screenInvSize) {
             this.Hotbar = new ItemTile[screenInvSize];
             this.Items = new ItemTile[screenInvSize * screenInvSize];
             this.Accessories = new Gear[screenInvSize * 2];
@@ -68,6 +80,10 @@ namespace Mundus.Service {
             this.Gear[index] = null;
         }
 
+        /// <summary>
+        /// Returns an ItemTile depending on specified place ("hotbar", "items", "accessories" or "gear")
+        /// and specified index
+        /// </summary>
         public ItemTile GetItemTile(string place, int index) {
             ItemTile toReturn = null;
 
@@ -80,6 +96,10 @@ namespace Mundus.Service {
             return toReturn;
         }
 
+        /// <summary>
+        /// Deletes an ItemTile depending on specified place ("hotbar", "items", "accessories" or "gear")
+        /// and specified index
+        /// </summary>
         public void DeleteItemTile(string place, int index) {
             switch (place.ToLower()) {
                 case "hotbar": this.Hotbar[index] = null; break;
@@ -89,6 +109,10 @@ namespace Mundus.Service {
             }
         }
 
+        /// <summary>
+        /// Returns an ItemTile depending on specified place ("hotbar", "items", "accessories" or "gear")
+        /// and specified index in player's inventory
+        /// </summary>
         public static ItemTile GetPlayerItem(string place, int index) {
             return Data.Superlayers.Mobs.MI.Player.Inventory.GetItemTile(place, index);
         }

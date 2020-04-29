@@ -8,7 +8,13 @@ namespace Mundus.Service {
         private static ItemTile[] origin = null;
         private static int oIndex = -1;
 
+        /// <summary>
+        /// Sets the item that will be moved (switched)
+        /// </summary>
+        /// <param name="originName">Name of the inventory location of the item ("hotbar", "items", "accessories" or "gear")</param>
+        /// <param name="originIndex">Index of the inventory location of the item</param>
         public static void SetOrigin(string originName, int originIndex) {
+            // This method overload only extracts the inventory location as an array
             ItemTile[] newOrigin = null;
 
             switch (originName.ToLower()) {
@@ -26,6 +32,11 @@ namespace Mundus.Service {
             WI.SelWin.PrintSelectedItemInfo(newOrigin[originIndex]);
         }
 
+        /// <summary>
+        /// Tries to switch the location of the originally selected item (origin) with the currently selected item 
+        /// </summary>
+        /// <param name="destination">Name of the inventory location of the currently selected item ("hotbar", "items", "accessories" or "gear")</param>
+        /// <param name="destinationIndex">Index of the inventory location of the currently selected item</param>
         public static void ReplaceItems(string destination, int destinationIndex) {
             ItemTile[] destinationLocation = null;
 

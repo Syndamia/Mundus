@@ -28,6 +28,9 @@ namespace Mundus.Views.Windows {
             UpdateNextPrevBtns();
         }
 
+        /// <summary>
+        /// Sets information values for the currently selected recipe
+        /// </summary>
         private void PrintRecipe() {
             if (Recipes.Length > 0) {
                 ClearScreen();
@@ -68,13 +71,17 @@ namespace Mundus.Views.Windows {
             }
         }
 
-
-
+        /// <summary>
+        /// Selects the previous avalable recipe and updates
+        /// </summary>
         protected void OnBtnPrevClicked(object sender, System.EventArgs e) {
             recipeIndex--;
             PrintRecipe();
             UpdateNextPrevBtns();
         }
+        /// <summary>
+        /// Selects the following avalable recipe and updates
+        /// </summary>
         protected void OnBtnNextClicked(object sender, System.EventArgs e) {
             recipeIndex++;
             PrintRecipe();
@@ -86,6 +93,7 @@ namespace Mundus.Views.Windows {
             btnPrev.Sensitive = recipeIndex > 0;
         }
 
+        // Sets default empty values for required items and their amounts
         private void ClearScreen() {
             lblC1.Text = "0";
             lblC2.Text = "0";
@@ -100,6 +108,7 @@ namespace Mundus.Views.Windows {
             imgI5.SetFromStock("empty", IconSize.Dnd);
         }
 
+        // Sets default empty values for the whole window
         private void Reset() {
             ClearScreen();
 
@@ -109,7 +118,6 @@ namespace Mundus.Views.Windows {
             btnNext.Sensitive = false;
             btnCraft.Sensitive = false;
         }
-
 
         protected void OnBtnCraftClicked(object sender, EventArgs e) {
             CraftingController.CraftItemPlayer(Recipes[recipeIndex]);

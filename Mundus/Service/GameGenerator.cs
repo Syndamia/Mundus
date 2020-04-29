@@ -6,6 +6,10 @@ using Mundus.Service.SuperLayers.Generators;
 
 namespace Mundus.Service {
     public static class GameGenerator {
+        /// <summary>
+        /// Sets the map size and starts generation of all superlayers
+        /// </summary>
+        /// <param name="size">Size of the map ("small", "medium" or "large")</param>
         public static void GenerateMap(string size) {
             switch (size.ToLower()) {
                 case "small": MapSizes.CurrSize = MapSizes.SMALL; break;
@@ -19,20 +23,25 @@ namespace Mundus.Service {
             UndergroundSuperLayerGenerator.GenerateAllLayers(MapSizes.CurrSize);
         }
 
-        public static void GameWindowInventorySetup(string size) {
+        /// <summary>
+        /// Sets the game window size and setups mob inventory for certain mobs
+        /// Note: certain mobs base their inventory size from the game window size
+        /// </summary>
+        /// <param name="size">Size of the game window ("small", "medium" or "large")</param>
+        public static void GameWindowSizeSetup(string size) {
             switch (size.ToLower()) {
                 case "small": WI.SelWin = WI.WSGame; break;
                 case "medium": WI.SelWin = WI.WMGame; break;
                 case "large": WI.SelWin = WI.WLGame; break;
                 default: throw new ArgumentException("Screen & inventory size must be \"small\", \"medium\" or \"large\"");
             }
-            GameWindowInventorySetup();
+
+            WI.SelWin.SetDefaults();
+            MI.CreateInstances(WI.SelWin.Size);
         }
 
-        public static void GameWindowInventorySetup() {
-            WI.SelWin.SetDefaults();
+        public static void GameWindowInitialize() {
             WI.WPause.GameWindow = WI.SelWin;
-            MI.CreateInventories(WI.SelWin.Size);
             WI.SelWin.PrintScreen();
             WI.SelWin.PrintMainMenu();
             WI.SelWin.Show();

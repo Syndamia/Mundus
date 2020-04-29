@@ -6,6 +6,7 @@ namespace Mundus.Views.Windows {
     public partial class MainWindow : Gtk.Window {
         public MainWindow() : base( Gtk.WindowType.Toplevel ) {
             this.Build();
+            this.lblBuild.Text = Mundus.Data.Windows.WI.BuildName;
         }
 
         private void OnDeleteEvent(object sender, DeleteEventArgs a) {

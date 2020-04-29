@@ -23,7 +23,7 @@ namespace Mundus.Service.Tiles {
         /// </summary>
         public int RndMovementRate { get; protected set; }
 
-        public MobTile(string stock_id, int health, ISuperLayer currentSuperLayer, int inventorySize = 5, int rndMovementQualifier = 3, Material droppedUponDeath = null) {
+        public MobTile(string stock_id, int health, ISuperLayer currentSuperLayer, int inventorySize = 5, Material droppedUponDeath = null, int rndMovementQualifier = 3) {
             this.stock_id = stock_id;
             this.Texture = new Image(stock_id, IconSize.Dnd);
             this.Health = health;

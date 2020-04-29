@@ -17,7 +17,10 @@ namespace Mundus.Views.Windows {
             WindowController.ShowMainWindow(this);
         }
 
-        //You can choose your Map size only in creative, it is predetermined by screen & inventory size in survival.
+        /// <summary>
+        /// You can choose your Map size only in creative, it is predetermined by screen & inventory size in survival.
+        /// </summary>
+
         private void OnRbCreativeToggled(object sender, EventArgs e) {
             if (rbCreative.Active) {
                 rbMSmall.Sensitive = true;
@@ -31,8 +34,6 @@ namespace Mundus.Views.Windows {
             }
         }
 
-        /*Sometimes the default values get messed up and you could have, for example, 
-         *a large map with large screen & inventory on survival. This prevents that.*/
         public void SetDefaults() {
             rbSurvival.Active = true;
             rbEasy.Active = true;
@@ -78,11 +79,13 @@ namespace Mundus.Views.Windows {
             //TODO: save settings somewhere
 
             this.Hide();
-            this.MapGenerate();
             this.ScreenInventorySetup();
+            this.GenerateMap();
+            GameGenerator.GameWindowInitialize();
         }
 
-        private void MapGenerate() {
+        // Calls GameGenerator to generate the map depending on the selected map size button
+        private void GenerateMap() {
             string size;
             if (rbMSmall.Active) {
                 size = "small";
@@ -99,7 +102,7 @@ namespace Mundus.Views.Windows {
             GameGenerator.GenerateMap(size);
         }
 
-        //Does the inital steps that are required by all windows upon game generation
+        // Does the inital steps that are required by all windows upon game generation
         private void ScreenInventorySetup() {
             string gameWindow;
 
@@ -116,7 +119,7 @@ namespace Mundus.Views.Windows {
                 throw new ArgumentException("No screen & inventory size was selected");
             }
 
-            GameGenerator.GameWindowInventorySetup(gameWindow);
+            GameGenerator.GameWindowSizeSetup(gameWindow);
         }
     }
 }

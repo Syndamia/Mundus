@@ -8,6 +8,7 @@ namespace Mundus.Views.Windows {
 
         public PauseWindow() : base( Gtk.WindowType.Toplevel ) {
             this.Build();
+            this.lblBuild.Text = Mundus.Data.Windows.WI.BuildName;
         }
 
         protected void OnDeleteEvent(object o, Gtk.DeleteEventArgs args) {
