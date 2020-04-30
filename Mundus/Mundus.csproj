@@ -82,6 +82,8 @@
     <EmbeddedResource Include="Icons\Land\Tools\rock_shovel.png" />
     <EmbeddedResource Include="Icons\Sky\Ground\s_sky.png" />
     <EmbeddedResource Include="Icons\Land\Mobs\L_cow.png" />
+    <EmbeddedResource Include="Icons\Land\Tools\wooden_longsword.png" />
+    <EmbeddedResource Include="Icons\Land\Tools\rock_longsword.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />

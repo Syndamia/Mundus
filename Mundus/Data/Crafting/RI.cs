@@ -9,10 +9,12 @@ namespace Mundus.Data.Crafting {
         public static CraftingRecipe WoodenShovel { get; private set; }
         public static CraftingRecipe WoodenPickaxe { get; private set; }
         public static CraftingRecipe WoodenAxe { get; private set; }
+        public static CraftingRecipe WoodenLongsword { get; private set; }
 
-        public static CraftingRecipe StoneShovel { get; private set; }
-        public static CraftingRecipe StonePickAxe { get; private set; }
-        public static CraftingRecipe StoneAxe { get; private set; }
+        public static CraftingRecipe RockShovel { get; private set; }
+        public static CraftingRecipe RockPickaxe { get; private set; }
+        public static CraftingRecipe RockAxe { get; private set; }
+        public static CraftingRecipe RockLongsword { get; private set; }
 
         public static CraftingRecipe WoodenLadder { get; private set; }
 
@@ -20,16 +22,18 @@ namespace Mundus.Data.Crafting {
             WoodenShovel = new CraftingRecipe(ToolPresets.GetAWoodenShovel(), 5, MaterialPresets.GetAStick());
             WoodenPickaxe = new CraftingRecipe(ToolPresets.GetAWoodenPickaxe(), 4, MaterialPresets.GetAStick());
             WoodenAxe = new CraftingRecipe(ToolPresets.GetAWoodenAxe(), 3, MaterialPresets.GetAStick());
+            WoodenLongsword = new CraftingRecipe(ToolPresets.GetAWoodenLongsword(), 4, MaterialPresets.GetAStick());
 
-            StoneShovel = new CraftingRecipe(ToolPresets.GetARockShovel(), 4, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
-            StonePickAxe = new CraftingRecipe(ToolPresets.GetARockPickaxe(), 4, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
-            StoneAxe = new CraftingRecipe(ToolPresets.GetARockAxe(), 3, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
+            RockShovel = new CraftingRecipe(ToolPresets.GetARockShovel(), 4, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
+            RockPickaxe = new CraftingRecipe(ToolPresets.GetARockPickaxe(), 4, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
+            RockAxe = new CraftingRecipe(ToolPresets.GetARockAxe(), 3, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
+            RockLongsword = new CraftingRecipe(ToolPresets.GetARockLongsword(), 5, MaterialPresets.GetALandRock(), 2, MaterialPresets.GetAStick());
 
             WoodenLadder = new CraftingRecipe(StructurePresets.GetAWoodenLadder(), 6, MaterialPresets.GetAStick());
 
             AllRecipies = new List<CraftingRecipe> { 
-                WoodenShovel, WoodenPickaxe, WoodenAxe, 
-                StoneShovel, StonePickAxe, StoneAxe,
+                WoodenShovel, WoodenPickaxe, WoodenAxe, WoodenLongsword,
+                RockShovel, RockPickaxe, RockAxe, RockLongsword,
                 WoodenLadder
             };
         }

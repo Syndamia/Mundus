@@ -26,8 +26,8 @@ namespace Mundus.Service.SuperLayers.Generators {
                         LI.Land.GetStructureLayerTile(y, x) == null) 
                     {
                         if (y == size / 2 && x == size / 2) {
-                           MI.Player.YPos = x;
-                           MI.Player.XPos = y;
+                           MI.Player.YPos = y;
+                           MI.Player.XPos = x;
                            tiles[y, x] = MI.Player;
                         }
                         else if (rnd.Next(0, 20 + Difficulty.SelDifficulty) == 1) {

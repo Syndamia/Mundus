@@ -16,6 +16,10 @@ namespace Mundus.Service.Tiles.ItemPresets {
             return new Tool("wooden_shovel", ToolTypes.Shovel, 1);
         }
 
+        public static Tool GetAWoodenLongsword() {
+            return new Tool("wooden_longsword", ToolTypes.Sword, 2);
+        }
+
         public static Tool GetARockPickaxe() {
             return new Tool("rock_pickaxe", ToolTypes.Pickaxe, 2);
         }
@@ -26,6 +30,10 @@ namespace Mundus.Service.Tiles.ItemPresets {
 
         public static Tool GetARockShovel() {
             return new Tool("rock_shovel", ToolTypes.Shovel, 2);
+        }
+
+        public static Tool GetARockLongsword() {
+            return new Tool("rock_longsword", ToolTypes.Sword, 4);
         }
     }
 }

@@ -26,10 +26,8 @@ namespace Mundus.Service.Mob.Controllers {
             return stock_id;
         }
 
-        public static void DamagePlayer(int healthPoints) {
-            MI.Player.Health -= healthPoints;
-
-            if (MI.Player.Health <= 0) {
+        public static void DamagePlayer(int damagePoints) {
+            if (!MI.Player.TakeDamage(damagePoints)) {
                 //do smth
             }
         }
@@ -38,12 +36,8 @@ namespace Mundus.Service.Mob.Controllers {
         /// Heals the player (unless/until he has full health)
         /// </summary>
         /// <param name="healthPoints">Health points to heal with</param>
-        public static void TryHealPlayer(int healthPoints) {
-            MI.Player.Health += healthPoints;
-
-            if (MI.Player.Health > MapSizes.CurrSize / 5 * 4) {
-                MI.Player.Health = MapSizes.CurrSize / 5 * 4;
-            }
+        public static void HealPlayer(int healthPoints) {
+            MI.Player.Heal(healthPoints);
         }
 
         /// <summary>

@@ -54,7 +54,7 @@
         /// Removes health from structure
         /// </summary>
         /// <returns>Whether the structure can still be damaged</returns>
-        public bool Damage(int damagePoints) {
+        public bool TakeDamage(int damagePoints) {
             this.Health -= damagePoints;
             return this.Health > 0;
         }

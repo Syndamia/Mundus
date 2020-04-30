@@ -3,5 +3,6 @@
         public const int Shovel = 0;
         public const int Axe = 1;
         public const int Pickaxe = 2;
+        public const int Sword = 3;
     }
 }

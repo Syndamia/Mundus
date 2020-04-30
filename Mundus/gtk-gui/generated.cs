@@ -74,6 +74,10 @@ namespace Stetic
 				w1.Add("S_sky", w31);
 				global::Gtk.IconSet w32 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Mobs.L_cow.png"));
 				w1.Add("L_cow", w32);
+				global::Gtk.IconSet w33 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.wooden_longsword.png"));
+				w1.Add("wooden_longsword", w33);
+				global::Gtk.IconSet w34 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.rock_longsword.png"));
+				w1.Add("rock_longsword", w34);
 				w1.AddDefault();
 			}
 		}

@@ -72,8 +72,12 @@ namespace Mundus.Views.Windows {
             }
             else {
                 if (Inventory.GetPlayerItem(selPlace, selIndex) != null) {
-                    //try to do MobFighting
-                    MobTerraforming.PlayerTerraformAt(mapYPos, mapXPos, selPlace, selIndex);
+                    if (MobFighting.ExistsFightTargetForPlayer(mapYPos, mapXPos)) {
+                        MobFighting.PlayerTryFight(selPlace, selIndex, mapYPos, mapXPos);
+                    }
+                    else {
+                        MobTerraforming.PlayerTerraformAt(mapYPos, mapXPos, selPlace, selIndex);
+                    }
                 }
                 ResetSelection();
             }
@@ -361,7 +365,7 @@ namespace Mundus.Views.Windows {
             //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[1] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Pickaxe, 1);
             //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Axe, 1);
 
-            MobStatsController.TryHealPlayer(1);
+            MobStatsController.HealPlayer(1);
             PrintMainMenu();
         }
 

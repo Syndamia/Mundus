@@ -52,8 +52,12 @@ namespace Mundus.Views.Windows {
             }
             else {
                 if (Inventory.GetPlayerItem(selPlace, selIndex) != null) {
-                    //try to do MobFighting
-                    MobTerraforming.PlayerTerraformAt(mapYPos, mapXPos, selPlace, selIndex);
+                    if (MobFighting.ExistsFightTargetForPlayer(mapYPos, mapXPos)) {
+                        MobFighting.PlayerTryFight(selPlace, selIndex, mapYPos, mapXPos);
+                    }
+                    else {
+                        MobTerraforming.PlayerTerraformAt(mapYPos, mapXPos, selPlace, selIndex);
+                    }
                 }
                 ResetSelection();
             }

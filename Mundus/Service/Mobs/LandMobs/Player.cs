@@ -8,8 +8,8 @@ namespace Mundus.Service.Mobs.LandMobs {
         /// <summary>
         /// Note: player has an rndMovementQualifier of -1 and drops first item in the hotbar
         /// </summary>
-        public Player(string stock_id, int health, ISuperLayer currentSuperLayer, int inventorySize)
-               : base(stock_id, health, currentSuperLayer, inventorySize, null, -1) 
+        public Player(string stock_id, int health, int defence, ISuperLayer currentSuperLayer, int inventorySize)
+               : base(stock_id, health, defence, currentSuperLayer, inventorySize, null, -1) 
         {
             this.DroppedUponDeath = (Material)this.Inventory.Hotbar[0];
         }

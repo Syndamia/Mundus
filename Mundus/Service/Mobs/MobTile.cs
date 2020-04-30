@@ -1,5 +1,6 @@
 ﻿using System;
 using Gtk;
+using Mundus.Data;
 using Mundus.Data.SuperLayers;
 using Mundus.Service.Mobs;
 using Mundus.Service.Mobs.Controllers;
@@ -13,7 +14,8 @@ namespace Mundus.Service.Tiles {
         public ISuperLayer CurrSuperLayer { get; set; }
         public int YPos { get; set; }
         public int XPos { get; set; }
-        public int Health { get; set; }
+        public int Health { get; private set; }
+        public int Defense { get; set; }
         public Material DroppedUponDeath { get; protected set; }
         public Inventory Inventory { get; set; }
 
@@ -23,14 +25,36 @@ namespace Mundus.Service.Tiles {
         /// </summary>
         public int RndMovementRate { get; protected set; }
 
-        public MobTile(string stock_id, int health, ISuperLayer currentSuperLayer, int inventorySize = 5, Material droppedUponDeath = null, int rndMovementQualifier = 3) {
+        public MobTile(string stock_id, int health, int defence, ISuperLayer currentSuperLayer, int inventorySize = 5, Material droppedUponDeath = null, int rndMovementQualifier = 3) {
             this.stock_id = stock_id;
             this.Texture = new Image(stock_id, IconSize.Dnd);
             this.Health = health;
+            this.Defense = defence;
             this.CurrSuperLayer = currentSuperLayer;
             this.RndMovementRate = rndMovementQualifier;
             this.DroppedUponDeath = droppedUponDeath;
             this.Inventory = new Inventory(inventorySize);
+        }
+
+        /// <summary>
+        /// Removes health from structure
+        /// </summary>
+        /// <returns>Whether the mobtile can still be damaged</returns>
+        public bool TakeDamage(int damagePoints) {
+            this.Health -= damagePoints;
+            return this.Health > 0;
+        }
+
+        /// <summary>
+        /// Heals the mobtile (unless/until it has full health (4 * inventorySize))
+        /// </summary>
+        /// <param name="healthPoints">Health points to heal with</param>
+        public void Heal(int healthPoints) {
+            this.Health += healthPoints;
+
+            if (this.Health > MapSizes.CurrSize / 5 * 4) {
+                this.Health = MapSizes.CurrSize / 5 * 4;
+            }
         }
     }
 }

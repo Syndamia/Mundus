@@ -91,7 +91,7 @@ namespace Mundus.Service.Mobs.Controllers {
                 }
 
                 // Damage to the structure is done after adding the dropped item/items.
-                if (!selStructure.Damage(damagePoints)) {
+                if (!selStructure.TakeDamage(damagePoints)) {
                     MI.Player.CurrSuperLayer.SetStructureAtPosition(null, mapYPos, mapXPos);
                 }
             }

@@ -162,6 +162,16 @@
         <property name="Image">resource:Mundus.Icons.Land.Mobs.L_cow.png</property>
       </source>
     </icon-set>
+    <icon-set id="wooden_longsword">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Tools.wooden_longsword.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="rock_longsword">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Tools.rock_longsword.png</property>
+      </source>
+    </icon-set>
   </icon-factory>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.NewGameWindow" design-size="581 275">
     <property name="MemberName" />
