@@ -1,5 +1,5 @@
 ﻿using System;
-using Mundus.Service.Tiles;
+using Mundus.Service.Tiles.Mobs;
 using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Data.SuperLayers {

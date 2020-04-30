@@ -2,10 +2,10 @@
 using System.Linq;
 using Mundus.Data.Crafting;
 using Mundus.Data.Superlayers.Mobs;
-using Mundus.Service.Tiles;
+using Mundus.Service.Tiles.Mobs;
 using Mundus.Service.Tiles.Items;
 
-namespace Mundus.Service.Crafting {
+namespace Mundus.Service.Tiles.Crafting {
     public static class CraftingController {
         private static Dictionary<ItemTile, int> avalableItems;
 

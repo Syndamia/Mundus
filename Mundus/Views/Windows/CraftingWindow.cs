@@ -1,6 +1,6 @@
 ﻿using Gtk;
 using System;
-using Mundus.Service.Crafting;
+using Mundus.Service.Tiles.Crafting;
 using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Views.Windows {

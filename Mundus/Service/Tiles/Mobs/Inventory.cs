@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace Mundus.Service {
+namespace Mundus.Service.Tiles.Mobs {
     public class Inventory {
         /// <summary>
         /// Has a size of "Screen and Inventory" and can hold Tools, Materials, Structures and Gear

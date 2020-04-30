@@ -1,9 +1,7 @@
-﻿using System.Linq;
-using Mundus.Data.SuperLayers;
-using Mundus.Service.Tiles;
+﻿using Mundus.Data.SuperLayers;
 using Mundus.Service.Tiles.Items;
 
-namespace Mundus.Service.Mobs.LandMobs {
+namespace Mundus.Service.Tiles.Mobs.LandMobs {
     public class Player : MobTile {
         /// <summary>
         /// Note: player has an rndMovementQualifier of -1 and drops first item in the hotbar

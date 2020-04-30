@@ -1,8 +1,4 @@
-﻿using System;
-using Mundus.Service.Tiles.Items;
-using Mundus.Service.Tiles.ItemPresets;
-
-namespace Mundus.Service.Tiles.ItemPresets {
+﻿namespace Mundus.Service.Tiles.Items.Presets {
     public static class GroundPresets {
         /// <summary>
         /// Returns a new instance of the sky ground tile

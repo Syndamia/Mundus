@@ -1,12 +1,9 @@
-﻿using System;
-using Gtk;
+﻿using Gtk;
 using Mundus.Data;
 using Mundus.Data.SuperLayers;
-using Mundus.Service.Mobs;
-using Mundus.Service.Mobs.Controllers;
 using Mundus.Service.Tiles.Items;
 
-namespace Mundus.Service.Tiles {
+namespace Mundus.Service.Tiles.Mobs {
     public class MobTile : ITile {
         public string stock_id { get; private set; }
         public Image Texture { get; private set; }

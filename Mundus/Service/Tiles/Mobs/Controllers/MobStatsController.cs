@@ -3,7 +3,7 @@ using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Service.SuperLayers;
 
-namespace Mundus.Service.Mob.Controllers {
+namespace Mundus.Service.Tiles.Mobs.Controllers {
     public static class MobStatsController {
         public static int GetPlayerHealth() {
             return MI.Player.Health;

@@ -1,6 +1,6 @@
 ﻿using Mundus.Data.SuperLayers;
-using Mundus.Service.Mobs.LandMobs;
-using Mundus.Service.Tiles.ItemPresets;
+using Mundus.Service.Tiles.Mobs.LandMobs;
+using Mundus.Service.Tiles.Items.Presets;
 
 namespace Mundus.Data.Superlayers.Mobs {
     public static class MI { //stands for Mob Instances

@@ -1,9 +1,7 @@
 ﻿using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.Windows;
-using Mundus.Service.Tiles;
-using Mundus.Service.Tiles.Items;
 
-namespace Mundus.Service {
+namespace Mundus.Service.Tiles.Items {
     public static class SwitchItems {
         private static ItemTile[] origin = null;
         private static int oIndex = -1;

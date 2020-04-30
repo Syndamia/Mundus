@@ -1,7 +1,4 @@
-﻿using System;
-using Mundus.Service.Tiles.Items;
-
-namespace Mundus.Service.Tiles.ItemPresets {
+﻿namespace Mundus.Service.Tiles.Items.Presets {
     public static class MaterialPresets {
         /// <summary>
         /// Returns a new instance of the land rock material tile

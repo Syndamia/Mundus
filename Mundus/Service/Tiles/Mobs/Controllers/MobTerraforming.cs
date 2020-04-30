@@ -5,7 +5,7 @@ using Mundus.Data.Tiles;
 using Mundus.Service.SuperLayers;
 using Mundus.Service.Tiles.Items;
 
-namespace Mundus.Service.Mobs.Controllers {
+namespace Mundus.Service.Tiles.Mobs.Controllers {
     public static class MobTerraforming {
         /// <summary>
         /// Tries to place a selected structure/ground tile or to mine/dig (destroy) at the selected location

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Mundus.Service.Crafting;
-using Mundus.Service.Tiles.ItemPresets;
+using Mundus.Service.Tiles.Crafting;
+using Mundus.Service.Tiles.Items.Presets;
 
 namespace Mundus.Data.Crafting {
     public static class RI { //short for Recipe Instances

@@ -1,9 +1,7 @@
-﻿using System;
-using Mundus.Data.SuperLayers;
-using Mundus.Service.Tiles;
-using Mundus.Service.Tiles.ItemPresets;
+﻿using Mundus.Data.SuperLayers;
+using Mundus.Service.Tiles.Items.Presets;
 
-namespace Mundus.Service.Mobs.LandMobs {
+namespace Mundus.Service.Tiles.Mobs.LandMobs {
     public static class LandMobsPresets {
         /// <summary>
         /// Returns a new instance of the cow mob tile

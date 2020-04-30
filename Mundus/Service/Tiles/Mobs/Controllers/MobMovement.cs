@@ -2,11 +2,11 @@
 using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
-using Mundus.Service.Mobs.LandMobs;
 using Mundus.Service.SuperLayers;
-using Mundus.Service.Tiles;
+using Mundus.Service.Tiles.Mobs;
+using Mundus.Service.Tiles.Mobs.LandMobs;
 
-namespace Mundus.Service.Mobs.Controllers {
+namespace Mundus.Service.Tiles.Mobs.Controllers {
     public static class MobMovement {
         private static Random rnd = new Random();
 

@@ -1,11 +1,10 @@
 ﻿using System.Linq;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.Tiles;
-using Mundus.Service.Mobs.LandMobs;
-using Mundus.Service.Tiles;
 using Mundus.Service.Tiles.Items;
+using Mundus.Service.Tiles.Mobs.LandMobs;
 
-namespace Mundus.Service.Mobs.Controllers {
+namespace Mundus.Service.Tiles.Mobs.Controllers {
     public static class MobFighting {
         /// <summary>
         /// Returns if for the specified position in the superlayer the payer is in, there exists a mob

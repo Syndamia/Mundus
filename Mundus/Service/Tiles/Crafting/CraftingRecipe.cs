@@ -2,7 +2,7 @@
 using System.Linq;
 using Mundus.Service.Tiles.Items;
 
-namespace Mundus.Service.Crafting {
+namespace Mundus.Service.Tiles.Crafting {
     public class CraftingRecipe {
         /// <summary>
         /// Item that will be added to the inventory after crafting

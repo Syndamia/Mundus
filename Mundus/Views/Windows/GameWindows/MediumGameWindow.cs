@@ -1,12 +1,12 @@
 ﻿using System;
 using Gtk;
 using Mundus.Service;
-using Mundus.Service.Mob.Controllers;
-using Mundus.Service.Mobs.Controllers;
+using Mundus.Service.Tiles.Mobs.Controllers;
 using Mundus.Service.SuperLayers;
 using Mundus.Service.Tiles.Items;
+using Mundus.Service.Tiles.Mobs;
 
-namespace Mundus.Views.Windows {
+namespace Mundus.Views.Windows.GameWindows {
     public partial class MediumGameWindow : Gtk.Window, IGameWindow {
         public int Size { get; private set; }
 

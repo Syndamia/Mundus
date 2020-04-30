@@ -1,6 +1,6 @@
 ﻿using Mundus.Service.Tiles.Items;
 
-namespace Mundus.Views.Windows {
+namespace Mundus.Views.Windows.GameWindows {
     public interface IGameWindow {
         int Size { get; }
 

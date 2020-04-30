@@ -1,8 +1,6 @@
-﻿using System;
-using Mundus.Data.Tiles;
-using Mundus.Service.Tiles.Items;
+﻿using Mundus.Data.Tiles;
 
-namespace Mundus.Service.Tiles.ItemPresets {
+namespace Mundus.Service.Tiles.Items.Presets {
     public static class ToolPresets {
         public static Tool GetAWoodenPickaxe() {
             return new Tool("wooden_pickaxe", ToolTypes.Pickaxe, 1);
