@@ -2,6 +2,7 @@
 using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
+using Mundus.Service.Mobs.LandMobs;
 using Mundus.Service.SuperLayers;
 using Mundus.Service.Tiles;
 
@@ -39,8 +40,11 @@ namespace Mundus.Service.Mobs.Controllers {
 
         public static void ChangeMobPosition(MobTile mob, int yPos, int xPos, int mapSize) {
             if (InBoundaries(yPos, xPos)) {
-                if (CanWalkAt(mob, yPos, xPos)) {
+                if (CanWalkTo(mob, yPos, xPos)) {
                     ChangeMobPosition(mob, yPos, xPos);
+                }
+                else if (mob.GetType() == typeof(Player)) {
+                    LogController.AddMessage($"Cannot walk to Y:{yPos}, X:{xPos}");
                 }
             }
         }
@@ -61,15 +65,30 @@ namespace Mundus.Service.Mobs.Controllers {
                 if (HeightController.GetLayerUnderneathMob(mob).GetMobLayerTile(yPos, xPos) == null) 
                 {
                     mob.CurrSuperLayer = HeightController.GetLayerUnderneathMob(mob);
+
+                    if (mob.GetType() == typeof(Player)) {
+                        LogController.AddMessage($"Player fell down a superlayer, to {mob.CurrSuperLayer}");
+                    }
+                }
+                else if (mob.GetType() == typeof(Player)) {
+                    LogController.AddMessage($"Cannot fall down a superlayer, blocked by {HeightController.GetLayerUnderneathMob(mob).GetMobLayerTile(yPos, xPos).stock_id}");
                 }
             }
             // If mob can go down a layer from non-solid ground
             else if (!mob.CurrSuperLayer.GetGroundLayerTile(yPos, xPos).Solid &&
                      HeightController.GetLayerUnderneathMob(mob) != null) 
                 {
+
                 if (HeightController.GetLayerUnderneathMob(mob).GetMobLayerTile(yPos, xPos) == null) 
                 {
                     mob.CurrSuperLayer = HeightController.GetLayerUnderneathMob(mob);
+
+                    if (mob.GetType() == typeof(Player)) {
+                        LogController.AddMessage($"Player descended a superlayer, to {mob.CurrSuperLayer}");
+                    }
+                }
+                else if (mob.GetType() == typeof(Player)) {
+                    LogController.AddMessage($"Cannot descend a superlayer, blocked by {HeightController.GetLayerUnderneathMob(mob).GetMobLayerTile(yPos, xPos).stock_id}");
                 }
             }
             // If mob can climb up
@@ -86,11 +105,24 @@ namespace Mundus.Service.Mobs.Controllers {
                         !HeightController.GetLayerAboveMob(mob).GetGroundLayerTile(yPos, xPos).Solid) 
                     {
                         mob.CurrSuperLayer = HeightController.GetLayerAboveMob(mob);
+
+                        if (mob.GetType() == typeof(Player)) {
+                            LogController.AddMessage($"Player climbed up a superlayer");
+                        }
                     }
-                    else {
-                        // TODO: add a message to log
+                    else if (HeightController.GetLayerAboveMob(mob).GetGroundLayerTile(yPos, xPos) != null && mob.GetType() == typeof(Player)) {
+                        LogController.AddMessage($"Cannot climb up a superlayer, there is solid ground above");
                     }
                 }
+                else if (!mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos).IsClimable && mob.GetType() == typeof(Player)) {
+                    LogController.AddMessage($"Cannot climb up a superlayer using a \"{mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos).stock_id}\"");
+                }
+                else if (HeightController.GetLayerAboveMob(mob) == null && mob.GetType() == typeof(Player)) {
+                    LogController.AddMessage($"There is no superlayer to climb up to");
+                }
+            }
+            else if (HeightController.GetLayerAboveMob(mob).GetMobLayerTile(yPos, xPos) != null && mob.GetType() == typeof(Player)) {
+                LogController.AddMessage($"Cannot climb up a superlayer, {HeightController.GetLayerAboveMob(mob).GetMobLayerTile(yPos, xPos).stock_id} is blocking the way");
             }
 
             mob.YPos = yPos;
@@ -98,7 +130,7 @@ namespace Mundus.Service.Mobs.Controllers {
             mob.CurrSuperLayer.SetMobAtPosition(mob, yPos, xPos);
         }
 
-        private static bool CanWalkAt(MobTile mob, int yPos, int xPos) {
+        private static bool CanWalkTo(MobTile mob, int yPos, int xPos) {
             //Mobs can only walk on free ground (no structure or mob) or walkable structures
             return (mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) == null ||
                     mob.CurrSuperLayer.GetStructureLayerTile(yPos, xPos).IsWalkable) &&

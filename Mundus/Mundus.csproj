@@ -154,6 +154,10 @@
     <Compile Include="Service\Mobs\Controllers\MobTerraforming.cs" />
     <Compile Include="Service\Mobs\LandMobs\Player.cs" />
     <Compile Include="Data\Difficulty.cs" />
+    <Compile Include="Data\Log.cs" />
+    <Compile Include="Service\LogController.cs" />
+    <Compile Include="Views\Windows\LogWindow.cs" />
+    <Compile Include="gtk-gui\Mundus.Views.Windows.LogWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />

@@ -55,5 +55,11 @@ namespace Mundus.Service {
             WI.WCrafting.Show();
             WI.WCrafting.Present();
         }
+
+        public static void ShowLogWindow() {
+            WI.WLog.Initialize();
+            WI.WLog.Show();
+            WI.WLog.Present();
+        }
     }
 }

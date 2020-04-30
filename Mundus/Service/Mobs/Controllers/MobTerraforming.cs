@@ -16,18 +16,34 @@ namespace Mundus.Service.Mobs.Controllers {
             var selectedItemType = Inventory.GetPlayerItem(inventoryPlace, inventoryIndex).GetType();
 
             // If player can place strucure
-            if (selectedItemType == typeof(Structure) && PlayerCanBuildStructureAt(mapYPos, mapXPos)) {
-                PlayerBuildStructureAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
-                MI.Player.Inventory.DeleteItemTile(inventoryPlace, inventoryIndex);
+            if (selectedItemType == typeof(Structure)) {
+                if (PlayerCanBuildStructureAt(mapYPos, mapXPos)) {
+                    PlayerBuildStructureAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
+                    MI.Player.Inventory.DeleteItemTile(inventoryPlace, inventoryIndex);
+                }
+                else {
+                    LogController.AddMessage($"Cannot build structure at Y:{mapYPos}, X:{mapXPos}");
+                }
+
             }
             // If Player can place ground
-            else if (selectedItemType == typeof(GroundTile) && PlayerCanPlaceGroundAt(mapYPos, mapXPos)) {
-                PlayerPlaceGroundAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
-                MI.Player.Inventory.DeleteItemTile(inventoryPlace, inventoryIndex);
+            else if (selectedItemType == typeof(GroundTile)) {
+                if (PlayerCanPlaceGroundAt(mapYPos, mapXPos)) {
+                    PlayerPlaceGroundAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
+                    MI.Player.Inventory.DeleteItemTile(inventoryPlace, inventoryIndex);
+                }
+                else {
+                    LogController.AddMessage($"Cannot place ground at Y:{mapYPos}, X:{mapXPos}");
+                }
             }
             // If player can mine/dig
-            else if (selectedItemType == typeof(Tool) && PlayerCanDestroyAt(mapYPos, mapXPos)) {
-                PlayerDestroyAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
+            else if (selectedItemType == typeof(Tool)) {
+                if (PlayerCanDestroyAt(mapYPos, mapXPos)) {
+                    PlayerDestroyAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
+                }
+                else {
+                    LogController.AddMessage($"Cannot destroy at Y:{mapYPos}, X:{mapXPos}");
+                }
             }
         }
 
@@ -53,7 +69,7 @@ namespace Mundus.Service.Mobs.Controllers {
         private static void PlayerTryDestroyGroundAt(int mapYPos, int mapXPos, Tool shovel) {
             var selectedGround = MI.Player.CurrSuperLayer.GetGroundLayerTile(mapYPos, mapXPos);
 
-            // Grdound tiles that should be unbreakable have a negative required shovel class
+            // Ground tiles that should be unbreakable have a negative required shovel class
             if (selectedGround.ReqShovelClass <= shovel.Class && selectedGround.ReqShovelClass >= 0) {
                 MI.Player.CurrSuperLayer.SetGroundAtPosition(null, mapYPos, mapXPos);
 
@@ -68,6 +84,14 @@ namespace Mundus.Service.Mobs.Controllers {
                 if (MI.Player.Inventory.Items.Contains(null)) {
                     MI.Player.Inventory.AppendToItems(new GroundTile(selectedGround));
                 }
+
+                LogController.AddMessage($"Player destroyed \"{selectedGround.stock_id}\" from layer \"{MI.Player.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
+            }
+            else if (selectedGround.ReqShovelClass > shovel.Class) {
+                LogController.AddMessage($"Ground \"{selectedGround.stock_id}\" requires minimum shovel class of: {selectedGround.ReqShovelClass}");
+            }
+            else { // selectedGround.ReqSHovelClass < 0
+                LogController.AddMessage($"This ground cannot be destroyed.");
             }
         }
 
@@ -93,7 +117,18 @@ namespace Mundus.Service.Mobs.Controllers {
                 // Damage to the structure is done after adding the dropped item/items.
                 if (!selStructure.TakeDamage(damagePoints)) {
                     MI.Player.CurrSuperLayer.SetStructureAtPosition(null, mapYPos, mapXPos);
+
+                    LogController.AddMessage($"Player destroyed \"{selStructure.stock_id}\" from layer \"{MI.Player.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
                 }
+                else {
+                    LogController.AddMessage($"Player did {damagePoints} damage to \"{selStructure.stock_id}\" (H:{selStructure.Health})");
+                }
+            }
+            else if (selStructure.ReqToolType != tool.Type) {
+                LogController.AddMessage($"Structure \"{selStructure.stock_id}\" requires tool type: {selStructure.ReqToolType}");
+            }
+            else { // selStructure.ReqToolClass > tool.Class
+                LogController.AddMessage($"Structure \"{selStructure.stock_id}\" requires minimum tool class of: {selStructure.ReqToolClass}");
             }
         }
 
@@ -107,6 +142,8 @@ namespace Mundus.Service.Mobs.Controllers {
             GroundTile toPlace = (GroundTile)MI.Player.Inventory.GetItemTile(inventoryPlace, inventoryIndex);
 
             MI.Player.CurrSuperLayer.SetGroundAtPosition(toPlace, yPos, xPos);
+
+            LogController.AddMessage($"Set ground \"{toPlace.stock_id}\" on layer \"{MI.Player.CurrSuperLayer}\" at Y:{yPos}, X:{xPos}");
         }
 
 
@@ -123,9 +160,13 @@ namespace Mundus.Service.Mobs.Controllers {
                 HeightController.GetLayerUnderneathMob(MI.Player).GetStructureLayerTile(yPos, xPos) == null) 
             {
                 HeightController.GetLayerUnderneathMob(MI.Player).SetStructureAtPosition(toBuild, yPos, xPos);
+
+                LogController.AddMessage($"Set structure \"{toBuild.stock_id}\" on layer \"{HeightController.GetLayerUnderneathMob(MI.Player)}\" at Y:{yPos}, X:{xPos}");
             }
             else if (MI.Player.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) != null) {
                 MI.Player.CurrSuperLayer.SetStructureAtPosition(toBuild, yPos, xPos);
+
+                LogController.AddMessage($"Set structure \"{toBuild.stock_id}\" on layer \"{MI.Player.CurrSuperLayer}\" at Y:{yPos}, X:{xPos}");
             }
         }
     }

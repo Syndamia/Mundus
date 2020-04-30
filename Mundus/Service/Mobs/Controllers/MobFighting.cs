@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.Tiles;
+using Mundus.Service.Mobs.LandMobs;
 using Mundus.Service.Tiles;
 using Mundus.Service.Tiles.Items;
 
@@ -59,14 +60,31 @@ namespace Mundus.Service.Mobs.Controllers {
                 MobTile targetMob = mob.CurrSuperLayer.GetMobLayerTile(mapYPos, mapXPos);
 
                 if (selTool.Class >= targetMob.Defense) {
-                    if (!targetMob.TakeDamage(1 + (selTool.Class - targetMob.Defense))) {
+                    int damagePoints = 1 + (selTool.Class - targetMob.Defense);
+
+                    if (!targetMob.TakeDamage(damagePoints)) {
                         mob.CurrSuperLayer.SetMobAtPosition(null, mapYPos, mapXPos);
 
                         if (mob.Inventory.Items.Contains(null)) {
                             mob.Inventory.AppendToItems(targetMob.DroppedUponDeath);
                         }
+
+                        if (mob.GetType() == typeof(Player)) {
+                            LogController.AddMessage($"Player killed \"{targetMob.stock_id}\"");
+                        }
+                    } else if (mob.GetType() == typeof(Player)) {
+                        LogController.AddMessage($"Player did {damagePoints} damage to \"{targetMob.stock_id}\" (H:{targetMob.Health}) ");
                     }
                 }
+                else if (mob.GetType() == typeof(Player)) {
+                    LogController.AddMessage($"You need a tool class of atleast {targetMob.Defense} to fight this mob");
+                }
+            }
+            else if (mob.CurrSuperLayer.GetMobLayerTile(mapYPos, mapXPos) == null && mob.GetType() == typeof(Player)) {
+                LogController.AddMessage($"There is no mob to fight on \"{mob.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
+            }
+            else if (mob.GetType() == typeof(Player)) { // Inventory.GetPlayerItem(selPlace, selIndex).GetType() != typeof(Tool) || ((Tool)Inventory.GetPlayerItem(selPlace, selIndex)).Type != ToolTypes.Sword
+                LogController.AddMessage($"You need a Tool of type {ToolTypes.Sword} to fight with other mobs");
             }
         }
     }

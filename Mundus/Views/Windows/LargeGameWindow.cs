@@ -239,7 +239,21 @@ namespace Mundus.Views.Windows {
                 }
             }
 
-            //Print log
+            //Prints log
+            for (int i = 0, mIndex = LogController.GetCount() - 1; i < Size; mIndex--, i++) {
+                string msg = LogController.GetMessagage(mIndex);
+
+                switch (i) {
+                    case 0: lblLog1.Text = msg; break;
+                    case 1: lblLog2.Text = msg; break;
+                    case 2: lblLog3.Text = msg; break;
+                    case 3: lblLog4.Text = msg; break;
+                    case 4: lblLog5.Text = msg; break;
+                    case 5: lblLog6.Text = msg; break;
+                    case 7: lblLog7.Text = msg; break;
+                    case 8: lblLog8.Text = msg; break;
+                }
+            }
         }
 
         public void PrintMap() {
@@ -1162,6 +1176,10 @@ namespace Mundus.Views.Windows {
                 this.SelectItem("hotbar", 8);
                 this.PrintMainMenu();
             }
+        }
+
+        protected void OnBtnLogClicked(object sender, EventArgs e) {
+            WindowController.ShowLogWindow();
         }
 
         // Inventory (items) buttons

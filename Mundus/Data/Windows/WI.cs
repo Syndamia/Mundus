@@ -2,7 +2,7 @@
 
 namespace Mundus.Data.Windows {
     public static class WI { //stands for Window Instances
-        public const string BuildName = "Build 30-04-2020 No1";
+        public const string BuildName = "Build 30-04-2020 No2";
 
         public static IGameWindow SelWin { get; set; }
 
@@ -15,6 +15,7 @@ namespace Mundus.Data.Windows {
         public static PauseWindow WPause { get; private set; }
         public static MusicWindow WMusic { get; private set; }
         public static CraftingWindow WCrafting { get; private set; }
+        public static LogWindow WLog { get; private set; }
 
         //Gtk opens all window instances in the project automatically, unless they are hidden
         public static void CreateInstances() {
@@ -36,6 +37,8 @@ namespace Mundus.Data.Windows {
             WMusic.Hide();
             WCrafting = new CraftingWindow();
             WCrafting.Hide();
+            WLog = new LogWindow();
+            WLog.Hide();
         }
     }
 }

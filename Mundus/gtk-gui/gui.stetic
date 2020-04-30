@@ -2690,6 +2690,34 @@
           </packing>
         </child>
         <child>
+          <widget class="Gtk.Button" id="btnLog">
+            <property name="MemberName" />
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label">Event Log</property>
+            <property name="UseUnderline">True</property>
+            <property name="FocusOnClick">False</property>
+            <signal name="Clicked" handler="OnBtnLogClicked" />
+          </widget>
+          <packing>
+            <property name="TopAttach">11</property>
+            <property name="BottomAttach">12</property>
+            <property name="LeftAttach">8</property>
+            <property name="RightAttach">13</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">0</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">False</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
           <widget class="Gtk.Button" id="btnMap">
             <property name="MemberName" />
             <property name="WidthRequest">50</property>
@@ -5178,8 +5206,10 @@
         <child>
           <widget class="Gtk.Label" id="lblLog1">
             <property name="MemberName" />
+            <property name="WidthRequest">250</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
+            <property name="LabelProp">ERROR</property>
+            <property name="Justify">Center</property>
           </widget>
           <packing>
             <property name="TopAttach">12</property>
@@ -5200,8 +5230,10 @@
         <child>
           <widget class="Gtk.Label" id="lblLog2">
             <property name="MemberName" />
+            <property name="WidthRequest">250</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label7</property>
+            <property name="LabelProp">ERROR</property>
+            <property name="Justify">Center</property>
           </widget>
           <packing>
             <property name="TopAttach">13</property>
@@ -5222,8 +5254,10 @@
         <child>
           <widget class="Gtk.Label" id="lblLog3">
             <property name="MemberName" />
+            <property name="WidthRequest">250</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label7</property>
+            <property name="LabelProp">ERROR</property>
+            <property name="Justify">Center</property>
           </widget>
           <packing>
             <property name="TopAttach">14</property>
@@ -5244,8 +5278,10 @@
         <child>
           <widget class="Gtk.Label" id="lblLog4">
             <property name="MemberName" />
+            <property name="WidthRequest">250</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label7</property>
+            <property name="LabelProp">ERROR</property>
+            <property name="Justify">Center</property>
           </widget>
           <packing>
             <property name="TopAttach">15</property>
@@ -8095,6 +8131,34 @@
             <property name="BottomAttach">12</property>
             <property name="LeftAttach">17</property>
             <property name="RightAttach">18</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnLog">
+            <property name="MemberName" />
+            <property name="WidthRequest">350</property>
+            <property name="HeightRequest">50</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label">Event Log</property>
+            <property name="UseUnderline">True</property>
+            <property name="FocusOnClick">False</property>
+            <signal name="Clicked" handler="OnBtnLogClicked" />
+          </widget>
+          <packing>
+            <property name="TopAttach">13</property>
+            <property name="BottomAttach">14</property>
+            <property name="LeftAttach">10</property>
+            <property name="RightAttach">17</property>
             <property name="AutoSize">True</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>
@@ -12265,29 +12329,6 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Label" id="lblEventLog">
-            <property name="MemberName" />
-            <property name="WidthRequest">50</property>
-            <property name="HeightRequest">50</property>
-            <property name="LabelProp">Event Log</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">13</property>
-            <property name="BottomAttach">14</property>
-            <property name="LeftAttach">10</property>
-            <property name="RightAttach">17</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
           <widget class="Gtk.Label" id="lblGear">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
@@ -12452,8 +12493,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog1">
             <property name="MemberName" />
+            <property name="WidthRequest">350</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">14</property>
@@ -12474,8 +12515,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog2">
             <property name="MemberName" />
+            <property name="WidthRequest">350</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">15</property>
@@ -12496,8 +12537,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog3">
             <property name="MemberName" />
+            <property name="WidthRequest">350</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">16</property>
@@ -12518,8 +12559,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog4">
             <property name="MemberName" />
+            <property name="WidthRequest">350</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">17</property>
@@ -12540,8 +12581,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog5">
             <property name="MemberName" />
+            <property name="WidthRequest">350</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">18</property>
@@ -12562,8 +12603,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog6">
             <property name="MemberName" />
+            <property name="WidthRequest">350</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">19</property>
@@ -16737,6 +16778,34 @@
             <property name="BottomAttach">14</property>
             <property name="LeftAttach">21</property>
             <property name="RightAttach">22</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnLog">
+            <property name="MemberName" />
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label">Event Log</property>
+            <property name="UseUnderline">True</property>
+            <property name="FocusOnClick">False</property>
+            <signal name="Clicked" handler="OnBtnLogClicked" />
+          </widget>
+          <packing>
+            <property name="TopAttach">15</property>
+            <property name="BottomAttach">16</property>
+            <property name="LeftAttach">12</property>
+            <property name="RightAttach">21</property>
             <property name="AutoSize">True</property>
             <property name="XOptions">Fill</property>
             <property name="YOptions">Fill</property>
@@ -23299,29 +23368,6 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Label" id="lblEventLog">
-            <property name="MemberName" />
-            <property name="WidthRequest">50</property>
-            <property name="HeightRequest">50</property>
-            <property name="LabelProp">Event Log</property>
-          </widget>
-          <packing>
-            <property name="TopAttach">15</property>
-            <property name="BottomAttach">16</property>
-            <property name="LeftAttach">12</property>
-            <property name="RightAttach">21</property>
-            <property name="AutoSize">True</property>
-            <property name="XOptions">Fill</property>
-            <property name="YOptions">Fill</property>
-            <property name="XExpand">False</property>
-            <property name="XFill">True</property>
-            <property name="XShrink">False</property>
-            <property name="YExpand">False</property>
-            <property name="YFill">True</property>
-            <property name="YShrink">False</property>
-          </packing>
-        </child>
-        <child>
           <widget class="Gtk.Label" id="lblGear">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
@@ -23486,8 +23532,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog1">
             <property name="MemberName" />
+            <property name="WidthRequest">450</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">16</property>
@@ -23508,8 +23554,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog2">
             <property name="MemberName" />
+            <property name="WidthRequest">450</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">17</property>
@@ -23530,8 +23576,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog3">
             <property name="MemberName" />
+            <property name="WidthRequest">450</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">18</property>
@@ -23552,8 +23598,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog4">
             <property name="MemberName" />
+            <property name="WidthRequest">450</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">19</property>
@@ -23574,8 +23620,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog5">
             <property name="MemberName" />
+            <property name="WidthRequest">450</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">20</property>
@@ -23596,8 +23642,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog6">
             <property name="MemberName" />
+            <property name="WidthRequest">450</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">21</property>
@@ -23618,8 +23664,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog7">
             <property name="MemberName" />
+            <property name="WidthRequest">450</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">22</property>
@@ -23640,8 +23686,8 @@
         <child>
           <widget class="Gtk.Label" id="lblLog8">
             <property name="MemberName" />
+            <property name="WidthRequest">450</property>
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">label6</property>
           </widget>
           <packing>
             <property name="TopAttach">23</property>
@@ -25273,6 +25319,273 @@
             <property name="Position">2</property>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="Mundus.Views.Windows.LogWindow" design-size="310 450">
+    <property name="MemberName" />
+    <property name="Title">LogWindow</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <property name="Resizable">False</property>
+    <property name="AllowGrow">False</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.Table" id="tbUI">
+        <property name="MemberName" />
+        <property name="NRows">9</property>
+        <property name="NColumns">2</property>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnNewer">
+            <property name="MemberName" />
+            <property name="WidthRequest">60</property>
+            <property name="HeightRequest">50</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label">Newer</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnNewerClicked" />
+          </widget>
+          <packing>
+            <property name="BottomAttach">4</property>
+            <property name="LeftAttach">1</property>
+            <property name="RightAttach">2</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnOlder">
+            <property name="MemberName" />
+            <property name="WidthRequest">60</property>
+            <property name="HeightRequest">50</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label">Older</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnOlderClicked" />
+          </widget>
+          <packing>
+            <property name="TopAttach">5</property>
+            <property name="BottomAttach">9</property>
+            <property name="LeftAttach">1</property>
+            <property name="RightAttach">2</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblLog1">
+            <property name="MemberName" />
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="Wrap">True</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblLog2">
+            <property name="MemberName" />
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="Wrap">True</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">1</property>
+            <property name="BottomAttach">2</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblLog3">
+            <property name="MemberName" />
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="Wrap">True</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">2</property>
+            <property name="BottomAttach">3</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblLog4">
+            <property name="MemberName" />
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="Wrap">True</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">3</property>
+            <property name="BottomAttach">4</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblLog5">
+            <property name="MemberName" />
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="Wrap">True</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">4</property>
+            <property name="BottomAttach">5</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblLog6">
+            <property name="MemberName" />
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="Wrap">True</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">5</property>
+            <property name="BottomAttach">6</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblLog7">
+            <property name="MemberName" />
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="Wrap">True</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">6</property>
+            <property name="BottomAttach">7</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblLog8">
+            <property name="MemberName" />
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="Wrap">True</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">7</property>
+            <property name="BottomAttach">8</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblLog9">
+            <property name="MemberName" />
+            <property name="WidthRequest">250</property>
+            <property name="HeightRequest">50</property>
+            <property name="Wrap">True</property>
+            <property name="Justify">Center</property>
+          </widget>
+          <packing>
+            <property name="TopAttach">8</property>
+            <property name="BottomAttach">9</property>
+            <property name="AutoSize">True</property>
+            <property name="XOptions">Fill</property>
+            <property name="YOptions">Fill</property>
+            <property name="XExpand">False</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">False</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
           </packing>
         </child>
       </widget>
