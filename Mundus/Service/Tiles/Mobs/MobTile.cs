@@ -1,6 +1,7 @@
 ﻿using Gtk;
 using Mundus.Data;
 using Mundus.Data.SuperLayers;
+using Mundus.Data.Windows;
 using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Service.Tiles.Mobs {
@@ -34,9 +35,9 @@ namespace Mundus.Service.Tiles.Mobs {
         }
 
         /// <summary>
-        /// Removes health from structure
+        /// Removes health from mob
         /// </summary>
-        /// <returns>Whether the mobtile can still be damaged</returns>
+        /// <returns>Whether the mob can still be damaged</returns>
         public bool TakeDamage(int damagePoints) {
             this.Health -= damagePoints;
             return this.Health > 0;
@@ -49,8 +50,8 @@ namespace Mundus.Service.Tiles.Mobs {
         public void Heal(int healthPoints) {
             this.Health += healthPoints;
 
-            if (this.Health > MapSizes.CurrSize / 5 * 4) {
-                this.Health = MapSizes.CurrSize / 5 * 4;
+            if (this.Health > WI.SelWin.Size * 4) {
+                this.Health = WI.SelWin.Size * 4;
             }
         }
     }

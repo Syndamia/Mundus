@@ -174,11 +174,24 @@ namespace Mundus.Views.Windows.GameWindows {
         }
 
         public void PrintMainMenu() {
-            //Print lungs
+            //Print energy
+            for (int i = 0; i < Size; i++) {
+                string iName = MobStatsController.GetPlayerEnergyStock(i);
+
+                switch (i) {
+                    case 0: imgS1.SetFromStock(iName, IconSize.Dnd); break;
+                    case 1: imgS2.SetFromStock(iName, IconSize.Dnd); break;
+                    case 2: imgS3.SetFromStock(iName, IconSize.Dnd); break;
+                    case 3: imgS4.SetFromStock(iName, IconSize.Dnd); break;
+                    case 4: imgS5.SetFromStock(iName, IconSize.Dnd); break;
+                    case 5: imgS6.SetFromStock(iName, IconSize.Dnd); break;
+                    case 6: imgS7.SetFromStock(iName, IconSize.Dnd); break;
+                }
+            }
 
             //Print health
             for (int i = 0; i < Size; i++) {
-                string iName = MobStatsController.GetPlayerHearth(i);
+                string iName = MobStatsController.GetPlayerHearthStock(i);
 
                 switch (i) {
                     case 0: imgS8.SetFromStock(iName, IconSize.Dnd); break;

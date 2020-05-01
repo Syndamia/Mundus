@@ -10,8 +10,8 @@ namespace Mundus.Data.Superlayers.Mobs {
         /// Creates the instances of the universally accessed mobs.
         /// Note: player has a health of 4 * inventorySize
         /// </summary>
-        public static void CreateInstances(int inventorySize) {
-            Player = new Player("player", 4 * inventorySize, 5, LI.Land, inventorySize);
+        public static void CreateInstances() {
+            Player = new Player("player", 5, LI.Land);
             Player.Inventory.AppendToHotbar(ToolPresets.GetAWoodenAxe());
             Player.Inventory.AppendToHotbar(ToolPresets.GetAWoodenPickaxe());
         }

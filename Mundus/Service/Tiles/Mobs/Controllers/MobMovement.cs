@@ -49,8 +49,13 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             }
         }
 
+        private const double TAKEN_ENERGY_FROM_MOVEMENT = 0.1;
         public static void MovePlayer(int yPos, int xPos, int mapSize) {
             ChangeMobPosition(MI.Player, yPos, xPos, mapSize);
+
+            if (MI.Player.YPos == yPos && MI.Player.XPos == xPos) {
+                MI.Player.DrainEnergy(TAKEN_ENERGY_FROM_MOVEMENT + (Difficulty.SelDifficulty / 80.0));
+            }
         }
 
         private static void ChangeMobPosition(MobTile mob, int yPos, int xPos) {

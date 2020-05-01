@@ -30,14 +30,14 @@ namespace Stetic
 				w1.Add("L_tree", w9);
 				global::Gtk.IconSet w10 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Blanks.empty.png"));
 				w1.Add("empty", w10);
-				global::Gtk.IconSet w11 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.4-4.png"));
-				w1.Add("hearth_4-4", w11);
-				global::Gtk.IconSet w12 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.3-4.png"));
-				w1.Add("hearth_3-4", w12);
-				global::Gtk.IconSet w13 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.2-4.png"));
-				w1.Add("hearth_2-4", w13);
-				global::Gtk.IconSet w14 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.1-4.png"));
-				w1.Add("hearth_1-4", w14);
+				global::Gtk.IconSet w11 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.hearth4.png"));
+				w1.Add("hearth_4", w11);
+				global::Gtk.IconSet w12 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.hearth3.png"));
+				w1.Add("hearth_3", w12);
+				global::Gtk.IconSet w13 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.hearth2.png"));
+				w1.Add("hearth_2", w13);
+				global::Gtk.IconSet w14 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.hearth1.png"));
+				w1.Add("hearth_1", w14);
 				global::Gtk.IconSet w15 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Materials.L_stick.png"));
 				w1.Add("L_stick", w15);
 				global::Gtk.IconSet w16 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.rock_pickaxe.png"));
@@ -78,6 +78,22 @@ namespace Stetic
 				w1.Add("wooden_longsword", w33);
 				global::Gtk.IconSet w34 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Tools.rock_longsword.png"));
 				w1.Add("rock_longsword", w34);
+				global::Gtk.IconSet w35 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Hearth.hearth0.png"));
+				w1.Add("hearth_0", w35);
+				global::Gtk.IconSet w36 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Energy.energy_0.png"));
+				w1.Add("energy_0", w36);
+				global::Gtk.IconSet w37 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Energy.energy_1.png"));
+				w1.Add("energy_1", w37);
+				global::Gtk.IconSet w38 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Energy.energy_2.png"));
+				w1.Add("energy_2", w38);
+				global::Gtk.IconSet w39 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Energy.energy_3.png"));
+				w1.Add("energy_3", w39);
+				global::Gtk.IconSet w40 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Energy.energy_4.png"));
+				w1.Add("energy_4", w40);
+				global::Gtk.IconSet w41 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Energy.energy_5.png"));
+				w1.Add("energy_5", w41);
+				global::Gtk.IconSet w42 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.UI.Energy.energy_6.png"));
+				w1.Add("energy_6", w42);
 				w1.AddDefault();
 			}
 		}

@@ -52,24 +52,24 @@
         <property name="Image">resource:Mundus.Icons.UI.Blanks.empty.png</property>
       </source>
     </icon-set>
-    <icon-set id="hearth_4-4">
+    <icon-set id="hearth_4">
       <source>
-        <property name="Image">resource:Mundus.Icons.UI.Hearth.4-4.png</property>
+        <property name="Image">resource:Mundus.Icons.UI.Hearth.hearth4.png</property>
       </source>
     </icon-set>
-    <icon-set id="hearth_3-4">
+    <icon-set id="hearth_3">
       <source>
-        <property name="Image">resource:Mundus.Icons.UI.Hearth.3-4.png</property>
+        <property name="Image">resource:Mundus.Icons.UI.Hearth.hearth3.png</property>
       </source>
     </icon-set>
-    <icon-set id="hearth_2-4">
+    <icon-set id="hearth_2">
       <source>
-        <property name="Image">resource:Mundus.Icons.UI.Hearth.2-4.png</property>
+        <property name="Image">resource:Mundus.Icons.UI.Hearth.hearth2.png</property>
       </source>
     </icon-set>
-    <icon-set id="hearth_1-4">
+    <icon-set id="hearth_1">
       <source>
-        <property name="Image">resource:Mundus.Icons.UI.Hearth.1-4.png</property>
+        <property name="Image">resource:Mundus.Icons.UI.Hearth.hearth1.png</property>
       </source>
     </icon-set>
     <icon-set id="L_stick">
@@ -170,6 +170,46 @@
     <icon-set id="rock_longsword">
       <source>
         <property name="Image">resource:Mundus.Icons.Land.Tools.rock_longsword.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="hearth_0">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Hearth.hearth0.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="energy_0">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Energy.energy_0.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="energy_1">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Energy.energy_1.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="energy_2">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Energy.energy_2.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="energy_3">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Energy.energy_3.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="energy_4">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Energy.energy_4.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="energy_5">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Energy.energy_5.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="energy_6">
+      <source>
+        <property name="Image">resource:Mundus.Icons.UI.Energy.energy_6.png</property>
       </source>
     </icon-set>
   </icon-factory>

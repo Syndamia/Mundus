@@ -170,11 +170,22 @@ namespace Mundus.Views.Windows.GameWindows {
         /// Prints the lung capacity, health, hotbar items and event log
         /// </summary>
         public void PrintMainMenu() {
-            //Print lungs
+            //Print energy
+            for (int i = 0; i < Size; i++) {
+                string iName = MobStatsController.GetPlayerEnergyStock(i);
+
+                switch (i) {
+                    case 0: imgS1.SetFromStock(iName, IconSize.Dnd); break;
+                    case 1: imgS2.SetFromStock(iName, IconSize.Dnd); break;
+                    case 2: imgS3.SetFromStock(iName, IconSize.Dnd); break;
+                    case 3: imgS4.SetFromStock(iName, IconSize.Dnd); break;
+                    case 4: imgS5.SetFromStock(iName, IconSize.Dnd); break;
+                }
+            }
 
             //Print health
             for (int i = 0; i < Size; i++) {
-                string iName = MobStatsController.GetPlayerHearth(i);
+                string iName = MobStatsController.GetPlayerHearthStock(i);
 
                 switch (i) {
                     case 0: imgS6.SetFromStock(iName, IconSize.Dnd); break;
@@ -365,7 +376,8 @@ namespace Mundus.Views.Windows.GameWindows {
 
         protected void OnBtnIG1Clicked(object sender, EventArgs e) {
             //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = LandPresets.Boulder();
-            MobStatsController.DamagePlayer(1);
+            //MobStatsController.DamagePlayer(1);
+            MobStatsController.DrainEnergyPlayer(0.5);
             //Service.Crafting.CraftingController.FindAvalableItems();
             PrintMainMenu();
         }
@@ -373,8 +385,8 @@ namespace Mundus.Views.Windows.GameWindows {
         protected void OnBtnIG2Clicked(object sender, EventArgs e) {
             //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[1] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Pickaxe, 1);
             //Mundus.Data.Superlayers.Mobs.LMI.Player.Inventory.Hotbar[0] = new Service.Tiles.Items.Tool("blank_hand", Mundus.Data.Tiles.ToolTypes.Axe, 1);
-
-            MobStatsController.HealPlayer(1);
+            MobStatsController.RestoreEnergyPlayer(0.5);
+            //MobStatsController.HealPlayer(1);
             PrintMainMenu();
         }
 

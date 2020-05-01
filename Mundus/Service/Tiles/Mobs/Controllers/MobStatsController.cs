@@ -14,14 +14,14 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         /// </summary>
         /// <returns>stock_id of hearth icon</returns>
         /// <param name="index">Health bar index</param>
-        public static string GetPlayerHearth(int index) {
-            string stock_id = "empty";
+        public static string GetPlayerHearthStock(int index) {
+            string stock_id = "hearth_0";
 
             int diff = GetPlayerHealth() - index * 4;
-            if (diff >= 4) stock_id = "hearth_4-4";
-            else if (diff == 1) stock_id = "hearth_1-4";
-            else if (diff == 2) stock_id = "hearth_2-4";
-            else if (diff == 3) stock_id = "hearth_3-4";
+            if (diff >= 4) stock_id = "hearth_4";
+            else if (diff == 1) stock_id = "hearth_1";
+            else if (diff == 2) stock_id = "hearth_2";
+            else if (diff == 3) stock_id = "hearth_3";
 
             return stock_id;
         }
@@ -38,6 +38,37 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         /// <param name="healthPoints">Health points to heal with</param>
         public static void HealPlayer(int healthPoints) {
             MI.Player.Heal(healthPoints);
+        }
+
+        public static int GetPlayerEnergy() {
+            return (int)MI.Player.Energy;
+        }
+
+        /// <summary>
+        /// Returns the stock_id of the energy icon that must be used on the given position of the energy bar
+        /// </summary>
+        /// <returns>stock_id of energy icon</returns>
+        /// <param name="index">Energy bar index</param>
+        public static string GetPlayerEnergyStock(int index) {
+            string stock_id = "energy_0";
+
+            int diff = GetPlayerEnergy() - index * 6;
+            if (diff >= 6) stock_id = "energy_6";
+            else if (diff == 1) stock_id = "energy_1";
+            else if (diff == 2) stock_id = "energy_2";
+            else if (diff == 3) stock_id = "energy_3";
+            else if (diff == 4) stock_id = "energy_4";
+            else if (diff == 5) stock_id = "energy_5";
+
+            return stock_id;
+        }
+
+        public static void DrainEnergyPlayer(double energyPoints) {
+            MI.Player.DrainEnergy(energyPoints);
+        }
+
+        public static void RestoreEnergyPlayer(double energyPoints) {
+            MI.Player.RestoreEnergy(energyPoints);
         }
 
         /// <summary>

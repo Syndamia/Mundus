@@ -37,7 +37,7 @@ namespace Mundus.Service {
             }
 
            WI.SelWin.SetDefaults();
-           MI.CreateInstances(WI.SelWin.Size);
+           MI.CreateInstances();
         }
 
         public static void GameWindowInitialize() {

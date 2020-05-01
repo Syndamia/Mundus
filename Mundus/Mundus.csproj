@@ -56,10 +56,6 @@
     <EmbeddedResource Include="Icons\UI\Blanks\blank_hand.png" />
     <EmbeddedResource Include="Icons\UI\Blanks\blank_gear.png" />
     <EmbeddedResource Include="Icons\UI\Blanks\empty.png" />
-    <EmbeddedResource Include="Icons\UI\Hearth\4-4.png" />
-    <EmbeddedResource Include="Icons\UI\Hearth\3-4.png" />
-    <EmbeddedResource Include="Icons\UI\Hearth\2-4.png" />
-    <EmbeddedResource Include="Icons\UI\Hearth\1-4.png" />
     <EmbeddedResource Include="Icons\UI\Blanks\blank_multiplication.png" />
     <EmbeddedResource Include="Icons\Land\Tools\wooden_axe.png" />
     <EmbeddedResource Include="Icons\Land\Tools\wooden_pickaxe.png" />
@@ -84,6 +80,18 @@
     <EmbeddedResource Include="Icons\Land\Mobs\L_cow.png" />
     <EmbeddedResource Include="Icons\Land\Tools\wooden_longsword.png" />
     <EmbeddedResource Include="Icons\Land\Tools\rock_longsword.png" />
+    <EmbeddedResource Include="Icons\UI\Hearth\hearth1.png" />
+    <EmbeddedResource Include="Icons\UI\Hearth\hearth3.png" />
+    <EmbeddedResource Include="Icons\UI\Hearth\hearth2.png" />
+    <EmbeddedResource Include="Icons\UI\Hearth\hearth4.png" />
+    <EmbeddedResource Include="Icons\UI\Hearth\hearth0.png" />
+    <EmbeddedResource Include="Icons\UI\Energy\energy_0.png" />
+    <EmbeddedResource Include="Icons\UI\Energy\energy_1.png" />
+    <EmbeddedResource Include="Icons\UI\Energy\energy_2.png" />
+    <EmbeddedResource Include="Icons\UI\Energy\energy_3.png" />
+    <EmbeddedResource Include="Icons\UI\Energy\energy_4.png" />
+    <EmbeddedResource Include="Icons\UI\Energy\energy_5.png" />
+    <EmbeddedResource Include="Icons\UI\Energy\energy_6.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -182,6 +190,7 @@
     <Folder Include="Service\Tiles\Crafting\" />
     <Folder Include="Service\Tiles\Items\Presets\" />
     <Folder Include="Views\Windows\GameWindows\" />
+    <Folder Include="Icons\UI\Hearth\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

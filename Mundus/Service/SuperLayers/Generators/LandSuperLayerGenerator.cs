@@ -68,7 +68,7 @@ namespace Mundus.Service.SuperLayers.Generators {
                         if (rnd.Next(0, 40 + Difficulty.SelDifficulty) == 1) {
                             tiles[col, row] = StructurePresets.GetALBoulder();
                         }
-                        if (rnd.Next(0, 10 + Difficulty.SelDifficulty) == 1) {
+                        if (rnd.Next(0, 15 + Difficulty.SelDifficulty) == 1) {
                             tiles[col, row] = StructurePresets.GetALTree();
                         }
                     }
