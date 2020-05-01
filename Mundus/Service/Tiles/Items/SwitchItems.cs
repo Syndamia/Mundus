@@ -45,11 +45,17 @@ namespace Mundus.Service.Tiles.Items {
                 case "gear": destinationLocation = MI.Player.Inventory.Gear; break;
             }
 
-            var toTransfer = origin[oIndex];
+            ItemTile toTransfer = origin[oIndex];
 
             if (toTransfer != null) {
+                if (toTransfer == destinationLocation[destinationIndex]) {
+                    if (toTransfer.GetType() == typeof(Material) &&
+                        PlayerTryEat((Material)toTransfer)) {
+                        origin[oIndex] = null;
+                    }
+                }
                 // Certain item types can only be placed inside certain inventory places.
-                if (((toTransfer.GetType() == typeof(Tool) || toTransfer.GetType() == typeof(GroundTile)) && (destination == "hotbar" || destination == "items")) ||
+                else if (((toTransfer.GetType() == typeof(Tool) || toTransfer.GetType() == typeof(GroundTile)) && (destination == "hotbar" || destination == "items")) ||
                     ((toTransfer.GetType() == typeof(Material) || toTransfer.GetType() == typeof(Structure)) && (destination == "hotbar" || destination == "items")) ||
                     (toTransfer.GetType() == typeof(Gear) && (destination == "hotbar" || destination == "items" || destination == "accessories" || destination == "gear"))) {
 
@@ -64,6 +70,14 @@ namespace Mundus.Service.Tiles.Items {
 
         public static bool HasOrigin() {
             return origin != null && oIndex != -1;
+        }
+
+        private static bool PlayerTryEat(Material material) {
+            if (material.EnergyRestorePoints > 0) {
+                MI.Player.RestoreEnergy(material.EnergyRestorePoints);
+                return true;
+            }
+            return false;
         }
     }
 }

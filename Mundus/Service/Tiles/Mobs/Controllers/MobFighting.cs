@@ -36,7 +36,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         /// <param name="mapXPos">XPos of target mob</param>
         public static void PlayerTryFight(string selPlace, int selIndex, int mapYPos, int mapXPos) {
             if (MobTryFight(MI.Player, selPlace, selIndex, mapYPos, mapXPos)) {
-                MI.Player.DrainEnergy(TAKEN_ENERGY_FROM_FIGHTING + (Difficulty.SelDifficulty / 80.0));
+                MI.Player.DrainEnergy(TAKEN_ENERGY_FROM_FIGHTING + Difficulty.ValueModifier());
             }
         }
 

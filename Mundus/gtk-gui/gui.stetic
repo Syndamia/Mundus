@@ -212,6 +212,11 @@
         <property name="Image">resource:Mundus.Icons.UI.Energy.energy_6.png</property>
       </source>
     </icon-set>
+    <icon-set id="L_beef_steak">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Materials.L_beef_steak.png</property>
+      </source>
+    </icon-set>
   </icon-factory>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.NewGameWindow" design-size="581 275">
     <property name="MemberName" />
@@ -574,7 +579,6 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label">Creative</property>
-            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -603,7 +607,6 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label">Easy</property>
-            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -688,7 +691,6 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label">Large</property>
-            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -744,7 +746,6 @@
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Label">Large</property>
-            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>

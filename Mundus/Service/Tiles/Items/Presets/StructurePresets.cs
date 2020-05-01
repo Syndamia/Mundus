@@ -13,7 +13,7 @@ namespace Mundus.Service.Tiles.Items.Presets {
         /// Returns a new instance of the land tree structure
         /// </summary>
         public static Structure GetALTree() {
-            return new Structure("L_tree", "L_tree_inventory", 5, ToolTypes.Axe, 1, false, false, MaterialPresets.GetAStick());
+            return new Structure("L_tree", "L_tree_inventory", 5, ToolTypes.Axe, 1, false, false, MaterialPresets.GetALandStick());
         }
 
         /// <summary>

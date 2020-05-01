@@ -6,7 +6,7 @@ using Mundus.Service.SuperLayers;
 using Mundus.Service.Tiles.Items;
 using Mundus.Service.Tiles.Mobs;
 
-namespace Mundus.Views.Windows.GameWindows {
+namespace Mundus.Views.Windows {
     public partial class SmallGameWindow : Gtk.Window, IGameWindow {
         /*Value for the height and width of the game screen, map screens and inventory screen
          *and the width of stats, hotbar, accessories, gear & items on the ground menus*/

@@ -54,7 +54,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             ChangeMobPosition(MI.Player, yPos, xPos, mapSize);
 
             if (MI.Player.YPos == yPos && MI.Player.XPos == xPos) {
-                MI.Player.DrainEnergy(TAKEN_ENERGY_FROM_MOVEMENT + (Difficulty.SelDifficulty / 80.0));
+                MI.Player.DrainEnergy(TAKEN_ENERGY_FROM_MOVEMENT + Difficulty.ValueModifier());
             }
         }
 

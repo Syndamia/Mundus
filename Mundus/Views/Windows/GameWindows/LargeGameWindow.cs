@@ -6,7 +6,7 @@ using Mundus.Service.SuperLayers;
 using Mundus.Service.Tiles.Items;
 using Mundus.Service.Tiles.Mobs;
 
-namespace Mundus.Views.Windows.GameWindows {
+namespace Mundus.Views.Windows {
     public partial class LargeGameWindow : Gtk.Window, IGameWindow {
         public int Size { get; private set; }
 

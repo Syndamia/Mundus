@@ -1,24 +1,18 @@
 ﻿namespace Mundus.Service.Tiles.Items.Presets {
     public static class MaterialPresets {
-        /// <summary>
-        /// Returns a new instance of the land rock material tile
-        /// </summary>
+        /// <returns>New instance</returns>
         public static Material GetALandRock() {
             return new Material("L_rock");
         }
 
-        /// <summary>
-        /// Returns a new instance of the stick material tile
-        /// </summary>
-        public static Material GetAStick() {
+        /// <returns>New instance</returns>
+        public static Material GetALandStick() {
             return new Material("L_stick");
         }
 
-        /// <summary>
-        /// (TEMPORARY)
-        /// </summary>
-        public static Material GetAGrass() {
-            return new Material("L_grass");
+        /// <returns>New instance</returns>
+        public static Material GetALandBeefSteak() {
+            return new Material("L_beef_steak", 4);
         }
 
         /// <summary>

@@ -61,13 +61,13 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             // Only shovels can destroy ground layer tiles, but not when there is something over the ground tile
             if (selectedTool.Type == ToolTypes.Shovel && MI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos) == null) {
                 if (PlayerTryDestroyGroundAt(mapYPos, mapXPos, selectedTool)) {
-                    MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_DESTROYING + (Difficulty.SelDifficulty / 80.0));
+                    MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_DESTROYING + Difficulty.ValueModifier());
                 }
             }
             // Don't try to destroy structure if there is no structure
             else if (MI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos) != null) {
                 if (PlayerTryDestroyStructureAt(mapYPos, mapXPos, selectedTool)) {
-                    MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_DESTROYING + (Difficulty.SelDifficulty / 80.0));
+                    MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_DESTROYING + Difficulty.ValueModifier());
                 }
             }
         }
@@ -153,7 +153,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             GroundTile toPlace = (GroundTile)MI.Player.Inventory.GetItemTile(inventoryPlace, inventoryIndex);
 
             MI.Player.CurrSuperLayer.SetGroundAtPosition(toPlace, yPos, xPos);
-            MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_PLACING_GROUND + (Difficulty.SelDifficulty / 80.0));
+            MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_PLACING_GROUND + Difficulty.ValueModifier());
 
             LogController.AddMessage($"Set ground \"{toPlace.stock_id}\" on layer \"{MI.Player.CurrSuperLayer}\" at Y:{yPos}, X:{xPos}");
         }
@@ -182,7 +182,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                 LogController.AddMessage($"Set structure \"{toBuild.stock_id}\" on layer \"{MI.Player.CurrSuperLayer}\" at Y:{yPos}, X:{xPos}");
             }
 
-            MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_BUILDING_STRUCTURE + (Difficulty.SelDifficulty / 80.0));
+            MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_BUILDING_STRUCTURE + Difficulty.ValueModifier());
         }
     }
 }

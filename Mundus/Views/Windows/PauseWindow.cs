@@ -1,7 +1,6 @@
 ﻿using System;
 using Gtk;
 using Mundus.Service;
-using Mundus.Views.Windows.GameWindows;
 
 namespace Mundus.Views.Windows {
     public partial class PauseWindow : Gtk.Window {

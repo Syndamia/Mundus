@@ -7,7 +7,7 @@ namespace Mundus.Service.Tiles.Mobs.LandMobs {
         /// Returns a new instance of the cow mob tile
         /// </summary>
         public static MobTile GetACow() {
-            return new MobTile("L_cow", 10, 1, LI.Land, 1, MaterialPresets.GetAGrass());
+            return new MobTile("L_cow", 10, 1, LI.Land, 1, MaterialPresets.GetALandBeefSteak());
         }
     }
 }
