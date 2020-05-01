@@ -96,6 +96,10 @@ namespace Stetic
 				w1.Add("energy_6", w42);
 				global::Gtk.IconSet w43 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Materials.L_beef_steak.png"));
 				w1.Add("L_beef_steak", w43);
+				global::Gtk.IconSet w44 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Mobs.L_sheep.png"));
+				w1.Add("L_sheep", w44);
+				global::Gtk.IconSet w45 = new global::Gtk.IconSet(global::Gdk.Pixbuf.LoadFromResource("Mundus.Icons.Land.Materials.L_mutton_steak.png"));
+				w1.Add("L_mutton_steak", w45);
 				w1.AddDefault();
 			}
 		}

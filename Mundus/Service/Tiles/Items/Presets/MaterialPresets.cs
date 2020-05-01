@@ -12,7 +12,12 @@
 
         /// <returns>New instance</returns>
         public static Material GetALandBeefSteak() {
-            return new Material("L_beef_steak", 4);
+            return new Material("L_beef_steak", 5);
+        }
+
+        // <returns>New instance</returns>
+        public static Material GetALandMuttonSteak() {
+            return new Material("L_mutton_steak", 4);
         }
 
         /// <summary>

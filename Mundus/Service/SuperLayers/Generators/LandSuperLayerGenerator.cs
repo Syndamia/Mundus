@@ -45,11 +45,11 @@ namespace Mundus.Service.SuperLayers.Generators {
 
                     if (LI.Land.GetGroundLayerTile(col, row) != null &&
                         !atPlayerSpawnPosition) {
-                        if (rnd.Next(0, 40 + Difficulty.SelDifficulty) == 1) {
-                            tiles[col, row] = StructurePresets.GetALBoulder();
-                        }
                         if (rnd.Next(0, 15 + Difficulty.SelDifficulty) == 1) {
                             tiles[col, row] = StructurePresets.GetALTree();
+                        }
+                        else if (rnd.Next(0, 40 + Difficulty.SelDifficulty) == 1) {
+                            tiles[col, row] = StructurePresets.GetALBoulder();
                         }
                     }
                 }
@@ -73,6 +73,11 @@ namespace Mundus.Service.SuperLayers.Generators {
                         }
                         else if (rnd.Next(0, 15 + Difficulty.SelDifficulty) == 1) {
                             tiles[col, row] = LandMobsPresets.GetACow();
+                            tiles[col, row].YPos = col;
+                            tiles[col, row].XPos = row;
+                        }
+                        else if (rnd.Next(0, 15 + Difficulty.SelDifficulty) == 1) {
+                            tiles[col, row] = LandMobsPresets.GetASheep();
                             tiles[col, row].YPos = col;
                             tiles[col, row].XPos = row;
                         }

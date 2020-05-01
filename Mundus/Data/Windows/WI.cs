@@ -2,7 +2,7 @@
 
 namespace Mundus.Data.Windows {
     public static class WI { //stands for Window Instances
-        public const string BuildName = "Build 01-05-2020 No2";
+        public const string BuildName = "Build 01-05-2020 No3";
 
         public static IGameWindow SelWin { get; set; }
 

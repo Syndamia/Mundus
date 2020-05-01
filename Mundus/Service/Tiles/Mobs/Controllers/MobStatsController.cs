@@ -5,9 +5,6 @@ using Mundus.Service.SuperLayers;
 
 namespace Mundus.Service.Tiles.Mobs.Controllers {
     public static class MobStatsController {
-        public static int GetPlayerHealth() {
-            return MI.Player.Health;
-        }
 
         /// <summary>
         /// Returns the stock_id of the hearth icon that must be used on the given position of the health bar
@@ -17,31 +14,13 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         public static string GetPlayerHearthStock(int index) {
             string stock_id = "hearth_0";
 
-            int diff = GetPlayerHealth() - index * 4;
+            int diff = MI.Player.Health - index * 4;
             if (diff >= 4) stock_id = "hearth_4";
             else if (diff == 1) stock_id = "hearth_1";
             else if (diff == 2) stock_id = "hearth_2";
             else if (diff == 3) stock_id = "hearth_3";
 
             return stock_id;
-        }
-
-        public static void DamagePlayer(int damagePoints) {
-            if (!MI.Player.TakeDamage(damagePoints)) {
-                //do smth
-            }
-        }
-
-        /// <summary>
-        /// Heals the player (unless/until he has full health)
-        /// </summary>
-        /// <param name="healthPoints">Health points to heal with</param>
-        public static void HealPlayer(int healthPoints) {
-            MI.Player.Heal(healthPoints);
-        }
-
-        public static int GetPlayerEnergy() {
-            return (int)MI.Player.Energy;
         }
 
         /// <summary>
@@ -52,7 +31,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         public static string GetPlayerEnergyStock(int index) {
             string stock_id = "energy_0";
 
-            int diff = GetPlayerEnergy() - index * 6;
+            int diff = (int)MI.Player.Energy - index * 6;
             if (diff >= 6) stock_id = "energy_6";
             else if (diff == 1) stock_id = "energy_1";
             else if (diff == 2) stock_id = "energy_2";
@@ -61,14 +40,6 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             else if (diff == 5) stock_id = "energy_5";
 
             return stock_id;
-        }
-
-        public static void DrainEnergyPlayer(double energyPoints) {
-            MI.Player.DrainEnergy(energyPoints);
-        }
-
-        public static void RestoreEnergyPlayer(double energyPoints) {
-            MI.Player.RestoreEnergy(energyPoints);
         }
 
         /// <summary>

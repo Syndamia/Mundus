@@ -217,6 +217,16 @@
         <property name="Image">resource:Mundus.Icons.Land.Materials.L_beef_steak.png</property>
       </source>
     </icon-set>
+    <icon-set id="L_sheep">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Mobs.L_sheep.png</property>
+      </source>
+    </icon-set>
+    <icon-set id="L_mutton_steak">
+      <source>
+        <property name="Image">resource:Mundus.Icons.Land.Materials.L_mutton_steak.png</property>
+      </source>
+    </icon-set>
   </icon-factory>
   <widget class="Gtk.Window" id="Mundus.Views.Windows.NewGameWindow" design-size="581 275">
     <property name="MemberName" />
@@ -2655,8 +2665,8 @@
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
-            <property name="Type">TextAndIcon</property>
-            <property name="Label" />
+            <property name="Type">TextOnly</property>
+            <property name="Label">TESTING</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnIG1Clicked" />
           </widget>
@@ -2682,8 +2692,8 @@
             <property name="WidthRequest">50</property>
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
-            <property name="Type">TextAndIcon</property>
-            <property name="Label" />
+            <property name="Type">TextOnly</property>
+            <property name="Label">TESTING</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnIG2Clicked" />
           </widget>
