@@ -36,29 +36,20 @@ namespace Mundus.Service.Tiles.Items {
         /// <param name="destination">Name of the inventory location of the currently selected item ("hotbar", "items", "accessories" or "gear")</param>
         /// <param name="destinationIndex">Index of the inventory location of the currently selected item</param>
         public static void ReplaceItems(string destination, int destinationIndex) {
-            ItemTile[] destinationLocation = null;
+            destination = destination.ToLower(); // just in case
 
-            switch (destination.ToLower()) {
-                case "hotbar": destinationLocation = MI.Player.Inventory.Hotbar; break;
-                case "items": destinationLocation = MI.Player.Inventory.Items; break;
-                case "accessories": destinationLocation = MI.Player.Inventory.Accessories; break;
-                case "gear": destinationLocation = MI.Player.Inventory.Gear; break;
-            }
-
+            ItemTile[] destinationLocation = DestinationArray(destination);
             ItemTile toTransfer = origin[oIndex];
 
             if (toTransfer != null) {
+                // Consumable materials can be consumed by double clicking on them (transfering them to their current location)
                 if (toTransfer == destinationLocation[destinationIndex]) {
                     if (toTransfer.GetType() == typeof(Material) &&
                         PlayerTryEat((Material)toTransfer)) {
                         origin[oIndex] = null;
                     }
                 }
-                // Certain item types can only be placed inside certain inventory places.
-                else if (((toTransfer.GetType() == typeof(Tool) || toTransfer.GetType() == typeof(GroundTile)) && (destination == "hotbar" || destination == "items")) ||
-                    ((toTransfer.GetType() == typeof(Material) || toTransfer.GetType() == typeof(Structure)) && (destination == "hotbar" || destination == "items")) ||
-                    (toTransfer.GetType() == typeof(Gear) && (destination == "hotbar" || destination == "items" || destination == "accessories" || destination == "gear"))) {
-
+                else if (ItemCanGoThere(toTransfer, destination)) {
                     origin[oIndex] = destinationLocation[destinationIndex];
                     destinationLocation[destinationIndex] = toTransfer;
                 }
@@ -66,6 +57,27 @@ namespace Mundus.Service.Tiles.Items {
 
             origin = null;
             oIndex = -1;
+        }
+
+        // Certain item types can only be placed inside certain inventory places.
+        private static ItemTile[] DestinationArray(string destination) {
+            switch (destination) {
+                case "hotbar": return MI.Player.Inventory.Hotbar;
+                case "items": return MI.Player.Inventory.Items;
+                case "accessories": return MI.Player.Inventory.Accessories;
+                case "gear": return MI.Player.Inventory.Gear;
+                default: throw new System.ArgumentException($"Destination of itemtile must be either \"hotbar\", \"items\", \"accessories\" or \"gear\", not {destination}");
+            }
+        }
+
+        private static bool ItemCanGoThere(ItemTile toTransfer, string destination) {
+            switch (destination) {
+                case "hotbar": return toTransfer.GetType() != typeof(GroundTile);
+                case "items": return true;
+                case "accessories": return toTransfer.GetType() == typeof(Gear);
+                case "gear": return toTransfer.GetType() == typeof(Gear);
+                default: throw new System.ArgumentException($"Destination of itemtile {toTransfer.stock_id} must be either \"hotbar\", \"items\", \"accessories\" or \"gear\", not {destination}");
+            }
         }
 
         public static bool HasOrigin() {
