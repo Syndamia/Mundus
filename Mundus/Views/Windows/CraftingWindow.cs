@@ -37,36 +37,30 @@ namespace Mundus.Views.Windows {
                 CraftingRecipe recipe = Recipes[recipeIndex];
                 btnCraft.Sensitive = true;
 
-                if (recipe.ResultItem.GetType() == typeof(Structure)) {
-                    Structure tmp = (Structure)recipe.ResultItem;
-                    imgItem.SetFromStock(tmp.inventory_stock_id, IconSize.Dnd);
-                }
-                else {
-                    imgItem.SetFromStock(recipe.ResultItem.stock_id, IconSize.Dnd);
-                }
+                imgItem.SetFromStock(recipe.ResultItem, IconSize.Dnd);
                 lblInfo.Text = recipe.ResultItem.ToString();
 
                 lblC1.Text = recipe.Count1 + "";
-                imgI1.SetFromStock(recipe.ReqItem1.stock_id, IconSize.Dnd);
+                imgI1.SetFromStock(recipe.ReqItem1, IconSize.Dnd);
 
                 if (recipe.ReqItem2 != null) {
                     lblC2.Text = recipe.Count2 + "";
-                    imgI2.SetFromStock(recipe.ReqItem2.stock_id, IconSize.Dnd);
+                    imgI2.SetFromStock(recipe.ReqItem2, IconSize.Dnd);
                 }
 
                 if (recipe.ReqItem3 != null) {
                     lblC3.Text = recipe.Count3 + "";
-                    imgI3.SetFromStock(recipe.ReqItem3.stock_id, IconSize.Dnd);
+                    imgI3.SetFromStock(recipe.ReqItem3, IconSize.Dnd);
                 }
 
                 if (recipe.ReqItem4 != null) {
                     lblC4.Text = recipe.Count4 + "";
-                    imgI4.SetFromStock(recipe.ReqItem4.stock_id, IconSize.Dnd);
+                    imgI4.SetFromStock(recipe.ReqItem4, IconSize.Dnd);
                 }
 
                 if (recipe.ReqItem5 != null) {
                     lblC5.Text = recipe.Count5 + "";
-                    imgI5.SetFromStock(recipe.ReqItem5.stock_id, IconSize.Dnd);
+                    imgI5.SetFromStock(recipe.ReqItem5, IconSize.Dnd);
                 }
             }
         }

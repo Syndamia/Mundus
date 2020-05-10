@@ -26,5 +26,12 @@ namespace Mundus.Service.Tiles.Items.Presets {
         public static Structure GetAWoodenLadder() {
             return new Structure("L_wooden_ladder", "L_wooden_ladder_inventory", 1, ToolTypes.Axe, 1, true, true);
         }
+
+        public static Structure GetFromStock(string stock_id)  {
+            switch(stock_id) {
+                case "L_wooden_ladder": return GetAWoodenLadder();
+                default: return null;
+            }
+        }
     }
 }

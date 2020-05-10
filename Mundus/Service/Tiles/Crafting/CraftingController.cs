@@ -4,38 +4,16 @@ using Mundus.Data.Crafting;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Service.Tiles.Mobs;
 using Mundus.Service.Tiles.Items;
+using Mundus.Service.Tiles.Items.Presets;
 
 namespace Mundus.Service.Tiles.Crafting {
     public static class CraftingController {
-        private static Dictionary<ItemTile, int> avalableItems;
-
         /// <summary>
         /// Returns all recipes that can be executed with the current items in the player inventory (Inventory.Items)
         /// </summary>
         /// <returns>All avalable recipies.</returns>
         public static CraftingRecipe[] GetAvalableRecipes() {
-            FindAvalableItems();
-
-            List<CraftingRecipe> recipes = new List<CraftingRecipe>();
-
-            foreach (var recipe in RI.AllRecipies) {
-                if (recipe.HasEnoughItems(avalableItems)) {
-                    recipes.Add(recipe);
-                }
-            }
-
-            return recipes.ToArray();
-        }
-
-        // Sets avalableItems to all items in the player inventory (Inventory.Items)
-        private static void FindAvalableItems() {
-            avalableItems = MI.Player.Inventory.Items.Where(x => x != null)
-                       //Can't use distinct on non primative types, beause they also hold their memory location info (I think).
-                       //This is my way of getting only the "unique" item tiles.
-                       .Select(x => x.stock_id).Distinct().Select(x => MI.Player.Inventory.Items.Where(y => y != null).First(y => y.stock_id == x))
-                       //For each "unique" item tile (key), get how many there are of it in the player inventory (value)
-                       .Select(x => new KeyValuePair<ItemTile, int>(x, MI.Player.Inventory.Items.Where(y => y != null).Count(i => i.stock_id == x.stock_id)))
-                       .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            return MainClass.CTController.GetAvalableRecipes();
         }
 
         /// <summary>
@@ -43,31 +21,25 @@ namespace Mundus.Service.Tiles.Crafting {
         /// </summary>
         /// <param name="itemRecipe">CraftingRecipie of the item that will be crafted</param>
         public static void CraftItem(CraftingRecipe itemRecipe, MobTile mob) {
-            // Removes all items that are used to craft the result item
-            foreach (var itemAndCount in itemRecipe.GetRequiredItemsAndCounts()) {
-                for(int i = 0, removedItems = 0; i < mob.Inventory.Items.Length && removedItems < itemAndCount.Value; i++) {
-                    if (MI.Player.Inventory.Items[i] != null) {
-                        if (MI.Player.Inventory.Items[i].stock_id == itemAndCount.Key.stock_id) {
-                            MI.Player.Inventory.Items[i] = null;
-                            removedItems++;
-                        }
+            //Removes all items that are used to craft the result item
+            var reqItems = itemRecipe.GetAllRequiredItems();
+            var reqCounts = itemRecipe.GetAllCounts();
+            var inventoryItems = mob.Inventory.Items.Where(i => i != null).ToArray();
+
+            for (int item = 0; item < reqItems.Length; item++) 
+            {
+                for (int i = 0, removed = 0; i < inventoryItems.Length && removed < reqCounts[item]; i++) 
+                {
+                    if (inventoryItems[i].stock_id == reqItems[item]) {
+                        mob.Inventory.DeleteFromItems(i);
+                        removed++;
                     }
                 }
             }
-            ItemTile tmp = null;
 
-            // Adds the result item to the inventory (in the correct data type)
-            if (itemRecipe.ResultItem.GetType() == typeof(Material)) {
-                tmp = new Material((Material)itemRecipe.ResultItem);
-            }
-            if (itemRecipe.ResultItem.GetType() == typeof(Tool)) {
-                tmp = new Tool((Tool)itemRecipe.ResultItem);
-            }
-            if (itemRecipe.ResultItem.GetType() == typeof(Gear)) {
-                tmp = new Gear((Gear)itemRecipe.ResultItem);
-            }
-            if (itemRecipe.ResultItem.GetType() == typeof(Structure)) {
-                tmp = new Structure((Structure)itemRecipe.ResultItem);
+            ItemTile tmp = ToolPresets.GetFromStock(itemRecipe.ResultItem);
+            if (tmp == null) {
+                tmp = StructurePresets.GetFromStock(itemRecipe.ResultItem);
             }
             MI.Player.Inventory.AppendToItems(tmp);
 
