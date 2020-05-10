@@ -267,7 +267,6 @@
     <Compile Include="Data\SuperLayers\Sky.cs" />
     <Compile Include="Service\SuperLayers\Generators\SkySuperLayerGenerator.cs" />
     <Compile Include="Data\Difficulty.cs" />
-    <Compile Include="Data\Log.cs" />
     <Compile Include="Service\LogController.cs" />
     <Compile Include="Views\Windows\LogWindow.cs" />
     <Compile Include="gtk-gui\Mundus.Views.Windows.LogWindow.cs" />
@@ -293,6 +292,9 @@
     <Compile Include="Views\Windows\GameWindows\MediumGameWindow.cs" />
     <Compile Include="Views\Windows\GameWindows\SmallGameWindow.cs" />
     <Compile Include="Data\Crafting\CraftingTableContext.cs" />
+    <Compile Include="Data\GameEventLogContext.cs" />
+    <Compile Include="Service\GameEventLog.cs" />
+    <Compile Include="Data\DataBaseContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />

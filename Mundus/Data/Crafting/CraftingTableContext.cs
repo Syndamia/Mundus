@@ -6,11 +6,10 @@ using Mundus.Service.Tiles.Items.Presets;
 
 namespace Mundus.Data.Crafting {
     public class CraftingTableContext : DbContext {
-        public DbSet<CraftingRecipe> CraftingRecipes { get; set; }
+        public DbSet<CraftingRecipe> CraftingRecipes { get; private set; }
 
         public CraftingTableContext() : base()
         { }
-
 
         public void AddRecipes() {
             ResetTable();

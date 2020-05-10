@@ -5,6 +5,7 @@ using Mundus.Data.Superlayers.Mobs;
 using Mundus.Service.Tiles.Mobs;
 using Mundus.Service.Tiles.Items;
 using Mundus.Service.Tiles.Items.Presets;
+using Mundus.Data;
 
 namespace Mundus.Service.Tiles.Crafting {
     public static class CraftingController {
@@ -13,7 +14,7 @@ namespace Mundus.Service.Tiles.Crafting {
         /// </summary>
         /// <returns>All avalable recipies.</returns>
         public static CraftingRecipe[] GetAvalableRecipes() {
-            return MainClass.CTController.GetAvalableRecipes();
+            return DataBaseContext.CTContext.GetAvalableRecipes();
         }
 
         /// <summary>
