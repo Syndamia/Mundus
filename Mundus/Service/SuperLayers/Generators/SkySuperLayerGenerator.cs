@@ -23,7 +23,7 @@ namespace Mundus.Service.SuperLayers.Generators {
         private static void GenerateMobLayer(int size) {
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
-                    context.AddMobAtPosition(null, row, col);
+                    context.AddMobAtPosition(null, -1, row, col);
                 }
             }
             context.SaveChanges();
@@ -32,7 +32,7 @@ namespace Mundus.Service.SuperLayers.Generators {
         private static void GenerateGroundLayer(int size) {
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
-                    context.AddGroundAtPosition(GroundPresets.GetASSky().stock_id, row, col);
+                    context.AddGroundAtPosition(GroundPresets.GetSSky().stock_id, row, col);
                 }
             }
             context.SaveChanges();
@@ -41,7 +41,7 @@ namespace Mundus.Service.SuperLayers.Generators {
         private static void GenerateStructureLayer(int size) {
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
-                    context.AddStructureAtPosition(null, row, col);
+                    context.AddStructureAtPosition(null, -1, row, col);
                 }
             }
             context.SaveChanges();

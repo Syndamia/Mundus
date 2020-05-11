@@ -65,8 +65,8 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                 if (selTool.Class >= targetMob.Defense) {
                     int damagePoints = 1 + (selTool.Class - targetMob.Defense);
 
-                    if (!targetMob.TakeDamage(damagePoints)) {
-                        mob.CurrSuperLayer.SetMobAtPosition(null, mapYPos, mapXPos);
+                    if (!mob.CurrSuperLayer.TakeDamageMobAtPosition(mapYPos, mapXPos, damagePoints)) {
+                        mob.CurrSuperLayer.RemoveMobFromPosition(mapYPos, mapXPos);
 
                         if (mob.Inventory.Items.Contains(null)) {
                             mob.Inventory.AppendToItems(targetMob.DroppedUponDeath);
@@ -76,7 +76,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                             GameEventLogController.AddMessage($"Player killed \"{targetMob.stock_id}\"");
                         }
                     } else if (mob.GetType() == typeof(Player)) {
-                        GameEventLogController.AddMessage($"Player did {damagePoints} damage to \"{targetMob.stock_id}\" (H:{targetMob.Health}) ");
+                        GameEventLogController.AddMessage($"Player did {damagePoints} damage to \"{targetMob.stock_id}\"");
                     }
                     return true;
                 }

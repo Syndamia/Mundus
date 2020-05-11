@@ -133,7 +133,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
 
             mob.YPos = yPos;
             mob.XPos = xPos;
-            mob.CurrSuperLayer.SetMobAtPosition(mob.stock_id, yPos, xPos);
+            mob.CurrSuperLayer.SetMobAtPosition(mob.stock_id, mob.Health, yPos, xPos);
         }
 
         private static bool CanWalkTo(MobTile mob, int yPos, int xPos) {

@@ -28,32 +28,45 @@ namespace Mundus.Data.SuperLayers {
             return SGroundLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id;
         }
 
-        public void AddMobAtPosition(string stock_id, int yPos, int xPos) {
-            SMobLayer.Add(new SMPlacedTile(stock_id, yPos, xPos));
+        public void AddMobAtPosition(string stock_id, int health, int yPos, int xPos) {
+            SMobLayer.Add(new SMPlacedTile(stock_id, health, yPos, xPos));
             
         }
 
-        public void SetMobAtPosition(string stock_id, int yPos, int xPos) {
+        public void SetMobAtPosition(string stock_id, int health, int yPos, int xPos) {
             SMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = stock_id;
-            
+            SMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).Health = health;
         }
         public void RemoveMobFromPosition(int yPos, int xPos) {
             SMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = null;
+            SMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).Health = -1;
+
+        }
+        public bool TakeDamageMobAtPosition(int yPos, int xPos, int damage) {
+            var mob = SMobLayer.First(x => x.YPos == yPos && x.XPos == xPos);
+            mob.Health -= damage;
+            return mob.Health > 0;
+        }
+
+        public void AddStructureAtPosition(string stock_id, int health, int yPos, int xPos) {
+            SStructureLayer.Add(new SSPlacedTile(stock_id, health, yPos, xPos));
             
         }
 
-        public void AddStructureAtPosition(string stock_id, int yPos, int xPos) {
-            SStructureLayer.Add(new SSPlacedTile(stock_id, yPos, xPos));
-            
-        }
-
-        public void SetStructureAtPosition(string stock_id, int yPos, int xPos) {
+        public void SetStructureAtPosition(string stock_id, int health, int yPos, int xPos) {
             SStructureLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = stock_id;
+            SStructureLayer.First(x => x.YPos == yPos && x.XPos == xPos).Health = health;
             
         }
         public void RemoveStructureFromPosition(int yPos, int xPos) {
             SStructureLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = null;
-            
+            SStructureLayer.First(x => x.YPos == yPos && x.XPos == xPos).Health = -1;
+
+        }
+        public bool TakeDamageStructureAtPosition(int yPos, int xPos, int damage) {
+            var structure = SStructureLayer.First(x => x.YPos == yPos && x.XPos == xPos);
+            structure.Health -= damage;
+            return structure.Health > 0;
         }
 
         public void AddGroundAtPosition(string stock_id, int yPos, int xPos) {

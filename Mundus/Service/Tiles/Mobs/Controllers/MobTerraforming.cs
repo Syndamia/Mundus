@@ -124,13 +124,13 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                 }
 
                 // Damage to the structure is done after adding the dropped item/items.
-                if (!selStructure.TakeDamage(damagePoints)) {
-                    MI.Player.CurrSuperLayer.SetStructureAtPosition(null, mapYPos, mapXPos);
+                if (!MI.Player.CurrSuperLayer.TakeDamageStructureAtPosition(mapYPos, mapXPos, damagePoints)) {
+                    MI.Player.CurrSuperLayer.SetStructureAtPosition(null, -1, mapYPos, mapXPos);
 
                     GameEventLogController.AddMessage($"Player destroyed \"{selStructure.stock_id}\" from layer \"{MI.Player.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
                 }
                 else {
-                    GameEventLogController.AddMessage($"Player did {damagePoints} damage to \"{selStructure.stock_id}\" (H:{selStructure.Health})");
+                    GameEventLogController.AddMessage($"Player did {damagePoints} damage to \"{selStructure.stock_id}\"");
                 }
                 return true;
             }
@@ -173,12 +173,12 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             if (toBuild.IsClimable && MI.Player.CurrSuperLayer.GetGroundLayerStock(yPos, xPos) == null && 
                 HeightController.GetLayerUnderneathMob(MI.Player).GetStructureLayerStock(yPos, xPos) == null) 
             {
-                HeightController.GetLayerUnderneathMob(MI.Player).SetStructureAtPosition(toBuild.stock_id, yPos, xPos);
+                HeightController.GetLayerUnderneathMob(MI.Player).SetStructureAtPosition(toBuild.stock_id, toBuild.Health, yPos, xPos);
 
                 GameEventLogController.AddMessage($"Set structure \"{toBuild.stock_id}\" on layer \"{HeightController.GetLayerUnderneathMob(MI.Player)}\" at Y:{yPos}, X:{xPos}");
             }
             else if (MI.Player.CurrSuperLayer.GetGroundLayerStock(yPos, xPos) != null) {
-                MI.Player.CurrSuperLayer.SetStructureAtPosition(toBuild.stock_id, yPos, xPos);
+                MI.Player.CurrSuperLayer.SetStructureAtPosition(toBuild.stock_id, toBuild.Health, yPos, xPos);
 
                 GameEventLogController.AddMessage($"Set structure \"{toBuild.stock_id}\" on layer \"{MI.Player.CurrSuperLayer}\" at Y:{yPos}, X:{xPos}");
             }

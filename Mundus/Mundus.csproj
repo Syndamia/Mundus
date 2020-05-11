@@ -326,7 +326,6 @@
     <Folder Include="Service\Tiles\Items\Presets\" />
     <Folder Include="Views\Windows\GameWindows\" />
     <Folder Include="Icons\UI\Hearth\" />
-    <Folder Include="Service\SuperLayers\PlacedTiles\" />
     <Folder Include="Data\SuperLayers\DBTables\" />
   </ItemGroup>
   <ItemGroup>

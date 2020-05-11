@@ -26,14 +26,16 @@ CREATE TABLE SMobLayer(
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     XPos INT NOT NULL,
     YPos INT NOT NULL,
-    stock_id VARCHAR(45)
+    stock_id VARCHAR(45),
+    Health INT NOT NULL
 );
 
 CREATE TABLE SStructureLayer(
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     XPos INT NOT NULL,
     YPos INT NOT NULL,
-    stock_id VARCHAR(45)
+    stock_id VARCHAR(45),
+    Health INT NOT NULL
 );
 
 CREATE TABLE SGroundLayer(
@@ -48,14 +50,16 @@ CREATE TABLE LMobLayer(
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     XPos INT NOT NULL,
     YPos INT NOT NULL,
-    stock_id VARCHAR(45)
+    stock_id VARCHAR(45),
+    Health INT NOT NULL
 );
 
 CREATE TABLE LStructureLayer(
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     XPos INT NOT NULL,
     YPos INT NOT NULL,
-    stock_id VARCHAR(45)
+    stock_id VARCHAR(45),
+    Health INT NOT NULL
 );
 
 CREATE TABLE LGroundLayer(
@@ -70,14 +74,16 @@ CREATE TABLE UMobLayer(
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     XPos INT NOT NULL,
     YPos INT NOT NULL,
-    stock_id VARCHAR(45)
+    stock_id VARCHAR(45),
+    Health INT NOT NULL
 );
 
 CREATE TABLE UStructureLayer(
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     XPos INT NOT NULL,
     YPos INT NOT NULL,
-    stock_id VARCHAR(45)
+    stock_id VARCHAR(45),
+    Health INT NOT NULL
 );
 
 CREATE TABLE UGroundLayer(

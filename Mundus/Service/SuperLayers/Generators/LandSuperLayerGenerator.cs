@@ -31,7 +31,7 @@ namespace Mundus.Service.SuperLayers.Generators {
                         context.AddGroundAtPosition(null, row, col);
                     }
                     else {
-                        context.AddGroundAtPosition(GroundPresets.GetALGrass().stock_id, row, col);
+                        context.AddGroundAtPosition(GroundPresets.GetLGrass().stock_id, row, col);
                     }
                 }
             }
@@ -46,17 +46,17 @@ namespace Mundus.Service.SuperLayers.Generators {
                     if (context.GetGroundLayerStock(row, col) != null &&
                         !atPlayerSpawnPosition) {
                         if (rnd.Next(0, 15 + (int)CurrDifficulty) == 1) {
-                            context.AddStructureAtPosition(StructurePresets.GetALTree().stock_id, row, col);
+                            context.AddStructureAtPosition(StructurePresets.GetLTree().stock_id, StructurePresets.GetLTree().Health, row, col);
                         }
                         else if (rnd.Next(0, 40 + (int)CurrDifficulty) == 1) {
-                            context.AddStructureAtPosition(StructurePresets.GetALBoulder().stock_id, row, col);
+                            context.AddStructureAtPosition(StructurePresets.GetLBoulder().stock_id, StructurePresets.GetLBoulder().Health, row, col);
                         }
                         else {
-                            context.AddStructureAtPosition(null, row, col);
+                            context.AddStructureAtPosition(null, -1, row, col);
                         }
                     }
                     else {
-                        context.AddStructureAtPosition(null, row, col);
+                        context.AddStructureAtPosition(null, -1, row, col);
                     }
                 }
             }
@@ -73,20 +73,20 @@ namespace Mundus.Service.SuperLayers.Generators {
                         if (atPlayerSpawnPosition) {
                             MI.Player.YPos = row;
                             MI.Player.XPos = col;
-                            context.AddMobAtPosition(MI.Player.stock_id, row, col);
+                            context.AddMobAtPosition(MI.Player.stock_id, MI.Player.Health, row, col);
                         }
                         else if (rnd.Next(0, 15 + (int)CurrDifficulty) == 1) {
-                            context.AddMobAtPosition(LandMobsPresets.GetACow().stock_id, row, col);
+                            context.AddMobAtPosition(LandMobsPresets.GetCow().stock_id, LandMobsPresets.GetCow().Health, row, col);
                         }
                         else if (rnd.Next(0, 15 + (int)CurrDifficulty) == 1) {
-                            context.AddMobAtPosition(LandMobsPresets.GetASheep().stock_id, row, col);
+                            context.AddMobAtPosition(LandMobsPresets.GetSheep().stock_id, LandMobsPresets.GetSheep().Health, row, col);
                         }
                         else {
-                            context.AddMobAtPosition(null, row, col);
+                            context.AddMobAtPosition(null, -1, row, col);
                         }
                     }
                     else {
-                        context.AddMobAtPosition(null, row, col);
+                        context.AddMobAtPosition(null, -1, row, col);
                     }
                 }
             }
