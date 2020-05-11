@@ -2,9 +2,11 @@
 using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Service.SuperLayers;
+using Mundus.Service.Tiles.Items.Presets;
 
 namespace Mundus.Service.Tiles.Mobs.Controllers {
     public static class MobStatsController {
+        public static object GroundPresetsHeightController { get; private set; }
 
         /// <summary>
         /// Returns the stock_id of the hearth icon that must be used on the given position of the health bar
@@ -73,8 +75,8 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             if (HeightController.GetLayerAboveMob(MI.Player) == null) {
                 return false;
             }
-            return HeightController.GetLayerAboveMob(MI.Player).GetGroundLayerTile(MI.Player.YPos, MI.Player.XPos) == null ||
-                   !HeightController.GetLayerAboveMob(MI.Player).GetGroundLayerTile(MI.Player.YPos, MI.Player.XPos).Solid;
+            return HeightController.GetLayerAboveMob(MI.Player).GetGroundLayerStock(MI.Player.YPos, MI.Player.XPos) == null ||
+                   !GroundPresets.GetFromStock(HeightController.GetLayerAboveMob(MI.Player).GetGroundLayerStock(MI.Player.YPos, MI.Player.XPos)).Solid;
         }
     }
 }

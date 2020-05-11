@@ -1,5 +1,5 @@
 ﻿using Gtk;
-using Mundus.Data.Tiles;
+using static Mundus.Data.Values;
 
 namespace Mundus.Service.Tiles.Items {
     public class GroundTile : ItemTile {
@@ -21,7 +21,7 @@ namespace Mundus.Service.Tiles.Items {
         }
 
         public override string ToString() {
-            return $"GroundTile | ID: {this.stock_id} TT: {ToolTypes.Shovel} TC: {this.ReqShovelClass}";
+            return $"GroundTile | ID: {this.stock_id} TT: {ToolType.Shovel} TC: {this.ReqShovelClass}";
         }
     }
 }

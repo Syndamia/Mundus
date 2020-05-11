@@ -22,8 +22,8 @@ namespace Mundus.Views.Windows {
         private int scroll = 0;
 
         public void PrintLogs() {
-            for (int i = LogController.GetCount() - 1 - scroll, logIndex = 0; logIndex < 9; logIndex++, i--) {
-                string msg = LogController.GetMessagage(i);
+            for (int i = GameEventLogController.GetCount() - 1 - scroll, logIndex = 0; logIndex < 9; logIndex++, i--) {
+                string msg = GameEventLogController.GetMessagage(i);
 
                 switch (logIndex) {
                     case 0: lblLog1.Text = msg; break;
@@ -53,7 +53,7 @@ namespace Mundus.Views.Windows {
 
         private void UpdateButtons() {
             btnNewer.Sensitive = scroll > 0;
-            btnOlder.Sensitive = scroll < LogController.GetCount() - 9;
+            btnOlder.Sensitive = scroll < GameEventLogController.GetCount() - 9;
         }
     }
 }

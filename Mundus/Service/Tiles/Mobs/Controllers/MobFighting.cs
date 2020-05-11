@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
-using Mundus.Data.Tiles;
 using Mundus.Service.Tiles.Items;
 using Mundus.Service.Tiles.Mobs.LandMobs;
+using static Mundus.Data.Values;
 
 namespace Mundus.Service.Tiles.Mobs.Controllers {
     public static class MobFighting {
@@ -22,7 +22,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         /// <param name="mapYPos">YPos of target mob</param>
         /// <param name="mapXPos">XPos of target mob</param>
         public static bool ExistsFightTargetForMob(MobTile mob, int mapYPos, int mapXPos) {
-            return mob.CurrSuperLayer.GetMobLayerTile(mapYPos, mapXPos) != null;
+            return mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) != null;
         }
 
         private const double TAKEN_ENERGY_FROM_FIGHTING = 0.5;
@@ -36,15 +36,15 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         /// <param name="mapXPos">XPos of target mob</param>
         public static void PlayerTryFight(string selPlace, int selIndex, int mapYPos, int mapXPos) {
             if (MobTryFight(MI.Player, selPlace, selIndex, mapYPos, mapXPos)) {
-                MI.Player.DrainEnergy(TAKEN_ENERGY_FROM_FIGHTING + Difficulty.ValueModifier());
+                MI.Player.DrainEnergy(TAKEN_ENERGY_FROM_FIGHTING + DifficultyValueModifier());
             }
         }
 
         // Checks if the mob has a proper fighting item selected
         private static bool MobCanFight(MobTile mob, string selPlace, int selIndex, int mapYPos, int mapXPos) {
             return Inventory.GetPlayerItem(selPlace, selIndex).GetType() == typeof(Tool) &&
-                   ((Tool)Inventory.GetPlayerItem(selPlace, selIndex)).Type == ToolTypes.Sword && 
-                   mob.CurrSuperLayer.GetMobLayerTile(mapYPos, mapXPos) != null;
+                   ((Tool)Inventory.GetPlayerItem(selPlace, selIndex)).Type == ToolType.Sword && 
+                   mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) != null;
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         public static bool MobTryFight(MobTile mob, string selPlace, int selIndex, int mapYPos, int mapXPos) {
             if (MobCanFight(mob, selPlace, selIndex, mapYPos, mapXPos)) {
                 Tool selTool = (Tool)Inventory.GetPlayerItem(selPlace, selIndex);
-                MobTile targetMob = mob.CurrSuperLayer.GetMobLayerTile(mapYPos, mapXPos);
+                MobTile targetMob = LandMobsPresets.GetFromStock(mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos));
 
                 if (selTool.Class >= targetMob.Defense) {
                     int damagePoints = 1 + (selTool.Class - targetMob.Defense);
@@ -73,22 +73,22 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                         }
 
                         if (mob.GetType() == typeof(Player)) {
-                            LogController.AddMessage($"Player killed \"{targetMob.stock_id}\"");
+                            GameEventLogController.AddMessage($"Player killed \"{targetMob.stock_id}\"");
                         }
                     } else if (mob.GetType() == typeof(Player)) {
-                        LogController.AddMessage($"Player did {damagePoints} damage to \"{targetMob.stock_id}\" (H:{targetMob.Health}) ");
+                        GameEventLogController.AddMessage($"Player did {damagePoints} damage to \"{targetMob.stock_id}\" (H:{targetMob.Health}) ");
                     }
                     return true;
                 }
                 else if (mob.GetType() == typeof(Player)) {
-                    LogController.AddMessage($"You need a tool class of atleast {targetMob.Defense} to fight this mob");
+                    GameEventLogController.AddMessage($"You need a tool class of atleast {targetMob.Defense} to fight this mob");
                 }
             }
-            else if (mob.CurrSuperLayer.GetMobLayerTile(mapYPos, mapXPos) == null && mob.GetType() == typeof(Player)) {
-                LogController.AddMessage($"There is no mob to fight on \"{mob.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
+            else if (mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) == null && mob.GetType() == typeof(Player)) {
+                GameEventLogController.AddMessage($"There is no mob to fight on \"{mob.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
             }
             else if (mob.GetType() == typeof(Player)) { // Inventory.GetPlayerItem(selPlace, selIndex).GetType() != typeof(Tool) || ((Tool)Inventory.GetPlayerItem(selPlace, selIndex)).Type != ToolTypes.Sword
-                LogController.AddMessage($"You need a Tool of type {ToolTypes.Sword} to fight with other mobs");
+                GameEventLogController.AddMessage($"You need a Tool of type {ToolType.Sword} to fight with other mobs");
             }
             return false;
         }

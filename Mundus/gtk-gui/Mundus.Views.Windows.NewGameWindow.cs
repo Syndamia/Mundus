@@ -244,8 +244,10 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.rbCreative = new global::Gtk.RadioButton("Creative");
 			this.rbCreative.WidthRequest = 90;
+			this.rbCreative.Sensitive = false;
 			this.rbCreative.CanFocus = true;
 			this.rbCreative.Name = "rbCreative";
+			this.rbCreative.Active = true;
 			this.rbCreative.DrawIndicator = true;
 			this.rbCreative.UseUnderline = true;
 			this.rbCreative.Group = new global::GLib.SList(global::System.IntPtr.Zero);
@@ -262,6 +264,7 @@ namespace Mundus.Views.Windows
 			this.rbEasy.WidthRequest = 90;
 			this.rbEasy.CanFocus = true;
 			this.rbEasy.Name = "rbEasy";
+			this.rbEasy.Active = true;
 			this.rbEasy.DrawIndicator = true;
 			this.rbEasy.UseUnderline = true;
 			this.rbEasy.Group = new global::GLib.SList(global::System.IntPtr.Zero);
@@ -310,6 +313,7 @@ namespace Mundus.Views.Windows
 			this.rbLarge.WidthRequest = 90;
 			this.rbLarge.CanFocus = true;
 			this.rbLarge.Name = "rbLarge";
+			this.rbLarge.Active = true;
 			this.rbLarge.DrawIndicator = true;
 			this.rbLarge.UseUnderline = true;
 			this.rbLarge.Group = new global::GLib.SList(global::System.IntPtr.Zero);
@@ -341,6 +345,7 @@ namespace Mundus.Views.Windows
 			this.rbMLarge = new global::Gtk.RadioButton("Large");
 			this.rbMLarge.CanFocus = true;
 			this.rbMLarge.Name = "rbMLarge";
+			this.rbMLarge.Active = true;
 			this.rbMLarge.DrawIndicator = true;
 			this.rbMLarge.UseUnderline = true;
 			this.rbMLarge.Group = new global::GLib.SList(global::System.IntPtr.Zero);

@@ -13,8 +13,8 @@ namespace Mundus.Data {
         }
 
         private void ResetTable() {
-            GameEventLogs.RemoveRange(GameEventLogs);
-            this.SaveChanges();
+            Database.ExecuteSqlRaw("TRUNCATE TABLE GameEventLogs;");
+            SaveChanges();
         }
 
         public void AddMessage(string message) {

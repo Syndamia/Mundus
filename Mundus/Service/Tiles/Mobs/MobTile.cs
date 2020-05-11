@@ -9,7 +9,7 @@ namespace Mundus.Service.Tiles.Mobs {
         public string stock_id { get; private set; }
         public Image Texture { get; private set; }
 
-        public ISuperLayer CurrSuperLayer { get; set; }
+        public ISuperLayerContext CurrSuperLayer { get; set; }
         public int YPos { get; set; }
         public int XPos { get; set; }
         public int Health { get; private set; }
@@ -23,7 +23,7 @@ namespace Mundus.Service.Tiles.Mobs {
         /// </summary>
         public int RndMovementRate { get; protected set; }
 
-        public MobTile(string stock_id, int health, int defence, ISuperLayer currentSuperLayer, int inventorySize = 5, Material droppedUponDeath = null, int rndMovementQualifier = 3) {
+        public MobTile(string stock_id, int health, int defence, ISuperLayerContext currentSuperLayer, int inventorySize = 5, Material droppedUponDeath = null, int rndMovementQualifier = 3) {
             this.stock_id = stock_id;
             this.Texture = new Image(stock_id, IconSize.Dnd);
             this.Health = health;

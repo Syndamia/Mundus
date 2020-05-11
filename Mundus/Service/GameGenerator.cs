@@ -12,15 +12,15 @@ namespace Mundus.Service {
         /// <param name="size">Size of the map ("small", "medium" or "large")</param>
         public static void GenerateMap(string size) {
             switch (size.ToLower()) {
-                case "small": MapSizes.CurrSize = MapSizes.SMALL; break;
-                case "medium": MapSizes.CurrSize = MapSizes.MEDIUM; break;
-                case "large": MapSizes.CurrSize = MapSizes.LARGE; break;
+                case "small": Values.CurrMapSize =Values.MapSize.SMALL; break;
+                case "medium": Values.CurrMapSize = Values.MapSize.MEDIUM; break;
+                case "large": Values.CurrMapSize = Values.MapSize.LARGE; break;
                 default: throw new ArgumentException( "Map size must be \"small\", \"medium\" or \"large\"" );
             }
 
-            SkySuperLayerGenerator.GenerateAllLayers(MapSizes.CurrSize);
-            LandSuperLayerGenerator.GenerateAllLayers(MapSizes.CurrSize);
-            UndergroundSuperLayerGenerator.GenerateAllLayers(MapSizes.CurrSize);
+            SkySuperLayerGenerator.GenerateAllLayers(Values.CurrMapSize);
+            LandSuperLayerGenerator.GenerateAllLayers(Values.CurrMapSize);
+            UndergroundSuperLayerGenerator.GenerateAllLayers(Values.CurrMapSize);
         }
 
         /// <summary>
@@ -53,11 +53,11 @@ namespace Mundus.Service {
         /// <param name="value">Must be "peaceful", "easy", "normal", "hard" or "insane"</param>
         public static void SetDifficulty(string value) {
             switch(value.ToLower()) {
-                case "peaceful": Difficulty.SelDifficulty = Difficulty.Peaceful; break;
-                case "easy": Difficulty.SelDifficulty = Difficulty.Easy; break;
-                case "normal": Difficulty.SelDifficulty = Difficulty.Normal; break;
-                case "hard": Difficulty.SelDifficulty = Difficulty.Hard; break;
-                case "insane": Difficulty.SelDifficulty = Difficulty.Insane; break;
+                case "peaceful": Values.CurrDifficulty = Values.Difficulty.Peaceful; break;
+                case "easy": Values.CurrDifficulty = Values.Difficulty.Easy; break;
+                case "normal": Values.CurrDifficulty = Values.Difficulty.Normal; break;
+                case "hard": Values.CurrDifficulty = Values.Difficulty.Hard; break;
+                case "insane": Values.CurrDifficulty = Values.Difficulty.Insane; break;
                 default: throw new ArgumentException($"Invalid difficulty value {value}. Must be \"peaceful\", \"easy\", \"normal\", \"hard\" or \"insane\"");
             }
         }

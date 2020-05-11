@@ -1,15 +1,16 @@
-﻿using Mundus.Data.SuperLayers;
+﻿using Mundus.Data;
+using Mundus.Data.SuperLayers;
 using Mundus.Service.Tiles.Mobs;
 
 namespace Mundus.Service.SuperLayers {
     public static class HeightController {
         // Order of layers (top to bottom): sky, land, underground
 
-        private static ISuperLayer sky = LI.Sky;
-        private static ISuperLayer land = LI.Land;
-        private static ISuperLayer underground = LI.Underground;
+        private static ISuperLayerContext sky = DataBaseContexts.SContext;
+        private static ISuperLayerContext land = DataBaseContexts.LContext;
+        private static ISuperLayerContext underground = DataBaseContexts.UContext;
 
-        public static ISuperLayer GetLayerUnderneath(ISuperLayer currentLayer) {
+        public static ISuperLayerContext GetLayerUnderneath(ISuperLayerContext currentLayer) {
             if (land == currentLayer) {
                 return underground;
             }
@@ -19,11 +20,11 @@ namespace Mundus.Service.SuperLayers {
             return null;
         }
 
-        public static ISuperLayer GetLayerUnderneathMob(MobTile currentMob) {
+        public static ISuperLayerContext GetLayerUnderneathMob(MobTile currentMob) {
             return GetLayerUnderneath(currentMob.CurrSuperLayer);
         }
 
-        public static ISuperLayer GetLayerAbove(ISuperLayer currentLayer) {
+        public static ISuperLayerContext GetLayerAbove(ISuperLayerContext currentLayer) {
             if (underground == currentLayer) {
                 return land;
             }
@@ -33,7 +34,7 @@ namespace Mundus.Service.SuperLayers {
             return null;
         }
 
-        public static ISuperLayer GetLayerAboveMob(MobTile currentMob) {
+        public static ISuperLayerContext GetLayerAboveMob(MobTile currentMob) {
             return GetLayerAbove(currentMob.CurrSuperLayer);
         }
     }

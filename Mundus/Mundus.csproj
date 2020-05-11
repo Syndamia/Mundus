@@ -242,32 +242,24 @@
     <Compile Include="Views\Dialogs\ExitDialog.cs" />
     <Compile Include="gtk-gui\Mundus.Views.Dialogs.ExitDialog.cs" />
     <Compile Include="Service\Tiles\ITile.cs" />
-    <Compile Include="Data\MapSizes.cs" />
     <Compile Include="Service\SuperLayers\ImageController.cs" />
     <Compile Include="Service\Calculate.cs" />
     <Compile Include="Data\Windows\WI.cs" />
     <Compile Include="Data\Dialogues\DI.cs" />
-    <Compile Include="Data\SuperLayers\Land.cs" />
-    <Compile Include="Data\SuperLayers\ISuperLayer.cs" />
-    <Compile Include="Data\SuperLayers\LI.cs" />
     <Compile Include="Data\SuperLayers\Mobs\MI.cs" />
     <Compile Include="Service\WindowController.cs" />
     <Compile Include="Service\GameGenerator.cs" />
     <Compile Include="Service\Tiles\Items\ItemTile.cs" />
     <Compile Include="Service\Tiles\Items\Tool.cs" />
     <Compile Include="Service\Tiles\Items\Structure.cs" />
-    <Compile Include="Data\Tiles\ToolTypes.cs" />
     <Compile Include="Service\Tiles\Items\Material.cs" />
     <Compile Include="Service\Tiles\Items\Gear.cs" />
-    <Compile Include="Data\SuperLayers\Underground.cs" />
     <Compile Include="Service\SuperLayers\Generators\LandSuperLayerGenerator.cs" />
     <Compile Include="Service\SuperLayers\Generators\UndergroundSuperLayerGenerator.cs" />
     <Compile Include="Service\Tiles\Items\GroundTile.cs" />
     <Compile Include="Service\SuperLayers\HeightController.cs" />
-    <Compile Include="Data\SuperLayers\Sky.cs" />
     <Compile Include="Service\SuperLayers\Generators\SkySuperLayerGenerator.cs" />
-    <Compile Include="Data\Difficulty.cs" />
-    <Compile Include="Service\LogController.cs" />
+    <Compile Include="Service\GameEventLogController.cs" />
     <Compile Include="Views\Windows\LogWindow.cs" />
     <Compile Include="gtk-gui\Mundus.Views.Windows.LogWindow.cs" />
     <Compile Include="Service\Tiles\Mobs\Controllers\MobFighting.cs" />
@@ -293,8 +285,23 @@
     <Compile Include="Views\Windows\GameWindows\SmallGameWindow.cs" />
     <Compile Include="Data\Crafting\CraftingTableContext.cs" />
     <Compile Include="Data\GameEventLogContext.cs" />
-    <Compile Include="Service\GameEventLog.cs" />
-    <Compile Include="Data\DataBaseContext.cs" />
+    <Compile Include="Data\DataBaseContexts.cs" />
+    <Compile Include="Data\SuperLayers\SkyContext.cs" />
+    <Compile Include="Data\SuperLayers\ISuperLayerContext.cs" />
+    <Compile Include="Data\SuperLayers\LandContext.cs" />
+    <Compile Include="Data\SuperLayers\UndergroundContext.cs" />
+    <Compile Include="Data\Values.cs" />
+    <Compile Include="Data\SuperLayers\DBTables\PlacedTile.cs" />
+    <Compile Include="Data\SuperLayers\DBTables\SSPlacedTile.cs" />
+    <Compile Include="Data\GameEventLog.cs" />
+    <Compile Include="Data\SuperLayers\DBTables\SGPlacedTile.cs" />
+    <Compile Include="Data\SuperLayers\DBTables\SMPlacedTile.cs" />
+    <Compile Include="Data\SuperLayers\DBTables\UGPlacedTile.cs" />
+    <Compile Include="Data\SuperLayers\DBTables\USPlacedTile.cs" />
+    <Compile Include="Data\SuperLayers\DBTables\UMPlacedTile.cs" />
+    <Compile Include="Data\SuperLayers\DBTables\LGPlacedTile.cs" />
+    <Compile Include="Data\SuperLayers\DBTables\LSPlacedTile.cs" />
+    <Compile Include="Data\SuperLayers\DBTables\LMPlacedTile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -310,7 +317,6 @@
     <Folder Include="Data\SuperLayers\" />
     <Folder Include="Data\SuperLayers\Mobs\" />
     <Folder Include="Service\Tiles\Items\" />
-    <Folder Include="Data\Tiles\" />
     <Folder Include="Data\Crafting\" />
     <Folder Include="Icons\Land\Materials\" />
     <Folder Include="Service\SuperLayers\Generators\" />
@@ -320,6 +326,8 @@
     <Folder Include="Service\Tiles\Items\Presets\" />
     <Folder Include="Views\Windows\GameWindows\" />
     <Folder Include="Icons\UI\Hearth\" />
+    <Folder Include="Service\SuperLayers\PlacedTiles\" />
+    <Folder Include="Data\SuperLayers\DBTables\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

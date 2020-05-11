@@ -11,12 +11,11 @@ namespace Mundus {
         public static bool runGame = true;
 
         public static void Main(string[] args) {
-            DataBaseContext.CreateInstances();
+            DataBaseContexts.CreateInstances();
             Application.Init();
             //All windows and dialogues that are used by user (instances) are saved and created in WindowInstances.cs
             WI.CreateInstances();
             DI.CreateInstances();
-            LI.CreateInstances();
 
             WI.WMain.Show();
             Application.Run();

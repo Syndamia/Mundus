@@ -14,7 +14,7 @@ namespace Mundus.Service.Tiles.Crafting {
         /// </summary>
         /// <returns>All avalable recipies.</returns>
         public static CraftingRecipe[] GetAvalableRecipes() {
-            return DataBaseContext.CTContext.GetAvalableRecipes();
+            return DataBaseContexts.CTContext.GetAvalableRecipes();
         }
 
         /// <summary>

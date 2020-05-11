@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Mundus.Service {
+namespace Mundus.Data {
     [Table("GameEventLogs", Schema = "Mundus")]
     public class GameEventLog {
         [Key]

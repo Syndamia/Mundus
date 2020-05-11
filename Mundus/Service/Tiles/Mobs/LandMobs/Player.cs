@@ -10,7 +10,7 @@ namespace Mundus.Service.Tiles.Mobs.LandMobs {
         /// <summary>
         /// Note: player has an rndMovementQualifier of -1 and drops first item in the hotbar
         /// </summary>
-        public Player(string stock_id, int defence, ISuperLayer currentSuperLayer)
+        public Player(string stock_id, int defence, ISuperLayerContext currentSuperLayer)
                : base(stock_id, WI.SelWin.Size * 4, defence, currentSuperLayer, WI.SelWin.Size, null, -1) 
         {
             this.Energy = WI.SelWin.Size * 6;

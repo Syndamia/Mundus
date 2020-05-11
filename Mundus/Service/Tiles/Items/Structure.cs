@@ -1,4 +1,6 @@
-﻿namespace Mundus.Service.Tiles.Items {
+﻿using static Mundus.Data.Values;
+
+namespace Mundus.Service.Tiles.Items {
     public class Structure : ItemTile {
         private Material droppedMaterial;
 
@@ -9,7 +11,7 @@
         /// <summary>
         /// Required type of tool to break the structure
         /// </summary>
-        public int ReqToolType { get; private set; }
+        public ToolType ReqToolType { get; private set; }
         /// <summary>
         /// Required minimal tool class to break the structure
         /// </summary>
@@ -30,7 +32,7 @@
                          structure.IsWalkable, (structure.droppedMaterial != null)?new Material(structure.droppedMaterial.stock_id):null) { 
         }
 
-        public Structure(string stock_id, string inventory_stock_id, int health, int reqToolType, int reqToolClass, bool isWalkable = false, bool isClimable = false, Material droppedMaterial = null) : base(stock_id) {
+        public Structure(string stock_id, string inventory_stock_id, int health, ToolType reqToolType, int reqToolClass, bool isWalkable = false, bool isClimable = false, Material droppedMaterial = null) : base(stock_id) {
             this.inventory_stock_id = inventory_stock_id;
             this.Health = health;
             this.ReqToolType = reqToolType;

@@ -11,7 +11,7 @@ namespace Mundus.Data.Superlayers.Mobs {
         /// Note: player has a health of 4 * inventorySize
         /// </summary>
         public static void CreateInstances() {
-            Player = new Player("player", 5, LI.Land);
+            Player = new Player("player", 5, DataBaseContexts.LContext);
             Player.Inventory.AppendToHotbar(ToolPresets.GetAWoodenAxe());
             Player.Inventory.AppendToHotbar(ToolPresets.GetAWoodenPickaxe());
         }

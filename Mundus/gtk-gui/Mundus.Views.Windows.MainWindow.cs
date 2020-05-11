@@ -91,6 +91,7 @@ namespace Mundus.Views.Windows
 			this.btnTutorial = new global::Gtk.Button();
 			this.btnTutorial.WidthRequest = 300;
 			this.btnTutorial.HeightRequest = 90;
+			this.btnTutorial.Sensitive = false;
 			this.btnTutorial.CanFocus = true;
 			this.btnTutorial.Name = "btnTutorial";
 			this.btnTutorial.UseUnderline = true;

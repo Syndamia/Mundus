@@ -220,8 +220,8 @@ namespace Mundus.Views.Windows {
             }
 
             //Prints log
-            for (int i = 0, mIndex = LogController.GetCount() - 1; i < Size; mIndex--, i++) {
-                string msg = LogController.GetMessagage(mIndex);
+            for (int i = 0, mIndex = GameEventLogController.GetCount() - 1; i < Size; mIndex--, i++) {
+                string msg = GameEventLogController.GetMessagage(mIndex);
 
                 switch (i) {
                     case 0: lblLog1.Text = msg; break;

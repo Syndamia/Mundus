@@ -3,6 +3,7 @@ using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
 using Mundus.Service.Tiles.Items;
+using static Mundus.Data.Values;
 
 namespace Mundus.Service.SuperLayers {
     public static class ImageController {
@@ -13,7 +14,7 @@ namespace Mundus.Service.SuperLayers {
         /// Note: null structure tiles and null mob tiles are skipped (returns null)
         /// </summary>
         public static Image GetScreenImage(int row, int col, int layer) {
-            ISuperLayer superLayer = MI.Player.CurrSuperLayer;
+            ISuperLayerContext superLayer = MI.Player.CurrSuperLayer;
             Image img = null;
 
             //Layer 0 is GroundLayer, 1 is ItemLayer and 2 is Moblayer
@@ -21,13 +22,13 @@ namespace Mundus.Service.SuperLayers {
             {
                 img = new Image(GetPlayerGroundImage(row, col).Stock, IconSize.Dnd);
             }
-            else if (layer == 1 && superLayer.GetStructureLayerTile( row, col ) != null) 
+            else if (layer == 1 && superLayer.GetStructureLayerStock( row, col ) != null) 
             {
                 img = new Image(GetPlayerStructureImage(row, col).Stock, IconSize.Dnd );
             }
-            else if (layer == 2 && superLayer.GetMobLayerTile(row, col) != null) 
+            else if (layer == 2 && superLayer.GetMobLayerStock(row, col) != null) 
             {
-                img = new Image(superLayer.GetMobLayerTile(row, col).stock_id, IconSize.Dnd);
+                img = new Image(superLayer.GetMobLayerStock(row, col), IconSize.Dnd);
             }
             return img;
         }
@@ -37,12 +38,12 @@ namespace Mundus.Service.SuperLayers {
         /// Note: null values (holes) get the "L_hole" image
         /// </summary>
         public static Image GetPlayerGroundImage(int row, int col) {
-            ISuperLayer superLayer = MI.Player.CurrSuperLayer;
+            ISuperLayerContext superLayer = MI.Player.CurrSuperLayer;
             Image img = new Image("L_hole", IconSize.Dnd);
 
-            if (row >= 0 && col >= 0 && col < MapSizes.CurrSize && row < MapSizes.CurrSize &&
-                superLayer.GetGroundLayerTile(row, col) != null) {
-                img = superLayer.GetGroundLayerTile( row, col ).Texture;
+            if (row >= 0 && col >= 0 && col < (int)Values.CurrMapSize && row < (int)Values.CurrMapSize &&
+                superLayer.GetGroundLayerStock(row, col) != null) {
+                img = new Image(superLayer.GetGroundLayerStock(row, col), IconSize.Dnd);
             }
             return img;
         }
@@ -52,20 +53,20 @@ namespace Mundus.Service.SuperLayers {
         /// Note: null values get the "blank" image ; GetScreenImage skips if the value is null
         /// </summary>
         public static Image GetPlayerStructureImage(int row, int col) {
-            ISuperLayer superLayer = MI.Player.CurrSuperLayer;
+            ISuperLayerContext superLayer = MI.Player.CurrSuperLayer;
             Image img = new Image("blank", IconSize.Dnd );
 
             if (IsInsideBoundaries(row, col) &&
-                superLayer.GetStructureLayerTile(row, col) != null) 
+                superLayer.GetStructureLayerStock(row, col) != null) 
             {
-                img = superLayer.GetStructureLayerTile(row, col).Texture;
+                img = new Image(superLayer.GetStructureLayerStock(row, col), IconSize.Dnd);
             }
             return img;
         }
 
         // Checks if the position is inside the map
         private static bool IsInsideBoundaries(int row, int col) {
-            return row >= 0 && col >= 0 && col < MapSizes.CurrSize && row < MapSizes.CurrSize;
+            return row >= 0 && col >= 0 && col < (int)Values.CurrMapSize && row < (int)Values.CurrMapSize;
         }
 
         /// <summary>

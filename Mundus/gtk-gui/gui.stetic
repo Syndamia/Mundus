@@ -587,8 +587,10 @@
           <widget class="Gtk.RadioButton" id="rbCreative">
             <property name="MemberName" />
             <property name="WidthRequest">90</property>
+            <property name="Sensitive">False</property>
             <property name="CanFocus">True</property>
             <property name="Label">Creative</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -617,6 +619,7 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label">Easy</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -701,6 +704,7 @@
             <property name="WidthRequest">90</property>
             <property name="CanFocus">True</property>
             <property name="Label">Large</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -756,6 +760,7 @@
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Label">Large</property>
+            <property name="Active">True</property>
             <property name="DrawIndicator">True</property>
             <property name="HasLabel">True</property>
             <property name="UseUnderline">True</property>
@@ -25257,6 +25262,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">300</property>
             <property name="HeightRequest">90</property>
+            <property name="Sensitive">False</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label">Tutorial</property>

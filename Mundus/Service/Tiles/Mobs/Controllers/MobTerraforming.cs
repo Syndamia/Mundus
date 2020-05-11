@@ -1,10 +1,11 @@
 ﻿using System.Linq;
-using Mundus.Data;
+using static Mundus.Data.Values;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
-using Mundus.Data.Tiles;
 using Mundus.Service.SuperLayers;
 using Mundus.Service.Tiles.Items;
+using Mundus.Service.Tiles.Items.Presets;
+using Mundus.Data;
 
 namespace Mundus.Service.Tiles.Mobs.Controllers {
     public static class MobTerraforming {
@@ -23,7 +24,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                     MI.Player.Inventory.DeleteItemTile(inventoryPlace, inventoryIndex);
                 }
                 else {
-                    LogController.AddMessage($"Cannot build structure at Y:{mapYPos}, X:{mapXPos}");
+                    GameEventLogController.AddMessage($"Cannot build structure at Y:{mapYPos}, X:{mapXPos}");
                 }
 
             }
@@ -34,7 +35,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                     MI.Player.Inventory.DeleteItemTile(inventoryPlace, inventoryIndex);
                 }
                 else {
-                    LogController.AddMessage($"Cannot place ground at Y:{mapYPos}, X:{mapXPos}");
+                    GameEventLogController.AddMessage($"Cannot place ground at Y:{mapYPos}, X:{mapXPos}");
                 }
             }
             // If player can mine/dig
@@ -43,15 +44,15 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                     PlayerDestroyAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
                 }
                 else {
-                    LogController.AddMessage($"Cannot destroy at Y:{mapYPos}, X:{mapXPos}");
+                    GameEventLogController.AddMessage($"Cannot destroy at Y:{mapYPos}, X:{mapXPos}");
                 }
             }
         }
 
         // Player can't destory structures/ground tiles if there are none
         private static bool PlayerCanDestroyAt(int yPos, int xPos) {
-            return MI.Player.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) != null ||
-                   MI.Player.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) != null;
+            return MI.Player.CurrSuperLayer.GetStructureLayerStock(yPos, xPos) != null ||
+                   MI.Player.CurrSuperLayer.GetGroundLayerStock(yPos, xPos) != null;
         }
 
         private const double ENERGY_TAKEN_FROM_DESTROYING = 0.6;
@@ -59,30 +60,30 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             var selectedTool = (Tool)MI.Player.Inventory.GetItemTile(place, index);
 
             // Only shovels can destroy ground layer tiles, but not when there is something over the ground tile
-            if (selectedTool.Type == ToolTypes.Shovel && MI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos) == null) {
+            if (selectedTool.Type == ToolType.Shovel && MI.Player.CurrSuperLayer.GetStructureLayerStock(mapYPos, mapXPos) == null) {
                 if (PlayerTryDestroyGroundAt(mapYPos, mapXPos, selectedTool)) {
-                    MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_DESTROYING + Difficulty.ValueModifier());
+                    MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_DESTROYING + Values.DifficultyValueModifier());
                 }
             }
             // Don't try to destroy structure if there is no structure
-            else if (MI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos) != null) {
+            else if (MI.Player.CurrSuperLayer.GetStructureLayerStock(mapYPos, mapXPos) != null) {
                 if (PlayerTryDestroyStructureAt(mapYPos, mapXPos, selectedTool)) {
-                    MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_DESTROYING + Difficulty.ValueModifier());
+                    MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_DESTROYING + Values.DifficultyValueModifier());
                 }
             }
         }
 
         private static bool PlayerTryDestroyGroundAt(int mapYPos, int mapXPos, Tool shovel) {
-            var selectedGround = MI.Player.CurrSuperLayer.GetGroundLayerTile(mapYPos, mapXPos);
+            var selectedGround = GroundPresets.GetFromStock(MI.Player.CurrSuperLayer.GetGroundLayerStock(mapYPos, mapXPos));
 
             // Ground tiles that should be unbreakable have a negative required shovel class
             if (selectedGround.ReqShovelClass <= shovel.Class && selectedGround.ReqShovelClass >= 0) {
                 MI.Player.CurrSuperLayer.SetGroundAtPosition(null, mapYPos, mapXPos);
 
-                ISuperLayer under = HeightController.GetLayerUnderneathMob(MI.Player);
+                ISuperLayerContext under = HeightController.GetLayerUnderneathMob(MI.Player);
                 // When a shovel destroys ground tile, it destroys the structure below it (but only if it is not walkable)
-                if (under != null && under.GetStructureLayerTile(mapYPos, mapXPos) != null) {
-                    if (!under.GetStructureLayerTile(mapYPos, mapXPos).IsWalkable) {
+                if (under != null && under.GetStructureLayerStock(mapYPos, mapXPos) != null) {
+                    if (!StructurePresets.GetFromStock(under.GetStructureLayerStock(mapYPos, mapXPos)).IsWalkable) {
                         under.RemoveStructureFromPosition(mapYPos, mapXPos);
                     }
                 }
@@ -91,20 +92,20 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                     MI.Player.Inventory.AppendToItems(new GroundTile(selectedGround));
                 }
 
-                LogController.AddMessage($"Player destroyed \"{selectedGround.stock_id}\" from layer \"{MI.Player.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
+                GameEventLogController.AddMessage($"Player destroyed \"{selectedGround.stock_id}\" from layer \"{MI.Player.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
                 return true;
             }
             else if (selectedGround.ReqShovelClass > shovel.Class) {
-                LogController.AddMessage($"Ground \"{selectedGround.stock_id}\" requires minimum shovel class of: {selectedGround.ReqShovelClass}");
+                GameEventLogController.AddMessage($"Ground \"{selectedGround.stock_id}\" requires minimum shovel class of: {selectedGround.ReqShovelClass}");
             }
             else { // selectedGround.ReqSHovelClass < 0
-                LogController.AddMessage($"This ground cannot be destroyed.");
+                GameEventLogController.AddMessage($"This ground cannot be destroyed.");
             }
             return false;
         }
 
         private static bool PlayerTryDestroyStructureAt(int mapYPos, int mapXPos, Tool tool) {
-            var selStructure = MI.Player.CurrSuperLayer.GetStructureLayerTile(mapYPos, mapXPos);
+            var selStructure = StructurePresets.GetFromStock(MI.Player.CurrSuperLayer.GetStructureLayerStock(mapYPos, mapXPos));
 
             if (selStructure.ReqToolType == tool.Type && selStructure.ReqToolClass <= tool.Class) {
                 int damagePoints = 1 + (tool.Class - selStructure.ReqToolClass);
@@ -126,41 +127,41 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                 if (!selStructure.TakeDamage(damagePoints)) {
                     MI.Player.CurrSuperLayer.SetStructureAtPosition(null, mapYPos, mapXPos);
 
-                    LogController.AddMessage($"Player destroyed \"{selStructure.stock_id}\" from layer \"{MI.Player.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
+                    GameEventLogController.AddMessage($"Player destroyed \"{selStructure.stock_id}\" from layer \"{MI.Player.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
                 }
                 else {
-                    LogController.AddMessage($"Player did {damagePoints} damage to \"{selStructure.stock_id}\" (H:{selStructure.Health})");
+                    GameEventLogController.AddMessage($"Player did {damagePoints} damage to \"{selStructure.stock_id}\" (H:{selStructure.Health})");
                 }
                 return true;
             }
             else if (selStructure.ReqToolType != tool.Type) {
-                LogController.AddMessage($"Structure \"{selStructure.stock_id}\" requires tool type: {selStructure.ReqToolType}");
+                GameEventLogController.AddMessage($"Structure \"{selStructure.stock_id}\" requires tool type: {selStructure.ReqToolType}");
             }
             else { // selStructure.ReqToolClass > tool.Class
-                LogController.AddMessage($"Structure \"{selStructure.stock_id}\" requires minimum tool class of: {selStructure.ReqToolClass}");
+                GameEventLogController.AddMessage($"Structure \"{selStructure.stock_id}\" requires minimum tool class of: {selStructure.ReqToolClass}");
             }
             return false;
         }
 
         // Ground can be placed if there isnt a structure on an empty ground layer spot
         private static bool PlayerCanPlaceGroundAt(int yPos, int xPos) {
-            return MI.Player.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) == null &&
-                   MI.Player.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) == null;
+            return MI.Player.CurrSuperLayer.GetGroundLayerStock(yPos, xPos) == null &&
+                   MI.Player.CurrSuperLayer.GetStructureLayerStock(yPos, xPos) == null;
         }
 
         private const double ENERGY_TAKEN_FROM_PLACING_GROUND = 0.4;
         private static void PlayerPlaceGroundAt(int yPos, int xPos, string inventoryPlace, int inventoryIndex) {
             GroundTile toPlace = (GroundTile)MI.Player.Inventory.GetItemTile(inventoryPlace, inventoryIndex);
 
-            MI.Player.CurrSuperLayer.SetGroundAtPosition(toPlace, yPos, xPos);
-            MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_PLACING_GROUND + Difficulty.ValueModifier());
+            MI.Player.CurrSuperLayer.SetGroundAtPosition(toPlace.stock_id, yPos, xPos);
+            MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_PLACING_GROUND + Values.DifficultyValueModifier());
 
-            LogController.AddMessage($"Set ground \"{toPlace.stock_id}\" on layer \"{MI.Player.CurrSuperLayer}\" at Y:{yPos}, X:{xPos}");
+            GameEventLogController.AddMessage($"Set ground \"{toPlace.stock_id}\" on layer \"{MI.Player.CurrSuperLayer}\" at Y:{yPos}, X:{xPos}");
         }
 
 
         private static bool PlayerCanBuildStructureAt(int yPos, int xPos) {
-            return MI.Player.CurrSuperLayer.GetStructureLayerTile(yPos, xPos) == null;
+            return MI.Player.CurrSuperLayer.GetStructureLayerStock(yPos, xPos) == null;
         }
 
         private const double ENERGY_TAKEN_FROM_BUILDING_STRUCTURE = 0.5;
@@ -169,20 +170,20 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
 
             // Climable structures will be placed under a hole (if they can be).
             // Non climable structures won't be placed anywhere if there is a hole.
-            if (toBuild.IsClimable && MI.Player.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) == null && 
-                HeightController.GetLayerUnderneathMob(MI.Player).GetStructureLayerTile(yPos, xPos) == null) 
+            if (toBuild.IsClimable && MI.Player.CurrSuperLayer.GetGroundLayerStock(yPos, xPos) == null && 
+                HeightController.GetLayerUnderneathMob(MI.Player).GetStructureLayerStock(yPos, xPos) == null) 
             {
-                HeightController.GetLayerUnderneathMob(MI.Player).SetStructureAtPosition(toBuild, yPos, xPos);
+                HeightController.GetLayerUnderneathMob(MI.Player).SetStructureAtPosition(toBuild.stock_id, yPos, xPos);
 
-                LogController.AddMessage($"Set structure \"{toBuild.stock_id}\" on layer \"{HeightController.GetLayerUnderneathMob(MI.Player)}\" at Y:{yPos}, X:{xPos}");
+                GameEventLogController.AddMessage($"Set structure \"{toBuild.stock_id}\" on layer \"{HeightController.GetLayerUnderneathMob(MI.Player)}\" at Y:{yPos}, X:{xPos}");
             }
-            else if (MI.Player.CurrSuperLayer.GetGroundLayerTile(yPos, xPos) != null) {
-                MI.Player.CurrSuperLayer.SetStructureAtPosition(toBuild, yPos, xPos);
+            else if (MI.Player.CurrSuperLayer.GetGroundLayerStock(yPos, xPos) != null) {
+                MI.Player.CurrSuperLayer.SetStructureAtPosition(toBuild.stock_id, yPos, xPos);
 
-                LogController.AddMessage($"Set structure \"{toBuild.stock_id}\" on layer \"{MI.Player.CurrSuperLayer}\" at Y:{yPos}, X:{xPos}");
+                GameEventLogController.AddMessage($"Set structure \"{toBuild.stock_id}\" on layer \"{MI.Player.CurrSuperLayer}\" at Y:{yPos}, X:{xPos}");
             }
 
-            MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_BUILDING_STRUCTURE + Difficulty.ValueModifier());
+            MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_BUILDING_STRUCTURE + Values.DifficultyValueModifier());
         }
     }
 }

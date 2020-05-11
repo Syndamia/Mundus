@@ -3,48 +3,48 @@ using Mundus.Data.SuperLayers;
 using Mundus.Service.Tiles.Mobs;
 using Mundus.Service.Tiles.Items.Presets;
 using Mundus.Service.Tiles.Items;
+using Mundus.Data;
+using static Mundus.Data.Values;
 
 namespace Mundus.Service.SuperLayers.Generators {
     public static class SkySuperLayerGenerator {
         private static Random rnd;
+        private static SkyContext context = DataBaseContexts.SContext;
 
-        public static void GenerateAllLayers(int size) {
+        public static void GenerateAllLayers(MapSize mapSize) {
             rnd = new Random();
+            int size = (int)mapSize;
 
-            LI.Sky.SetMobLayer(GenerateMobLayer(size));
-            LI.Sky.SetGroundLayer(GenerateGroundLayer(size));
-            LI.Sky.SetStructureLayer(GenerateStructureLayer(size));
+            GenerateMobLayer(size);
+            GenerateGroundLayer(size);
+            GenerateStructureLayer(size);
         }
 
-        private static MobTile[,] GenerateMobLayer(int size) {
-            MobTile[,] tiles = new MobTile[size, size];
-
+        private static void GenerateMobLayer(int size) {
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
+                    context.AddMobAtPosition(null, row, col);
                 }
             }
-            return tiles;
+            context.SaveChanges();
         }
 
-        private static GroundTile[,] GenerateGroundLayer(int size) {
-            GroundTile[,] tiles = new GroundTile[size, size];
-
+        private static void GenerateGroundLayer(int size) {
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
-                    tiles[col, row] = GroundPresets.GetASSky();
+                    context.AddGroundAtPosition(GroundPresets.GetASSky().stock_id, row, col);
                 }
             }
-            return tiles;
+            context.SaveChanges();
         }
 
-        private static Structure[,] GenerateStructureLayer(int size) {
-            Structure[,] tiles = new Structure[size, size];
-
+        private static void GenerateStructureLayer(int size) {
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
+                    context.AddStructureAtPosition(null, row, col);
                 }
             }
-            return tiles;
+            context.SaveChanges();
         }
     }
 }

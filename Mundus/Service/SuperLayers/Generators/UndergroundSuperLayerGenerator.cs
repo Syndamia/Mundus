@@ -3,54 +3,56 @@ using Mundus.Data.SuperLayers;
 using Mundus.Service.Tiles.Mobs;
 using Mundus.Service.Tiles.Items.Presets;
 using Mundus.Service.Tiles.Items;
+using Mundus.Data;
+using static Mundus.Data.Values;
 
 namespace Mundus.Service.SuperLayers.Generators {
     public static class UndergroundSuperLayerGenerator {
         private static Random rnd;
+        private static UndergroundContext context = DataBaseContexts.UContext;
 
-        public static void GenerateAllLayers(int size) {
-            LI.Underground.SetMobLayer(GenerateMobLayer(size));
-            LI.Underground.SetGroundLayer(GenerateGroundLayer(size));
-            LI.Underground.SetStructureLayer(GenerateStructureLayer(size));
-        }
-
-        private static MobTile[,] GenerateMobLayer(int size) {
-            MobTile[,] tiles = new MobTile[size, size];
-
-            for (int col = 0; col < size; col++) {
-                for (int row = 0; row < size; row++) {
-
-                }
-            }
-            return tiles;
-        }
-
-        private static GroundTile[,] GenerateGroundLayer(int size) {
+        public static void GenerateAllLayers(MapSize mapSize) {
             rnd = new Random();
-            GroundTile[,] tiles = new GroundTile[size, size];
+            int size = (int)mapSize;
 
-            for (int col = 0; col < size; col++) {
-                for (int row = 0; row < size; row++) {
-                    tiles[col, row] = GroundPresets.GetAURoche();
-                }
-            }
-            return tiles;
+            GenerateMobLayer(size);
+            GenerateGroundLayer(size);
+            GenerateStructureLayer(size);
         }
 
-        private static Structure[,] GenerateStructureLayer(int size) {
-            Structure[,] tiles = new Structure[size, size];
-
+        private static void GenerateMobLayer(int size) {
             for (int col = 0; col < size; col++) {
                 for (int row = 0; row < size; row++) {
-                    if (LI.Land.GetGroundLayerTile(col, row) != null) {
-                        tiles[col, row] = StructurePresets.GetAURock();
+                    context.AddMobAtPosition(null, row, col);
+                }
+            }
+            context.SaveChanges();
+        }
+
+        private static void GenerateGroundLayer(int size) {
+            for (int col = 0; col < size; col++) {
+                for (int row = 0; row < size; row++) {
+                    context.AddGroundAtPosition(GroundPresets.GetAURoche().stock_id, row, col);
+                }
+            }
+            context.SaveChanges();
+        }
+
+        private static void GenerateStructureLayer(int size) {
+            for (int col = 0; col < size; col++) {
+                for (int row = 0; row < size; row++) {
+                    if (context.GetGroundLayerStock(row, col) != null) {
                         if (rnd.Next(0, 10) == 1) {
-                            tiles[col, row] = null;
+                            context.AddStructureAtPosition(null, row, col);
+                        }
+                        else {
+                            context.AddStructureAtPosition(StructurePresets.GetAURock().stock_id, row, col);
+
                         }
                     }
                 }
             }
-            return tiles;
+            context.SaveChanges();
         }
     }
 }

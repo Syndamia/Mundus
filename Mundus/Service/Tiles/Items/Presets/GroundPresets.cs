@@ -20,5 +20,14 @@
         public static GroundTile GetAURoche() {
             return new GroundTile("U_roche", 10);
         }
+
+        public static GroundTile GetFromStock(string stock_id) {
+            switch(stock_id) {
+                case "S_sky": return GetASSky();
+                case "L_grass": return GetALGrass();
+                case "U_roche": return GetAURoche();
+                default: return null;
+            }
+        }
     }
 }
