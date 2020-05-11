@@ -39,13 +39,7 @@ namespace Mundus.Data.Crafting {
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
-            optionsBuilder.UseMySQL(
-                "server=localhost;" +
-                "port=3306;" +
-                "user id=root; " +
-                "password=password; " +
-                "database=Mundus; " +
-                "SslMode=none");
+            optionsBuilder.UseMySQL(DataBaseContexts.ConnectionStringMySQL);
         }
     }
 }

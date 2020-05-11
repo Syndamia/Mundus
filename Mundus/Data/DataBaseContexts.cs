@@ -4,6 +4,13 @@ using Mundus.Data.SuperLayers;
 
 namespace Mundus.Data {
     public static class DataBaseContexts {
+        public const string ConnectionStringMySQL = "server=localhost;" +
+                                                    "port=3306;" +
+                                                    "user id=root; " +
+                                                    "password=password; " +
+                                                    "database=Mundus; " +
+                                                    "SslMode=none";
+
         public static CraftingTableContext CTContext { get; private set; }
         public static GameEventLogContext GELContext { get; private set; }
 
