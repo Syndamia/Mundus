@@ -40,7 +40,6 @@ namespace Mundus.Data.SuperLayers {
         public void RemoveMobFromPosition(int yPos, int xPos) {
             LMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = null;
             LMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).Health = -1;
-
         }
         public bool TakeDamageMobAtPosition(int yPos, int xPos, int damage) {
             var mob = LMobLayer.First(x => x.YPos == yPos && x.XPos == xPos);
@@ -48,7 +47,7 @@ namespace Mundus.Data.SuperLayers {
             return mob.Health > 0;
         }
 
-            public void AddStructureAtPosition(string stock_id, int health, int yPos, int xPos) {
+        public void AddStructureAtPosition(string stock_id, int health, int yPos, int xPos) {
             LStructureLayer.Add(new LSPlacedTile(stock_id, health, yPos, xPos));
             
         }

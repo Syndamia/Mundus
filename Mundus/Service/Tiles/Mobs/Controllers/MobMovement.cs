@@ -25,12 +25,16 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                         MobTile mob = LandMobsPresets.GetFromStock(superLayer.GetMobLayerStock(y, x));
 
                         if (mob != null) {
+                            mob.YPos = y;
+                            mob.XPos = x;
+
                             // Checks validity of RndMovementRate and descides if a mob will move to another tile
                             if (mob.RndMovementRate > 0 && rnd.Next(0, mob.RndMovementRate) == 1) 
                             {
-                                int newYPos = rnd.Next(mob.YPos - 1, mob.YPos + 2);
-                                int newXPos = rnd.Next(mob.XPos - 1, mob.XPos + 2);
+                                int newYPos = rnd.Next(y - 1, y + 2);
+                                int newXPos = rnd.Next(x - 1, x + 2);
 
+                                mob.CurrSuperLayer = superLayer;
                                 ChangeMobPosition(mob, newYPos, newXPos, (int)Values.CurrMapSize);
                             }
                         }
@@ -137,14 +141,14 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         }
 
         private static bool CanWalkTo(MobTile mob, int yPos, int xPos) {
-            //Mobs can only walk on free ground (no structure or mob) or walkable structures
+            //Mobs can only walk on free ground (no structure or mob ; you can walk on the same place you are) or walkable structures
             if (StructurePresets.GetFromStock(mob.CurrSuperLayer.GetStructureLayerStock(yPos, xPos)) == null) {
                 return mob.CurrSuperLayer.GetMobLayerStock(yPos, xPos) == null ||
-                    LandMobsPresets.GetFromStock(mob.CurrSuperLayer.GetMobLayerStock(yPos, xPos)) == mob;
+                       (mob.YPos == yPos && mob.XPos == xPos);
             }
             else if (StructurePresets.GetFromStock(mob.CurrSuperLayer.GetStructureLayerStock(yPos, xPos)).IsWalkable) {
                 return mob.CurrSuperLayer.GetMobLayerStock(yPos, xPos) == null ||
-                    LandMobsPresets.GetFromStock(mob.CurrSuperLayer.GetMobLayerStock(yPos, xPos)) == mob;
+                       (mob.YPos == yPos && mob.XPos == xPos);
             }
             return false;
         }

@@ -22,7 +22,8 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         /// <param name="mapYPos">YPos of target mob</param>
         /// <param name="mapXPos">XPos of target mob</param>
         public static bool ExistsFightTargetForMob(MobTile mob, int mapYPos, int mapXPos) {
-            return mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) != null;
+            return mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) != null &&
+                   (mob.YPos != mapYPos && mob.XPos != mapXPos);
         }
 
         private const double TAKEN_ENERGY_FROM_FIGHTING = 0.5;
