@@ -1,19 +1,28 @@
-﻿using Mundus.Service.Tiles.Items;
+﻿namespace Mundus.Views.Windows 
+{
+    using Mundus.Service.Tiles.Items;
 
-namespace Mundus.Views.Windows {
-    public interface IGameWindow {
+    public interface IGameWindow 
+    {
         int Size { get; }
 
-        //Events that are generated from designer window
+        /// <summary>
+        /// Every time the window is closed, this gets called (hides the window)
+        /// </summary>
         void OnDeleteEvent(object o, Gtk.DeleteEventArgs args);
+
         void SetDefaults();
+
         void PrintScreen();
+
         void PrintMap();
+
         void PrintMainMenu();
+
         void PrintInventory();
+
         void PrintSelectedItemInfo(ItemTile itemTile);
 
-        //Stuff that are in Gtk.Window class
         void Show();
     }
 }
