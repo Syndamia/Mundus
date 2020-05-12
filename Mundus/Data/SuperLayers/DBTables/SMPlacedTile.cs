@@ -1,13 +1,21 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿namespace Mundus.Data.SuperLayers.DBTables 
+{
+    using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Mundus.Data.SuperLayers.DBTables {
+    /// <summary>
+    /// Data type for the DBSet of (Sky) SMobLayer table
+    /// </summary>
     [Table("SMobLayer", Schema = "Mundus")]
-    public class SMPlacedTile : PlacedTile {
-        public int Health { get; set; }
-
-        public SMPlacedTile(string stock_id, int health, int yPos, int xPos) : base(stock_id, yPos, xPos) {
+    public class SMPlacedTile : PlacedTile 
+    {
+        public SMPlacedTile(string stock_id, int health, int yPos, int xPos) : base(stock_id, yPos, xPos) 
+        {
             this.Health = health;
         }
+
+        /// <summary>
+        /// Gets or sets the health of the mob
+        /// </summary>
+        public int Health { get; set; }
     }
 }

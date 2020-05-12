@@ -6,7 +6,7 @@ CREATE TABLE GameEventLogs (
     message VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE Recipes (
+CREATE TABLE CraftingRecipes (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	resultitem VARCHAR(45) NOT NULL,
     count1 INT NOT NULL,

@@ -5,7 +5,7 @@ using System.Linq;
 using Mundus.Service.Tiles.Items;
 
 namespace Mundus.Service.Tiles.Crafting {
-    [Table("Recipes", Schema = "Mundus")]
+    [Table("CraftingRecipes", Schema = "Mundus")]
     public class CraftingRecipe {
         [Key]
         public int ID { get; set; }

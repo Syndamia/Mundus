@@ -1,10 +1,15 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿namespace Mundus.Data.SuperLayers.DBTables 
+{
+    using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Mundus.Data.SuperLayers.DBTables {
+    /// <summary>
+    /// Data type for the DBSet of (Undergound) UGroundLayer table
+    /// </summary>
     [Table("UGroundLayer", Schema = "Mundus")]
-    public class UGPlacedTile : PlacedTile {
-        public UGPlacedTile(string stock_id, int yPos, int xPos) : base(stock_id, yPos, xPos) {
+    public class UGPlacedTile : PlacedTile 
+    {
+        public UGPlacedTile(string stock_id, int yPos, int xPos) : base(stock_id, yPos, xPos) 
+        {
         }
     }
 }

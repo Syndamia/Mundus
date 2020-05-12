@@ -1,16 +1,24 @@
-﻿using Mundus.Data.SuperLayers;
-using Mundus.Service.Tiles.Mobs.LandMobs;
-using Mundus.Service.Tiles.Items.Presets;
+﻿namespace Mundus.Data.Superlayers.Mobs 
+{
+    using Mundus.Service.Tiles.Items.Presets;
+    using Mundus.Service.Tiles.Mobs.LandMobs;
 
-namespace Mundus.Data.Superlayers.Mobs {
-    public static class MI { //stands for Mob Instances
+    /// <summary>
+    /// Used to store universally accessed mob instances (player)
+    /// </summary>
+    public static class MI 
+    {
+        /// <summary>
+        /// Gets the mob that is used by the person who plays the game
+        /// </summary>
         public static Player Player { get; private set; }
 
         /// <summary>
         /// Creates the instances of the universally accessed mobs.
-        /// Note: player has a health of 4 * inventorySize
+        /// Note: player has a health of 4 * inventorySize and gets a wooden axe and a wooden pickaxe
         /// </summary>
-        public static void CreateInstances() {
+        public static void CreateInstances() 
+        {
             Player = new Player("player", 5, DataBaseContexts.LContext);
             Player.Inventory.AppendToHotbar(ToolPresets.GetAWoodenAxe());
             Player.Inventory.AppendToHotbar(ToolPresets.GetAWoodenPickaxe());

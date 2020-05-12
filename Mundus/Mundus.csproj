@@ -284,16 +284,18 @@
     <Compile Include="Views\Windows\GameWindows\MediumGameWindow.cs" />
     <Compile Include="Views\Windows\GameWindows\SmallGameWindow.cs" />
     <Compile Include="Data\Crafting\CraftingTableContext.cs" />
-    <Compile Include="Data\GameEventLogContext.cs" />
     <Compile Include="Data\DataBaseContexts.cs" />
-    <Compile Include="Data\SuperLayers\SkyContext.cs" />
-    <Compile Include="Data\SuperLayers\ISuperLayerContext.cs" />
+    <Compile Include="Data\SuperLayers\SkyContext.cs">
+      <ExcludeFromStyleCop>false</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Data\SuperLayers\ISuperLayerContext.cs">
+      <ExcludeFromStyleCop>false</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="Data\SuperLayers\LandContext.cs" />
     <Compile Include="Data\SuperLayers\UndergroundContext.cs" />
     <Compile Include="Data\Values.cs" />
     <Compile Include="Data\SuperLayers\DBTables\PlacedTile.cs" />
     <Compile Include="Data\SuperLayers\DBTables\SSPlacedTile.cs" />
-    <Compile Include="Data\GameEventLog.cs" />
     <Compile Include="Data\SuperLayers\DBTables\SGPlacedTile.cs" />
     <Compile Include="Data\SuperLayers\DBTables\SMPlacedTile.cs" />
     <Compile Include="Data\SuperLayers\DBTables\UGPlacedTile.cs" />
@@ -302,6 +304,8 @@
     <Compile Include="Data\SuperLayers\DBTables\LGPlacedTile.cs" />
     <Compile Include="Data\SuperLayers\DBTables\LSPlacedTile.cs" />
     <Compile Include="Data\SuperLayers\DBTables\LMPlacedTile.cs" />
+    <Compile Include="Data\GameEventLogs\GameEventLog.cs" />
+    <Compile Include="Data\GameEventLogs\GameEventLogContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -327,6 +331,7 @@
     <Folder Include="Views\Windows\GameWindows\" />
     <Folder Include="Icons\UI\Hearth\" />
     <Folder Include="Data\SuperLayers\DBTables\" />
+    <Folder Include="Data\GameEventLogs\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
