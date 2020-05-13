@@ -42,7 +42,7 @@ namespace Mundus.Service {
 
         public static void GameWindowInitialize() {
             WI.WPause.GameWindow = WI.SelWin;
-            WI.SelWin.PrintScreen();
+            WI.SelWin.PrintWorldScreen();
             WI.SelWin.PrintMainMenu();
             WI.SelWin.Show();
         }

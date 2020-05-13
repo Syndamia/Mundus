@@ -13,7 +13,7 @@
 
         void SetDefaults();
 
-        void PrintScreen();
+        void PrintWorldScreen();
 
         void PrintMap();
 
