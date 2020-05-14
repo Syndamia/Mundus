@@ -1,149 +1,109 @@
-﻿using Gtk;
-using Mundus.Data;
-using Mundus.Data.Superlayers.Mobs;
-using Mundus.Data.SuperLayers;
-using Mundus.Service.Tiles.Items;
-using Mundus.Service.Tiles.Items.Types;
-using static Mundus.Data.Values;
+﻿namespace Mundus.Service.SuperLayers 
+{
+    using Gtk;
+    using Mundus.Data;
+    using Mundus.Data.Superlayers.Mobs;
+    using Mundus.Data.SuperLayers;
+    using Mundus.Service.Tiles.Items.Types;
+    using static Mundus.Service.Tiles.Mobs.Inventory;
 
-namespace Mundus.Service.SuperLayers {
-    public static class ImageController {
+    public static class ImageController 
+    {
+        private static ISuperLayerContext superLayer = MI.Player.CurrSuperLayer;
+
+        public enum Layer 
+        {
+            Ground,
+            Structure,
+            Mob
+        }
 
         /// <summary>
         /// Returns the image of the selected layer in the superlayer
-        /// Note: Layer 0 is GroundLayer, 1 is ItemLayer and 2 is Moblayer
-        /// Note: null structure tiles and null mob tiles are skipped (returns null)
+        /// If there is no item/mob at the position, returns null
         /// </summary>
-        public static Image GetScreenImage(int row, int col, int layer) {
-            ISuperLayerContext superLayer = MI.Player.CurrSuperLayer;
+        public static Image GetPlayerScreenImage(int y, int x, Layer layer)
+         {
             Image img = null;
 
-            //Layer 0 is GroundLayer, 1 is ItemLayer and 2 is Moblayer
-            if (layer == 0) 
+            if (layer == Layer.Ground) 
             {
-                img = new Image(GetPlayerGroundImage(row, col).Stock, IconSize.Dnd);
+                img = new Image(GetPlayerGroundStockID(y, x), IconSize.Dnd);
             }
-            else if (layer == 1 && superLayer.GetStructureLayerStock( row, col ) != null) 
+            else if (layer == Layer.Structure && superLayer.GetStructureLayerStock(y, x) != null) 
             {
-                img = new Image(GetPlayerStructureImage(row, col).Stock, IconSize.Dnd );
+                img = new Image(GetPlayerStructureStockID(y, x), IconSize.Dnd );
             }
-            else if (layer == 2 && superLayer.GetMobLayerStock(row, col) != null) 
+            else if (layer == Layer.Mob && superLayer.GetMobLayerStock(y, x) != null) 
             {
-                img = new Image(superLayer.GetMobLayerStock(row, col), IconSize.Dnd);
+                img = new Image(superLayer.GetMobLayerStock(y, x), IconSize.Dnd);
             }
             return img;
         }
 
         /// <summary>
-        /// Returns the Image on the given position of the ground layer the player is currently in
-        /// Note: null values (holes) get the "L_hole" image
+        /// Returns the stock_id at the given position in player's superlayer
+        /// If there is no stock_id, returns "L_hole"
         /// </summary>
-        public static Image GetPlayerGroundImage(int row, int col) {
-            ISuperLayerContext superLayer = MI.Player.CurrSuperLayer;
-            Image img = new Image("L_hole", IconSize.Dnd);
-
-            if (row >= 0 && col >= 0 && col < (int)Values.CurrMapSize && row < (int)Values.CurrMapSize &&
-                superLayer.GetGroundLayerStock(row, col) != null) {
-                img = new Image(superLayer.GetGroundLayerStock(row, col), IconSize.Dnd);
+        private static string GetPlayerGroundStockID(int y, int x) 
+        {
+            if (InsideBoundaries(y, x) && superLayer.GetGroundLayerStock(y, x) != null) 
+            {
+                return superLayer.GetGroundLayerStock(y, x);
             }
-            return img;
+
+            return "L_hole";
         }
 
         /// <summary>
-        /// Returns the Image on the given position of the structure layer the player is currently in
+        /// Returns the stock_id on the given position of the structure layer the player is currently in
         /// Note: null values get the "blank" image ; GetScreenImage skips if the value is null
         /// </summary>
-        public static Image GetPlayerStructureImage(int row, int col) {
-            ISuperLayerContext superLayer = MI.Player.CurrSuperLayer;
-            Image img = new Image("blank", IconSize.Dnd );
-
-            if (IsInsideBoundaries(row, col) &&
-                superLayer.GetStructureLayerStock(row, col) != null) 
+        private static string GetPlayerStructureStockID(int y, int x) 
+        {
+            if (InsideBoundaries(y, x) && superLayer.GetStructureLayerStock(y, x) != null) 
             {
-                img = new Image(superLayer.GetStructureLayerStock(row, col), IconSize.Dnd);
+                return superLayer.GetStructureLayerStock(y, x);
             }
-            return img;
-        }
-
-        // Checks if the position is inside the map
-        private static bool IsInsideBoundaries(int row, int col) {
-            return row >= 0 && col >= 0 && col < (int)Values.CurrMapSize && row < (int)Values.CurrMapSize;
+            return "blank";
         }
 
         /// <summary>
-        /// Returns the Image on the given position of the player's hotbar (Incentory.Hotbar)
-        /// Note: null values get the "blank" image
+        /// Checks if the position is inside the map
         /// </summary>
-        public static Image GetPlayerHotbarImage(int index) {
-            Image img = new Image("blank", IconSize.Dnd);
-
-            if (index < MI.Player.Inventory.Hotbar.Length) {
-                if (MI.Player.Inventory.Hotbar[index] != null) {
-                    // Structures have two icons, one when they are placed and one as an inventory item.
-                    // All other item types have only one icon (texture).
-                    if (MI.Player.Inventory.Hotbar[index].GetType() == typeof(Structure)) {
-                        Structure tmp = (Structure)MI.Player.Inventory.Hotbar[index];
-                        img = new Image(tmp.inventory_stock_id, IconSize.Dnd);
-                    }
-                    else {
-                        img = MI.Player.Inventory.Hotbar[index].Texture;
-                    }
-                }
-            }
-            return img;
+        private static bool InsideBoundaries(int y, int x) 
+        {
+            return y >= 0 && x >= 0 && x < (int)Values.CurrMapSize && y < (int)Values.CurrMapSize;
         }
 
         /// <summary>
-        /// Returns the Image on the given position of the player's items inventory (Inventory.Items)
-        /// Note: null values get the "blank" image
+        /// Returns the Image on the given inventory place of the player at the given index
+        /// If there isn't one, returns a "blank" image
         /// </summary>
-        public static Image GetPlayerInventoryItemImage(int index) {
-            Image img = new Image("blank", IconSize.Dnd);
+        public static Image GetPlayerInventoryImage(InventoryPlace place, int index) 
+        {
+            string stock_id = "blank";
 
-            if (index < MI.Player.Inventory.Items.Length) {
-                if (MI.Player.Inventory.Items[index] != null) {
-                    // Structures have two icons, one when they are placed and one as an inventory item.
-                    // All other item types have only one icon (texture).
-                    if (MI.Player.Inventory.Items[index].GetType() == typeof(Structure)) {
-                        Structure tmp = (Structure)MI.Player.Inventory.Items[index];
-                        img = new Image(tmp.inventory_stock_id, IconSize.Dnd);
-                    }
-                    else {
-                        img = MI.Player.Inventory.Items[index].Texture;
-                    }
+            if (MI.Player.Inventory.GetItemTile(place, index) != null) 
+            {
+                // Structures have two icons, one when they are placed and one when they are in the inventory
+                // All other item types have only one icon.
+                if (MI.Player.Inventory.GetItemTile(place, index).GetType() == typeof(Structure)) 
+                {
+                    stock_id = ((Structure)MI.Player.Inventory.GetItemTile(place, index)).inventory_stock_id;
+                }
+                else 
+                {
+                    stock_id = MI.Player.Inventory.GetItemTile(place, index).stock_id;
                 }
             }
-            return img;
-        }
-
-        /// <summary>
-        /// Returns the Image on the given position of the player's accessories (Inventory.Accessories)
-        /// Note: null values get the "blank" image
-        /// </summary>
-        public static Image GetPlayerAccessoryImage(int index) {
-            Image img = new Image("blank_gear", IconSize.Dnd);
-
-            if (index < MI.Player.Inventory.Accessories.Length) {
-                if (MI.Player.Inventory.Accessories[index] != null) {
-                    img = MI.Player.Inventory.Accessories[index].Texture;
-                }
+            // Accessories and gear menus have a different blank icon
+            else if (place == InventoryPlace.Accessories || place == InventoryPlace.Gear)
+            {
+                stock_id = "blank_gear";
             }
-            return img;
-        }
 
-        /// <summary>
-        /// Returns the Image on the given position of the player's gear (Inventory.Gear)
-        /// Note: null values get the "blank" image
-        /// </summary>
-        public static Image GetPlayerGearImage(int index) {
-            Image img = new Image("blank_gear", IconSize.Dnd);
-
-            if (index < MI.Player.Inventory.Gear.Length) {
-                if (MI.Player.Inventory.Gear[index] != null) {
-                    img = MI.Player.Inventory.Gear[index].Texture;
-                }
-            }
-            return img;
+            return new Image(stock_id, IconSize.Dnd);
         }
     }
 }

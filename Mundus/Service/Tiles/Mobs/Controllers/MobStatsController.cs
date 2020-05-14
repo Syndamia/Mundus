@@ -72,11 +72,11 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         /// </summary>
         public static bool ExistsHoleOnTopOfPlayer() {
             //There can't be a hole if there isn't a layer above the player
-            if (HeightController.GetLayerAboveMob(MI.Player) == null) {
+            if (HeightController.GetSuperLayerAboveMob(MI.Player) == null) {
                 return false;
             }
-            return HeightController.GetLayerAboveMob(MI.Player).GetGroundLayerStock(MI.Player.YPos, MI.Player.XPos) == null ||
-                   !GroundPresets.GetFromStock(HeightController.GetLayerAboveMob(MI.Player).GetGroundLayerStock(MI.Player.YPos, MI.Player.XPos)).Solid;
+            return HeightController.GetSuperLayerAboveMob(MI.Player).GetGroundLayerStock(MI.Player.YPos, MI.Player.XPos) == null ||
+                   !GroundPresets.GetFromStock(HeightController.GetSuperLayerAboveMob(MI.Player).GetGroundLayerStock(MI.Player.YPos, MI.Player.XPos)).Solid;
         }
     }
 }

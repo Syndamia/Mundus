@@ -6,6 +6,8 @@
     using Mundus.Service.Tiles.Items;
     using Mundus.Service.Tiles.Mobs.Controllers;
     using Mundus.Service.Windows;
+    using static Mundus.Service.SuperLayers.ImageController;
+    using static Mundus.Service.Tiles.Mobs.Inventory;
 
     public partial class SmallGameWindow 
     {
@@ -14,13 +16,22 @@
         /// </summary>
         public void PrintWorldScreen() 
         {
-            for (int layer = 0; layer < 3; layer++) 
+            Layer layer = 0;
+
+            for (int layerIndex = 0; layerIndex < 3; layerIndex++) 
             {
+                switch(layerIndex) 
+                {
+                    case 0: layer = Layer.Ground; break;
+                    case 1: layer = Layer.Structure; break;
+                    case 2: layer = ImageController.Layer.Mob; break;
+                }
+
                 for (int row = Calculate.CalculateStartY(Size), maxY = Calculate.CalculateMaxY(Size), btn = 1; row <= maxY; row++) 
                 {
                     for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, btn++) 
                     {
-                        Image img = ImageController.GetScreenImage(row, col, layer);
+                        Image img = GetPlayerScreenImage(row, col, layer);
 
                         if (img == null) 
                         {
@@ -154,7 +165,7 @@
         {
             for (int i = 0; i < Size; i++) 
             {
-                Image img = ImageController.GetPlayerHotbarImage(i);
+                Image img = GetPlayerInventoryImage(InventoryPlace.Hotbar, i);
 
                 switch (i + 1) 
                 {
@@ -187,12 +198,16 @@
 
         #region Inventory
 
-        private void PrintItemsInventory() {
-            for (int row = 0; row < Size; row++) {
-                for (int col = 0; col < Size; col++) {
-                    Image img = ImageController.GetPlayerInventoryItemImage((row * Size) + col);
+        private void PrintItemsInventory() 
+        {
+            for (int row = 0; row < Size; row++) 
+            {
+                for (int col = 0; col < Size; col++) 
+                {
+                    Image img = GetPlayerInventoryImage(InventoryPlace.Items, (row * Size) + col);
 
-                    switch ((row * Size) + col + 1) {
+                    switch ((row * Size) + col + 1) 
+                    {
                         case 1: btnI1.Image = img; break;
                         case 2: btnI2.Image = img; break;
                         case 3: btnI3.Image = img; break;
@@ -223,12 +238,16 @@
             }
         }
 
-        private void PrintAccessoriesInventory() {
-            for (int row = 0; row < 2; row++) {
-                for (int col = 0; col < Size; col++) {
-                    Image img = ImageController.GetPlayerAccessoryImage((row * Size) + col);
+        private void PrintAccessoriesInventory() 
+        {
+            for (int row = 0; row < 2; row++) 
+            {
+                for (int col = 0; col < Size; col++) 
+                {
+                    Image img = GetPlayerInventoryImage(InventoryPlace.Accessories, (row * Size) + col);
 
-                    switch ((row * Size) + col + 1) {
+                    switch ((row * Size) + col + 1) 
+                    {
                         case 1: btnA1.Image = img; break;
                         case 2: btnA2.Image = img; break;
                         case 3: btnA3.Image = img; break;
@@ -244,9 +263,11 @@
             }
         }
 
-        private void PrintGearInventory() {
-            for (int i = 0; i < Size; i++) {
-                Image img = ImageController.GetPlayerGearImage(i);
+        private void PrintGearInventory() 
+        {
+            for (int i = 0; i < Size; i++) 
+            {
+                Image img = GetPlayerInventoryImage(InventoryPlace.Gear, i);
 
                 switch (i + 1) {
                     case 1: btnG1.Image = img; break;
@@ -268,7 +289,7 @@
             {
                 for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, img++) 
                 {
-                    string stockName = ImageController.GetPlayerGroundImage(row, col).Stock;
+                    string stockName = GetPlayerScreenImage(row, col, Layer.Ground).Stock;
 
                     switch (img) 
                     {
@@ -308,7 +329,7 @@
             {
                 for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, img++) 
                 {
-                    string stockName = ImageController.GetPlayerStructureImage(row, col).Stock;
+                    string stockName = GetPlayerScreenImage(row, col, Layer.Structure).Stock;
 
                     switch (img) 
                     {
@@ -343,6 +364,5 @@
         }
 
         #endregion
-
     }
 }

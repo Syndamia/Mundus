@@ -79,7 +79,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             if (selectedGround.ReqShovelClass <= shovel.Class && selectedGround.ReqShovelClass >= 0) {
                 MI.Player.CurrSuperLayer.SetGroundAtPosition(null, mapYPos, mapXPos);
 
-                ISuperLayerContext under = HeightController.GetLayerUnderneathMob(MI.Player);
+                ISuperLayerContext under = HeightController.GetSuperLayerUnderneathMob(MI.Player);
                 // When a shovel destroys ground tile, it destroys the structure below it (but only if it is not walkable)
                 if (under != null && under.GetStructureLayerStock(mapYPos, mapXPos) != null) {
                     if (!StructurePresets.GetFromStock(under.GetStructureLayerStock(mapYPos, mapXPos)).IsWalkable) {
@@ -170,11 +170,11 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             // Climable structures will be placed under a hole (if they can be).
             // Non climable structures won't be placed anywhere if there is a hole.
             if (toBuild.IsClimable && MI.Player.CurrSuperLayer.GetGroundLayerStock(yPos, xPos) == null && 
-                HeightController.GetLayerUnderneathMob(MI.Player).GetStructureLayerStock(yPos, xPos) == null) 
+                HeightController.GetSuperLayerUnderneathMob(MI.Player).GetStructureLayerStock(yPos, xPos) == null) 
             {
-                HeightController.GetLayerUnderneathMob(MI.Player).SetStructureAtPosition(toBuild.stock_id, toBuild.Health, yPos, xPos);
+                HeightController.GetSuperLayerUnderneathMob(MI.Player).SetStructureAtPosition(toBuild.stock_id, toBuild.Health, yPos, xPos);
 
-                GameEventLogController.AddMessage($"Set structure \"{toBuild.stock_id}\" on layer \"{HeightController.GetLayerUnderneathMob(MI.Player)}\" at Y:{yPos}, X:{xPos}");
+                GameEventLogController.AddMessage($"Set structure \"{toBuild.stock_id}\" on layer \"{HeightController.GetSuperLayerUnderneathMob(MI.Player)}\" at Y:{yPos}, X:{xPos}");
             }
             else if (MI.Player.CurrSuperLayer.GetGroundLayerStock(yPos, xPos) != null) {
                 MI.Player.CurrSuperLayer.SetStructureAtPosition(toBuild.stock_id, toBuild.Health, yPos, xPos);

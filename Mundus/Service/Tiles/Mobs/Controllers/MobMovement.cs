@@ -70,69 +70,69 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
 
             // If mob can go down a layer from a hole
             if (mob.CurrSuperLayer.GetGroundLayerStock(yPos, xPos) == null &&
-                HeightController.GetLayerUnderneathMob(mob) != null) 
+                HeightController.GetSuperLayerUnderneathMob(mob) != null) 
                 {
-                if (HeightController.GetLayerUnderneathMob(mob).GetMobLayerStock(yPos, xPos) == null) 
+                if (HeightController.GetSuperLayerUnderneathMob(mob).GetMobLayerStock(yPos, xPos) == null) 
                 {
-                    mob.CurrSuperLayer = HeightController.GetLayerUnderneathMob(mob);
+                    mob.CurrSuperLayer = HeightController.GetSuperLayerUnderneathMob(mob);
 
                     if (mob.GetType() == typeof(Player)) {
                         GameEventLogController.AddMessage($"Player fell down a superlayer, to {mob.CurrSuperLayer}");
                     }
                 }
                 else if (mob.GetType() == typeof(Player)) {
-                    GameEventLogController.AddMessage($"Cannot fall down a superlayer, blocked by {HeightController.GetLayerUnderneathMob(mob).GetMobLayerStock(yPos, xPos)}");
+                    GameEventLogController.AddMessage($"Cannot fall down a superlayer, blocked by {HeightController.GetSuperLayerUnderneathMob(mob).GetMobLayerStock(yPos, xPos)}");
                 }
             }
             // If mob can go down a layer from non-solid ground
             else if (!GroundPresets.GetFromStock(mob.CurrSuperLayer.GetGroundLayerStock(yPos, xPos)).Solid &&
-                     HeightController.GetLayerUnderneathMob(mob) != null) 
+                     HeightController.GetSuperLayerUnderneathMob(mob) != null) 
                 {
 
-                if (HeightController.GetLayerUnderneathMob(mob).GetMobLayerStock(yPos, xPos) == null) 
+                if (HeightController.GetSuperLayerUnderneathMob(mob).GetMobLayerStock(yPos, xPos) == null) 
                 {
-                    mob.CurrSuperLayer = HeightController.GetLayerUnderneathMob(mob);
+                    mob.CurrSuperLayer = HeightController.GetSuperLayerUnderneathMob(mob);
 
                     if (mob.GetType() == typeof(Player)) {
                         GameEventLogController.AddMessage($"Player descended a superlayer, to {mob.CurrSuperLayer}");
                     }
                 }
                 else if (mob.GetType() == typeof(Player)) {
-                    GameEventLogController.AddMessage($"Cannot descend a superlayer, blocked by {HeightController.GetLayerUnderneathMob(mob).GetMobLayerStock(yPos, xPos)}");
+                    GameEventLogController.AddMessage($"Cannot descend a superlayer, blocked by {HeightController.GetSuperLayerUnderneathMob(mob).GetMobLayerStock(yPos, xPos)}");
                 }
             }
             // If mob can climb up
             else if (mob.CurrSuperLayer.GetStructureLayerStock(yPos, xPos) != null &&
-                     HeightController.GetLayerAboveMob(mob).GetMobLayerStock(yPos, xPos) == null) 
+                     HeightController.GetSuperLayerAboveMob(mob).GetMobLayerStock(yPos, xPos) == null) 
                 {
                 // Mobs can only climb to the superlayer on top of them, if 
                 // there is a climable structure and there is a "hole" on top of the climable structure
                 if (StructurePresets.GetFromStock(mob.CurrSuperLayer.GetStructureLayerStock(yPos, xPos)).IsClimable &&
-                    HeightController.GetLayerAboveMob(mob) != null) 
+                    HeightController.GetSuperLayerAboveMob(mob) != null) 
                 {
                     // The ground above isn't solid or doesnt exist and there are no mobs on top
-                    if (HeightController.GetLayerAboveMob(mob).GetGroundLayerStock(yPos, xPos) == null ||
-                        !GroundPresets.GetFromStock(HeightController.GetLayerAboveMob(mob).GetGroundLayerStock(yPos, xPos)).Solid) 
+                    if (HeightController.GetSuperLayerAboveMob(mob).GetGroundLayerStock(yPos, xPos) == null ||
+                        !GroundPresets.GetFromStock(HeightController.GetSuperLayerAboveMob(mob).GetGroundLayerStock(yPos, xPos)).Solid) 
                     {
-                        mob.CurrSuperLayer = HeightController.GetLayerAboveMob(mob);
+                        mob.CurrSuperLayer = HeightController.GetSuperLayerAboveMob(mob);
 
                         if (mob.GetType() == typeof(Player)) {
                             GameEventLogController.AddMessage($"Player climbed up a superlayer");
                         }
                     }
-                    else if (HeightController.GetLayerAboveMob(mob).GetGroundLayerStock(yPos, xPos) != null && mob.GetType() == typeof(Player)) {
+                    else if (HeightController.GetSuperLayerAboveMob(mob).GetGroundLayerStock(yPos, xPos) != null && mob.GetType() == typeof(Player)) {
                         GameEventLogController.AddMessage($"Cannot climb up a superlayer, there is solid ground above");
                     }
                 }
                 else if (!StructurePresets.GetFromStock(mob.CurrSuperLayer.GetStructureLayerStock(yPos, xPos)).IsClimable && mob.GetType() == typeof(Player)) {
                     GameEventLogController.AddMessage($"Cannot climb up a superlayer using a \"{mob.CurrSuperLayer.GetStructureLayerStock(yPos, xPos)}\"");
                 }
-                else if (HeightController.GetLayerAboveMob(mob) == null && mob.GetType() == typeof(Player)) {
+                else if (HeightController.GetSuperLayerAboveMob(mob) == null && mob.GetType() == typeof(Player)) {
                     GameEventLogController.AddMessage($"There is no superlayer to climb up to");
                 }
             }
-            else if (HeightController.GetLayerAboveMob(mob).GetMobLayerStock(yPos, xPos) != null && mob.GetType() == typeof(Player)) {
-                GameEventLogController.AddMessage($"Cannot climb up a superlayer, {HeightController.GetLayerAboveMob(mob).GetMobLayerStock(yPos, xPos)} is blocking the way");
+            else if (HeightController.GetSuperLayerAboveMob(mob).GetMobLayerStock(yPos, xPos) != null && mob.GetType() == typeof(Player)) {
+                GameEventLogController.AddMessage($"Cannot climb up a superlayer, {HeightController.GetSuperLayerAboveMob(mob).GetMobLayerStock(yPos, xPos)} is blocking the way");
             }
 
             mob.YPos = yPos;
