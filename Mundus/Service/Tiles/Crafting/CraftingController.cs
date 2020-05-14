@@ -1,48 +1,45 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Mundus.Data.Crafting;
-using Mundus.Data.Superlayers.Mobs;
-using Mundus.Service.Tiles.Mobs;
-using Mundus.Service.Tiles.Items;
-using Mundus.Service.Tiles.Items.Presets;
-using Mundus.Data;
+﻿namespace Mundus.Service.Tiles.Crafting 
+{
+    using System.Linq;
+    using Mundus.Data;
+    using Mundus.Data.Superlayers.Mobs;
+    using Mundus.Service.Tiles.Items;
+    using Mundus.Service.Tiles.Items.Presets;
+    using Mundus.Service.Tiles.Mobs;
 
-namespace Mundus.Service.Tiles.Crafting {
-    public static class CraftingController {
+    public static class CraftingController 
+    {
         /// <summary>
-        /// Returns all recipes that can be executed with the current items in the player inventory (Inventory.Items)
+        /// Removes items and adds the result item to the inventory
         /// </summary>
-        /// <returns>All avalable recipies.</returns>
-        public static CraftingRecipe[] GetAvalableRecipes() {
-            return DataBaseContexts.CTContext.GetAvalableRecipes();
-        }
-
-        /// <summary>
-        /// Removes items, used for crafting and adds the result item to the inventory
-        /// </summary>
-        /// <param name="itemRecipe">CraftingRecipie of the item that will be crafted</param>
-        public static void CraftItem(CraftingRecipe itemRecipe, MobTile mob) {
-            //Removes all items that are used to craft the result item
+        public static void CraftItem(CraftingRecipe itemRecipe, MobTile mob) 
+        {
+            // Removes all items that are used to craft the result item
             var reqItems = itemRecipe.GetAllRequiredItems();
             var reqCounts = itemRecipe.GetAllCounts();
-            var inventoryItems = mob.Inventory.Items.Where(i => i != null).ToArray();
+
+            var allInventoryItems = mob.Inventory.Items.Where(i => i != null).ToArray();
 
             for (int item = 0; item < reqItems.Length; item++) 
             {
-                for (int i = 0, removed = 0; i < inventoryItems.Length && removed < reqCounts[item]; i++) 
+                for (int i = 0, removed = 0; i < allInventoryItems.Length && removed < reqCounts[item]; i++) 
                 {
-                    if (inventoryItems[i].stock_id == reqItems[item]) {
+                    if (allInventoryItems[i].stock_id == reqItems[item]) 
+                    {
                         mob.Inventory.DeleteFromItems(i);
                         removed++;
                     }
                 }
             }
 
-            ItemTile tmp = ToolPresets.GetFromStock(itemRecipe.ResultItem);
-            if (tmp == null) {
-                tmp = StructurePresets.GetFromStock(itemRecipe.ResultItem);
+            ItemTile result = ToolPresets.GetFromStock(itemRecipe.ResultItem);
+
+            if (result == null) 
+            {
+                result = StructurePresets.GetFromStock(itemRecipe.ResultItem);
             }
-            MI.Player.Inventory.AppendToItems(tmp);
+
+            MI.Player.Inventory.AppendToItems(result);
 
             Data.Windows.WI.SelWin.PrintInventory();
         }
@@ -51,8 +48,17 @@ namespace Mundus.Service.Tiles.Crafting {
         /// Does CraftItem method for the player
         /// </summary>
         /// <param name="itemRecipe">CraftingRecipie of the item that will be crafted</param>
-        public static void CraftItemPlayer(CraftingRecipe itemRecipe) {
+        public static void CraftItemPlayer(CraftingRecipe itemRecipe) 
+        {
             CraftItem(itemRecipe, MI.Player);
+        }
+
+        /// <summary>
+        /// Returns all recipes that can be executed with the current items in the player inventory (Inventory.Items)
+        /// </summary>
+        public static CraftingRecipe[] GetAvalableRecipes() 
+        {
+            return DataBaseContexts.CTContext.GetAvalableRecipes();
         }
     }
 }
