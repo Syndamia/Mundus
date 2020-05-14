@@ -1,4 +1,6 @@
-﻿namespace Mundus.Service.Tiles.Items.Presets {
+﻿using Mundus.Service.Tiles.Items.Types;
+
+namespace Mundus.Service.Tiles.Items.Presets {
     public static class GroundPresets {
         private static GroundTile sSky = new GroundTile("S_sky", -1, false);
         private static GroundTile lGrass = new GroundTile("L_grass", 1);

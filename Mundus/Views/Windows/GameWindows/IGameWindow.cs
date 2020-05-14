@@ -21,6 +21,8 @@
 
         void PrintInventory();
 
+        void PrintMapOrInv();
+
         void PrintSelectedItemInfo(ItemTile itemTile);
 
         void Show();

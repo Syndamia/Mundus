@@ -1,25 +1,11 @@
-﻿namespace Mundus.Views.Windows
+﻿namespace Mundus.Views.Windows.GameWindows.Medium 
 {
     using Gtk;
-    using Mundus.Service;
     using Mundus.Service.Tiles.Items;
-    using Mundus.Service.Tiles.Mobs;
-    using Mundus.Service.Tiles.Mobs.Controllers;
+    using static Mundus.Service.Tiles.Mobs.Inventory;
 
     public partial class MediumGameWindow : Gtk.Window, IGameWindow 
     {
-        /// <summary>
-        /// TODO: Make it an enum
-        /// Saves the place from which the player has selected an item
-        /// Must be either: "hotbar", "items", "accessories" or "gear"
-        /// </summary>
-        private string selPlace = null;
-
-        /// <summary>
-        /// Saves the index of the selected item
-        /// </summary>
-        private int selIndex = -1;
-
         public MediumGameWindow() : base( Gtk.WindowType.Toplevel )
         {
             this.Build();
@@ -44,74 +30,25 @@
             this.SetInvMenuVisibility(false);
         }
 
-        private void SelectItem(string place, int index) 
-        {
-            if (HasSelection()) 
-            {
-                ResetSelection();
-                SwitchItems.ReplaceItems(place, index);
+        private void SelectItem(InventoryPlace place, int index) {
+            if (ItemController.HasSelectedItem()) {
+                ItemController.SwitchItems(place, index);
             }
-            else 
-            {
-                selPlace = place;
-                selIndex = index;
-                SwitchItems.SetOrigin(place, index);
+            else {
+                ItemController.SelectItem(place, index);
             }
 
             this.PrintMainMenu();
             this.PrintInventory();
         }
 
-        private void React(int button) 
-        {
-            int buttonYPos = (button - 1) / Size;
-            int buttonXPos = (button - (buttonYPos * Size)) - 1;
-
-            int mapXPos = Calculate.CalculateXFromButton(buttonXPos, Size);
-            int mapYPos = Calculate.CalculateYFromButton(buttonYPos, Size);
-
-            if (!HasSelection()) 
-            {
-                MobMovement.MovePlayer(mapYPos, mapXPos, Size);
-                MobMovement.MoveRandomlyAllMobs();
-            }
-            else 
-            {
-                if (Inventory.GetPlayerItem(selPlace, selIndex) != null) 
-                {
-                    if (MobFighting.ExistsFightTargetForPlayer(mapYPos, mapXPos)) 
-                    {
-                        MobFighting.PlayerTryFight(selPlace, selIndex, mapYPos, mapXPos);
-                    }
-                    else 
-                    {
-                        MobTerraforming.PlayerTerraformAt(mapYPos, mapXPos, selPlace, selIndex);
-                    }
-                }
-                ResetSelection();
-            }
-
-            this.PrintWorldScreen();
-            this.PrintMainMenu();
-
-            if (this.MapMenuIsVisible()) 
-            {
+        public void PrintMapOrInv() {
+            if (this.MapMenuIsVisible()) {
                 this.PrintMap();
             }
-            else if (this.InvMenuIsVisible()) 
-            {
+            else if (this.InvMenuIsVisible()) {
                 this.PrintInventory();
             }
-        }
-
-        private void ResetSelection() 
-        {
-            selPlace = null;
-            selIndex = -1;
-        }
-        private bool HasSelection() 
-        {
-            return selPlace != null;
         }
 
         private bool InvMenuIsVisible() 

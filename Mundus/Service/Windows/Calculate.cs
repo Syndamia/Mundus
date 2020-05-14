@@ -2,7 +2,7 @@
 using Mundus.Data.Superlayers.Mobs;
 using System;
 
-namespace Mundus.Service {
+namespace Mundus.Service.Windows {
     public static class Calculate {
         /*Depending on whether you are on the edge of the map or in the center, the screen renders a bit differently.
          *On the edge it doesn't follow the player and only shows the corner "chunk". In the other parts it follows the

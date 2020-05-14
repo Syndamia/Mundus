@@ -1,4 +1,4 @@
-﻿namespace Mundus.Service.Tiles.Items {
+﻿namespace Mundus.Service.Tiles.Items.Types {
     public class Gear : ItemTile {
         public Gear(Gear gear) : base(gear.stock_id) 
         { }

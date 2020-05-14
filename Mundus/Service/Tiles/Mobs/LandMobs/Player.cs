@@ -2,6 +2,7 @@
 using Mundus.Data.SuperLayers;
 using Mundus.Data.Windows;
 using Mundus.Service.Tiles.Items;
+using Mundus.Service.Tiles.Items.Types;
 
 namespace Mundus.Service.Tiles.Mobs.LandMobs {
     public class Player : MobTile {

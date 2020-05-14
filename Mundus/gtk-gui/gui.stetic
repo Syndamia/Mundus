@@ -950,7 +950,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="Mundus.Views.Windows.SmallGameWindow" design-size="890 770">
+  <widget class="Gtk.Window" id="Mundus.Views.Windows.GameWindows.Small.SmallGameWindow" design-size="890 770">
     <property name="MemberName" />
     <property name="Title">Mundus (Small Window)</property>
     <property name="WindowPosition">Mouse</property>
@@ -5381,7 +5381,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="Mundus.Views.Windows.MediumGameWindow" design-size="1390 970">
+  <widget class="Gtk.Window" id="Mundus.Views.Windows.GameWindows.Medium.MediumGameWindow" design-size="1390 970">
     <property name="MemberName" />
     <property name="Title">MediumGameWindow</property>
     <property name="WindowPosition">Mouse</property>
@@ -12704,7 +12704,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="Mundus.Views.Windows.LargeGameWindow" design-size="1690 1170">
+  <widget class="Gtk.Window" id="Mundus.Views.Windows.GameWindows.Large.LargeGameWindow" design-size="1690 1170">
     <property name="MemberName" />
     <property name="Title">LargeGameWindow</property>
     <property name="WindowPosition">Mouse</property>

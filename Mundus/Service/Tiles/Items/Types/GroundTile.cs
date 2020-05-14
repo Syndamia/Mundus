@@ -1,7 +1,7 @@
 ﻿using Gtk;
 using static Mundus.Data.Values;
 
-namespace Mundus.Service.Tiles.Items {
+namespace Mundus.Service.Tiles.Items.Types {
     public class GroundTile : ItemTile {
         /// <summary>
         /// Required minimal shovel class for destroying the ground tile

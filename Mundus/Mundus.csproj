@@ -17,6 +17,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Mundus.xml</DocumentationFile>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -247,9 +248,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Windows\NewGameWindow.cs" />
     <Compile Include="gtk-gui\Mundus.Views.Windows.NewGameWindow.cs" />
-    <Compile Include="gtk-gui\Mundus.Views.Windows.SmallGameWindow.cs" />
-    <Compile Include="gtk-gui\Mundus.Views.Windows.MediumGameWindow.cs" />
-    <Compile Include="gtk-gui\Mundus.Views.Windows.LargeGameWindow.cs" />
+    <Compile Include="gtk-gui\Mundus.Views.Windows.GameWindows.Small.SmallGameWindow.cs" />
+    <Compile Include="gtk-gui\Mundus.Views.Windows.GameWindows.Medium.MediumGameWindow.cs" />
+    <Compile Include="gtk-gui\Mundus.Views.Windows.GameWindows.Large.LargeGameWindow.cs" />
     <Compile Include="Views\Windows\SettingsWindow.cs" />
     <Compile Include="gtk-gui\Mundus.Views.Windows.SettingsWindow.cs" />
     <Compile Include="Views\Windows\PauseWindow.cs" />
@@ -264,20 +265,12 @@
     <Compile Include="gtk-gui\Mundus.Views.Dialogs.ExitDialog.cs" />
     <Compile Include="Service\Tiles\ITile.cs" />
     <Compile Include="Service\SuperLayers\ImageController.cs" />
-    <Compile Include="Service\Calculate.cs" />
     <Compile Include="Data\Windows\WI.cs" />
     <Compile Include="Data\Dialogues\DI.cs" />
     <Compile Include="Data\SuperLayers\Mobs\MI.cs" />
-    <Compile Include="Service\WindowController.cs" />
     <Compile Include="Service\GameGenerator.cs" />
-    <Compile Include="Service\Tiles\Items\ItemTile.cs" />
-    <Compile Include="Service\Tiles\Items\Tool.cs" />
-    <Compile Include="Service\Tiles\Items\Structure.cs" />
-    <Compile Include="Service\Tiles\Items\Material.cs" />
-    <Compile Include="Service\Tiles\Items\Gear.cs" />
     <Compile Include="Service\SuperLayers\Generators\LandSuperLayerGenerator.cs" />
     <Compile Include="Service\SuperLayers\Generators\UndergroundSuperLayerGenerator.cs" />
-    <Compile Include="Service\Tiles\Items\GroundTile.cs" />
     <Compile Include="Service\SuperLayers\HeightController.cs" />
     <Compile Include="Service\SuperLayers\Generators\SkySuperLayerGenerator.cs" />
     <Compile Include="Service\GameEventLogController.cs" />
@@ -291,9 +284,6 @@
     <Compile Include="Service\Tiles\Mobs\LandMobs\Player.cs" />
     <Compile Include="Service\Tiles\Mobs\MobTile.cs" />
     <Compile Include="Service\Tiles\Mobs\Inventory.cs" />
-    <Compile Include="Service\Tiles\Items\SwitchItems.cs">
-      <IncludeInPackage>true</IncludeInPackage>
-    </Compile>
     <Compile Include="Service\Tiles\Crafting\CraftingController.cs" />
     <Compile Include="Service\Tiles\Crafting\CraftingRecipe.cs" />
     <Compile Include="Service\Tiles\Items\Presets\GroundPresets.cs" />
@@ -333,6 +323,15 @@
     <Compile Include="Views\Windows\GameWindows\Large\LargeLogic.cs" />
     <Compile Include="Views\Windows\GameWindows\Large\LargeButtonClickedEvents.cs" />
     <Compile Include="Views\Windows\GameWindows\Large\LargePrinting.cs" />
+    <Compile Include="Service\Windows\WindowController.cs" />
+    <Compile Include="Service\Windows\Calculate.cs" />
+    <Compile Include="Service\Tiles\Items\ItemController.cs" />
+    <Compile Include="Service\Tiles\Items\Types\Gear.cs" />
+    <Compile Include="Service\Tiles\Items\Types\GroundTile.cs" />
+    <Compile Include="Service\Tiles\Items\Types\Material.cs" />
+    <Compile Include="Service\Tiles\Items\Types\Structure.cs" />
+    <Compile Include="Service\Tiles\Items\Types\Tool.cs" />
+    <Compile Include="Service\Tiles\Items\ItemTile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -362,6 +361,8 @@
     <Folder Include="Views\Windows\GameWindows\Small\" />
     <Folder Include="Views\Windows\GameWindows\Medium\" />
     <Folder Include="Views\Windows\GameWindows\Large\" />
+    <Folder Include="Service\Windows\" />
+    <Folder Include="Service\Tiles\Items\Types\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

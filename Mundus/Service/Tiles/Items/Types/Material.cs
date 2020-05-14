@@ -1,4 +1,4 @@
-﻿namespace Mundus.Service.Tiles.Items {
+﻿namespace Mundus.Service.Tiles.Items.Types {
     public class Material : ItemTile {
         /// <summary>
         /// Certain materials can be eaten to replenish energy points. This stores by how much to restore energy points.

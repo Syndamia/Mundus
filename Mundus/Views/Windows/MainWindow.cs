@@ -2,7 +2,7 @@
 {
     using System;
     using Gtk;
-    using Mundus.Service;
+    using Mundus.Service.Windows;
 
     public partial class MainWindow : Gtk.Window 
     {

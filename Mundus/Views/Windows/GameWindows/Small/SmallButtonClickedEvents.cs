@@ -1,7 +1,8 @@
-﻿namespace Mundus.Views.Windows 
+﻿namespace Mundus.Views.Windows.GameWindows.Small 
 {
     using System;
-    using Mundus.Service;
+    using Mundus.Service.Windows;
+    using static Mundus.Service.Tiles.Mobs.Inventory;
 
     public partial class SmallGameWindow : Gtk.Window 
     {
@@ -75,7 +76,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(1);
+                WindowController.React(1);
             }
         }
 
@@ -83,7 +84,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(2);
+                WindowController.React(2);
             }
         }
 
@@ -91,7 +92,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(3);
+                WindowController.React(3);
             }
         }
 
@@ -99,7 +100,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(4);
+                WindowController.React(4);
             }
         }
 
@@ -107,7 +108,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(5);
+                WindowController.React(5);
             }
         }
 
@@ -115,7 +116,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(6);
+                WindowController.React(6);
             }
         }
 
@@ -123,7 +124,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(7);
+                WindowController.React(7);
             }
         }
 
@@ -131,7 +132,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(8);
+                WindowController.React(8);
             }
         }
 
@@ -139,7 +140,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(9);
+                WindowController.React(9);
             }
         }
 
@@ -147,7 +148,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(10);
+                WindowController.React(10);
             }
         }
 
@@ -155,7 +156,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(11);
+                WindowController.React(11);
             }
         }
 
@@ -163,7 +164,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(12);
+                WindowController.React(12);
             }
         }
 
@@ -171,7 +172,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(13);
+                WindowController.React(13);
             }
         }
 
@@ -179,7 +180,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(14);
+                WindowController.React(14);
             }
         }
 
@@ -187,7 +188,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(15);
+                WindowController.React(15);
             }
         }
 
@@ -195,7 +196,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(16);
+                WindowController.React(16);
             }
         }
 
@@ -203,7 +204,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(17);
+                WindowController.React(17);
             }
         }
 
@@ -211,7 +212,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(18);
+                WindowController.React(18);
             }
         }
 
@@ -219,7 +220,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(19);
+                WindowController.React(19);
             }
         }
 
@@ -227,7 +228,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(20);
+                WindowController.React(20);
             }
         }
 
@@ -235,7 +236,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(21);
+                WindowController.React(21);
             }
         }
 
@@ -243,7 +244,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(22);
+                WindowController.React(22);
             }
         }
 
@@ -251,7 +252,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(23);
+                WindowController.React(23);
             }
         }
 
@@ -259,7 +260,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(24);
+                WindowController.React(24);
             }
         }
 
@@ -267,7 +268,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.React(25);
+                WindowController.React(25);
             }
         }
 
@@ -279,7 +280,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("hotbar", 0);
+                this.SelectItem(InventoryPlace.Hotbar, 0);
                 this.PrintMainMenu();
             }
         }
@@ -288,7 +289,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("hotbar", 1);
+                this.SelectItem(InventoryPlace.Hotbar, 1);
                 this.PrintMainMenu();
             }
         }
@@ -297,7 +298,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("hotbar", 2);
+                this.SelectItem(InventoryPlace.Hotbar, 2);
                 this.PrintMainMenu();
             }
         }
@@ -306,7 +307,7 @@
         {
             if (!WindowController.PauseWindowVisible)
             {
-                this.SelectItem("hotbar", 3);
+                this.SelectItem(InventoryPlace.Hotbar, 3);
                 this.PrintMainMenu();
             }
         }
@@ -315,7 +316,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("hotbar", 4);
+                this.SelectItem(InventoryPlace.Hotbar, 4);
                 this.PrintMainMenu();
             }
         }
@@ -333,7 +334,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 0);
+                this.SelectItem(InventoryPlace.Items, 0);
                 this.PrintInventory();
             }
         }
@@ -342,7 +343,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 1);
+                this.SelectItem(InventoryPlace.Items, 1);
                 this.PrintInventory();
             }
         }
@@ -351,7 +352,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 2);
+                this.SelectItem(InventoryPlace.Items, 2);
                 this.PrintInventory();
             }
         }
@@ -360,7 +361,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 3);
+                this.SelectItem(InventoryPlace.Items, 3);
                 this.PrintInventory();
             }
         }
@@ -369,7 +370,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 4);
+                this.SelectItem(InventoryPlace.Items, 4);
                 this.PrintInventory();
             }
         }
@@ -378,7 +379,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 5);
+                this.SelectItem(InventoryPlace.Items, 5);
                 this.PrintInventory();
             }
         }
@@ -387,7 +388,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 6);
+                this.SelectItem(InventoryPlace.Items, 6);
                 this.PrintInventory();
             }
         }
@@ -396,7 +397,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 7);
+                this.SelectItem(InventoryPlace.Items, 7);
                 this.PrintInventory();
             }
         }
@@ -405,7 +406,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 8);
+                this.SelectItem(InventoryPlace.Items, 8);
                 this.PrintInventory();
             }
         }
@@ -414,7 +415,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 9);
+                this.SelectItem(InventoryPlace.Items, 9);
                 this.PrintInventory();
             }
         }
@@ -423,7 +424,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 10);
+                this.SelectItem(InventoryPlace.Items, 10);
                 this.PrintInventory();
             }
         }
@@ -432,7 +433,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 11);
+                this.SelectItem(InventoryPlace.Items, 11);
                 this.PrintInventory();
             }
         }
@@ -441,7 +442,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 12);
+                this.SelectItem(InventoryPlace.Items, 12);
                 this.PrintInventory();
             }
         }
@@ -450,7 +451,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 13);
+                this.SelectItem(InventoryPlace.Items, 13);
                 this.PrintInventory();
             }
         }
@@ -459,7 +460,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 14);
+                this.SelectItem(InventoryPlace.Items, 14);
                 this.PrintInventory();
             }
         }
@@ -468,7 +469,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 15);
+                this.SelectItem(InventoryPlace.Items, 15);
                 this.PrintInventory();
             }
         }
@@ -477,7 +478,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 16);
+                this.SelectItem(InventoryPlace.Items, 16);
                 this.PrintInventory();
             }
         }
@@ -486,7 +487,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 17);
+                this.SelectItem(InventoryPlace.Items, 17);
                 this.PrintInventory();
             }
         }
@@ -495,7 +496,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 18);
+                this.SelectItem(InventoryPlace.Items, 18);
                 this.PrintInventory();
             }
         }
@@ -504,7 +505,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 19);
+                this.SelectItem(InventoryPlace.Items, 19);
                 this.PrintInventory();
             }
         }
@@ -513,7 +514,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 20);
+                this.SelectItem(InventoryPlace.Items, 20);
                 this.PrintInventory();
             }
         }
@@ -522,7 +523,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 21);
+                this.SelectItem(InventoryPlace.Items, 21);
                 this.PrintInventory();
             }
         }
@@ -531,7 +532,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 22);
+                this.SelectItem(InventoryPlace.Items, 22);
                 this.PrintInventory();
             }
         }
@@ -540,7 +541,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 23);
+                this.SelectItem(InventoryPlace.Items, 23);
                 this.PrintInventory();
             }
         }
@@ -549,7 +550,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("items", 24);
+                this.SelectItem(InventoryPlace.Items, 24);
                 this.PrintInventory();
             }
         }
@@ -562,7 +563,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("accessories", 0);
+                this.SelectItem(InventoryPlace.Accessories, 0);
                 this.PrintInventory();
             }
         }
@@ -571,7 +572,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("accessories", 1);
+                this.SelectItem(InventoryPlace.Accessories, 1);
                 this.PrintInventory();
             }
         }
@@ -580,7 +581,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("accessories", 2);
+                this.SelectItem(InventoryPlace.Accessories, 2);
                 this.PrintInventory();
             }
         }
@@ -589,7 +590,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("accessories", 3);
+                this.SelectItem(InventoryPlace.Accessories, 3);
                 this.PrintInventory();
             }
         }
@@ -598,7 +599,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("accessories", 4);
+                this.SelectItem(InventoryPlace.Accessories, 4);
                 this.PrintInventory();
             }
         }
@@ -607,7 +608,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("accessories", 5);
+                this.SelectItem(InventoryPlace.Accessories, 5);
                 this.PrintInventory();
             }
         }
@@ -616,7 +617,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("accessories", 6);
+                this.SelectItem(InventoryPlace.Accessories, 6);
                 this.PrintInventory();
             }
         }
@@ -625,7 +626,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("accessories", 7);
+                this.SelectItem(InventoryPlace.Accessories, 7);
                 this.PrintInventory();
             }
         }
@@ -634,7 +635,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("accessories", 8);
+                this.SelectItem(InventoryPlace.Accessories, 8);
                 this.PrintInventory();
             }
         }
@@ -643,7 +644,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("accessories", 9);
+                this.SelectItem(InventoryPlace.Accessories, 9);
                 this.PrintInventory();
             }
         }
@@ -655,7 +656,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("gear", 0);
+                this.SelectItem(InventoryPlace.Gear, 0);
                 this.PrintInventory();
             }
         }
@@ -664,7 +665,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("gear", 1);
+                this.SelectItem(InventoryPlace.Gear, 1);
                 this.PrintInventory();
             }
         }
@@ -673,7 +674,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("gear", 2);
+                this.SelectItem(InventoryPlace.Gear, 2);
                 this.PrintInventory();
             }
         }
@@ -682,7 +683,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("gear", 3);
+                this.SelectItem(InventoryPlace.Gear, 3);
                 this.PrintInventory();
             }
         }
@@ -691,7 +692,7 @@
         {
             if (!WindowController.PauseWindowVisible) 
             {
-                this.SelectItem("gear", 4);
+                this.SelectItem(InventoryPlace.Gear, 4);
                 this.PrintInventory();
             }
         }

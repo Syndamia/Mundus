@@ -3,6 +3,7 @@ using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Data.SuperLayers;
 using Mundus.Service.Tiles.Items;
+using Mundus.Service.Tiles.Items.Types;
 using static Mundus.Data.Values;
 
 namespace Mundus.Service.SuperLayers {

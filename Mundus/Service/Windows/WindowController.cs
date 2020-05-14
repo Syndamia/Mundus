@@ -1,8 +1,14 @@
-﻿using Gtk;
+﻿using System;
+using Gtk;
 using Mundus.Data.Windows;
+using Mundus.Service.Tiles.Items;
+using Mundus.Service.Tiles.Mobs;
+using Mundus.Service.Tiles.Mobs.Controllers;
+using Mundus.Views.Windows;
 
-namespace Mundus.Service {
+namespace Mundus.Service.Windows {
     public static class WindowController {
+
         /// <summary>
         /// Shows the settings window and hides the sender
         /// </summary>
@@ -60,6 +66,39 @@ namespace Mundus.Service {
             WI.WLog.Initialize();
             WI.WLog.Show();
             WI.WLog.Present();
+        }
+
+        public static void React(int button) 
+        {
+            int size = WI.SelWin.Size;
+
+            int buttonYPos = (button - 1) / size;
+            int buttonXPos = (button - (buttonYPos * size)) - 1;
+
+            int mapXPos = Calculate.CalculateXFromButton(buttonXPos, size);
+            int mapYPos = Calculate.CalculateYFromButton(buttonYPos, size);
+
+            if (!ItemController.HasSelectedItem()) {
+                MobMovement.MovePlayer(mapYPos, mapXPos, size);
+                MobMovement.MoveRandomlyAllMobs();
+            }
+            else {
+                if (Inventory.GetPlayerItemFromItemSelection() != null) {
+                    if (MobFighting.ExistsFightTargetForPlayer(mapYPos, mapXPos)) {
+                        MobFighting.PlayerTryFight(mapYPos, mapXPos);
+                    }
+                    else {
+                        MobTerraforming.PlayerTerraformAt(mapYPos, mapXPos);
+                    }
+                }
+
+                ItemController.ResetSelection();
+            }
+
+            WI.SelWin.PrintWorldScreen();
+            WI.SelWin.PrintMainMenu();
+
+            WI.SelWin.PrintMapOrInv();
         }
     }
 }

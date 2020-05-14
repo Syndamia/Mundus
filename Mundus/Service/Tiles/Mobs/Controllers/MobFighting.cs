@@ -2,8 +2,8 @@
 using Mundus.Data;
 using Mundus.Data.Superlayers.Mobs;
 using Mundus.Service.Tiles.Items;
+using Mundus.Service.Tiles.Items.Types;
 using Mundus.Service.Tiles.Mobs.LandMobs;
-using static Mundus.Data.Values;
 
 namespace Mundus.Service.Tiles.Mobs.Controllers {
     public static class MobFighting {
@@ -35,16 +35,16 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         /// <param name="selIndex">Inventory index of the selected item place (item will be checked if its a valid tool)</param>
         /// <param name="mapYPos">YPos of target mob</param>
         /// <param name="mapXPos">XPos of target mob</param>
-        public static void PlayerTryFight(string selPlace, int selIndex, int mapYPos, int mapXPos) {
-            if (MobTryFight(MI.Player, selPlace, selIndex, mapYPos, mapXPos)) {
-                MI.Player.DrainEnergy(TAKEN_ENERGY_FROM_FIGHTING + DifficultyValueModifier());
+        public static void PlayerTryFight(int mapYPos, int mapXPos) {
+            if (MobTryFight(MI.Player, mapYPos, mapXPos)) {
+                MI.Player.DrainEnergy(TAKEN_ENERGY_FROM_FIGHTING + Values.DifficultyValueModifier());
             }
         }
 
         // Checks if the mob has a proper fighting item selected
-        private static bool MobCanFight(MobTile mob, string selPlace, int selIndex, int mapYPos, int mapXPos) {
-            return Inventory.GetPlayerItem(selPlace, selIndex).GetType() == typeof(Tool) &&
-                   ((Tool)Inventory.GetPlayerItem(selPlace, selIndex)).Type == ToolType.Sword && 
+        private static bool MobCanFight(MobTile mob, int mapYPos, int mapXPos) {
+            return Inventory.GetPlayerItemFromItemSelection().GetType() == typeof(Tool) &&
+                   ((Tool)Inventory.GetPlayerItemFromItemSelection()).Type == Values.ToolType.Sword && 
                    mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) != null;
         }
 
@@ -58,9 +58,9 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         /// <param name="selIndex">Inventory index of the selected item place (item will be checked if its a valid tool)</param>
         /// <param name="mapYPos">YPos of target mob</param>
         /// <param name="mapXPos">XPos of target mob</param>
-        public static bool MobTryFight(MobTile mob, string selPlace, int selIndex, int mapYPos, int mapXPos) {
-            if (MobCanFight(mob, selPlace, selIndex, mapYPos, mapXPos)) {
-                Tool selTool = (Tool)Inventory.GetPlayerItem(selPlace, selIndex);
+        public static bool MobTryFight(MobTile mob, int mapYPos, int mapXPos) {
+            if (MobCanFight(mob, mapYPos, mapXPos)) {
+                Tool selTool = (Tool)Inventory.GetPlayerItemFromItemSelection();
                 MobTile targetMob = LandMobsPresets.GetFromStock(mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos));
 
                 if (selTool.Class >= targetMob.Defense) {
@@ -89,7 +89,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
                 GameEventLogController.AddMessage($"There is no mob to fight on \"{mob.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
             }
             else if (mob.GetType() == typeof(Player)) { // Inventory.GetPlayerItem(selPlace, selIndex).GetType() != typeof(Tool) || ((Tool)Inventory.GetPlayerItem(selPlace, selIndex)).Type != ToolTypes.Sword
-                GameEventLogController.AddMessage($"You need a Tool of type {ToolType.Sword} to fight with other mobs");
+                GameEventLogController.AddMessage($"You need a Tool of type {Values.ToolType.Sword} to fight with other mobs");
             }
             return false;
         }

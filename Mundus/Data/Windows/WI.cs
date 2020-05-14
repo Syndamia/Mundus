@@ -1,6 +1,9 @@
 ﻿namespace Mundus.Data.Windows 
 {
     using Mundus.Views.Windows;
+    using Mundus.Views.Windows.GameWindows.Large;
+    using Mundus.Views.Windows.GameWindows.Medium;
+    using Mundus.Views.Windows.GameWindows.Small;
 
     /// <summary>
     /// Used to store universally accessed windows

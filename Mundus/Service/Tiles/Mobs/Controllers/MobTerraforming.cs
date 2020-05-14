@@ -6,22 +6,21 @@ using Mundus.Service.SuperLayers;
 using Mundus.Service.Tiles.Items;
 using Mundus.Service.Tiles.Items.Presets;
 using Mundus.Data;
+using Mundus.Service.Tiles.Items.Types;
 
 namespace Mundus.Service.Tiles.Mobs.Controllers {
     public static class MobTerraforming {
         /// <summary>
         /// Tries to place a selected structure/ground tile or to mine/dig (destroy) at the selected location
         /// </summary>
-        /// <param name="inventoryPlace">Place where the selected item is located ("hotbar", "items", ...)</param>
-        /// <param name="inventoryIndex">Index of the place where the item is located</param>
-        public static void PlayerTerraformAt(int mapYPos, int mapXPos, string inventoryPlace, int inventoryIndex) {
-            var selectedItemType = Inventory.GetPlayerItem(inventoryPlace, inventoryIndex).GetType();
+        public static void PlayerTerraformAt(int mapYPos, int mapXPos) {
+            var selectedItemType = Inventory.GetPlayerItemFromItemSelection().GetType();
 
             // If player can place strucure
             if (selectedItemType == typeof(Structure)) {
                 if (PlayerCanBuildStructureAt(mapYPos, mapXPos)) {
-                    PlayerBuildStructureAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
-                    MI.Player.Inventory.DeleteItemTile(inventoryPlace, inventoryIndex);
+                    PlayerBuildStructureAt(mapYPos, mapXPos);
+                    Inventory.DeletePlayerItemTileFromItemSelection();
                 }
                 else {
                     GameEventLogController.AddMessage($"Cannot build structure at Y:{mapYPos}, X:{mapXPos}");
@@ -31,8 +30,8 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             // If Player can place ground
             else if (selectedItemType == typeof(GroundTile)) {
                 if (PlayerCanPlaceGroundAt(mapYPos, mapXPos)) {
-                    PlayerPlaceGroundAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
-                    MI.Player.Inventory.DeleteItemTile(inventoryPlace, inventoryIndex);
+                    PlayerPlaceGroundAt(mapYPos, mapXPos);
+                    Inventory.DeletePlayerItemTileFromItemSelection();
                 }
                 else {
                     GameEventLogController.AddMessage($"Cannot place ground at Y:{mapYPos}, X:{mapXPos}");
@@ -41,7 +40,7 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
             // If player can mine/dig
             else if (selectedItemType == typeof(Tool)) {
                 if (PlayerCanDestroyAt(mapYPos, mapXPos)) {
-                    PlayerDestroyAt(mapYPos, mapXPos, inventoryPlace, inventoryIndex);
+                    PlayerDestroyAt(mapYPos, mapXPos);
                 }
                 else {
                     GameEventLogController.AddMessage($"Cannot destroy at Y:{mapYPos}, X:{mapXPos}");
@@ -56,8 +55,8 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         }
 
         private const double ENERGY_TAKEN_FROM_DESTROYING = 0.6;
-        private static void PlayerDestroyAt(int mapYPos, int mapXPos, string place, int index) {
-            var selectedTool = (Tool)MI.Player.Inventory.GetItemTile(place, index);
+        private static void PlayerDestroyAt(int mapYPos, int mapXPos) {
+            var selectedTool = (Tool)Inventory.GetPlayerItemFromItemSelection();
 
             // Only shovels can destroy ground layer tiles, but not when there is something over the ground tile
             if (selectedTool.Type == ToolType.Shovel && MI.Player.CurrSuperLayer.GetStructureLayerStock(mapYPos, mapXPos) == null) {
@@ -150,8 +149,8 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         }
 
         private const double ENERGY_TAKEN_FROM_PLACING_GROUND = 0.4;
-        private static void PlayerPlaceGroundAt(int yPos, int xPos, string inventoryPlace, int inventoryIndex) {
-            GroundTile toPlace = (GroundTile)MI.Player.Inventory.GetItemTile(inventoryPlace, inventoryIndex);
+        private static void PlayerPlaceGroundAt(int yPos, int xPos) {
+            GroundTile toPlace = (GroundTile)Inventory.GetPlayerItemFromItemSelection();
 
             MI.Player.CurrSuperLayer.SetGroundAtPosition(toPlace.stock_id, yPos, xPos);
             MI.Player.DrainEnergy(ENERGY_TAKEN_FROM_PLACING_GROUND + Values.DifficultyValueModifier());
@@ -165,8 +164,8 @@ namespace Mundus.Service.Tiles.Mobs.Controllers {
         }
 
         private const double ENERGY_TAKEN_FROM_BUILDING_STRUCTURE = 0.5;
-        private static void PlayerBuildStructureAt(int yPos, int xPos, string inventoryPlace, int inventoryIndex) {
-            Structure toBuild = (Structure)MI.Player.Inventory.GetItemTile(inventoryPlace, inventoryIndex);
+        private static void PlayerBuildStructureAt(int yPos, int xPos) {
+            Structure toBuild = (Structure)Inventory.GetPlayerItemFromItemSelection();
 
             // Climable structures will be placed under a hole (if they can be).
             // Non climable structures won't be placed anywhere if there is a hole.

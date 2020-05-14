@@ -1,10 +1,11 @@
-﻿namespace Mundus.Views.Windows  
+﻿namespace Mundus.Views.Windows.GameWindows.Large 
 {
     using Gtk;
     using Mundus.Service;
     using Mundus.Service.SuperLayers;
     using Mundus.Service.Tiles.Items;
     using Mundus.Service.Tiles.Mobs.Controllers;
+    using Mundus.Service.Windows;
 
     public partial class LargeGameWindow  
     {

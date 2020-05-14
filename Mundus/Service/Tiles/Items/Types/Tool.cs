@@ -1,6 +1,6 @@
 ﻿using static Mundus.Data.Values;
 
-namespace Mundus.Service.Tiles.Items {
+namespace Mundus.Service.Tiles.Items.Types {
     public class Tool : ItemTile {
         public ToolType Type { get; private set; }
         public int Class { get; private set; }

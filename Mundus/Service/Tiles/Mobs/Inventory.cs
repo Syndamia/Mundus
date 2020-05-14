@@ -1,9 +1,17 @@
 ﻿using Mundus.Service.Tiles.Items;
+using Mundus.Service.Tiles.Items.Types;
 using System;
 using System.Linq;
 
 namespace Mundus.Service.Tiles.Mobs {
     public class Inventory {
+        public enum InventoryPlace {
+            Hotbar,
+            Items,
+            Accessories,
+            Gear
+        }
+
         /// <summary>
         /// Has a size of "Screen and Inventory" and can hold Tools, Materials, Structures and Gear
         /// </summary>
@@ -84,14 +92,14 @@ namespace Mundus.Service.Tiles.Mobs {
         /// Returns an ItemTile depending on specified place ("hotbar", "items", "accessories" or "gear")
         /// and specified index
         /// </summary>
-        public ItemTile GetItemTile(string place, int index) {
+        public ItemTile GetItemTile(InventoryPlace place, int index) {
             ItemTile toReturn = null;
 
-            switch (place.ToLower()) {
-                case "hotbar": toReturn = this.Hotbar[index]; break;
-                case "items": toReturn = this.Items[index]; break;
-                case "accessories": toReturn = this.Accessories[index]; break;
-                case "gear": toReturn = this.Gear[index]; break;
+            switch (place) {
+                case InventoryPlace.Hotbar: toReturn = this.Hotbar[index]; break;
+                case InventoryPlace.Items: toReturn = this.Items[index]; break;
+                case InventoryPlace.Accessories: toReturn = this.Accessories[index]; break;
+                case InventoryPlace.Gear: toReturn = this.Gear[index]; break;
             }
             return toReturn;
         }
@@ -100,21 +108,25 @@ namespace Mundus.Service.Tiles.Mobs {
         /// Deletes an ItemTile depending on specified place ("hotbar", "items", "accessories" or "gear")
         /// and specified index
         /// </summary>
-        public void DeleteItemTile(string place, int index) {
-            switch (place.ToLower()) {
-                case "hotbar": this.Hotbar[index] = null; break;
-                case "items": this.Items[index] = null; break;
-                case "accessories": this.Accessories[index] = null; break;
-                case "gear": this.Gear[index] = null; break;
-            }
+        public static void DeletePlayerItemTileFromItemSelection() {
+            Data.Superlayers.Mobs.MI.Player.Inventory.DeleteItem(ItemController.SelItemPlace, ItemController.SelItemIndex);
         }
 
         /// <summary>
         /// Returns an ItemTile depending on specified place ("hotbar", "items", "accessories" or "gear")
         /// and specified index in player's inventory
         /// </summary>
-        public static ItemTile GetPlayerItem(string place, int index) {
-            return Data.Superlayers.Mobs.MI.Player.Inventory.GetItemTile(place, index);
+        public static ItemTile GetPlayerItemFromItemSelection() {
+            return Data.Superlayers.Mobs.MI.Player.Inventory.GetItemTile(ItemController.SelItemPlace, ItemController.SelItemIndex);
+        }
+
+        public void DeleteItem(InventoryPlace place, int index) {
+            switch (place) {
+                case InventoryPlace.Hotbar: this.Hotbar[index] = null; break;
+                case InventoryPlace.Items: this.Items[index] = null; break;
+                case InventoryPlace.Accessories: this.Accessories[index] = null; break;
+                case InventoryPlace.Gear: this.Gear[index] = null; break;
+            }
         }
     }
 }

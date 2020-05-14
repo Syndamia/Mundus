@@ -1,4 +1,6 @@
-﻿namespace Mundus.Service.Tiles.Items.Presets {
+﻿using Mundus.Service.Tiles.Items.Types;
+
+namespace Mundus.Service.Tiles.Items.Presets {
     public static class MaterialPresets {
         /// <returns>New instance</returns>
         public static Material GetALandRock() {

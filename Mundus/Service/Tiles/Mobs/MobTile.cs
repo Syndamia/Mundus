@@ -3,6 +3,7 @@ using Mundus.Data;
 using Mundus.Data.SuperLayers;
 using Mundus.Data.Windows;
 using Mundus.Service.Tiles.Items;
+using Mundus.Service.Tiles.Items.Types;
 
 namespace Mundus.Service.Tiles.Mobs {
     public class MobTile : ITile {
