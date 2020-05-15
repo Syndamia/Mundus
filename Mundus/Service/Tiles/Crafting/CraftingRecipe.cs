@@ -8,11 +8,6 @@
     [Table("CraftingRecipes", Schema = "Mundus")]
     public class CraftingRecipe 
     {
-        /// <summary>
-        /// Required fifth item
-        /// </summary>
-        public string ReqItem5 { get; private set; }
-
         public CraftingRecipe(string resultItem, int count1, string reqItem1) : this(resultItem, count1, reqItem1, 0, null, 0, null, 0, null, 0, null) 
         { 
         }
@@ -59,49 +54,54 @@
         public string ResultItem { get; private set; }
 
         /// <summary>
-        /// Required amount of the first item
+        /// Gets the required amount of the first item
         /// </summary>
         public int Count1 { get; private set; }
 
         /// <summary>
-        /// Required first item
+        /// Gets the required first item
         /// </summary>
         public string ReqItem1 { get; private set; }
 
         /// <summary>
-        /// Required amount of the second item
+        /// Gets the required amount of the second item
         /// </summary>
         public int Count2 { get; private set; }
 
         /// <summary>
-        /// Required second item
+        /// Gets the required second item
         /// </summary>
         public string ReqItem2 { get; private set; }
 
         /// <summary>
-        /// Required amount of the third item
+        /// Gets the required amount of the third item
         /// </summary>
         public int Count3 { get; private set; }
 
         /// <summary>
-        /// Required third item
+        /// Gets the required third item
         /// </summary>
         public string ReqItem3 { get; private set; }
 
         /// <summary>
-        /// Required amount of the fourth item
+        /// Gets the required amount of the fourth item
         /// </summary>
         public int Count4 { get; private set; }
 
         /// <summary>
-        /// Required fourth item
+        /// Gets the required fourth item
         /// </summary>
         public string ReqItem4 { get; private set; }
 
         /// <summary>
-        /// Required amount of the fifth item
+        /// Gets the required amount of the fifth item
         /// </summary>
         public int Count5 { get; private set; }
+
+        /// <summary>
+        /// Gets the required fifth item
+        /// </summary>
+        public string ReqItem5 { get; private set; }
 
         /// <summary>
         /// Checks if the given array of items has enough of every requried item

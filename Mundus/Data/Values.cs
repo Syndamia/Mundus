@@ -5,6 +5,16 @@
     /// </summary>
     public static class Values 
     {
+        public const double TAKEN_ENERGY_FROM_FIGHTING = 0.5;
+
+        public const double TAKEN_ENERGY_FROM_MOVEMENT = 0.1;
+
+        public const double ENERGY_TAKEN_FROM_PLACING_GROUND = 0.4;
+
+        public const double ENERGY_TAKEN_FROM_BUILDING_STRUCTURE = 0.5;
+
+        public const double ENERGY_TAKEN_FROM_DESTROYING = 0.6;
+
         public enum MapSize
         {
             SMALL = 14,

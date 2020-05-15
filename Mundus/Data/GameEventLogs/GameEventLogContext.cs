@@ -46,7 +46,9 @@
             return this.GameEventLogs.Count();
         }
 
-        // Used to set the connection string
+        /// <summary>
+        /// Used to set the connection string
+        /// </summary>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {
             optionsBuilder.UseMySQL(DataBaseContexts.ConnectionStringMySQL);

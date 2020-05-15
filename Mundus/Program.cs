@@ -7,8 +7,6 @@
 
     public static class MainClass 
     {
-        private static bool runGame = true;
-
         public static void Main(string[] args) 
         {
             DataBaseContexts.CreateInstances();

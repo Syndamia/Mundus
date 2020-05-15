@@ -32,13 +32,39 @@
             }
             else if (layer == Layer.Structure && superLayer.GetStructureLayerStock(y, x) != null) 
             {
-                img = new Image(GetPlayerStructureStockID(y, x), IconSize.Dnd );
+                img = new Image(GetPlayerStructureStockID(y, x), IconSize.Dnd);
             }
             else if (layer == Layer.Mob && superLayer.GetMobLayerStock(y, x) != null) 
             {
                 img = new Image(superLayer.GetMobLayerStock(y, x), IconSize.Dnd);
             }
+
             return img;
+        }
+
+        /// <summary>
+        /// Returns the Image on the given inventory place of the player at the given index
+        /// If there isn't one, returns a "blank" image
+        /// </summary>
+        public static Image GetPlayerInventoryImage(InventoryPlace place, int index) {
+            string stock_id = "blank";
+
+            if (MI.Player.Inventory.GetItemTile(place, index) != null) {
+                // Structures have two icons, one when they are placed and one when they are in the inventory
+                // All other item types have only one icon.
+                if (MI.Player.Inventory.GetItemTile(place, index).GetType() == typeof(Structure)) {
+                    stock_id = ((Structure)MI.Player.Inventory.GetItemTile(place, index)).inventory_stock_id;
+                }
+                else {
+                    stock_id = MI.Player.Inventory.GetItemTile(place, index).stock_id;
+                }
+            }
+            // Accessories and gear menus have a different blank icon
+            else if (place == InventoryPlace.Accessories || place == InventoryPlace.Gear) {
+                stock_id = "blank_gear";
+            }
+
+            return new Image(stock_id, IconSize.Dnd);
         }
 
         /// <summary>
@@ -65,6 +91,7 @@
             {
                 return superLayer.GetStructureLayerStock(y, x);
             }
+
             return "blank";
         }
 
@@ -74,36 +101,6 @@
         private static bool InsideBoundaries(int y, int x) 
         {
             return y >= 0 && x >= 0 && x < (int)Values.CurrMapSize && y < (int)Values.CurrMapSize;
-        }
-
-        /// <summary>
-        /// Returns the Image on the given inventory place of the player at the given index
-        /// If there isn't one, returns a "blank" image
-        /// </summary>
-        public static Image GetPlayerInventoryImage(InventoryPlace place, int index) 
-        {
-            string stock_id = "blank";
-
-            if (MI.Player.Inventory.GetItemTile(place, index) != null) 
-            {
-                // Structures have two icons, one when they are placed and one when they are in the inventory
-                // All other item types have only one icon.
-                if (MI.Player.Inventory.GetItemTile(place, index).GetType() == typeof(Structure)) 
-                {
-                    stock_id = ((Structure)MI.Player.Inventory.GetItemTile(place, index)).inventory_stock_id;
-                }
-                else 
-                {
-                    stock_id = MI.Player.Inventory.GetItemTile(place, index).stock_id;
-                }
-            }
-            // Accessories and gear menus have a different blank icon
-            else if (place == InventoryPlace.Accessories || place == InventoryPlace.Gear)
-            {
-                stock_id = "blank_gear";
-            }
-
-            return new Image(stock_id, IconSize.Dnd);
         }
     }
 }

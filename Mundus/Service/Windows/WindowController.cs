@@ -1,18 +1,20 @@
-﻿using System;
-using Gtk;
-using Mundus.Data.Windows;
-using Mundus.Service.Tiles.Items;
-using Mundus.Service.Tiles.Mobs;
-using Mundus.Service.Tiles.Mobs.Controllers;
-using Mundus.Views.Windows;
+﻿namespace Mundus.Service.Windows 
+{
+    using Gtk;
+    using Mundus.Data.Windows;
+    using Mundus.Service.Tiles.Items;
+    using Mundus.Service.Tiles.Mobs;
+    using Mundus.Service.Tiles.Mobs.Controllers;
 
-namespace Mundus.Service.Windows {
-    public static class WindowController {
+    public static class WindowController 
+    {
+        public static bool PauseWindowVisible { get; set; }
 
         /// <summary>
         /// Shows the settings window and hides the sender
         /// </summary>
-        public static void ShowSettingsWindow(Window sender) {
+        public static void ShowSettingsWindow(Window sender) 
+        {
            sender.Hide();
            WI.WSettings.Show(sender);
         }
@@ -20,7 +22,8 @@ namespace Mundus.Service.Windows {
         /// <summary>
         /// Shows the new game window, sets it's default values and hides the sender
         /// </summary>
-        public static void ShowNewGameWindow(Window sender) {
+        public static void ShowNewGameWindow(Window sender) 
+        {
             sender.Hide();
             WI.WNewGame.SetDefaults();
             WI.WNewGame.Show();
@@ -29,43 +32,10 @@ namespace Mundus.Service.Windows {
         /// <summary>
         /// Shows the main window and hides the sender
         /// </summary>
-        public static void ShowMainWindow(Window sender) {
+        public static void ShowMainWindow(Window sender) 
+        {
             sender.Hide();
             WI.WMain.Show();
-        }
-
-        public static bool PauseWindowVisible { get; set; }
-
-        /// <summary>
-        /// Shows the pause window on top of all windows and "pauses" game input (bool PauseWindowVisible)
-        /// </summary>
-        public static void ShowPauseWindow() {
-            WI.WPause.Show();
-            WI.WPause.Present();
-            PauseWindowVisible = true;
-        }
-
-        /// <summary>
-        /// Shows the music window on top of all windows
-        /// </summary>
-        public static void ShowMusicWindow() {
-            WI.WMusic.Show();
-            WI.WMusic.Present();
-        }
-
-        /// <summary>
-        /// Shows the crafting window on top of all windows and does initializes it
-        /// </summary>
-        public static void ShowCraftingWindow() {
-            WI.WCrafting.Initialize();
-            WI.WCrafting.Show();
-            WI.WCrafting.Present();
-        }
-
-        public static void ShowLogWindow() {
-            WI.WLog.Initialize();
-            WI.WLog.Show();
-            WI.WLog.Present();
         }
 
         public static void React(int button) 
@@ -78,16 +48,21 @@ namespace Mundus.Service.Windows {
             int mapXPos = Calculate.CalculateXFromButton(buttonXPos, size);
             int mapYPos = Calculate.CalculateYFromButton(buttonYPos, size);
 
-            if (!ItemController.HasSelectedItem()) {
+            if (!ItemController.HasSelectedItem()) 
+            {
                 MobMovement.MovePlayer(mapYPos, mapXPos, size);
                 MobMovement.MoveRandomlyAllMobs();
             }
-            else {
-                if (Inventory.GetPlayerItemFromItemSelection() != null) {
-                    if (MobFighting.ExistsFightTargetForPlayer(mapYPos, mapXPos)) {
+            else 
+            {
+                if (Inventory.GetPlayerItemFromItemSelection() != null) 
+                {
+                    if (MobFighting.ExistsFightTargetForPlayer(mapYPos, mapXPos)) 
+                    {
                         MobFighting.PlayerTryFight(mapYPos, mapXPos);
                     }
-                    else {
+                    else 
+                    {
                         MobTerraforming.PlayerTerraformAt(mapYPos, mapXPos);
                     }
                 }
@@ -99,6 +74,42 @@ namespace Mundus.Service.Windows {
             WI.SelWin.PrintMainMenu();
 
             WI.SelWin.PrintMapOrInv();
+        }
+
+        /// <summary>
+        /// Shows the pause window on top of all windows and "pauses" game input (bool PauseWindowVisible)
+        /// </summary>
+        public static void ShowPauseWindow() 
+        {
+            WI.WPause.Show();
+            WI.WPause.Present();
+            PauseWindowVisible = true;
+        }
+
+        /// <summary>
+        /// Shows the music window on top of all windows
+        /// </summary>
+        public static void ShowMusicWindow() 
+        {
+            WI.WMusic.Show();
+            WI.WMusic.Present();
+        }
+
+        /// <summary>
+        /// Shows the crafting window on top of all windows and does initializes it
+        /// </summary>
+        public static void ShowCraftingWindow() 
+        {
+            WI.WCrafting.Initialize();
+            WI.WCrafting.Show();
+            WI.WCrafting.Present();
+        }
+
+        public static void ShowLogWindow() 
+        {
+            WI.WLog.Initialize();
+            WI.WLog.Show();
+            WI.WLog.Present();
         }
     }
 }

@@ -92,9 +92,8 @@
         /// <returns><c>true</c>If the mob can still be damaged (alive)<c>false</c> otherwise.</returns>
         public bool TakeDamageMobAtPosition(int yPos, int xPos, int damage) 
         {
-            var mob = this.UMobLayer.First(x => x.YPos == yPos && x.XPos == xPos);
-            mob.Health -= damage;
-            return mob.Health > 0;
+            this.UMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).Health -= damage;
+            return this.UMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).Health > 0;
         }
 
         /// <summary>
@@ -158,7 +157,9 @@
             this.UGroundLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = null;
         }
 
-        // Used to set the connection string
+        /// <summary>
+        /// Used to set the connection string
+        /// </summary>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {
             optionsBuilder.UseMySQL(DataBaseContexts.ConnectionStringMySQL);

@@ -1,9 +1,11 @@
-﻿namespace Mundus.Data.SuperLayers 
+﻿using System;
+
+namespace Mundus.Data.SuperLayers 
 {
     /// <summary>
     /// Add, remove and change values in the different superlayers (database tables)
     /// </summary>
-    public interface ISuperLayerContext 
+    public interface ISuperLayerContext
     {
         /// <summary>
         /// Returns the stock_id of the mob at the specified positoin
@@ -37,8 +39,8 @@
 
         /// <summary>
         /// Removes health from the mob on the specified position in the mob layer table
+        /// Returns true if the mob can still be damaged (is still alive)
         /// </summary>
-        /// <returns><c>true</c>If the mob can still be damaged (alive)<c>false</c> otherwise.</returns>
         bool TakeDamageMobAtPosition(int yPos, int xPos, int damage);
 
         /// <summary>

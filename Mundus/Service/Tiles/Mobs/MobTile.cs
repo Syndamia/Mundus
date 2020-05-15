@@ -1,21 +1,45 @@
-﻿using Gtk;
-using Mundus.Data;
-using Mundus.Data.SuperLayers;
-using Mundus.Data.Windows;
-using Mundus.Service.Tiles.Items;
-using Mundus.Service.Tiles.Items.Types;
+﻿namespace Mundus.Service.Tiles.Mobs 
+{
+    using Mundus.Data.SuperLayers;
+    using Mundus.Data.Windows;
+    using Mundus.Service.Tiles.Items.Types;
 
-namespace Mundus.Service.Tiles.Mobs {
-    public class MobTile : ITile {
+    public class MobTile : ITile 
+    {
+        public MobTile(string stock_id, int health, int defence, ISuperLayerContext currentSuperLayer, int inventorySize = 5, Material droppedUponDeath = null, int rndMovementQualifier = 3) 
+        {
+            this.stock_id = stock_id;
+            this.Health = health;
+            this.Defense = defence;
+            this.CurrSuperLayer = currentSuperLayer;
+            this.DroppedUponDeath = droppedUponDeath;
+            this.Inventory = new Inventory(inventorySize);
+            this.RndMovementRate = rndMovementQualifier;
+        }
+
         public string stock_id { get; private set; }
-        public Image Texture { get; private set; }
 
+        /// <summary>
+        /// Gets or sets the superlayer the mob is currently in
+        /// </summary>
         public ISuperLayerContext CurrSuperLayer { get; set; }
+
+        /// <summary>
+        /// Gets or sets the vertical (y) position where the MobTile is located
+        /// </summary>
         public int YPos { get; set; }
+
+        /// <summary>
+        /// Gets or sets the horizontal (x) position where the MobTile is located
+        /// </summary>
         public int XPos { get; set; }
+
         public int Health { get; private set; }
+
         public int Defense { get; set; }
+
         public Material DroppedUponDeath { get; protected set; }
+
         public Inventory Inventory { get; set; }
 
         /// <summary>
@@ -24,34 +48,26 @@ namespace Mundus.Service.Tiles.Mobs {
         /// </summary>
         public int RndMovementRate { get; protected set; }
 
-        public MobTile(string stock_id, int health, int defence, ISuperLayerContext currentSuperLayer, int inventorySize = 5, Material droppedUponDeath = null, int rndMovementQualifier = 3) {
-            this.stock_id = stock_id;
-            this.Texture = new Image(stock_id, IconSize.Dnd);
-            this.Health = health;
-            this.Defense = defence;
-            this.CurrSuperLayer = currentSuperLayer;
-            this.RndMovementRate = rndMovementQualifier;
-            this.DroppedUponDeath = droppedUponDeath;
-            this.Inventory = new Inventory(inventorySize);
-        }
-
         /// <summary>
         /// Removes health from mob
         /// </summary>
         /// <returns>Whether the mob can still be damaged</returns>
-        public bool TakeDamage(int damagePoints) {
+        public bool TakeDamage(int damagePoints) 
+        {
             this.Health -= damagePoints;
             return this.Health > 0;
         }
 
         /// <summary>
-        /// Heals the mobtile (unless/until it has full health (4 * inventorySize))
+        /// Heals the MobTile (unless/until it has full health (4 * inventorySize))
         /// </summary>
         /// <param name="healthPoints">Health points to heal with</param>
-        public void Heal(int healthPoints) {
+        public void Heal(int healthPoints) 
+        {
             this.Health += healthPoints;
 
-            if (this.Health > WI.SelWin.Size * 4) {
+            if (this.Health > WI.SelWin.Size * 4) 
+            {
                 this.Health = WI.SelWin.Size * 4;
             }
         }

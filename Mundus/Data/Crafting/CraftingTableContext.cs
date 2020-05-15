@@ -34,7 +34,9 @@
             return recipes.Where(cr => cr.HasEnoughItems(MI.Player.Inventory.Items)).ToArray();
         }
 
-        // Used to set the connection string
+        /// <summary>
+        /// Used to set the connection string
+        /// </summary>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {
             optionsBuilder.UseMySQL(DataBaseContexts.ConnectionStringMySQL);

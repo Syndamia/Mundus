@@ -1,97 +1,116 @@
-﻿using System.Linq;
-using Mundus.Data;
-using Mundus.Data.Superlayers.Mobs;
-using Mundus.Service.Tiles.Items;
-using Mundus.Service.Tiles.Items.Types;
-using Mundus.Service.Tiles.Mobs.LandMobs;
+﻿namespace Mundus.Service.Tiles.Mobs.Controllers 
+{
+    using System;
+    using System.Linq;
+    using Mundus.Data;
+    using Mundus.Data.Superlayers.Mobs;
+    using Mundus.Service.Tiles.Items.Types;
+    using Mundus.Service.Tiles.Mobs.LandMobs;
+    using static Mundus.Data.Values;
 
-namespace Mundus.Service.Tiles.Mobs.Controllers {
-    public static class MobFighting {
+    public static class MobFighting 
+    {
         /// <summary>
         /// Returns if for the specified position in the superlayer the payer is in, there exists a mob
+        /// Returns false also if the specified positoin is the player's current position
         /// </summary>
-        /// <param name="mapYPos">YPos of target mob</param>
-        /// <param name="mapXPos">XPos of target mob</param>
-        public static bool ExistsFightTargetForPlayer(int mapYPos, int mapXPos) {
+        public static bool ExistsFightTargetForPlayer(int mapYPos, int mapXPos) 
+        {
             return ExistsFightTargetForMob(MI.Player, mapYPos, mapXPos);
         }
 
         /// <summary>
-        /// Returns if for the specified position in the superlayer the given mob is in, there exists a mob
+        /// The player tries to damage mob on the specified map position
+        /// Note: will fail of the player uses an invalid tool to fight with
         /// </summary>
-        /// <param name="mapYPos">YPos of target mob</param>
-        /// <param name="mapXPos">XPos of target mob</param>
-        public static bool ExistsFightTargetForMob(MobTile mob, int mapYPos, int mapXPos) {
-            return mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) != null &&
-                   (mob.YPos != mapYPos && mob.XPos != mapXPos);
-        }
-
-        private const double TAKEN_ENERGY_FROM_FIGHTING = 0.5;
-        /// <summary>
-        /// The player tries to damage (or kill) mob on the specified map position
-        /// Note: will fail of the player uses an invalid item
-        /// </summary>
-        /// <param name="selPlace">Inventory place of the selected item (item will be checked if its a valid tool)</param>
-        /// <param name="selIndex">Inventory index of the selected item place (item will be checked if its a valid tool)</param>
-        /// <param name="mapYPos">YPos of target mob</param>
-        /// <param name="mapXPos">XPos of target mob</param>
-        public static void PlayerTryFight(int mapYPos, int mapXPos) {
-            if (MobTryFight(MI.Player, mapYPos, mapXPos)) {
-                MI.Player.DrainEnergy(TAKEN_ENERGY_FROM_FIGHTING + Values.DifficultyValueModifier());
+        public static void PlayerTryFight(int mapYPos, int mapXPos) 
+        {
+            if (PlayerTryFightWithMobAtPosition(mapYPos, mapXPos)) 
+            {
+                MI.Player.DrainEnergy(TAKEN_ENERGY_FROM_FIGHTING + DifficultyValueModifier());
             }
         }
 
-        // Checks if the mob has a proper fighting item selected
-        private static bool MobCanFight(MobTile mob, int mapYPos, int mapXPos) {
-            return Inventory.GetPlayerItemFromItemSelection().GetType() == typeof(Tool) &&
-                   ((Tool)Inventory.GetPlayerItemFromItemSelection()).Type == Values.ToolType.Sword && 
-                   mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) != null;
+        /// <summary>
+        /// Returns if for the specified position in the superlayer the given mob is in, there exists a mob
+        /// Returns false also if the specified positoin is the mob's current position
+        /// </summary>
+        private static bool ExistsFightTargetForMob(MobTile mob, int mapYPos, int mapXPos) 
+        {
+            return mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) != null &&
+                   !(mob.YPos == mapYPos && mob.XPos == mapXPos);
         }
 
         /// <summary>
-        /// The given mob tries to damage (or kill) mob on the specified map position
+        /// The given mob tries to damage the mob on the specified map position
         /// Note: will fail of the given mob uses an invalid item
         /// </summary>
-        /// <returns><c>true</c> If mob was able to fight <c>false</c> otherwise.</returns>
-        /// <param name="mob">Mob that will fight</param>
-        /// <param name="selPlace">Inventory place of the selected item (item will be checked if its a valid tool)</param>
-        /// <param name="selIndex">Inventory index of the selected item place (item will be checked if its a valid tool)</param>
-        /// <param name="mapYPos">YPos of target mob</param>
-        /// <param name="mapXPos">XPos of target mob</param>
-        public static bool MobTryFight(MobTile mob, int mapYPos, int mapXPos) {
-            if (MobCanFight(mob, mapYPos, mapXPos)) {
+        private static bool PlayerTryFightWithMobAtPosition(int mapYPos, int mapXPos) 
+        {
+            if (PlayerCanFightWithMob(mapYPos, mapXPos)) 
+            {
                 Tool selTool = (Tool)Inventory.GetPlayerItemFromItemSelection();
-                MobTile targetMob = LandMobsPresets.GetFromStock(mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos));
+                MobTile targetMob = LandMobsPresets.GetFromStock(MI.Player.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos));
 
-                if (selTool.Class >= targetMob.Defense) {
-                    int damagePoints = 1 + (selTool.Class - targetMob.Defense);
+                if (selTool.Class >= targetMob.Defense) 
+                {
+                    targetMob.XPos = mapXPos;
+                    targetMob.YPos = mapYPos;
 
-                    if (!mob.CurrSuperLayer.TakeDamageMobAtPosition(mapYPos, mapXPos, damagePoints)) {
-                        mob.CurrSuperLayer.RemoveMobFromPosition(mapYPos, mapXPos);
-
-                        if (mob.Inventory.Items.Contains(null)) {
-                            mob.Inventory.AppendToItems(targetMob.DroppedUponDeath);
-                        }
-
-                        if (mob.GetType() == typeof(Player)) {
-                            GameEventLogController.AddMessage($"Player killed \"{targetMob.stock_id}\"");
-                        }
-                    } else if (mob.GetType() == typeof(Player)) {
-                        GameEventLogController.AddMessage($"Player did {damagePoints} damage to \"{targetMob.stock_id}\"");
-                    }
+                    PlayerFightWithMob(targetMob, selTool);
                     return true;
                 }
-                else if (mob.GetType() == typeof(Player)) {
-                    GameEventLogController.AddMessage($"You need a tool class of atleast {targetMob.Defense} to fight this mob");
-                }
+
+                GameEventLogController.AddMessage($"You need a tool class of atleast {targetMob.Defense} to fight this mob");
             }
-            else if (mob.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) == null && mob.GetType() == typeof(Player)) {
-                GameEventLogController.AddMessage($"There is no mob to fight on \"{mob.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
+            else if (MI.Player.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) == null) 
+            {
+                GameEventLogController.AddMessage($"There is no mob to fight on \"{MI.Player.CurrSuperLayer}\" at Y:{mapYPos}, X:{mapXPos}");
             }
-            else if (mob.GetType() == typeof(Player)) { // Inventory.GetPlayerItem(selPlace, selIndex).GetType() != typeof(Tool) || ((Tool)Inventory.GetPlayerItem(selPlace, selIndex)).Type != ToolTypes.Sword
+            else 
+            {
                 GameEventLogController.AddMessage($"You need a Tool of type {Values.ToolType.Sword} to fight with other mobs");
             }
+
             return false;
+        }
+
+        /// <summary>
+        /// Checks if there exists a mob at the given location in the player's superlayer
+        /// and if the player has selected a proper fighting tool
+        /// </summary>
+        private static bool PlayerCanFightWithMob(int mapYPos, int mapXPos) 
+        {
+            return Inventory.GetPlayerItemFromItemSelection().GetType() == typeof(Tool) &&
+                   ((Tool)Inventory.GetPlayerItemFromItemSelection()).Type == ToolType.Sword &&
+                   MI.Player.CurrSuperLayer.GetMobLayerStock(mapYPos, mapXPos) != null;
+        }
+
+        /// <summary>
+        /// Reduces health of target mob
+        /// </summary>
+        private static void PlayerFightWithMob(MobTile targetMob, Tool selTool) 
+        {
+            int damagePoints = 1 + (selTool.Class - targetMob.Defense);
+
+            if (!MI.Player.CurrSuperLayer.TakeDamageMobAtPosition(targetMob.YPos, targetMob.XPos, damagePoints)) 
+            {
+                MI.Player.CurrSuperLayer.RemoveMobFromPosition(targetMob.YPos, targetMob.XPos);
+
+                targetMob.XPos = -1;
+                targetMob.YPos = -1;
+
+                if (MI.Player.Inventory.Items.Contains(null)) 
+                {
+                    MI.Player.Inventory.AppendToItems(targetMob.DroppedUponDeath);
+                }
+
+                GameEventLogController.AddMessage($"Player killed \"{targetMob.stock_id}\"");
+            }
+            else 
+            {
+                GameEventLogController.AddMessage($"Player did {damagePoints} damage to \"{targetMob.stock_id}\"");
+            }
         }
     }
 }

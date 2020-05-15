@@ -15,11 +15,12 @@
         /// Contains the order of superlayers, from the one that is the highest (above all others)
         /// to the one that is the lowest (underneath all other)
         /// </summary>
-        private static ISuperLayerContext[] superLayers = { 
+        private static ISuperLayerContext[] superLayers = 
+                                                        { 
                                                             DataBaseContexts.SContext, 
                                                             DataBaseContexts.LContext,
                                                             DataBaseContexts.UContext 
-                                                          };
+                                                        };
                                                            
         /// <summary>
         /// Returns the superlayer that is underneath the given one

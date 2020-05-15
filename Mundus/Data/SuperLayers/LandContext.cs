@@ -75,6 +75,7 @@
         {
             this.LMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = stock_id;
             this.LMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).Health = health;
+            this.SaveChanges();
         }
 
         /// <summary>
@@ -82,8 +83,7 @@
         /// </summary>
         public void RemoveMobFromPosition(int yPos, int xPos) 
         {
-            this.LMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = null;
-            this.LMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).Health = -1;
+            this.SetMobAtPosition(null, -1, yPos, xPos);
         }
 
         /// <summary>
@@ -92,9 +92,9 @@
         /// <returns><c>true</c>If the mob can still be damaged (alive)<c>false</c> otherwise.</returns>
         public bool TakeDamageMobAtPosition(int yPos, int xPos, int damage) 
         {
-            var mob = this.LMobLayer.First(x => x.YPos == yPos && x.XPos == xPos);
-            mob.Health -= damage;
-            return mob.Health > 0;
+            this.LMobLayer.FirstOrDefault(x => x.YPos == yPos && x.XPos == xPos).Health -= damage;
+            this.SaveChanges();
+            return this.LMobLayer.First(x => x.YPos == yPos && x.XPos == xPos).Health > 0;
         }
 
         /// <summary>
@@ -119,8 +119,8 @@
         /// </summary>
         public void RemoveStructureFromPosition(int yPos, int xPos) 
         {
-            this.LStructureLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = null;
-            this.LStructureLayer.First(x => x.YPos == yPos && x.XPos == xPos).Health = -1;
+            this.SetStructureAtPosition(null, -1, yPos, xPos);
+            this.SaveChanges();
         }
 
         /// <summary>
@@ -158,7 +158,9 @@
             this.LGroundLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = null;
         }
 
-        // Used to set the connection string
+        /// <summary>
+        /// Used to set the connection string
+        /// </summary>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL(DataBaseContexts.ConnectionStringMySQL);

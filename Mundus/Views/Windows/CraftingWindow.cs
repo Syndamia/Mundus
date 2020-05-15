@@ -69,7 +69,8 @@
         /// <summary>
         /// Crafts the item (calls CraftingController and hides the window)
         /// </summary>
-        protected void OnBtnCraftClicked(object sender, EventArgs e) {
+        protected void OnBtnCraftClicked(object sender, EventArgs e) 
+        {
             CraftingController.CraftItemPlayer(this.recipes[this.recipeIndex]);
             this.Hide();
         }

@@ -1,29 +1,35 @@
-﻿using Mundus.Service.Tiles.Items.Types;
+﻿namespace Mundus.Service.Tiles.Items.Presets 
+{
+    using Mundus.Service.Tiles.Items.Types;
 
-namespace Mundus.Service.Tiles.Items.Presets {
-    public static class MaterialPresets {
+    public static class MaterialPresets 
+    {
         /// <returns>New instance</returns>
-        public static Material GetALandRock() {
+        public static Material GetALandRock() 
+        {
             return new Material("L_rock");
         }
 
         /// <returns>New instance</returns>
-        public static Material GetALandStick() {
+        public static Material GetALandStick() 
+        {
             return new Material("L_stick");
         }
 
         /// <returns>New instance</returns>
-        public static Material GetALandBeefSteak() {
+        public static Material GetALandBeefSteak() 
+        {
             return new Material("L_beef_steak", 5);
         }
 
         // <returns>New instance</returns>
-        public static Material GetALandMuttonSteak() {
+        public static Material GetALandMuttonSteak() 
+        {
             return new Material("L_mutton_steak", 4);
         }
 
         /// <summary>
-        /// (TEMPORARY)
+        /// TEMPORARY
         /// </summary>
         public static Material GetAStone() {
             return new Material("U_stone");
