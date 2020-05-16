@@ -1,4 +1,4 @@
-﻿namespace Mundus.Service.Tiles.Items.Presets 
+﻿namespace Mundus.Data.Tiles.Presets 
 {
     using Mundus.Service.Tiles.Items.Types;
     using static Mundus.Data.Values;

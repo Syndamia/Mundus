@@ -1,6 +1,6 @@
-﻿namespace Mundus.Data.Superlayers.Mobs 
+﻿namespace Mundus.Data.Tiles.Mobs
 {
-    using Mundus.Service.Tiles.Items.Presets;
+    using Mundus.Data.Tiles.Presets;
     using Mundus.Service.Tiles.Mobs.LandMobs;
 
     /// <summary>

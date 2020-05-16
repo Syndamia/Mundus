@@ -1,8 +1,8 @@
 ﻿namespace Mundus.Service.Tiles.Mobs.Controllers 
 {
-    using Mundus.Data.Superlayers.Mobs;
+    using Mundus.Data.Tiles.Mobs;
+    using Mundus.Data.Tiles.Presets;
     using Mundus.Service.SuperLayers;
-    using Mundus.Service.Tiles.Items.Presets;
 
     public static class MobStatsController 
     {

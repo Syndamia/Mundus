@@ -267,7 +267,6 @@
     <Compile Include="Service\SuperLayers\ImageController.cs" />
     <Compile Include="Data\Windows\WI.cs" />
     <Compile Include="Data\Dialogues\DI.cs" />
-    <Compile Include="Data\SuperLayers\Mobs\MI.cs" />
     <Compile Include="Service\GameGenerator.cs" />
     <Compile Include="Service\SuperLayers\Generators\LandSuperLayerGenerator.cs" />
     <Compile Include="Service\SuperLayers\Generators\UndergroundSuperLayerGenerator.cs" />
@@ -280,16 +279,11 @@
     <Compile Include="Service\Tiles\Mobs\Controllers\MobMovement.cs" />
     <Compile Include="Service\Tiles\Mobs\Controllers\MobStatsController.cs" />
     <Compile Include="Service\Tiles\Mobs\Controllers\MobTerraforming.cs" />
-    <Compile Include="Service\Tiles\Mobs\LandMobs\LandMobsPresets.cs" />
     <Compile Include="Service\Tiles\Mobs\LandMobs\Player.cs" />
     <Compile Include="Service\Tiles\Mobs\MobTile.cs" />
     <Compile Include="Service\Tiles\Mobs\Inventory.cs" />
     <Compile Include="Service\Tiles\Crafting\CraftingController.cs" />
     <Compile Include="Service\Tiles\Crafting\CraftingRecipe.cs" />
-    <Compile Include="Service\Tiles\Items\Presets\GroundPresets.cs" />
-    <Compile Include="Service\Tiles\Items\Presets\MaterialPresets.cs" />
-    <Compile Include="Service\Tiles\Items\Presets\StructurePresets.cs" />
-    <Compile Include="Service\Tiles\Items\Presets\ToolPresets.cs" />
     <Compile Include="Views\Windows\GameWindows\IGameWindow.cs" />
     <Compile Include="Data\Crafting\CraftingTableContext.cs" />
     <Compile Include="Data\DataBaseContexts.cs" />
@@ -326,12 +320,18 @@
     <Compile Include="Service\Windows\WindowController.cs" />
     <Compile Include="Service\Windows\Calculate.cs" />
     <Compile Include="Service\Tiles\Items\ItemController.cs" />
+    <Compile Include="Service\Tiles\Items\ItemTile.cs" />
     <Compile Include="Service\Tiles\Items\Types\Gear.cs" />
     <Compile Include="Service\Tiles\Items\Types\GroundTile.cs" />
     <Compile Include="Service\Tiles\Items\Types\Material.cs" />
     <Compile Include="Service\Tiles\Items\Types\Structure.cs" />
     <Compile Include="Service\Tiles\Items\Types\Tool.cs" />
-    <Compile Include="Service\Tiles\Items\ItemTile.cs" />
+    <Compile Include="Data\Tiles\Presets\GroundPresets.cs" />
+    <Compile Include="Data\Tiles\Presets\MaterialPresets.cs" />
+    <Compile Include="Data\Tiles\Presets\StructurePresets.cs" />
+    <Compile Include="Data\Tiles\Presets\ToolPresets.cs" />
+    <Compile Include="Data\Tiles\Mobs\LandMobsPresets.cs" />
+    <Compile Include="Data\Tiles\Mobs\MI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -345,7 +345,6 @@
     <Folder Include="Data\Windows\" />
     <Folder Include="Data\Dialogues\" />
     <Folder Include="Data\SuperLayers\" />
-    <Folder Include="Data\SuperLayers\Mobs\" />
     <Folder Include="Service\Tiles\Items\" />
     <Folder Include="Data\Crafting\" />
     <Folder Include="Icons\Land\Materials\" />
@@ -353,7 +352,6 @@
     <Folder Include="Icons\Sky\Ground\" />
     <Folder Include="Service\Tiles\Mobs\" />
     <Folder Include="Service\Tiles\Crafting\" />
-    <Folder Include="Service\Tiles\Items\Presets\" />
     <Folder Include="Views\Windows\GameWindows\" />
     <Folder Include="Icons\UI\Hearth\" />
     <Folder Include="Data\SuperLayers\DBTables\" />
@@ -362,7 +360,10 @@
     <Folder Include="Views\Windows\GameWindows\Medium\" />
     <Folder Include="Views\Windows\GameWindows\Large\" />
     <Folder Include="Service\Windows\" />
+    <Folder Include="Data\Tiles\" />
     <Folder Include="Service\Tiles\Items\Types\" />
+    <Folder Include="Data\Tiles\Presets\" />
+    <Folder Include="Data\Tiles\Mobs\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

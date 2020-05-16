@@ -1,6 +1,6 @@
 ﻿namespace Mundus.Service.Tiles.Items 
 {
-    using Mundus.Data.Superlayers.Mobs;
+    using Mundus.Data.Tiles.Mobs;
     using Mundus.Data.Windows;
     using Mundus.Service.Tiles.Items.Types;
     using static Mundus.Service.Tiles.Mobs.Inventory;

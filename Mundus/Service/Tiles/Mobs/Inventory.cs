@@ -2,6 +2,7 @@
 {
     using System;
     using System.Linq;
+    using Mundus.Data.Tiles.Mobs;
     using Mundus.Service.Tiles.Items;
     using Mundus.Service.Tiles.Items.Types;
 
@@ -32,7 +33,8 @@
             this.SetSizes(screenInvSize);
         }
 
-        public enum InventoryPlace {
+        public enum InventoryPlace 
+        {
             Hotbar,
             Items,
             Accessories,
@@ -143,7 +145,7 @@
         /// </summary>
         public static void DeletePlayerItemTileFromItemSelection() 
         {
-            Data.Superlayers.Mobs.MI.Player.Inventory.DeleteItem(ItemController.SelItemPlace, ItemController.SelItemIndex);
+            MI.Player.Inventory.DeleteItem(ItemController.SelItemPlace, ItemController.SelItemIndex);
         }
 
         /// <summary>
@@ -152,7 +154,7 @@
         /// </summary>
         public static ItemTile GetPlayerItemFromItemSelection() 
         {
-            return Data.Superlayers.Mobs.MI.Player.Inventory.GetItemTile(ItemController.SelItemPlace, ItemController.SelItemIndex);
+            return MI.Player.Inventory.GetItemTile(ItemController.SelItemPlace, ItemController.SelItemIndex);
         }
     }
 }

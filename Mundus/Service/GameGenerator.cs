@@ -2,7 +2,7 @@
 {
     using System;
     using Mundus.Data;
-    using Mundus.Data.Superlayers.Mobs;
+    using Mundus.Data.Tiles.Mobs;
     using Mundus.Data.Windows;
     using Mundus.Service.SuperLayers.Generators;
 
