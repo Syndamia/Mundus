@@ -167,6 +167,7 @@
     <Reference Include="MySql.Data.EntityFrameworkCore">
       <HintPath>..\packages\MySql.Data.EntityFrameworkCore.8.0.20\lib\netstandard2.0\MySql.Data.EntityFrameworkCore.dll</HintPath>
     </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataTests\GameEventLogs\GameEventLogContextTests.cs" />
@@ -187,6 +188,7 @@
     <Compile Include="DataTests\DataBaseContextsTests.cs" />
     <Compile Include="ServiceTests\SuperLayers\HeightControllerTests.cs" />
     <Compile Include="DataTests\Mobs\MITests.cs" />
+    <Compile Include="ServiceTests\SuperLayers\ImageControllerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -200,6 +202,7 @@
     <Folder Include="ServiceTests\" />
     <Folder Include="ServiceTests\SuperLayers\" />
     <Folder Include="DataTests\Mobs\" />
+    <Folder Include="ServiceTests\Tiles\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mundus\Mundus.csproj">

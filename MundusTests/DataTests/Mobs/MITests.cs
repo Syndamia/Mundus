@@ -9,13 +9,18 @@
     [TestFixture]
     public static class MITests 
     {
-        [SetUp]
+        [OneTimeSetUp]
         public static void SetUp() 
         {
             Application.Init();
             DataBaseContexts.CreateInstances();
             WI.CreateInstances();
             WI.WNewGame.OnBtnGenerateClicked(null, null);
+        }
+
+        [OneTimeTearDown]
+        public static void TearDown() {
+            Application.Quit();
         }
 
         [Test]
