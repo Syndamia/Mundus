@@ -189,6 +189,13 @@
     <Compile Include="ServiceTests\SuperLayers\HeightControllerTests.cs" />
     <Compile Include="DataTests\Mobs\MITests.cs" />
     <Compile Include="ServiceTests\SuperLayers\ImageControllerTests.cs" />
+    <Compile Include="ServiceTests\Tiles\Crafting\CraftingControllerTests.cs" />
+    <Compile Include="ServiceTests\Tiles\Items\Types\GroundTileTests.cs" />
+    <Compile Include="ServiceTests\Tiles\Items\Types\GearTests.cs" />
+    <Compile Include="ServiceTests\Tiles\Items\Types\MaterialTests.cs" />
+    <Compile Include="ServiceTests\Tiles\Items\Types\StructureTests.cs" />
+    <Compile Include="ServiceTests\Tiles\Items\Types\ToolTests.cs" />
+    <Compile Include="ServiceTests\Tiles\Items\ItemControllerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -203,6 +210,9 @@
     <Folder Include="ServiceTests\SuperLayers\" />
     <Folder Include="DataTests\Mobs\" />
     <Folder Include="ServiceTests\Tiles\" />
+    <Folder Include="ServiceTests\Tiles\Crafting\" />
+    <Folder Include="ServiceTests\Tiles\Items\" />
+    <Folder Include="ServiceTests\Tiles\Items\Types\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mundus\Mundus.csproj">
