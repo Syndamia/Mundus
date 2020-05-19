@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -27,7 +28,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.HashCode">
       <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
@@ -120,9 +121,6 @@
     <Reference Include="GdkSharp">
       <HintPath>..\packages\GdkSharp.3.22.25.74\lib\netstandard2.0\GdkSharp.dll</HintPath>
     </Reference>
-    <Reference Include="GtkSharp">
-      <HintPath>..\packages\GtkSharp.3.22.25.74\lib\netstandard2.0\GtkSharp.dll</HintPath>
-    </Reference>
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
@@ -130,10 +128,10 @@
       <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.3.1.4\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Crypto">
-      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf">
-      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <HintPath>..\packages\Google.Protobuf.3.12.0\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Renci.SshNet">
       <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
@@ -187,6 +185,8 @@
     <Compile Include="DataTests\SuperLayers\DBTables\UMPlacedTileTests.cs" />
     <Compile Include="DataTests\SuperLayers\DBTables\USPlacedTileTests.cs" />
     <Compile Include="DataTests\DataBaseContextsTests.cs" />
+    <Compile Include="ServiceTests\SuperLayers\HeightControllerTests.cs" />
+    <Compile Include="DataTests\Mobs\MITests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -197,6 +197,9 @@
     <Folder Include="DataTests\Crafting\" />
     <Folder Include="DataTests\SuperLayers\" />
     <Folder Include="DataTests\SuperLayers\DBTables\" />
+    <Folder Include="ServiceTests\" />
+    <Folder Include="ServiceTests\SuperLayers\" />
+    <Folder Include="DataTests\Mobs\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mundus\Mundus.csproj">
@@ -205,5 +208,4 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\GtkSharp.3.22.25.74\build\GtkSharp.targets" Condition="Exists('..\packages\GtkSharp.3.22.25.74\build\GtkSharp.targets')" />
 </Project>
