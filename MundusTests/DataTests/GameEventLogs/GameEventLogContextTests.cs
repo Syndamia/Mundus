@@ -1,12 +1,15 @@
-﻿using System.Linq;
-using Mundus.Data.GameEventLogs;
-using NUnit.Framework;
+﻿namespace MundusTests.DataTests.GameEventLogs 
+{
+    using System.Linq;
+    using Mundus.Data.GameEventLogs;
+    using NUnit.Framework;
 
-namespace MundusTests.DataTests.GameEventLogs {
     [TestFixture]
-    public static class GameEventLogContextTests {
+    public static class GameEventLogContextTests 
+    {
         [Test]
-        public static void TableGetsResetOnInitialization() {
+        public static void TableGetsResetOnInitialization() 
+        {
             GameEventLogContext gelc = new GameEventLogContext();
 
             Assert.AreEqual(0, gelc.GameEventLogs.Count(), "GameEventLogContext doesn't remove all values from table after being initialized.");
@@ -14,7 +17,8 @@ namespace MundusTests.DataTests.GameEventLogs {
 
         [Test]
         [TestCase("Test message one.", "Test message two.")]
-        public static void AddsMessageToTable(string message1, string message2) {
+        public static void AddsMessageToTable(string message1, string message2) 
+        {
             GameEventLogContext gelc = new GameEventLogContext();
 
             gelc.AddMessage(message1);
@@ -26,7 +30,8 @@ namespace MundusTests.DataTests.GameEventLogs {
 
         [Test]
         [TestCase("Test message 1.", "Test message 2.")]
-        public static void AddsMessagesToTable(string message1, string message2) {
+        public static void AddsMessagesToTable(string message1, string message2) 
+        {
             GameEventLogContext gelc = new GameEventLogContext();
 
             gelc.AddMessage(message1);
@@ -38,7 +43,8 @@ namespace MundusTests.DataTests.GameEventLogs {
 
         [Test]
         [TestCase("Test message 1.", "Test message 2.")]
-        public static void CountsProperAmmountOfMessages(string message1, string message2) {
+        public static void CountsProperAmmountOfMessages(string message1, string message2) 
+        {
             GameEventLogContext gelc = new GameEventLogContext();
 
             gelc.AddMessage(message1);

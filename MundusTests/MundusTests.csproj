@@ -177,6 +177,16 @@
     <Compile Include="DataTests\SuperLayers\LandContextTests.cs" />
     <Compile Include="DataTests\SuperLayers\SkyContextTests.cs" />
     <Compile Include="DataTests\SuperLayers\UndergroundContextTests.cs" />
+    <Compile Include="DataTests\SuperLayers\DBTables\LGPlacedTileTests.cs" />
+    <Compile Include="DataTests\SuperLayers\DBTables\LMPlacedTileTests.cs" />
+    <Compile Include="DataTests\SuperLayers\DBTables\LSPlacedTile.cs" />
+    <Compile Include="DataTests\SuperLayers\DBTables\SGPlacedTileTests.cs" />
+    <Compile Include="DataTests\SuperLayers\DBTables\SMPlacedTileTests.cs" />
+    <Compile Include="DataTests\SuperLayers\DBTables\SSPlacedTileTests.cs" />
+    <Compile Include="DataTests\SuperLayers\DBTables\UGPlacedTileTests.cs" />
+    <Compile Include="DataTests\SuperLayers\DBTables\UMPlacedTileTests.cs" />
+    <Compile Include="DataTests\SuperLayers\DBTables\USPlacedTileTests.cs" />
+    <Compile Include="DataTests\DataBaseContextsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -186,6 +196,7 @@
     <Folder Include="DataTests\GameEventLogs\" />
     <Folder Include="DataTests\Crafting\" />
     <Folder Include="DataTests\SuperLayers\" />
+    <Folder Include="DataTests\SuperLayers\DBTables\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mundus\Mundus.csproj">

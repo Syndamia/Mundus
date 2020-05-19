@@ -1,14 +1,16 @@
-﻿using System;
-using System.Linq;
-using Mundus.Data.SuperLayers;
-using Mundus.Data.SuperLayers.DBTables;
-using NUnit.Framework;
+﻿namespace MundusTests.DataTests.SuperLayers 
+{
+    using System.Linq;
+    using Mundus.Data.SuperLayers;
+    using Mundus.Data.SuperLayers.DBTables;
+    using NUnit.Framework;
 
-namespace MundusTests.DataTests.SuperLayers {
     [TestFixture]
-    public static class SkyContextTests {
+    public static class SkyContextTests 
+    {
         [Test]
-        public static void AddsCorrectValues() {
+        public static void AddsCorrectValues() 
+        {
             var mob = new SMPlacedTile("mob_stock", 0, 1, 1);
             var structure = new SSPlacedTile("structure_stock", 0, 2, 1);
             var ground = new SGPlacedTile("ground_stock", 3, 4);
@@ -26,7 +28,8 @@ namespace MundusTests.DataTests.SuperLayers {
         }
 
         [Test]
-        public static void ConsideredAliveAfterSmallDamage() {
+        public static void ConsideredAliveAfterSmallDamage() 
+        {
             var mob = new SMPlacedTile("mob_stock", 10, 1, 1);
             var structure = new SSPlacedTile("structure_stock", 4, 2, 1);
 
@@ -41,7 +44,8 @@ namespace MundusTests.DataTests.SuperLayers {
         }
 
         [Test]
-        public static void ConsideredDeadAfterBigDamage() {
+        public static void ConsideredDeadAfterBigDamage() 
+        {
             var mob = new SMPlacedTile("mob_stock", 10, 1, 1);
             var structure = new SSPlacedTile("structure_stock", 4, 2, 1);
 
@@ -56,7 +60,8 @@ namespace MundusTests.DataTests.SuperLayers {
         }
 
         [Test]
-        public static void DamagesCorrectly() {
+        public static void DamagesCorrectly() 
+        {
             var mob = new SMPlacedTile("mob_stock", 10, 1, 1);
             var structure = new SSPlacedTile("structure_stock", 4, 2, 1);
 
@@ -74,7 +79,8 @@ namespace MundusTests.DataTests.SuperLayers {
         }
 
         [Test]
-        public static void GetsCorrectStocks() {
+        public static void GetsCorrectStocks() 
+        {
             var mob = new SMPlacedTile("mob_stock", 0, 1, 1);
             var structure = new SSPlacedTile("structure_stock", 0, 2, 1);
             var ground = new SGPlacedTile("ground_stock", 3, 4);
@@ -92,7 +98,8 @@ namespace MundusTests.DataTests.SuperLayers {
         }
 
         [Test]
-        public static void RemovesCorrectValues() {
+        public static void RemovesCorrectValues() 
+        {
             var mob = new SMPlacedTile("mob_stock", 0, 1, 1);
             var structure = new SSPlacedTile("structure_stock", 0, 2, 1);
             var ground = new SGPlacedTile("ground_stock", 3, 4);
@@ -116,7 +123,8 @@ namespace MundusTests.DataTests.SuperLayers {
 
 
         [Test]
-        public static void SetsCorrectValues() {
+        public static void SetsCorrectValues() 
+        {
             var mob = new SMPlacedTile("mob_stock", 0, 1, 1);
             var newMob = new SMPlacedTile("new_mob_stock", 1, 1, 1);
             var structure = new SSPlacedTile("structure_stock", 0, 2, 1);
@@ -142,7 +150,8 @@ namespace MundusTests.DataTests.SuperLayers {
         }
 
         [Test]
-        public static void TruncatesTablesOnInitialization() {
+        public static void TruncatesTablesOnInitialization() 
+        {
             SkyContext sc = new SkyContext();
 
             Assert.AreEqual(0, sc.SMobLayer.Count(), "SMobLayer table isn't properly truncated upon SkyContext initialization");

@@ -26,6 +26,19 @@
         }
 
         /// <summary>
+        /// Hides this screen, generates map and initializes the game window
+        /// </summary>
+        public void OnBtnGenerateClicked(object sender, EventArgs e) 
+        {
+            // TODO: save settings somewhere
+
+            this.Hide();
+            this.ScreenInventorySetup();
+            this.GenerateMap();
+            GameGenerator.GameWindowInitialize();
+        }
+
+        /// <summary>
         /// Every time the window is closed, this gets called (hides the window)
         /// </summary>
         protected void OnDeleteEvent(object sender, DeleteEventArgs a) 
@@ -123,19 +136,6 @@
             {
                 rbMSmall.Active = true;
             }
-        }
-
-        /// <summary>
-        /// Hides this screen, generates map and initializes the game window
-        /// </summary>
-        private void OnBtnGenerateClicked(object sender, EventArgs e) 
-        {
-            // TODO: save settings somewhere
-
-            this.Hide();
-            this.ScreenInventorySetup();
-            this.GenerateMap();
-            GameGenerator.GameWindowInitialize();
         }
 
         /// <summary>
