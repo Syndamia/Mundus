@@ -7,14 +7,12 @@ namespace MundusTests.DataTests {
     public static class DataBaseContextsTests {
         [Test]
         public static void CreatesInstances() {
-            DataBaseContexts.CreateInstances();
-
-            Assert.AreNotEqual(null, DataBaseContexts.SContext, "Doesn't create SContext instance");
-            Assert.AreNotEqual(null, DataBaseContexts.LContext, "Doesn't create LContext instance");
-            Assert.AreNotEqual(null, DataBaseContexts.UContext, "Doesn't create UContext instance");
-            Assert.AreNotEqual(null, DataBaseContexts.CTContext, "Doesn't create CTContext instance");
-            Assert.AreNotEqual(null, DataBaseContexts.GELContext, "Doesn't create GELContext instance");
-            Assert.AreNotEqual(null, DataBaseContexts.SuperLayerContexts, "Doesn't create SuperLayerContexts instance");
+            Assert.IsNotNull(DataBaseContexts.SContext, "Doesn't create SContext instance");
+            Assert.IsNotNull(DataBaseContexts.LContext, "Doesn't create LContext instance");
+            Assert.IsNotNull(DataBaseContexts.UContext, "Doesn't create UContext instance");
+            Assert.IsNotNull(DataBaseContexts.CTContext, "Doesn't create CTContext instance");
+            Assert.IsNotNull(DataBaseContexts.GELContext, "Doesn't create GELContext instance");
+            Assert.IsNotNull(DataBaseContexts.SuperLayerContexts, "Doesn't create SuperLayerContexts instance");
         }
     }
 }

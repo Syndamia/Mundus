@@ -10,19 +10,6 @@ using Mundus.Service.Tiles.Mobs;
 namespace MundusTests.ServiceTests.Tiles.Items {
     [TestFixture]
     public static class ItemControllerTests {
-        [OneTimeSetUp]
-        public static void SetUp() {
-            Application.Init();
-            DataBaseContexts.CreateInstances();
-            WI.CreateInstances();
-            WI.WNewGame.OnBtnGenerateClicked(null, null);
-        }
-
-        [OneTimeTearDown]
-        public static void TearDown() {
-            Application.Quit();
-        }
-
         [Test]
         [TestCase(InventoryPlace.Accessories, 1)]
         [TestCase(InventoryPlace.Hotbar, 4)]

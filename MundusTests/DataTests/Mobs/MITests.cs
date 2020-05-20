@@ -9,24 +9,11 @@
     [TestFixture]
     public static class MITests 
     {
-        [OneTimeSetUp]
-        public static void SetUp() 
-        {
-            Application.Init();
-            DataBaseContexts.CreateInstances();
-            WI.CreateInstances();
-            WI.WNewGame.OnBtnGenerateClicked(null, null);
-        }
-
-        [OneTimeTearDown]
-        public static void TearDown() {
-            Application.Quit();
-        }
 
         [Test]
         public static void CreatesPlayerInstance() 
         {
-            Assert.AreNotEqual(null, MI.Player, "Player isn't instantiated");
+            Assert.IsNotNull(MI.Player, "Player isn't instantiated");
         }
     }
 }

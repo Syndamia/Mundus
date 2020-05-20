@@ -12,25 +12,11 @@
     [TestFixture]
     public static class ImageControllerTests 
     {
-        [OneTimeSetUp]
-        public static void SetUp() 
-        {
-            Application.Init();
-            DataBaseContexts.CreateInstances();
-            WI.CreateInstances();
-            WI.WNewGame.OnBtnGenerateClicked(null, null);
-        }
-
-        [OneTimeTearDown]
-        public static void TearDown() 
-        {
-            Application.Quit();
-        }
 
         [Test]
         [TestCase(1, 5)]
         [TestCase(2, 2)]
-        [TestCase(8, 11)]
+        [TestCase(8, 10)]
         public static void GetsCorrectGroundImage(int yPos, int xPos) 
         {
             Image img = null;

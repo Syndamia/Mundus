@@ -12,15 +12,9 @@
         /// Sets the map size and starts generation of all superlayers
         /// </summary>
         /// <param name="size">Size of the map ("small", "medium" or "large")</param>
-        public static void GenerateMap(string size) 
+        public static void GenerateMap(Values.MapSize size) 
         {
-            switch (size.ToLower()) 
-            {
-                case "small": Values.CurrMapSize = Values.MapSize.SMALL; break;
-                case "medium": Values.CurrMapSize = Values.MapSize.MEDIUM; break;
-                case "large": Values.CurrMapSize = Values.MapSize.LARGE; break;
-                default: throw new ArgumentException("Map size must be \"small\", \"medium\" or \"large\"");
-            }
+            Values.CurrMapSize = size;
 
             SkySuperLayerGenerator.GenerateAllLayers(Values.CurrMapSize);
             LandSuperLayerGenerator.GenerateAllLayers(Values.CurrMapSize);
@@ -58,17 +52,9 @@
         /// Sets the game difficulty (that affects map generation).
         /// </summary>
         /// <param name="value">Must be "peaceful", "easy", "normal", "hard" or "insane"</param>
-        public static void SetDifficulty(string value) 
+        public static void SetDifficulty(Values.Difficulty difficulty) 
         {
-            switch (value.ToLower()) 
-            {
-                case "peaceful": Values.CurrDifficulty = Values.Difficulty.Peaceful; break;
-                case "easy": Values.CurrDifficulty = Values.Difficulty.Easy; break;
-                case "normal": Values.CurrDifficulty = Values.Difficulty.Normal; break;
-                case "hard": Values.CurrDifficulty = Values.Difficulty.Hard; break;
-                case "insane": Values.CurrDifficulty = Values.Difficulty.Insane; break;
-                default: throw new ArgumentException($"Invalid difficulty value {value}. Must be \"peaceful\", \"easy\", \"normal\", \"hard\" or \"insane\"");
-            }
+            Values.CurrDifficulty = difficulty;
         }
     }
 }

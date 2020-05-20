@@ -41,14 +41,6 @@
             Gear
         }
 
-        public void SetSizes(int screenInvSize) 
-        {
-            this.Hotbar = new ItemTile[screenInvSize];
-            this.Items = new ItemTile[screenInvSize * screenInvSize];
-            this.Accessories = new Gear[screenInvSize * 2];
-            this.Gear = new Gear[screenInvSize];
-        }
-
         public void AppendToHotbar(ItemTile itemTile) 
         {
             this.AddToHotbar(itemTile, Array.IndexOf(this.Hotbar, this.Hotbar.First(x => x == null)));
@@ -79,32 +71,32 @@
             this.Items[index] = null;
         }
 
-        public void EquipAccessory(Gear accessory, int index) 
+        public void AddToAccessories(Gear accessory, int index) 
         {
             this.Accessories[index] = accessory;
         }
 
-        public void AppendAccessories(Gear accessory) 
+        public void AppendToAccessories(Gear accessory) 
         {
-            this.EquipAccessory(accessory, Array.IndexOf(this.Accessories, this.Accessories.First(x => x == null)));
+            this.AddToAccessories(accessory, Array.IndexOf(this.Accessories, this.Accessories.First(x => x == null)));
         }
 
-        public void DeleteAccessory(int index) 
+        public void DeleteFromAccessories(int index) 
         {
             this.Accessories[index] = null;
         }
 
-        public void EquipGear(Gear gear, int index) 
+        public void AddToGear(Gear gear, int index) 
         {
             this.Gear[index] = gear;
         }
 
-        public void AppendGear(Gear gear) 
+        public void AppendToGear(Gear gear) 
         {
-            this.EquipGear(gear, Array.IndexOf(this.Gear, this.Gear.First(x => x == null)));
+            this.AddToGear(gear, Array.IndexOf(this.Gear, this.Gear.First(x => x == null)));
         }
 
-        public void DeleteGear(int index) 
+        public void DeleteFromGear(int index) 
         {
             this.Gear[index] = null;
         }
@@ -155,6 +147,14 @@
         public static ItemTile GetPlayerItemFromItemSelection() 
         {
             return MI.Player.Inventory.GetItemTile(ItemController.SelItemPlace, ItemController.SelItemIndex);
+        }
+
+        private void SetSizes(int screenInvSize) 
+        {
+            this.Hotbar = new ItemTile[screenInvSize];
+            this.Items = new ItemTile[screenInvSize * screenInvSize];
+            this.Accessories = new Gear[screenInvSize * 2];
+            this.Gear = new Gear[screenInvSize];
         }
     }
 }

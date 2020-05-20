@@ -196,6 +196,9 @@
     <Compile Include="ServiceTests\Tiles\Items\Types\StructureTests.cs" />
     <Compile Include="ServiceTests\Tiles\Items\Types\ToolTests.cs" />
     <Compile Include="ServiceTests\Tiles\Items\ItemControllerTests.cs" />
+    <Compile Include="ServiceTests\Tiles\Mobs\InventoryTests.cs" />
+    <Compile Include="ApplicationSetup.cs" />
+    <Compile Include="ServiceTests\Tiles\Mobs\MobTileTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -213,6 +216,7 @@
     <Folder Include="ServiceTests\Tiles\Crafting\" />
     <Folder Include="ServiceTests\Tiles\Items\" />
     <Folder Include="ServiceTests\Tiles\Items\Types\" />
+    <Folder Include="ServiceTests\Tiles\Mobs\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mundus\Mundus.csproj">

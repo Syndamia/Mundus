@@ -2,6 +2,7 @@
 {
     using System;
     using Gtk;
+    using Mundus.Data;
     using Mundus.Service;
     using Mundus.Service.Windows;
 
@@ -74,23 +75,23 @@
         }
 
         protected void OnRbPeacefulToggled(object sender, EventArgs e) {
-            GameGenerator.SetDifficulty("peaceful");
+            GameGenerator.SetDifficulty(Values.Difficulty.Peaceful);
         }
 
         protected void OnRbEasyToggled(object sender, EventArgs e) {
-            GameGenerator.SetDifficulty("easy");
+            GameGenerator.SetDifficulty(Values.Difficulty.Easy);
         }
 
         protected void OnRbNormalToggled(object sender, EventArgs e) {
-            GameGenerator.SetDifficulty("normal");
+            GameGenerator.SetDifficulty(Values.Difficulty.Normal);
         }
 
         protected void OnRbHardToggled(object sender, EventArgs e) {
-            GameGenerator.SetDifficulty("hard");
+            GameGenerator.SetDifficulty(Values.Difficulty.Hard);
         }
 
         protected void OnRbInsaneToggled(object sender, EventArgs e) {
-            GameGenerator.SetDifficulty("insane");
+            GameGenerator.SetDifficulty(Values.Difficulty.Insane);
         }
 
         /* Automatically set map sizes from screen & inventory size only in survival mode */
@@ -143,23 +144,15 @@
         /// </summary>
         private void GenerateMap() 
         {
-            string size = null;
+            Values.MapSize size = Values.MapSize.SMALL;
 
-            if (rbMSmall.Active) 
+            if (rbMMedium.Active) 
             {
-                size = "small";
-            }
-            else if (rbMMedium.Active) 
-            {
-                size = "medium";
+                size = Values.MapSize.MEDIUM;
             }
             else if (rbMLarge.Active) 
             {
-                size = "large";
-            }
-            else 
-            {
-                throw new ArgumentException("No map size was selected");
+                size = Values.MapSize.LARGE;
             }
 
             GameGenerator.GenerateMap(size);
