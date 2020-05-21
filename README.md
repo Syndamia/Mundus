@@ -1,3 +1,5 @@
+For more information, visit [my website](http://www.syndamia.com/projects/mundus/introduction.html).
+
 In this branch I will be adding features that are module requirements:
  - Using a databse
    - `MySQL` database
