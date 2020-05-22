@@ -6,16 +6,6 @@
 
     public partial class SmallGameWindow : Gtk.Window 
     {
-        protected void OnBtnIG1Clicked(object sender, EventArgs e) 
-        {
-            this.PrintMainMenu();
-        }
-
-        protected void OnBtnIG2Clicked(object sender, EventArgs e) 
-        {
-            this.PrintMainMenu();
-        }
-
         protected void OnBtnPauseClicked(object sender, EventArgs e) 
         {
             // Note: pause window blocks player input

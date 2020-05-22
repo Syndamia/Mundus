@@ -293,7 +293,7 @@
         private void PrintAccessoriesInventory() {
             for (int row = 0; row < 2; row++) {
                 for (int col = 0; col < Size; col++) {
-                    Image img = GetPlayerInventoryImage(InventoryPlace.Accessories, (row * Size) + col + 1);
+                    Image img = GetPlayerInventoryImage(InventoryPlace.Accessories, (row * Size) + col);
 
                     switch ((row * Size) + col + 1) {
                         case 1: btnA1.Image = img; break;
@@ -405,7 +405,9 @@
             {
                 for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, img++) 
                 {
-                    string stockName = GetPlayerScreenImage(row, col, Layer.Structure).Stock;
+                    Image image = GetPlayerScreenImage(row, col, Layer.Structure);
+
+                    string stockName = (image == null) ? "blank" : image.Stock;
 
                     switch (img) 
                     {

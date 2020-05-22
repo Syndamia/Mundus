@@ -9,7 +9,7 @@
 
     public static class ImageController 
     {
-        private static ISuperLayerContext superLayer = MI.Player.CurrSuperLayer;
+        private static ISuperLayerContext superLayer;
 
         public enum Layer 
         {
@@ -24,6 +24,7 @@
         /// </summary>
         public static Image GetPlayerScreenImage(int y, int x, Layer layer)
          {
+            superLayer = MI.Player.CurrSuperLayer;
             Image img = null;
 
             if (layer == Layer.Ground) 

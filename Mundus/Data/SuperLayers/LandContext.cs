@@ -165,5 +165,9 @@
         {
             optionsBuilder.UseMySQL(DataBaseContexts.ConnectionStringMySQL);
         }
+
+        public override string ToString() {
+            return "Land";
+        }
     }
 }

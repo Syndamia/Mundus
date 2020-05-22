@@ -525,7 +525,9 @@
             {
                 for (int col = Calculate.CalculateStartX(Size), maxX = Calculate.CalculateMaxX(Size); col <= maxX; col++, img++)  
                 {
-                    string stockName = GetPlayerScreenImage(row, col, Layer.Structure).Stock;
+                    Image image = GetPlayerScreenImage(row, col, Layer.Structure);
+
+                    string stockName = (image == null) ? "blank" : image.Stock;
 
                     switch (img)  
                     {

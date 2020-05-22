@@ -201,9 +201,6 @@
             btnG4.Visible = isVisible;
             btnG5.Visible = isVisible;
 
-            btnIG1.Visible = isVisible;
-            btnIG2.Visible = isVisible;
-
             imgInfo.Visible = isVisible;
             lblInfo.Visible = isVisible;
 
