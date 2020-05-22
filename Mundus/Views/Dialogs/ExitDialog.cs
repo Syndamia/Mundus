@@ -9,7 +9,6 @@
 
         protected void OnDeleteEvent(object o, Gtk.DeleteEventArgs args) 
         {
-
             //To keep window instance (it is needed (stored in WindowInstances.cs) until Application.Quit)
             args.RetVal = true;
         }

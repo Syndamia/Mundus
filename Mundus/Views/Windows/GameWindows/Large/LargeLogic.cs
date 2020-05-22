@@ -1,6 +1,7 @@
 ﻿namespace Mundus.Views.Windows.GameWindows.Large 
 {
     using Gtk;
+    using Mundus.Data.Dialogues;
     using Mundus.Service.Tiles.Items;
     using static Mundus.Service.Tiles.Mobs.Inventory;
 
@@ -20,7 +21,15 @@
 
         public void OnDeleteEvent(object o, DeleteEventArgs args)  
         {
-            Application.Quit();
+            ResponseType rt = (ResponseType)DI.DExit.Run();
+            DI.DExit.Hide();
+
+            if (rt == ResponseType.Close) {
+                Application.Quit();
+            }
+            else {
+                args.RetVal = true;
+            }
         }
 
         public void SetDefaults()  

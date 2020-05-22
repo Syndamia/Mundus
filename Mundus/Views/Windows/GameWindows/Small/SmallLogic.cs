@@ -1,6 +1,7 @@
 ﻿namespace Mundus.Views.Windows.GameWindows.Small 
 {
     using Gtk;
+    using Mundus.Data.Dialogues;
     using Mundus.Service.Tiles.Items;
     using static Mundus.Service.Tiles.Mobs.Inventory;
 
@@ -19,24 +20,17 @@
 
         public void OnDeleteEvent(object o, Gtk.DeleteEventArgs args) 
         {
-            /*Open exit dialogue if you haven't saved in a while
-             * if () { //TODO: check if you have saved
-             TODO: pause game cycle
+            ResponseType rt = (ResponseType)DI.DExit.Run();
+            DI.DExit.Hide();
 
-               ResponseType rt = (ResponseType)DI.DExit.Run();
-               DI.DExit.Hide();
-
-               if(rt == ResponseType.Cancel || rt == ResponseType.DeleteEvent) {
-                   //cancel the exit procedure and keep the window open
-                  args.RetVal = true;
-                   return;
-               }
-               else if (rt == ResponseType.Accept) {
-                   //TODO: call code for saving the game
-                }
-              }*/
-
-            Application.Quit();
+            if(rt == ResponseType.Close) 
+            {
+                Application.Quit();
+            }
+            else 
+            {
+                args.RetVal = true;
+            }
         }
 
         public void SetDefaults() 

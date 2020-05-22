@@ -23997,6 +23997,7 @@
           <widget class="Gtk.Button" id="btnSave">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
+            <property name="Sensitive">False</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label">Save</property>
@@ -24015,6 +24016,7 @@
           <widget class="Gtk.Button" id="btnSaveExit">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
+            <property name="Sensitive">False</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label">Save &amp; Exit</property>
@@ -25180,6 +25182,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">300</property>
             <property name="HeightRequest">90</property>
+            <property name="Sensitive">False</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label">Load Game</property>
@@ -25251,7 +25254,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Dialog" id="Mundus.Views.Dialogs.ExitDialog" design-size="563 95">
+  <widget class="Gtk.Dialog" id="Mundus.Views.Dialogs.ExitDialog" design-size="445 95">
     <property name="MemberName" />
     <property name="Title" />
     <property name="WindowPosition">CenterOnParent</property>
@@ -25266,7 +25269,7 @@
           <widget class="Gtk.Label" id="lblMessage">
             <property name="MemberName" />
             <property name="HeightRequest">50</property>
-            <property name="LabelProp">You haven't saved for {number} of seconds. Are you sure you want to exit without saving?</property>
+            <property name="LabelProp">Are you sure you want to exit without saving?</property>
           </widget>
           <packing>
             <property name="Position">0</property>
@@ -25302,6 +25305,7 @@
         <child>
           <widget class="Gtk.Button" id="btnSave">
             <property name="MemberName" />
+            <property name="Sensitive">False</property>
             <property name="CanDefault">True</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
@@ -25322,7 +25326,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label">Exit without saving</property>
             <property name="UseUnderline">True</property>
-            <property name="ResponseId">-2</property>
+            <property name="ResponseId">-7</property>
           </widget>
           <packing>
             <property name="Position">2</property>

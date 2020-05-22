@@ -27,8 +27,7 @@ namespace Mundus.Views.Dialogs
 			this.lblMessage = new global::Gtk.Label();
 			this.lblMessage.HeightRequest = 50;
 			this.lblMessage.Name = "lblMessage";
-			this.lblMessage.LabelProp = "You haven\'t saved for {number} of seconds. Are you sure you want to exit without " +
-				"saving?";
+			this.lblMessage.LabelProp = "Are you sure you want to exit without saving?";
 			w1.Add(this.lblMessage);
 			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(w1[this.lblMessage]));
 			w2.Position = 0;
@@ -53,6 +52,7 @@ namespace Mundus.Views.Dialogs
 			w4.Fill = false;
 			// Container child DExit_ActionArea.Gtk.ButtonBox+ButtonBoxChild
 			this.btnSave = new global::Gtk.Button();
+			this.btnSave.Sensitive = false;
 			this.btnSave.CanDefault = true;
 			this.btnSave.CanFocus = true;
 			this.btnSave.Name = "btnSave";
@@ -69,7 +69,7 @@ namespace Mundus.Views.Dialogs
 			this.btnExit.Name = "btnExit";
 			this.btnExit.UseUnderline = true;
 			this.btnExit.Label = "Exit without saving";
-			this.AddActionWidget(this.btnExit, -2);
+			this.AddActionWidget(this.btnExit, -7);
 			global::Gtk.ButtonBox.ButtonBoxChild w6 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w3[this.btnExit]));
 			w6.Position = 2;
 			w6.Expand = false;
@@ -78,7 +78,7 @@ namespace Mundus.Views.Dialogs
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 563;
+			this.DefaultWidth = 445;
 			this.DefaultHeight = 95;
 			this.Show();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);

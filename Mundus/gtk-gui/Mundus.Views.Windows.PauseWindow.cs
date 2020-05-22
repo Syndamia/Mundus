@@ -90,6 +90,7 @@ namespace Mundus.Views.Windows
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.btnSave = new global::Gtk.Button();
 			this.btnSave.HeightRequest = 50;
+			this.btnSave.Sensitive = false;
 			this.btnSave.CanFocus = true;
 			this.btnSave.Name = "btnSave";
 			this.btnSave.UseUnderline = true;
@@ -103,6 +104,7 @@ namespace Mundus.Views.Windows
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.btnSaveExit = new global::Gtk.Button();
 			this.btnSaveExit.HeightRequest = 50;
+			this.btnSaveExit.Sensitive = false;
 			this.btnSaveExit.CanFocus = true;
 			this.btnSaveExit.Name = "btnSaveExit";
 			this.btnSaveExit.UseUnderline = true;

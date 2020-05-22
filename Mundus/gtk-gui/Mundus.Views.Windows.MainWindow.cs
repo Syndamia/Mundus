@@ -66,6 +66,7 @@ namespace Mundus.Views.Windows
 			this.btnLoadGame = new global::Gtk.Button();
 			this.btnLoadGame.WidthRequest = 300;
 			this.btnLoadGame.HeightRequest = 90;
+			this.btnLoadGame.Sensitive = false;
 			this.btnLoadGame.CanFocus = true;
 			this.btnLoadGame.Name = "btnLoadGame";
 			this.btnLoadGame.UseUnderline = true;
