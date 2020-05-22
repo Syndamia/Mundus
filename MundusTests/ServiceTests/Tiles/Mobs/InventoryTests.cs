@@ -1,17 +1,18 @@
-﻿using System;
-using Mundus.Service.Tiles.Items;
-using Mundus.Service.Tiles.Items.Types;
-using Mundus.Service.Tiles.Mobs;
-using NUnit.Framework;
+﻿namespace MundusTests.ServiceTests.Tiles.Mobs 
+{
+    using Mundus.Service.Tiles.Items.Types;
+    using Mundus.Service.Tiles.Mobs;
+    using NUnit.Framework;
 
-namespace MundusTests.ServiceTests.Tiles.Mobs {
     [TestFixture]
-    public static class InventoryTests {
+    public static class InventoryTests 
+    {
         [Test]
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void AddsToHotbar(string stock_id1, string stock_id2) {
+        public static void AddsToHotbar(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToHotbar(new Material(stock_id1), 2);
@@ -25,7 +26,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void AddsToItems(string stock_id1, string stock_id2) {
+        public static void AddsToItems(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToItems(new Material(stock_id1), 2);
@@ -39,7 +41,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void AddsToAccessories(string stock_id1, string stock_id2) {
+        public static void AddsToAccessories(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToAccessories(new Gear(stock_id1), 2);
@@ -53,7 +56,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void AddsToGear(string stock_id1, string stock_id2) {
+        public static void AddsToGear(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToGear(new Gear(stock_id1), 2);
@@ -67,7 +71,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void AppendsToHotbar(string stock_id1, string stock_id2) {
+        public static void AppendsToHotbar(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AppendToHotbar(new Material(stock_id1));
@@ -81,7 +86,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void AppendsToItems(string stock_id1, string stock_id2) {
+        public static void AppendsToItems(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AppendToItems(new Material(stock_id1));
@@ -95,7 +101,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void AppendsToAccessories(string stock_id1, string stock_id2) {
+        public static void AppendsToAccessories(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AppendToAccessories(new Gear(stock_id1));
@@ -109,7 +116,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void AppendsToGear(string stock_id1, string stock_id2) {
+        public static void AppendsToGear(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AppendToGear(new Gear(stock_id1));
@@ -119,12 +127,12 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
             Assert.AreEqual(stock_id2, inv.Gear[1].stock_id, "Append to gear doesn't work as expected");
         }
 
-
         [Test]
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void DeletesFromHotbar(string stock_id1, string stock_id2) {
+        public static void DeletesFromHotbar(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToHotbar(new Gear(stock_id1), 2);
@@ -141,7 +149,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void DeletesFromItems(string stock_id1, string stock_id2) {
+        public static void DeletesFromItems(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToItems(new Gear(stock_id1), 2);
@@ -158,7 +167,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void DeletesFromAccessories(string stock_id1, string stock_id2) {
+        public static void DeletesFromAccessories(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToAccessories(new Gear(stock_id1), 2);
@@ -175,7 +185,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", "two")]
         [TestCase(null, "two")]
         [TestCase("", "two")]
-        public static void DeletesFromGear(string stock_id1, string stock_id2) {
+        public static void DeletesFromGear(string stock_id1, string stock_id2) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToGear(new Gear(stock_id1), 2);
@@ -192,7 +203,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase(1)]
         [TestCase(5)]
         [TestCase(10)]
-        public static void InstantiatesProperly(int size) {
+        public static void InstantiatesProperly(int size) 
+        {
             Inventory inv = new Inventory(size);
 
             Assert.AreEqual(size, inv.Hotbar.Length, "Hotbar has incorrect size");
@@ -205,7 +217,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", 3)]
         [TestCase(null, 1)]
         [TestCase("", 4)]
-        public static void GetsProperHotbarItemTile(string stock_id, int index) {
+        public static void GetsProperHotbarItemTile(string stock_id, int index) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToHotbar(new Material(stock_id), index);
@@ -217,7 +230,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", 3)]
         [TestCase(null, 1)]
         [TestCase("", 4)]
-        public static void GetsProperItemsItemTile(string stock_id, int index) {
+        public static void GetsProperItemsItemTile(string stock_id, int index) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToItems(new Material(stock_id), index);
@@ -229,7 +243,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", 3)]
         [TestCase(null, 1)]
         [TestCase("", 4)]
-        public static void GetsProperAccessoriesItemTile(string stock_id, int index) {
+        public static void GetsProperAccessoriesItemTile(string stock_id, int index) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToAccessories(new Gear(stock_id), index);
@@ -241,7 +256,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [TestCase("one", 3)]
         [TestCase(null, 1)]
         [TestCase("", 4)]
-        public static void GetsProperGearItemTile(string stock_id, int index) {
+        public static void GetsProperGearItemTile(string stock_id, int index) 
+        {
             Inventory inv = new Inventory(5);
 
             inv.AddToGear(new Gear(stock_id), index);

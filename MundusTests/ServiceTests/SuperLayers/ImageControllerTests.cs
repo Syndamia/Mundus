@@ -3,7 +3,6 @@
     using Gtk;
     using Mundus.Data;
     using Mundus.Data.Tiles.Mobs;
-    using Mundus.Data.Windows;
     using Mundus.Service.SuperLayers;
     using NUnit.Framework;
     using static Mundus.Service.SuperLayers.ImageController;
@@ -12,7 +11,6 @@
     [TestFixture]
     public static class ImageControllerTests 
     {
-
         [Test]
         [TestCase(1, 5)]
         [TestCase(2, 2)]
@@ -67,14 +65,17 @@
         {
             Image img = null;
 
-            if (DataBaseContexts.LContext.GetStructureLayerStock(yPos, xPos) != null) {
+            if (DataBaseContexts.LContext.GetStructureLayerStock(yPos, xPos) != null) 
+            {
                 img = new Image(DataBaseContexts.LContext.GetStructureLayerStock(yPos, xPos), IconSize.Dnd);
             }
 
-            if (img == null) {
+            if (img == null) 
+            {
                 Assert.AreEqual(img, ImageController.GetPlayerScreenImage(yPos, xPos, Layer.Structure), $"Structure image at Y:{yPos}, X:{xPos} should be null");
             }
-            else {
+            else 
+            {
                 Assert.AreEqual(img.Stock, ImageController.GetPlayerScreenImage(yPos, xPos, Layer.Structure).Stock, $"Structure image at Y:{yPos}, X:{xPos} should be {img.Stock}, but is {ImageController.GetPlayerScreenImage(yPos, xPos, Layer.Ground).Stock}");
             }
         }
@@ -115,7 +116,8 @@
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(2)]
-        public static void GetsCorrectPlayerAccessoriesImage(int index) {
+        public static void GetsCorrectPlayerAccessoriesImage(int index) 
+        {
             Image img = new Image("blank_gear", IconSize.Dnd);
 
             if (MI.Player.Inventory.Accessories[index] != null) 

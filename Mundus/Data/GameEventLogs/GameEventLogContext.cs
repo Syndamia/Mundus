@@ -20,6 +20,7 @@
         /// Gets DbSet of the game event logs table
         /// </summary>
         public DbSet<GameEventLog> GameEventLogs { get; private set; }
+        public object SingleDataBaseContexts { get; set; }
 
         /// <summary>
         /// Adds a message to the GameEventLogs table

@@ -1,15 +1,17 @@
-﻿using System;
-using Mundus.Data;
-using Mundus.Data.Windows;
-using Mundus.Service.Tiles.Items.Types;
-using Mundus.Service.Tiles.Mobs;
-using NUnit.Framework;
+﻿namespace MundusTests.ServiceTests.Tiles.Mobs 
+{
+    using Mundus.Data;
+    using Mundus.Data.Windows;
+    using Mundus.Service.Tiles.Items.Types;
+    using Mundus.Service.Tiles.Mobs;
+    using NUnit.Framework;
 
-namespace MundusTests.ServiceTests.Tiles.Mobs {
     [TestFixture]
-    public static class MobTileTests {
+    public static class MobTileTests 
+    {
         [Test]
-        public static void InstantiatesProperly() {
+        public static void InstantiatesProperly() 
+        {
             MobTile mob = new MobTile("test", 10, 3, DataBaseContexts.SContext, 7, new Material("test_material"), 9);
 
             Assert.AreEqual("test", mob.stock_id);
@@ -24,7 +26,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [Test]
         [TestCase(10, 3)]
         [TestCase(19, 11)]
-        public static void AliveAfterTakingSmallDamage(int health, int damage) {
+        public static void AliveAfterTakingSmallDamage(int health, int damage) 
+        {
             MobTile mob = new MobTile("test", health, 3, DataBaseContexts.SContext);
 
             Assert.IsTrue(mob.TakeDamage(damage));
@@ -33,7 +36,8 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [Test]
         [TestCase(10, 10)]
         [TestCase(13, 20)]
-        public static void DeadAfterTakingBigDamage(int health, int damage) {
+        public static void DeadAfterTakingBigDamage(int health, int damage) 
+        {
             MobTile mob = new MobTile("test", health, 3, DataBaseContexts.SContext);
 
             Assert.IsFalse(mob.TakeDamage(damage));
@@ -42,19 +46,20 @@ namespace MundusTests.ServiceTests.Tiles.Mobs {
         [Test]
         [TestCase(10, 10)]
         [TestCase(13, 20)]
-        public static void HealsProperly(int health, int healByPoints) {
+        public static void HealsProperly(int health, int healByPoints) 
+        {
             MobTile mob = new MobTile("test", health, 3, DataBaseContexts.SContext);
 
             mob.Heal(healByPoints);
 
-            if (health + healByPoints > WI.SelWin.Size * 4) {
+            if (health + healByPoints > WI.SelWin.Size * 4) 
+            {
                 Assert.AreEqual(WI.SelWin.Size, mob.Health);
             }
-            else {
-
+            else 
+            {
                 Assert.AreEqual(health + healByPoints, mob.Health);
             }
-
         }
     }
 }

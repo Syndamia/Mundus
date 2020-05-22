@@ -1,12 +1,14 @@
-﻿using System;
-using Mundus.Data;
-using NUnit.Framework;
+﻿namespace MundusTests.DataTests 
+{
+    using Mundus.Data;
+    using NUnit.Framework;
 
-namespace MundusTests.DataTests {
     [TestFixture]
-    public static class DataBaseContextsTests {
+    public static class DataBaseContextsTests 
+    {
         [Test]
-        public static void CreatesInstances() {
+        public static void CreatesInstances() 
+        {
             Assert.IsNotNull(DataBaseContexts.SContext, "Doesn't create SContext instance");
             Assert.IsNotNull(DataBaseContexts.LContext, "Doesn't create LContext instance");
             Assert.IsNotNull(DataBaseContexts.UContext, "Doesn't create UContext instance");

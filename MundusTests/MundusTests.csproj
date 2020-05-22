@@ -131,7 +131,7 @@
       <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf">
-      <HintPath>..\packages\Google.Protobuf.3.12.0\lib\net45\Google.Protobuf.dll</HintPath>
+      <HintPath>..\packages\Google.Protobuf.3.12.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Renci.SshNet">
       <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
@@ -199,6 +199,7 @@
     <Compile Include="ServiceTests\Tiles\Mobs\InventoryTests.cs" />
     <Compile Include="ApplicationSetup.cs" />
     <Compile Include="ServiceTests\Tiles\Mobs\MobTileTests.cs" />
+    <Compile Include="ServiceTests\GameEventLogControllerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
