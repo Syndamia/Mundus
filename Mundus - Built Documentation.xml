@@ -1,0 +1,1589 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mundus</name>
+    </assembly>
+    <members>
+        <member name="M:Mundus.Views.Windows.NewGameWindow.OnBtnGenerateClicked(System.Object,System.EventArgs)">
+            <summary>
+            Hides this screen, generates map and initializes the game window
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.NewGameWindow.OnDeleteEvent(System.Object,Gtk.DeleteEventArgs)">
+            <summary>
+            Every time the window is closed, this gets called (hides the window)
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.NewGameWindow.OnRbCreativeToggled(System.Object,System.EventArgs)">
+            <summary>
+            You can choose your Map size only in creative, it is predetermined by screen and inventory size in survival.
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.NewGameWindow.SetMapSize">
+            <summary>
+            Sets map size from screen and inventory size
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.NewGameWindow.GenerateMap">
+            <summary>
+            Calls GameGenerator to generate the map depending on the selected map size button
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.NewGameWindow.ScreenInventorySetup">
+            <summary>
+            Does the inital steps that are required by all windows upon game generation
+            </summary>
+        </member>
+        <member name="P:Mundus.Views.Windows.GameWindows.Small.SmallGameWindow.Size">
+            <summary>
+            Gets value for the height and width of the game screen, map screens and inventory screen 
+            and the width of stats, hotbar, accessories, gear and items on the ground menus
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Small.SmallGameWindow.SetMapMenuVisibility(System.Boolean)">
+            <summary>
+            The map menu is the left menu with the grond layer, structure layer, coordinates, superlayer and "ground above player" items
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Small.SmallGameWindow.SetInvMenuVisibility(System.Boolean)">
+            <summary>
+            The inventory menu is the right menu with the items, accessories, gear incentories, item info and crafting button
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Small.SmallGameWindow.PrintWorldScreen">
+            <summary>
+            Prints the screen that the player uses to interract with the game map
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Small.SmallGameWindow.PrintMainMenu">
+            <summary>
+            Prints the energy, health and hot bars and log
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Small.SmallGameWindow.PrintInventory">
+            <summary>
+            Prints the inventory (items, accessories and gear)
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Small.SmallGameWindow.PrintSelectedItemInfo(Mundus.Service.Tiles.Items.ItemTile)">
+            <summary>
+            Prints the information that is avalable for the given item
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Small.SmallGameWindow.PrintMap">
+            <summary>
+            Prints the map menu items (ground layer, structure layer, coordinates, current superlayer, there is hole on top of player)
+            </summary>
+        </member>
+        <member name="P:Mundus.Views.Windows.GameWindows.Medium.MediumGameWindow.Size">
+            <summary>
+            Gets value for the height and width of the game screen, map screens and inventory screen 
+            and the width of stats, hotbar, accessories, gear and items on the ground menus
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Medium.MediumGameWindow.SetMapMenuVisibility(System.Boolean)">
+            <summary>
+            The map menu is the left menu with the grond layer, structure layer, coordinates, superlayer and "ground above player" items
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Medium.MediumGameWindow.SetInvMenuVisibility(System.Boolean)">
+            <summary>
+            The inventory menu is the right menu with the items, accessories, gear incentories, item info and crafting button
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Medium.MediumGameWindow.PrintWorldScreen">
+            <summary>
+            Prints the screen that the player uses to interract with the game map
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Medium.MediumGameWindow.PrintMainMenu">
+            <summary>
+            Prints the energy, health and hot bars and log
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Medium.MediumGameWindow.PrintInventory">
+            <summary>
+            Prints the inventory (items, accessories and gear)
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Medium.MediumGameWindow.PrintSelectedItemInfo(Mundus.Service.Tiles.Items.ItemTile)">
+            <summary>
+            Prints the information that is avalable for the given item
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Medium.MediumGameWindow.PrintMap">
+            <summary>
+            Prints the map menu items (ground layer, structure layer, coordinates, current superlayer, there is hole on top of player)
+            </summary>
+        </member>
+        <member name="P:Mundus.Views.Windows.GameWindows.Large.LargeGameWindow.Size">
+            <summary>
+            Gets value for the height and width of the game screen, map screens and inventory screen 
+            and the width of stats, hotbar, accessories, gear and items on the ground menus
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Large.LargeGameWindow.SetMapMenuVisibility(System.Boolean)">
+            <summary>
+            The map menu is the left menu with the grond layer, structure layer, coordinates, superlayer and "ground above player" items
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Large.LargeGameWindow.SetInvMenuVisibility(System.Boolean)">
+            <summary>
+            The inventory menu is the right menu with the items, accessories, gear incentories, item info and crafting button
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Large.LargeGameWindow.PrintWorldScreen">
+            <summary>
+            Prints the screen that the player uses to interract with the game map
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Large.LargeGameWindow.PrintMainMenu">
+            <summary>
+            Prints the energy, health and hot bars and log
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Large.LargeGameWindow.PrintInventory">
+            <summary>
+            Prints the inventory (items, accessories and gear)
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Large.LargeGameWindow.PrintSelectedItemInfo(Mundus.Service.Tiles.Items.ItemTile)">
+            <summary>
+            Prints the information that is avalable for the given item
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.GameWindows.Large.LargeGameWindow.PrintMap">
+            <summary>
+            Prints the map menu items (ground layer, structure layer, coordinates, current superlayer, there is hole on top of player)
+            </summary>
+        </member>
+        <member name="P:Mundus.Views.Windows.SettingsWindow.Sender">
+            <summary>
+            This is used to show the sender (the window that opened this one) when you close this window
+            </summary>
+        </member>
+        <member name="P:Mundus.Views.Windows.PauseWindow.GameWindow">
+            <summary>
+            Gets or sets the game window that opened the pause window (see OnBtnExitClicked)
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.PauseWindow.OnDeleteEvent(System.Object,Gtk.DeleteEventArgs)">
+            <summary>
+            Every time the window is closed, this gets called (hides the window)
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.PauseWindow.OnBtnSaveClicked(System.Object,System.EventArgs)">
+            <summary>
+            Saves the game state (map and inventories) and closes the pause window
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.PauseWindow.OnBtnSaveExitClicked(System.Object,System.EventArgs)">
+            <summary>
+            Saves the game, closes the window and also closes the window that opened it
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.PauseWindow.OnBtnExitClicked(System.Object,System.EventArgs)">
+            <summary>
+            Closes the window and also closes the window that opened it
+            </summary>
+        </member>
+        <member name="F:Mundus.Views.Windows.CraftingWindow.recipes">
+            <summary>
+            All the crafting recipes (gets set at Initialize())
+            </summary>
+        </member>
+        <member name="F:Mundus.Views.Windows.CraftingWindow.recipeIndex">
+            <summary>
+            Used to track which recipe should be displayed
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.CraftingWindow.Initialize">
+            <summary>
+            Resets visuals and prepares avalable recipes for current items in inventory
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.CraftingWindow.OnDeleteEvent(System.Object,Gtk.DeleteEventArgs)">
+            <summary>
+            Every time the window is closed, this gets called (hides the window)
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.CraftingWindow.OnBtnPrevClicked(System.Object,System.EventArgs)">
+            <summary>
+            Selects the previous avalable recipe and updates
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.CraftingWindow.OnBtnNextClicked(System.Object,System.EventArgs)">
+            <summary>
+            Selects the following avalable recipe and updates
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.CraftingWindow.OnBtnCraftClicked(System.Object,System.EventArgs)">
+            <summary>
+            Crafts the item (calls CraftingController and hides the window)
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.CraftingWindow.PrintRecipe">
+            <summary>
+            Sets information values for the currently selected recipe
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.CraftingWindow.UpdateNextPrevBtns">
+            <summary>
+            Updates the btnNext and btnPrev sensitivity
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.CraftingWindow.ClearScreen">
+            <summary>
+            Sets default empty values for required items and their amounts
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.CraftingWindow.Reset">
+            <summary>
+            Sets default empty values for the whole window
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.MusicWindow.OnDeleteEvent(System.Object,Gtk.DeleteEventArgs)">
+            <summary>
+            Every time the window is closed, this gets called (hides the window)
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.MainWindow.OnDeleteEvent(System.Object,Gtk.DeleteEventArgs)">
+            <summary>
+            Every time the window is closed, this gets called (hides the window)
+            </summary>
+        </member>
+        <member name="F:Mundus.Views.Windows.LogWindow.scroll">
+            <summary>
+            Used for crolling up and down the log messages
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.LogWindow.Initialize">
+            <summary>
+            Prints all logs it can (starting from most recent) and updates the buttons
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.LogWindow.PrintLogs">
+            <summary>
+            Prints the log messages
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.LogWindow.OnDeleteEvent(System.Object,Gtk.DeleteEventArgs)">
+            <summary>
+            Every time the window is closed, this gets called (hides the window)
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.LogWindow.UpdateButtons">
+            <summary>
+            Updates the butNewer and btnOlder sensitivity
+            </summary>
+        </member>
+        <member name="M:Mundus.Views.Windows.IGameWindow.OnDeleteEvent(System.Object,Gtk.DeleteEventArgs)">
+            <summary>
+            Every time the window is closed, this gets called (hides the window)
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobFighting.ExistsFightTargetForPlayer(System.Int32,System.Int32)">
+            <summary>
+            Returns if for the specified position in the superlayer the payer is in, there exists a mob
+            Returns false also if the specified positoin is the player's current position
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobFighting.PlayerTryFight(System.Int32,System.Int32)">
+            <summary>
+            The player tries to damage mob on the specified map position
+            Note: will fail of the player uses an invalid tool to fight with
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobFighting.ExistsFightTargetForMob(Mundus.Service.Tiles.Mobs.MobTile,System.Int32,System.Int32)">
+            <summary>
+            Returns if for the specified position in the superlayer the given mob is in, there exists a mob
+            Returns false also if the specified positoin is the mob's current position
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobFighting.PlayerTryFightWithMobAtPosition(System.Int32,System.Int32)">
+            <summary>
+            The given mob tries to damage the mob on the specified map position
+            Note: will fail of the given mob uses an invalid item
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobFighting.PlayerCanFightWithMob(System.Int32,System.Int32)">
+            <summary>
+            Checks if there exists a mob at the given location in the player's superlayer
+            and if the player has selected a proper fighting tool
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobFighting.PlayerFightWithMob(Mundus.Service.Tiles.Mobs.MobTile,Mundus.Service.Tiles.Items.Types.Tool)">
+            <summary>
+            Reduces health of target mob
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobMovement.MoveRandomlyAllMobs">
+            <summary>
+            Moves all mobs that have a RndMovementRate of more than one on a random tile 
+            in a 3x3 radius (including the tile they are currently on)
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobMovement.InBoundaries(System.Int32,System.Int32)">
+            <summary>
+            Returns if the chosen new location is inside the boundaries of the map
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobStatsController.GetPlayerHearthStock(System.Int32)">
+            <summary>
+            Returns the stock_id of the hearth icon that must be used on the given position of the health bar
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobStatsController.GetPlayerEnergyStock(System.Int32)">
+            <summary>
+            Returns the stock_id of the energy icon that must be used on the given position of the energy bar
+            </summary>
+            <returns>stock_id of energy icon</returns>
+            <param name="index">Energy bar index</param>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobStatsController.GetPlayerSuperLayerName">
+            <summary>
+            Returns the name of the superlayer the player is curently on
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobStatsController.GetPlayerXCoord">
+            <summary>
+            Returns the player's horizontal (x) coordinates
+            </summary>
+            <returns>Player.XPos</returns>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobStatsController.GetPlayerYCoord">
+            <summary>
+            Returns the player's vertical (y) coordinates
+            </summary>
+            <returns>Player.YPos</returns>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobStatsController.ExistsHoleOnTopOfPlayer">
+            <summary>
+            Checks if the player has an an empty/non-solid tile directly on the superlayer above him
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Controllers.MobTerraforming.PlayerTerraformAt(System.Int32,System.Int32)">
+            <summary>
+            Tries to place a selected structure/ground tile or to mine/dig (destroy) at the selected location
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.LandMobs.Player.#ctor(System.String,System.Int32,Mundus.Data.SuperLayers.ISuperLayerContext)">
+            <summary>
+            Note: player has an rndMovementQualifier of -1 and drops first item in the hotbar
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.LandMobs.Player.DrainEnergy(System.Double)">
+            <summary>
+            Removes energy from player. If energy gets below 0 it will start taking health
+            </summary>
+            <param name="value">Energy points to drain from player (will do nothing if value less than 0</param>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.LandMobs.Player.RestoreEnergy(System.Double)">
+            <summary>
+            Restores energy from player. If energy is maxed out (WI.SelWin.Size * 6) it starts healing the player
+            </summary>
+            <param name="value">Energy points to restore energy (will do nothing if value less than 0</param>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.LandMobs.LandMobsPresets.GetCow">
+            <summary>
+            Returns a (static) cow MobTile. 
+            Do not modify!
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.LandMobs.LandMobsPresets.GetSheep">
+            <summary>
+            Returns a (static) sheep MobTile. 
+            Do not modify!
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Mobs.MobTile.CurrSuperLayer">
+            <summary>
+            Gets or sets the superlayer the mob is currently in
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Mobs.MobTile.YPos">
+            <summary>
+            Gets or sets the vertical (y) position where the MobTile is located
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Mobs.MobTile.XPos">
+            <summary>
+            Gets or sets the horizontal (x) position where the MobTile is located
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Mobs.MobTile.RndMovementRate">
+            <summary>
+            Specifies how big the chance of a mob moving (randomly) is. Lower the value, higher the chance for movement.
+            Note: negative values (or 0) means the mob won't move randomly
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.MobTile.TakeDamage(System.Int32)">
+            <summary>
+            Removes health from mob
+            </summary>
+            <returns>Whether the mob can still be damaged</returns>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.MobTile.Heal(System.Int32)">
+            <summary>
+            Heals the MobTile (unless/until it has full health (4 * inventorySize))
+            </summary>
+            <param name="healthPoints">Health points to heal with</param>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Mobs.Inventory.Hotbar">
+            <summary>
+            Has a size of "Screen and Inventory" and can hold Tools, Materials, Structures and Gear
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Mobs.Inventory.Items">
+            <summary>
+            Has a size of the "Screen and Inventory" squared and can hold Tools, Materials, Structures and Gear
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Mobs.Inventory.Accessories">
+            <summary>
+            Has a size of double the "Screen and Inventory" and can only hold Gear
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Mobs.Inventory.Gear">
+            <summary>
+            Has a size of "Screen and Inventory" and can only hold Gear
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Inventory.GetItemTile(Mundus.Service.Tiles.Mobs.Inventory.InventoryPlace,System.Int32)">
+            <summary>
+            Returns an ItemTile depending on specified place ("hotbar", "items", "accessories" or "gear")
+            and specified index
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Inventory.DeletePlayerItemTileFromItemSelection">
+            <summary>
+            Deletes an ItemTile depending on specified place ("hotbar", "items", "accessories" or "gear")
+            and specified index
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.Inventory.GetPlayerItemFromItemSelection">
+            <summary>
+            Returns an ItemTile depending on specified place ("hotbar", "items", "accessories" or "gear")
+            and specified index in player's inventory
+            </summary>
+        </member>
+        <member name="T:Mundus.Service.Tiles.Mobs.MI">
+            <summary>
+            Used to store universally accessed mob instances (player)
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Mobs.MI.Player">
+            <summary>
+            Gets the mob that is used by the person who plays the game
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Mobs.MI.CreateInstances">
+            <summary>
+            Creates the instances of the universally accessed mobs.
+            Note: player has a health of 4 * inventorySize and gets a wooden axe and a wooden pickaxe
+            </summary>
+        </member>
+        <member name="T:Mundus.Service.Tiles.Items.ItemController">
+            <summary>
+            Contains the item that the player has selected and switches it's location
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Items.ItemController.SelItemIndex">
+            <summary>
+            Gets the index of the selected item in the selected item location
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Items.ItemController.SelItemPlace">
+            <summary>
+            Gets the inventory place in which the selected item is stored
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.ItemController.SelectItem(Mundus.Service.Tiles.Mobs.Inventory.InventoryPlace,System.Int32)">
+            <summary>
+            Sets the item that will be moved (switched)
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.ItemController.SwitchItems(Mundus.Service.Tiles.Mobs.Inventory.InventoryPlace,System.Int32)">
+            <summary>
+            Tries to switch the location of the selected item with the given one
+            If a material is moved to it's current location (double clicked), and 
+            it can restore energy, it restores the player's energy
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.ItemController.ResetSelection">
+            <summary>
+            Sets the selected item place and index to invalid values
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.ItemController.HasSelectedItem">
+            <summary>
+            Returns whether an item has been selected
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.ItemController.GetPlayerInventoryArray(Mundus.Service.Tiles.Mobs.Inventory.InventoryPlace)">
+            <summary>
+            Returns an ItemTile array, corresponding to a given place inside the player's inventory
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.ItemController.ItemCanGoThere(Mundus.Service.Tiles.Items.ItemTile,Mundus.Service.Tiles.Mobs.Inventory.InventoryPlace)">
+            <summary>
+            Checks if the given ItemTile can be inside the given destination
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.ItemController.PlayerDidEat(Mundus.Service.Tiles.Items.Types.Material)">
+            <summary>
+            If the given material can restore energy, it restores that player's energy and returns true
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Items.Types.GroundTile.ReqShovelClass">
+            <summary>
+            Gets the required minimal shovel class for destroying the ground tile
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Items.Types.GroundTile.Solid">
+            <summary>
+            Gets whether mobs can go through and structures can be placed (if not solid)
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Items.Types.Material.EnergyRestorePoints">
+            <summary>
+            Certain materials can be eaten to replenish energy points. This stores by how much to restore energy points.
+            Note: If a material mustn't be consumed, his energy points should be less or equal to 0
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Items.Types.Structure.inventory_stock_id">
+            <summary>
+            Gets the stock_id for when the structure is in an inventory
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Items.Types.Structure.ReqToolType">
+            <summary>
+            Gets the required type of tool to break the structure
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Items.Types.Structure.ReqToolClass">
+            <summary>
+            Gets the required minimal tool class to break the structure
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Items.Types.Structure.IsClimable">
+            <summary>
+            Gets whether mobs can change superlayers (climb up or down a superlayer ; true) or not (false)
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Tiles.Items.Types.Structure.IsWalkable">
+            <summary>
+            Gets whether mob can walk on top of the structure (true) or not (false)
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.Types.Structure.GetDrop">
+            <summary>
+            Returns what the structure drops after being broken
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.Types.Structure.TakeDamage(System.Int32)">
+            <summary>
+            Removes health from structure
+            </summary>
+            <returns>Whether the structure can still be damaged</returns>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.Presets.MaterialPresets.GetALandRock">
+            <returns>New instance</returns>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.Presets.MaterialPresets.GetALandStick">
+            <returns>New instance</returns>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.Presets.MaterialPresets.GetALandBeefSteak">
+            <returns>New instance</returns>
+        </member>
+        <member name="M:Mundus.Service.Tiles.Items.Presets.MaterialPresets.GetAStone">
+            <summary>
+            TEMPORARY
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.RecipeController.CraftItem(Mundus.Data.Crafting.CraftingRecipe,Mundus.Service.Tiles.Mobs.MobTile)">
+            <summary>
+            Removes items and adds the result item to the inventory
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.RecipeController.CraftItemPlayer(Mundus.Data.Crafting.CraftingRecipe)">
+            <summary>
+            Does CraftItem method for the player
+            </summary>
+            <param name="itemRecipe">CraftingRecipie of the item that will be crafted</param>
+        </member>
+        <member name="M:Mundus.Service.Tiles.RecipeController.HasEnoughItems(Mundus.Data.Crafting.CraftingRecipe,Mundus.Service.Tiles.Items.ItemTile[])">
+            <summary>
+            Checks if the given array of items has enough of every requried item
+            </summary>
+            <returns><c>true</c>If has enough<c>false</c>otherwise</returns>
+        </member>
+        <member name="M:Mundus.Service.Tiles.RecipeController.GetAvalableRecipes">
+            <summary>
+            Returns an array with all the recipes that can be crafted with the items the player has
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Tiles.RecipeController.AddAllRecipes">
+            <summary>
+            Truncates CraftingRecipes table and adds the crafting recipes (and saves changes)
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.ImageController.GetPlayerScreenImage(System.Int32,System.Int32,Mundus.Service.SuperLayers.ImageController.Layer)">
+            <summary>
+            Returns the image of the selected layer in the superlayer
+            If there is no item/mob at the position, returns null
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.ImageController.GetPlayerInventoryImage(Mundus.Service.Tiles.Mobs.Inventory.InventoryPlace,System.Int32)">
+            <summary>
+            Returns the Image on the given inventory place of the player at the given index
+            If there isn't one, returns a "blank" image
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.ImageController.GetPlayerGroundStockID(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id at the given position in player's superlayer
+            If there is no stock_id, returns "L_hole"
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.ImageController.GetPlayerStructureStockID(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id on the given position of the structure layer the player is currently in
+            Note: null values get the "blank" image ; GetScreenImage skips if the value is null
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.ImageController.InsideBoundaries(System.Int32,System.Int32)">
+            <summary>
+            Checks if the position is inside the map
+            </summary>
+        </member>
+        <member name="T:Mundus.Service.SuperLayers.Generators.LandSuperLayerGenerator">
+            <summary>
+            Generates all tiles in the Land superlayer
+            </summary>
+        </member>
+        <member name="F:Mundus.Service.SuperLayers.Generators.LandSuperLayerGenerator.rnd">
+            <summary>
+            Variable that is used for random generation
+            </summary>
+        </member>
+        <member name="F:Mundus.Service.SuperLayers.Generators.LandSuperLayerGenerator.context">
+            <summary>
+            Land context, it is used to add generated tiles to the database
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.Generators.LandSuperLayerGenerator.GenerateAllLayers(Mundus.Data.Values.MapSize)">
+            <summary>
+            Generates ground, structure and mob layers for Land superlayer
+            </summary>
+            <param name="mapSize">Size of ingame world/map</param>
+        </member>
+        <member name="T:Mundus.Service.SuperLayers.Generators.UndergroundSuperLayerGenerator">
+            <summary>
+            Generates all tiles in the Underground superlayer
+            </summary>
+        </member>
+        <member name="F:Mundus.Service.SuperLayers.Generators.UndergroundSuperLayerGenerator.rnd">
+            <summary>
+            Variable that is used for random generation
+            </summary>
+        </member>
+        <member name="F:Mundus.Service.SuperLayers.Generators.UndergroundSuperLayerGenerator.context">
+            <summary>
+            Underground context, it is used to add generated tiles to the database
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.Generators.UndergroundSuperLayerGenerator.GenerateAllLayers(Mundus.Data.Values.MapSize)">
+            <summary>
+            Generates ground, structure and mob layers for Underground superlayer
+            </summary>
+            <param name="mapSize">Size of ingame world/map</param>
+        </member>
+        <member name="T:Mundus.Service.SuperLayers.Generators.SkySuperLayerGenerator">
+            <summary>
+            Generates all tiles in the Sky superlayer
+            </summary>
+        </member>
+        <member name="F:Mundus.Service.SuperLayers.Generators.SkySuperLayerGenerator.rnd">
+            <summary>
+            Variable that is used for random generation
+            </summary>
+        </member>
+        <member name="F:Mundus.Service.SuperLayers.Generators.SkySuperLayerGenerator.context">
+            <summary>
+            Sky context, it is used to add generated tiles to the database
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.Generators.SkySuperLayerGenerator.GenerateAllLayers(Mundus.Data.Values.MapSize)">
+            <summary>
+            Generates ground, structure and mob layers for Sky superlayer
+            </summary>
+            <param name="mapSize">Size of ingame world/map</param>
+        </member>
+        <member name="T:Mundus.Service.SuperLayers.HeightController">
+            <summary>
+            Works out which superlayer is above or below the given one
+            </summary>
+        </member>
+        <member name="F:Mundus.Service.SuperLayers.HeightController.superLayers">
+            <summary>
+            Contains the order of superlayers, from the one that is the highest (above all others)
+            to the one that is the lowest (underneath all other)
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.HeightController.GetSuperLayerUnderneath(Mundus.Data.SuperLayers.ISuperLayerContext)">
+            <summary>
+            Returns the superlayer that is underneath the given one
+            If there isn't any, returns null
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.HeightController.GetSuperLayerAbove(Mundus.Data.SuperLayers.ISuperLayerContext)">
+            <summary>
+            Returns the superlayer that is above the given one
+            If there isn't any, returns null
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.HeightController.GetSuperLayerUnderneathMob(Mundus.Service.Tiles.Mobs.MobTile)">
+            <summary>
+            Returns the superlayer that is underneath the one that the given mob is in
+            If there isn't any, returns null
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.SuperLayers.HeightController.GetSuperLayerAboveMob(Mundus.Service.Tiles.Mobs.MobTile)">
+            <summary>
+            Returns the superlayer that is above the one that the given mob is in
+            If there isn't any, returns null
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.GameGenerator.GenerateMap(Mundus.Data.Values.MapSize)">
+            <summary>
+            Sets the map size and starts generation of all superlayers
+            </summary>
+            <param name="size">Size of the map ("small", "medium" or "large")</param>
+        </member>
+        <member name="M:Mundus.Service.GameGenerator.GameWindowSizeSetup(System.String)">
+            <summary>
+            Sets the game window size and setups mob inventory for certain mobs
+            Note: certain mobs base their inventory size from the game window size
+            </summary>
+            <param name="size">Size of the game window ("small", "medium" or "large")</param>
+        </member>
+        <member name="M:Mundus.Service.GameGenerator.SetDifficulty(Mundus.Data.Values.Difficulty)">
+            <summary>
+            Sets the game difficulty (that affects map generation).
+            </summary>
+            <param name="difficulty">Must be "peaceful", "easy", "normal", "hard" or "insane"</param>
+        </member>
+        <member name="M:Mundus.Service.Windows.WindowController.ShowSettingsWindow(Gtk.Window)">
+            <summary>
+            Shows the settings window and hides the sender
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Windows.WindowController.ShowNewGameWindow(Gtk.Window)">
+            <summary>
+            Shows the new game window, sets it's default values and hides the sender
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Windows.WindowController.ShowMainWindow(Gtk.Window)">
+            <summary>
+            Shows the main window and hides the sender
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Windows.WindowController.ShowPauseWindow">
+            <summary>
+            Shows the pause window on top of all windows and "pauses" game input (bool PauseWindowVisible)
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Windows.WindowController.ShowMusicWindow">
+            <summary>
+            Shows the music window on top of all windows
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Windows.WindowController.ShowCraftingWindow">
+            <summary>
+            Shows the crafting window on top of all windows and does initializes it
+            </summary>
+        </member>
+        <member name="T:Mundus.Service.Windows.Calculate">
+            <summary>
+            Used to calculate values, related to the buttons on the game windows
+            </summary>
+        </member>
+        <member name="T:Mundus.Service.Windows.WI">
+            <summary>
+            Used to store universally accessed windows
+            </summary>
+        </member>
+        <member name="F:Mundus.Service.Windows.WI.BuildName">
+            <summary>
+            Full name of the build that is used in MainMenu and Pause windows
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Windows.WI.SelWin">
+            <summary>
+            Gets or sets the selected game window (should be WSGame, WMGame or WLGame)
+            </summary>
+            <value>The sel window.</value>
+        </member>
+        <member name="P:Mundus.Service.Windows.WI.WMain">
+            <summary>
+            Gets the main window
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Windows.WI.WNewGame">
+            <summary>
+            Gets the new game window
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Windows.WI.WSGame">
+            <summary>
+            Gets the small (sized) game window
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Windows.WI.WMGame">
+            <summary>
+            Gets the medium (sized) window
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Windows.WI.WLGame">
+            <summary>
+            Gets the large (sized) window
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Windows.WI.WSettings">
+            <summary>
+            Gets the settings window
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Windows.WI.WPause">
+            <summary>
+            Gets the pause window
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Windows.WI.WMusic">
+            <summary>
+            Gets the music window
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Windows.WI.WCrafting">
+            <summary>
+            Gets the crafting window
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Windows.WI.WLog">
+            <summary>
+            Gets the log window
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Windows.WI.CreateInstances">
+            <summary>
+            Creates all instances of the windows and hides them
+            Gtk opens all window instances in the project automatically, unless they are hidden
+            </summary>
+        </member>
+        <member name="T:Mundus.Service.Dialogs.DI">
+            <summary>
+            Dialog Instances
+            Stores and creates all needed dialogs
+            </summary>
+        </member>
+        <member name="P:Mundus.Service.Dialogs.DI.DExit">
+            <summary>
+            Gets the exit dialoge
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Dialogs.DI.CreateInstances">
+            <summary>
+            Creates all dialog instances
+            </summary>
+        </member>
+        <member name="M:Mundus.Service.Dialogs.DI.HideAll">
+            <summary>
+            Hides all dialogs
+            Gtk opens all dialog (window) instances in the project automatically,
+            so you need to manually hide them
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.Crafting.CraftingTableContext">
+            <summary>
+            Context for getting the crafting recipes
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingTableContext.CraftingRecipes">
+            <summary>
+            Gets DBSet of the CraftingRecipes table
+            </summary>
+            <value>The crafting recipes.</value>
+        </member>
+        <member name="M:Mundus.Data.Crafting.CraftingTableContext.TruncateTable">
+            <summary>
+            Truncates the table CraftingRecipes (doesn't save the changes)
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.Crafting.CraftingTableContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Used to set the connection string
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingRecipe.ResultItem">
+            <summary>
+            Gets the item that will be added to the inventory after crafting
+            </summary>
+            <value>The result item.</value>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingRecipe.Count1">
+            <summary>
+            Gets the required amount of the first item
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingRecipe.ReqItem1">
+            <summary>
+            Gets the required first item
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingRecipe.Count2">
+            <summary>
+            Gets the required amount of the second item
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingRecipe.ReqItem2">
+            <summary>
+            Gets the required second item
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingRecipe.Count3">
+            <summary>
+            Gets the required amount of the third item
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingRecipe.ReqItem3">
+            <summary>
+            Gets the required third item
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingRecipe.Count4">
+            <summary>
+            Gets the required amount of the fourth item
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingRecipe.ReqItem4">
+            <summary>
+            Gets the required fourth item
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingRecipe.Count5">
+            <summary>
+            Gets the required amount of the fifth item
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Crafting.CraftingRecipe.ReqItem5">
+            <summary>
+            Gets the required fifth item
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.DataBaseContexts">
+            <summary>
+            Used to store all the contexts that correspond to the database tables
+            </summary>
+        </member>
+        <member name="F:Mundus.Data.DataBaseContexts.ConnectionStringMySQL">
+            <summary>
+            The connection string for MySQL
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.DataBaseContexts.CTContext">
+            <summary>
+            Gets the crafting table context instance
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.DataBaseContexts.GELContext">
+            <summary>
+            Gets the game event log table context instance
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.DataBaseContexts.SContext">
+            <summary>
+            Gets the sky superlayer context instance
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.DataBaseContexts.LContext">
+            <summary>
+            Gets the land superlayer context instance
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.DataBaseContexts.UContext">
+            <summary>
+            Gets the underground superlayer context instance
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.DataBaseContexts.SuperLayerContexts">
+            <summary>
+            Gets the an array of all superlayer context instances
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.DataBaseContexts.CreateInstances">
+            <summary>
+            Creates all instances of the contexts
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.SkyContext">
+            <summary>
+            Add, remove and change values in the sky superlayer
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.#ctor">
+            <summary>
+            Initializes a new instance of the SkyContext class and truncates all related tables
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.SkyContext.SMobLayer">
+            <summary>
+            Gets DBSet of the sky mob layer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.SkyContext.SStructureLayer">
+            <summary>
+            Gets DBSet of the sky structure layer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.SkyContext.SGroundLayer">
+            <summary>
+            Gets DBSet of the sky structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.GetMobLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the mob at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.GetStructureLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the structure at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.GetGroundLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the ground (tile) at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.AddMobAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a mob's stock_id, it's health and the specified position in the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.SetMobAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the mob's stock_id and health for the specified position of the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.RemoveMobFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) and health (-1) for the specified position of the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.TakeDamageMobAtPosition(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Removes health from the mob on the specified position in the mob layer table
+            </summary>
+            <returns><c>true</c>If the mob can still be damaged (alive)<c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.AddStructureAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a structure's stock_id, it's health and the specified position in the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.SetStructureAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the structure's stock_id and health for the specified position of the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.RemoveStructureFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) and health (-1) for the specified position of the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.TakeDamageStructureAtPosition(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Removes health from the structure on the specified position in the structure layer table
+            </summary>
+            <returns><c>true</c>If the structure can still be damaged <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.AddGroundAtPosition(System.String,System.Int32,System.Int32)">
+            <summary>
+            Adds a ground (tile)'s stock_id and the specified position in the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.SetGroundAtPosition(System.String,System.Int32,System.Int32)">
+            <summary>
+            Sets the ground (tile)'s stock_id and health for the specified position of the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.RemoveGroundFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) for the specified position of the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.SkyContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Used to set the connection string
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.ISuperLayerContext">
+            <summary>
+            Add, remove and change values in the different superlayers (database tables)
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.GetMobLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the mob at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.GetStructureLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the structure at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.GetGroundLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the ground (tile) at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.AddMobAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a mob's stock_id, it's health and the specified position in the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.SetMobAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the mob's stock_id and health for the specified position of the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.RemoveMobFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) and health (-1) for the specified position of the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.TakeDamageMobAtPosition(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Removes health from the mob on the specified position in the mob layer table
+            Returns true if the mob can still be damaged (is still alive)
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.AddStructureAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a structure's stock_id, it's health and the specified position in the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.SetStructureAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the structure's stock_id and health for the specified position of the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.RemoveStructureFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) and health (-1) for the specified position of the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.TakeDamageStructureAtPosition(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Removes health from the structure on the specified position in the structure layer table
+            </summary>
+            <returns><c>true</c>If the structure can still be damaged <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.AddGroundAtPosition(System.String,System.Int32,System.Int32)">
+            <summary>
+            Adds a ground (tile)'s stock_id and the specified position in the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.SetGroundAtPosition(System.String,System.Int32,System.Int32)">
+            <summary>
+            Sets the ground (tile)'s stock_id and health for the specified position of the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.ISuperLayerContext.RemoveGroundFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) for the specified position of the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.LandContext">
+            <summary>
+            Add, remove and change values in the land superlayer
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.#ctor">
+            <summary>
+            Initializes a new instance of the LandContext class and truncates all related tables
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.LandContext.LMobLayer">
+            <summary>
+            Gets DBSet of the land mob layer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.LandContext.LStructureLayer">
+            <summary>
+            Gets DBSet of the land structure layer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.LandContext.LGroundLayer">
+            <summary>
+            Gets DBSet of the land ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.GetMobLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the mob at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.GetStructureLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the structure at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.GetGroundLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the ground (tile) at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.AddMobAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a mob's stock_id, it's health and the specified position in the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.SetMobAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the mob's stock_id and health for the specified position of the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.RemoveMobFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) and health (-1) for the specified position of the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.TakeDamageMobAtPosition(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Removes health from the mob on the specified position in the mob layer table
+            </summary>
+            <returns><c>true</c>If the mob can still be damaged (alive)<c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.AddStructureAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a structure's stock_id, it's health and the specified position in the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.SetStructureAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the structure's stock_id and health for the specified position of the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.RemoveStructureFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) and health (-1) for the specified position of the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.TakeDamageStructureAtPosition(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Removes health from the structure on the specified position in the structure layer table
+            </summary>
+            <returns><c>true</c>If the structure can still be damaged <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.AddGroundAtPosition(System.String,System.Int32,System.Int32)">
+            <summary>
+            Adds a ground (tile)'s stock_id and the specified position in the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.SetGroundAtPosition(System.String,System.Int32,System.Int32)">
+            <summary>
+            Sets the ground (tile)'s stock_id and health for the specified position of the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.RemoveGroundFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) for the specified position of the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.LandContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Used to set the connection string
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.UndergroundContext">
+            <summary>
+            Add, remove and change values in the underground superlayer
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.#ctor">
+            <summary>
+            Initializes a new instance of the UndergroundContext class and truncates all related tables
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.UndergroundContext.UMobLayer">
+            <summary>
+            Gets DBSet of the underground mob layer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.UndergroundContext.UStructureLayer">
+            <summary>
+            Gets DBSet of the underground structure layer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.UndergroundContext.UGroundLayer">
+            <summary>
+            Gets DBSet of the sky underground layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.GetMobLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the mob at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.GetStructureLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the structure at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.GetGroundLayerStock(System.Int32,System.Int32)">
+            <summary>
+            Returns the stock_id of the ground (tile) at the specified positoin
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.AddMobAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a mob's stock_id, it's health and the specified position in the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.SetMobAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the mob's stock_id and health for the specified position of the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.RemoveMobFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) and health (-1) for the specified position of the mob layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.TakeDamageMobAtPosition(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Removes health from the mob on the specified position in the mob layer table
+            </summary>
+            <returns><c>true</c>If the mob can still be damaged (alive)<c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.AddStructureAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a structure's stock_id, it's health and the specified position in the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.SetStructureAtPosition(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the structure's stock_id and health for the specified position of the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.RemoveStructureFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) and health (-1) for the specified position of the structure layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.TakeDamageStructureAtPosition(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Removes health from the structure on the specified position in the structure layer table
+            </summary>
+            <returns><c>true</c>If the structure can still be damaged <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.AddGroundAtPosition(System.String,System.Int32,System.Int32)">
+            <summary>
+            Adds a ground (tile)'s stock_id and the specified position in the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.SetGroundAtPosition(System.String,System.Int32,System.Int32)">
+            <summary>
+            Sets the ground (tile)'s stock_id and health for the specified position of the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.RemoveGroundFromPosition(System.Int32,System.Int32)">
+            <summary>
+            Sets invalid values for stock_id (null) for the specified position of the ground (tile) layer table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.SuperLayers.UndergroundContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Used to set the connection string
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.DBTables.PlacedTile">
+            <summary>
+            Abstract class that is used for the classes that correspond to DBSets
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.DBTables.PlacedTile.ID">
+            <summary>
+            Gets the unique identifier (primary key ; only used in the tables by MySQL)
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.DBTables.PlacedTile.XPos">
+            <summary>
+            Gets the position on the horizontal (x) axis of the tile in it's layer
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.DBTables.PlacedTile.YPos">
+            <summary>
+            Gets the position on the vertical (y) axis of the tile in it's layer
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.DBTables.PlacedTile.stock_id">
+            <summary>
+            Gets or sets the stock _id of the tile
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.DBTables.SSPlacedTile">
+            <summary>
+            Data type for the DBSet of (Sky) SStructureLayer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.DBTables.SSPlacedTile.Health">
+            <summary>
+            Gets or sets the health of the structure
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.DBTables.SGPlacedTile">
+            <summary>
+            Data type for the DBSet of (Sky) SGroundLayer table
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.DBTables.SMPlacedTile">
+            <summary>
+            Data type for the DBSet of (Sky) SMobLayer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.DBTables.SMPlacedTile.Health">
+            <summary>
+            Gets or sets the health of the mob
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.DBTables.UGPlacedTile">
+            <summary>
+            Data type for the DBSet of (Undergound) UGroundLayer table
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.DBTables.USPlacedTile">
+            <summary>
+            Data type for the DBSet of (Undergound) UStructureLayer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.DBTables.USPlacedTile.Health">
+            <summary>
+            Gets or sets the health of the structure
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.DBTables.UMPlacedTile">
+            <summary>
+            Data type for the DBSet of (Undergound) UMobLayer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.DBTables.UMPlacedTile.Health">
+            <summary>
+            Gets or sets the health of the mob
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.DBTables.LGPlacedTile">
+            <summary>
+            Data type for the DBSet of (Land) LGroundLayer table
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.DBTables.LSPlacedTile">
+            <summary>
+            Data type for the DBSet of (Land) LStructureLayer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.DBTables.LSPlacedTile.Health">
+            <summary>
+            Gets or sets the health of the structure
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.SuperLayers.DBTables.LMPlacedTile">
+            <summary>
+            Data type for the DBSet of (Land) LMobLayer table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.SuperLayers.DBTables.LMPlacedTile.Health">
+            <summary>
+            Gets or sets the health of the mob
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.Values">
+            <summary>
+            Stores all needed values
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Values.CurrMapSize">
+            <summary>
+            Gets or sets the current (selected) map size
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.Values.CurrDifficulty">
+            <summary>
+            Gets or sets the current (selected) difficulty
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.Values.DifficultyValueModifier">
+            <summary>
+            Returns selected difficulty divided by a number (80). 
+            Used to change energy drain values.
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.GameEventLogs.GameEventLog">
+            <summary>
+            Data type for the DBSet of GameEventLogs table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.GameEventLogs.GameEventLog.ID">
+            <summary>
+            Gets the unique identifier (primary key ; only used in the tables by MySQL)
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.GameEventLogs.GameEventLog.Message">
+            <summary>
+            Gets the message of the log
+            </summary>
+        </member>
+        <member name="T:Mundus.Data.GameEventLogs.GameEventLogContext">
+            <summary>
+            Add and get log messages from the GameEventLogs table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.GameEventLogs.GameEventLogContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mundus.Data.GameEventLogs.GameEventLogContext"/> class and truncates the table
+            </summary>
+        </member>
+        <member name="P:Mundus.Data.GameEventLogs.GameEventLogContext.GameEventLogs">
+            <summary>
+            Gets DbSet of the game event logs table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.GameEventLogs.GameEventLogContext.AddMessage(System.String)">
+            <summary>
+            Adds a message to the GameEventLogs table
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.GameEventLogs.GameEventLogContext.GetMessage(System.Int32)">
+            <summary>
+            Gets a message from the GameEventLogs table that has the specified id
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.GameEventLogs.GameEventLogContext.GetCount">
+            <summary>
+            Gets count of game event logs
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.GameEventLogs.GameEventLogContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Used to set the connection string
+            </summary>
+        </member>
+        <member name="M:Mundus.Data.GameEventLogs.GameEventLogContext.ResetTable">
+            <summary>
+            Truncates the GameEventLogs table (saves the change)
+            </summary>
+        </member>
+    </members>
+</doc>
