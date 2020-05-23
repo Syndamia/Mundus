@@ -1,7 +1,7 @@
 ﻿namespace Mundus.Views.Windows.GameWindows.Medium 
 {
     using Gtk;
-    using Mundus.Data.Dialogues;
+    using Mundus.Service.Dialogs;
     using Mundus.Service.Tiles.Items;
     using static Mundus.Service.Tiles.Mobs.Inventory;
 

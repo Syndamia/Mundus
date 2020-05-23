@@ -2,7 +2,8 @@
 {
     using System;
     using Gtk;
-    using Mundus.Service.Tiles.Crafting;
+    using Mundus.Data.Crafting;
+    using Mundus.Service.Tiles;
 
     public partial class CraftingWindow : Gtk.Window
     {
@@ -28,7 +29,7 @@
         {
             this.Reset();
 
-            this.recipes = CraftingController.GetAvalableRecipes();
+            this.recipes = RecipeController.GetAvalableRecipes();
             this.recipeIndex = 0;
 
             this.PrintRecipe();
@@ -71,7 +72,7 @@
         /// </summary>
         protected void OnBtnCraftClicked(object sender, EventArgs e) 
         {
-            CraftingController.CraftItemPlayer(this.recipes[this.recipeIndex]);
+            RecipeController.CraftItemPlayer(this.recipes[this.recipeIndex]);
             this.Hide();
         }
 
@@ -87,7 +88,7 @@
                 this.btnCraft.Sensitive = true;
 
                 this.imgItem.SetFromStock(recipe.ResultItem, IconSize.Dnd);
-                this.lblInfo.Text = recipe.ResultItem.ToString();
+                this.lblInfo.Text = recipe.ResultItem;
 
                 this.lblC1.Text = recipe.Count1 + string.Empty;
                 this.imgI1.SetFromStock(recipe.ReqItem1, IconSize.Dnd);

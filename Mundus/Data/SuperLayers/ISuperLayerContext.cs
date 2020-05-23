@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Mundus.Data.SuperLayers 
+﻿namespace Mundus.Data.SuperLayers 
 {
     /// <summary>
     /// Add, remove and change values in the different superlayers (database tables)

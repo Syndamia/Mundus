@@ -3,8 +3,8 @@
     using Gtk;
     using Mundus.Data;
     using Mundus.Data.SuperLayers;
-    using Mundus.Data.Tiles.Mobs;
     using Mundus.Service.Tiles.Items.Types;
+    using Mundus.Service.Tiles.Mobs;
     using static Mundus.Service.Tiles.Mobs.Inventory;
 
     public static class ImageController 

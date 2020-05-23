@@ -11,7 +11,7 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Mundus.Data.GameEventLogs.GameEventLogContext"/> class and truncates the table
         /// </summary>
-        public GameEventLogContext() : base()
+        public GameEventLogContext()
         {
             this.ResetTable();
         }

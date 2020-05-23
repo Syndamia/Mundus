@@ -70,6 +70,7 @@ namespace Mundus.Views.Windows
 			this.btnNext = new global::Gtk.Button();
 			this.btnNext.WidthRequest = 70;
 			this.btnNext.HeightRequest = 50;
+			this.btnNext.Sensitive = false;
 			this.btnNext.CanFocus = true;
 			this.btnNext.Name = "btnNext";
 			this.btnNext.UseUnderline = true;
@@ -102,6 +103,7 @@ namespace Mundus.Views.Windows
 			this.btnPrevious = new global::Gtk.Button();
 			this.btnPrevious.WidthRequest = 70;
 			this.btnPrevious.HeightRequest = 50;
+			this.btnPrevious.Sensitive = false;
 			this.btnPrevious.CanFocus = true;
 			this.btnPrevious.Name = "btnPrevious";
 			this.btnPrevious.UseUnderline = true;
@@ -118,6 +120,7 @@ namespace Mundus.Views.Windows
 			this.btnRandom = new global::Gtk.Button();
 			this.btnRandom.WidthRequest = 70;
 			this.btnRandom.HeightRequest = 50;
+			this.btnRandom.Sensitive = false;
 			this.btnRandom.CanFocus = true;
 			this.btnRandom.Name = "btnRandom";
 			this.btnRandom.UseUnderline = true;

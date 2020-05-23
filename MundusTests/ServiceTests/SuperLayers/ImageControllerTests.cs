@@ -2,8 +2,8 @@
 {
     using Gtk;
     using Mundus.Data;
-    using Mundus.Data.Tiles.Mobs;
     using Mundus.Service.SuperLayers;
+    using Mundus.Service.Tiles.Mobs;
     using NUnit.Framework;
     using static Mundus.Service.SuperLayers.ImageController;
     using static Mundus.Service.Tiles.Mobs.Inventory;

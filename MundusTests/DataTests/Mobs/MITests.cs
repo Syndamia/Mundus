@@ -1,6 +1,6 @@
 ﻿namespace MundusTests.DataTests.Mobs 
 {
-    using Mundus.Data.Tiles.Mobs;
+    using Mundus.Service.Tiles.Mobs;
     using NUnit.Framework;
 
     [TestFixture]

@@ -87,7 +87,7 @@ namespace Mundus.Views.Windows
 			// Container child tbUI.Gtk.Table+TableChild
 			this.lblTitle = new global::Gtk.Label();
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.LabelProp = "Settings (replace with picture)";
+			this.lblTitle.LabelProp = "Settings";
 			this.tbUI.Add(this.lblTitle);
 			global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.tbUI[this.lblTitle]));
 			w6.LeftAttach = ((uint)(2));

@@ -2,7 +2,7 @@
 {
     using System;
     using System.Linq;
-    using Mundus.Data.Tiles.Mobs;
+    using Mundus.Service.Tiles.Mobs;
     using Mundus.Service.Tiles.Items;
     using Mundus.Service.Tiles.Items.Types;
 

@@ -3,9 +3,10 @@
     using System;
     using System.Linq;
     using Mundus.Data;
-    using Mundus.Data.Tiles.Mobs;
+    using Mundus.Service.Tiles.Mobs;
     using Mundus.Service.Tiles.Items.Types;
     using static Mundus.Data.Values;
+    using Mundus.Service.Tiles.Mobs.LandMobs;
 
     public static class MobFighting 
     {

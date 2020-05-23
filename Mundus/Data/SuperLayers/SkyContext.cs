@@ -12,7 +12,7 @@
         /// <summary>
         /// Initializes a new instance of the SkyContext class and truncates all related tables
         /// </summary>
-        public SkyContext() : base()
+        public SkyContext()
         {
             this.Database.ExecuteSqlRaw("TRUNCATE TABLE SMobLayer");
             this.Database.ExecuteSqlRaw("TRUNCATE TABLE SStructureLayer");
@@ -158,16 +158,17 @@
             this.SGroundLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = null;
         }
 
+        public override string ToString()
+        {
+            return "Sky";
+        }
+
         /// <summary>
         /// Used to set the connection string
         /// </summary>
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL(DataBaseContexts.ConnectionStringMySQL);
-        }
-
-        public override string ToString() {
-            return "Sky";
         }
     }
 }

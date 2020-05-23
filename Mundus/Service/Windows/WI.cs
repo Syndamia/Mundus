@@ -1,4 +1,4 @@
-﻿namespace Mundus.Data.Windows 
+﻿namespace Mundus.Service.Windows
 {
     using Mundus.Views.Windows;
     using Mundus.Views.Windows.GameWindows.Large;

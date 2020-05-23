@@ -1,8 +1,8 @@
 ﻿namespace Mundus.Service.Tiles.Mobs 
 {
     using Mundus.Data.SuperLayers;
-    using Mundus.Data.Windows;
     using Mundus.Service.Tiles.Items.Types;
+    using Mundus.Service.Windows;
 
     public class MobTile : ITile 
     {

@@ -1,9 +1,9 @@
 ﻿namespace MundusTests.ServiceTests.Tiles.Mobs 
 {
     using Mundus.Data;
-    using Mundus.Data.Windows;
     using Mundus.Service.Tiles.Items.Types;
     using Mundus.Service.Tiles.Mobs;
+    using Mundus.Service.Windows;
     using NUnit.Framework;
 
     [TestFixture]

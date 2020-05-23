@@ -8,7 +8,7 @@
         /// <summary>
         /// Used for crolling up and down the log messages
         /// </summary>
-        private int scroll = 0;
+        private int scroll;
 
         public LogWindow() : base(Gtk.WindowType.Toplevel) 
         {

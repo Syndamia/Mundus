@@ -5,7 +5,7 @@
     /// </summary>
     public abstract class PlacedTile 
     {
-        public PlacedTile(string stock_id, int yPos, int xPos) 
+        protected PlacedTile(string stock_id, int yPos, int xPos) 
         {
             this.YPos = yPos;
             this.XPos = xPos;

@@ -1,6 +1,7 @@
-﻿namespace Mundus.Data.Tiles.Mobs
+﻿namespace Mundus.Service.Tiles.Mobs
 {
-    using Mundus.Data.Tiles.Presets;
+    using Mundus.Data;
+    using Mundus.Service.Tiles.Items.Presets;
     using Mundus.Service.Tiles.Mobs.LandMobs;
 
     /// <summary>

@@ -23895,7 +23895,7 @@
         <child>
           <widget class="Gtk.Label" id="lblTitle">
             <property name="MemberName" />
-            <property name="LabelProp">Settings (replace with picture)</property>
+            <property name="LabelProp">Settings</property>
           </widget>
           <packing>
             <property name="LeftAttach">2</property>
@@ -24872,6 +24872,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">70</property>
             <property name="HeightRequest">50</property>
+            <property name="Sensitive">False</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label">Next</property>
@@ -24926,6 +24927,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">70</property>
             <property name="HeightRequest">50</property>
+            <property name="Sensitive">False</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label">Prev</property>
@@ -24952,6 +24954,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">70</property>
             <property name="HeightRequest">50</property>
+            <property name="Sensitive">False</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label">Rnd</property>
@@ -25143,7 +25146,7 @@
             <property name="MemberName" />
             <property name="WidthRequest">300</property>
             <property name="HeightRequest">100</property>
-            <property name="LabelProp">Mundus (replace with picture)</property>
+            <property name="LabelProp">Mundus</property>
             <property name="Justify">Fill</property>
           </widget>
           <packing>

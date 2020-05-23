@@ -1,4 +1,4 @@
-﻿namespace Mundus.Data.Dialogues 
+﻿namespace Mundus.Service.Dialogs
 {
     using Mundus.Views.Dialogs;
 

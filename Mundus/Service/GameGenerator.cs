@@ -2,9 +2,9 @@
 {
     using System;
     using Mundus.Data;
-    using Mundus.Data.Tiles.Mobs;
-    using Mundus.Data.Windows;
     using Mundus.Service.SuperLayers.Generators;
+    using Mundus.Service.Tiles.Mobs;
+    using Mundus.Service.Windows;
 
     public static class GameGenerator 
     {
@@ -51,7 +51,7 @@
         /// <summary>
         /// Sets the game difficulty (that affects map generation).
         /// </summary>
-        /// <param name="value">Must be "peaceful", "easy", "normal", "hard" or "insane"</param>
+        /// <param name="difficulty">Must be "peaceful", "easy", "normal", "hard" or "insane"</param>
         public static void SetDifficulty(Values.Difficulty difficulty) 
         {
             Values.CurrDifficulty = difficulty;

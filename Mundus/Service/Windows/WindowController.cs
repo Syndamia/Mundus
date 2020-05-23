@@ -1,7 +1,6 @@
 ﻿namespace Mundus.Service.Windows 
 {
     using Gtk;
-    using Mundus.Data.Windows;
     using Mundus.Service.Tiles.Items;
     using Mundus.Service.Tiles.Mobs;
     using Mundus.Service.Tiles.Mobs.Controllers;

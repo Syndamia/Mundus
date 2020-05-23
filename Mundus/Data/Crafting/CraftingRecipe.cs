@@ -1,9 +1,7 @@
-﻿namespace Mundus.Service.Tiles.Crafting 
+﻿namespace Mundus.Data.Crafting 
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-    using Mundus.Service.Tiles.Items;
 
     [Table("CraftingRecipes", Schema = "Mundus")]
     public class CraftingRecipe 
@@ -48,7 +46,7 @@
         public int ID { get; set; }
 
         /// <summary>
-        /// Item that will be added to the inventory after crafting
+        /// Gets the item that will be added to the inventory after crafting
         /// </summary>
         /// <value>The result item.</value>
         public string ResultItem { get; private set; }
@@ -103,54 +101,14 @@
         /// </summary>
         public string ReqItem5 { get; private set; }
 
-        /// <summary>
-        /// Checks if the given array of items has enough of every requried item
-        /// </summary>
-        /// <returns><c>true</c>If has enough<c>false</c>otherwise</returns>
-        public bool HasEnoughItems(ItemTile[] items) 
-        {
-            bool hasEnough = false;
-
-            if (items.Any(item => item != null)) 
-            {
-                var allItemStocks = items.Where(x => x != null).Select(x => x.stock_id).ToArray();
-
-                hasEnough = allItemStocks.Contains(ReqItem1) &&
-                            allItemStocks.Count(i => i == ReqItem1) >= Count1;
-
-                if (ReqItem2 != null && hasEnough) 
-                {
-                    hasEnough = allItemStocks.Contains(ReqItem2) &&
-                                allItemStocks.Count(i => i == ReqItem2) >= Count2;
-                }
-                if (ReqItem3 != null && hasEnough) 
-                {
-                    hasEnough = allItemStocks.Contains(ReqItem3) &&
-                                allItemStocks.Count(i => i == ReqItem3) >= Count3;
-                }
-                if (ReqItem4 != null && hasEnough) 
-                {
-                    hasEnough = allItemStocks.Contains(ReqItem4) &&
-                                allItemStocks.Count(i => i == ReqItem4) >= Count4;
-                }
-                if (ReqItem5 != null && hasEnough) 
-                {
-                    hasEnough = allItemStocks.Contains(ReqItem5) &&
-                                allItemStocks.Count(i => i == ReqItem5) >= Count5;
-                }
-            }
-
-            return hasEnough;
-        }
-
         public string[] GetAllRequiredItems() 
         {
-            return new string[] { ReqItem1, ReqItem2, ReqItem3, ReqItem4, ReqItem5};
+            return new string[] { this.ReqItem1, this.ReqItem2, this.ReqItem3, this.ReqItem4, this.ReqItem5 };
         }
 
         public int[] GetAllCounts() 
         {
-            return new int[] { Count1, Count2, Count3, Count4, Count5};
+            return new int[] { this.Count1, this.Count2, this.Count3, this.Count4, this.Count5 };
         }
     }
 }

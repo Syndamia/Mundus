@@ -9,7 +9,7 @@
         public PauseWindow() : base(Gtk.WindowType.Toplevel) 
         {
             this.Build();
-            this.lblBuild.Text = Mundus.Data.Windows.WI.BuildName;
+            this.lblBuild.Text = WI.BuildName;
         }
 
         /// <summary>

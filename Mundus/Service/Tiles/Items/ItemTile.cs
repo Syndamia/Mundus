@@ -4,7 +4,7 @@
     {
         public string stock_id { get; private set; }
 
-        public ItemTile(ItemTile item) : this(item.stock_id)
+        protected ItemTile(ItemTile item) : this(item.stock_id)
         { 
         }
 

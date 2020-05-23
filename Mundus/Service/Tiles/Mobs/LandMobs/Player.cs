@@ -2,7 +2,7 @@
 {
     using System;
     using Mundus.Data.SuperLayers;
-    using Mundus.Data.Windows;
+    using Mundus.Service.Windows;
     using Mundus.Service.Tiles.Items.Types;
 
     public class Player : MobTile 

@@ -1,8 +1,8 @@
 ﻿namespace Mundus.Service.Tiles.Items 
 {
-    using Mundus.Data.Tiles.Mobs;
-    using Mundus.Data.Windows;
     using Mundus.Service.Tiles.Items.Types;
+    using Mundus.Service.Tiles.Mobs;
+    using Mundus.Service.Windows;
     using static Mundus.Service.Tiles.Mobs.Inventory;
 
     /// <summary>

@@ -2,7 +2,7 @@
 {
     using System;
     using Mundus.Data;
-    using Mundus.Data.Tiles.Mobs;
+    using Mundus.Service.Tiles.Mobs;
 
     /// <summary>
     /// Used to calculate values, related to the buttons on the game windows

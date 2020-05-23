@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -8,6 +9,17 @@
     <RootNamespace>Mundus</RootNamespace>
     <AssemblyName>Mundus</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <PackageId>Requirements</PackageId>
+    <PackageVersion>Requirements</PackageVersion>
+    <Authors>Kamen Mladenov</Authors>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageLicenseUrl>https://github.com/Syndamia/Mundus/blob/requirements/LICENSE</PackageLicenseUrl>
+    <Owners>Kamen Mladenov</Owners>
+    <PackageProjectUrl>https://github.com/Syndamia/Mundus/tree/requirements</PackageProjectUrl>
+    <PackageReleaseNotes>This is Requirements version of the project.</PackageReleaseNotes>
+    <Title>Mundus</Title>
+    <ReleaseVersion>Requirements</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -265,8 +277,6 @@
     <Compile Include="gtk-gui\Mundus.Views.Dialogs.ExitDialog.cs" />
     <Compile Include="Service\Tiles\ITile.cs" />
     <Compile Include="Service\SuperLayers\ImageController.cs" />
-    <Compile Include="Data\Windows\WI.cs" />
-    <Compile Include="Data\Dialogues\DI.cs" />
     <Compile Include="Service\GameGenerator.cs" />
     <Compile Include="Service\SuperLayers\Generators\LandSuperLayerGenerator.cs" />
     <Compile Include="Service\SuperLayers\Generators\UndergroundSuperLayerGenerator.cs" />
@@ -282,8 +292,6 @@
     <Compile Include="Service\Tiles\Mobs\LandMobs\Player.cs" />
     <Compile Include="Service\Tiles\Mobs\MobTile.cs" />
     <Compile Include="Service\Tiles\Mobs\Inventory.cs" />
-    <Compile Include="Service\Tiles\Crafting\CraftingController.cs" />
-    <Compile Include="Service\Tiles\Crafting\CraftingRecipe.cs" />
     <Compile Include="Views\Windows\GameWindows\IGameWindow.cs" />
     <Compile Include="Data\Crafting\CraftingTableContext.cs" />
     <Compile Include="Data\DataBaseContexts.cs" />
@@ -326,12 +334,18 @@
     <Compile Include="Service\Tiles\Items\Types\Material.cs" />
     <Compile Include="Service\Tiles\Items\Types\Structure.cs" />
     <Compile Include="Service\Tiles\Items\Types\Tool.cs" />
-    <Compile Include="Data\Tiles\Presets\GroundPresets.cs" />
-    <Compile Include="Data\Tiles\Presets\MaterialPresets.cs" />
-    <Compile Include="Data\Tiles\Presets\StructurePresets.cs" />
-    <Compile Include="Data\Tiles\Presets\ToolPresets.cs" />
-    <Compile Include="Data\Tiles\Mobs\LandMobsPresets.cs" />
-    <Compile Include="Data\Tiles\Mobs\MI.cs" />
+    <Compile Include="Data\Crafting\CraftingRecipe.cs">
+      <ExcludeFromStyleCop>false</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Service\Dialogs\DI.cs" />
+    <Compile Include="Service\Tiles\Mobs\LandMobs\LandMobsPresets.cs" />
+    <Compile Include="Service\Tiles\Mobs\MI.cs" />
+    <Compile Include="Service\Tiles\Items\Presets\GroundPresets.cs" />
+    <Compile Include="Service\Tiles\Items\Presets\MaterialPresets.cs" />
+    <Compile Include="Service\Tiles\Items\Presets\StructurePresets.cs" />
+    <Compile Include="Service\Tiles\Items\Presets\ToolPresets.cs" />
+    <Compile Include="Service\Windows\WI.cs" />
+    <Compile Include="Service\Tiles\RecipeController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -342,8 +356,6 @@
     <Folder Include="Service\SuperLayers\" />
     <Folder Include="Service\Tiles\" />
     <Folder Include="Icons\Land\Ground\" />
-    <Folder Include="Data\Windows\" />
-    <Folder Include="Data\Dialogues\" />
     <Folder Include="Data\SuperLayers\" />
     <Folder Include="Service\Tiles\Items\" />
     <Folder Include="Data\Crafting\" />
@@ -351,7 +363,6 @@
     <Folder Include="Service\SuperLayers\Generators\" />
     <Folder Include="Icons\Sky\Ground\" />
     <Folder Include="Service\Tiles\Mobs\" />
-    <Folder Include="Service\Tiles\Crafting\" />
     <Folder Include="Views\Windows\GameWindows\" />
     <Folder Include="Icons\UI\Hearth\" />
     <Folder Include="Data\SuperLayers\DBTables\" />
@@ -360,10 +371,9 @@
     <Folder Include="Views\Windows\GameWindows\Medium\" />
     <Folder Include="Views\Windows\GameWindows\Large\" />
     <Folder Include="Service\Windows\" />
-    <Folder Include="Data\Tiles\" />
     <Folder Include="Service\Tiles\Items\Types\" />
-    <Folder Include="Data\Tiles\Presets\" />
-    <Folder Include="Data\Tiles\Mobs\" />
+    <Folder Include="Service\Dialogs\" />
+    <Folder Include="Service\Tiles\Items\Presets\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -371,4 +381,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.1.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets')" />
 </Project>

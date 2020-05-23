@@ -1,7 +1,7 @@
-﻿using Mundus.Data;
-using Mundus.Data.Windows;
+﻿using Gtk;
+using Mundus.Data;
+using Mundus.Service.Windows;
 using NUnit.Framework;
-using Gtk;
 
 [SetUpFixture]
 public static class ApplicationSetup {

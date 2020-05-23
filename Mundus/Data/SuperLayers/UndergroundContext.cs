@@ -12,7 +12,7 @@
         /// <summary>
         /// Initializes a new instance of the UndergroundContext class and truncates all related tables
         /// </summary>
-        public UndergroundContext() : base() 
+        public UndergroundContext()
         {
             this.Database.ExecuteSqlRaw("TRUNCATE TABLE UMobLayer");
             this.Database.ExecuteSqlRaw("TRUNCATE TABLE UStructureLayer");
@@ -157,16 +157,17 @@
             this.UGroundLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = null;
         }
 
+        public override string ToString()
+        {
+            return "Underground";
+        }
+
         /// <summary>
         /// Used to set the connection string
         /// </summary>
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL(DataBaseContexts.ConnectionStringMySQL);
-        }
-
-        public override string ToString() {
-            return "Underground";
         }
     }
 }

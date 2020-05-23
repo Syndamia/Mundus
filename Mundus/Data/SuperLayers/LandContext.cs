@@ -12,7 +12,7 @@
         /// <summary>
         /// Initializes a new instance of the LandContext class and truncates all related tables
         /// </summary>
-        public LandContext() : base()
+        public LandContext()
         {
             this.Database.ExecuteSqlRaw("TRUNCATE TABLE LMobLayer");
             this.Database.ExecuteSqlRaw("TRUNCATE TABLE LStructureLayer");
@@ -158,16 +158,17 @@
             this.LGroundLayer.First(x => x.YPos == yPos && x.XPos == xPos).stock_id = null;
         }
 
+        public override string ToString()
+        {
+            return "Land";
+        }
+
         /// <summary>
         /// Used to set the connection string
         /// </summary>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL(DataBaseContexts.ConnectionStringMySQL);
-        }
-
-        public override string ToString() {
-            return "Land";
         }
     }
 }

@@ -11,7 +11,7 @@
 
         public static string GetMessagage(int index) 
         {
-            return (0 <= index && index < GetCount()) ? DataBaseContexts.GELContext.GetMessage(index + 1) : null;
+            return (index >= 0 && index < GetCount()) ? DataBaseContexts.GELContext.GetMessage(index + 1) : null;
         }
 
         public static int GetCount() 

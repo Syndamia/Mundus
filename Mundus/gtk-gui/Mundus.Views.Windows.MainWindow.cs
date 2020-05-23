@@ -37,7 +37,7 @@ namespace Mundus.Views.Windows
 			this.lblTitle.WidthRequest = 300;
 			this.lblTitle.HeightRequest = 100;
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.LabelProp = "Mundus (replace with picture)";
+			this.lblTitle.LabelProp = "Mundus";
 			this.lblTitle.Justify = ((global::Gtk.Justification)(3));
 			this.vboxUI.Add(this.lblTitle);
 			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vboxUI[this.lblTitle]));
