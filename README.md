@@ -1,5 +1,3 @@
-For more information, visit [my website](http://www.syndamia.com/projects/mundus/introduction.html).
-
 In this branch I will be adding features that are module requirements:
  - Using a databse
    - `MySQL` database
@@ -20,6 +18,8 @@ In this branch I will be adding features that are module requirements:
 
 This program has more than 2000 lines of practical code (I don't count code that is repeated with minor differences). I have written, in total, more than 21000 lines of code in the process of making it for the last ~2,5 months (since 27.02).
 
-I won't be integrating these features in official and post-exam versions of the project. Also many things are dependant on my setup, so I won't be adding a built executable.
+I won't be integrating these features in any other versions of the project. Also many things are dependant on my setup, so I won't be adding a built executable.
+
+For more information, visit [my website](http://www.syndamia.com/projects/mundus/introduction).
 
 **This branch won't be pushed to `master` and, after the exam, will be left only for archiving purposes**.
